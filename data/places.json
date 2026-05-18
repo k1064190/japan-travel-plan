@@ -2245,5 +2245,183 @@
       "google": "https://www.google.com/search?q=%EC%8B%9C%ED%85%90%EB%85%B8%EC%A7%80%20%EC%A0%88%20%ED%9B%84%EA%B8%B0&hl=ko",
       "youtube": "https://www.youtube.com/results?search_query=%EC%8B%9C%ED%85%90%EB%85%B8%EC%A7%80"
     }
+  },
+  "usj": {
+    "name_ko": "유니버설 스튜디오 재팬",
+    "name_jp": "ユニバーサル・スタジオ・ジャパン",
+    "coords": [
+      34.6657,
+      135.4326
+    ],
+    "category": "main",
+    "emoji": "🎢",
+    "tags": [
+      "테마파크",
+      "어트랙션",
+      "해리포터",
+      "슈퍼닌텐도월드"
+    ],
+    "summary": "오사카 코노하나구 사쿠라지마에 위치한 유니버설 픽처스 공식 테마파크. 슈퍼 닌텐도 월드·위저딩 월드 오브 해리포터 등 11개 구역으로 구성.",
+    "detail": "2001년 개장. 연간 약 1,400만 명이 방문하는 서일본 최대 테마파크. 정리권(닌텐도 월드 입장 예약) 제도 운영. 익스프레스 패스 3·4·7 등 별도 유료 패스로 인기 라이드 대기 단축 가능. 영업시간은 시즌별 상이(보통 09:00~21:00). 연간 이용권·USJ 공식 앱 사전 준비 권장.",
+    "sources": [
+      {
+        "title": "Universal Studios Japan 공식",
+        "url": "https://www.usj.co.jp/web/en/us"
+      },
+      {
+        "title": "USJ Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Universal_Studios_Japan"
+      }
+    ],
+    "activities": [
+      "슈퍼 닌텐도 월드 정리권 발급 — 오픈런 직후 앱으로 즉시 발급 (당일 정리권 마감 빠름)",
+      "해리포터 호그와트 캐슬 라이드 (Harry Potter and the Forbidden Journey) 탑승",
+      "익스프레스 패스 사용 순서: 정리권 지정 시간대를 피해서 나머지 인기 라이드에 순차 사용",
+      "미니언 파크·할리우드 존 퍼레이드 시간 맞춰 이동"
+    ],
+    "restaurants": [
+      {
+        "name": "Mel's Drive-In",
+        "type": "미국식 다이너",
+        "tip": "할리우드 구역. 클래식 버거·밀크셰이크. 590석 규모로 줄이 짧은 편.",
+        "price_range": "1000~1800엔"
+      },
+      {
+        "name": "Three Broomsticks",
+        "type": "영국식 레스토랑",
+        "tip": "위저딩 월드 내. 그레이트 피스트(구운 치킨+립), 피시앤칩스 인기. 버터비어와 함께.",
+        "price_range": "1200~2500엔"
+      },
+      {
+        "name": "키노피오 카페 (Kinopio's Café)",
+        "type": "슈퍼 닌텐도 월드 테마 레스토랑",
+        "tip": "슈퍼 닌텐도 월드 내. 머시룸 피자볼·피라냐 플랜트 파스타. 정리권과 별도로 입장 대기 발생.",
+        "price_range": "1200~2000엔"
+      },
+      {
+        "name": "Studio Stars Restaurant",
+        "type": "파크 메인 레스토랑",
+        "tip": "헐리우드 구역 중심부. 뷔페·세트 메뉴. 단체·가족에 적합.",
+        "price_range": "1500~2500엔"
+      },
+      {
+        "name": "Park Side Grille",
+        "type": "그릴·아메리칸 푸드",
+        "tip": "뉴욕 구역 근처. 파크뷰 테라스 좌석. 파스타·버거·샐러드.",
+        "price_range": "1000~2000엔"
+      }
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=USJ+유니버설스튜디오재팬+후기",
+      "google": "https://www.google.com/search?q=유니버설스튜디오재팬+후기&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+유니버설스튜디오재팬"
+    }
+  },
+  "universal_citywalk": {
+    "name_ko": "유니버설 시티워크 오사카",
+    "name_jp": "ユニバーサル・シティウォーク大阪",
+    "coords": [
+      34.6665,
+      135.4308
+    ],
+    "category": "alt",
+    "emoji": "🍴",
+    "tags": [
+      "쇼핑몰",
+      "식당가",
+      "USJ 게이트"
+    ],
+    "summary": "USJ 정문 앞 대형 아메리칸 스타일 쇼핑·다이닝 단지. 입장권 없이 이용 가능.",
+    "detail": "4층 건물에 50여 개 점포 입점. 오사카 타코야키 뮤지엄(4층), 하드록 카페, 551 호라이, 간코, 후지라이진 라멘 등 다양한 장르. USJ 개장 전·후 식사·기념품 구입 장소로 활용.",
+    "sources": [
+      {
+        "title": "Universal CityWalk Osaka 공식",
+        "url": "https://ucw.jp/global/en/"
+      }
+    ],
+    "activities": [
+      "오사카 타코야키 뮤지엄(4층)에서 5대 명가 타코야키 비교 시식",
+      "USJ 기념품 쇼핑 (공식 스토어 시티워크점)"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=유니버설시티워크+오사카+후기",
+      "google": "https://www.google.com/search?q=유니버설시티워크+오사카&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=유니버설시티워크+오사카"
+    }
+  },
+  "tempozan_kaiyukan": {
+    "name_ko": "덴포잔·가이유칸",
+    "name_jp": "天保山・海遊館",
+    "coords": [
+      34.6562,
+      135.431
+    ],
+    "category": "alt",
+    "emoji": "🐠",
+    "tags": [
+      "수족관",
+      "관람차",
+      "항구"
+    ],
+    "summary": "오사카만 덴포잔 하버빌리지에 위치한 세계 최대급 수족관 가이유칸과 높이 112m 대관람차의 복합 명소.",
+    "detail": "가이유칸(海遊館): 1990년 개관, 태평양 수조(높이 9m)에 고래상어 전시. 입장료 성인 2400엔. 덴포잔 대관람차: 1997년 개장, 야간 운행 시 LED 라이트업으로 오사카만 야경. 성인 900엔. USJ에서 오사카시 지하철 벤텐초 환승 후 추가 이동 약 20분.",
+    "sources": [
+      {
+        "title": "가이유칸 공식",
+        "url": "https://www.kaiyukan.com/language/eng/"
+      },
+      {
+        "title": "Tempozan Ferris Wheel Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Tempozan_Ferris_Wheel"
+      }
+    ],
+    "activities": [
+      "고래상어 태평양 수조 관람 (가이유칸 메인 어트랙션)",
+      "덴포잔 대관람차 탑승 — 야간 LED 라이트업 추천"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=가이유칸+오사카+수족관+후기",
+      "google": "https://www.google.com/search?q=덴포잔+가이유칸+후기&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=가이유칸+오사카"
+    }
+  },
+  "sakurajima_area": {
+    "name_ko": "사쿠라지마역 주변",
+    "name_jp": "桜島駅周辺",
+    "coords": [
+      34.6619,
+      135.4322
+    ],
+    "category": "alt",
+    "emoji": "🚇",
+    "tags": [
+      "역",
+      "교통",
+      "유메사키선"
+    ],
+    "summary": "JR 유메사키선(사쿠라지마선) 종착역. USJ 한 정거장 옆 주거·물류 혼합 지역으로 USJ 혼잡 회피 접근로.",
+    "detail": "사쿠라지마역은 유메사키선 4개 역 중 종점(니시쿠조 방향에서 유니버설시티 다음 역). USJ는 유니버설시티역에서 하차해야 하며, 사쿠라지마역에서 USJ까지는 도보 약 15분. 아사히맥주 스이타 공장(사전 예약제 견학), 사쿠라지마 선착장(항구 산책) 등 인근 활용 가능.",
+    "sources": [
+      {
+        "title": "Sakurajima Station Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sakurajima_Station"
+      },
+      {
+        "title": "JR Sakurajima Line (Yumesaki Line) 안내",
+        "url": "https://www.osakastation.com/the-jr-sakurajima-line-yumesaki-line-for-universal-studios-japan/"
+      }
+    ],
+    "activities": [
+      "사쿠라지마역에서 USJ까지 도보 이동 루트 (약 15분, 혼잡 시 대안 접근)",
+      "사쿠라지마 항구 방향 산책 (베이에어리아 뷰)"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=사쿠라지마역+USJ+후기",
+      "google": "https://www.google.com/search?q=사쿠라지마역+USJ&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=사쿠라지마역+오사카"
+    }
   }
 }
