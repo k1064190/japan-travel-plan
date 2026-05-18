@@ -63,7 +63,8 @@
             "to": "이나리역",
             "minutes": 45,
             "cost_jpy": 410,
-            "note": "JR난바(야마토지선)→오사카 환승→JR이나리역. 이른 시간 추천 (인파 적음)"
+            "note": "JR난바(야마토지선)→오사카 환승→JR이나리역. 이른 시간 추천 (인파 적음)",
+            "origin_place_id": "namba_hotel"
           },
           "duration_minutes": 120
         },
@@ -87,7 +88,7 @@
             "mode": "도보",
             "from": "청수사",
             "to": "산넨자카",
-            "minutes": 5,
+            "minutes": 7,
             "cost_jpy": 0,
             "note": "내리막 골목"
           },
@@ -150,7 +151,8 @@
             "to": "오사카죠공원",
             "minutes": 20,
             "cost_jpy": 240,
-            "note": ""
+            "note": "",
+            "origin_place_id": "namba_hotel"
           },
           "duration_minutes": 120
         },
@@ -174,7 +176,7 @@
             "mode": "도보",
             "from": "구로몬",
             "to": "덴덴타운",
-            "minutes": 7,
+            "minutes": 10,
             "cost_jpy": 0,
             "note": ""
           },
@@ -250,7 +252,8 @@
             "to": "유니버설시티역",
             "minutes": 35,
             "cost_jpy": 280,
-            "note": "오픈런 = 닌텐도월드 정리권 확보"
+            "note": "오픈런 = 닌텐도월드 정리권 확보",
+            "origin_place_id": "namba_hotel"
           },
           "duration_minutes": 720
         },

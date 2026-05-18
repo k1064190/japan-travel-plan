@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 5 — Japan Travel Plan 2026.05.22–26</title>
+    <title>Stage 6 — Japan Travel Plan 2026.05.22–26</title>
     <style>
       *,
       *::before,
@@ -249,34 +249,35 @@
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">5</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node future">6</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 5</h2>
+        <h2 id="stage-heading">Stage 6</h2>
 
         <div class="card-grid">
-          <article aria-labelledby="card-curated-content">
-            <h3 id="card-curated-content">Curated Content</h3>
+          <article aria-labelledby="card-realtime-transit">
+            <h3 id="card-realtime-transit">Realtime Transit</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                기존 "한국어 후기 검색"은 네이버&#183;구글&#183;유튜브 검색창
-                진입 링크 3개에 불과해 현장에서 매번 직접
-                검색&#183;정렬&#183;평가하는 시간이 들었다. 이미 신뢰할 만한
-                한국어 후기/가이드 글이 인터넷에 충분하니, 각
-                명소&#183;맛집&#183;활동에 대해 사전에 큐레이션된 블로그
-                포스트를 데이터에 박아두면 클릭 한 번에 본문으로 진입할 수 있다.
+                Stage 1&#8211;5의 transit (도보&#183;전철&#183;버스) 시간은 사전
+                조사 기반의 추정치. 사용자가 현장에서 "이 시간이 맞나"라는
+                의문을 느꼈고, 특히 라피트&#183;JR&#183;미도스지선 같은 일본
+                대중교통 시간은 환승&#183;정차&#183;실시간 운행 상황에 따라 크게
+                변동. 매번 수동으로 Google Maps에 좌표 복붙하기보다, 각 stop에서
+                한 번 클릭으로 실시간 경로를 띄울 수 있으면 신뢰도 + 편의성이 둘
+                다 올라간다.
               </p>
             </div>
 
@@ -284,26 +285,23 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  데이터 스키마 확장 (<code>data/places.json</code> +
-                  <code>scripts/validate-data.mjs</code>): 명소 레벨
-                  <code
-                    >curated_links: [{title, url, source, snippet?}, ...]</code
-                  >, 맛집 객체 <code>link: {title, url, source}</code>, 활동
-                  항목 <code>string | {text, link?}</code> 양쪽 허용 (역호환),
-                  모든 URL <code>https://</code> 강제
+                  UI 딥링크: 디테일 패널의 transit 카드 안에 "Google Maps에서
+                  실제 경로&#183;시간 보기 &#8594;" 버튼 추가. 클릭 시 새 탭에
+                  Google Maps directions 페이지가 열리고
+                  origin&#183;destination&#183;travelmode가 자동으로 채워져
+                  실시간 시간/요금/노선 안내가 표시됨.
                 </li>
                 <li>
-                  UI 렌더링 (<code>assets/app.js</code>) &#8212;
-                  <code>renderActivity</code> / <code>renderRestaurant</code> /
-                  <code>renderCuratedLink</code> 헬퍼 3개: 큐레이션 블로그 카드
-                  그리드 (제목 + 출처 + 1줄 스니펫), 활동 줄 끝 "후기 &#8594;"
-                  inline 링크, 맛집 카드 하단 "한국어 후기 보기 &#8594;" 링크,
-                  기존 검색 그리드는 "더 찾아보기" 폴백으로 격하
+                  도보 sanity check:
+                  <code>scripts/verify-walk-times.mjs</code> &#8212; pure 도보
+                  구간의 planned 시간을 haversine 거리 + 1.25 detour factor + 5
+                  km/h 기준으로 sanity check. &#177;3분 AND &#177;50% 초과 시
+                  flag. <code>npm run verify-walk</code>로 호출.
                 </li>
                 <li>
-                  데이터 채우기 (65 places 전체): 65/65 명소 각 3개씩
-                  <code>curated_links</code> (총 195개), 40/41 메인 맛집에
-                  <code>link</code>, 48/172 활동 wrap (main 명소만)
+                  대중교통 검증 정책: 자동 검증은 미지원 (OSRM 데모는 foot이
+                  driving으로 fallback, ORS/GraphHopper는 API key 필요, Google
+                  Directions API는 유료). UI 버튼이 실시간 검증의 1차 도구.
                 </li>
               </ul>
             </div>
@@ -311,23 +309,37 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Phase A &#8212; 스키마 + UI + Day1 main 3개 (kansai_airport,
-                namba_hotel, dotonbori). 패턴 검증.
+                런타임에 좌표 lookup으로 URL을 생성 &#8212; 데이터 변경 없음,
+                places.json + itinerary.json 그대로 사용. 새 헬퍼 3개:
               </p>
+              <ul>
+                <li>
+                  <code>transitModeToGoogleMode(mode)</code> &#8212; 한국어 mode
+                  문자열을 Google travelmode로 매핑. 도보 &#8594; walking,
+                  택시&#183;자동차 &#8594; driving, 그 외
+                  (라피트&#183;JR&#183;지하철&#183;한큐&#183;미도스지선&#183;사철&#183;기차&#183;버스&#183;hybrid)
+                  &#8594; transit.
+                </li>
+                <li>
+                  <code
+                    >buildDirectionsUrl(originCoords, destCoords, mode)</code
+                  >
+                  &#8212; Google Maps directions URL을 안전하게 생성 (좌표가
+                  finite number가 아니면 null 반환).
+                </li>
+                <li>
+                  <code>getTransitEndpoints(dayId, stopIndex)</code> &#8212;
+                  현재 stop의 transit_from_prev가 있을 때 origin/destination
+                  place 객체 반환. origin은 (1) 같은 day의 직전 stop, 없으면 (2)
+                  이전 day의 마지막 stop을 fallback으로 사용.
+                </li>
+              </ul>
               <p style="margin-top: 0.5rem">
-                Phase B &#8212; 나머지 62개 명소. Day별&#183;분류별로 7개
-                background subagent를 병렬 dispatch (Day2 main, Day3 main,
-                Day4&#8211;5 main, Day1 alt, Day2 alt, Day3 alt, Day4 alt). 각
-                subagent는 WebSearch로 한국어 블로그 검색 &#8594;
-                <code>/tmp/curated-patches/&lt;name&gt;.json</code> 저장.
-                <code>/tmp/merge-patches.mjs</code>로 일괄 merge. subagent는
-                read-only, 메인만 places.json 라이터.
-              </p>
-              <p style="margin-top: 0.5rem">
-                큐레이션 우선순위: (1) 한국 1차 블로그 (blog.naver.com,
-                brunch.co.kr, *.tistory.com), (2) 한국 여행 플랫폼
-                (myrealtrip.com, kr.trip.com, tripstore.kr), (3) KKday/Klook
-                블로그, (4) 한국어 공식 가이드/매거진 &#8212; niche에만.
+                도보 검증 휴리스틱 채택 이유: OSRM 공개 데모는 foot profile이
+                driving으로 fallback (34 km/h 결과). GraphHopper / ORS는 API key
+                필요. Google Directions API는 유료. 도시 내 &#8804; 2 km 단순
+                도보는 haversine &#215; 1.25 detour &#247; 5 km/h가 실측과
+                &#177;2분 차이 &#8212; 큰 오류 잡기엔 충분.
               </p>
             </div>
 
@@ -335,26 +347,22 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>scripts/validate-data.mjs:20&#8211;39</code>
-                  (<code>validateCuratedLink</code> 헬퍼)
+                  <code>assets/app.js:65&#8211;103</code>
+                  (<code>transitModeToGoogleMode</code>,
+                  <code>buildDirectionsUrl</code>,
+                  <code>getTransitEndpoints</code>)
                 </li>
                 <li>
-                  <code>scripts/validate-data.mjs:84&#8211;115</code>
-                  (curated_links / activities / restaurants 옵셔널 검증)
+                  <code>assets/app.js:275&#8211;296</code>
+                  (transit 카드 내 deep-link 버튼)
                 </li>
                 <li>
-                  <code>assets/app.js:28&#8211;66</code>
-                  (<code>renderActivity</code>,
-                  <code>renderRestaurant</code>,
-                  <code>renderCuratedLink</code> 헬퍼)
+                  <code>scripts/verify-walk-times.mjs</code>
+                  (haversine + 도보속도 휴리스틱)
                 </li>
                 <li>
-                  <code>assets/app.js:222&#8211;265</code>
-                  (<code>renderDetail</code> 큐레이션 섹션 + 폴백 검색 그리드)
-                </li>
-                <li>
-                  <code>data/places.json</code> (65 명소 전체
-                  <code>curated_links</code> 추가)
+                  <code>package.json</code>
+                  (<code>npm run verify-walk</code> 스크립트)
                 </li>
               </ul>
             </div>
@@ -365,42 +373,38 @@
               <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  7개 background subagent 병렬 dispatch로 62 명소 큐레이션이
-                  ~6분 wall-clock에 끝남. 단일 sequential이면 1시간+.
+                  데이터 변경 0건 &#8212; 런타임 좌표 lookup으로 URL을 즉석
+                  생성. 회귀 위험 최소.
                 </li>
                 <li>
-                  patch JSON 분리 + merge 스크립트 패턴 &#8212; subagent는
-                  read-only, 메인만 places.json 라이터. 충돌&#183;partial-write
-                  없이 안전.
+                  Google Maps 딥링크는 API key&#183;인증 없이 동작 +
+                  iOS/Android에서 Maps 앱으로 자동 deep-link됨 (URL scheme
+                  매칭).
                 </li>
                 <li>
-                  스키마 옵셔널화 (<code>curated_links</code>,
-                  <code>restaurants[].link</code>, activity object)로 Day1 main
-                  3개 &#8594; 65개 확장 도중 기존 데이터/UI 회귀 0.
-                </li>
-                <li>
-                  "더 찾아보기" 폴백 그리드 보존 &#8212; 큐레이션이 부족하다고
-                  느낄 때도 즉시 더 검색 가능.
+                  도보 검증 휴리스틱이 OSRM/ORS/Google 모두 안 쓰고도 sanity
+                  bar로는 충분 &#8212; flagged 2건 모두 실측 &#177;5분 내라
+                  데이터 변경 없이 유지 가능.
                 </li>
               </ul>
 
               <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
-                  subagent가 가끔 출처가 모호한 사이트나 가이드 페이지를
-                  fallback으로 선택. 한국 1차 블로그 비중을 더 높이려면 큐레이션
-                  prompt에 "프로모션 가이드성 글보다 개인 후기 우선" 같은 규칙을
-                  더 강하게 박아도 좋겠음.
+                  origin fallback이 prev-day 마지막 stop인데, 그 last stop이
+                  dotonbori 같은 관광지면 호텔과 약간 어긋남 (직선 500m 내).
+                  정확하게 하려면 itinerary stop에
+                  <code>from_place_id</code> 명시 필드 추가가 필요. 현재는 작은
+                  오차라 trade-off로 그대로 유지.
                 </li>
                 <li>
-                  alt 명소의 활동도 link를 채우려면 별도 phase가 필요. 현재는
-                  생략 (alt activities 124개는 plain string). 사용자가 alt 깊게
-                  보지 않을 가능성 고려한 trade-off.
+                  Google Directions API key를 추후 사용한다면 사전 빌드 타임에
+                  verified_minutes&#183;verified_url 정적 캐싱 가능. 현재는
+                  클라이언트 사이드 즉석 생성으로 충분.
                 </li>
                 <li>
-                  데이터 양이 commit 1건에 +1925 lines &#8212; 다음에 데이터 큰
-                  변경 있을 땐 review 트리오에 출처 도메인 분포 + 의심 URL
-                  샘플링을 정리해서 줘야 함.
+                  검증 휴리스틱이 hybrid mode (JR환상선+도보)를 skip &#8212;
+                  사용자가 도보 비중이 큰 hybrid를 의심하면 별도 분석 필요.
                 </li>
               </ul>
 
@@ -415,23 +419,19 @@
                   &#8594; 11 pass
                 </li>
                 <li>
-                  <code>browse</code> 스크립트로 main 6 spot 샘플 검증: console
-                  error 0, curated 3개 + activity/restaurant 링크 정상 렌더링
-                </li>
-                <li>alt 4 spot 데이터 직접 확인: curated 3개 각각 정상</li>
-              </ul>
-
-              <h4 class="retro-sub">알려진 미해결</h4>
-              <ul>
-                <li>
-                  <code>osaka_castle</code>의 "공원 내 야채 레스토랑" 맛집 1개는
-                  한국어 후기 부재로 link 없이 plain object 유지 (40/41).
+                  <code>npm run verify-walk</code> &#8594; 7개 도보 검증, 2건
+                  flag (sannenzaka 5&#8594;8.1분, denden_town 7&#8594;13.3분
+                  &#8212; 실측 변동 범위 내, 데이터 그대로 유지)
                 </li>
                 <li>
-                  <code>sannenzaka_ninenzaka</code>의 인력거 활동 1개는 plain
-                  string 유지 (한국어 전용 후기 부재).
+                  <code>browse</code> 스크립트로 디테일 패널 deep-link 버튼
+                  확인: day1/namba_hotel (라피트, transit) &#8594;
+                  <code>&amp;travelmode=transit</code>; day1/dotonbori (도보)
+                  &#8594; <code>&amp;travelmode=walking</code>;
+                  day1/kansai_airport (첫 stop, transit_from_prev 없음) &#8594;
+                  버튼 미표시 정상
                 </li>
-                <li>alt 활동 124개는 의도적으로 plain string.</li>
+                <li>console error 0</li>
               </ul>
             </div>
           </article>

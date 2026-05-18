@@ -50,6 +50,63 @@ function renderRestaurant(r) {
     </div>`;
 }
 
+/** Map Korean transit mode strings to Google Maps travelmode values.
+ *  Walking and driving require *exact* (trimmed) matches — hybrids like
+ *  "미도스지+도보" or "JR환상선+도보" are mixed-mode and must route as
+ *  transit, otherwise Google would try to walk a 5 km rail leg. */
+function transitModeToGoogleMode(mode) {
+  if (!mode) return "transit";
+  const m = String(mode).trim();
+  if (m === "도보" || /^walk(ing)?$/i.test(m)) return "walking";
+  if (/^(택시|렌터카|자동차|taxi|car)$/i.test(m)) return "driving";
+  return "transit";
+}
+
+/** Build a Google Maps directions URL between two coordinate pairs. */
+function buildDirectionsUrl(originCoords, destCoords, mode) {
+  if (!Array.isArray(originCoords) || !Array.isArray(destCoords)) return null;
+  const [olat, olng] = originCoords;
+  const [dlat, dlng] = destCoords;
+  if (![olat, olng, dlat, dlng].every(Number.isFinite)) return null;
+  const params = new URLSearchParams({
+    api: "1",
+    origin: `${olat},${olng}`,
+    destination: `${dlat},${dlng}`,
+    travelmode: transitModeToGoogleMode(mode),
+  });
+  return `https://www.google.com/maps/dir/?${params.toString()}`;
+}
+
+/** Resolve origin/destination places for a given day/stop's transit_from_prev.
+ *  Origin precedence: explicit transit_from_prev.origin_place_id > previous
+ *  same-day stop > previous-day last stop. The explicit field is what user-
+ *  authored intent (e.g., "departing from the hotel") should look like. */
+function getTransitEndpoints(dayId, stopIndex) {
+  if (!state.itinerary || !state.places) return null;
+  const dayIdx = state.itinerary.days.findIndex((d) => d.id === dayId);
+  if (dayIdx < 0) return null;
+  const day = state.itinerary.days[dayIdx];
+  const currStop = day.stops?.[stopIndex];
+  if (!currStop?.transit_from_prev) return null;
+  const dest = state.places[currStop.place_id];
+  if (!dest) return null;
+  let origin = null;
+  const explicit = currStop.transit_from_prev.origin_place_id;
+  if (explicit) {
+    origin = state.places[explicit];
+  }
+  if (!origin && stopIndex > 0) {
+    const prev = day.stops[stopIndex - 1];
+    origin = state.places[prev?.place_id];
+  }
+  if (!origin && dayIdx > 0) {
+    const prevDay = state.itinerary.days[dayIdx - 1];
+    const last = prevDay.stops?.[prevDay.stops.length - 1];
+    origin = state.places[last?.place_id];
+  }
+  return origin ? { origin, dest } : null;
+}
+
 function renderCuratedLink(link, color) {
   const snippet = link?.snippet
     ? `<div class="text-xs text-slate-600 mt-1 leading-snug">${esc(link.snippet)}</div>`
@@ -227,6 +284,15 @@ function renderDetail(stop, place) {
   detail.classList.remove("hidden");
   const color = dayColor(state.activeDay);
   const t = stop.transit_from_prev;
+  const endpoints = t
+    ? getTransitEndpoints(state.activeDay, state.activeStopIndex)
+    : null;
+  const dirUrl = endpoints
+    ? buildDirectionsUrl(endpoints.origin.coords, endpoints.dest.coords, t.mode)
+    : null;
+  const dirButton = dirUrl
+    ? `<a href="${safeHref(dirUrl)}" target="_blank" rel="noopener" class="inline-block mt-2 text-xs font-semibold px-3 py-1 rounded border hover:bg-slate-100" style="border-color:${color};color:${color}">Google Maps에서 실제 경로·시간 보기 →</a>`
+    : "";
   const transitCard = t
     ? `
     <div class="mx-5 mt-4 p-3 rounded border-l-4 bg-slate-50" style="border-color:${color}">
@@ -236,6 +302,7 @@ function renderDetail(stop, place) {
         ${esc(t.mode)} · ${esc(t.minutes)}분${t.cost_jpy ? ` · ¥${esc(t.cost_jpy)}` : " · 무료"}
       </div>
       ${t.note ? `<div class="text-xs text-slate-500 mt-1">${esc(t.note)}</div>` : ""}
+      ${dirButton}
     </div>`
     : "";
 
