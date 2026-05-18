@@ -67,6 +67,7 @@ function renderDay(dayId) {
   const day = state.itinerary.days.find((d) => d.id === dayId);
   if (!day) return;
   state.activeDay = dayId;
+  document.body.style.setProperty("--active-day", dayColor(dayId));
   state.markerLayer.clearLayers();
   state.routeLayer.clearLayers();
 
@@ -105,6 +106,17 @@ function selectStop(dayId, stopIndex) {
   if (!day || !day.stops[stopIndex]) return;
   state.activeDay = dayId;
   state.activeStopIndex = stopIndex;
+  state.markerLayer.eachLayer((m) => {
+    const el = m.getElement();
+    if (!el) return;
+    const inner = el.querySelector(".numbered-marker");
+    if (inner) inner.classList.remove("active");
+  });
+  const markers = state.markerLayer.getLayers();
+  if (markers[stopIndex]) {
+    const el = markers[stopIndex].getElement();
+    if (el) el.querySelector(".numbered-marker")?.classList.add("active");
+  }
   const stop = day.stops[stopIndex];
   const place = state.places[stop.place_id];
   if (!place) return;
