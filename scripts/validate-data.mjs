@@ -17,10 +17,27 @@ const REQUIRED_FIELDS = [
 const JAPAN_BOUNDS = { latMin: 30, latMax: 46, lngMin: 128, lngMax: 146 };
 const UTILITY_TAGS = new Set(["교통허브", "숙소", "출국 준비", "공항", "출국"]);
 
+function isPlainObject(v) {
+  return v != null && typeof v === "object" && !Array.isArray(v);
+}
+
 export function validate(places, itinerary) {
   const errors = [];
 
+  if (!isPlainObject(places)) {
+    errors.push(`places must be an object`);
+    return { errors };
+  }
+  if (!isPlainObject(itinerary)) {
+    errors.push(`itinerary must be an object`);
+    return { errors };
+  }
+
   for (const [id, place] of Object.entries(places)) {
+    if (!isPlainObject(place)) {
+      errors.push(`${id}: place entry must be an object`);
+      continue;
+    }
     for (const f of REQUIRED_FIELDS) {
       if (!(f in place)) errors.push(`${id}: missing field: ${f}`);
     }
@@ -69,11 +86,19 @@ export function validate(places, itinerary) {
 
   const referenced = new Set();
   for (const day of itinerary.days) {
-    if (!day || typeof day !== "object") {
+    if (!isPlainObject(day)) {
       errors.push(`itinerary.days contains a non-object entry`);
       continue;
     }
-    for (const stop of day.stops ?? []) {
+    if (!("stops" in day)) {
+      errors.push(`${day.id ?? "(unknown day)"}: missing field: stops`);
+      continue;
+    }
+    if (!Array.isArray(day.stops)) {
+      errors.push(`${day.id ?? "(unknown day)"}: stops must be an array`);
+      continue;
+    }
+    for (const stop of day.stops) {
       referenced.add(stop.place_id);
       if (!places[stop.place_id]) {
         errors.push(`${day.id}: unknown place_id: ${stop.place_id}`);
