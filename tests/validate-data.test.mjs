@@ -70,6 +70,12 @@ describe("validate(places, itinerary)", () => {
     assert.ok(!r.errors.some((e) => e.includes("no restaurants")));
   });
 
+  it("skips restaurant check for places with utility tags (교통허브, 숙소)", () => {
+    const bad = { ...goodPlace, restaurants: [], tags: ["교통허브"] };
+    const r = validate({ p1: bad }, goodItinerary);
+    assert.ok(!r.errors.some((e) => e.includes("no restaurants")));
+  });
+
   it("fails when required field missing", () => {
     const bad = { ...goodPlace };
     delete bad.summary;

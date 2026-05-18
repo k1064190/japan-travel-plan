@@ -15,6 +15,7 @@ const REQUIRED_FIELDS = [
   "review_links",
 ];
 const JAPAN_BOUNDS = { latMin: 30, latMax: 46, lngMin: 128, lngMax: 146 };
+const UTILITY_TAGS = new Set(["교통허브", "숙소", "출국 준비", "공항", "출국"]);
 
 export function validate(places, itinerary) {
   const errors = [];
@@ -65,6 +66,8 @@ export function validate(places, itinerary) {
       (d) => d.id === "day5" && d.stops.some((s) => s.place_id === id),
     );
     if (inDay5) continue;
+    const tags = Array.isArray(place.tags) ? place.tags : [];
+    if (tags.some((t) => UTILITY_TAGS.has(t))) continue;
     if (!Array.isArray(place.restaurants) || place.restaurants.length === 0) {
       errors.push(`${id}: main place ${id} has no restaurants`);
     }
