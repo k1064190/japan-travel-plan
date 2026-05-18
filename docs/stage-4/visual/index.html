@@ -460,6 +460,57 @@
                   </tbody>
                 </table>
               </div>
+
+              <h4 class="retro-sub">Codex PR Review (별도 단계)</h4>
+              <p
+                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem"
+              >
+                PR #1에 <code>@codex review</code> 트리거 후 3 라운드 (skill
+                cap) 진행, 총 16건 finding 모두 적용:
+              </p>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Round</th>
+                      <th>Findings</th>
+                      <th>주요 처리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>6 (P1×1, P2×4, P3×1)</td>
+                      <td>
+                        hashchange → <code>selectStop()</code> 호출로 deep-link
+                        marker/flyTo 복원; validator coords-as-finite /
+                        sources-as-array / HH:MM 범위 / https only
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>5 (P2×3, P3×2)</td>
+                      <td>
+                        coords:null 처리, day5 stops nullish 가드, sidebar
+                        cost_jpy=0 → "무료", hashchange 자기-재진입 가드
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>5 (P2×5)</td>
+                      <td>
+                        validator root-level defensive guards
+                        (<code>isPlainObject</code>, places/itinerary 객체 검증,
+                        day.stops 명시적 요구)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem">
+                모두 mechanical/defensive fix로 ambiguity 없음 → 사용자 확인
+                없이 auto-apply. PR 본 후 cap 도달로 종료.
+              </p>
             </div>
           </article>
         </div>

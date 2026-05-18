@@ -63,3 +63,15 @@
 | gemini-subagent | MINOR: boot()/hashchange 중복 로직 | `buildHash()` 추출로 해소 |
 | gemini-subagent | MAJOR: 디테일 패널 visibility regression (same-day switch) | **Dismiss** — 코드 구조 오독. `else`는 `if (open)` 페어로 day 같은 케이스(`open=true`)에선 if 블록만 실행. 실제 same-day switch도 정상 동작 검증 완료. |
 | codex-subagent | (MCP 도구 schema 에러로 본문 미생성) | 다음 환경 점검 항목 |
+
+### Codex PR Review (별도 단계)
+
+PR #1에 `@codex review` 트리거 후 3 라운드 (skill cap) 진행, 총 16건 finding 모두 적용:
+
+| Round | Findings | 주요 처리 |
+| --- | --- | --- |
+| 1 | 6 (P1×1, P2×4, P3×1) | hashchange → `selectStop()` 호출로 deep-link marker/flyTo 복원; validator coords-as-finite/sources-as-array/HH:MM 범위/https only |
+| 2 | 5 (P2×3, P3×2) | coords:null 처리, day5 stops nullish 가드, sidebar cost_jpy=0 → "무료", hashchange 자기-재진입 가드 |
+| 3 | 5 (P2×5) | validator root-level defensive guards (`isPlainObject`, places/itinerary 객체 검증, day.stops 명시적 요구) |
+
+모두 mechanical/defensive fix로 ambiguity 없음 → 사용자 확인 없이 auto-apply. PR 본 후 cap 도달로 종료. 추가 round를 돌면 더 marginal defensive 케이스만 나올 것으로 예상.
