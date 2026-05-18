@@ -156,7 +156,7 @@ export function validate(places, itinerary) {
       if (!places[stop.place_id]) {
         errors.push(`${day.id}: unknown place_id: ${stop.place_id}`);
       }
-      if (stop.transit_from_prev && "origin_place_id" in stop.transit_from_prev) {
+      if (isPlainObject(stop.transit_from_prev) && "origin_place_id" in stop.transit_from_prev) {
         const opid = stop.transit_from_prev.origin_place_id;
         if (typeof opid !== "string" || !places[opid]) {
           errors.push(`${day.id} stop ${stop.place_id}: transit_from_prev.origin_place_id refers to unknown place: ${opid}`);

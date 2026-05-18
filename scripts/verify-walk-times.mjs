@@ -75,9 +75,14 @@ async function main() {
       }
       const dest = places[stop.place_id];
       let origin;
-      if (si > 0) {
+      const explicit = t.origin_place_id;
+      if (explicit) {
+        origin = places[explicit];
+      }
+      if (!origin && si > 0) {
         origin = places[day.stops[si - 1].place_id];
-      } else if (di > 0) {
+      }
+      if (!origin && di > 0) {
         const prevDay = itinerary.days[di - 1];
         const last = prevDay.stops?.[prevDay.stops.length - 1];
         if (last) origin = places[last.place_id];
