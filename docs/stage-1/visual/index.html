@@ -93,7 +93,6 @@
         gap: 0;
       }
 
-      /* Each stage takes equal horizontal space */
       .timeline-item {
         display: flex;
         flex-direction: column;
@@ -101,7 +100,6 @@
         flex: 1;
       }
 
-      /* Row containing the node circle plus a connector segment */
       .timeline-rail {
         display: flex;
         align-items: center;
@@ -109,7 +107,6 @@
         position: relative;
       }
 
-      /* Horizontal connector line behind the nodes */
       .timeline-rail::before {
         content: "";
         position: absolute;
@@ -122,7 +119,6 @@
         z-index: 0;
       }
 
-      /* Node circle */
       .timeline-node {
         width: 36px;
         height: 36px;
@@ -144,7 +140,7 @@
         border: 2px solid var(--accent);
       }
 
-      /* Completed stages (not current): filled with muted teal */
+      /* Other completed stages: filled with muted teal */
       .timeline-node--done {
         background: var(--muted-bg);
         color: var(--muted-text);
@@ -158,7 +154,6 @@
         border: 2px solid var(--accent);
       }
 
-      /* Connector segment between nodes */
       .timeline-segment {
         flex: 1;
         height: 2px;
@@ -167,7 +162,6 @@
         z-index: 0;
       }
 
-      /* Label below each node */
       .timeline-label {
         font-size: 0.78rem;
         color: var(--text-secondary);
@@ -221,7 +215,6 @@
         padding: 1.5rem 1.5rem 1.375rem;
       }
 
-      /* Card title (slug in Title Case) */
       .card-title {
         font-size: 1rem;
         font-weight: 700;
@@ -231,7 +224,6 @@
         border-bottom: 1px solid var(--border);
       }
 
-      /* Section labels within the card */
       .card-section-label {
         font-size: 0.72rem;
         font-weight: 700;
@@ -242,13 +234,11 @@
         margin-bottom: 0.35rem;
       }
 
-      /* Why paragraph */
       .why-text {
         font-size: 0.9rem;
         color: var(--text-primary);
       }
 
-      /* What bulleted list */
       .what-list {
         list-style: disc;
         padding-left: 1.2rem;
@@ -272,13 +262,11 @@
         border-radius: 3px;
       }
 
-      /* How paragraph */
       .how-text {
         font-size: 0.875rem;
         color: var(--text-primary);
       }
 
-      /* Code locations monospace block */
       .code-locations-list {
         list-style: none;
         padding: 0.75rem 1rem;
@@ -301,7 +289,6 @@
         margin-bottom: 0;
       }
 
-      /* Retrospective italicized list */
       .retro-list {
         list-style: disc;
         padding-left: 1.2rem;
@@ -348,8 +335,9 @@
 
       <!-- ================================================================ -->
       <!-- Timeline — 4 stages total                                          -->
-      <!-- Stage 1 = accent (current), Stage 2 = muted-filled (done),        -->
-      <!-- Stages 3-4 = hollow pending                                        -->
+      <!-- Stage 1 = accent (current)                                        -->
+      <!-- Stages 2, 3 = muted-filled (completed, not current)               -->
+      <!-- Stage 4 = hollow pending                                           -->
       <!-- ================================================================ -->
       <nav aria-label="Stage timeline">
         <div class="timeline" role="list">
@@ -382,18 +370,18 @@
             <span class="timeline-label timeline-label--done">Stage 2</span>
           </div>
 
-          <!-- Stage 3 — pending (hollow) -->
+          <!-- Stage 3 — completed, not current (muted-filled) -->
           <div class="timeline-item" role="listitem">
             <div class="timeline-rail">
               <div
-                class="timeline-node timeline-node--pending"
-                aria-label="Stage 3, pending"
+                class="timeline-node timeline-node--done"
+                aria-label="Stage 3, completed"
               >
                 3
               </div>
               <div class="timeline-segment"></div>
             </div>
-            <span class="timeline-label">Stage 3</span>
+            <span class="timeline-label timeline-label--done">Stage 3</span>
           </div>
 
           <!-- Stage 4 — pending, no trailing segment -->
@@ -418,12 +406,12 @@
         <h2 id="stage-1-heading">Stage 1</h2>
         <p class="stage-summary">
           Project skeleton, routing, and end-to-end wiring validated with 5
-          sample stops before expanding to the full 60-place dataset.
+          sample stops before expanding to the full 65-place dataset.
         </p>
       </section>
 
       <!-- ================================================================ -->
-      <!-- Card grid                                                          -->
+      <!-- Card grid — one card per slug (skeleton.md)                        -->
       <!-- ================================================================ -->
       <div class="card-grid">
         <article class="doc-card" aria-labelledby="card-skeleton-title">
@@ -434,7 +422,7 @@
           <p class="why-text">
             Verify that the full data &#8594; map &#8594; sidebar &#8594; detail
             &#8594; routing pipeline works end-to-end with 5 sample places
-            before populating 60 entries. Rewiring a broken pipeline after
+            before populating 65 entries. Rewiring a broken pipeline after
             filling all data would be expensive to reverse.
           </p>
 
@@ -496,7 +484,9 @@
               assets/app.js &#8212; parseHash, boot, hashchange listener
               (routing)
             </li>
-            <li>data/places.json, data/itinerary.json (5 places, Day 1)</li>
+            <li>
+              data/places.json, data/itinerary.json &#8212; 5 places, Day 1
+            </li>
           </ul>
 
           <!-- Retrospective -->
@@ -513,18 +503,9 @@
               step; the app runs as a single local HTML file.
             </li>
             <li>
-              Before Stage 2: add place guards to renderSidebar / renderDetail
-              (insurance against data typos in 60-place expansion), and fix
-              sidebar sync on same-day hashchange.
-            </li>
-            <li>
               Deferred to Stage 3: mobile-tabs intentionally left empty (Stage
               3.1); .numbered-marker.active CSS is dead code preserved for Stage
               3.3 activation.
-            </li>
-            <li>
-              Stage 2 readiness: ready with caveats &#8212; enter after applying
-              critical guard fixes.
             </li>
           </ul>
         </article>
