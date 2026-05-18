@@ -69,10 +69,10 @@
 
   #detail {
     position: fixed;
-    top: 0;
+    top: env(safe-area-inset-top, 0);
     left: 0;
     right: 0;
-    bottom: 3.5rem;
+    bottom: calc(3.5rem + env(safe-area-inset-bottom, 0));
     width: 100%;
     z-index: 1500;
     border-left: none;

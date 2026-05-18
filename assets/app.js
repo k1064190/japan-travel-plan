@@ -108,14 +108,17 @@ function selectStop(dayId, stopIndex) {
   state.activeStopIndex = stopIndex;
   state.markerLayer.eachLayer((m) => {
     const el = m.getElement();
-    if (!el) return;
-    const inner = el.querySelector(".numbered-marker");
-    if (inner) inner.classList.remove("active");
+    if (el) {
+      const inner = el.querySelector(".numbered-marker");
+      if (inner) inner.classList.remove("active");
+    }
+    m.setZIndexOffset(0);
   });
   const markers = state.markerLayer.getLayers();
   if (markers[stopIndex]) {
     const el = markers[stopIndex].getElement();
     if (el) el.querySelector(".numbered-marker")?.classList.add("active");
+    markers[stopIndex].setZIndexOffset(1000);
   }
   const stop = day.stops[stopIndex];
   const place = state.places[stop.place_id];
@@ -192,6 +195,7 @@ function renderDetail(stop, place) {
     </div>`
     : "";
 
+  const rl = place.review_links || {};
   detail.innerHTML = `
     <div class="h-40 flex items-center justify-center text-7xl relative" style="background:linear-gradient(135deg,${color}33,${color}66)">
       ${esc(place.emoji)}
@@ -242,9 +246,9 @@ function renderDetail(stop, place) {
 
       <h3 class="mt-5 font-semibold text-slate-800">한국어 후기 검색</h3>
       <div class="mt-2 grid grid-cols-3 gap-2 text-sm text-center">
-        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(place.review_links.naver)}" target="_blank" rel="noopener">네이버<br><span class="text-xs text-slate-400">블로그</span></a>
-        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(place.review_links.google)}" target="_blank" rel="noopener">구글<br><span class="text-xs text-slate-400">웹</span></a>
-        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(place.review_links.youtube)}" target="_blank" rel="noopener">유튜브<br><span class="text-xs text-slate-400">영상</span></a>
+        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(rl.naver)}" target="_blank" rel="noopener">네이버<br><span class="text-xs text-slate-400">블로그</span></a>
+        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(rl.google)}" target="_blank" rel="noopener">구글<br><span class="text-xs text-slate-400">웹</span></a>
+        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(rl.youtube)}" target="_blank" rel="noopener">유튜브<br><span class="text-xs text-slate-400">영상</span></a>
       </div>
 
       ${
@@ -363,7 +367,12 @@ window.addEventListener("hashchange", () => {
     ];
     if (stop) {
       const place = state.places[stop.place_id];
-      if (place) renderDetail(stop, place);
+      if (place) {
+        renderDetail(stop, place);
+        if (window.matchMedia("(max-width: 767px)").matches) {
+          setMobileView("map");
+        }
+      }
     }
   }
 });
