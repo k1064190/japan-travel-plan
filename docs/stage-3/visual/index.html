@@ -1,13 +1,10 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>japan_travel_plan — Stage 3 Plan Progress</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage 3 — Japan Travel Plan 2026.05.22–26</title>
     <style>
-      /* ------------------------------------------------------------------ */
-      /* Reset + base                                                         */
-      /* ------------------------------------------------------------------ */
       *,
       *::before,
       *::after {
@@ -16,535 +13,350 @@
         padding: 0;
       }
 
-      :root {
-        --accent: #2d6a7f;
-        --accent-light: #e8f3f6;
-        --accent-dim: #4a8fa6;
-        --muted-bg: #b0c8d2;
-        --muted-text: #ffffff;
-        --bg: #f7f7f5;
-        --surface: #ffffff;
-        --border: #ddddd8;
-        --text-primary: #1a1a18;
-        --text-secondary: #5a5a56;
-        --text-mono: #2a4a56;
-        --radius: 6px;
-        --max-width: 860px;
-      }
-
       body {
-        background: var(--bg);
-        color: var(--text-primary);
         font-family:
-          ui-sans-serif,
-          system-ui,
-          -apple-system,
-          BlinkMacSystemFont,
-          "Segoe UI",
-          Roboto,
-          "Helvetica Neue",
-          Arial,
-          sans-serif;
-        font-size: 15px;
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background: #f7f7f5;
+        color: #1a1a1a;
         line-height: 1.6;
       }
 
-      /* ------------------------------------------------------------------ */
-      /* Layout wrapper                                                       */
-      /* ------------------------------------------------------------------ */
-      .page {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 2.5rem 1.25rem 4rem;
-      }
-
-      /* ------------------------------------------------------------------ */
-      /* Header                                                               */
-      /* ------------------------------------------------------------------ */
+      /* ── Header ── */
       header {
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 1.25rem;
-        margin-bottom: 2.25rem;
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.5rem 2rem;
       }
-
       header h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         font-weight: 700;
+        color: #0f766e;
         letter-spacing: -0.01em;
-        color: var(--accent);
       }
-
       header p {
-        font-size: 0.875rem;
-        color: var(--text-secondary);
-        margin-top: 0.25rem;
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 0.2rem;
       }
 
-      /* ------------------------------------------------------------------ */
-      /* Timeline                                                             */
-      /* ------------------------------------------------------------------ */
-      nav[aria-label="Stage timeline"] {
-        margin-bottom: 2.75rem;
-      }
-
-      .timeline {
+      /* ── Timeline ── */
+      nav.timeline {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.25rem 2rem;
         display: flex;
-        align-items: flex-start;
-        gap: 0;
+        align-items: center;
+        overflow-x: auto;
       }
-
       .timeline-item {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 0.35rem;
+      }
+      .timeline-connector {
         flex: 1;
-      }
-
-      .timeline-rail {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        position: relative;
-      }
-
-      .timeline-rail::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
         height: 2px;
-        background: var(--border);
-        transform: translateY(-50%);
-        z-index: 0;
+        background: #d1d5db;
+        min-width: 2.5rem;
       }
-
       .timeline-node {
-        width: 36px;
-        height: 36px;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 700;
-        position: relative;
-        z-index: 1;
         flex-shrink: 0;
       }
-
-      /* Current stage: filled with accent color */
-      .timeline-node--active {
-        background: var(--accent);
-        color: #ffffff;
-        border: 2px solid var(--accent);
+      .timeline-node.active {
+        background: #0f766e;
+        color: #fff;
       }
-
-      /* Other completed stages: filled with muted teal */
-      .timeline-node--done {
-        background: var(--muted-bg);
-        color: var(--muted-text);
-        border: 2px solid var(--muted-bg);
+      .timeline-node.muted {
+        background: #9ca3af;
+        color: #fff;
       }
-
-      /* Future stages: hollow with accent outline */
-      .timeline-node--pending {
-        background: var(--surface);
-        color: var(--accent);
-        border: 2px solid var(--accent);
+      .timeline-node.future {
+        background: #fff;
+        border: 2px solid #0f766e;
+        color: #0f766e;
       }
-
-      .timeline-segment {
-        flex: 1;
-        height: 2px;
-        background: var(--border);
-        position: relative;
-        z-index: 0;
-      }
-
       .timeline-label {
-        font-size: 0.78rem;
-        color: var(--text-secondary);
-        text-align: center;
+        font-size: 0.7rem;
+        color: #6b7280;
         white-space: nowrap;
-        margin-top: 0.4rem;
       }
-
-      .timeline-label--active {
-        color: var(--accent);
+      .timeline-item.active-item .timeline-label {
+        color: #0f766e;
         font-weight: 600;
       }
 
-      .timeline-label--done {
-        color: var(--text-secondary);
+      /* ── Main ── */
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
       }
 
-      /* ------------------------------------------------------------------ */
-      /* Stage section                                                        */
-      /* ------------------------------------------------------------------ */
-      .stage-section {
-        margin-bottom: 2rem;
-      }
-
-      .stage-section h2 {
-        font-size: 1.15rem;
+      section h2 {
+        font-size: 1.5rem;
         font-weight: 700;
-        color: var(--accent);
-        margin-bottom: 0.4rem;
+        color: #0f766e;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ccfbf1;
       }
 
-      .stage-summary {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        max-width: 680px;
-      }
-
-      /* ------------------------------------------------------------------ */
-      /* Card grid                                                            */
-      /* ------------------------------------------------------------------ */
+      /* ── Card grid ── */
       .card-grid {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
 
-      article.doc-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        padding: 1.5rem 1.5rem 1.375rem;
+      @media (max-width: 720px) {
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        header {
+          padding: 1.25rem 1rem;
+        }
+        nav.timeline {
+          padding: 1rem;
+        }
+        main {
+          padding: 1.25rem 1rem;
+        }
       }
 
-      .card-title {
-        font-size: 1rem;
+      article {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+      }
+      article h3 {
+        font-size: 1.05rem;
         font-weight: 700;
-        color: var(--text-primary);
-        margin-bottom: 1.1rem;
-        padding-bottom: 0.6rem;
-        border-bottom: 1px solid var(--border);
+        color: #111827;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
       }
 
-      .card-section-label {
-        font-size: 0.72rem;
-        font-weight: 700;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        color: var(--text-secondary);
-        margin-top: 1rem;
-        margin-bottom: 0.35rem;
+      .section-block {
+        margin-bottom: 1rem;
       }
-
-      .why-text {
-        font-size: 0.9rem;
-        color: var(--text-primary);
-      }
-
-      .what-list {
-        list-style: disc;
-        padding-left: 1.2rem;
-        font-size: 0.875rem;
-        color: var(--text-primary);
-      }
-
-      .what-list li {
-        margin-bottom: 0.3rem;
-      }
-
-      .what-list li code,
-      .how-text code {
-        font-family:
-          ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono",
-          monospace;
-        font-size: 0.82rem;
-        background: var(--accent-light);
-        color: var(--text-mono);
-        padding: 0.05em 0.3em;
-        border-radius: 3px;
-      }
-
-      .how-text {
-        font-size: 0.875rem;
-        color: var(--text-primary);
-      }
-
-      .code-locations-list {
-        list-style: none;
-        padding: 0.75rem 1rem;
-        font-family:
-          ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono",
-          monospace;
-        font-size: 0.8rem;
-        color: var(--text-mono);
-        background: var(--accent-light);
-        border-radius: var(--radius);
-        border: 1px solid #c8dfe6;
-      }
-
-      .code-locations-list li {
-        margin-bottom: 0.25rem;
-        line-height: 1.5;
-      }
-
-      .code-locations-list li:last-child {
+      .section-block:last-child {
         margin-bottom: 0;
       }
 
-      .retro-list {
-        list-style: disc;
+      .section-block h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #6b7280;
+        margin-bottom: 0.4rem;
+      }
+      .section-block p {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul {
         padding-left: 1.2rem;
-        font-size: 0.875rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul li {
+        margin-bottom: 0.2rem;
       }
 
-      .retro-list li {
-        font-style: italic;
-        color: var(--text-secondary);
-        margin-bottom: 0.3rem;
-      }
-
-      /* ------------------------------------------------------------------ */
-      /* Responsive                                                           */
-      /* ------------------------------------------------------------------ */
-      @media (min-width: 720px) {
-        .card-grid {
-          grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-        }
-      }
-
-      @media (max-width: 480px) {
-        .timeline-label {
-          font-size: 0.7rem;
-        }
-
-        .timeline-node {
-          width: 30px;
-          height: 30px;
-          font-size: 0.72rem;
-        }
+      .section-block code {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.82rem;
+        background: #f3f4f6;
+        color: #1f2937;
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
       }
     </style>
   </head>
   <body>
-    <div class="page">
-      <!-- ================================================================ -->
-      <!-- Header                                                             -->
-      <!-- ================================================================ -->
-      <header>
-        <h1>japan_travel_plan</h1>
-        <p>Staged plan progress</p>
-      </header>
+    <header>
+      <h1>Japan Travel Plan 2026.05.22–26</h1>
+      <p>Staged plan progress</p>
+    </header>
 
-      <!-- ================================================================ -->
-      <!-- Timeline — 4 stages total                                          -->
-      <!-- Stages 1, 2 = muted-filled (completed, not current)               -->
-      <!-- Stage 3 = accent (current)                                        -->
-      <!-- Stage 4 = hollow pending                                           -->
-      <!-- ================================================================ -->
-      <nav aria-label="Stage timeline">
-        <div class="timeline" role="list">
-          <!-- Stage 1 — completed, not current (muted-filled) -->
-          <div class="timeline-item" role="listitem">
-            <div class="timeline-rail">
-              <div
-                class="timeline-node timeline-node--done"
-                aria-label="Stage 1, completed"
-              >
-                1
-              </div>
-              <div class="timeline-segment"></div>
-            </div>
-            <span class="timeline-label timeline-label--done">Stage 1</span>
-          </div>
-
-          <!-- Stage 2 — completed, not current (muted-filled) -->
-          <div class="timeline-item" role="listitem">
-            <div class="timeline-rail">
-              <div
-                class="timeline-node timeline-node--done"
-                aria-label="Stage 2, completed"
-              >
-                2
-              </div>
-              <div class="timeline-segment"></div>
-            </div>
-            <span class="timeline-label timeline-label--done">Stage 2</span>
-          </div>
-
-          <!-- Stage 3 — current (accent-filled) -->
-          <div class="timeline-item" role="listitem">
-            <div class="timeline-rail">
-              <div
-                class="timeline-node timeline-node--active"
-                aria-current="step"
-                aria-label="Stage 3, current"
-              >
-                3
-              </div>
-              <div class="timeline-segment"></div>
-            </div>
-            <span class="timeline-label timeline-label--active">Stage 3</span>
-          </div>
-
-          <!-- Stage 4 — pending, no trailing segment -->
-          <div class="timeline-item" role="listitem">
-            <div class="timeline-rail">
-              <div
-                class="timeline-node timeline-node--pending"
-                aria-label="Stage 4, pending"
-              >
-                4
-              </div>
-            </div>
-            <span class="timeline-label">Stage 4</span>
-          </div>
-        </div>
-      </nav>
-
-      <!-- ================================================================ -->
-      <!-- Stage 3 section                                                    -->
-      <!-- ================================================================ -->
-      <section class="stage-section" aria-labelledby="stage-3-heading">
-        <h2 id="stage-3-heading">Stage 3</h2>
-        <p class="stage-summary">
-          Mobile-first UX with a bottom tab bar, full-screen detail modal,
-          active marker pulse animation, and iOS safe-area handling — the
-          primary use case is a smartphone in the field.
-        </p>
-      </section>
-
-      <!-- ================================================================ -->
-      <!-- Card grid — one card per slug (mobile-polish.md)                  -->
-      <!-- ================================================================ -->
-      <div class="card-grid">
-        <article class="doc-card" aria-labelledby="card-mobile-polish-title">
-          <h3 class="card-title" id="card-mobile-polish-title">
-            Mobile Polish
-          </h3>
-
-          <!-- Why -->
-          <p class="card-section-label">Why</p>
-          <p class="why-text">
-            The final use scenario is navigating on a smartphone in Japan. The
-            Stage 1-2 desktop layout collapses poorly on mobile, so a dedicated
-            mobile UX is required. With 65 places now loaded, the detail panel
-            also needs to be organized so all information fits on a single
-            screen without scrolling through noise.
-          </p>
-
-          <!-- What -->
-          <p class="card-section-label">What</p>
-          <ul class="what-list">
-            <li>
-              Mobile bottom tab bar (Map / Itinerary) &#8212;
-              <code>&lt;nav id="mobile-tabs"&gt;</code> with two buttons toggled
-              by JS
-            </li>
-            <li>
-              Mobile detail panel promoted to a full-screen modal (<code
-                >z-index: 1500</code
-              >)
-            </li>
-            <li>
-              <code>selectStop</code> automatically returns to map view on
-              mobile
-            </li>
-            <li>
-              Detail panel polish: emoji gradient hero (<code>h-40</code>,
-              <code>text-7xl</code>), rounded close button, transit card with
-              day-color left border, tag chips, recommended activities with day
-              color, restaurant cards (name + price range in one row, type/tip
-              below), review link 3-column grid (Naver Blog / Google Web /
-              YouTube)
-            </li>
-            <li>
-              Active marker pulse animation (<code>@keyframes pulse-marker</code
-              >, 1.4 s ease-in-out, infinite)
-            </li>
-            <li>
-              <code>--active-day</code> CSS variable auto-synced on day change,
-              driving both mobile tab icon color and marker pulse color from a
-              single source
-            </li>
-            <li>
-              iOS <code>env(safe-area-inset-bottom)</code> applied to tab bar
-              (added during Stage 3 review)
-            </li>
-          </ul>
-
-          <!-- How -->
-          <p class="card-section-label">How</p>
-          <p class="how-text">
-            <code>@media (max-width: 767px)</code> switches the sidebar to
-            <code>position: absolute</code> full-screen and the detail panel to
-            <code>position: fixed</code> full-screen.
-            <code>setMobileView(view)</code> toggles sidebar/map CSS classes and
-            updates tab button active state. <code>selectStop</code> checks
-            <code>matchMedia("(max-width: 767px)")</code> and automatically
-            returns to map view. The active marker is set by iterating
-            <code>state.markerLayer.eachLayer</code> to strip
-            <code>.active</code>
-            from all markers, then attaching it to
-            <code>markers[stopIndex]</code> and calling
-            <code>setZIndexOffset(1000)</code> so the pulse stays above adjacent
-            markers.
-          </p>
-
-          <!-- Code locations -->
-          <p class="card-section-label">Code Locations</p>
-          <ul class="code-locations-list" aria-label="Code locations">
-            <li>index.html &#8212; &lt;nav id="mobile-tabs"&gt; markup</li>
-            <li>
-              assets/styles.css &#8212; mobile media query block, @keyframes
-              pulse-marker, .numbered-marker.active rule, safe-area-inset-bottom
-              on tab bar
-            </li>
-            <li>assets/app.js &#8212; setMobileView, renderMobileTabs</li>
-            <li>
-              assets/app.js &#8212; renderDay --active-day CSS variable update
-            </li>
-            <li>
-              assets/app.js &#8212; selectStop active marker toggle +
-              setZIndexOffset + mobile auto-close
-            </li>
-            <li>
-              assets/app.js &#8212; renderDetail (transit card, tag chips,
-              restaurant cards, review grid)
-            </li>
-            <li>assets/app.js &#8212; hashchange mobile view sync</li>
-          </ul>
-
-          <!-- Retrospective -->
-          <p class="card-section-label">Retrospective</p>
-          <ul class="retro-list">
-            <li>
-              The desktop layout was untouched: Tailwind
-              <code>md:hidden</code> classes and the
-              <code>@media (max-width: 767px)</code> block add mobile UX in full
-              isolation, with a clear breakpoint boundary.
-            </li>
-            <li>
-              The single <code>--active-day</code> CSS variable synchronizes
-              mobile tab icon color and marker pulse color with one JS
-              assignment, eliminating any JS-CSS drift.
-            </li>
-            <li>
-              The <code>eachLayer</code> cleanup + index-based marker attachment
-              pattern is correct and self-cleaning: <code>clearLayers()</code>
-              automatically removes all active state when the day changes.
-            </li>
-            <li>
-              Stage-level review added four improvements: Leaflet z-index
-              offset, review_links null guard, iOS safe-area inset, and
-              hashchange mobile view sync.
-            </li>
-            <li>
-              Pulse animation runs infinitely at 1.4 s; battery impact is
-              negligible but present. UX clarity takes priority at this cadence.
-            </li>
-          </ul>
-        </article>
+    <nav class="timeline" aria-label="Project stages">
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
+        <span class="timeline-label">Stage 1</span>
       </div>
-      <!-- /.card-grid -->
-    </div>
-    <!-- /.page -->
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">2</div>
+        <span class="timeline-label">Stage 2</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">3</div>
+        <span class="timeline-label">Stage 3</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">4</div>
+        <span class="timeline-label">Stage 4</span>
+      </div>
+    </nav>
+
+    <main>
+      <section aria-labelledby="stage-heading">
+        <h2 id="stage-heading">Stage 3</h2>
+
+        <div class="card-grid">
+          <article aria-labelledby="card-mobile-polish">
+            <h3 id="card-mobile-polish">Mobile Polish</h3>
+
+            <div class="section-block">
+              <h4>Why</h4>
+              <p>
+                현장에서 스마트폰으로 봐야 하는 게 최종 사용 시나리오. Stage
+                1-2의 데스크톱 레이아웃은 모바일에서 짜그라지기 때문에 별도의
+                mobile UX가 필요. 그리고 정보가 많아진 만큼 디테일 패널이
+                정리되어 있어야 한 화면에 들어옴.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>What</h4>
+              <ul>
+                <li>
+                  모바일 하단 탭바 (지도/일정) —
+                  <code>&lt;nav id="mobile-tabs"&gt;</code>에 두 버튼, JS로 토글
+                </li>
+                <li>모바일 디테일 패널이 풀스크린 모달 (z-index 1500)</li>
+                <li>
+                  <code>selectStop</code> 호출 시 모바일에선 자동으로 지도
+                  view로 복귀
+                </li>
+                <li>
+                  디테일 패널 폴리시:
+                  <ul>
+                    <li>
+                      상단 emoji 그라데이션 hero (h-40, text-7xl) + 둥근 close
+                      버튼
+                    </li>
+                    <li>
+                      전 stop에서 오는 길 transit card (border-left + day 색상)
+                    </li>
+                    <li>
+                      태그 chip (<code>#야경</code>, <code>#먹거리</code> 등)
+                    </li>
+                    <li>추천 활동: ▸ marker + day 색상</li>
+                    <li>
+                      맛집 카드: name + price_range 같은 row, type/tip 아래
+                    </li>
+                    <li>
+                      후기 버튼 3-col grid (네이버 블로그 / 구글 웹 / 유튜브
+                      영상)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  활성 마커 pulse 애니메이션 (<code
+                    >@keyframes pulse-marker</code
+                  >, 1.4s ease-in-out)
+                </li>
+                <li>
+                  <code>--active-day</code> CSS 변수가 day 전환 시 자동 갱신
+                  (모바일 탭 아이콘 색 동기화)
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>How</h4>
+              <p>
+                <code>@media (max-width: 767px)</code> 분기로 사이드바를
+                absolute 풀스크린, 디테일을 fixed 풀스크린으로 전환.
+                <code>setMobileView(view)</code> 함수가 sidebar/map class를
+                토글하고 탭 버튼 active 상태 갱신. <code>selectStop</code>에서
+                <code>matchMedia("(max-width: 767px)")</code> 체크 후 자동으로
+                지도 복귀. 활성 마커는
+                <code>state.markerLayer.eachLayer</code>로 모든 마커에서
+                <code>.active</code> 제거 후 <code>markers[stopIndex]</code>에만
+                추가, CSS animation으로 pulse.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>Code Locations</h4>
+              <ul>
+                <li>
+                  <code>index.html</code> —
+                  <code>&lt;nav id="mobile-tabs"&gt;</code> 마크업
+                </li>
+                <li>
+                  <code>assets/styles.css</code> — 모바일 media query 블록,
+                  <code>@keyframes pulse-marker</code>,
+                  <code>.numbered-marker.active</code> 룰
+                </li>
+                <li>
+                  <code>assets/app.js</code> — <code>setMobileView</code>,
+                  <code>renderMobileTabs</code>, <code>renderDay</code>의
+                  <code>--active-day</code> 설정, <code>selectStop</code>의
+                  active marker toggle + matchMedia mobile close,
+                  <code>renderDetail</code> 전체 (transit card, chip, restaurant
+                  cards, 후기 grid)
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>Retrospective</h4>
+              <ul>
+                <li>
+                  잘 된 점: 데스크톱 레이아웃 손대지 않고
+                  <code>md:hidden</code> Tailwind 클래스 +
+                  <code>@media (max-width: 767px)</code> CSS로 모바일 전용 UX
+                  추가. 분기점이 명확.
+                </li>
+                <li>
+                  잘 된 점: <code>--active-day</code> CSS 변수 1개로 mobile tab
+                  아이콘 색 + 마커 pulse 색을 한 번에 동기화. JS-CSS 사이 단일
+                  source of truth.
+                </li>
+                <li>
+                  잘 된 점: <code>selectStop</code>의 marker active toggle
+                  패턴이 정확 — <code>eachLayer</code> 클린업 + 인덱스 기반
+                  부착. <code>clearLayers()</code> 시점에 자동 정리됨.
+                </li>
+                <li>
+                  조심한 점: marker pulse animation이 무한 반복이라 배터리 영향
+                  미미하지만 있음 — 1.4s 주기는 충분히 잔잔. UX 우선.
+                </li>
+                <li>
+                  조심한 점: 모바일 디테일이 풀스크린이지만 하단
+                  <code>bottom: 3.5rem</code>으로 탭바 영역 비워둠. 닫기 버튼은
+                  우상단 + 탭바로도 종료 가능.
+                </li>
+                <li>
+                  이연: Stage 4 — iOS safe-area 처리
+                  (<code>env(safe-area-inset-bottom)</code>), Firefox 검증,
+                  명시적 smoke test 체크리스트.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- /.card-grid -->
+      </section>
+    </main>
   </body>
 </html>
