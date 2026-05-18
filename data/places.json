@@ -179,5 +179,248 @@
       "google": "https://www.google.com/search?q=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC+%EB%A7%9B%EC%A7%91&hl=ko",
       "youtube": "https://www.youtube.com/results?search_query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC+%EC%95%BC%EA%B2%BD"
     }
+  },
+  "shinsaibashi_suji": {
+    "name_ko": "신사이바시스지",
+    "name_jp": "心斎橋筋",
+    "coords": [34.6726, 135.5013],
+    "category": "alt",
+    "emoji": "🛍️",
+    "tags": ["쇼핑", "아케이드", "패션"],
+    "summary": "380년 역사의 600m 지붕 달린 쇼핑 아케이드. 180개 이상 점포.",
+    "detail": "에도 시대부터 이어온 오사카 최대 쇼핑 거리로, 글로벌 브랜드부터 드럭스토어·화장품까지 한 줄로 늘어서 있다. 도톤보리와 난바 사이에 위치해 이동 경로 중간에 들르기 편하며, 비가 와도 끝까지 걸을 수 있다.",
+    "sources": [
+      {
+        "title": "OSAKA-INFO 신사이바시스지 쇼핑 거리",
+        "url": "https://en.osaka-info.jp/spot/shinsaibashi-suji-shopping-street/"
+      }
+    ],
+    "activities": [
+      "마쓰야·다이마루 백화점 지하 식품관 구경",
+      "드럭스토어(마쓰모토 키요시 등) 화장품·의약품 쇼핑",
+      "아케이드 남단에서 도톤보리 방향 5분 도보"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C%EC%8A%A4%EC%A7%80%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C%EC%8A%A4%EC%A7%80%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C%EC%8A%A4%EC%A7%80"
+    }
+  },
+  "hozenji_yokocho": {
+    "name_ko": "호젠지요코초",
+    "name_jp": "法善寺横丁",
+    "coords": [34.6682, 135.5025],
+    "category": "alt",
+    "emoji": "🍻",
+    "tags": ["옛 골목", "야경", "분위기"],
+    "summary": "도톤보리 남쪽 80m 석조 골목. 이끼 낀 후도묘왕상과 정취 있는 술집.",
+    "detail": "에도 시대 호젠지 절 참배객을 상대하던 노점이 골목 상권으로 굳어진 곳. 이끼 낀 후도묘왕상에 물을 뿌리는 풍습이 유명하고, 약 60개의 전통 카포·바·꼬치집이 좁은 골목 양쪽을 채운다. 낮보다 밤에 분위기가 훨씬 살아난다.",
+    "sources": [
+      {
+        "title": "OSAKA-INFO 호젠지요코초",
+        "url": "https://osaka-info.jp/en/spot/hozenji-yokocho/"
+      }
+    ],
+    "activities": [
+      "이끼 낀 후도묘왕상에 물 뿌리기 (소원 성취 풍습)",
+      "골목 양쪽 카포 바에서 하이볼 한 잔",
+      "도톤보리 에비스바시까지 도보 3분 이동"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%98%B8%EC%A0%A0%EC%A7%80%EC%9A%94%EC%BD%94%EC%B4%88%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%ED%98%B8%EC%A0%A0%EC%A7%80%EC%9A%94%EC%BD%94%EC%B4%88%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%ED%98%B8%EC%A0%A0%EC%A7%80%EC%9A%94%EC%BD%94%EC%B4%88"
+    }
+  },
+  "amerikamura": {
+    "name_ko": "아메리카무라",
+    "name_jp": "アメリカ村",
+    "coords": [34.6725, 135.4989],
+    "category": "alt",
+    "emoji": "👕",
+    "tags": ["스트리트 패션", "빈티지", "젊은이 거리"],
+    "summary": "신사이바시 서쪽 스트리트 패션·빈티지 숍 밀집 구역. 삼각공원이 중심.",
+    "detail": "1970년대 미국 중고 의류 수입으로 형성된 젊은이 거리. 빈티지 의류·스트리트 브랜드·레코드 숍·타투 스튜디오 등이 촘촘히 들어서 있다. 삼각공원(Triangle Park) 주변이 가장 핫하며, 주말 낮에는 소규모 퍼포먼스도 열린다.",
+    "sources": [
+      {
+        "title": "Wikipedia — Amerikamura",
+        "url": "https://en.wikipedia.org/wiki/Amerikamura"
+      }
+    ],
+    "activities": [
+      "삼각공원 주변 빈티지 숍 3~4곳 순례",
+      "레코드 숍에서 시티팝·재즈 바이닐 탐색",
+      "스트리트 브랜드 한정판 스니커즈 가격 비교"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%AC%B4%EB%9D%BC%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%AC%B4%EB%9D%BC%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%95%84%EB%A9%94%EB%A6%AC%EC%B9%B4%EB%AC%B4%EB%9D%BC"
+    }
+  },
+  "namba_walk": {
+    "name_ko": "난바워크",
+    "name_jp": "なんばウォーク",
+    "coords": [34.6659, 135.5011],
+    "category": "alt",
+    "emoji": "🚇",
+    "tags": ["지하상가", "쇼핑", "날씨 무관"],
+    "summary": "난바역에서 닛폰바시역까지 715m 지하 쇼핑 통로. 약 200개 점포.",
+    "detail": "오사카 메트로 난바역부터 닛폰바시역을 잇는 지하 아케이드로, 패션·잡화·음식점이 고루 입점해 있다. 비·폭염·한파에도 날씨 영향 없이 쇼핑할 수 있으며, 구로몬시장·도톤보리·덴덴타운을 모두 지하로 연결하는 이동 허브이기도 하다.",
+    "sources": [
+      {
+        "title": "NAMBA WALK 공식",
+        "url": "https://en.walk.osaka-chikagai.jp/"
+      }
+    ],
+    "activities": [
+      "난바역 B1 입구에서 닛폰바시역 방향으로 천천히 순환",
+      "지하 푸드코트에서 간식 픽업",
+      "비 오는 날 도톤보리 → 덴덴타운 지하 이동 경로로 활용"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%82%9C%EB%B0%94%EC%9B%8C%ED%81%AC%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EB%82%9C%EB%B0%94%EC%9B%8C%ED%81%AC%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%82%9C%EB%B0%94%EC%9B%8C%ED%81%AC"
+    }
+  },
+  "rinku_town": {
+    "name_ko": "린쿠타운",
+    "name_jp": "りんくうタウン",
+    "coords": [34.4123, 135.3002],
+    "category": "alt",
+    "emoji": "🎡",
+    "tags": ["아울렛", "관람차", "공항 근처"],
+    "summary": "간사이공항 맞은편 아울렛몰·관람차 복합 단지. 귀국 전 쇼핑 최적지.",
+    "detail": "1995년 간사이공항과 함께 개발된 매립지 상업 지구. 린쿠 프리미엄 아울렛에 Gap·Coach·Polo Ralph Lauren 등 국제 브랜드 120여 개가 입점해 있고, 높이 85m의 린쿠노호시 관람차(Rinku no Hoshi)에서 공항과 오사카만 전망을 즐길 수 있다. 난카이 공항선으로 공항에서 약 6분 거리.",
+    "sources": [
+      {
+        "title": "Wikipedia — Rinku Town",
+        "url": "https://en.wikipedia.org/wiki/Rinku_Town"
+      }
+    ],
+    "activities": [
+      "린쿠 프리미엄 아울렛 브랜드 쇼핑 (Coach·Gap·아디다스 등)",
+      "린쿠노호시 관람차 탑승 (약 15분, 오사카만 조망)",
+      "귀국 당일 공항 전 마지막 쇼핑 코스로 활용"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%A6%B0%EC%BF%A0%ED%83%80%EC%9A%B4%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EB%A6%B0%EC%BF%A0%ED%83%80%EC%9A%B4%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%A6%B0%EC%BF%A0%ED%83%80%EC%9A%B4"
+    }
+  },
+  "izumisano": {
+    "name_ko": "이즈미사노",
+    "name_jp": "泉佐野",
+    "coords": [34.4068, 135.3273],
+    "category": "alt",
+    "emoji": "🏙️",
+    "tags": ["공항 근처", "지역 도시", "숙박 후보"],
+    "summary": "간사이공항 맞은편 인구 10만의 오사카부 해안 도시.",
+    "detail": "오사카부 남부에 위치하며, 간사이공항 섬과 린쿠타운이 모두 이 시에 속한다. 조기 또는 심야 항공편 이용 시 공항 인접 숙소로 고려하는 도시로, 난카이 이즈미사노역 주변에 비즈니스호텔이 모여 있다. 린쿠타운과 린쿠 프리미엄 아울렛도 이즈미사노 관할이다.",
+    "sources": [
+      {
+        "title": "Wikipedia — Izumisano",
+        "url": "https://en.wikipedia.org/wiki/Izumisano"
+      }
+    ],
+    "activities": [
+      "난카이 이즈미사노역 인근 비즈니스호텔 체크인",
+      "린쿠타운·린쿠 프리미엄 아울렛 도보 또는 셔틀 이용",
+      "공항 조기 탑승 대비 전날 이즈미사노 숙박 검토"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%9D%B4%EC%A6%88%EB%AF%B8%EC%82%AC%EB%85%B8%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EC%9D%B4%EC%A6%88%EB%AF%B8%EC%82%AC%EB%85%B8%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%9D%B4%EC%A6%88%EB%AF%B8%EC%82%AC%EB%85%B8"
+    }
+  },
+  "airport_hotel": {
+    "name_ko": "호텔 닛코 간사이공항",
+    "name_jp": "ホテル日航関西空港",
+    "coords": [34.4345, 135.2438],
+    "category": "alt",
+    "emoji": "🛏️",
+    "tags": ["공항 호텔", "숙소", "심야 항공편"],
+    "summary": "간사이공항 터미널 직결 4성급 호텔. 심야·조조 항공편 이용 시 최적.",
+    "detail": "공항 국제선 터미널과 연결 통로로 바로 이어져 있어, 심야 도착이나 새벽 출발 항공편 이용 시 이동 부담이 없다. 체크인 후 공항 내 면세 구역 접근도 용이하며, 오사카 시내 숙소 대비 이동 시간을 아낄 수 있다.",
+    "sources": [
+      {
+        "title": "호텔 닛코 간사이공항 공식",
+        "url": "https://www.nikkokix.com/en/"
+      }
+    ],
+    "activities": [
+      "터미널 직결 통로로 체크인 후 면세점 방문",
+      "호텔 레스토랑에서 조식 후 바로 탑승구 이동",
+      "공항섬 일몰 전망 (오사카만 방향 객실 지정 시)"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD%20%ED%98%B8%ED%85%94%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD%20%ED%98%B8%ED%85%94%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD%20%ED%98%B8%ED%85%94"
+    }
+  },
+  "nippombashi": {
+    "name_ko": "닛폰바시",
+    "name_jp": "日本橋",
+    "coords": [34.658, 135.5063],
+    "category": "alt",
+    "emoji": "🎮",
+    "tags": ["전자상가", "게임", "피규어"],
+    "summary": "덴덴타운의 중심 거리. 사카이스지 전자·게임·오타쿠 숍 500여 개.",
+    "detail": "사카이스지 도로를 따라 에비스초역에서 닛폰바시역까지 이어지는 전자상가 거리. 가전제품 외에도 피규어·게임·만화·메이드 카페 등 서브컬처 숍이 밀집해 있으며, 만다라케·슈퍼포테토 등 대형 중고 전문점이 특히 유명하다.",
+    "sources": [
+      {
+        "title": "Wikipedia — Nipponbashi",
+        "url": "https://en.wikipedia.org/wiki/Nipponbashi"
+      }
+    ],
+    "activities": [
+      "만다라케·슈퍼포테토 레트로 게임·피규어 쇼핑",
+      "오타로드 입구에서 코스프레 문화 구경",
+      "가전 전문점에서 일본 한정 가전 가격 비교"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8B%9B%ED%8F%B0%EB%B0%94%EC%8B%9C%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EB%8B%9B%ED%8F%B0%EB%B0%94%EC%8B%9C%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%8B%9B%ED%8F%B0%EB%B0%94%EC%8B%9C"
+    }
+  },
+  "umeda": {
+    "name_ko": "우메다",
+    "name_jp": "梅田",
+    "coords": [34.7024, 135.4959],
+    "category": "alt",
+    "emoji": "🏬",
+    "tags": ["번화가", "백화점", "숙소 후보"],
+    "summary": "오사카역 인근 북부 최대 번화가. 기타구 쇼핑·숙박·교통 허브.",
+    "detail": "JR 오사카역·한큐 우메다역·오사카 메트로 우메다역이 교차하는 오사카 최대 교통 결절점. 다이마루·한신·한큐 등 대형 백화점과 그랑프론트 오사카, HEP FIVE 관람차가 이 구역에 밀집해 있다. 난바(미나미)보다 세련된 분위기이며, 교토·고베·신칸센 방향 환승 거점으로 활용도가 높다.",
+    "sources": [
+      {
+        "title": "Wikipedia — Umeda Station",
+        "url": "https://en.wikipedia.org/wiki/Umeda_Station"
+      }
+    ],
+    "activities": [
+      "HEP FIVE 관람차 탑승 (지상 75m, 약 15분)",
+      "그랑프론트 오사카 쇼핑몰 지하 식품관 탐방",
+      "우메다 스카이빌딩 공중정원 전망대 (입장 1500엔)"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%9A%B0%EB%A9%94%EB%8B%A4%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EC%9A%B0%EB%A9%94%EB%8B%A4%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%9A%B0%EB%A9%94%EB%8B%A4"
+    }
   }
 }
