@@ -91,4 +91,28 @@ describe("validate(places, itinerary)", () => {
     const r = validate({ p1: bad }, goodItinerary);
     assert.ok(r.errors.some((e) => e.includes("invalid url")));
   });
+
+  it("fails when coords does not have exactly 2 elements", () => {
+    const bad = { ...goodPlace, coords: [34.6, 135.5, 10] };
+    const r = validate({ p1: bad }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("must have exactly 2 elements")));
+  });
+
+  it("fails when category is not main/alt", () => {
+    const bad = { ...goodPlace, category: "mian" };
+    const r = validate({ p1: bad }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("invalid category")));
+  });
+
+  it("fails when stop time is not HH:MM", () => {
+    const itin = {
+      ...goodItinerary,
+      days: [{
+        ...goodItinerary.days[0],
+        stops: [{ place_id: "p1", time: "8:30", transit_from_prev: null, duration_minutes: 30 }],
+      }],
+    };
+    const r = validate({ p1: goodPlace }, itin);
+    assert.ok(r.errors.some((e) => e.includes("time must be HH:MM")));
+  });
 });

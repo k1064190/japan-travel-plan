@@ -58,12 +58,12 @@
           "place_id": "fushimi_inari",
           "time": "08:30",
           "transit_from_prev": {
-            "mode": "미도스지+JR나라선",
+            "mode": "JR야마토지+JR나라선",
             "from": "난바",
             "to": "이나리역",
             "minutes": 45,
             "cost_jpy": 410,
-            "note": "이른 시간 추천 (인파 적음)"
+            "note": "JR난바(야마토지선)→오사카 환승→JR이나리역. 이른 시간 추천 (인파 적음)"
           },
           "duration_minutes": 120
         },
@@ -189,7 +189,7 @@
             "to": "우메다 스카이빌딩",
             "minutes": 25,
             "cost_jpy": 240,
-            "note": "오사카역 북쪽 도보 10분"
+            "note": "오사카역 북쪽 도보 10분. 우메다 → 신세카이는 미도스지 25분이라 일몰 야경 우선이라 의도적 배치"
           },
           "duration_minutes": 90
         },

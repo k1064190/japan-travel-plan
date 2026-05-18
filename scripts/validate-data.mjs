@@ -35,6 +35,12 @@ export function validate(places, itinerary) {
         errors.push(`${id}: coords outside Japan: [${lat}, ${lng}]`);
       }
     }
+    if (place.coords && place.coords.length !== 2) {
+      errors.push(`${id}: coords must have exactly 2 elements`);
+    }
+    if (place.category && !["main", "alt"].includes(place.category)) {
+      errors.push(`${id}: invalid category: ${place.category}`);
+    }
     if (place.review_links) {
       for (const [k, url] of Object.entries(place.review_links)) {
         if (!/^https?:\/\//.test(url))
@@ -56,16 +62,21 @@ export function validate(places, itinerary) {
       if (!places[stop.place_id]) {
         errors.push(`${day.id}: unknown place_id: ${stop.place_id}`);
       }
+      if (stop.time && !/^\d{2}:\d{2}$/.test(stop.time)) {
+        errors.push(`${day.id} stop ${stop.place_id}: time must be HH:MM, got: ${stop.time}`);
+      }
     }
   }
 
   for (const [id, place] of Object.entries(places)) {
+    // Only main places need restaurants
     if (place.category !== "main") continue;
     if (!referenced.has(id)) continue;
     const inDay5 = (itinerary.days ?? []).some(
       (d) => d.id === "day5" && d.stops.some((s) => s.place_id === id),
     );
     if (inDay5) continue;
+    // Utility stops (airport, hotel, checkout) are main but not dining destinations
     const tags = Array.isArray(place.tags) ? place.tags : [];
     if (tags.some((t) => UTILITY_TAGS.has(t))) continue;
     if (!Array.isArray(place.restaurants) || place.restaurants.length === 0) {
