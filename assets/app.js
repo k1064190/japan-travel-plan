@@ -167,38 +167,60 @@ function renderDetail(stop, place) {
   const detail = document.getElementById("detail");
   detail.classList.remove("hidden");
   const color = dayColor(state.activeDay);
+  const t = stop.transit_from_prev;
+  const transitCard = t
+    ? `
+    <div class="mx-5 mt-4 p-3 rounded border-l-4 bg-slate-50" style="border-color:${color}">
+      <div class="text-xs uppercase tracking-wide text-slate-500">전 stop에서 오는 길</div>
+      <div class="font-semibold mt-1">${esc(t.from)} → ${esc(t.to)}</div>
+      <div class="text-sm text-slate-600 mt-1">
+        ${esc(t.mode)} · ${esc(t.minutes)}분${t.cost_jpy ? ` · ¥${esc(t.cost_jpy)}` : " · 무료"}
+      </div>
+      ${t.note ? `<div class="text-xs text-slate-500 mt-1">${esc(t.note)}</div>` : ""}
+    </div>`
+    : "";
+
   detail.innerHTML = `
-    <div class="h-32 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,${color}22,${color}55)">${esc(place.emoji)}</div>
+    <div class="h-40 flex items-center justify-center text-7xl relative" style="background:linear-gradient(135deg,${color}33,${color}66)">
+      ${esc(place.emoji)}
+      <button id="detail-close" aria-label="상세 패널 닫기" class="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/90 text-slate-600 text-xl">×</button>
+    </div>
+    ${transitCard}
     <div class="p-5">
-      <button id="detail-close" aria-label="상세 패널 닫기" class="float-right text-slate-400 hover:text-slate-700 text-xl">×</button>
-      <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(stop.time)} · ${esc(stop.duration_minutes)}분</div>
+      <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(stop.time)} · ${esc(stop.duration_minutes)}분 체류</div>
       <h2 class="text-2xl font-bold mt-1">${esc(place.name_ko)}</h2>
       <div class="text-sm text-slate-500">${esc(place.name_jp)}</div>
+      <div class="mt-2 flex gap-1 flex-wrap">
+        ${(place.tags || []).map((tag) => `<span class="text-xs px-2 py-1 rounded bg-slate-100 text-slate-600">#${esc(tag)}</span>`).join("")}
+      </div>
       <p class="mt-3 text-slate-700">${esc(place.summary)}</p>
-      <p class="mt-2 text-sm text-slate-600">${esc(place.detail)}</p>
+      <p class="mt-2 text-sm text-slate-600 leading-relaxed">${esc(place.detail)}</p>
 
       ${
-        place.activities.length
+        place.activities && place.activities.length
           ? `
-        <h3 class="mt-5 font-semibold">여기서 해야 할 것</h3>
-        <ul class="mt-2 list-disc list-inside text-sm space-y-1">
-          ${place.activities.map((a) => `<li>${esc(a)}</li>`).join("")}
+        <h3 class="mt-5 font-semibold text-slate-800">여기서 해야 할 것</h3>
+        <ul class="mt-2 space-y-1 text-sm">
+          ${place.activities.map((a) => `<li class="flex gap-2"><span style="color:${color}">▸</span><span>${esc(a)}</span></li>`).join("")}
         </ul>`
           : ""
       }
 
       ${
-        place.restaurants.length
+        place.restaurants && place.restaurants.length
           ? `
-        <h3 class="mt-5 font-semibold">추천 맛집</h3>
+        <h3 class="mt-5 font-semibold text-slate-800">추천 맛집 (${place.restaurants.length})</h3>
         <div class="mt-2 space-y-2">
           ${place.restaurants
             .map(
               (r) => `
-            <div class="border rounded p-2">
-              <div class="font-semibold text-sm">${esc(r.name)} <span class="text-xs text-slate-500">${esc(r.type)}</span></div>
-              <div class="text-xs text-slate-600 mt-1">${esc(r.tip)}</div>
-              <div class="text-xs text-slate-400 mt-1">${esc(r.price_range)}</div>
+            <div class="border rounded-lg p-3 hover:bg-slate-50">
+              <div class="flex items-baseline justify-between gap-2">
+                <div class="font-semibold text-sm">${esc(r.name)}</div>
+                <div class="text-xs text-slate-500 whitespace-nowrap">${esc(r.price_range)}</div>
+              </div>
+              <div class="text-xs text-slate-500 mt-1">${esc(r.type)}</div>
+              <div class="text-sm text-slate-700 mt-1">${esc(r.tip)}</div>
             </div>`,
             )
             .join("")}
@@ -206,22 +228,24 @@ function renderDetail(stop, place) {
           : ""
       }
 
-      <h3 class="mt-5 font-semibold">한국어 후기 검색</h3>
-      <div class="mt-2 flex gap-2 text-sm">
-        <a class="px-3 py-1 rounded border" href="${safeHref(place.review_links.naver)}" target="_blank">네이버</a>
-        <a class="px-3 py-1 rounded border" href="${safeHref(place.review_links.google)}" target="_blank">구글</a>
-        <a class="px-3 py-1 rounded border" href="${safeHref(place.review_links.youtube)}" target="_blank">유튜브</a>
+      <h3 class="mt-5 font-semibold text-slate-800">한국어 후기 검색</h3>
+      <div class="mt-2 grid grid-cols-3 gap-2 text-sm text-center">
+        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(place.review_links.naver)}" target="_blank" rel="noopener">네이버<br><span class="text-xs text-slate-400">블로그</span></a>
+        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(place.review_links.google)}" target="_blank" rel="noopener">구글<br><span class="text-xs text-slate-400">웹</span></a>
+        <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(place.review_links.youtube)}" target="_blank" rel="noopener">유튜브<br><span class="text-xs text-slate-400">영상</span></a>
       </div>
 
       ${
-        place.sources.length
+        place.sources && place.sources.length
           ? `
-        <h3 class="mt-5 font-semibold text-xs text-slate-500">출처</h3>
+        <h3 class="mt-5 font-semibold text-xs uppercase tracking-wide text-slate-500">출처</h3>
         <ul class="text-xs text-slate-500 mt-1 space-y-1">
-          ${place.sources.map((s) => `<li>- <a class="underline" href="${safeHref(s.url)}" target="_blank">${esc(s.title)}</a></li>`).join("")}
+          ${place.sources.map((s) => `<li>· <a class="underline hover:text-slate-800" href="${safeHref(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join("")}
         </ul>`
           : ""
       }
+
+      <div class="h-8"></div>
     </div>`;
   detail.querySelector("#detail-close").addEventListener("click", () => {
     detail.classList.add("hidden");
