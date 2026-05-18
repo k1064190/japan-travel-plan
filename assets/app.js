@@ -127,6 +127,7 @@ function renderSidebar() {
       ${day.stops
         .map((stop, i) => {
           const place = state.places[stop.place_id];
+          if (!place) return "";
           const active = i === state.activeStopIndex;
           const transit = stop.transit_from_prev
             ? `<div class="text-xs text-slate-500 mb-1">↳ ${esc(stop.transit_from_prev.mode)} · ${esc(stop.transit_from_prev.minutes)}분${stop.transit_from_prev.cost_jpy ? ` · ¥${esc(stop.transit_from_prev.cost_jpy)}` : ""}</div>`
@@ -156,6 +157,10 @@ function renderSidebar() {
 }
 
 function renderDetail(stop, place) {
+  if (!place) {
+    console.warn(`renderDetail: missing place for stop`, stop);
+    return;
+  }
   const detail = document.getElementById("detail");
   detail.classList.remove("hidden");
   const color = dayColor(state.activeDay);
@@ -285,18 +290,22 @@ async function boot() {
 window.addEventListener("hashchange", () => {
   if (!state.itinerary) return;
   const { day, stopIndex, open } = parseHash();
-  if (day !== state.activeDay) {
-    state.activeDay = day;
-    state.activeStopIndex = stopIndex;
+  const dayChanged = day !== state.activeDay;
+  state.activeDay = day;
+  state.activeStopIndex = stopIndex;
+  if (dayChanged) {
     renderDay(day);
-    renderSidebar();
     renderProgressBar();
   }
+  renderSidebar();
   if (open) {
     const stop = state.itinerary.days.find((d) => d.id === day).stops[
       stopIndex
     ];
-    renderDetail(stop, state.places[stop.place_id]);
+    if (stop) {
+      const place = state.places[stop.place_id];
+      if (place) renderDetail(stop, place);
+    }
   }
 });
 
