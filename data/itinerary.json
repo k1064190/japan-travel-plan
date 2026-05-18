@@ -1,0 +1,314 @@
+{
+  "trip": {
+    "title": "오사카·교토 여행",
+    "subtitle": "Doctor Cho 4박 5일",
+    "start_date": "2026-05-22",
+    "end_date": "2026-05-26"
+  },
+  "days": [
+    {
+      "id": "day1",
+      "date": "2026-05-22",
+      "weekday": "금",
+      "title": "도착 + 난바 적응 + 야경",
+      "color_var": "--day-1",
+      "stops": [
+        {
+          "place_id": "kansai_airport",
+          "time": "16:00",
+          "transit_from_prev": null,
+          "duration_minutes": 30
+        },
+        {
+          "place_id": "namba_hotel",
+          "time": "17:10",
+          "transit_from_prev": {
+            "mode": "난카이 라피트",
+            "from": "간사이공항",
+            "to": "난바",
+            "minutes": 34,
+            "cost_jpy": 1490,
+            "note": "특급권+승차권"
+          },
+          "duration_minutes": 30
+        },
+        {
+          "place_id": "dotonbori",
+          "time": "18:00",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "난바 숙소",
+            "to": "도톤보리",
+            "minutes": 8,
+            "cost_jpy": 0,
+            "note": "도톤보리 강 야경 + 글리코상"
+          },
+          "duration_minutes": 180
+        }
+      ]
+    },
+    {
+      "id": "day2",
+      "date": "2026-05-23",
+      "weekday": "토",
+      "title": "교토 당일치기",
+      "color_var": "--day-2",
+      "stops": [
+        {
+          "place_id": "fushimi_inari",
+          "time": "08:30",
+          "transit_from_prev": {
+            "mode": "JR야마토지+JR나라선",
+            "from": "난바",
+            "to": "이나리역",
+            "minutes": 45,
+            "cost_jpy": 410,
+            "note": "JR난바(야마토지선)→오사카 환승→JR이나리역. 이른 시간 추천 (인파 적음)"
+          },
+          "duration_minutes": 120
+        },
+        {
+          "place_id": "kiyomizu_dera",
+          "time": "11:30",
+          "transit_from_prev": {
+            "mode": "JR+버스",
+            "from": "이나리",
+            "to": "청수사",
+            "minutes": 35,
+            "cost_jpy": 420,
+            "note": "교토역 환승"
+          },
+          "duration_minutes": 90
+        },
+        {
+          "place_id": "sannenzaka_ninenzaka",
+          "time": "13:30",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "청수사",
+            "to": "산넨자카",
+            "minutes": 5,
+            "cost_jpy": 0,
+            "note": "내리막 골목"
+          },
+          "duration_minutes": 60
+        },
+        {
+          "place_id": "gion_yasaka",
+          "time": "15:00",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "산넨자카",
+            "to": "기온",
+            "minutes": 15,
+            "cost_jpy": 0,
+            "note": "이시베코지 경유"
+          },
+          "duration_minutes": 90
+        },
+        {
+          "place_id": "nishiki_kawaramachi",
+          "time": "17:00",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "기온",
+            "to": "가와라마치",
+            "minutes": 15,
+            "cost_jpy": 0,
+            "note": "폰토초 경유"
+          },
+          "duration_minutes": 120
+        },
+        {
+          "place_id": "namba_hotel",
+          "time": "20:00",
+          "transit_from_prev": {
+            "mode": "한큐+미도스지",
+            "from": "가와라마치",
+            "to": "난바",
+            "minutes": 60,
+            "cost_jpy": 600,
+            "note": "우메다 환승"
+          },
+          "duration_minutes": 30
+        }
+      ]
+    },
+    {
+      "id": "day3",
+      "date": "2026-05-24",
+      "weekday": "일",
+      "title": "오사카 도심 (성·시장·전망)",
+      "color_var": "--day-3",
+      "stops": [
+        {
+          "place_id": "osaka_castle",
+          "time": "09:00",
+          "transit_from_prev": {
+            "mode": "미도스지+JR환상선",
+            "from": "난바",
+            "to": "오사카죠공원",
+            "minutes": 20,
+            "cost_jpy": 240,
+            "note": ""
+          },
+          "duration_minutes": 120
+        },
+        {
+          "place_id": "kuromon_market",
+          "time": "12:00",
+          "transit_from_prev": {
+            "mode": "JR환상선+도보",
+            "from": "오사카죠",
+            "to": "닛폰바시",
+            "minutes": 20,
+            "cost_jpy": 190,
+            "note": "점심 시장 투어"
+          },
+          "duration_minutes": 60
+        },
+        {
+          "place_id": "denden_town",
+          "time": "13:30",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "구로몬",
+            "to": "덴덴타운",
+            "minutes": 7,
+            "cost_jpy": 0,
+            "note": ""
+          },
+          "duration_minutes": 90
+        },
+        {
+          "place_id": "umeda_sky",
+          "time": "15:30",
+          "transit_from_prev": {
+            "mode": "미도스지+도보",
+            "from": "닛폰바시",
+            "to": "우메다 스카이빌딩",
+            "minutes": 25,
+            "cost_jpy": 240,
+            "note": "오사카역 북쪽 도보 10분. 우메다 → 신세카이는 미도스지 25분이라 일몰 야경 우선이라 의도적 배치"
+          },
+          "duration_minutes": 90
+        },
+        {
+          "place_id": "shinsekai_tsutenkaku",
+          "time": "18:00",
+          "transit_from_prev": {
+            "mode": "미도스지+사카이스지선",
+            "from": "우메다",
+            "to": "신세카이",
+            "minutes": 25,
+            "cost_jpy": 240,
+            "note": "도부츠엔마에역 하차"
+          },
+          "duration_minutes": 90
+        },
+        {
+          "place_id": "abeno_harukas",
+          "time": "20:00",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "신세카이",
+            "to": "덴노지",
+            "minutes": 15,
+            "cost_jpy": 0,
+            "note": "체력 남으면 선택"
+          },
+          "duration_minutes": 60
+        },
+        {
+          "place_id": "dotonbori",
+          "time": "21:30",
+          "transit_from_prev": {
+            "mode": "미도스지",
+            "from": "덴노지",
+            "to": "난바",
+            "minutes": 8,
+            "cost_jpy": 190,
+            "note": "야식"
+          },
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "id": "day4",
+      "date": "2026-05-25",
+      "weekday": "월",
+      "title": "유니버설 스튜디오 재팬",
+      "color_var": "--day-4",
+      "stops": [
+        {
+          "place_id": "usj",
+          "time": "08:00",
+          "transit_from_prev": {
+            "mode": "미도스지+JR유메사키선",
+            "from": "난바",
+            "to": "유니버설시티역",
+            "minutes": 35,
+            "cost_jpy": 280,
+            "note": "오픈런 = 닌텐도월드 정리권 확보"
+          },
+          "duration_minutes": 720
+        },
+        {
+          "place_id": "universal_citywalk",
+          "time": "20:30",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "USJ",
+            "to": "시티워크",
+            "minutes": 2,
+            "cost_jpy": 0,
+            "note": "저녁 식사 + 기념품"
+          },
+          "duration_minutes": 60
+        },
+        {
+          "place_id": "namba_hotel",
+          "time": "22:30",
+          "transit_from_prev": {
+            "mode": "JR유메사키선+미도스지",
+            "from": "유니버설시티",
+            "to": "난바",
+            "minutes": 35,
+            "cost_jpy": 280,
+            "note": ""
+          },
+          "duration_minutes": 30
+        }
+      ]
+    },
+    {
+      "id": "day5",
+      "date": "2026-05-26",
+      "weekday": "화",
+      "title": "체크아웃 + 출국",
+      "color_var": "--day-5",
+      "stops": [
+        {
+          "place_id": "namba_hotel_checkout",
+          "time": "10:00",
+          "transit_from_prev": null,
+          "duration_minutes": 30
+        },
+        {
+          "place_id": "kansai_airport_dep",
+          "time": "11:30",
+          "transit_from_prev": {
+            "mode": "난카이 라피트",
+            "from": "난바",
+            "to": "간사이공항",
+            "minutes": 34,
+            "cost_jpy": 1490,
+            "note": "출국 2시간 전 도착"
+          },
+          "duration_minutes": 180
+        }
+      ]
+    }
+  ]
+}

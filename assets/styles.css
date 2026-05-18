@@ -1,0 +1,93 @@
+:root {
+  --day-1: #e11d48;
+  --day-2: #7c3aed;
+  --day-3: #0284c7;
+  --day-4: #059669;
+  --day-5: #64748b;
+}
+
+#map {
+  z-index: 0;
+}
+
+.numbered-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes pulse-marker {
+  0%,
+  100% {
+    transform: scale(1.25);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+.leaflet-marker-icon .numbered-marker.active,
+.numbered-marker.active {
+  transform: scale(1.25);
+  z-index: 1000;
+  animation: pulse-marker 1.4s ease-in-out infinite;
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  main {
+    height: calc(100vh - 3.5rem - 3.5rem);
+    position: relative;
+  }
+  #sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 500;
+    border-right: none;
+    display: none;
+  }
+  #sidebar.active {
+    display: block;
+  }
+  #map.hidden-mobile {
+    visibility: hidden;
+  }
+
+  #detail {
+    position: fixed;
+    top: env(safe-area-inset-top, 0);
+    left: 0;
+    right: 0;
+    bottom: calc(3.5rem + env(safe-area-inset-bottom, 0));
+    width: 100%;
+    z-index: 1500;
+    border-left: none;
+  }
+
+  #mobile-tabs {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+    height: calc(3.5rem + env(safe-area-inset-bottom, 0));
+  }
+  #mobile-tabs button.active {
+    color: var(--active-day, var(--day-1));
+  }
+  .numbered-marker {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+}

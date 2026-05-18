@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage 1 — Japan Travel Plan 2026.05.22–26</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background: #f7f7f5;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      /* ── Header ── */
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.5rem 2rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0f766e;
+        letter-spacing: -0.01em;
+      }
+      header p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 0.2rem;
+      }
+
+      /* ── Timeline ── */
+      nav.timeline {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+      }
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .timeline-connector {
+        flex: 1;
+        height: 2px;
+        background: #d1d5db;
+        min-width: 2.5rem;
+      }
+      .timeline-node {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .timeline-node.active {
+        background: #0f766e;
+        color: #fff;
+      }
+      .timeline-node.muted {
+        background: #9ca3af;
+        color: #fff;
+      }
+      .timeline-node.future {
+        background: #fff;
+        border: 2px solid #0f766e;
+        color: #0f766e;
+      }
+      .timeline-label {
+        font-size: 0.7rem;
+        color: #6b7280;
+        white-space: nowrap;
+      }
+      .timeline-item.active-item .timeline-label {
+        color: #0f766e;
+        font-weight: 600;
+      }
+
+      /* ── Main ── */
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f766e;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ccfbf1;
+      }
+
+      /* ── Card grid ── */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+        gap: 1.25rem;
+      }
+
+      @media (max-width: 720px) {
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        header {
+          padding: 1.25rem 1rem;
+        }
+        nav.timeline {
+          padding: 1rem;
+        }
+        main {
+          padding: 1.25rem 1rem;
+        }
+      }
+
+      article {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+      }
+      article h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+
+      .section-block {
+        margin-bottom: 1rem;
+      }
+      .section-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-block h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #6b7280;
+        margin-bottom: 0.4rem;
+      }
+      .section-block p {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul li {
+        margin-bottom: 0.2rem;
+      }
+
+      .section-block code {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.82rem;
+        background: #f3f4f6;
+        color: #1f2937;
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Japan Travel Plan 2026.05.22–26</h1>
+      <p>Staged plan progress</p>
+    </header>
+
+    <nav class="timeline" aria-label="Project stages">
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">1</div>
+        <span class="timeline-label">Stage 1</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">2</div>
+        <span class="timeline-label">Stage 2</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">3</div>
+        <span class="timeline-label">Stage 3</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">4</div>
+        <span class="timeline-label">Stage 4</span>
+      </div>
+    </nav>
+
+    <main>
+      <section aria-labelledby="stage-heading">
+        <h2 id="stage-heading">Stage 1</h2>
+
+        <div class="card-grid">
+          <article aria-labelledby="card-skeleton">
+            <h3 id="card-skeleton">Skeleton</h3>
+
+            <div class="section-block">
+              <h4>Why</h4>
+              <p>
+                설계 전체를 한 번에 만들기 전에 데이터 → 지도 → 사이드바 →
+                디테일 → 라우팅의 와이어링이 처음부터 끝까지 동작하는지 5개
+                sample 명소로 검증한다. 60개 데이터를 채운 뒤 와이어링이 안
+                맞으면 되돌리기 비싸기 때문.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>What</h4>
+              <ul>
+                <li>
+                  <code>index.html</code> 골격 + Leaflet 1.9.4 / Tailwind play
+                  CDN / Pretendard CDN 임포트
+                </li>
+                <li>
+                  <code>assets/styles.css</code> day 색상 CSS 변수(<code
+                    >--day-1</code
+                  >
+                  ~ <code>--day-5</code>) + numbered-marker 스타일 + 모바일
+                  media query
+                </li>
+                <li>
+                  <code>assets/app.js</code> 데이터 로더(error handling 포함),
+                  Leaflet 마커, 사이드바, 디테일 패널, hash router, XSS-safe
+                  <code>esc()</code>/<code>safeHref()</code> 헬퍼
+                </li>
+                <li><code>data/itinerary.json</code> Day1 5개 stop</li>
+                <li>
+                  <code>data/places.json</code> 5개 sample (간사이공항,
+                  난바숙소, 구로몬, 덴덴타운, 도톤보리)
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>How</h4>
+              <p>
+                Vanilla ES6, 단일 모듈 (<code>assets/app.js</code>). 상태는
+                in-memory <code>state</code> 객체. 지도는
+                <code>fitBounds</code>로 day 전체 보이도록 시작, 클릭 시
+                <code>flyTo</code>. URL hash는 <code>#dayN/placeId</code> 포맷,
+                새로고침해도 상태 복원. <code>boot()</code>는 데이터 fetch 실패
+                시 한국어 에러 메시지를 표시.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>Code Locations</h4>
+              <ul>
+                <li><code>index.html</code> (스켈레톤 + CDN imports)</li>
+                <li>
+                  <code>assets/styles.css</code> (day 색상 CSS vars +
+                  numbered-marker + 모바일 media query)
+                </li>
+                <li>
+                  <code>assets/app.js</code> — <code>DAY_COLORS</code> /
+                  <code>dayColor</code> / <code>esc</code> /
+                  <code>safeHref</code> helpers
+                </li>
+                <li>
+                  <code>assets/app.js</code> — <code>state</code>,
+                  <code>loadData</code>, <code>initMap</code>
+                </li>
+                <li>
+                  <code>assets/app.js</code> — <code>renderDay</code>,
+                  <code>selectStop</code> (지도 + 마커)
+                </li>
+                <li>
+                  <code>assets/app.js</code> — <code>renderSidebar</code>,
+                  <code>renderDetail</code>, <code>renderProgressBar</code> (UI)
+                </li>
+                <li>
+                  <code>assets/app.js</code> — <code>parseHash</code>,
+                  <code>boot</code>, <code>hashchange</code> listener (라우팅)
+                </li>
+                <li>
+                  <code>data/places.json</code>,
+                  <code>data/itinerary.json</code> (5 places, Day1)
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>Retrospective</h4>
+              <ul>
+                <li>
+                  잘 된 점: TDD 없이도 per-task spec+code 리뷰가 critical 이슈
+                  6개를 사전 차단 (loadData 에러 처리, XSS escaping, null 가드,
+                  DAY_COLORS 폴백, hashchange race, aria-label).
+                </li>
+                <li>
+                  잘 된 점: Tailwind play CDN + Pretendard로 빌드 단계 없이
+                  미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
+                </li>
+                <li>
+                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
+                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
+                  hashchange 시 sidebar 동기화.
+                </li>
+                <li>
+                  Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
+                  Stage 3.1에서 채움),
+                  <code>.numbered-marker.active</code> CSS는 dead code지만 Stage
+                  3.3에서 활성화 예정이므로 보존.
+                </li>
+                <li>
+                  Stage 2 readiness: Ready with caveats — Critical 가드 픽스 후
+                  진입.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- /.card-grid -->
+      </section>
+    </main>
+  </body>
+</html>

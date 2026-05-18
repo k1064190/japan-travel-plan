@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage 4 — Japan Travel Plan 2026.05.22–26</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background: #f7f7f5;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+
+      /* ── Header ── */
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.5rem 2rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0f766e;
+        letter-spacing: -0.01em;
+      }
+      header p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 0.2rem;
+      }
+
+      /* ── Timeline ── */
+      nav.timeline {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+      }
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .timeline-connector {
+        flex: 1;
+        height: 2px;
+        background: #d1d5db;
+        min-width: 2.5rem;
+      }
+      .timeline-node {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .timeline-node.active {
+        background: #0f766e;
+        color: #fff;
+      }
+      .timeline-node.muted {
+        background: #9ca3af;
+        color: #fff;
+      }
+      .timeline-node.future {
+        background: #fff;
+        border: 2px solid #0f766e;
+        color: #0f766e;
+      }
+      .timeline-label {
+        font-size: 0.7rem;
+        color: #6b7280;
+        white-space: nowrap;
+      }
+      .timeline-item.active-item .timeline-label {
+        color: #0f766e;
+        font-weight: 600;
+      }
+
+      /* ── Main ── */
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f766e;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ccfbf1;
+      }
+
+      /* ── Card grid ── */
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+        gap: 1.25rem;
+      }
+
+      @media (max-width: 720px) {
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        header {
+          padding: 1.25rem 1rem;
+        }
+        nav.timeline {
+          padding: 1rem;
+        }
+        main {
+          padding: 1.25rem 1rem;
+        }
+      }
+
+      article {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+      }
+      article h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+
+      .section-block {
+        margin-bottom: 1rem;
+      }
+      .section-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .section-block h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #6b7280;
+        margin-bottom: 0.4rem;
+      }
+
+      /* Retrospective sub-headings (h4 inside retro content) */
+      .retro-sub {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #374151;
+        margin-top: 0.85rem;
+        margin-bottom: 0.35rem;
+        text-transform: none;
+        letter-spacing: 0;
+      }
+
+      .section-block p {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul li {
+        margin-bottom: 0.2rem;
+      }
+
+      .section-block code {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.82rem;
+        background: #f3f4f6;
+        color: #1f2937;
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
+      }
+
+      /* ── Tables ── */
+      .table-wrapper {
+        overflow-x: auto;
+        margin-top: 0.5rem;
+      }
+      .table-wrapper table {
+        font-size: 0.85rem;
+        border-collapse: collapse;
+        min-width: 100%;
+      }
+      .table-wrapper th,
+      .table-wrapper td {
+        text-align: left;
+        padding: 0.35rem 0.65rem;
+        border: 1px solid #e5e7eb;
+        color: #374151;
+      }
+      .table-wrapper th {
+        background: #f9fafb;
+        font-weight: 600;
+        color: #111827;
+        white-space: nowrap;
+      }
+      .table-wrapper tr:nth-child(even) td {
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Japan Travel Plan 2026.05.22–26</h1>
+      <p>Staged plan progress</p>
+    </header>
+
+    <nav class="timeline" aria-label="Project stages">
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
+        <span class="timeline-label">Stage 1</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">2</div>
+        <span class="timeline-label">Stage 2</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">3</div>
+        <span class="timeline-label">Stage 3</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">4</div>
+        <span class="timeline-label">Stage 4</span>
+      </div>
+    </nav>
+
+    <main>
+      <section aria-labelledby="stage-heading">
+        <h2 id="stage-heading">Stage 4</h2>
+
+        <div class="card-grid">
+          <article aria-labelledby="card-qa">
+            <h3 id="card-qa">Qa</h3>
+
+            <div class="section-block">
+              <h4>Why</h4>
+              <p>
+                마지막 가드레일. (1) 21개 stop이 전부 클릭으로 열리는가, (2) URL
+                공유와 invalid hash가 graceful하게 처리되는가, (3) iOS 모바일
+                안전영역에 탭바가 가려지지 않는가, (4) 누가 보든 README로 실행이
+                되는가.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>What</h4>
+              <ul>
+                <li>
+                  <code>scripts/smoke-test.md</code> — 21 stop 회귀 체크리스트
+                  (Day별 place_id 표 + 라우팅·모바일·크로스브라우저 항목)
+                </li>
+                <li>
+                  <code>assets/app.js</code> — hash routing 정규화 + 디테일 패널
+                  자동 close 로직 (smoke에서 발견된 두 이슈에 대한 fix) +
+                  <code>buildHash()</code> 헬퍼 (리뷰 피드백 반영 리팩토링)
+                </li>
+                <li>
+                  <code>assets/styles.css</code> — <code>#mobile-tabs</code> 에
+                  <code>padding-bottom: env(safe-area-inset-bottom, 0)</code> +
+                  높이 가산
+                </li>
+                <li>
+                  <code>README.md</code> — 실행 / 데이터 수정 / 검증 / 디렉토리
+                  구조 가이드
+                </li>
+                <li>
+                  최종 리뷰 트리오 통과 (code-reviewer-pro + gemini-subagent —
+                  codex는 MCP 도구 등록 에러로 fallback)
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>How</h4>
+              <p>
+                headless Chromium으로 <code>http://127.0.0.1:8770/</code> 에
+                접속해 21개 stop을 hash 변경으로 자동 순회. 각 stop의 디테일
+                헤더가 로드되는지 확인 → 21/21 모두 한국어 명소명이 정확히
+                표시됨.
+              </p>
+              <p style="margin-top: 0.5rem">추가 시나리오:</p>
+              <ul>
+                <li>
+                  <code>#day9/foo</code> (invalid) → fix: <code>boot()</code> +
+                  <code>hashchange</code> 양쪽에서
+                  <code>history.replaceState</code> 로 URL을 정규화하고, place
+                  segment 없는 hash로 가면 detail을 hidden 처리.
+                </li>
+                <li>
+                  Same-day stop switch (<code>#day3/osaka_castle</code> →
+                  <code>#day3/kuromon_market</code>) → 디테일 헤더만 갱신, 정상.
+                </li>
+                <li>
+                  Mobile viewport (390×844) → 탭바 표시, safe-area inset 적용
+                  (헤드리스에선 0px이지만 CSS rule 자체는 합당).
+                </li>
+              </ul>
+              <p style="margin-top: 0.5rem">검증:</p>
+              <ul>
+                <li>
+                  <code>node scripts/validate-data.mjs</code> → 65 places, 5
+                  days validated
+                </li>
+                <li>
+                  <code>node --test tests/validate-data.test.mjs</code> → 11
+                  pass
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>Code Locations</h4>
+              <ul>
+                <li><code>scripts/smoke-test.md</code></li>
+                <li><code>README.md</code></li>
+                <li>
+                  <code>assets/app.js:325-336</code> (<code>buildHash</code>
+                  헬퍼)
+                </li>
+                <li>
+                  <code>assets/app.js:344-355</code> (<code>boot()</code> URL
+                  정규화 + 옵셔널 체이닝)
+                </li>
+                <li>
+                  <code>assets/app.js:365-400</code> (<code>hashchange</code>
+                  handler — 정규화 + day-only hash시 detail close)
+                </li>
+                <li>
+                  <code>assets/styles.css:81-85</code> (<code
+                    >#mobile-tabs</code
+                  >
+                  safe-area-inset)
+                </li>
+                <li><code>docs/stage-4/qa.md</code> (이 문서)</li>
+              </ul>
+              <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.6rem">
+                관련 commits: <code>42b3967</code> <code>adfbce5</code>
+                <code>522feda</code> <code>8d2e1a8</code> <code>d373c60</code>
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
+              <ul>
+                <li>
+                  Headless 브라우저 스크립트로 21 stop을 빠르게 순회 — 수동
+                  클릭쓰루 대비 시간 절약 + 매번 정확히 동일한 시퀀스 보장.
+                </li>
+                <li>
+                  Smoke test가 의도된 가드레일 역할을 함 — invalid hash와
+                  day-switch detail close 두 이슈 모두 manual review로는 못
+                  잡았을 라우팅 엣지케이스.
+                </li>
+                <li>
+                  리뷰 트리오 피드백 합집합으로 정리 → 헬퍼 추출 + 옵셔널
+                  체이닝으로 작은 리팩토링을 끝내 회귀 없이 안전성 보강.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
+              <ul>
+                <li>
+                  <code>parseHash</code>가 invalid 입력에 대해 silent fallback
+                  하기보다 caller가 정상화하도록 시그널을 주는 패턴(예:
+                  <code>valid: false</code>)이 더 명확할 수 있음 — 다음 비슷한
+                  SPA에서 고려.
+                </li>
+                <li>
+                  Codex CLI가 MCP 도구 schema 충돌로 실패한 건 환경 문제(특정
+                  MCP 서버의 tool spec). gemini와 code-reviewer-pro 둘이서도
+                  동일한 핵심 finding을 잡았으므로 stage gate에는 영향 없었지만,
+                  codex 환경은 따로 점검 필요.
+                </li>
+                <li>
+                  Firefox 실기 테스트는 헤드리스에서 검증 불가 — 본 단계에서는
+                  CSS/JS feature 호환성만 가정. 실제 사용 전 한 번 띄워 확인
+                  권장.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">리뷰 처리 요약</h4>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Reviewer</th>
+                      <th>Finding</th>
+                      <th>처리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>code-reviewer-pro</td>
+                      <td>
+                        Critical: 옵셔널 체이닝 없는
+                        <code>find().stops[idx].place_id</code>
+                      </td>
+                      <td>적용 (<code>d373c60</code>)</td>
+                    </tr>
+                    <tr>
+                      <td>gemini-subagent</td>
+                      <td>MAJOR: brittle property access</td>
+                      <td>위와 동일하게 처리</td>
+                    </tr>
+                    <tr>
+                      <td>gemini-subagent</td>
+                      <td>MINOR: boot()/hashchange 중복 로직</td>
+                      <td><code>buildHash()</code> 추출로 해소</td>
+                    </tr>
+                    <tr>
+                      <td>gemini-subagent</td>
+                      <td>
+                        MAJOR: 디테일 패널 visibility regression (same-day
+                        switch)
+                      </td>
+                      <td>
+                        Dismiss — 코드 구조 오독. <code>else</code>는
+                        <code>if (open)</code> 페어로 day 같은
+                        케이스(<code>open=true</code>)에선 if 블록만 실행. 실제
+                        same-day switch도 정상 동작 검증 완료.
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>codex-subagent</td>
+                      <td>(MCP 도구 schema 에러로 본문 미생성)</td>
+                      <td>다음 환경 점검 항목</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h4 class="retro-sub">Codex PR Review (별도 단계)</h4>
+              <p
+                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem"
+              >
+                PR #1에 <code>@codex review</code> 트리거 후 3 라운드 (skill
+                cap) 진행, 총 16건 finding 모두 적용:
+              </p>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Round</th>
+                      <th>Findings</th>
+                      <th>주요 처리</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>6 (P1×1, P2×4, P3×1)</td>
+                      <td>
+                        hashchange → <code>selectStop()</code> 호출로 deep-link
+                        marker/flyTo 복원; validator coords-as-finite /
+                        sources-as-array / HH:MM 범위 / https only
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>5 (P2×3, P3×2)</td>
+                      <td>
+                        coords:null 처리, day5 stops nullish 가드, sidebar
+                        cost_jpy=0 → "무료", hashchange 자기-재진입 가드
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>5 (P2×5)</td>
+                      <td>
+                        validator root-level defensive guards
+                        (<code>isPlainObject</code>, places/itinerary 객체 검증,
+                        day.stops 명시적 요구)
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem">
+                모두 mechanical/defensive fix로 ambiguity 없음 → 사용자 확인
+                없이 auto-apply. PR 본 후 cap 도달로 종료.
+              </p>
+            </div>
+          </article>
+        </div>
+        <!-- /.card-grid -->
+      </section>
+    </main>
+  </body>
+</html>
