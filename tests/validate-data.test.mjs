@@ -83,19 +83,19 @@ describe("validate(places, itinerary)", () => {
     assert.ok(r.errors.some((e) => e.includes("missing field: summary")));
   });
 
-  it("fails when review_link URL is not http(s)", () => {
+  it("fails when review_link URL is not https://", () => {
     const bad = {
       ...goodPlace,
       review_links: { ...goodPlace.review_links, naver: "javascript:alert(1)" },
     };
     const r = validate({ p1: bad }, goodItinerary);
-    assert.ok(r.errors.some((e) => e.includes("invalid url")));
+    assert.ok(r.errors.some((e) => e.includes("must use https://")));
   });
 
   it("fails when coords does not have exactly 2 elements", () => {
     const bad = { ...goodPlace, coords: [34.6, 135.5, 10] };
     const r = validate({ p1: bad }, goodItinerary);
-    assert.ok(r.errors.some((e) => e.includes("must have exactly 2 elements")));
+    assert.ok(r.errors.some((e) => e.includes("2-element array")));
   });
 
   it("fails when category is not main/alt", () => {

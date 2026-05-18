@@ -25,45 +25,66 @@ export function validate(places, itinerary) {
       if (!(f in place)) errors.push(`${id}: missing field: ${f}`);
     }
     if (place.coords) {
-      const [lat, lng] = place.coords;
-      if (
-        lat < JAPAN_BOUNDS.latMin ||
-        lat > JAPAN_BOUNDS.latMax ||
-        lng < JAPAN_BOUNDS.lngMin ||
-        lng > JAPAN_BOUNDS.lngMax
-      ) {
-        errors.push(`${id}: coords outside Japan: [${lat}, ${lng}]`);
+      if (!Array.isArray(place.coords) || place.coords.length !== 2) {
+        errors.push(`${id}: coords must be a 2-element array`);
+      } else {
+        const [lat, lng] = place.coords;
+        if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+          errors.push(`${id}: coords must be finite numbers: [${lat}, ${lng}]`);
+        } else if (
+          lat < JAPAN_BOUNDS.latMin ||
+          lat > JAPAN_BOUNDS.latMax ||
+          lng < JAPAN_BOUNDS.lngMin ||
+          lng > JAPAN_BOUNDS.lngMax
+        ) {
+          errors.push(`${id}: coords outside Japan: [${lat}, ${lng}]`);
+        }
       }
-    }
-    if (place.coords && place.coords.length !== 2) {
-      errors.push(`${id}: coords must have exactly 2 elements`);
     }
     if (place.category && !["main", "alt"].includes(place.category)) {
       errors.push(`${id}: invalid category: ${place.category}`);
     }
     if (place.review_links) {
       for (const [k, url] of Object.entries(place.review_links)) {
-        if (!/^https?:\/\//.test(url))
-          errors.push(`${id}: invalid url in review_links.${k}`);
+        if (!/^https:\/\//.test(url))
+          errors.push(`${id}: review_links.${k} must use https:// (got: ${url})`);
       }
     }
     if (place.sources) {
-      for (const s of place.sources) {
-        if (!/^https?:\/\//.test(s.url || ""))
-          errors.push(`${id}: invalid url in sources`);
+      if (!Array.isArray(place.sources)) {
+        errors.push(`${id}: sources must be an array`);
+      } else {
+        for (const s of place.sources) {
+          if (!/^https?:\/\//.test(s?.url || ""))
+            errors.push(`${id}: invalid url in sources`);
+        }
       }
     }
   }
 
+  if (!Array.isArray(itinerary.days)) {
+    errors.push(`itinerary.days must be an array`);
+    return { errors };
+  }
+
   const referenced = new Set();
-  for (const day of itinerary.days ?? []) {
+  for (const day of itinerary.days) {
     for (const stop of day.stops ?? []) {
       referenced.add(stop.place_id);
       if (!places[stop.place_id]) {
         errors.push(`${day.id}: unknown place_id: ${stop.place_id}`);
       }
-      if (stop.time && !/^\d{2}:\d{2}$/.test(stop.time)) {
-        errors.push(`${day.id} stop ${stop.place_id}: time must be HH:MM, got: ${stop.time}`);
+      if (stop.time) {
+        const m = /^(\d{2}):(\d{2})$/.exec(stop.time);
+        if (!m) {
+          errors.push(`${day.id} stop ${stop.place_id}: time must be HH:MM, got: ${stop.time}`);
+        } else {
+          const hh = Number(m[1]);
+          const mm = Number(m[2]);
+          if (hh > 23 || mm > 59) {
+            errors.push(`${day.id} stop ${stop.place_id}: time out of range, got: ${stop.time}`);
+          }
+        }
       }
     }
   }

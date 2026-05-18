@@ -351,13 +351,11 @@ async function boot() {
   state.activeDay = day;
   state.activeStopIndex = stopIndex;
   renderDay(day);
-  renderSidebar();
   renderProgressBar();
   if (open) {
-    const stop = state.itinerary.days.find((d) => d.id === day)?.stops?.[
-      stopIndex
-    ];
-    if (stop) renderDetail(stop, state.places[stop.place_id]);
+    selectStop(day, stopIndex);
+  } else {
+    renderSidebar();
   }
   renderMobileTabs();
 }
@@ -376,21 +374,10 @@ window.addEventListener("hashchange", () => {
     renderDay(day);
     renderProgressBar();
   }
-  renderSidebar();
   if (open) {
-    const stop = state.itinerary.days.find((d) => d.id === day).stops[
-      stopIndex
-    ];
-    if (stop) {
-      const place = state.places[stop.place_id];
-      if (place) {
-        renderDetail(stop, place);
-        if (window.matchMedia("(max-width: 767px)").matches) {
-          setMobileView("map");
-        }
-      }
-    }
+    selectStop(day, stopIndex);
   } else {
+    renderSidebar();
     document.getElementById("detail").classList.add("hidden");
   }
 });
