@@ -6,6 +6,25 @@ const DAY_COLORS = {
   day5: "#64748b",
 };
 
+/** Returns the color for a day ID, falling back to slate if unknown. */
+function dayColor(dayId) {
+  return DAY_COLORS[dayId] ?? "#94a3b8";
+}
+
+/** Escapes HTML special chars so user-derived strings are safe in innerHTML. */
+function esc(s) {
+  return String(s ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/** Returns url only if it starts with https://, else "#". For href= safety. */
+function safeHref(url) {
+  return url && /^https:\/\//.test(url) ? url : "#";
+}
+
 const state = {
   itinerary: null,
   places: null,
@@ -18,8 +37,14 @@ const state = {
 
 async function loadData() {
   const [it, pl] = await Promise.all([
-    fetch("data/itinerary.json").then((r) => r.json()),
-    fetch("data/places.json").then((r) => r.json()),
+    fetch("data/itinerary.json").then((r) => {
+      if (!r.ok) throw new Error(`itinerary.json: HTTP ${r.status}`);
+      return r.json();
+    }),
+    fetch("data/places.json").then((r) => {
+      if (!r.ok) throw new Error(`places.json: HTTP ${r.status}`);
+      return r.json();
+    }),
   ]);
   state.itinerary = it;
   state.places = pl;
@@ -45,7 +70,7 @@ function renderDay(dayId) {
   state.markerLayer.clearLayers();
   state.routeLayer.clearLayers();
 
-  const color = DAY_COLORS[dayId];
+  const color = dayColor(dayId);
   const coords = [];
 
   day.stops.forEach((stop, i) => {
@@ -76,12 +101,13 @@ function renderDay(dayId) {
 }
 
 function selectStop(dayId, stopIndex) {
+  const day = state.itinerary.days.find((d) => d.id === dayId);
+  if (!day || !day.stops[stopIndex]) return;
   state.activeDay = dayId;
   state.activeStopIndex = stopIndex;
-  const stop = state.itinerary.days.find((d) => d.id === dayId).stops[
-    stopIndex
-  ];
+  const stop = day.stops[stopIndex];
   const place = state.places[stop.place_id];
+  if (!place) return;
   state.map.flyTo(place.coords, 16, { duration: 0.8 });
   location.hash = `#${dayId}/${stop.place_id}`;
   renderSidebar();
@@ -91,11 +117,11 @@ function selectStop(dayId, stopIndex) {
 function renderSidebar() {
   const sidebar = document.getElementById("sidebar");
   const day = state.itinerary.days.find((d) => d.id === state.activeDay);
-  const color = DAY_COLORS[state.activeDay];
+  const color = dayColor(state.activeDay);
   sidebar.innerHTML = `
     <div class="p-4 border-b" style="border-color:${color}">
-      <div class="text-xs uppercase tracking-wide" style="color:${color}">${day.date} (${day.weekday})</div>
-      <h2 class="text-lg font-bold mt-1">${day.title}</h2>
+      <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(day.date)} (${esc(day.weekday)})</div>
+      <h2 class="text-lg font-bold mt-1">${esc(day.title)}</h2>
     </div>
     <ul>
       ${day.stops
@@ -103,7 +129,7 @@ function renderSidebar() {
           const place = state.places[stop.place_id];
           const active = i === state.activeStopIndex;
           const transit = stop.transit_from_prev
-            ? `<div class="text-xs text-slate-500 mb-1">↳ ${stop.transit_from_prev.mode} · ${stop.transit_from_prev.minutes}분${stop.transit_from_prev.cost_jpy ? ` · ¥${stop.transit_from_prev.cost_jpy}` : ""}</div>`
+            ? `<div class="text-xs text-slate-500 mb-1">↳ ${esc(stop.transit_from_prev.mode)} · ${esc(stop.transit_from_prev.minutes)}분${stop.transit_from_prev.cost_jpy ? ` · ¥${esc(stop.transit_from_prev.cost_jpy)}` : ""}</div>`
             : "";
           return `
           <li>
@@ -112,10 +138,10 @@ function renderSidebar() {
               <div class="flex items-center gap-3">
                 <div class="numbered-marker" style="background:${color};width:28px;height:28px;font-size:12px">${i + 1}</div>
                 <div class="flex-1">
-                  <div class="font-semibold">${place.name_ko}</div>
-                  <div class="text-xs text-slate-500">${stop.time} · ${stop.duration_minutes}분</div>
+                  <div class="font-semibold">${esc(place.name_ko)}</div>
+                  <div class="text-xs text-slate-500">${esc(stop.time)} · ${esc(stop.duration_minutes)}분</div>
                 </div>
-                <div class="text-2xl">${place.emoji}</div>
+                <div class="text-2xl">${esc(place.emoji)}</div>
               </div>
             </button>
           </li>`;
@@ -132,23 +158,23 @@ function renderSidebar() {
 function renderDetail(stop, place) {
   const detail = document.getElementById("detail");
   detail.classList.remove("hidden");
-  const color = DAY_COLORS[state.activeDay];
+  const color = dayColor(state.activeDay);
   detail.innerHTML = `
-    <div class="h-32 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,${color}22,${color}55)">${place.emoji}</div>
+    <div class="h-32 flex items-center justify-center text-6xl" style="background:linear-gradient(135deg,${color}22,${color}55)">${esc(place.emoji)}</div>
     <div class="p-5">
-      <button id="detail-close" class="float-right text-slate-400 hover:text-slate-700 text-xl">×</button>
-      <div class="text-xs uppercase tracking-wide" style="color:${color}">${stop.time} · ${stop.duration_minutes}분</div>
-      <h2 class="text-2xl font-bold mt-1">${place.name_ko}</h2>
-      <div class="text-sm text-slate-500">${place.name_jp}</div>
-      <p class="mt-3 text-slate-700">${place.summary}</p>
-      <p class="mt-2 text-sm text-slate-600">${place.detail}</p>
+      <button id="detail-close" aria-label="상세 패널 닫기" class="float-right text-slate-400 hover:text-slate-700 text-xl">×</button>
+      <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(stop.time)} · ${esc(stop.duration_minutes)}분</div>
+      <h2 class="text-2xl font-bold mt-1">${esc(place.name_ko)}</h2>
+      <div class="text-sm text-slate-500">${esc(place.name_jp)}</div>
+      <p class="mt-3 text-slate-700">${esc(place.summary)}</p>
+      <p class="mt-2 text-sm text-slate-600">${esc(place.detail)}</p>
 
       ${
         place.activities.length
           ? `
         <h3 class="mt-5 font-semibold">여기서 해야 할 것</h3>
         <ul class="mt-2 list-disc list-inside text-sm space-y-1">
-          ${place.activities.map((a) => `<li>${a}</li>`).join("")}
+          ${place.activities.map((a) => `<li>${esc(a)}</li>`).join("")}
         </ul>`
           : ""
       }
@@ -162,9 +188,9 @@ function renderDetail(stop, place) {
             .map(
               (r) => `
             <div class="border rounded p-2">
-              <div class="font-semibold text-sm">${r.name} <span class="text-xs text-slate-500">${r.type}</span></div>
-              <div class="text-xs text-slate-600 mt-1">${r.tip}</div>
-              <div class="text-xs text-slate-400 mt-1">${r.price_range}</div>
+              <div class="font-semibold text-sm">${esc(r.name)} <span class="text-xs text-slate-500">${esc(r.type)}</span></div>
+              <div class="text-xs text-slate-600 mt-1">${esc(r.tip)}</div>
+              <div class="text-xs text-slate-400 mt-1">${esc(r.price_range)}</div>
             </div>`,
             )
             .join("")}
@@ -174,9 +200,9 @@ function renderDetail(stop, place) {
 
       <h3 class="mt-5 font-semibold">한국어 후기 검색</h3>
       <div class="mt-2 flex gap-2 text-sm">
-        <a class="px-3 py-1 rounded border" href="${place.review_links.naver}" target="_blank">네이버</a>
-        <a class="px-3 py-1 rounded border" href="${place.review_links.google}" target="_blank">구글</a>
-        <a class="px-3 py-1 rounded border" href="${place.review_links.youtube}" target="_blank">유튜브</a>
+        <a class="px-3 py-1 rounded border" href="${safeHref(place.review_links.naver)}" target="_blank">네이버</a>
+        <a class="px-3 py-1 rounded border" href="${safeHref(place.review_links.google)}" target="_blank">구글</a>
+        <a class="px-3 py-1 rounded border" href="${safeHref(place.review_links.youtube)}" target="_blank">유튜브</a>
       </div>
 
       ${
@@ -184,7 +210,7 @@ function renderDetail(stop, place) {
           ? `
         <h3 class="mt-5 font-semibold text-xs text-slate-500">출처</h3>
         <ul class="text-xs text-slate-500 mt-1 space-y-1">
-          ${place.sources.map((s) => `<li>- <a class="underline" href="${s.url}" target="_blank">${s.title}</a></li>`).join("")}
+          ${place.sources.map((s) => `<li>- <a class="underline" href="${safeHref(s.url)}" target="_blank">${esc(s.title)}</a></li>`).join("")}
         </ul>`
           : ""
       }
@@ -198,14 +224,14 @@ function renderDetail(stop, place) {
 function renderProgressBar() {
   const bar = document.getElementById("progress-bar");
   bar.innerHTML = `
-    <div class="font-bold text-slate-800 mr-4">${state.itinerary.trip.title}</div>
+    <div class="font-bold text-slate-800 mr-4">${esc(state.itinerary.trip.title)}</div>
     <div class="flex gap-1">
       ${state.itinerary.days
         .map(
           (d) => `
-        <button data-day="${d.id}" class="px-3 py-1 rounded text-xs font-semibold border ${d.id === state.activeDay ? "text-white" : "text-slate-600"}"
-                style="${d.id === state.activeDay ? `background:${DAY_COLORS[d.id]};border-color:${DAY_COLORS[d.id]}` : `border-color:${DAY_COLORS[d.id]};color:${DAY_COLORS[d.id]}`}">
-          ${d.id.toUpperCase()} · ${d.date.slice(5)}
+        <button data-day="${esc(d.id)}" class="px-3 py-1 rounded text-xs font-semibold border ${d.id === state.activeDay ? "text-white" : "text-slate-600"}"
+                style="${d.id === state.activeDay ? `background:${dayColor(d.id)};border-color:${dayColor(d.id)}` : `border-color:${dayColor(d.id)};color:${dayColor(d.id)}`}">
+          ${esc(d.id.toUpperCase())} · ${esc(d.date.slice(5))}
         </button>`,
         )
         .join("")}
@@ -233,7 +259,14 @@ function parseHash() {
 }
 
 async function boot() {
-  await loadData();
+  try {
+    await loadData();
+  } catch (err) {
+    document.body.innerHTML =
+      `<p style="padding:2rem;font-family:sans-serif;color:#dc2626">` +
+      `데이터를 불러오지 못했습니다: ${err.message}</p>`;
+    return;
+  }
   initMap();
   const { day, stopIndex, open } = parseHash();
   state.activeDay = day;
@@ -250,6 +283,7 @@ async function boot() {
 }
 
 window.addEventListener("hashchange", () => {
+  if (!state.itinerary) return;
   const { day, stopIndex, open } = parseHash();
   if (day !== state.activeDay) {
     state.activeDay = day;
