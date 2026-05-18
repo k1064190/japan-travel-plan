@@ -21,6 +21,25 @@ function isPlainObject(v) {
   return v != null && typeof v === "object" && !Array.isArray(v);
 }
 
+function validateCuratedLink(label, link, errors) {
+  if (!isPlainObject(link)) {
+    errors.push(`${label}: must be an object`);
+    return;
+  }
+  if (typeof link.title !== "string" || link.title.trim() === "") {
+    errors.push(`${label}.title must be a non-empty string`);
+  }
+  if (typeof link.url !== "string" || !/^https:\/\//.test(link.url)) {
+    errors.push(`${label}.url must use https:// (got: ${link.url})`);
+  }
+  if (typeof link.source !== "string" || link.source.trim() === "") {
+    errors.push(`${label}.source must be a non-empty string`);
+  }
+  if ("snippet" in link && typeof link.snippet !== "string") {
+    errors.push(`${label}.snippet must be a string when present`);
+  }
+}
+
 export function validate(places, itinerary) {
   const errors = [];
 
@@ -76,6 +95,36 @@ export function validate(places, itinerary) {
             errors.push(`${id}: invalid url in sources`);
         }
       }
+    }
+    if ("curated_links" in place) {
+      if (!Array.isArray(place.curated_links)) {
+        errors.push(`${id}: curated_links must be an array`);
+      } else {
+        place.curated_links.forEach((link, i) => {
+          validateCuratedLink(`${id}.curated_links[${i}]`, link, errors);
+        });
+      }
+    }
+    if (Array.isArray(place.restaurants)) {
+      place.restaurants.forEach((r, i) => {
+        if (isPlainObject(r) && "link" in r) {
+          validateCuratedLink(`${id}.restaurants[${i}].link`, r.link, errors);
+        }
+      });
+    }
+    if (Array.isArray(place.activities)) {
+      place.activities.forEach((a, i) => {
+        if (isPlainObject(a)) {
+          if (typeof a.text !== "string" || a.text.trim() === "") {
+            errors.push(`${id}.activities[${i}].text must be a non-empty string`);
+          }
+          if ("link" in a) {
+            validateCuratedLink(`${id}.activities[${i}].link`, a.link, errors);
+          }
+        } else if (typeof a !== "string") {
+          errors.push(`${id}.activities[${i}] must be a string or object with text/link`);
+        }
+      });
     }
   }
 
