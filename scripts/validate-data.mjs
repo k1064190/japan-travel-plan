@@ -35,8 +35,12 @@ function validateCuratedLink(label, link, errors) {
   if (typeof link.source !== "string" || link.source.trim() === "") {
     errors.push(`${label}.source must be a non-empty string`);
   }
-  if ("snippet" in link && typeof link.snippet !== "string") {
-    errors.push(`${label}.snippet must be a string when present`);
+  if ("snippet" in link) {
+    if (typeof link.snippet !== "string") {
+      errors.push(`${label}.snippet must be a string when present`);
+    } else if (link.snippet.trim() === "") {
+      errors.push(`${label}.snippet must not be empty when present`);
+    }
   }
 }
 
