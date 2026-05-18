@@ -147,8 +147,15 @@ function renderSidebar() {
           const place = state.places[stop.place_id];
           if (!place) return "";
           const active = i === state.activeStopIndex;
-          const transit = stop.transit_from_prev
-            ? `<div class="text-xs text-slate-500 mb-1">↳ ${esc(stop.transit_from_prev.mode)} · ${esc(stop.transit_from_prev.minutes)}분${stop.transit_from_prev.cost_jpy ? ` · ¥${esc(stop.transit_from_prev.cost_jpy)}` : ""}</div>`
+          const tp = stop.transit_from_prev;
+          const costLabel =
+            tp == null || tp.cost_jpy == null
+              ? ""
+              : tp.cost_jpy === 0
+                ? " · 무료"
+                : ` · ¥${esc(tp.cost_jpy)}`;
+          const transit = tp
+            ? `<div class="text-xs text-slate-500 mb-1">↳ ${esc(tp.mode)} · ${esc(tp.minutes)}분${costLabel}</div>`
             : "";
           return `
           <li>
@@ -368,6 +375,12 @@ window.addEventListener("hashchange", () => {
     history.replaceState(null, "", expectedHash);
   }
   const dayChanged = day !== state.activeDay;
+  const stopChanged = stopIndex !== state.activeStopIndex;
+  const detail = document.getElementById("detail");
+  const detailVisible = !detail.classList.contains("hidden");
+  if (!dayChanged && !stopChanged && open === detailVisible) {
+    return;
+  }
   state.activeDay = day;
   state.activeStopIndex = stopIndex;
   if (dayChanged) {
@@ -378,7 +391,7 @@ window.addEventListener("hashchange", () => {
     selectStop(day, stopIndex);
   } else {
     renderSidebar();
-    document.getElementById("detail").classList.add("hidden");
+    detail.classList.add("hidden");
   }
 });
 

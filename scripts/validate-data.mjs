@@ -24,7 +24,7 @@ export function validate(places, itinerary) {
     for (const f of REQUIRED_FIELDS) {
       if (!(f in place)) errors.push(`${id}: missing field: ${f}`);
     }
-    if (place.coords) {
+    if ("coords" in place) {
       if (!Array.isArray(place.coords) || place.coords.length !== 2) {
         errors.push(`${id}: coords must be a 2-element array`);
       } else {
@@ -69,6 +69,10 @@ export function validate(places, itinerary) {
 
   const referenced = new Set();
   for (const day of itinerary.days) {
+    if (!day || typeof day !== "object") {
+      errors.push(`itinerary.days contains a non-object entry`);
+      continue;
+    }
     for (const stop of day.stops ?? []) {
       referenced.add(stop.place_id);
       if (!places[stop.place_id]) {
@@ -94,7 +98,7 @@ export function validate(places, itinerary) {
     if (place.category !== "main") continue;
     if (!referenced.has(id)) continue;
     const inDay5 = (itinerary.days ?? []).some(
-      (d) => d.id === "day5" && d.stops.some((s) => s.place_id === id),
+      (d) => d?.id === "day5" && (d.stops ?? []).some((s) => s.place_id === id),
     );
     if (inDay5) continue;
     // Utility stops (airport, hotel, checkout) are main but not dining destinations
