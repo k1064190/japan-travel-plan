@@ -25,6 +25,43 @@ function safeHref(url) {
   return url && /^https:\/\//.test(url) ? url : "#";
 }
 
+function renderActivity(a, color) {
+  const text = typeof a === "string" ? a : a?.text || "";
+  const link = typeof a === "object" ? a?.link : null;
+  const linkBit = link?.url
+    ? ` <a href="${safeHref(link.url)}" target="_blank" rel="noopener" class="text-xs underline text-slate-500 hover:text-slate-800" title="${esc(link.title || "")}">후기 →</a>`
+    : "";
+  return `<li class="flex gap-2"><span style="color:${color}">▸</span><span>${esc(text)}${linkBit}</span></li>`;
+}
+
+function renderRestaurant(r) {
+  const linkBit = r?.link?.url
+    ? `<a href="${safeHref(r.link.url)}" target="_blank" rel="noopener" class="block mt-2 text-xs underline text-slate-500 hover:text-slate-800" title="${esc(r.link.title || "")}">한국어 후기 보기 →</a>`
+    : "";
+  return `
+    <div class="border rounded-lg p-3 hover:bg-slate-50">
+      <div class="flex items-baseline justify-between gap-2">
+        <div class="font-semibold text-sm">${esc(r.name)}</div>
+        <div class="text-xs text-slate-500 whitespace-nowrap">${esc(r.price_range)}</div>
+      </div>
+      <div class="text-xs text-slate-500 mt-1">${esc(r.type)}</div>
+      <div class="text-sm text-slate-700 mt-1">${esc(r.tip)}</div>
+      ${linkBit}
+    </div>`;
+}
+
+function renderCuratedLink(link, color) {
+  const snippet = link?.snippet
+    ? `<div class="text-xs text-slate-600 mt-1 leading-snug">${esc(link.snippet)}</div>`
+    : "";
+  return `
+    <a href="${safeHref(link?.url)}" target="_blank" rel="noopener" class="block border rounded-lg p-3 hover:bg-slate-50">
+      <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(link?.source || "")}</div>
+      <div class="font-semibold text-sm mt-1">${esc(link?.title || "")}</div>
+      ${snippet}
+    </a>`;
+}
+
 const state = {
   itinerary: null,
   places: null,
@@ -224,7 +261,7 @@ function renderDetail(stop, place) {
           ? `
         <h3 class="mt-5 font-semibold text-slate-800">여기서 해야 할 것</h3>
         <ul class="mt-2 space-y-1 text-sm">
-          ${place.activities.map((a) => `<li class="flex gap-2"><span style="color:${color}">▸</span><span>${esc(a)}</span></li>`).join("")}
+          ${place.activities.map((a) => renderActivity(a, color)).join("")}
         </ul>`
           : ""
       }
@@ -234,24 +271,22 @@ function renderDetail(stop, place) {
           ? `
         <h3 class="mt-5 font-semibold text-slate-800">추천 맛집 (${place.restaurants.length})</h3>
         <div class="mt-2 space-y-2">
-          ${place.restaurants
-            .map(
-              (r) => `
-            <div class="border rounded-lg p-3 hover:bg-slate-50">
-              <div class="flex items-baseline justify-between gap-2">
-                <div class="font-semibold text-sm">${esc(r.name)}</div>
-                <div class="text-xs text-slate-500 whitespace-nowrap">${esc(r.price_range)}</div>
-              </div>
-              <div class="text-xs text-slate-500 mt-1">${esc(r.type)}</div>
-              <div class="text-sm text-slate-700 mt-1">${esc(r.tip)}</div>
-            </div>`,
-            )
-            .join("")}
+          ${place.restaurants.map((r) => renderRestaurant(r)).join("")}
         </div>`
           : ""
       }
 
-      <h3 class="mt-5 font-semibold text-slate-800">한국어 후기 검색</h3>
+      ${
+        Array.isArray(place.curated_links) && place.curated_links.length
+          ? `
+        <h3 class="mt-5 font-semibold text-slate-800">한국어 블로그 후기</h3>
+        <div class="mt-2 space-y-2">
+          ${place.curated_links.map((link) => renderCuratedLink(link, color)).join("")}
+        </div>`
+          : ""
+      }
+
+      <h3 class="mt-5 font-semibold text-xs uppercase tracking-wide text-slate-500">${Array.isArray(place.curated_links) && place.curated_links.length ? "더 찾아보기" : "한국어 후기 검색"}</h3>
       <div class="mt-2 grid grid-cols-3 gap-2 text-sm text-center">
         <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(rl.naver)}" target="_blank" rel="noopener">네이버<br><span class="text-xs text-slate-400">블로그</span></a>
         <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(rl.google)}" target="_blank" rel="noopener">구글<br><span class="text-xs text-slate-400">웹</span></a>
