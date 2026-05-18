@@ -1,0 +1,9 @@
+{
+  "name": "japan-travel-plan",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/validate-data.test.mjs",
+    "validate": "node scripts/validate-data.mjs"
+  }
+}
