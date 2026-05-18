@@ -12,8 +12,8 @@ Doctor Cho의 4박 5일 인터랙티브 여행 플랜.
 `fetch()`가 `file://`에서 막히므로 로컬 HTTP 서버가 필요합니다.
 
 ```bash
-python3 -m http.server 8770 --bind 127.0.0.1
-# http://127.0.0.1:8770/ 접속
+python3 -m http.server 54130 --bind 127.0.0.1
+# http://127.0.0.1:54130/ 접속
 ```
 
 또는 정적 호스팅: `index.html`, `assets/`, `data/` 만 정적 서버에 올리면 동작.

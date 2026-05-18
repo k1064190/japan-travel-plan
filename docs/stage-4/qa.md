@@ -14,7 +14,7 @@
 
 ## How
 
-`/home/cwh/.claude/skills/gstack/browse/dist/browse` (headless Chromium)로 `http://127.0.0.1:8770/` 에 접속해 21개 stop을 hash 변경으로 자동 순회. 각 stop의 디테일 헤더가 로드되는지 확인 → 21/21 모두 한국어 명소명이 정확히 표시됨.
+`/home/cwh/.claude/skills/gstack/browse/dist/browse` (headless Chromium)로 `http://127.0.0.1:54130/` 에 접속해 21개 stop을 hash 변경으로 자동 순회. 각 stop의 디테일 헤더가 로드되는지 확인 → 21/21 모두 한국어 명소명이 정확히 표시됨.
 
 추가 시나리오:
 - `#day9/foo` (invalid) → 이전엔 URL이 `#day9/foo`로 유지되고 이전 day의 detail panel이 stale 상태로 남았음. fix: `boot()` + `hashchange` 양쪽에서 `history.replaceState` 로 URL을 정규화하고, place segment 없는 hash로 가면 detail을 hidden 처리.

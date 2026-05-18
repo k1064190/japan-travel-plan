@@ -5,8 +5,8 @@
 ## 준비
 
 ```bash
-python3 -m http.server 8770 --bind 127.0.0.1
-# http://127.0.0.1:8770/ 접속 (Chrome + DevTools Console 열어둘 것)
+python3 -m http.server 54130 --bind 127.0.0.1
+# http://127.0.0.1:54130/ 접속 (Chrome + DevTools Console 열어둘 것)
 ```
 
 데이터 기준: `data/itinerary.json` — 5일 × 21 stop (Day1 3, Day2 6, Day3 7, Day4 3, Day5 2). `data/places.json` — 65 명소.
@@ -32,8 +32,8 @@ map 마커도 동일하게 클릭해 동일 디테일 패널이 열리는지 확
 
 ## 라우팅/공유
 
-- [ ] `http://127.0.0.1:8770/#day3/osaka_castle` 새 탭으로 열기 → 오사카성 디테일이 즉시 표시됨
-- [ ] `http://127.0.0.1:8770/#day9/foo` (invalid) → day1으로 fallback + URL `#day1`로 normalize + 디테일 패널 닫힌 상태
+- [ ] `http://127.0.0.1:54130/#day3/osaka_castle` 새 탭으로 열기 → 오사카성 디테일이 즉시 표시됨
+- [ ] `http://127.0.0.1:54130/#day9/foo` (invalid) → day1으로 fallback + URL `#day1`로 normalize + 디테일 패널 닫힌 상태
 - [ ] 디테일 패널 × 클릭 → 패널 닫히고 hash가 `#dayN`으로 정리됨
 - [ ] 다른 Day 탭 클릭 → 이전 Day의 디테일이 남지 않고 깨끗하게 닫힘
 - [ ] 페이지 새로고침 → 직전 URL 상태 복원
