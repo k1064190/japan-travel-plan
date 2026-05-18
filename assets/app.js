@@ -325,6 +325,14 @@ function parseHash() {
   return { day, stopIndex: idx >= 0 ? idx : 0, open: idx >= 0 };
 }
 
+function buildHash(day, stopIndex, open) {
+  if (!open) return `#${day}`;
+  const placeId = state.itinerary.days.find((d) => d.id === day)?.stops?.[
+    stopIndex
+  ]?.place_id;
+  return placeId ? `#${day}/${placeId}` : `#${day}`;
+}
+
 async function boot() {
   try {
     await loadData();
@@ -336,9 +344,7 @@ async function boot() {
   }
   initMap();
   const { day, stopIndex, open } = parseHash();
-  const expectedHash = open
-    ? `#${day}/${state.itinerary.days.find((d) => d.id === day).stops[stopIndex].place_id}`
-    : `#${day}`;
+  const expectedHash = buildHash(day, stopIndex, open);
   if (location.hash !== expectedHash) {
     history.replaceState(null, "", expectedHash);
   }
@@ -348,10 +354,10 @@ async function boot() {
   renderSidebar();
   renderProgressBar();
   if (open) {
-    const stop = state.itinerary.days.find((d) => d.id === day).stops[
+    const stop = state.itinerary.days.find((d) => d.id === day)?.stops?.[
       stopIndex
     ];
-    renderDetail(stop, state.places[stop.place_id]);
+    if (stop) renderDetail(stop, state.places[stop.place_id]);
   }
   renderMobileTabs();
 }
@@ -359,9 +365,7 @@ async function boot() {
 window.addEventListener("hashchange", () => {
   if (!state.itinerary) return;
   const { day, stopIndex, open } = parseHash();
-  const expectedHash = open
-    ? `#${day}/${state.itinerary.days.find((d) => d.id === day).stops[stopIndex].place_id}`
-    : `#${day}`;
+  const expectedHash = buildHash(day, stopIndex, open);
   if (location.hash !== expectedHash) {
     history.replaceState(null, "", expectedHash);
   }
