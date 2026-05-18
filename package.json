@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/validate-data.test.mjs",
-    "validate": "node scripts/validate-data.mjs"
+    "validate": "node scripts/validate-data.mjs",
+    "verify-walk": "node scripts/verify-walk-times.mjs"
   }
 }
