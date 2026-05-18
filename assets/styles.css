@@ -31,7 +31,48 @@
 }
 
 @media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
   main {
     height: calc(100vh - 3.5rem - 3.5rem);
+    position: relative;
+  }
+  #sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 500;
+    border-right: none;
+    display: none;
+  }
+  #sidebar.active {
+    display: block;
+  }
+  #map.hidden-mobile {
+    visibility: hidden;
+  }
+
+  #detail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 3.5rem;
+    width: 100%;
+    z-index: 1500;
+    border-left: none;
+  }
+
+  #mobile-tabs button.active {
+    color: var(--active-day, var(--day-1));
+  }
+  .numbered-marker {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
   }
 }

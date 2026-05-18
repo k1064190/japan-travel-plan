@@ -112,6 +112,9 @@ function selectStop(dayId, stopIndex) {
   location.hash = `#${dayId}/${stop.place_id}`;
   renderSidebar();
   renderDetail(stop, place);
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    setMobileView("map");
+  }
 }
 
 function renderSidebar() {
@@ -253,6 +256,25 @@ function renderProgressBar() {
   });
 }
 
+function setMobileView(view) {
+  document
+    .getElementById("sidebar")
+    .classList.toggle("active", view === "list");
+  document
+    .getElementById("map")
+    .classList.toggle("hidden-mobile", view === "list");
+  document.querySelectorAll("#mobile-tabs button").forEach((b) => {
+    b.classList.toggle("active", b.dataset.view === view);
+  });
+}
+
+function renderMobileTabs() {
+  document.querySelectorAll("#mobile-tabs button").forEach((btn) => {
+    btn.addEventListener("click", () => setMobileView(btn.dataset.view));
+  });
+  setMobileView("map");
+}
+
 function parseHash() {
   const [day, placeId] = location.hash.replace("#", "").split("/");
   if (!day) return { day: "day1", stopIndex: 0, open: false };
@@ -285,6 +307,7 @@ async function boot() {
     ];
     renderDetail(stop, state.places[stop.place_id]);
   }
+  renderMobileTabs();
 }
 
 window.addEventListener("hashchange", () => {

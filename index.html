@@ -49,8 +49,21 @@
 
     <nav
       id="mobile-tabs"
-      class="md:hidden fixed bottom-0 left-0 right-0 h-14 bg-white border-t flex"
-    ></nav>
+      class="md:hidden fixed bottom-0 left-0 right-0 h-14 bg-white border-t flex z-[1000]"
+    >
+      <button
+        data-view="map"
+        class="flex-1 flex flex-col items-center justify-center text-xs gap-0.5"
+      >
+        <span class="text-xl">🗺️</span>지도
+      </button>
+      <button
+        data-view="list"
+        class="flex-1 flex flex-col items-center justify-center text-xs gap-0.5"
+      >
+        <span class="text-xl">📋</span>일정
+      </button>
+    </nav>
 
     <script type="module" src="assets/app.js"></script>
   </body>
