@@ -77,7 +77,10 @@ function buildDirectionsUrl(originCoords, destCoords, mode) {
   return `https://www.google.com/maps/dir/?${params.toString()}`;
 }
 
-/** Resolve origin/destination places for a given day/stop's transit_from_prev. */
+/** Resolve origin/destination places for a given day/stop's transit_from_prev.
+ *  Origin precedence: explicit transit_from_prev.origin_place_id > previous
+ *  same-day stop > previous-day last stop. The explicit field is what user-
+ *  authored intent (e.g., "departing from the hotel") should look like. */
 function getTransitEndpoints(dayId, stopIndex) {
   if (!state.itinerary || !state.places) return null;
   const dayIdx = state.itinerary.days.findIndex((d) => d.id === dayId);
@@ -88,10 +91,15 @@ function getTransitEndpoints(dayId, stopIndex) {
   const dest = state.places[currStop.place_id];
   if (!dest) return null;
   let origin = null;
-  if (stopIndex > 0) {
+  const explicit = currStop.transit_from_prev.origin_place_id;
+  if (explicit) {
+    origin = state.places[explicit];
+  }
+  if (!origin && stopIndex > 0) {
     const prev = day.stops[stopIndex - 1];
     origin = state.places[prev?.place_id];
-  } else if (dayIdx > 0) {
+  }
+  if (!origin && dayIdx > 0) {
     const prevDay = state.itinerary.days[dayIdx - 1];
     const last = prevDay.stops?.[prevDay.stops.length - 1];
     origin = state.places[last?.place_id];

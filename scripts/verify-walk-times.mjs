@@ -27,6 +27,8 @@
 
 import { readFile } from "node:fs/promises";
 
+const WARN_ONLY = process.argv.includes("--warn-only");
+
 const WALK_KMH = 5.0; // adult walking, no obstacles
 const DETOUR_FACTOR = 1.25; // streets aren't straight lines
 const TOLERANCE_RATIO = 0.5; // 50% delta to flag
@@ -107,7 +109,11 @@ async function main() {
     for (const f of flagged) {
       console.log(`  ${f.day}/${f.place_id}: planned ${f.planned}분 vs est ${f.est.toFixed(1)}분`);
     }
-    process.exit(2);
+    if (WARN_ONLY) {
+      console.log("(--warn-only: not exiting non-zero)");
+    } else {
+      process.exit(2);
+    }
   } else {
     console.log("✓ all walking segments within tolerance");
   }
