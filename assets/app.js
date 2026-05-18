@@ -50,12 +50,15 @@ function renderRestaurant(r) {
     </div>`;
 }
 
-/** Map Korean transit mode strings to Google Maps travelmode values. */
+/** Map Korean transit mode strings to Google Maps travelmode values.
+ *  Walking and driving require *exact* (trimmed) matches — hybrids like
+ *  "미도스지+도보" or "JR환상선+도보" are mixed-mode and must route as
+ *  transit, otherwise Google would try to walk a 5 km rail leg. */
 function transitModeToGoogleMode(mode) {
   if (!mode) return "transit";
-  const m = String(mode);
-  if (/도보|walk/i.test(m)) return "walking";
-  if (/택시|taxi|렌터카|자동차|car/i.test(m)) return "driving";
+  const m = String(mode).trim();
+  if (m === "도보" || /^walk(ing)?$/i.test(m)) return "walking";
+  if (/^(택시|렌터카|자동차|taxi|car)$/i.test(m)) return "driving";
   return "transit";
 }
 

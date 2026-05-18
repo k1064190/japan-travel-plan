@@ -64,7 +64,9 @@ async function main() {
       const stop = day.stops[si];
       const t = stop.transit_from_prev;
       if (!t) continue;
-      // Pure walking only — hybrids like "JR환상선+도보" mix transit and walk.
+      // Pure walking only — hybrids like "JR환상선+도보" mix transit and walk;
+      // the haversine + walk-speed heuristic doesn't model rail, so they're
+      // deferred to per-stop verification via the Google Maps button in the UI.
       if (String(t.mode).trim() !== "도보") {
         skipped++;
         continue;
@@ -75,8 +77,8 @@ async function main() {
         origin = places[day.stops[si - 1].place_id];
       } else if (di > 0) {
         const prevDay = itinerary.days[di - 1];
-        const last = prevDay.stops[prevDay.stops.length - 1];
-        origin = places[last.place_id];
+        const last = prevDay.stops?.[prevDay.stops.length - 1];
+        if (last) origin = places[last.place_id];
       }
       if (!origin || !dest) {
         console.log(`  ${day.id}/${stop.place_id}: skipping (missing origin/dest place)`);
