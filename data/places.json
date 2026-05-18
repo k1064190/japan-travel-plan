@@ -1,0 +1,183 @@
+{
+  "kansai_airport": {
+    "name_ko": "간사이 국제공항",
+    "name_jp": "関西国際空港",
+    "coords": [34.4347, 135.2441],
+    "category": "main",
+    "emoji": "✈️",
+    "tags": ["교통허브"],
+    "summary": "오사카만 인공섬 위에 지어진 24시간 운영 공항.",
+    "detail": "1994년 개항. 난카이 라피트로 난바까지 34분, 공항급행으로 약 45분.",
+    "sources": [
+      {
+        "title": "Kansai Airports 공식",
+        "url": "https://www.kansai-airports.co.jp/en/"
+      }
+    ],
+    "activities": [
+      "라피트 티켓 자판기에서 난바행 구입",
+      "1층 도착장 SIM/포켓와이파이 픽업"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD+%EB%82%9C%EB%B0%94+%EC%9D%B4%EB%8F%99+%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD+%EB%82%9C%EB%B0%94+%EC%9D%B4%EB%8F%99+%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD+%EB%82%9C%EB%B0%94+%EC%9D%B4%EB%8F%99"
+    }
+  },
+  "namba_hotel": {
+    "name_ko": "난바 숙소권",
+    "name_jp": "難波",
+    "coords": [34.6661, 135.5019],
+    "category": "main",
+    "emoji": "🏨",
+    "tags": ["숙소"],
+    "summary": "난바·신사이바시는 오사카 첫 여행 정석 숙박권.",
+    "detail": "도톤보리, 구로몬, 닛폰바시, 신사이바시 모두 도보권.",
+    "sources": [
+      {
+        "title": "Trip.com 오사카 숙소 가이드",
+        "url": "https://kr.trip.com/guide/destination/osaka-itinerary.html"
+      }
+    ],
+    "activities": ["체크인 후 짐 풀고 가벼운 차림으로 외출"],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%82%9C%EB%B0%94+%EC%88%99%EC%86%8C+%EC%B6%94%EC%B2%9C",
+      "google": "https://www.google.com/search?q=%EB%82%9C%EB%B0%94+%EC%88%99%EC%86%8C+%EC%B6%94%EC%B2%9C&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%82%9C%EB%B0%94+%EC%88%99%EC%86%8C"
+    }
+  },
+  "kuromon_market": {
+    "name_ko": "구로몬시장",
+    "name_jp": "黒門市場",
+    "coords": [34.666, 135.5063],
+    "category": "main",
+    "emoji": "🦑",
+    "tags": ["먹거리", "시장"],
+    "summary": "약 580m 아케이드에 150여 점포가 늘어선 \"오사카의 부엌\".",
+    "detail": "참치 해체쇼, 와규 꼬치, 성게, 사과 캔디 같은 길거리 음식이 강점. 오전이 신선도가 좋고 늦은 오후엔 일부 점포가 닫는다.",
+    "sources": [
+      {
+        "title": "오사카관광공사 구로몬시장",
+        "url": "https://osaka-info.jp/spot/kuromon-ichiba-market/"
+      }
+    ],
+    "activities": [
+      "참치 해체쇼 구경 (점포에 따라 11시·14시)",
+      "와규 꼬치+성게 시식",
+      "닛폰바시 방향 도보 5분 이동 준비"
+    ],
+    "restaurants": [
+      {
+        "name": "마구로야 쿠로기 (まぐろや黒銀)",
+        "type": "참치",
+        "tip": "오토로 초밥/해체쇼",
+        "price_range": "1000~3000엔"
+      },
+      {
+        "name": "타카하시 (高橋)",
+        "type": "와규 꼬치·이세 새우",
+        "tip": "줄 길면 옆 분점",
+        "price_range": "500~2000엔"
+      },
+      {
+        "name": "이시바시 (石橋食品)",
+        "type": "어묵·반찬",
+        "tip": "사케 안주용 픽업",
+        "price_range": "300~1000엔"
+      }
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EA%B5%AC%EB%A1%9C%EB%AA%AC%EC%8B%9C%EC%9E%A5+%EB%A7%9B%EC%A7%91",
+      "google": "https://www.google.com/search?q=%EA%B5%AC%EB%A1%9C%EB%AA%AC%EC%8B%9C%EC%9E%A5+%EB%A7%9B%EC%A7%91&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EA%B5%AC%EB%A1%9C%EB%AA%AC%EC%8B%9C%EC%9E%A5"
+    }
+  },
+  "denden_town": {
+    "name_ko": "덴덴타운·닛폰바시 오타로드",
+    "name_jp": "でんでんタウン・日本橋",
+    "coords": [34.658, 135.506],
+    "category": "main",
+    "emoji": "🛍️",
+    "tags": ["전자상가", "애니메이션", "피규어"],
+    "summary": "오사카의 아키하바라. 전자제품·애니·피규어·게임 전문점 밀집.",
+    "detail": "사카이스지를 따라 남쪽으로 약 800m. 만다라케, 슈퍼포테토, 멜론북스, 라신반, 점프숍, 빔즈 컬렉션 등.",
+    "sources": [
+      {
+        "title": "닛폰바시 상점가 진흥회 공식",
+        "url": "https://www.denden-town.or.jp/"
+      }
+    ],
+    "activities": [
+      "만다라케 본관 1F→지하 순으로 훑기",
+      "슈퍼포테토에서 레트로 게임 가격 비교",
+      "오타로드 끝에서 난바까지 도보로 복귀"
+    ],
+    "restaurants": [
+      {
+        "name": "이치란 닛폰바시점",
+        "type": "돈코츠 라멘",
+        "tip": "1인 칸막이석",
+        "price_range": "1000~1500엔"
+      },
+      {
+        "name": "551 호라이 닛폰바시점",
+        "type": "차슈만",
+        "tip": "포장만, 줄 항상 있음",
+        "price_range": "200~1000엔"
+      }
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8D%B4%EB%8D%B4%ED%83%80%EC%9A%B4+%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EB%8D%B4%EB%8D%B4%ED%83%80%EC%9A%B4+%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%8D%B4%EB%8D%B4%ED%83%80%EC%9A%B4"
+    }
+  },
+  "dotonbori": {
+    "name_ko": "도톤보리",
+    "name_jp": "道頓堀",
+    "coords": [34.6687, 135.5012],
+    "category": "main",
+    "emoji": "🍜",
+    "tags": ["야경", "맛집거리", "쇼핑"],
+    "summary": "오사카 미나미의 대표 번화가. 글리코상 네온과 강변 야경.",
+    "detail": "약 600m 길이의 강변 거리. 1612년 운하 개통 이후 극장가로 발달했고, 지금은 오사카 야식과 쇼핑의 중심. 한국인이 가장 많이 찍는 사진 스팟이 글리코상 앞 다이코쿠바시 다리.",
+    "sources": [
+      {
+        "title": "오사카관광공사 도톤보리",
+        "url": "https://osaka-info.jp/spot/dotonbori/"
+      }
+    ],
+    "activities": [
+      "글리코상 인증샷 (다이코쿠바시)",
+      "도톤보리 강 유람선 (Tonbori River Cruise, 20분, 1500엔)",
+      "에비스바시 위에서 야경 보기"
+    ],
+    "restaurants": [
+      {
+        "name": "金龍ラーメン (긴류 라멘)",
+        "type": "돈코츠 라멘",
+        "tip": "24시간, 김치/부추 셀프 토핑",
+        "price_range": "~1000엔"
+      },
+      {
+        "name": "쿠쿠루 도톤보리본점",
+        "type": "타코야키",
+        "tip": "잉크 묻은 문어 모형이 간판",
+        "price_range": "500~800엔"
+      },
+      {
+        "name": "오사카오쇼 도톤보리",
+        "type": "교자 정식",
+        "tip": "야식용 든든",
+        "price_range": "800~1500엔"
+      }
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC+%EB%A7%9B%EC%A7%91",
+      "google": "https://www.google.com/search?q=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC+%EB%A7%9B%EC%A7%91&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC+%EC%95%BC%EA%B2%BD"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "trip": {
+    "title": "오사카·교토 여행",
+    "subtitle": "Doctor Cho's 4박 5일",
+    "start_date": "2026-05-22",
+    "end_date": "2026-05-26"
+  },
+  "days": [
+    {
+      "id": "day1",
+      "date": "2026-05-22",
+      "weekday": "금",
+      "title": "도착 + 난바 적응 + 야경",
+      "color_var": "--day-1",
+      "stops": [
+        {
+          "place_id": "kansai_airport",
+          "time": "16:00",
+          "transit_from_prev": null,
+          "duration_minutes": 30
+        },
+        {
+          "place_id": "namba_hotel",
+          "time": "17:10",
+          "transit_from_prev": {
+            "mode": "난카이 라피트",
+            "from": "간사이공항",
+            "to": "난바",
+            "minutes": 34,
+            "cost_jpy": 1490,
+            "note": "특급권+승차권"
+          },
+          "duration_minutes": 30
+        },
+        {
+          "place_id": "kuromon_market",
+          "time": "18:00",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "난바 숙소",
+            "to": "구로몬시장",
+            "minutes": 8,
+            "cost_jpy": 0,
+            "note": ""
+          },
+          "duration_minutes": 60
+        },
+        {
+          "place_id": "denden_town",
+          "time": "19:10",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "구로몬시장",
+            "to": "덴덴타운",
+            "minutes": 7,
+            "cost_jpy": 0,
+            "note": ""
+          },
+          "duration_minutes": 60
+        },
+        {
+          "place_id": "dotonbori",
+          "time": "20:20",
+          "transit_from_prev": {
+            "mode": "도보",
+            "from": "덴덴타운",
+            "to": "도톤보리",
+            "minutes": 12,
+            "cost_jpy": 0,
+            "note": ""
+          },
+          "duration_minutes": 120
+        }
+      ]
+    }
+  ]
+}
