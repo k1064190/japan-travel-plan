@@ -17,10 +17,10 @@
       crossorigin=""
     ></script>
 
+    <!-- Tailwind Play CDN: dynamic compiler, no stable SRI possible. Personal-use only. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
-      as="style"
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
     />
@@ -40,7 +40,7 @@
         id="sidebar"
         class="w-96 border-r bg-white overflow-y-auto md:block hidden"
       ></aside>
-      <section id="map" class="flex-1"></section>
+      <section id="map" class="flex-1" aria-label="여행 지도"></section>
       <aside
         id="detail"
         class="w-[420px] border-l bg-white overflow-y-auto hidden"
