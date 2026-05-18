@@ -336,6 +336,12 @@ async function boot() {
   }
   initMap();
   const { day, stopIndex, open } = parseHash();
+  const expectedHash = open
+    ? `#${day}/${state.itinerary.days.find((d) => d.id === day).stops[stopIndex].place_id}`
+    : `#${day}`;
+  if (location.hash !== expectedHash) {
+    history.replaceState(null, "", expectedHash);
+  }
   state.activeDay = day;
   state.activeStopIndex = stopIndex;
   renderDay(day);
@@ -353,6 +359,12 @@ async function boot() {
 window.addEventListener("hashchange", () => {
   if (!state.itinerary) return;
   const { day, stopIndex, open } = parseHash();
+  const expectedHash = open
+    ? `#${day}/${state.itinerary.days.find((d) => d.id === day).stops[stopIndex].place_id}`
+    : `#${day}`;
+  if (location.hash !== expectedHash) {
+    history.replaceState(null, "", expectedHash);
+  }
   const dayChanged = day !== state.activeDay;
   state.activeDay = day;
   state.activeStopIndex = stopIndex;
@@ -374,6 +386,8 @@ window.addEventListener("hashchange", () => {
         }
       }
     }
+  } else {
+    document.getElementById("detail").classList.add("hidden");
   }
 });
 
