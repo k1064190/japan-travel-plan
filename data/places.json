@@ -4529,5 +4529,1572 @@
         "snippet": "공항행 이동·짐 옵션·라피트 e-티켓 발권."
       }
     ]
+  },
+  "namba_yasaka_jinja": {
+    "name_ko": "난바 야사카 신사",
+    "name_jp": "難波八阪神社",
+    "coords": [
+      34.6612,
+      135.4967
+    ],
+    "category": "alt",
+    "emoji": "🦁",
+    "tags": [
+      "신사",
+      "포토스팟",
+      "파워스팟"
+    ],
+    "summary": "높이 12m·폭 11m의 거대 사자머리 사자전이 인상적인 미나미의 파워스팟 신사.",
+    "detail": "난바역에서 도보 약 10분 거리. 본전 옆에 솟은 거대한 사자머리(시시덴)는 악귀를 삼키고 운을 불러들인다는 의미를 가진 무대 건축물로, 그 자체가 강력한 포토스팟이다. 학업·취업·승부운 기원 명소로 한국 여행자 후기도 풍부하며, 새벽 6시 반부터 저녁 5시까지 개방되어 호텔 체크인 전후 짧게 들르기 좋다.",
+    "sources": [
+      {
+        "title": "공식 홈페이지 — 難波八阪神社",
+        "url": "https://nambayasaka.jp/"
+      },
+      {
+        "title": "OSAKA-INFO (KR) — 난바 야사카 신사",
+        "url": "https://osaka-info.kr/tour-osaka/?bmode=view&idx=1933369"
+      }
+    ],
+    "activities": [
+      "사자전(獅子殿) 정면 사진 촬영",
+      "참배 후 학업·승부운 부적(오마모리) 구입",
+      "본전 주변 한 바퀴 돌며 작은 말사 둘러보기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%82%9C%EB%B0%94%20%EC%95%BC%EC%82%AC%EC%B9%B4%20%EC%8B%A0%EC%82%AC%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%EB%82%9C%EB%B0%94%20%EC%95%BC%EC%82%AC%EC%B9%B4%20%EC%8B%A0%EC%82%AC%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%82%9C%EB%B0%94%20%EC%95%BC%EC%82%AC%EC%B9%B4%20%EC%8B%A0%EC%82%AC"
+    },
+    "curated_links": [
+      {
+        "title": "오사카의 독특한 신사! 난바 야사카신사",
+        "url": "https://www.japankuru.com/kr/culture/e1836.html",
+        "source": "JAPANKURU (KR)",
+        "snippet": "거대한 사자머리 사자전과 참배 코스, 위치·운영시간을 한국어로 정리."
+      },
+      {
+        "title": "난바 야사카 신사 — OSAKA GUIDE",
+        "url": "https://osaka-info.kr/tour-osaka/?bmode=view&idx=1933369",
+        "source": "오사카 관광공식 (KR)",
+        "snippet": "공식 관광 가이드의 사자전·접근 정보 한국어 페이지."
+      },
+      {
+        "title": "난바 야사카 신사 — 트립닷컴 모먼트",
+        "url": "https://kr.trip.com/moments/detail/osaka-293-136558095/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 사자전 인증샷·참배 후기 모음."
+      }
+    ]
+  },
+  "mitsutera_temple": {
+    "name_ko": "미츠데라(미츠테라)",
+    "name_jp": "三津寺",
+    "coords": [
+      34.6705,
+      135.4995
+    ],
+    "category": "alt",
+    "emoji": "🏯",
+    "tags": [
+      "사찰",
+      "골목 풍경",
+      "건축"
+    ],
+    "summary": "신사이바시-난바 사이 미도스지에 자리한 200년 된 목조 본당과 호텔 복합건물이 결합된 독특한 절.",
+    "detail": "교키(行基) 스님이 창건했다고 전해지는 고찰. 2023년 재정비 후 에도 시대 본당이 15층 복합 건물 안의 '보이는 인테리어'로 보존된 독특한 구조다. 신사이바시역에서 미도스지 따라 남쪽으로 도보 5분. 명품 매장 사이에 갑자기 등장하는 사찰 풍경이 골목 산책 동선에 잘 어울린다.",
+    "sources": [
+      {
+        "title": "OSAKA-INFO — Mittera Temple",
+        "url": "https://osaka-info.jp/en/spot/mittera/"
+      },
+      {
+        "title": "Japan Policy Forum — Tokyo Tatemono Mitsutera Building",
+        "url": "https://www.japanpolicyforum.jp/culture/pt2024061017370714297.html"
+      }
+    ],
+    "activities": [
+      "본당 외관과 현대 건물의 결합 사진 촬영",
+      "조용히 합장 후 5분 산책",
+      "미도스지 가로수와 절 지붕 함께 담기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%AF%B8%EC%B8%A0%EB%8D%B0%EB%9D%BC%20%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C",
+      "google": "https://www.google.com/search?q=%EB%AF%B8%EC%B8%A0%EB%8D%B0%EB%9D%BC%20%EC%82%BC%EC%A7%84%EC%82%AC%20%EC%98%A4%EC%82%AC%EC%B9%B4&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E4%B8%89%E6%B4%A5%E5%AF%BA%20%E5%A4%A7%E9%98%AA"
+    },
+    "curated_links": [
+      {
+        "title": "Mittera Temple — OSAKA-INFO",
+        "url": "https://osaka-info.jp/en/spot/mittera/",
+        "source": "오사카 관광공식",
+        "snippet": "교키 창건의 고찰과 미도스지 위치, 접근 안내."
+      },
+      {
+        "title": "Mitsutera Temple complex — Japan Policy Forum",
+        "url": "https://www.japanpolicyforum.jp/culture/pt2024061017370714297.html",
+        "source": "Japan Policy Forum",
+        "snippet": "200년 목조 본당이 15층 건물 안에 통합된 보존 건축의 배경 해설."
+      },
+      {
+        "title": "Mitsutera 리뷰 — Wanderlog",
+        "url": "https://wanderlog.com/place/details/7802476/mitsutera",
+        "source": "Wanderlog",
+        "snippet": "도심 한복판 작은 사찰의 분위기에 대한 실제 방문자 평가."
+      }
+    ]
+  },
+  "horie_orange_street": {
+    "name_ko": "호리에 오렌지 스트리트",
+    "name_jp": "堀江 オレンジストリート (立花通り)",
+    "coords": [
+      34.6735,
+      135.4925
+    ],
+    "category": "alt",
+    "emoji": "☕",
+    "tags": [
+      "카페 거리",
+      "쇼핑",
+      "감성 골목"
+    ],
+    "summary": "신사이바시 서쪽 호리에 지구의 카페·편집숍이 늘어선 800m 직선 골목.",
+    "detail": "원래 가구점 거리(타치바나도리)였으나 카페·셀렉트숍·빈티지 의류점이 들어서며 변신한 한국 '가로수길' 느낌의 거리. 어반리서치 본점과 Abel Coffee, Brooklyn Roasting 등 카페가 점점이 박혀 있다. 요츠바시역 6번 출구 도보 3분. 도착날 호텔 체크인 전후 가볍게 산책하며 커피 한 잔 마시기 좋다.",
+    "sources": [
+      {
+        "title": "LIVE JAPAN (KR) — 호리에 오렌지 스트리트",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a2000378/"
+      },
+      {
+        "title": "트립닷컴 모먼트 — Osaka Orange Street",
+        "url": "https://kr.trip.com/moments/theme/poi-osaka-orange-street-151197104-guides-993135/"
+      }
+    ],
+    "activities": [
+      "Abel Coffee 또는 Brooklyn Roasting에서 커피 한 잔",
+      "어반리서치·편집숍 1~2곳 윈도쇼핑",
+      "오렌지 스트리트 양쪽 끝까지 800m 산책"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%98%B8%EB%A6%AC%EC%97%90%20%EC%98%A4%EB%A0%8C%EC%A7%80%20%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8",
+      "google": "https://www.google.com/search?q=%ED%98%B8%EB%A6%AC%EC%97%90%20%EC%98%A4%EB%A0%8C%EC%A7%80%20%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8%20%EC%B9%B4%ED%8E%98&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%ED%98%B8%EB%A6%AC%EC%97%90%20%EC%98%A4%EB%A0%8C%EC%A7%80%20%EC%8A%A4%ED%8A%B8%EB%A6%AC%ED%8A%B8"
+    },
+    "curated_links": [
+      {
+        "title": "호리에 오렌지 스트리트 가이드",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a2000378/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "오렌지 스트리트의 카페·편집숍 핵심 동선 한국어 정리."
+      },
+      {
+        "title": "호리에 오렌지 스트릿 카페 Abel Coffee",
+        "url": "https://maruisop.com/entry/%EC%98%A4%EC%82%AC%EC%B9%B4-%EC%B9%B4%ED%8E%98-%ED%98%B8%EB%A6%AC%EC%97%90-%EC%98%A4%EB%A0%8C%EC%A7%80-%EC%8A%A4%ED%8A%B8%EB%A6%BF-%EC%B9%B4%ED%8E%98-Abel-coffee",
+        "source": "maruisop.com",
+        "snippet": "오렌지 스트리트 대표 카페 Abel Coffee 방문 후기와 메뉴 사진."
+      },
+      {
+        "title": "오사카 트렌드 거리 호리에",
+        "url": "https://triple.guide/attractions/64c4b5d3-ee17-4c19-b353-3716bcb3bd1d",
+        "source": "트리플 가이드",
+        "snippet": "호리에 일대의 분위기·동선·주변 명소 묶음 정보."
+      }
+    ]
+  },
+  "pablo_shinsaibashi": {
+    "name_ko": "파블로 치즈타르트 신사이바시 본점",
+    "name_jp": "PABLO 心斎橋本店",
+    "coords": [
+      34.6694,
+      135.5012
+    ],
+    "category": "alt",
+    "emoji": "🥧",
+    "tags": [
+      "디저트",
+      "치즈타르트",
+      "포장 가능"
+    ],
+    "summary": "신사이바시스지 아케이드 안에 있는 파블로 치즈타르트의 일본 유일 본점.",
+    "detail": "갓 구운 치즈타르트로 한국 여행자에게 오랫동안 사랑받아온 디저트 성지. 한국에 정식 매장이 없어져 오사카에서만 맛볼 수 있다. 굽기 정도(레어/미디엄)와 미니 사이즈를 고를 수 있고, 매장에서 따끈할 때 바로 먹는 게 핵심. 10:00–21:00 운영이라 호텔 체크인 후 도톤보리 야경 보러 가는 길에 들르기 좋다.",
+    "sources": [
+      {
+        "title": "삼각형/triple.guide — 파블로 신사이바시",
+        "url": "https://triple.guide/restaurants/ab9bbce0-2eac-46a0-936d-1d8c7aea4c77"
+      },
+      {
+        "title": "오사카 관광공식(KR) — PABLO",
+        "url": "https://osaka-info.kr/TASTE/?bmode=view&idx=1730199"
+      }
+    ],
+    "activities": [
+      "오리지널 치즈타르트 레어 vs 미디엄 비교",
+      "미니 치즈타르트 다양한 맛 포장",
+      "매장 앞에서 갓 구운 상태로 한 입"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%8C%8C%EB%B8%94%EB%A1%9C%20%EC%B9%98%EC%A6%88%ED%83%80%EB%A5%B4%ED%8A%B8%20%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C",
+      "google": "https://www.google.com/search?q=%ED%8C%8C%EB%B8%94%EB%A1%9C%20%EC%B9%98%EC%A6%88%ED%83%80%EB%A5%B4%ED%8A%B8%20%EB%B3%B8%EC%A0%90&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=PABLO%20%EC%B9%98%EC%A6%88%ED%83%80%EB%A5%B4%ED%8A%B8%20%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C"
+    },
+    "curated_links": [
+      {
+        "title": "파블로 PABLO 5가지 맛 심층 리뷰",
+        "url": "https://whysocurious.me/osaka-japan-03-pablo-shinsaibashi-cheese-tart/",
+        "source": "WHYsoCURIOUS",
+        "snippet": "본점 5종 맛 비교와 레어/미디엄 굽기 차이 상세 후기."
+      },
+      {
+        "title": "파블로 신사이바시 본점 — 식신/오사카",
+        "url": "https://www.siksinhot.com/P/368887",
+        "source": "식신",
+        "snippet": "위치·메뉴·운영시간을 한국어로 정리한 가이드 페이지."
+      },
+      {
+        "title": "오사카 디저트맛집 PABLO 치즈타르트 후기",
+        "url": "https://www.keyzard.cc/hee_hee_hee/nb/224067931710",
+        "source": "키자드 블로그",
+        "snippet": "미니 치즈 타르트 포함 메뉴·맛·위치 종합 후기."
+      }
+    ]
+  },
+  "ebisu_tower_ferris": {
+    "name_ko": "에비스 타워 (돈키 도톤보리 관람차)",
+    "name_jp": "えびすタワー / 道頓堀ドンキ観覧車",
+    "coords": [
+      34.668,
+      135.5019
+    ],
+    "category": "alt",
+    "emoji": "🎡",
+    "tags": [
+      "야경",
+      "관람차",
+      "포토스팟"
+    ],
+    "summary": "돈키호테 도톤보리점 옥상의 77m 타원형 관람차에서 즐기는 미나미 야경.",
+    "detail": "세계 최초 타원형 관람차로 도톤보리 강과 글리코상, 멀리 츠텐카쿠·아베노 하루카스까지 한 번에 조망. 4인 캐빈이 수평으로 회전하는 독특한 구조라 야경 사진 찍기 좋다. 1회 약 15분, 600엔. 11:00–22:00 운영(최종 21:30)이라 도톤보리 야경 코스에 자연스레 끼워 넣을 수 있다.",
+    "sources": [
+      {
+        "title": "Don Quijote 공식 — Ebisu Tower",
+        "url": "https://www.donki.com/kanransha/index_en.php"
+      },
+      {
+        "title": "OSAKA-INFO — Don Quijote Dotonbori Ferris Wheel",
+        "url": "https://osaka-info.jp/experience/en/osaka/spot/424"
+      }
+    ],
+    "activities": [
+      "탑승 후 도톤보리 강·글리코상 야경 촬영",
+      "츠텐카쿠·아베노 하루카스 방향 조망",
+      "탑승 전후 도톤보리 리버워크 산책"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%97%90%EB%B9%84%EC%8A%A4%ED%83%80%EC%9B%8C%20%EB%8F%88%ED%82%A4%20%EA%B4%80%EB%9E%8C%EC%B0%A8",
+      "google": "https://www.google.com/search?q=%EC%97%90%EB%B9%84%EC%8A%A4%ED%83%80%EC%9B%8C%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EA%B4%80%EB%9E%8C%EC%B0%A8&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Ebisu%20Tower%20Dotonbori%20ferris%20wheel"
+    },
+    "curated_links": [
+      {
+        "title": "Ebisu Tower Ferris Wheel — 트립닷컴",
+        "url": "https://us.trip.com/travel-guide/attraction/osaka/ebisu-tower-ferris-wheel-85147/",
+        "source": "trip.com",
+        "snippet": "운영시간·요금·포토스팟 정리, 한국 여행자 후기 다수."
+      },
+      {
+        "title": "Don Quixote Ferris Wheel (Ebisu Tower) — GaijinPot",
+        "url": "https://travel.gaijinpot.com/don-quixote-ferris-wheel-ebisu-tower/",
+        "source": "GaijinPot Travel",
+        "snippet": "관람차 구조와 도톤보리 야경 조망 포인트 해설."
+      },
+      {
+        "title": "Ebisu Tower 종합 가이드",
+        "url": "https://www.gltjp.com/en/directory/item/16913/",
+        "source": "GOOD LUCK TRIP",
+        "snippet": "접근·요금·운영시간 등 실용 정보 페이지."
+      }
+    ]
+  },
+  "osaru_coffee_namba": {
+    "name_ko": "오사루 커피 난바",
+    "name_jp": "OSARU COFFEE なんば",
+    "coords": [
+      34.662,
+      135.497
+    ],
+    "category": "alt",
+    "emoji": "🐒",
+    "tags": [
+      "카페",
+      "스페셜티 커피",
+      "감성"
+    ],
+    "summary": "난바 야사카 신사 근처의 원숭이 캐릭터 간판이 귀여운 스페셜티 커피 스탠드.",
+    "detail": "난바 야사카 신사에서 도보 1~2분, 한적한 모토마치 골목에 자리한 작은 카페. 핸드드립과 라테가 단단하고, 원숭이 로고가 들어간 일러스트·굿즈가 SNS에서 인기. 8:00–19:00 운영이라 신사 참배 동선과 묶기 좋다.",
+    "sources": [
+      {
+        "title": "트립닷컴 — Osaru Coffee",
+        "url": "https://kr.trip.com/restaurant/japan/osaka/detail/osaru-coffee-56423220/"
+      }
+    ],
+    "activities": [
+      "핸드드립 또는 라테 한 잔",
+      "원숭이 굿즈·테이크아웃 컵 인증샷",
+      "난바 야사카 신사 참배와 묶어 코스 구성"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%98%A4%EC%82%AC%EB%A3%A8%20%EC%BB%A4%ED%94%BC%20%EB%82%9C%EB%B0%94",
+      "google": "https://www.google.com/search?q=Osaru%20Coffee%20%EC%98%A4%EC%82%AC%EC%B9%B4&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=OSARU%20COFFEE%20%EB%82%9C%EB%B0%94"
+    },
+    "curated_links": [
+      {
+        "title": "Osaru Coffee — 트립닷컴 레스토랑",
+        "url": "https://kr.trip.com/restaurant/japan/osaka/detail/osaru-coffee-56423220/",
+        "source": "trip.com",
+        "snippet": "주소·운영시간·메뉴 요약과 한국 여행자 평점."
+      },
+      {
+        "title": "오사카 난바 OSARU COFFEE 인스타 릴",
+        "url": "https://www.instagram.com/reel/DPoK9zqkubz/",
+        "source": "Instagram",
+        "snippet": "귀여운 원숭이 테마의 매장 분위기 영상."
+      },
+      {
+        "title": "오사카 카페 편 — 디에디트",
+        "url": "https://the-edit.co.kr/50142",
+        "source": "the-edit.co.kr",
+        "snippet": "오사카 스페셜티 카페 큐레이션 안에 오사루 커피 언급."
+      }
+    ]
+  },
+  "kinryu_ramen_dotonbori": {
+    "name_ko": "킨류 라멘 도톤보리 본점",
+    "name_jp": "金龍ラーメン 道頓堀店",
+    "coords": [
+      34.6686,
+      135.5023
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "라멘",
+      "야식",
+      "24시간"
+    ],
+    "summary": "거대한 녹색 용 간판이 상징인 도톤보리 24시간 돈코츠 라멘 가게.",
+    "detail": "도톤보리의 아이콘 중 하나인 녹색 용 조형물 아래 위치한 24시간 영업 라멘집. 김치·부추무침·밥이 무한 제공되며, 도착날 늦은 시간 야식·해장에 적합. 좌석이 있어 캐리어 끌고 들어가도 비교적 편하다. 도톤보리 강 야경 산책 끝에 자연스럽게 묶을 수 있는 동선.",
+    "sources": [
+      {
+        "title": "Tabelog — Kinryu Ramen Dotonbori",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27001495/"
+      },
+      {
+        "title": "트리플 가이드 — 킨류 라멘 도톤보리 점",
+        "url": "https://triple.guide/restaurants/aa9e9467-b359-4312-9082-246172781a90"
+      }
+    ],
+    "activities": [
+      "돈코츠 라멘 + 무한 김치·부추·밥 조합",
+      "녹색 용 간판 아래 야경 사진",
+      "도톤보리 강변 산책 후 야식으로 마무리"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%82%A8%EB%A5%98%EB%9D%BC%EB%A9%98%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC",
+      "google": "https://www.google.com/search?q=%ED%82%A8%EB%A5%98%EB%9D%BC%EB%A9%98%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EB%B3%B8%EC%A0%90&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E9%87%91%E9%BE%8D%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E9%81%93%E9%A0%93%E5%A0%80"
+    },
+    "curated_links": [
+      {
+        "title": "킨류라멘 도톤보리 점 — 트리플",
+        "url": "https://triple.guide/restaurants/aa9e9467-b359-4312-9082-246172781a90",
+        "source": "트리플 가이드",
+        "snippet": "도톤보리 본점 위치·영업시간·한국 여행자 평점 요약."
+      },
+      {
+        "title": "킨류라멘(금룡라면) — 식신",
+        "url": "https://www.siksinhot.com/P/344419",
+        "source": "식신",
+        "snippet": "한국어 메뉴·가격·특징 정리 및 후기."
+      },
+      {
+        "title": "Kinryu Ramen Dotonbori — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27001495/",
+        "source": "Tabelog",
+        "snippet": "현지 평점과 영업 정보, 24시간 운영 확인 가능."
+      }
+    ]
+  },
+  "shoren_in": {
+    "name_ko": "쇼렌인 (청련원)",
+    "name_jp": "青蓮院門跡",
+    "coords": [
+      35.0073,
+      135.7832
+    ],
+    "category": "alt",
+    "emoji": "🪷",
+    "tags": [
+      "사찰",
+      "정원",
+      "한적",
+      "히가시야마"
+    ],
+    "summary": "기온 북쪽 히가시야마, 관광객 적은 천태종 문적사원. 무로마치 시대 정원과 봄·가을 푸른 라이트업으로 알려진 숨은 명소.",
+    "detail": "야사카 신사에서 도보 10분 거리. 류신 연못을 중심으로 한 소아미의 지천회유식 정원과 고보리 엔슈의 기리시마 정원이 본당을 둘러싼다. 거대한 녹나무가 산문 앞을 지키고 있어 분위기가 차분하고, 청수사·기온이 인파로 붐빌 때 잠시 숨 돌리기 좋다.",
+    "sources": [
+      {
+        "title": "Shoren-in Temple | Kyoto Travel",
+        "url": "https://kyoto.travel/en/destinations/shorenin-temple/"
+      },
+      {
+        "title": "쇼렌인 여행 후기 | 트립 모먼트",
+        "url": "https://kr.trip.com/moments/poi-shrenin-temple-92009/"
+      }
+    ],
+    "activities": [
+      "지천회유식 정원 산책",
+      "녹나무 산문 사진",
+      "다실에서 말차"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EC%87%BC%EB%A0%8C%EC%9D%B8+%EA%B5%90%ED%86%A0",
+      "google": "https://www.google.com/maps/search/Shoren-in+Temple+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%87%BC%EB%A0%8C%EC%9D%B8+%EA%B5%90%ED%86%A0"
+    },
+    "curated_links": [
+      {
+        "title": "쇼렌인 사원 | 공식 교토 관광 가이드",
+        "url": "https://kyoto.travel/en/destinations/shorenin-temple/",
+        "source": "Kyoto City Tourism",
+        "snippet": "히가시야마의 천태종 문적사원, 정원과 라이트업 안내."
+      },
+      {
+        "title": "고즈넉한 일본 가볼만한곳 교토 사찰 쇼렌인",
+        "url": "https://www.doopedia.co.kr/travel/viewContent.do?idx=250729000221108",
+        "source": "두피디아 여행기",
+        "snippet": "관광객 적고 조용한 사찰로 추천하는 한국어 후기."
+      },
+      {
+        "title": "쇼렌인 라이트업 - 교토",
+        "url": "https://en.japantravel.com/kyoto/light-up-shoren-in-temple/12875",
+        "source": "Japan Travel",
+        "snippet": "봄·가을 야간 라이트업 행사 일정과 분위기 소개."
+      }
+    ]
+  },
+  "yasaka_koshindo": {
+    "name_ko": "야사카 코신도",
+    "name_jp": "八坂庚申堂",
+    "coords": [
+      34.9989,
+      135.7793
+    ],
+    "category": "alt",
+    "emoji": "🎀",
+    "tags": [
+      "사찰",
+      "포토스팟",
+      "히가시야마",
+      "골목"
+    ],
+    "summary": "야사카 탑 바로 옆 작은 사찰. 색색 천으로 만든 ‘쿠쿠리자루(묶인 원숭이)’ 부적이 천장에 가득 매달려 인스타 명소가 된 곳.",
+    "detail": "정식 명칭은 다이코쿠산 콘고지 코신도이며 일본 코신 신앙의 발상지 중 하나. 산넨자카·니넨자카에서 야사카 탑(호칸지) 방향으로 내려오면 자연스럽게 지나가는 위치라 동선상 들르기 쉽다. 무료 개방이고 9–17시 운영, 색천 부적에 소원을 적어 매달면 인생사진과 기념 모두 챙길 수 있다.",
+    "sources": [
+      {
+        "title": "Yasaka Koshindo - GOOD LUCK TRIP",
+        "url": "https://www.gltjp.com/en/directory/item/12040/"
+      },
+      {
+        "title": "The Most Colorful Spot in Kyoto: Yasaka Koshindo",
+        "url": "https://www.japankuru.com/en/culture/e2215/"
+      }
+    ],
+    "activities": [
+      "쿠쿠리자루 부적 쓰기",
+      "야사카 탑 배경 사진",
+      "코신 신앙 안내판 읽기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EC%95%BC%EC%82%AC%EC%B9%B4+%EC%BD%94%EC%8B%A0%EB%8F%84",
+      "google": "https://www.google.com/maps/search/Yasaka+Koshindo+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Yasaka+Koshindo"
+    },
+    "curated_links": [
+      {
+        "title": "Yasaka Koshin-do - Kyoto’s Tiny, Colorful Temple",
+        "url": "https://www.kanpai-japan.com/kyoto/yasaka-koshindo",
+        "source": "Kanpai Japan",
+        "snippet": "쿠쿠리자루 부적의 의미와 방문 동선을 정리한 가이드."
+      },
+      {
+        "title": "Yasaka Koshindo Travel Guide",
+        "url": "https://www.japan365days.com/kyoto_yasaka_koshindo.php",
+        "source": "Japan 365 Days",
+        "snippet": "운영 시간·접근법·주변 코스 안내."
+      },
+      {
+        "title": "Yasaka Koshindo Shrine: Hidden Depth",
+        "url": "https://us.trip.com/moments/detail/kyoto-430-130815309/",
+        "source": "Trip.com Moments",
+        "snippet": "사진뿐 아니라 코신 신앙 배경을 짚어주는 후기."
+      }
+    ]
+  },
+  "philosophers_path": {
+    "name_ko": "철학의 길",
+    "name_jp": "哲学の道",
+    "coords": [
+      35.0217,
+      135.791
+    ],
+    "category": "alt",
+    "emoji": "🌸",
+    "tags": [
+      "산책로",
+      "벚꽃",
+      "한적",
+      "사쿄구"
+    ],
+    "summary": "긴카쿠지에서 난젠지까지 비와호 수로를 따라 이어지는 약 2km의 호젓한 벚꽃 산책로. 철학자 니시다 기타로가 사색하며 걸었다는 데서 이름이 붙었다.",
+    "detail": "기온·청수사에서 약간 북쪽으로 빠지면 만나는 사쿄구 코스로, 봄 벚꽃·여름 반딧불·가을 단풍·겨울 설경까지 사계절이 다 다르다. 길 양옆에 작은 카페·소품샵·도자기 가게가 늘어서 있고 관광객 밀도가 청수사 라인보다 한결 낮다. 시간 여유가 있을 때 호넨인·에이칸도까지 곁들이면 코스가 길어진다.",
+    "sources": [
+      {
+        "title": "Philosopher's Path | Kyoto Travel",
+        "url": "https://kyoto.travel/en/destinations/philosophers-path-tetsugakunomichi/"
+      },
+      {
+        "title": "교토 \"철학의 길\" 산책 - Japan Travel",
+        "url": "https://ko.japantravel.com/%EA%B5%90%ED%86%A0/%EA%B5%90%ED%86%A0-%EC%B2%A0%ED%95%99%EC%9D%98-%EA%B8%B8-%EC%82%B0%EC%B1%85/55848"
+      }
+    ],
+    "activities": [
+      "수로 따라 산책",
+      "벚꽃·단풍 사진",
+      "길가 카페·갤러리 들르기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EA%B5%90%ED%86%A0+%EC%B2%A0%ED%95%99%EC%9D%98+%EA%B8%B8",
+      "google": "https://www.google.com/maps/search/Philosopher's+Path+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=%EA%B5%90%ED%86%A0+%EC%B2%A0%ED%95%99%EC%9D%98+%EA%B8%B8"
+    },
+    "curated_links": [
+      {
+        "title": "철학의 길 산책 가이드",
+        "url": "https://www.jeepe.jp/en/articles/kyoto-philosophers-path-walking-guide-1026",
+        "source": "Jeepe Travel",
+        "snippet": "긴카쿠지→난젠지 코스를 따라 걷는 추천 동선."
+      },
+      {
+        "title": "철학의 길 - 나무위키",
+        "url": "https://namu.wiki/w/%EC%B2%A0%ED%95%99%EC%9D%98%20%EA%B8%B8",
+        "source": "나무위키",
+        "snippet": "니시다 기타로 일화와 명소 정보를 한국어로 정리."
+      },
+      {
+        "title": "은각사 참배길과 철학의 길",
+        "url": "https://livejapan.com/en/in-kansai/in-pref-kyoto/in-ginkakuji-temple_nanzenji-temple/article-a2000033/",
+        "source": "LIVE JAPAN",
+        "snippet": "주변 카페·갤러리와 묶어 걷는 코스 제안."
+      }
+    ]
+  },
+  "nanzenji": {
+    "name_ko": "난젠지 (수로각)",
+    "name_jp": "南禅寺",
+    "coords": [
+      35.0112,
+      135.7938
+    ],
+    "category": "alt",
+    "emoji": "🏯",
+    "tags": [
+      "사찰",
+      "수로각",
+      "정원",
+      "사쿄구"
+    ],
+    "summary": "임제종 난젠지파 대본산. 일본 3대 산몬과 메이지 시대 붉은 벽돌 수로각이 어우러진 한적한 대사찰.",
+    "detail": "본당과 산몬은 무료, 산몬 누각·호조 정원은 각 600엔대. 가장 유명한 포토스팟인 ‘스이로카쿠(水路閣)’는 비와호 수로의 일부로 로마 수도교를 닮은 아치 기둥이 사찰 안에 놓여 묘하게 이국적이다. 청수사·기온보다 인파가 훨씬 적어 아침 일찍 가면 사람 없이 사진을 찍을 수 있고, 철학의 길 남쪽 끝과 자연스럽게 이어진다.",
+    "sources": [
+      {
+        "title": "Nanzen-ji - Wikidata GPS",
+        "url": "https://latitude.to/articles-by-country/jp/japan/32217/nanzen-ji"
+      },
+      {
+        "title": "난젠지와 수로각 - 일상, 여행을 떠나다",
+        "url": "https://ourdailytravel.com/kr/travel/japan/kansai/kyoto/kyoto_nanzenji"
+      }
+    ],
+    "activities": [
+      "수로각 아치 사진",
+      "산몬 누각 오르기",
+      "호조 정원 감상"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EB%82%9C%EC%A0%A0%EC%A7%80+%EC%88%98%EB%A1%9C%EA%B0%81",
+      "google": "https://www.google.com/maps/search/Nanzenji+Temple+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Nanzenji+Suirokaku"
+    },
+    "curated_links": [
+      {
+        "title": "난젠지 방문 가이드 | 트립스토어",
+        "url": "https://www.tripstore.kr/blog/%EB%82%9C%EC%A0%A0%EC%A7%80-%EA%B5%90%ED%86%A0-%EC%97%AC%ED%96%89-%EC%BD%94%EC%8A%A4",
+        "source": "트립스토어 블로그",
+        "snippet": "입장료·운영 시간·동선 한국어 정리."
+      },
+      {
+        "title": "심미안의 사찰 정원, 난젠지",
+        "url": "https://brunch.co.kr/@imjh0112/98",
+        "source": "브런치",
+        "snippet": "한국인 여행자의 정원 감상 포인트 후기."
+      },
+      {
+        "title": "2026 난젠지 수로각 추천 가이드",
+        "url": "https://kr.trip.com/moments/theme/poi-suirokaku-water-bridge-22950553-guides-993135/",
+        "source": "Trip.com Moments",
+        "snippet": "수로각 포토스팟과 단풍 명소 안내."
+      }
+    ]
+  },
+  "heian_jingu": {
+    "name_ko": "헤이안 신궁",
+    "name_jp": "平安神宮",
+    "coords": [
+      35.0167,
+      135.7826
+    ],
+    "category": "alt",
+    "emoji": "⛩️",
+    "tags": [
+      "신사",
+      "정원",
+      "오카자키",
+      "사쿄구"
+    ],
+    "summary": "교토 천도 1100년을 기념해 1895년에 세운 신사. 24m 높이 거대 주황 토리이와 헤이안쿄 황궁을 1/8 축소한 본전, 그리고 회유식 신원(神苑) 정원이 핵심.",
+    "detail": "오카자키 일대(시립미술관·국립근대미술관·동물원·로움 시어터)에 둘러싸여 박물관 투어로 묶기 좋다. 본전 앞 자갈 마당이 넓고 사람이 분산돼 청수사·기온의 혼잡과는 분위기가 정반대. 신원은 유료(약 600엔)지만 잉어가 노니는 연못과 돌다리가 단아하다. 기온에서 도보 25분, 버스 5–7분.",
+    "sources": [
+      {
+        "title": "Heian Shrine - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Heian_Shrine"
+      },
+      {
+        "title": "Heian Shrine GPS coordinates",
+        "url": "https://latitude.to/articles-by-country/jp/japan/28016/heian-shrine"
+      }
+    ],
+    "activities": [
+      "거대 토리이 사진",
+      "본전 자갈 마당 산책",
+      "신원 회유식 정원(유료)"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%ED%97%A4%EC%9D%B4%EC%95%88+%EC%8B%A0%EA%B6%81",
+      "google": "https://www.google.com/maps/search/Heian+Jingu+Shrine+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Heian+Jingu+Shrine"
+    },
+    "curated_links": [
+      {
+        "title": "Heian-jingu Shrine | Kyoto Travel",
+        "url": "https://kyoto.travel/en/destinations/heianjingu-shrine/",
+        "source": "Kyoto City Tourism",
+        "snippet": "본전·신원·접근 방법 공식 안내."
+      },
+      {
+        "title": "Heian Jingu Shrine | Travel Japan",
+        "url": "https://www.japan.travel/en/spot/1195/",
+        "source": "JNTO",
+        "snippet": "헤이안쿄 천도 1100주년 배경과 토리이 설명."
+      },
+      {
+        "title": "Heian Jingū | Discover Kyoto",
+        "url": "https://www.discoverkyoto.com/places-go/heian-jingu/",
+        "source": "Discover Kyoto",
+        "snippet": "오카자키 박물관 지구와 묶어 도는 코스 제안."
+      }
+    ]
+  },
+  "sanjusangendo": {
+    "name_ko": "산주산겐도 (삼십삼간당)",
+    "name_jp": "三十三間堂",
+    "coords": [
+      34.9879,
+      135.7717
+    ],
+    "category": "alt",
+    "emoji": "🛕",
+    "tags": [
+      "사찰",
+      "국보",
+      "문화재",
+      "히가시야마"
+    ],
+    "summary": "남북 120m, 일본에서 가장 긴 목조 본당에 천수관음 1,001구가 도열한 천태종 사찰. 정식 명칭은 렌게오인.",
+    "detail": "청수사 남쪽, 교토 국립박물관 바로 맞은편에 있어 박물관과 함께 묶기 좋다. 본당 한 줄에 100구씩 10열, 중앙 좌상까지 모두 국보·중요문화재로 압도적 스케일. 입장 600엔, 8–17시 연중무휴. 실내 관람이라 비·더위에도 안전한 대안 일정이고, 사진 촬영은 금지지만 본 자체가 진귀한 체험.",
+    "sources": [
+      {
+        "title": "Sanjūsangen-dō - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Sanj%C5%ABsangen-d%C5%8D"
+      },
+      {
+        "title": "산주산겐도 - Kyoto Travel",
+        "url": "https://kyoto.travel/en/destinations/sanjusangendo-temple/"
+      }
+    ],
+    "activities": [
+      "천수관음 1001구 도열 관람",
+      "본당 마루 끝에서 끝까지 걷기",
+      "교토 국립박물관과 묶어보기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EC%82%B0%EC%A3%BC%EC%82%B0%EA%B2%90%EB%8F%84",
+      "google": "https://www.google.com/maps/search/Sanjusangendo+Temple+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Sanjusangendo+Kyoto"
+    },
+    "curated_links": [
+      {
+        "title": "삼십삼간당(산주산겐도) 후기",
+        "url": "https://cusee.net/2463191",
+        "source": "Cusee 블로그",
+        "snippet": "천수관음상의 장엄함을 정리한 한국어 후기."
+      },
+      {
+        "title": "렌게오인 - 나무위키",
+        "url": "https://namu.wiki/w/%EB%A0%8C%EA%B2%8C%EC%98%A4%EC%9D%B8",
+        "source": "나무위키",
+        "snippet": "정식 명칭·역사·문화재 등 한국어 정보."
+      },
+      {
+        "title": "Inside Sanjusangen-do Temple",
+        "url": "https://livejapan.com/en/in-kansai/in-pref-kyoto/in-kyoto-station_to-ji-temple/article-a2000149/",
+        "source": "LIVE JAPAN",
+        "snippet": "본당 내부 동선과 1001 불상 보는 법 안내."
+      }
+    ]
+  },
+  "kyoto_national_museum": {
+    "name_ko": "교토 국립박물관",
+    "name_jp": "京都国立博物館",
+    "coords": [
+      34.9899,
+      135.7714
+    ],
+    "category": "alt",
+    "emoji": "🏛️",
+    "tags": [
+      "박물관",
+      "문화재",
+      "히가시야마",
+      "국보"
+    ],
+    "summary": "1897년 개관한 일본 4대 국립박물관 중 하나. 국보·중요문화재 약 12,000점을 소장한 교토 문화재의 핵심 거점.",
+    "detail": "산주산겐도 바로 맞은편, 시치조역에서 도보 7분. 메이지 시대 붉은 벽돌 본관(아카렌가)과 현대식 헤이세이 지신관이 함께 있고, 한국어 음성가이드(500엔)도 제공된다. 휴관일은 월요일·연말연시. 청수사·기온 라인이 인파로 지칠 때 비 와도 든든한 실내 대안. 평상시 상설전 700엔 정도.",
+    "sources": [
+      {
+        "title": "교토국립박물관 공식",
+        "url": "https://www.kyohaku.go.jp/ko/"
+      },
+      {
+        "title": "Kyoto National Museum GPS",
+        "url": "https://latitude.to/map/jp/japan/cities/kyoto/articles/57115/kyoto-national-museum"
+      }
+    ],
+    "activities": [
+      "상설전 국보 관람",
+      "한국어 음성가이드 대여",
+      "아카렌가 본관 외관 사진"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EA%B5%90%ED%86%A0+%EA%B5%AD%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80",
+      "google": "https://www.google.com/maps/search/Kyoto+National+Museum",
+      "youtube": "https://www.youtube.com/results?search_query=%EA%B5%90%ED%86%A0+%EA%B5%AD%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80"
+    },
+    "curated_links": [
+      {
+        "title": "교토 국립박물관 공식 한국어",
+        "url": "https://www.kyohaku.go.jp/ko/",
+        "source": "Kyoto National Museum",
+        "snippet": "운영 시간·휴관일·전시 일정 공식 정보."
+      },
+      {
+        "title": "교토 국립박물관 - 나무위키",
+        "url": "https://namu.wiki/w/%EA%B5%90%ED%86%A0%EA%B5%AD%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80",
+        "source": "나무위키",
+        "snippet": "역사·소장품·관람 팁 한국어 정리."
+      },
+      {
+        "title": "교토 국립 박물관 이용 안내",
+        "url": "https://www.art-tourism.jp/en/article/kyohaku_ko",
+        "source": "Art Tourism",
+        "snippet": "오는 길·볼거리·박물관 카페까지 한국어 가이드."
+      }
+    ]
+  },
+  "arabica_higashiyama": {
+    "name_ko": "% 아라비카 교토 히가시야마",
+    "name_jp": "% Arabica Kyoto 東山",
+    "coords": [
+      34.9986,
+      135.7783
+    ],
+    "category": "alt",
+    "emoji": "☕",
+    "tags": [
+      "카페",
+      "커피",
+      "야사카탑",
+      "히가시야마"
+    ],
+    "summary": "2014년 문을 연 % 아라비카 1호 매장이자 본점. 야사카 도리 골목에서 야사카 탑(호칸지)이 보이는 위치로 한국인에게도 유명한 인생샷 카페.",
+    "detail": "주소는 87-5 호시노초, 히가시야마구. 산넨자카·니넨자카에서 야사카 탑 방향으로 내려오는 골목에 위치해 동선상 자연스럽게 들르게 된다. 실내 좌석은 매우 좁아 테이크아웃이 기본, 라테가 시그니처. 매장 앞에서 야사카 탑이 프레임에 잡히는 각도가 SNS 단골 컷이다. 청수사 인파에 지친 직후 들르기 좋다.",
+    "sources": [
+      {
+        "title": "% Arabica Kyoto Higashiyama 공식",
+        "url": "https://arabica.com/en/location/arabica-kyoto-higashiyama/"
+      },
+      {
+        "title": "% Arabica Higashiyama - Inside Kyoto",
+        "url": "https://www.insidekyoto.com/arabica-higashiyama"
+      }
+    ],
+    "activities": [
+      "교토 라테 테이크아웃",
+      "야사카 탑 배경 사진",
+      "야사카 도리 골목 산책"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=%EC%95%84%EB%9D%BC%EB%B9%84%EC%B9%B4+%EA%B5%90%ED%86%A0+%ED%9E%88%EA%B0%80%EC%8B%9C%EC%95%BC%EB%A7%88",
+      "google": "https://www.google.com/maps/search/%25+Arabica+Kyoto+Higashiyama",
+      "youtube": "https://www.youtube.com/results?search_query=%25+Arabica+Higashiyama"
+    },
+    "curated_links": [
+      {
+        "title": "% Arabica Kyoto Higashiyama 공식 페이지",
+        "url": "https://arabica.com/en/location/arabica-kyoto-higashiyama/",
+        "source": "% Arabica",
+        "snippet": "본점 주소·운영 시간·메뉴 공식 정보."
+      },
+      {
+        "title": "교토 아라비카 응커피 후기",
+        "url": "https://www.myrealtrip.com/community/posts/24362",
+        "source": "마이리얼트립",
+        "snippet": "한국인 여행자 후기와 줄서기 팁."
+      },
+      {
+        "title": "% Arabica in Higashiyama, Kyoto",
+        "url": "https://en.japantravel.com/kyoto/arabica-higashiyama/60099",
+        "source": "Japan Travel",
+        "snippet": "야사카 탑 골목 위치와 분위기 소개."
+      }
+    ]
+  },
+  "nakanoshima_museum": {
+    "name_ko": "오사카 나카노시마 미술관",
+    "name_jp": "大阪中之島美術館",
+    "coords": [
+      34.6919,
+      135.4906
+    ],
+    "category": "alt",
+    "emoji": "🖼️",
+    "tags": [
+      "미술관",
+      "근현대미술",
+      "건축"
+    ],
+    "summary": "2022년 개관한 나카노시마의 검은 직육면체 미술관. 19세기말~현대 디자인·회화 6000여 점 소장.",
+    "detail": "건축 컨셉은 '파사주(통로)'로 누구나 자유롭게 통과하며 예술을 체험할 수 있는 열린 허브. 사에키 유조 명작, 모딜리아니 나체상, 구타이파 요시하라 지로 작품 등 일본·해외 거장 컬렉션이 강점. 케이한 와타나베바시역 2번 출구 도보 5분.",
+    "sources": [
+      {
+        "title": "Nakanoshima Museum of Art 공식",
+        "url": "https://nakka-art.jp/en/"
+      },
+      {
+        "title": "OSAKA-INFO 명소 소개",
+        "url": "https://en.osaka-info.jp/spot/nakanoshima-museum/"
+      }
+    ],
+    "activities": [
+      "검은 직육면체 외관과 5층 통층 아트리움 '파사주' 건축 감상",
+      "근현대 컬렉션 상설전 관람 (사에키 유조·모딜리아니·구타이파)",
+      "1층 카페·뮤지엄숍에서 굿즈 쇼핑과 휴식"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=오사카+나카노시마+미술관",
+      "google": "https://www.google.com/search?q=Nakanoshima+Museum+of+Art+Osaka+review",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+나카노시마+미술관"
+    },
+    "curated_links": [
+      {
+        "title": "Nakanoshima Museum of Art 공식 안내",
+        "url": "https://nakka-art.jp/en/",
+        "source": "공식",
+        "snippet": "관람 시간·티켓·전시 일정 안내."
+      },
+      {
+        "title": "OSAKA-INFO 영문 명소 페이지",
+        "url": "https://en.osaka-info.jp/spot/nakanoshima-museum/",
+        "source": "오사카관광공사",
+        "snippet": "교통편과 건축 컨셉 '파사주' 소개."
+      },
+      {
+        "title": "2026년 추천 가이드",
+        "url": "https://kr.trip.com/moments/theme/poi-the-national-museum-of-art-osaka-85135-guides-993135/",
+        "source": "Trip.com Korea",
+        "snippet": "나카노시마 미술관 구역 한국어 가이드 모음."
+      }
+    ]
+  },
+  "moco_ceramics": {
+    "name_ko": "오사카 시립 동양도자미술관",
+    "name_jp": "大阪市立東洋陶磁美術館",
+    "coords": [
+      34.6936,
+      135.5052
+    ],
+    "category": "alt",
+    "emoji": "🏺",
+    "tags": [
+      "미술관",
+      "도자기",
+      "국보"
+    ],
+    "summary": "2024년 재개관한 세계적 동양도자 컬렉션. 아타카·이병창 컬렉션 약 380점 상설 전시.",
+    "detail": "1982년 개관 후 2년간 리뉴얼을 마치고 재개관. 현관홀 증축, LED 전시 케이스, 국보 '유적천목다완' 전용 케이스 신설. 한국 도자 컬렉션(이병창)이 특히 유명하며 한국인 관람객에게 친근한 미술관. 나카노시마 강변 산책과 함께 묶기 좋음.",
+    "sources": [
+      {
+        "title": "오사카시립동양도자미술관 한국어 공식",
+        "url": "https://www.moco.or.jp/ko/"
+      },
+      {
+        "title": "이용안내·관람료",
+        "url": "https://www.moco.or.jp/ko/guide/info/"
+      }
+    ],
+    "activities": [
+      "아타카 컬렉션·이병창 컬렉션 약 380점 상설전 관람",
+      "국보 '유적천목다완' 전용 케이스에서 360도 감상",
+      "나카노시마 공원 장미정원과 연계해 강변 산책"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=오사카+동양도자미술관",
+      "google": "https://www.google.com/search?q=Osaka+Museum+of+Oriental+Ceramics",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+동양도자미술관"
+    },
+    "curated_links": [
+      {
+        "title": "MOCO 한국어 공식 홈페이지",
+        "url": "https://www.moco.or.jp/ko/",
+        "source": "공식",
+        "snippet": "전시 일정·관람료·교통 안내 한국어 제공."
+      },
+      {
+        "title": "재개관 특별전 리뷰",
+        "url": "https://www.koreanart21.com/issues/issuesEtc/view?id=9392",
+        "source": "한국미술21",
+        "snippet": "재개관 기념 동양 도자 380점 전시 리뷰."
+      },
+      {
+        "title": "오사카 미술관 종합 안내",
+        "url": "https://museums.ocm.osaka/museums-info/museums-info-ko/",
+        "source": "오사카뮤지엄즈",
+        "snippet": "오사카 시내 박물관·미술관 한국어 종합 가이드."
+      }
+    ]
+  },
+  "nmao": {
+    "name_ko": "국립국제미술관",
+    "name_jp": "国立国際美術館",
+    "coords": [
+      34.6914,
+      135.4912
+    ],
+    "category": "alt",
+    "emoji": "🎨",
+    "tags": [
+      "미술관",
+      "현대미술",
+      "지하전시"
+    ],
+    "summary": "나카노시마의 전관 지하형 현대미술관. 아르헨티나 출신 시저 펠리의 대나무 모티프 외관이 상징.",
+    "detail": "전시실 전체가 지하에 있는 독특한 구조로, 강변 풍경을 해치지 않는다. 일반 입장료 430엔, 학생 130엔. 금·토는 20:00까지 야간 개관. 휴관일은 월요일. 케이한 와타나베바시역 2번 출구 도보 5분.",
+    "sources": [
+      {
+        "title": "국립국제미술관 한국어 공식",
+        "url": "https://www.nmao.go.jp/kr/"
+      },
+      {
+        "title": "전시 아카이브",
+        "url": "https://www.nmao.go.jp/kr/archive/"
+      }
+    ],
+    "activities": [
+      "지하 전시실에서 일본·해외 현대미술 상설·기획전 관람",
+      "시저 펠리 설계 대나무 모티프 외관·로비 천창 감상",
+      "금·토 야간 개관(20:00)에 맞춰 나카노시마 야경과 묶기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=국립국제미술관+오사카",
+      "google": "https://www.google.com/search?q=National+Museum+of+Art+Osaka",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+국립국제미술관"
+    },
+    "curated_links": [
+      {
+        "title": "NMAO 한국어 공식",
+        "url": "https://www.nmao.go.jp/kr/",
+        "source": "공식",
+        "snippet": "관람 시간·요금·교통 한국어 안내."
+      },
+      {
+        "title": "나카노시마 아트 산책 코스",
+        "url": "https://metronine.osaka/en/article_tour/spring-walking-in-osaka-art/",
+        "source": "Metro Nine Osaka",
+        "snippet": "NMAO 포함 나카노시마 미술관 도보 코스."
+      },
+      {
+        "title": "2026년 추천 가이드",
+        "url": "https://kr.trip.com/moments/theme/poi-the-national-museum-of-art-osaka-85135-guides-993135/",
+        "source": "Trip.com Korea",
+        "snippet": "최신 전시·이동 동선 큐레이션."
+      }
+    ]
+  },
+  "kitahama_cafe_street": {
+    "name_ko": "키타하마 카페거리",
+    "name_jp": "北浜カフェストリート",
+    "coords": [
+      34.6911,
+      135.5092
+    ],
+    "category": "alt",
+    "emoji": "☕",
+    "tags": [
+      "카페",
+      "강변",
+      "레트로"
+    ],
+    "summary": "토사보리강을 따라 늘어선 스페셜티 카페 거리. 모토커피·노스쇼어·키타하마 레트로 등 강변뷰 카페가 줄지어 있음.",
+    "detail": "메트로 사카이스지선 키타하마역 26번 출구 바로 앞. 도사보리 강변을 따라 100년 된 라이온 빌딩 등 레트로 건축과 모던 카페가 공존. 한국인 사이 '오사카 감성 카페 1번지'로 통하며 도톤보리·신사이바시의 번잡함과 정반대 분위기.",
+    "sources": [
+      {
+        "title": "Moto Coffee Kitahama 본점 안내",
+        "url": "https://triple.guide/restaurants/53642c28-d286-45db-ac2b-64c8ae5c18aa"
+      },
+      {
+        "title": "키타하마 카페거리 가이드",
+        "url": "https://infotalk.haruroad.com/70"
+      }
+    ],
+    "activities": [
+      "모토커피(MOTO COFFEE) 본점 강변 테라스석에서 라떼·푸딩",
+      "노스쇼어(North Shore) 키타하마에서 강변뷰 브런치",
+      "도사보리 강변 산책로 따라 100년 라이온 빌딩 등 레트로 건축 사진"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=오사카+키타하마+카페거리",
+      "google": "https://www.google.com/search?q=Kitahama+cafe+street+Osaka",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+키타하마+카페"
+    },
+    "curated_links": [
+      {
+        "title": "키타하마 카페거리 추천 카페·베이커리",
+        "url": "https://infotalk.haruroad.com/70",
+        "source": "haruroad",
+        "snippet": "강변 카페 라인업과 동선 큐레이션."
+      },
+      {
+        "title": "모토커피 솔직 후기",
+        "url": "https://www.keyzard.cc/yrakki2_log/nb/223817199476",
+        "source": "Keyzard 블로그",
+        "snippet": "도사보리강 뷰 테라스석 분위기와 메뉴 후기."
+      },
+      {
+        "title": "북유럽풍 키타하마 카페 BEST4",
+        "url": "https://raycat.net/4266",
+        "source": "Raycat",
+        "snippet": "현지인 시선의 키타하마 카페 큐레이션."
+      }
+    ]
+  },
+  "utsubo_park": {
+    "name_ko": "우츠보 공원",
+    "name_jp": "靱公園",
+    "coords": [
+      34.685,
+      135.4925
+    ],
+    "category": "alt",
+    "emoji": "🌹",
+    "tags": [
+      "공원",
+      "장미정원",
+      "산책"
+    ],
+    "summary": "오피스가 한가운데 9.7헥타르 도심 오아시스. 오사카에서 가장 오래된 장미정원이 동쪽 구역에 있음.",
+    "detail": "동서로 약 800m 길게 뻗은 도심 공원. 무료 개방·24시간 출입 가능. 동쪽 구역의 장미정원은 5월 중순이 절정이며 가을에도 두 번째 개화. 메트로 미도스지선 혼마치역 도보 수 분. 나카노시마 미술관에서 도보 15분.",
+    "sources": [
+      {
+        "title": "OSAKA-INFO 우츠보 공원",
+        "url": "https://osaka-info.jp/ko/spot/utsubo-park/"
+      },
+      {
+        "title": "Metro Nine Osaka 스폿 소개",
+        "url": "https://metronine.osaka/en/spot-details/?spot_id=15609370673855"
+      }
+    ],
+    "activities": [
+      "5월 중순 동쪽 장미정원에서 만개한 장미 사진",
+      "동서 800m 산책로를 따라 메인 분수·잔디광장에서 휴식",
+      "공원 주변 오피스가 카페·베이커리에서 테이크아웃 후 피크닉"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=오사카+우츠보+공원",
+      "google": "https://www.google.com/search?q=Utsubo+Park+Osaka",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+우츠보+공원+장미"
+    },
+    "curated_links": [
+      {
+        "title": "OSAKA-INFO 우츠보 공원 한국어",
+        "url": "https://osaka-info.jp/ko/spot/utsubo-park/",
+        "source": "오사카관광공사",
+        "snippet": "도심 공원과 장미정원 한국어 안내."
+      },
+      {
+        "title": "트립닷컴 리뷰",
+        "url": "https://kr.trip.com/travel-guide/osaka-293-restaurant/utsubo-park-31690024/",
+        "source": "Trip.com Korea",
+        "snippet": "최근 방문기 사진과 평점."
+      },
+      {
+        "title": "Osaka 공원 가이드",
+        "url": "https://www.triptojapan.com/blog/a-guide-to-osaka-parks",
+        "source": "TripToJapan",
+        "snippet": "우츠보 공원 포함 오사카 도심 공원 큐레이션."
+      }
+    ]
+  },
+  "takimi_koji": {
+    "name_ko": "타키미코지 (우메다 쇼와거리)",
+    "name_jp": "滝見小路",
+    "coords": [
+      34.7053,
+      135.4905
+    ],
+    "category": "alt",
+    "emoji": "🏮",
+    "tags": [
+      "골목",
+      "레트로",
+      "쇼와"
+    ],
+    "summary": "우메다 스카이빌딩 지하1층, 쇼와 초기 1920년대 거리를 그대로 재현한 음식 골목.",
+    "detail": "오코노미야키·쿠시카츠·이자카야·양식·카페 약 20여 점포가 옛 골목길과 등롱 조명 아래 늘어서 있다. 공중정원 전망대 방문 전후로 묶기 좋고, 비 오는 날에도 실내에서 쇼와 분위기를 즐길 수 있는 비상 카드. JR 오사카역 도보 9분.",
+    "sources": [
+      {
+        "title": "OSAKA-INFO 타키미코지",
+        "url": "https://osaka-info.jp/ko/spot/takimi-koji/"
+      },
+      {
+        "title": "Umeda Sky Building 한국어 공식",
+        "url": "https://www.skybldg.co.jp/ko/"
+      }
+    ],
+    "activities": [
+      "1920년대 쇼와 골목 세트에서 오코노미야키·쿠시카츠 식사",
+      "등롱 조명과 옛 간판 사진 촬영",
+      "공중정원 전망대(우메다 스카이) 방문 전후 식사 코스"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=오사카+타키미코지",
+      "google": "https://www.google.com/search?q=Takimikoji+Osaka",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+타키미코지"
+    },
+    "curated_links": [
+      {
+        "title": "OSAKA-INFO 타키미코지 한국어",
+        "url": "https://osaka-info.jp/ko/spot/takimi-koji/",
+        "source": "오사카관광공사",
+        "snippet": "쇼와 거리 재현 골목과 입점 음식점 안내."
+      },
+      {
+        "title": "우메다 스카이빌딩 공식",
+        "url": "https://www.skybldg.co.jp/ko/",
+        "source": "공식",
+        "snippet": "공중정원 전망대와 타키미코지 위치 안내."
+      },
+      {
+        "title": "Klook 안내",
+        "url": "https://www.klook.com/en-US/destination/p50001161-takimikoji/",
+        "source": "Klook",
+        "snippet": "쇼와 레트로 다이닝 공간 영문 소개."
+      }
+    ]
+  },
+  "tower_slider": {
+    "name_ko": "츠텐카쿠 타워 슬라이더",
+    "name_jp": "通天閣タワースライダー",
+    "coords": [
+      34.6525,
+      135.5063
+    ],
+    "category": "alt",
+    "emoji": "🎢",
+    "tags": [
+      "놀이시설",
+      "전망대",
+      "츠텐카쿠"
+    ],
+    "summary": "츠텐카쿠 3층(지상 22m)에서 지하 1층까지 60m·10초 만에 내려오는 나선형 슬라이드.",
+    "detail": "EV타워 외부를 1.5바퀴 회전하며 최대 시속 27km. 신장 120cm 이상, 체중 120kg 이하, 7~65세 이용. 츠텐카쿠 입장 후 시간 예약권 교환. 신세카이 호텔 베이스 도보 5분으로 야간에 짧게 즐기기 좋은 옵션.",
+    "sources": [
+      {
+        "title": "오사카 e-Pass 타워 슬라이더",
+        "url": "https://www.e-pass.osaka-info.jp/kr/facility/detail?id=240"
+      },
+      {
+        "title": "Travel Contents 가이드",
+        "url": "https://travelcontentsapp.com/kr/guide/osaka/b601/"
+      }
+    ],
+    "activities": [
+      "츠텐카쿠 3F에서 B1까지 60m·10초 나선형 슬라이드 체험",
+      "체험 후 신세카이 잔잔요코초에서 쿠시카츠로 마무리",
+      "야간 라이트업된 츠텐카쿠 외관 사진"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=츠텐카쿠+타워+슬라이더",
+      "google": "https://www.google.com/search?q=Tsutenkaku+Tower+Slider",
+      "youtube": "https://www.youtube.com/results?search_query=츠텐카쿠+타워+슬라이더"
+    },
+    "curated_links": [
+      {
+        "title": "오사카 e-Pass 시설 페이지",
+        "url": "https://www.e-pass.osaka-info.jp/kr/facility/detail?id=240",
+        "source": "오사카 e-Pass 공식",
+        "snippet": "QR코드 제시 시 무료 이용 가능 안내."
+      },
+      {
+        "title": "이용법·접근법·꿀팁",
+        "url": "https://travelcontentsapp.com/kr/guide/osaka/b601/",
+        "source": "일본 조이패스",
+        "snippet": "신장·체중 제한과 예약권 교환 절차 정리."
+      },
+      {
+        "title": "Waug 체험권 안내",
+        "url": "https://www.waug.com/en/activities/146617",
+        "source": "Waug",
+        "snippet": "전망대+타워 슬라이더 결합권 가격 정보."
+      }
+    ]
+  },
+  "tsuruhashi_koreatown": {
+    "name_ko": "츠루하시 코리아타운 (미유키도리)",
+    "name_jp": "鶴橋・御幸通コリアタウン",
+    "coords": [
+      34.6608,
+      135.5374
+    ],
+    "category": "alt",
+    "emoji": "🥢",
+    "tags": [
+      "시장",
+      "코리아타운",
+      "야키니쿠"
+    ],
+    "summary": "일본 최대 코리아타운. 츠루하시역~모모다니역 사이 미유키도리 약 300m에 한식·한류 상점 150여 곳.",
+    "detail": "JR 칸죠선·긴테츠 츠루하시역 일대. 1930년대 조선시장에서 출발해 1993년 백제문·미유키도리 중앙문 정비 후 '코리아타운'으로 통칭. 츠루하시역 주변은 야키니쿠 거리, 미유키도리는 김치·전·한복·K팝 굿즈가 밀집. 신세카이에서 환승 1회로 접근.",
+    "sources": [
+      {
+        "title": "OSAKA-INFO 미유키도리 한국어",
+        "url": "https://osaka-info.jp/ko/spot/miyuki-dori-korea-town/"
+      },
+      {
+        "title": "츠루하시 시장 영문 소개",
+        "url": "https://en.osaka-info.jp/spot/osaka-tsuruhashi-market/"
+      }
+    ],
+    "activities": [
+      "미유키도리 300m 산책하며 김치·전·호떡 시식",
+      "츠루하시역 야키니쿠 거리에서 저녁 식사",
+      "백제문·미유키도리 중앙문에서 게이트 사진과 한복 체험"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=오사카+츠루하시+코리아타운",
+      "google": "https://www.google.com/search?q=Tsuruhashi+Koreatown+Osaka",
+      "youtube": "https://www.youtube.com/results?search_query=오사카+코리아타운+츠루하시"
+    },
+    "curated_links": [
+      {
+        "title": "OSAKA-INFO 미유키도리 한국어",
+        "url": "https://osaka-info.jp/ko/spot/miyuki-dori-korea-town/",
+        "source": "오사카관광공사",
+        "snippet": "150여 점포·300m 거리 한국어 안내."
+      },
+      {
+        "title": "완벽 가이드: 맛집·쇼핑·한류",
+        "url": "https://www.japan-travel-note.com/posts/440",
+        "source": "Japan Travel Note",
+        "snippet": "츠루하시 코리아타운 동선과 맛집 정리."
+      },
+      {
+        "title": "2026년 이쿠노 코리아타운 가이드",
+        "url": "https://kr.trip.com/moments/theme/poi-osaka-ikuno-korea-town-22950719-comprehensive-guides-993136/",
+        "source": "Trip.com Korea",
+        "snippet": "최신 방문 후기와 쇼핑·먹거리 큐레이션."
+      }
+    ]
+  },
+  "naniwa_kuishinbo_yokocho": {
+    "name_ko": "나니와 쿠이신보 요코초",
+    "name_jp": "浪花くいしんぼ横丁",
+    "coords": [
+      34.6555,
+      135.429
+    ],
+    "category": "alt",
+    "emoji": "🍢",
+    "tags": [
+      "푸드테마파크",
+      "쇼와레트로",
+      "덴포잔 마켓플레이스"
+    ],
+    "summary": "덴포잔 마켓플레이스 2층에 자리한 1965년경 오사카 거리 재현 푸드 테마파크. 입장 무료, 오사카 명물 노포 약 20곳 집결.",
+    "detail": "1970년 만국박람회 직전 가장 활기찼던 쇼와 40년대 나니와 거리를 통째로 재현한 실내 식당가. 아이즈야(타코야키 원조), 지유켄(명물 카레), 쿠시카츠 다루마계 등 오사카 노포 분점이 모여 있어 가이유칸이나 USJ 일정 사이 한 끼·간식 코스로 적합. 영업시간 11:00~20:00(계절 변동), 미나토구 가이간도리 1-1-10, 오사카메트로 추오선 오사카코역 도보 5분.",
+    "sources": [
+      {
+        "title": "Naniwa Kuishinbo Yokocho — OSAKA INFO 공식",
+        "url": "https://osaka-info.jp/en/spot/naniwa-kuishimbo-yokocho/"
+      },
+      {
+        "title": "Naniwa Kuishinbo Yokocho — Tempozan Marketplace 공식",
+        "url": "https://en-61698.site-translation.com/thv/marketplace/kuishinbo/"
+      }
+    ],
+    "activities": [
+      "쇼와 레트로 거리 세트 안 사진 촬영 (간판·포렴·전봇대 연출)",
+      "아이즈야 타코야키 + 지유켄 명물 카레 노포 분점 비교 시식"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%82%98%EB%8B%88%EC%99%80%20%EC%BF%A0%EC%9D%B4%EC%8B%A0%EB%B3%B4%20%EC%9A%94%EC%BD%94%EC%B4%88%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E6%B5%AA%E8%8A%B1%E3%81%8F%E3%81%84%E3%81%97%E3%82%93%E3%81%BC%E6%A8%AA%E4%B8%81%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E6%B5%AA%E8%8A%B1%E3%81%8F%E3%81%84%E3%81%97%E3%82%93%E3%81%BC%E6%A8%AA%E4%B8%81"
+    },
+    "curated_links": [
+      {
+        "title": "Naniwa Kuishinbo Yokocho — 가게별 메뉴·운영시간·찾아가는 길 가이드",
+        "url": "https://insideosaka.com/naniwa-kuishinbo-yokocho/",
+        "source": "Inside Osaka",
+        "snippet": "쇼와 거리 재현 컨셉부터 입점 노포 라인업, 입장 무료·11-20시 영업 등 실용 정보를 한 페이지로 정리한 영어 가이드."
+      },
+      {
+        "title": "Tempozan Marketplace 2층 푸드홀 — 가족 단위 방문 동선 리뷰",
+        "url": "https://www.jocjapantravel.com/kansai-osaka-tempozan-marketplace-food-hall/",
+        "source": "JOC Japan Travel",
+        "snippet": "쿠이신보 요코초가 자리한 덴포잔 마켓플레이스 2층 푸드홀 분위기, 좌석 배치, 가족 단위 이용 팁."
+      },
+      {
+        "title": "Naniwa Kuishinbo Yokocho — 가는법·운영시간·요금 한눈에",
+        "url": "https://www.gltjp.com/en/directory/item/11620/",
+        "source": "GOOD LUCK TRIP",
+        "snippet": "오사카코역 도보 5분, 입장료 무료, 가게별 가격대 정리. USJ·가이유칸과 묶기 좋은 위치 확인용."
+      }
+    ]
+  },
+  "tempozan_park": {
+    "name_ko": "덴포잔 공원·덴포산",
+    "name_jp": "天保山公園・天保山",
+    "coords": [
+      34.6555,
+      135.4338
+    ],
+    "category": "alt",
+    "emoji": "⛰️",
+    "tags": [
+      "공원",
+      "일본 최저산",
+      "벚꽃",
+      "항만 뷰"
+    ],
+    "summary": "일본에서 두 번째로 낮은 산(해발 4.53m) 정상 표식이 있는 미니 공원. 가이유칸·대관람차 도보 3분 거리의 무료 산책 스폿.",
+    "detail": "1831년 아지가와 하구 준설 토사로 쌓은 인공 산. 한때 20m였으나 지반 침하로 4.53m가 되며 한동안 지도에서 사라졌다가 주민 청원으로 복원. 산정 표지석 옆에 메이지 천황 관함식 기념비가 있다. 봄에는 벚꽃 명소로도 알려지며, 가이유칸·대관람차 입장권 없이 가볍게 들러 오사카만 뷰와 '일본 최저산 등정' 인증샷을 남기기 좋다. 오사카메트로 추오선 오사카코역 1번 출구 도보 약 5분.",
+    "sources": [
+      {
+        "title": "Tempozan Park — OSAKA INFO 공식",
+        "url": "https://osaka-info.jp/en/spot/tempozan-park/"
+      },
+      {
+        "title": "Mt. Tempozan — Wikipedia (Tempōzan)",
+        "url": "https://en.wikipedia.org/wiki/Tenp%C5%8Dzan"
+      }
+    ],
+    "activities": [
+      "해발 4.53m '일본 최저산' 정상 표지석 인증샷",
+      "벚꽃 시즌(3월 말~4월 초) 공원 산책 + 항만 뷰 감상"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8D%B4%ED%8F%AC%EC%9E%94%20%EA%B3%B5%EC%9B%90%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E5%A4%A9%E4%BF%9D%E5%B1%B1%E5%85%AC%E5%9C%92&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E5%A4%A9%E4%BF%9D%E5%B1%B1%20%E7%99%BB%E5%B1%B1"
+    },
+    "curated_links": [
+      {
+        "title": "Climb One of Japan's Smallest Mountains — 덴포산 등정 후기",
+        "url": "https://medium.com/@sixtybolts/climb-one-of-japans-smallest-mountains-next-time-you-re-in-osaka-0f5581e7ff18",
+        "source": "Medium (Yow Hong Chieh)",
+        "snippet": "정상 표지석 찾는 법과 가이유칸 일정 사이 5분 등정 후기. 인증샷 포인트와 표지석 위치 사진 포함."
+      },
+      {
+        "title": "Tempozan Guide — 덴포잔 공원·등산 인증 절차",
+        "url": "https://www.japan-experience.com/all-about-japan/osaka/attractions-and-excursions/tempozan-guide-osaka-bay-area",
+        "source": "Japan Experience",
+        "snippet": "덴포잔 공원의 역사와 오사카코역 관광안내소에서 받을 수 있는 '등산 증명서' 안내까지 한 페이지로 정리."
+      },
+      {
+        "title": "Mt. Tempozan TripAdvisor — 실제 방문자 사진·평점",
+        "url": "https://www.tripadvisor.com/Attraction_Review-g298566-d1405699-Reviews-Mt_Tempozan-Osaka_Osaka_Prefecture_Kinki.html",
+        "source": "TripAdvisor",
+        "snippet": "현지·해외 여행자 리뷰와 사진. 가이유칸·대관람차와 묶어 들르는 동선이 일반적임을 확인 가능."
+      }
+    ]
+  },
+  "takopa_takoyaki_park": {
+    "name_ko": "타코파(타코야키 파크) — 시티워크 4층",
+    "name_jp": "TAKOPA たこ焼きパーク",
+    "coords": [
+      34.6663,
+      135.4307
+    ],
+    "category": "alt",
+    "emoji": "🐙",
+    "tags": [
+      "타코야키",
+      "유니버설 시티워크",
+      "푸드코트"
+    ],
+    "summary": "유니버설 시티워크 4층의 타코야키 5대 명가 푸드코트. USJ 입장 전·후 또는 비 오는 날 실내 식사 옵션.",
+    "detail": "시티워크 4층에 자리한 '오사카 타코야키 뮤지엄' 컨셉의 푸드 파크. 쿠쿠루(くくる)·아이즈야(会津屋)·코가류(甲賀流)·아마짱(あまちゃん)·주하치반(十八番) 등 오사카 5대 타코야키 분점이 한 층에 모여 비교 시식 가능. 1935년 원조 아이즈야(소스 없는 원형) vs 현대형 마요·치즈 토핑을 한자리에서 맛볼 수 있다. USJ 게이트와 시티워크 사이 도보 동선상에 있어 개장 전 아침·폐장 후 저녁 시간대에 활용도 높음.",
+    "sources": [
+      {
+        "title": "TAKOPA Takoyaki Park — Inside Osaka",
+        "url": "https://insideosaka.com/takopa-takoyaki-park/"
+      },
+      {
+        "title": "Takoyaki Museum at Universal CityWalk — Japan Travel",
+        "url": "https://en.japantravel.com/osaka/takoyaki-museum/3220"
+      }
+    ],
+    "activities": [
+      "쿠쿠루·아이즈야·코가류·아마짱·주하치반 5대 명가 타코야키 비교 시식",
+      "1935년 원조 아이즈야 '라지오야키'(소스 없는 원형) 체험"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%8B%9C%ED%8B%B0%EC%9B%8C%ED%81%AC%20%ED%83%80%EC%BD%94%EC%95%BC%ED%82%A4%20%EB%AE%A4%EC%A7%80%EC%97%84%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=TAKOPA%20%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D%E3%83%91%E3%83%BC%E3%82%AF&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E3%82%B7%E3%83%86%E3%82%A3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF%20%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D"
+    },
+    "curated_links": [
+      {
+        "title": "TAKOPA Takoyaki Park 가이드 — 5대 분점 라인업·가격대",
+        "url": "https://insideosaka.com/takopa-takoyaki-park/",
+        "source": "Inside Osaka",
+        "snippet": "시티워크 4층 푸드 파크 5개 분점 메뉴·가격, 좌석, 영업시간과 USJ 동선에서의 활용법까지 정리."
+      },
+      {
+        "title": "Takoyaki Museum — 1935년 원조 아이즈야 등 5대 명가 비교",
+        "url": "https://en.japantravel.com/osaka/takoyaki-museum/3220",
+        "source": "Japan Travel",
+        "snippet": "쿠쿠루·아이즈야·코가류·아마짱·주하치반 5개 점포 특징, 소스 유무, 1935년 원조 라지오야키 역사 요약."
+      },
+      {
+        "title": "Universal Citywalk Osaka — 시티워크 전체 매장 가이드 (Takoyaki Park 포함)",
+        "url": "https://www.japan-experience.com/all-about-japan/osaka/shopping-and-souvenirs/universal-citywalk-osaka",
+        "source": "Japan Experience",
+        "snippet": "시티워크 층별 구성과 4층 타코야키 파크 위치, 인근 USJ 굿즈샵·캐릭터 포토 스팟까지 동선 정리."
+      }
+    ]
+  },
+  "nishikujo_station": {
+    "name_ko": "니시쿠조역 일대",
+    "name_jp": "西九条駅周辺",
+    "coords": [
+      34.676,
+      135.4597
+    ],
+    "category": "alt",
+    "emoji": "🍛",
+    "tags": [
+      "환승역",
+      "로컬 식당가",
+      "유메사키선"
+    ],
+    "summary": "오사카 환상선·유메사키선·한신난바선 3개 노선 환승역. USJ 한 정거장 전, 현지인 500엔 런치 골목으로 유명.",
+    "detail": "JR 오사카 환상선과 유메사키선(사쿠라지마선)이 분기하는 환승역으로, 유니버설시티역까지 한 정거장(약 5분, 160엔). 한신난바선도 들어와 난바 방면 직결도 가능. 역 남쪽 출구를 나서면 카레·돈카츠·야키니쿠·해산물 덮밥을 500~800엔에 내는 노포 골목이 펼쳐져 USJ 입장 전 가성비 아침이나 폐장 후 늦은 저녁 옵션으로 활용 가능. 대부분 현금만 받는 점포가 많으므로 동전·소액권 준비 권장.",
+    "sources": [
+      {
+        "title": "Nishikujō Station — Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nishikuj%C5%8D_Station"
+      },
+      {
+        "title": "USJ Area Hidden Food Gems — Nishikujo 500-yen lunch zone",
+        "url": "https://japannook.com/en/articles/usj-area-hidden-food-gems"
+      }
+    ],
+    "activities": [
+      "남쪽 출구 '500엔 런치 골목'에서 후쿠 카레·로컬 돈카츠 가성비 한 끼",
+      "환상선↔유메사키선 환승 동선 확인 (USJ 한 정거장, 약 5분)"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8B%88%EC%8B%9C%EC%BF%A0%EC%A1%B0%EC%97%AD%20%EB%A7%9B%EC%A7%91",
+      "google": "https://www.google.com/search?q=%E8%A5%BF%E4%B9%9D%E6%9D%A1%E9%A7%85%20%E3%82%B0%E3%83%AB%E3%83%A1&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E8%A5%BF%E4%B9%9D%E6%9D%A1%E9%A7%85%20%E9%A3%9F%E3%81%B9%E6%AD%A9%E3%81%8D"
+    },
+    "curated_links": [
+      {
+        "title": "USJ Area Hidden Food Gems — 니시쿠조 500엔 런치존 상세 가이드",
+        "url": "https://japannook.com/en/articles/usj-area-hidden-food-gems",
+        "source": "JapanNook",
+        "snippet": "후쿠 카레 등 니시쿠조역 남쪽 출구 일대의 500엔대 노포 라인업과 영업시간·현금 결제 팁."
+      },
+      {
+        "title": "JR Sakurajima/Yumesaki Line 안내 — 니시쿠조 환승 포인트",
+        "url": "https://www.osakastation.com/the-jr-sakurajima-line-yumesaki-line-for-universal-studios-japan/",
+        "source": "Osaka Station",
+        "snippet": "환상선에서 니시쿠조 환승 → 유메사키선 → 유니버설시티역까지 단계별 경로와 소요 시간(약 5분, 160엔)."
+      },
+      {
+        "title": "How to Transfer Trains going to USJ — TripAdvisor 토론",
+        "url": "https://www.tripadvisor.com/ShowTopic-g294232-i525-k10000011-How_to_Transfer_Trains_going_to_USJ-Japan.html",
+        "source": "TripAdvisor Forum",
+        "snippet": "여행자 실측 정보: 오사카역→니시쿠조 환승→USJ 시간, 짐 동선, 환승 플랫폼 번호 등 실전 Q&A."
+      }
+    ]
   }
 }
