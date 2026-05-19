@@ -268,6 +268,11 @@
         <div class="timeline-node active" aria-current="step">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">9</div>
+        <span class="timeline-label">Stage 9</span>
+      </div>
     </nav>
 
     <main>
@@ -336,8 +341,8 @@
                 카테고리 place들 중 active day stops 중 어느 하나라도 1.5 km
                 안에 있는 것 반환. 각 candidate를 <code>altLayer</code>에 새
                 회색 마커로 추가, 클릭 핸들러는 <code>selectAlt(placeId)</code>.
-                selectAlt는 numbered 마커처럼 sidebar 활성화는 안 하고
-                <code>renderDetail</code>만 호출.
+                <code>selectAlt</code>는 numbered 마커처럼 sidebar 활성화는 안
+                하고 <code>renderDetail</code>만 호출.
               </p>
               <p style="margin-top: 0.5rem">
                 <code>renderDetail</code>은 <code>stop.time === null</code>이면
@@ -408,8 +413,7 @@
                 <li>
                   <code>ALT_PROXIMITY_KM</code> (1.5)이 적절한지 사용자 경험으로
                   조정 필요. Day1 18개&#183;Day3 35개는 약간 빽빽함 &#8212; 1.0
-                  km로 좁히거나 카테고리별로 다른 거리 (사찰/카페 0.5 km,
-                  시장/공원 1.5 km 등) 휴리스틱.
+                  km로 좁히거나 카테고리별로 다른 거리 휴리스틱.
                 </li>
                 <li>
                   마커 클러스터링 (<code>leaflet.markercluster</code>) 도입

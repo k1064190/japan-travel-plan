@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 7 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 9 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -259,40 +259,40 @@
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">7</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">8</div>
+        <div class="timeline-node muted">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node future">9</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 7</h2>
+        <h2 id="stage-heading">Stage 9</h2>
 
         <div class="card-grid">
-          <!-- Single card sourced from named-hotels.md -->
-          <article aria-labelledby="card-hotels">
-            <h3 id="card-hotels">Named Hotels (Sugata + Ebisuhigashi)</h3>
+          <!-- Single card sourced from restaurant-ratings.md -->
+          <article aria-labelledby="card-restaurant-ratings">
+            <h3 id="card-restaurant-ratings">
+              Restaurant Candidates + Ratings
+            </h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                이전 단계까지 숙소는 <code>namba_hotel</code> /
-                <code>namba_hotel_checkout</code> 같은 abstract id로 표현
-                &#8212; 실제 예약된 호텔 두 곳과 위치&#183;체크인/아웃 흐름이
-                일치하지 않았다. 1&#183;2일차와 3&#183;4일차의 박이 서로 다른
-                호텔이라는 사실을 데이터에 반영하지 않으면 Google Maps 길찾기
-                origin이 잘못 잡혀 시간 신빙성이 다시 떨어진다.
+                Stage 8에서 일정 주변 alt 후보를 맵에 띄웠지만 음식점은 적었고,
+                무엇보다 "이 가게가 진짜 좋은가" 판단할 신뢰 지표가 없었다.
+                사용자가 현장에서 마커 클릭만으로 "Tabelog 3.8, 후기 2,000개"
+                같은 사회적 증거를 즉시 확인하면 들를지 말지 결정이 훨씬 빠름.
               </p>
             </div>
 
@@ -300,21 +300,30 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>places.json</code>에 호텔 3개 추가:
-                  <code>sugata_hotel</code> (Sugata Hotel Osaka Shinsaibashi,
-                  Marriott Series), <code>ebisuhigashi_hotel</code> (나니와구
-                  에비스히가시), <code>ebisuhigashi_hotel_checkout</code>
+                  스키마 확장 (<code>scripts/validate-data.mjs</code>):
+                  <code>place.rating</code> / <code>place.review_count</code> /
+                  <code>place.rating_source</code> &#8212; 어떤 place든 옵셔널.
+                  <code>place.restaurants[].rating</code> /
+                  <code>.review_count</code> / <code>.rating_source</code>
+                  &#8212; main 명소 내부 맛집 카드에도 동일.
+                  <code>validateRating(label, obj, errors)</code> 공용 헬퍼로
+                  검증 통합.
                 </li>
                 <li>
-                  <code>itinerary.json</code> 호텔 참조 교체: Day1 체크인
-                  &#8594; <code>sugata_hotel</code>; Day2&#183;Day3&#183;Day4
-                  origin 갱신; Day3 체크인 stop 추가
-                  (<code>ebisuhigashi_hotel</code>); Day5 첫 stop &#8594;
-                  <code>ebisuhigashi_hotel_checkout</code>
+                  UI (<code>assets/app.js</code>):
+                  <code>renderRating(obj)</code> 공용 헬퍼 &#8212;
+                  <code>&#9733; 4.3 &#183; 후기 1,234개 (Tabelog)</code>
+                  포맷 (필드 있는 만큼만 표시). main 명소 맛집 카드 type 라인
+                  옆에 inline 표시. alt place detail 헤더 (<code>name_jp</code>)
+                  아래에 inline 표시. 색은 amber-600, 폰트 small.
                 </li>
                 <li>
-                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분
-                  (Sugata&#8594;Dotonbori ~900m)
+                  데이터 (<code>data/places.json</code>): Day1&#8211;4 area에 새
+                  음식점 alt <strong>36개</strong> (4 subagent 병렬 검색).
+                  라멘&#183;오코노미야키&#183;타코야키&#183;스시&#183;야끼니쿠&#183;쿠시카츠&#183;우동&#183;소바&#183;카츠&#183;디저트&#183;이자카야&#183;카레
+                  등. 거의 대부분 Tabelog 별점 + 후기 수 포함. 1개 sample
+                  (dotonbori main 안 긴류 라멘) main-restaurant rating 인젝션해
+                  양쪽 UI 경로 모두 검증. itinerary 변경 0.
                 </li>
               </ul>
             </div>
@@ -322,11 +331,17 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                <code>/tmp/patch-hotels.mjs</code> 한 번 실행으로 places +
-                itinerary 두 파일을 일관되게 patch. Sugata 좌표는 사용자가 준
-                Google Maps URL의 정확한 좌표 (34.6766637, 135.504813).
-                Ebisuhigashi는 주소만 받아 츠텐카쿠 동쪽 1&#8211;2블록 추정
-                (34.6515, 135.508).
+                스키마 변경부터 sample 1건으로 inline 표시 동작 확인 &#8594;
+                Phase B 4 subagent 병렬 dispatch &#8594; 각자
+                <code>/tmp/restaurant-patches/dayN-food.json</code> 저장 &#8594;
+                단일 merge 스크립트가 <code>places.json</code>에 합침 (충돌 시
+                day1 우선 dedupe &#8212; Day1과 Day3가 ichiran/kamukura/mizuno
+                중복했음). 1건 http:// URL &#8594; https:// 자동 업그레이드.
+              </p>
+              <p style="margin-top: 0.5rem">
+                Tabelog 점수 해석: 일본 Tabelog는 3.0&#8211;4.0 사이가 정상
+                분포이며, 3.5+가 인기, 3.8+가 명점 수준. 한국 사용자가 오해하지
+                않게 <code>(Tabelog)</code> 출처를 함께 표시.
               </p>
             </div>
 
@@ -334,18 +349,34 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>data/places.json</code> &#8212; sugata_hotel /
-                  ebisuhigashi_hotel / ebisuhigashi_hotel_checkout 추가
+                  <code>scripts/validate-data.mjs:20&#8211;37</code>
+                  (<code>validateRating</code> 헬퍼)
                 </li>
                 <li>
-                  <code>data/itinerary.json</code> &#8212; Day1&#8211;5
-                  stops&#183;transit_from_prev.origin_place_id 교체
+                  <code>scripts/validate-data.mjs:115&#8211;128</code>
+                  (place + restaurants[]에 호출)
                 </li>
                 <li>
-                  관련 commit: <code>795d6be</code>
-                  <code>data: name actual hotels for day1-4 stay</code>
+                  <code>assets/app.js:37&#8211;46</code>
+                  (<code>renderRating</code> 헬퍼)
+                </li>
+                <li>
+                  <code>assets/app.js:48&#8211;67</code>
+                  (<code>renderRestaurant</code> rating inline)
+                </li>
+                <li>
+                  <code>assets/app.js:416</code>
+                  (<code>renderDetail</code> header rating)
+                </li>
+                <li>
+                  <code>data/places.json</code> (36 새 alt 음식점 + 1 sample
+                  main-restaurant rating)
                 </li>
               </ul>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
+                Commits: <code>e638e32</code> <code>eaff7e8</code>
+                <code>c12b193</code>
+              </p>
             </div>
 
             <div class="section-block">
@@ -354,27 +385,37 @@
               <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  Stage 6에서 도입한 <code>origin_place_id</code> 필드가 정확히
-                  이 시나리오용. 데이터에 호텔 두 개를 추가해도 UI 코드 변경 0
-                  &#8212; render&#183;라우팅 그대로.
+                  스키마 옵셔널화로 기존 데이터 회귀 0. 데이터 부분 채워진
+                  entry도 그대로 동작.
                 </li>
                 <li>
-                  <code>validate-data</code> + <code>verify-walk</code>가 데이터
-                  변경 후 회귀를 즉시 잡음 (Sugata&#8594;Dotonbori 도보 시간이
-                  짧다고 flag &#8594; 8&#8594;12분 보정 자동 발견).
+                  4 subagent 병렬로 ~7분 wall-clock에 36개 음식점 큐레이션 +
+                  별점/후기 수집 끝. 단일 sequential이면 30분+.
+                </li>
+                <li>
+                  Tabelog 별점 표기 (<code>(Tabelog)</code> 출처 명시)로 한국
+                  사용자가 일본 점수 체계(3&#8211;4점 분포)를 오해하지 않게 함.
                 </li>
               </ul>
 
               <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
-                  Ebisuhigashi 호텔의 정확한 이름/좌표를 사용자가 확인하면 한 줄
-                  patch로 보정. 현재는 주소 기반 추정.
+                  병렬 subagent가 같은 가게를 중복 생성 (<code
+                    >ichiran_dotonbori</code
+                  >
+                  등). 다음 batch에는 명시적 ID 예약 또는 분류별로 미리 ID 후보
+                  정해 prompt에 박는 게 좋겠음.
                 </li>
                 <li>
-                  호텔 logistics (Sugata&#8594;Ebisuhigashi 짐 옮기기 transit)는
-                  itinerary stops에 명시되지 않음 &#8212; 필요시 Day3 첫 stop
-                  앞에 별도 logistics stop 추가 가능.
+                  별점 데이터의 신뢰도가 균일하지 않음 &#8212; subagent가
+                  Tabelog rating을 직접 fetch하지 않고 후기 게시글에서 추정한
+                  케이스도 있음. 정확한 라이브 점수는 Tabelog API/스크레이핑이
+                  필요 (현 단계 범위 밖).
+                </li>
+                <li>
+                  main 명소들의 내부 <code>restaurants[]</code>는 sample 1건만
+                  rating 채워졌고 나머지는 미설정 &#8212; 추후 일괄 채우기 가능.
                 </li>
               </ul>
 
@@ -382,19 +423,33 @@
               <ul>
                 <li>
                   <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  68 places, 5 days validated
+                  131 places, 5 days validated
                 </li>
                 <li>
                   <code>node --test tests/validate-data.test.mjs</code>
                   &#8594; 11 pass
                 </li>
                 <li>
-                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 7
-                  도보, flagged 0
+                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
+                  segment all within tolerance
                 </li>
                 <li>
-                  browse smoke: Day1/Sugata, Day2/Day3 첫 stop origin, Day5 출발
-                  모두 정상 &#8212; console error 0
+                  browse smoke:
+                  <ul>
+                    <li>
+                      Day별 alt 수 증가: day1 18&#8594;32, day2 33&#8594;57,
+                      day3 35&#8594;51, day4 17&#8594;24, day5 13&#8594;14
+                    </li>
+                    <li>
+                      이치란 alt 클릭 &#8594; 헤더 아래 "&#9733; 3.6 &#183; 후기
+                      2,100개 (Tabelog)" 정상 표시
+                    </li>
+                    <li>
+                      긴류 라멘 main-restaurant 카드 안에서도 동일 inline 별점
+                      표시
+                    </li>
+                    <li>console error 0</li>
+                  </ul>
                 </li>
               </ul>
             </div>

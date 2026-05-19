@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 5 — Japan Travel Plan 2026.05.22–26</title>
+    <title>Stage 5 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -268,6 +268,11 @@
         <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">9</div>
+        <span class="timeline-label">Stage 9</span>
+      </div>
     </nav>
 
     <main>
@@ -275,8 +280,9 @@
         <h2 id="stage-heading">Stage 5</h2>
 
         <div class="card-grid">
-          <article aria-labelledby="card-curated-content">
-            <h3 id="card-curated-content">Curated Content</h3>
+          <!-- Single card sourced from curated-content.md -->
+          <article aria-labelledby="card-curated">
+            <h3 id="card-curated">Curated Korean Blog Links</h3>
 
             <div class="section-block">
               <h4>Why</h4>
@@ -284,9 +290,9 @@
                 기존 "한국어 후기 검색"은 네이버&#183;구글&#183;유튜브 검색창
                 진입 링크 3개에 불과해 현장에서 매번 직접
                 검색&#183;정렬&#183;평가하는 시간이 들었다. 이미 신뢰할 만한
-                한국어 후기/가이드 글이 인터넷에 충분하니, 각
-                명소&#183;맛집&#183;활동에 대해 사전에 큐레이션된 블로그
-                포스트를 데이터에 박아두면 클릭 한 번에 본문으로 진입할 수 있다.
+                한국어 후기/가이드 글이 충분하니, 각 명소&#183;맛집&#183;활동에
+                대해 사전에 큐레이션된 블로그 포스트를 데이터에 박아두면 클릭 한
+                번에 본문으로 진입할 수 있다.
               </p>
             </div>
 
@@ -294,23 +300,23 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  데이터 스키마 확장 (<code>data/places.json</code> +
-                  <code>scripts/validate-data.mjs</code>): 명소 레벨
+                  스키마 확장: 명소 레벨
                   <code
                     >curated_links: [{title, url, source, snippet?}, ...]</code
-                  >, 맛집 객체 <code>link: {title, url, source}</code>, 활동
-                  항목 <code>string | {text, link?}</code> 양쪽 허용 (역호환)
+                  >, 맛집 <code>link: {title, url, source}</code>, 활동
+                  <code>string | {text, link?}</code> 양쪽 허용 (역호환)
                 </li>
                 <li>
-                  UI 렌더링 (<code>assets/app.js</code>) &#8212;
-                  <code>renderActivity</code> / <code>renderRestaurant</code> /
+                  UI 렌더링: <code>renderActivity</code> /
+                  <code>renderRestaurant</code> /
                   <code>renderCuratedLink</code> 헬퍼 3개. 큐레이션 블로그 카드
-                  그리드, 활동 줄 끝 "후기 &#8594;" 인라인 링크, 맛집 카드 하단
-                  "한국어 후기 보기 &#8594;" 링크
+                  그리드 + 활동 inline 링크 + 맛집 카드 하단 링크. 기존 검색
+                  그리드는 "더 찾아보기" 폴백으로 격하.
                 </li>
                 <li>
-                  데이터 채우기: 65/65 명소 curated_links 3개씩 (총 195개),
-                  40/41 메인 맛집 link 1개씩, 48/172 활동 wrap
+                  데이터: 65/65 명소에 3개씩 <code>curated_links</code> (총
+                  <strong>195개</strong>). 40/41 main 맛집에 1개씩
+                  <code>link</code>. 48/172 활동 wrap.
                 </li>
               </ul>
             </div>
@@ -318,19 +324,19 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Phase A &#8212; 스키마 + UI + Day1 main 3개 (패턴 검증). Phase B
-                &#8212; 나머지 62개 명소. Day별&#183;분류별로 7개 background
-                subagent를 병렬 dispatch. 각 subagent: WebSearch로 한국어 블로그
-                검색 &#8594; 신뢰 가능한 글 큐레이션 &#8594;
-                <code>/tmp/curated-patches/&lt;name&gt;.json</code> 저장.
-                <code>/tmp/merge-patches.mjs</code>로 7개 patch JSON을
-                <code>data/places.json</code>에 일괄 merge.
+                Phase A &#8212; 스키마 + UI + Day1 main 3개 패턴 검증. Phase B
+                &#8212; 7개 background subagent 병렬 dispatch (Day2 main, Day3
+                main, Day4&#8211;5 main, Day1 alt, Day2 alt, Day3 alt, Day4
+                alt). 각 subagent: WebSearch로 한국어 블로그 검색 &#8594;
+                <code>/tmp/curated-patches/&lt;name&gt;.json</code>
+                저장 &#8594; 단일 merge 스크립트로 일괄 적용. 충돌 없음
+                (subagent는 read-only).
               </p>
               <p style="margin-top: 0.5rem">
-                큐레이션 우선순위: (1) 한국 1차 블로그 (blog.naver.com,
-                brunch.co.kr, *.tistory.com), (2) 한국 여행 플랫폼
-                (myrealtrip.com, kr.trip.com), (3) KKday/Klook 블로그, (4)
-                한국어 공식 가이드/매거진 &#8212; 개인 블로그 부족한 niche에만.
+                큐레이션 우선순위: (1) 한국 1차 블로그
+                (<code>blog.naver.com</code>, <code>brunch.co.kr</code>,
+                <code>*.tistory.com</code>), (2) 한국 여행 플랫폼, (3)
+                KKday/Klook 블로그, (4) 한국어 공식 가이드 (niche만).
               </p>
             </div>
 
@@ -345,20 +351,20 @@
                   <code>scripts/validate-data.mjs:84&#8211;115</code>
                   (curated_links / activities / restaurants 옵셔널 검증)
                 </li>
-                <li>
-                  <code>assets/app.js:28&#8211;66</code>
-                  (<code>renderActivity</code>, <code>renderRestaurant</code>,
-                  <code>renderCuratedLink</code> 헬퍼)
-                </li>
+                <li><code>assets/app.js:28&#8211;66</code> (3 render 헬퍼)</li>
                 <li>
                   <code>assets/app.js:222&#8211;265</code>
-                  (<code>renderDetail</code> 큐레이션 섹션 + 폴백 검색 그리드)
+                  (<code>renderDetail</code> 큐레이션 섹션 + 폴백)
                 </li>
                 <li>
                   <code>data/places.json</code> (65 명소 전체
                   <code>curated_links</code> 추가)
                 </li>
               </ul>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
+                Commits: <code>e8c0d62</code> <code>4b9260c</code>
+                <code>e562fe4</code> <code>3ff8616</code>
+              </p>
             </div>
 
             <div class="section-block">
@@ -377,7 +383,7 @@
                 </li>
                 <li>
                   스키마 옵셔널화로 Day1 main 3개 &#8594; 65개 확장 도중 기존
-                  데이터/UI 회귀 0. "더 찾아보기" 폴백 그리드 보존.
+                  데이터/UI 회귀 0. "더 찾아보기" 폴백 보존.
                 </li>
               </ul>
 
@@ -385,13 +391,12 @@
               <ul>
                 <li>
                   subagent가 가끔 출처가 모호한 사이트를 fallback으로 선택.
-                  큐레이션 prompt에 "프로모션 가이드성 글보다 개인 후기 우선"
-                  규칙을 더 강하게 박아도 좋겠음.
+                  "프로모션 가이드성 글보다 개인 후기 우선" 규칙을 prompt에 더
+                  강하게 박을 것.
                 </li>
                 <li>
-                  alt 명소의 활동도 link를 채우려면 별도 phase가 필요. 현재는
-                  생략 (alt activities 124개는 plain string). 사용자가 alt 깊게
-                  보지 않을 가능성 고려한 trade-off.
+                  alt 명소의 활동도 link를 채우려면 별도 phase 필요. 현재 alt
+                  activities 124개는 의도적으로 plain string.
                 </li>
               </ul>
 
@@ -406,22 +411,9 @@
                   &#8594; 11 pass
                 </li>
                 <li>
-                  <code>browse</code> 스크립트로 main 6 spot 샘플 검증: console
-                  error 0, curated 3개 + activity/restaurant 링크 정상 렌더링
+                  browse 스크립트로 main 6 spot 샘플 검증: console error 0,
+                  curated 3개 + activity/restaurant 링크 정상 렌더링
                 </li>
-              </ul>
-
-              <h4 class="retro-sub">알려진 미해결</h4>
-              <ul>
-                <li>
-                  <code>osaka_castle</code>의 "공원 내 야채 레스토랑" 맛집 1개는
-                  한국어 후기 부재로 link 없이 plain object 유지 (40/41).
-                </li>
-                <li>
-                  <code>sannenzaka_ninenzaka</code>의 인력거 활동 1개는 plain
-                  string 유지 (한국어 전용 후기 부재).
-                </li>
-                <li>alt 활동 124개는 의도적으로 plain string.</li>
               </ul>
             </div>
           </article>
