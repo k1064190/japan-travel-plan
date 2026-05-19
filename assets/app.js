@@ -143,9 +143,21 @@ const state = {
   markerLayer: null,
   altLayer: null,
   routeLayer: null,
+  filterFood: false, // "맛집만" 토글
+  showFarCandidates: false, // 반경 너머 후보도 함께
 };
 
 const ALT_PROXIMITY_KM = 2.0;
+const ALT_FAR_KM = 8.0; // showFarCandidates 켰을 때 인정 거리
+
+const FOOD_TAG_RE =
+  /맛집|라멘|스시|회전초밥|카츠|우동|소바|야끼니쿠|쿠시카츠|타코야키|오코노미야키|디저트|카페|이자카야|카레|화과자|두부|텐푸라|스키야키|장어|파르페|베이커리|야끼소바|정식/;
+
+function isFoodPlace(place) {
+  if (!place) return false;
+  if (typeof place.rating === "number") return true;
+  return (place.tags || []).some((t) => FOOD_TAG_RE.test(t));
+}
 
 function haversineKm(c1, c2) {
   const toRad = (d) => (d * Math.PI) / 180;
@@ -160,10 +172,14 @@ function haversineKm(c1, c2) {
   return 2 * R * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-/** Return alt-category place ids within ALT_PROXIMITY_KM of any of the
- *  given day's stop coordinates. Excludes ids already in the day's stops. */
-function altCandidatesForDay(day) {
+/** Return alt-category place ids within the configured radius of the day's
+ *  stops. Opts:
+ *  - foodOnly: keep only food places (isFoodPlace)
+ *  - far: use ALT_FAR_KM instead of ALT_PROXIMITY_KM
+ *  Always excludes ids already in the day's stops. */
+function altCandidatesForDay(day, opts = {}) {
   if (!day?.stops?.length) return [];
+  const radius = opts.far ? ALT_FAR_KM : ALT_PROXIMITY_KM;
   const stopIds = new Set(day.stops.map((s) => s.place_id));
   const stopCoords = day.stops
     .map((s) => state.places[s.place_id]?.coords)
@@ -173,8 +189,9 @@ function altCandidatesForDay(day) {
     if (place.category !== "alt") continue;
     if (stopIds.has(id)) continue;
     if (!Array.isArray(place.coords)) continue;
+    if (opts.foodOnly && !isFoodPlace(place)) continue;
     const near = stopCoords.some(
-      (sc) => haversineKm(sc, place.coords) <= ALT_PROXIMITY_KM,
+      (sc) => haversineKm(sc, place.coords) <= radius,
     );
     if (near) out.push(id);
   }
@@ -227,7 +244,11 @@ function renderDay(dayId) {
   const coords = [];
 
   // Alt-candidate markers under the numbered ones (smaller, grey).
-  for (const altId of altCandidatesForDay(day)) {
+  const altIds = altCandidatesForDay(day, {
+    foodOnly: state.filterFood,
+    far: state.showFarCandidates,
+  });
+  for (const altId of altIds) {
     const altPlace = state.places[altId];
     const altIcon = L.divIcon({
       className: "",
@@ -327,6 +348,66 @@ function renderSidebar() {
   const sidebar = document.getElementById("sidebar");
   const day = state.itinerary.days.find((d) => d.id === state.activeDay);
   const color = dayColor(state.activeDay);
+
+  // Compute candidate list (filtered + sorted by rating desc; no-rating last)
+  const altIds = altCandidatesForDay(day, {
+    foodOnly: state.filterFood,
+    far: state.showFarCandidates,
+  });
+  const altPlaces = altIds
+    .map((id) => ({ id, place: state.places[id] }))
+    .filter(({ place }) => !!place)
+    .sort((a, b) => {
+      const ra = typeof a.place.rating === "number" ? a.place.rating : -1;
+      const rb = typeof b.place.rating === "number" ? b.place.rating : -1;
+      if (rb !== ra) return rb - ra;
+      return a.place.name_ko.localeCompare(b.place.name_ko, "ko");
+    });
+
+  const altCardsHtml = altPlaces
+    .map(({ id, place }) => {
+      const ratingHtml = renderRating(place);
+      const tagsLine = (place.tags || [])
+        .slice(0, 3)
+        .map((t) => esc(t))
+        .join(" · ");
+      return `
+        <li>
+          <button data-alt="${esc(id)}" class="w-full text-left p-3 border-b hover:bg-slate-50">
+            <div class="flex items-center gap-3">
+              <div class="alt-marker shrink-0" style="border-color:${color}">${esc(place.emoji || "·")}</div>
+              <div class="flex-1 min-w-0">
+                <div class="font-semibold text-sm truncate">${esc(place.name_ko)}</div>
+                <div class="text-xs text-slate-500 mt-0.5 flex items-center gap-2 flex-wrap">
+                  <span>${tagsLine}</span>
+                  ${ratingHtml}
+                </div>
+              </div>
+            </div>
+          </button>
+        </li>`;
+    })
+    .join("");
+
+  const candidateSection =
+    altPlaces.length || state.filterFood || state.showFarCandidates
+      ? `
+    <div class="p-3 border-t border-b bg-slate-50">
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <h3 class="font-semibold text-sm text-slate-700">주변 후보 (${altPlaces.length})</h3>
+      </div>
+      <div class="flex items-center gap-3 flex-wrap text-xs">
+        <label class="inline-flex items-center gap-1 cursor-pointer">
+          <input type="checkbox" id="filter-food" ${state.filterFood ? "checked" : ""}> 맛집만
+        </label>
+        <label class="inline-flex items-center gap-1 cursor-pointer">
+          <input type="checkbox" id="filter-far" ${state.showFarCandidates ? "checked" : ""}> 먼 후보도 보기
+        </label>
+      </div>
+    </div>
+    <ul>${altCardsHtml}</ul>`
+      : "";
+
   sidebar.innerHTML = `
     <div class="p-4 border-b" style="border-color:${color}">
       <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(day.date)} (${esc(day.weekday)})</div>
@@ -364,12 +445,32 @@ function renderSidebar() {
           </li>`;
         })
         .join("")}
-    </ul>`;
+    </ul>
+    ${candidateSection}`;
   sidebar.querySelectorAll("button[data-stop]").forEach((btn) => {
     btn.addEventListener("click", () =>
       selectStop(state.activeDay, Number(btn.dataset.stop)),
     );
   });
+  sidebar.querySelectorAll("button[data-alt]").forEach((btn) => {
+    btn.addEventListener("click", () => selectAlt(btn.dataset.alt));
+  });
+  const foodFilter = sidebar.querySelector("#filter-food");
+  if (foodFilter) {
+    foodFilter.addEventListener("change", (e) => {
+      state.filterFood = e.target.checked;
+      renderDay(state.activeDay);
+      renderSidebar();
+    });
+  }
+  const farFilter = sidebar.querySelector("#filter-far");
+  if (farFilter) {
+    farFilter.addEventListener("change", (e) => {
+      state.showFarCandidates = e.target.checked;
+      renderDay(state.activeDay);
+      renderSidebar();
+    });
+  }
 }
 
 function renderDetail(stop, place) {
