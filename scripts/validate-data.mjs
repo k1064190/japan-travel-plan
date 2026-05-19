@@ -21,6 +21,24 @@ function isPlainObject(v) {
   return v != null && typeof v === "object" && !Array.isArray(v);
 }
 
+function validateRating(label, obj, errors) {
+  if ("rating" in obj) {
+    if (typeof obj.rating !== "number" || !Number.isFinite(obj.rating) || obj.rating < 0 || obj.rating > 5) {
+      errors.push(`${label}.rating must be a number between 0 and 5 (got: ${obj.rating})`);
+    }
+  }
+  if ("review_count" in obj) {
+    if (!Number.isInteger(obj.review_count) || obj.review_count < 0) {
+      errors.push(`${label}.review_count must be a non-negative integer`);
+    }
+  }
+  if ("rating_source" in obj) {
+    if (typeof obj.rating_source !== "string" || obj.rating_source.trim() === "") {
+      errors.push(`${label}.rating_source must be a non-empty string`);
+    }
+  }
+}
+
 function validateCuratedLink(label, link, errors) {
   if (!isPlainObject(link)) {
     errors.push(`${label}: must be an object`);
@@ -111,11 +129,15 @@ export function validate(places, itinerary) {
     }
     if (Array.isArray(place.restaurants)) {
       place.restaurants.forEach((r, i) => {
-        if (isPlainObject(r) && "link" in r) {
-          validateCuratedLink(`${id}.restaurants[${i}].link`, r.link, errors);
+        if (isPlainObject(r)) {
+          if ("link" in r) {
+            validateCuratedLink(`${id}.restaurants[${i}].link`, r.link, errors);
+          }
+          validateRating(`${id}.restaurants[${i}]`, r, errors);
         }
       });
     }
+    validateRating(id, place, errors);
     if (Array.isArray(place.activities)) {
       place.activities.forEach((a, i) => {
         if (isPlainObject(a)) {
