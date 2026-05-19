@@ -20,15 +20,15 @@
           "duration_minutes": 30
         },
         {
-          "place_id": "namba_hotel",
+          "place_id": "sugata_hotel",
           "time": "17:10",
           "transit_from_prev": {
-            "mode": "난카이 라피트",
+            "mode": "난카이 라피트+도보",
             "from": "간사이공항",
-            "to": "난바",
-            "minutes": 34,
+            "to": "수가타 호텔 (신사이바시)",
+            "minutes": 42,
             "cost_jpy": 1490,
-            "note": "특급권+승차권"
+            "note": "라피트 34분 + 난바역→신사이바시 도보 약 8분"
           },
           "duration_minutes": 30
         },
@@ -37,9 +37,9 @@
           "time": "18:00",
           "transit_from_prev": {
             "mode": "도보",
-            "from": "난바 숙소",
+            "from": "수가타 호텔",
             "to": "도톤보리",
-            "minutes": 8,
+            "minutes": 12,
             "cost_jpy": 0,
             "note": "도톤보리 강 야경 + 글리코상"
           },
@@ -58,13 +58,13 @@
           "place_id": "fushimi_inari",
           "time": "08:30",
           "transit_from_prev": {
-            "mode": "JR야마토지+JR나라선",
-            "from": "난바",
+            "mode": "도보+JR야마토지+JR나라선",
+            "from": "수가타 호텔 (신사이바시)",
             "to": "이나리역",
-            "minutes": 45,
+            "minutes": 55,
             "cost_jpy": 410,
-            "note": "JR난바(야마토지선)→오사카 환승→JR이나리역. 이른 시간 추천 (인파 적음)",
-            "origin_place_id": "namba_hotel"
+            "note": "신사이바시→JR난바역 도보 8분 + JR 환승",
+            "origin_place_id": "sugata_hotel"
           },
           "duration_minutes": 120
         },
@@ -121,12 +121,12 @@
           "duration_minutes": 120
         },
         {
-          "place_id": "namba_hotel",
+          "place_id": "sugata_hotel",
           "time": "20:00",
           "transit_from_prev": {
             "mode": "한큐+미도스지",
             "from": "가와라마치",
-            "to": "난바",
+            "to": "수가타 호텔",
             "minutes": 60,
             "cost_jpy": 600,
             "note": "우메다 환승"
@@ -143,16 +143,29 @@
       "color_var": "--day-3",
       "stops": [
         {
+          "place_id": "ebisuhigashi_hotel",
+          "time": "08:00",
+          "duration_minutes": 30,
+          "transit_from_prev": {
+            "from": "수가타 호텔 (신사이바시)",
+            "to": "에비스히가시 호텔",
+            "mode": "미도스지선",
+            "minutes": 20,
+            "cost_jpy": 240,
+            "origin_place_id": "sugata_hotel",
+            "note": "체크아웃 후 도부쓰엔마에로 짐 옮김. 체크인 시간 전이라면 프런트에 짐 보관"
+          }
+        },
+        {
           "place_id": "osaka_castle",
           "time": "09:00",
           "transit_from_prev": {
             "mode": "미도스지+JR환상선",
-            "from": "난바",
+            "from": "에비스히가시 호텔",
             "to": "오사카죠공원",
             "minutes": 20,
             "cost_jpy": 240,
-            "note": "",
-            "origin_place_id": "namba_hotel"
+            "note": ""
           },
           "duration_minutes": 120
         },
@@ -247,13 +260,13 @@
           "place_id": "usj",
           "time": "08:00",
           "transit_from_prev": {
-            "mode": "미도스지+JR유메사키선",
-            "from": "난바",
+            "mode": "JR환상선+JR유메사키선",
+            "from": "에비스히가시 호텔",
             "to": "유니버설시티역",
-            "minutes": 35,
-            "cost_jpy": 280,
-            "note": "오픈런 = 닌텐도월드 정리권 확보",
-            "origin_place_id": "namba_hotel"
+            "minutes": 45,
+            "cost_jpy": 260,
+            "note": "호텔→신이마미야역 도보 7분 + JR환상선·유메사키선 환승",
+            "origin_place_id": "ebisuhigashi_hotel"
           },
           "duration_minutes": 720
         },
@@ -271,12 +284,12 @@
           "duration_minutes": 60
         },
         {
-          "place_id": "namba_hotel",
+          "place_id": "ebisuhigashi_hotel",
           "time": "22:30",
           "transit_from_prev": {
             "mode": "JR유메사키선+미도스지",
             "from": "유니버설시티",
-            "to": "난바",
+            "to": "에비스히가시 호텔",
             "minutes": 35,
             "cost_jpy": 280,
             "note": ""
@@ -293,7 +306,7 @@
       "color_var": "--day-5",
       "stops": [
         {
-          "place_id": "namba_hotel_checkout",
+          "place_id": "ebisuhigashi_hotel_checkout",
           "time": "10:00",
           "transit_from_prev": null,
           "duration_minutes": 30
@@ -302,12 +315,12 @@
           "place_id": "kansai_airport_dep",
           "time": "11:30",
           "transit_from_prev": {
-            "mode": "난카이 라피트",
-            "from": "난바",
+            "mode": "미도스지선+난카이 라피트",
+            "from": "에비스히가시 호텔",
             "to": "간사이공항",
-            "minutes": 34,
-            "cost_jpy": 1490,
-            "note": "출국 2시간 전 도착"
+            "minutes": 50,
+            "cost_jpy": 1730,
+            "note": "호텔→도부쓰엔마에 도보 5분 + 미도스지선 난바 4분 + 환승 + 라피트 34분"
           },
           "duration_minutes": 180
         }

@@ -258,6 +258,11 @@
         <div class="timeline-node active" aria-current="step">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">7</div>
+        <span class="timeline-label">Stage 7</span>
+      </div>
     </nav>
 
     <main>
@@ -353,16 +358,16 @@
                   <code>getTransitEndpoints</code>)
                 </li>
                 <li>
-                  <code>assets/app.js:275&#8211;296</code>
-                  (transit 카드 내 deep-link 버튼)
+                  <code>assets/app.js:275&#8211;296</code> (transit 카드 내
+                  deep-link 버튼)
                 </li>
                 <li>
-                  <code>scripts/verify-walk-times.mjs</code>
-                  (haversine + 도보속도 휴리스틱)
+                  <code>scripts/verify-walk-times.mjs</code> (haversine +
+                  도보속도 휴리스틱)
                 </li>
                 <li>
-                  <code>package.json</code>
-                  (<code>npm run verify-walk</code> 스크립트)
+                  <code>package.json</code> (<code>npm run verify-walk</code>
+                  스크립트)
                 </li>
               </ul>
             </div>
@@ -419,9 +424,9 @@
                   &#8594; 11 pass
                 </li>
                 <li>
-                  <code>npm run verify-walk</code> &#8594; 7개 도보 검증, 2건
-                  flag (sannenzaka 5&#8594;8.1분, denden_town 7&#8594;13.3분
-                  &#8212; 실측 변동 범위 내, 데이터 그대로 유지)
+                  <code>npm run verify-walk</code> &#8594; 7개 도보 검증,
+                  flagged 0 (sannenzaka 5&#8594;7분, denden_town 7&#8594;10분
+                  보수 조정 후)
                 </li>
                 <li>
                   <code>browse</code> 스크립트로 디테일 패널 deep-link 버튼
