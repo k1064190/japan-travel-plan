@@ -4377,5 +4377,157 @@
         "snippet": "산넨자카-야사카의 탑 사진 명소 산책 후기와 추천 시간대."
       }
     ]
+  },
+  "sugata_hotel": {
+    "name_ko": "수가타 호텔 오사카 신사이바시",
+    "name_jp": "Sugata Hotel Osaka Shinsaibashi, Series by Marriott",
+    "coords": [
+      34.6766637,
+      135.504813
+    ],
+    "category": "main",
+    "emoji": "🏨",
+    "tags": [
+      "숙소",
+      "체크인"
+    ],
+    "summary": "1·2일차 숙소. Marriott 시리즈 신축, 신사이바시 도보 5분.",
+    "detail": "신사이바시 한복판에 위치한 Marriott Series 호텔. 도톤보리·신사이바시스지까지 도보 5분, 난바역 도보 8분으로 1·2일차 오사카·교토 베이스 캠프로 최적.",
+    "sources": [
+      {
+        "title": "Sugata Hotel Osaka Shinsaibashi (Marriott)",
+        "url": "https://www.marriott.com/en-us/hotels/osash-sugata-hotel-osaka-shinsaibashi-series-by-marriott/"
+      }
+    ],
+    "activities": [
+      "체크인 후 짐 풀기",
+      "프런트에서 와이파이/요금 확인"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=Sugata+Hotel+Osaka+Shinsaibashi+%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=Sugata+Hotel+Osaka+Shinsaibashi+%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Sugata+Hotel+Osaka+Shinsaibashi"
+    },
+    "curated_links": [
+      {
+        "title": "Sugata Hotel Osaka Shinsaibashi (공식)",
+        "url": "https://www.marriott.com/en-us/hotels/osash-sugata-hotel-osaka-shinsaibashi-series-by-marriott/overview/",
+        "source": "Marriott 공식",
+        "snippet": "Marriott Series, 신사이바시 호텔 공식 페이지 (객실·요금·시설)."
+      },
+      {
+        "title": "오사카 도톤보리 숙소 추천: 신사이바시 호텔 후기 모음",
+        "url": "https://pzip.kr/osaka-namba-oriental-hotel-review/",
+        "source": "pzip.kr",
+        "snippet": "도톤보리·신사이바시 인근 호텔 위치·접근성 비교 후기."
+      },
+      {
+        "title": "오사카 난바 호텔 추천 TOP5! 내돈내산 솔직 후기",
+        "url": "https://brunch.co.kr/@whatsinmytrip/161",
+        "source": "Brunch — whatsinmytrip",
+        "snippet": "신사이바시·난바·도톤보리 도보권 호텔 5곳 비교."
+      }
+    ]
+  },
+  "ebisuhigashi_hotel": {
+    "name_ko": "에비스히가시 숙소 (나니와구)",
+    "name_jp": "2-1-24 Ebisuhigashi, Naniwa-ku, Osaka 556-0002",
+    "coords": [
+      34.6515,
+      135.508
+    ],
+    "category": "main",
+    "emoji": "🏨",
+    "tags": [
+      "숙소",
+      "체크인"
+    ],
+    "summary": "3·4일차 숙소. 신세카이·츠텐카쿠 인접 나니와구 에비스히가시.",
+    "detail": "에비스히가시 2-1-24 (우편번호 556-0002). 츠텐카쿠 도보 3분, 도부쓰엔마에역 도보 5분. 신세카이·텐노지·아베노 라인 일정에 가까워 3·4일차 오사카 도심 + USJ 베이스로 적합.",
+    "sources": [
+      {
+        "title": "Naniwa-ku 에비스히가시 주소",
+        "url": "https://www.google.com/maps/place/2-1-24+Ebisuhigashi,+Naniwa+Ward,+Osaka,+556-0002+Japan"
+      }
+    ],
+    "activities": [
+      "체크인 후 짐 풀기",
+      "신세카이·츠텐카쿠 야경 산책"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%97%90%EB%B9%84%EC%8A%A4%ED%9E%88%EA%B0%80%EC%8B%9C+%EB%82%98%EB%8B%88%EC%99%80%EA%B5%AC+%ED%98%B8%ED%85%94+%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=Ebisuhigashi+Naniwa+Osaka+hotel+%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%8B%A0%EC%84%B8%EC%B9%B4%EC%9D%B4+%ED%98%B8%ED%85%94+%EC%88%99%EC%86%8C"
+    },
+    "curated_links": [
+      {
+        "title": "신세카이·츠텐카쿠 인근 숙소 가성비 정리",
+        "url": "https://www.myrealtrip.com/community/posts/43309",
+        "source": "마이리얼트립 커뮤니티",
+        "snippet": "나니와구·신세카이 인근 가성비 호텔 후기 모음."
+      },
+      {
+        "title": "오사카 신세카이·아베노 베이스 호텔 비교",
+        "url": "https://kr.trip.com/hotels/osaka-hotel-detail-736796/dotonbori-hotel/",
+        "source": "Trip.com Korea",
+        "snippet": "신세카이·도부쓰엔마에역 도보권 호텔 후기·요금."
+      },
+      {
+        "title": "츠텐카쿠 인근 야경 산책 후기",
+        "url": "https://leemisong.com/travel/1765/",
+        "source": "미송닷컴",
+        "snippet": "에비스히가시 일대 야경·먹부림 산책기."
+      }
+    ]
+  },
+  "ebisuhigashi_hotel_checkout": {
+    "name_ko": "에비스히가시 체크아웃",
+    "name_jp": "2-1-24 Ebisuhigashi, Naniwa-ku — 체크아웃",
+    "coords": [
+      34.65152,
+      135.50802
+    ],
+    "category": "main",
+    "emoji": "🧳",
+    "tags": [
+      "숙소",
+      "출국 준비"
+    ],
+    "summary": "5일차 아침. 에비스히가시 호텔 체크아웃 + 짐 정리.",
+    "detail": "출국 전 체크아웃. 짐을 모두 챙기고 프런트에서 키 반납. 도부쓰엔마에역 / 텐노지역 통해 미도스지선·난카이선 등으로 공항 이동.",
+    "sources": [],
+    "activities": [
+      "프런트 체크아웃 + 영수증 수령",
+      "캐리어 다시 정리·여권 확인",
+      "도부쓰엔마에역 또는 난바역으로 이동"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%98%A4%EC%82%AC%EC%B9%B4+%ED%98%B8%ED%85%94+%EC%B2%B4%ED%81%AC%EC%95%84%EC%9B%83+%EC%A7%90+%EB%B3%B4%EA%B4%80",
+      "google": "https://www.google.com/search?q=%EC%98%A4%EC%82%AC%EC%B9%B4+%ED%98%B8%ED%85%94+%EC%B2%B4%ED%81%AC%EC%95%84%EC%9B%83+%EC%A7%90+%EB%B3%B4%EA%B4%80&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%98%A4%EC%82%AC%EC%B9%B4+%EC%B2%B4%ED%81%AC%EC%95%84%EC%9B%83+%EC%A7%90+%EB%B3%B4%EA%B4%80"
+    },
+    "curated_links": [
+      {
+        "title": "오사카 호텔 체크아웃·짐 보관·공항 이동 팁",
+        "url": "https://kr.trip.com/blog/all-about-osaka-dotonbori/",
+        "source": "Trip.com Korea",
+        "snippet": "체크아웃 후 캐리어 보관·이동 동선 정리."
+      },
+      {
+        "title": "오사카 → 간사이공항 짐 운반 후기",
+        "url": "https://starrymoments7.com/entry/%EC%9D%BC%EB%B3%B8-%EC%98%A4%EC%82%AC%EC%B9%B4-%EC%97%AC%ED%96%89-%ED%95%84%EC%88%98-%EA%B5%90%ED%86%B5-%EC%A0%95%EB%B3%B4-%EA%B0%84%EC%82%AC%EC%9D%B4%EA%B3%B5%ED%95%AD-%EB%82%9C%EC%B9%B4%EC%9D%B4%EB%82%9C%EB%B0%94%EC%97%AD-%EB%9D%BC%ED%94%BC%ED%8A%B8-%ED%8A%B9%EA%B8%89%EC%97%B4%EC%B0%A8-%EC%9D%B4%EC%9A%A9-%ED%9B%84%EA%B8%B0",
+        "source": "starrymoments7 (Tistory)",
+        "snippet": "체크아웃 후 캐리어 끌고 공항 가는 동선 + 라피트 후기."
+      },
+      {
+        "title": "오사카 → 간사이공항 짐 운반 + 짐 보관 서비스 정리",
+        "url": "https://www.kkday.com/ko/blog/22417/asia-japan-osaka-rapid",
+        "source": "KKday Korea 블로그",
+        "snippet": "공항행 이동·짐 옵션·라피트 e-티켓 발권."
+      }
+    ]
   }
 }
