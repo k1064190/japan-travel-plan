@@ -34,17 +34,32 @@ function renderActivity(a, color) {
   return `<li class="flex gap-2"><span style="color:${color}">▸</span><span>${esc(text)}${linkBit}</span></li>`;
 }
 
+function renderRating(obj) {
+  if (typeof obj?.rating !== "number") return "";
+  const stars = `★ ${obj.rating.toFixed(1)}`;
+  const count =
+    typeof obj.review_count === "number" && obj.review_count > 0
+      ? ` · 후기 ${obj.review_count.toLocaleString()}개`
+      : "";
+  const src = obj.rating_source ? ` (${esc(obj.rating_source)})` : "";
+  return `<span class="text-xs text-amber-600 font-semibold whitespace-nowrap">${stars}${esc(count)}${src}</span>`;
+}
+
 function renderRestaurant(r) {
   const linkBit = r?.link?.url
     ? `<a href="${safeHref(r.link.url)}" target="_blank" rel="noopener" class="block mt-2 text-xs underline text-slate-500 hover:text-slate-800" title="${esc(r.link.title || "")}">한국어 후기 보기 →</a>`
     : "";
+  const rating = renderRating(r);
   return `
     <div class="border rounded-lg p-3 hover:bg-slate-50">
       <div class="flex items-baseline justify-between gap-2">
         <div class="font-semibold text-sm">${esc(r.name)}</div>
         <div class="text-xs text-slate-500 whitespace-nowrap">${esc(r.price_range)}</div>
       </div>
-      <div class="text-xs text-slate-500 mt-1">${esc(r.type)}</div>
+      <div class="text-xs text-slate-500 mt-1 flex items-center gap-2 flex-wrap">
+        <span>${esc(r.type)}</span>
+        ${rating}
+      </div>
       <div class="text-sm text-slate-700 mt-1">${esc(r.tip)}</div>
       ${linkBit}
     </div>`;
@@ -399,6 +414,7 @@ function renderDetail(stop, place) {
       <div class="text-xs uppercase tracking-wide" style="color:${color}">${stop.time ? `${esc(stop.time)} · ${esc(stop.duration_minutes)}분 체류` : "후보 — 일정에 들어있지 않음"}</div>
       <h2 class="text-2xl font-bold mt-1">${esc(place.name_ko)}</h2>
       <div class="text-sm text-slate-500">${esc(place.name_jp)}</div>
+      ${renderRating(place) ? `<div class="mt-1">${renderRating(place)}</div>` : ""}
       <div class="mt-2 flex gap-1 flex-wrap">
         ${(place.tags || []).map((tag) => `<span class="text-xs px-2 py-1 rounded bg-slate-100 text-slate-600">#${esc(tag)}</span>`).join("")}
       </div>
