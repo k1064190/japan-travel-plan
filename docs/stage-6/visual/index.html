@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -21,7 +20,6 @@
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -38,7 +36,6 @@
         color: #6b7280;
         margin-top: 0.2rem;
       }
-
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -87,13 +84,11 @@
         color: #0f766e;
         font-weight: 600;
       }
-
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
       }
-
       section h2 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -102,13 +97,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
-
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
-
       @media (max-width: 720px) {
         .card-grid {
           grid-template-columns: 1fr;
@@ -123,7 +116,6 @@
           padding: 1.25rem 1rem;
         }
       }
-
       article {
         background: #fff;
         border: 1px solid #e5e7eb;
@@ -138,14 +130,12 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #f3f4f6;
       }
-
       .section-block {
         margin-bottom: 1rem;
       }
       .section-block:last-child {
         margin-bottom: 0;
       }
-
       .section-block h4 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -166,7 +156,6 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
-
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -176,7 +165,6 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -186,7 +174,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -272,14 +259,17 @@
         <div class="timeline-node muted">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 6</h2>
-
         <div class="card-grid">
-          <!-- Single card sourced from realtime-transit.md -->
           <article aria-labelledby="card-transit">
             <h3 id="card-transit">Realtime Transit Verification + Deep Link</h3>
 
@@ -300,8 +290,8 @@
               <ul>
                 <li>
                   <strong>UI 딥링크</strong>: 디테일 패널의 transit 카드 안에
-                  <code>Google Maps에서 실제 경로·시간 보기 →</code> 버튼 추가.
-                  클릭 시 새 탭에 Google Maps directions 페이지가 열리고
+                  <code>Google Maps에서 실제 경로·시간 보기 &#8594;</code> 버튼
+                  추가. 클릭 시 새 탭에 Google Maps directions 페이지가 열리고
                   origin·destination·travelmode가 자동으로 채워져 실시간
                   시간/요금/노선 안내가 표시됨.
                 </li>
@@ -332,9 +322,8 @@
                   <code>transitModeToGoogleMode(mode)</code> &#8212; 한국어 mode
                   문자열을 Google travelmode로 매핑.
                   <code>도보 &#8594; walking</code>,
-                  <code>택시·자동차 &#8594; driving</code>, 그 외
-                  (라피트·JR·지하철·한큐·미도스지선·사철·기차·버스·hybrid)
-                  &#8594; <code>transit</code>.
+                  <code>택시·자동차 &#8594; driving</code>, 그 외 &#8594;
+                  <code>transit</code>.
                 </li>
                 <li>
                   <code
@@ -352,10 +341,10 @@
               </ul>
               <p style="margin-top: 0.5rem">
                 도보 검증 휴리스틱 채택 이유: OSRM 공개 데모는 foot profile이
-                driving으로 fallback되어 34 km/h 결과를 반환 (2026-05-18 확인).
-                GraphHopper / ORS는 API key 필요. Google Directions는 유료. 도시
-                내 &#8804; 2 km 단순 도보는 haversine &#215; 1.25 detour &#247;
-                5 km/h 가 실측과 &#177;2분 차이로 큰 오류 잡아내기엔 충분.
+                driving으로 fallback (2026-05-18 확인), GraphHopper/ORS는 API
+                key 필요, Google Directions API는 유료. 도시 내 &#8804; 2 km
+                단순 도보는 haversine &#215; 1.25 detour &#247; 5 km/h가 실측과
+                &#177;2분 차이 &#8212; 큰 오류 잡아내기엔 충분.
               </p>
             </div>
 
@@ -363,14 +352,14 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>assets/app.js:65-103</code>
+                  <code>assets/app.js:65&#8211;103</code>
                   (<code>transitModeToGoogleMode</code>,
                   <code>buildDirectionsUrl</code>,
                   <code>getTransitEndpoints</code>)
                 </li>
                 <li>
-                  <code>assets/app.js:275-296</code> (transit 카드 내 deep-link
-                  버튼)
+                  <code>assets/app.js:275&#8211;296</code> (transit 카드 내
+                  deep-link 버튼)
                 </li>
                 <li>
                   <code>scripts/verify-walk-times.mjs</code> (haversine +
@@ -382,9 +371,7 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>8335aba</code> feat(transit): Google Maps
-                deep-link button &nbsp;&#183;&nbsp; <code>aeadd38</code>
-                test(qa): walking-time sanity check
+                관련 commits: <code>8335aba</code> <code>aeadd38</code>
               </p>
             </div>
 
@@ -412,19 +399,17 @@
               <ul>
                 <li>
                   origin fallback이 prev-day 마지막 stop인데, 그 last stop이
-                  dotonbori 같은 관광지면 호텔과 약간 어긋남 (직선 500m 내).
-                  정확하게 하려면 itinerary stop에
-                  <code>from_place_id</code> 명시 필드 추가가 필요. 현재는 작은
-                  오차라 trade-off로 그대로 유지.
+                  dotonbori 같은 관광지면 호텔과 약간 어긋남. 정확하게 하려면
+                  itinerary stop에 <code>from_place_id</code> 명시 필드 추가가
+                  필요. 현재는 작은 오차라 trade-off로 유지.
                 </li>
                 <li>
                   Google Directions API key를 추후 사용한다면 사전 빌드 타임에
-                  verified_minutes·verified_url 정적 캐싱 가능. 현재는
-                  클라이언트 사이드 즉석 생성으로 충분.
+                  verified_minutes·verified_url 정적 캐싱 가능.
                 </li>
                 <li>
-                  검증 휴리스틱이 hybrid mode (JR환상선+도보)를 skip &#8212;
-                  사용자가 도보 비중이 큰 hybrid를 의심하면 별도 분석 필요.
+                  검증 휴리스틱이 hybrid mode (<code>JR환상선+도보</code>)를
+                  skip &#8212; 도보 비중이 큰 hybrid를 의심하면 별도 분석 필요.
                 </li>
               </ul>
 
@@ -435,8 +420,8 @@
                   65 places, 5 days validated
                 </li>
                 <li>
-                  <code>node --test tests/validate-data.test.mjs</code>
-                  &#8594; 11 pass
+                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
+                  11 pass
                 </li>
                 <li>
                   <code>npm run verify-walk</code> &#8594; 7개 도보 검증,
@@ -444,11 +429,10 @@
                   보수 조정 후)
                 </li>
                 <li>
-                  <code>browse</code> 스크립트로 디테일 패널 deep-link 버튼
-                  확인: day1/namba_hotel (transit) &#8594;
-                  <code>&travelmode=transit</code>, day1/dotonbori (도보)
-                  &#8594; <code>&travelmode=walking</code>, day2/fushimi_inari
-                  origin 좌표 = namba_hotel &#10003;, console error 0
+                  browse smoke: day1/namba_hotel (라피트) &#8594;
+                  <code>&amp;travelmode=transit</code> &#10003;, day1/dotonbori
+                  (도보) &#8594; <code>&amp;travelmode=walking</code> &#10003;,
+                  console error 0
                 </li>
               </ul>
 
@@ -456,19 +440,18 @@
               <ul>
                 <li>
                   (P2) day-first stop origin이 prev-day last stop 좌표라 부정확
-                  &#8594; itinerary stop에
-                  <code>origin_place_id</code> 옵셔널 필드 추가,
-                  <code>getTransitEndpoints</code>가 우선 사용. validator에
-                  옵셔널 참조 무결성 검증 추가. (적용)
+                  &#8594; itinerary stop에 <code>origin_place_id</code> 옵셔널
+                  필드 추가, <code>getTransitEndpoints</code>가 우선 사용.
+                  validator에 옵셔널 참조 무결성 검증 추가. (적용)
                 </li>
                 <li>
-                  (P2) fushimi_inari, osaka_castle, usj의 첫-stop 케이스만 영향
-                  &#8594; <code>origin_place_id</code>로 해결.
+                  (P2) intra-day stop transit_from_prev.from이 prev stop 이름과
+                  다른 경우 &#8594; <code>origin_place_id</code>로 해결.
                 </li>
                 <li>
-                  (P2) verify-walk가 baseline에 flag 2건이라 exit 2로 CI 깨짐
-                  &#8594; 두 도보 segment 보수 조정 +
-                  <code>--warn-only</code> 옵션 추가. 현재 flag 0, exit 0.
+                  (P2) verify-walk가 flag 2건이라 exit 2로 CI 깨짐 &#8594; 두
+                  도보 segment 보수 조정 + <code>--warn-only</code> 옵션 추가.
+                  현재 flag 0, exit 0.
                 </li>
               </ul>
             </div>

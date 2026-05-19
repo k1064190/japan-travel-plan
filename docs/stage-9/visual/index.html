@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -21,7 +20,6 @@
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -38,7 +36,6 @@
         color: #6b7280;
         margin-top: 0.2rem;
       }
-
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -87,13 +84,11 @@
         color: #0f766e;
         font-weight: 600;
       }
-
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
       }
-
       section h2 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -102,13 +97,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
-
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
-
       @media (max-width: 720px) {
         .card-grid {
           grid-template-columns: 1fr;
@@ -123,7 +116,6 @@
           padding: 1.25rem 1rem;
         }
       }
-
       article {
         background: #fff;
         border: 1px solid #e5e7eb;
@@ -138,14 +130,12 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #f3f4f6;
       }
-
       .section-block {
         margin-bottom: 1rem;
       }
       .section-block:last-child {
         margin-bottom: 0;
       }
-
       .section-block h4 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -166,7 +156,6 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
-
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -176,7 +165,6 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -186,7 +174,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -272,14 +259,17 @@
         <div class="timeline-node muted">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 9</h2>
-
         <div class="card-grid">
-          <!-- Single card sourced from restaurant-ratings.md -->
           <article aria-labelledby="card-ratings">
             <h3 id="card-ratings">Restaurant Candidates + Ratings</h3>
 
@@ -323,8 +313,8 @@
                   <ul>
                     <li>
                       <code>renderRating(obj)</code> 공용 헬퍼:
-                      <code>&#9733; 4.3 · 후기 1,234개 (Tabelog)</code> 포맷
-                      (필드 있는 만큼만 표시).
+                      <code>&#9733; 4.3 &middot; 후기 1,234개 (Tabelog)</code>
+                      포맷.
                     </li>
                     <li>
                       main 명소 detail 패널의 맛집 카드 type 라인 옆에 inline
@@ -334,14 +324,14 @@
                       alt place detail 패널의 헤더(<code>name_jp</code>) 아래에
                       inline 표시.
                     </li>
-                    <li>색은 amber-600 (별점 분위기), 폰트 small.</li>
                   </ul>
                 </li>
                 <li>
                   <strong>데이터</strong> (<code>data/places.json</code>)
                   <ul>
                     <li>
-                      Day1-4 area에 새 음식점 alt 36개 (4 subagent 병렬 검색).
+                      Day1&#8211;4 area에 새 음식점 alt 36개 (4 subagent 병렬
+                      검색).
                       라멘·오코노미야키·타코야키·스시·야끼니쿠·쿠시카츠·우동·소바·카츠·디저트·이자카야·카레
                       등.
                     </li>
@@ -369,7 +359,7 @@
               </p>
               <p style="margin-top: 0.5rem">
                 Tabelog 점수 해석: 일본 Tabelog는 3.0&#8211;4.0 사이가 정상
-                분포이며, 3.5+ 가 인기, 3.8+ 가 명점 수준. 그래서 별점이 4.x로
+                분포이며, 3.5+가 인기, 3.8+가 명점 수준. 그래서 별점이 4.x로
                 보이지 않아도 한국 사용자가 오해하지 않게
                 <code>(Tabelog)</code> 출처를 함께 표시.
               </p>
@@ -379,20 +369,26 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>scripts/validate-data.mjs:20-37</code>
-                  (<code>validateRating</code> 헬퍼)
+                  <code>scripts/validate-data.mjs:20&#8211;37</code> (<code
+                    >validateRating</code
+                  >
+                  헬퍼)
                 </li>
                 <li>
-                  <code>scripts/validate-data.mjs:115-128</code> (place +
+                  <code>scripts/validate-data.mjs:115&#8211;128</code> (place +
                   restaurants[]에 호출)
                 </li>
                 <li>
-                  <code>assets/app.js:37-46</code>
-                  (<code>renderRating</code> 헬퍼)
+                  <code>assets/app.js:37&#8211;46</code> (<code
+                    >renderRating</code
+                  >
+                  헬퍼)
                 </li>
                 <li>
-                  <code>assets/app.js:48-67</code>
-                  (<code>renderRestaurant</code> rating inline)
+                  <code>assets/app.js:48&#8211;67</code> (<code
+                    >renderRestaurant</code
+                  >
+                  rating inline)
                 </li>
                 <li>
                   <code>assets/app.js:416</code> (<code>renderDetail</code>
@@ -404,11 +400,8 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>e638e32</code> feat(schema): optional rating
-                fields &nbsp;&#183;&nbsp; <code>eaff7e8</code>
-                feat(detail): render ratings inline &nbsp;&#183;&nbsp;
-                <code>c12b193</code> data: add 36 restaurant alt-candidates +
-                Tabelog ratings
+                관련 commits: <code>e638e32</code> <code>eaff7e8</code>
+                <code>c12b193</code>
               </p>
             </div>
 
@@ -427,7 +420,7 @@
                 </li>
                 <li>
                   Tabelog 별점 표기 (<code>(Tabelog)</code> 출처 명시)로 한국
-                  사용자가 일본 점수 체계(3-4점 분포)를 오해하지 않게 함.
+                  사용자가 일본 점수 체계(3&#8211;4점 분포)를 오해하지 않게 함.
                 </li>
               </ul>
 
@@ -444,7 +437,7 @@
                   별점 데이터의 신뢰도가 균일하지 않음 &#8212; subagent가
                   Tabelog rating을 직접 fetch하지 않고 후기 게시글에서 추정한
                   케이스도 있음. 정확한 라이브 점수는 Tabelog API/스크레이핑이
-                  필요 (현 단계 범위 밖).
+                  필요.
                 </li>
                 <li>
                   main 명소들의 내부 <code>restaurants[]</code>는 sample 1건만
@@ -459,26 +452,26 @@
                   131 places, 5 days validated
                 </li>
                 <li>
-                  <code>node --test tests/validate-data.test.mjs</code>
-                  &#8594; 11 pass
+                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
+                  11 pass
                 </li>
                 <li>
                   <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
                   segment all within tolerance
                 </li>
                 <li>
-                  browse smoke: Day별 alt 수 증가 (day1 18&#8594;32, day2
+                  browse smoke: Day별 alt 수 증가: day1 18&#8594;32, day2
                   33&#8594;57, day3 35&#8594;51, day4 17&#8594;24, day5
-                  13&#8594;14)
+                  13&#8594;14
                 </li>
                 <li>
-                  이치란 alt 클릭 &#8594; 헤더 아래 "&#9733; 3.6 · 후기 2,100개
-                  (Tabelog)" 정상 표시
+                  이치란 alt 클릭 &#8594; 헤더 아래 "&#9733; 3.6 &middot; 후기
+                  2,100개 (Tabelog)" 정상 표시
                 </li>
                 <li>
-                  긴류 라멘 main-restaurant 카드 안에서도 동일 inline 별점 표시,
-                  console error 0
+                  긴류 라멘 main-restaurant 카드 안에서도 동일 inline 별점 표시
                 </li>
+                <li>console error 0</li>
               </ul>
             </div>
           </article>

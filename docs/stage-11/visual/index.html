@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -21,7 +20,6 @@
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -38,7 +36,6 @@
         color: #6b7280;
         margin-top: 0.2rem;
       }
-
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -87,13 +84,11 @@
         color: #0f766e;
         font-weight: 600;
       }
-
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
       }
-
       section h2 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -102,13 +97,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
-
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
-
       @media (max-width: 720px) {
         .card-grid {
           grid-template-columns: 1fr;
@@ -123,7 +116,6 @@
           padding: 1.25rem 1rem;
         }
       }
-
       article {
         background: #fff;
         border: 1px solid #e5e7eb;
@@ -138,14 +130,12 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #f3f4f6;
       }
-
       .section-block {
         margin-bottom: 1rem;
       }
       .section-block:last-child {
         margin-bottom: 0;
       }
-
       .section-block h4 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -166,7 +156,6 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
-
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -176,7 +165,6 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -186,7 +174,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -272,6 +259,11 @@
         <div class="timeline-node active" aria-current="step">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
@@ -336,7 +328,7 @@
               <ul>
                 <li>
                   새 branch <code>feature/real-ratings</code>, 4 background
-                  subagent 병렬 dispatch (Day1-4 area별)
+                  subagent 병렬 dispatch (Day1&#8211;4 area별)
                 </li>
                 <li>
                   각 subagent: places.json의 식당 entry 목록을 받아 &#8594;
@@ -360,8 +352,8 @@
               <ul>
                 <li>
                   <code>validate-data.mjs</code> 통과 &#8212; rating field
-                  schema (number 0-5, integer review_count, non-empty source)
-                  검증 그대로 적용
+                  schema (number 0&#8211;5, integer review_count, non-empty
+                  source) 검증 그대로 적용
                 </li>
                 <li><code>verify-walk-times.mjs</code> 통과</li>
                 <li>
@@ -402,7 +394,7 @@
                 <li>
                   4 subagent 병렬 dispatch로 ~13분 wall-clock에 110+ entry
                   식당의 별점 fetch 완료. WebFetch 자체는 Tabelog 페이지당
-                  ~2-4초.
+                  ~2&#8211;4초.
                 </li>
                 <li>
                   추정치와 실측의 차이가 의미 있는 entry 다수 발견:
@@ -493,9 +485,9 @@
                   지나면 약간 변동. 재실행으로 갱신 가능.
                 </li>
                 <li>
-                  일부 한국 사용자가 보기엔 Tabelog 점수 체계 (3.0-4.0 분포)가
-                  낮아 보일 수 있음 &#8212; <code>(Tabelog)</code> 출처 표기로
-                  맥락 제공.
+                  일부 한국 사용자가 보기엔 Tabelog 점수 체계 (3.0&#8211;4.0
+                  분포)가 낮아 보일 수 있음 &#8212; <code>(Tabelog)</code> 출처
+                  표기로 맥락 제공.
                 </li>
                 <li>
                   사용 패턴이 한국어 후기 위주라면 Naver Place 또는 Google Maps
