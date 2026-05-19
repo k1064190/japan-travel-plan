@@ -78,11 +78,6 @@
         background: #9ca3af;
         color: #fff;
       }
-      .timeline-node.future {
-        background: #fff;
-        border: 2px solid #0f766e;
-        color: #0f766e;
-      }
       .timeline-label {
         font-size: 0.7rem;
         color: #6b7280;
@@ -269,8 +264,13 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">10</div>
+        <div class="timeline-node muted">10</div>
         <span class="timeline-label">Stage 10</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">Stage 11</span>
       </div>
     </nav>
 
@@ -280,10 +280,8 @@
 
         <div class="card-grid">
           <!-- Single card sourced from restaurant-ratings.md -->
-          <article aria-labelledby="card-restaurant-ratings">
-            <h3 id="card-restaurant-ratings">
-              Restaurant Candidates + Ratings
-            </h3>
+          <article aria-labelledby="card-ratings">
+            <h3 id="card-ratings">Restaurant Candidates + Ratings</h3>
 
             <div class="section-block">
               <h4>Why</h4>
@@ -299,30 +297,61 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  스키마 확장 (<code>scripts/validate-data.mjs</code>):
-                  <code>place.rating</code> / <code>place.review_count</code> /
-                  <code>place.rating_source</code> &#8212; 어떤 place든 옵셔널.
-                  <code>place.restaurants[].rating</code> /
-                  <code>.review_count</code> / <code>.rating_source</code>
-                  &#8212; main 명소 내부 맛집 카드에도 동일.
-                  <code>validateRating(label, obj, errors)</code> 공용 헬퍼로
-                  검증 통합.
+                  <strong>스키마 확장</strong>
+                  (<code>scripts/validate-data.mjs</code>)
+                  <ul>
+                    <li>
+                      <code>place.rating</code> /
+                      <code>place.review_count</code> /
+                      <code>place.rating_source</code> &#8212; alt 카테고리
+                      음식점·호텔 등 어떤 place든 옵셔널.
+                    </li>
+                    <li>
+                      <code>place.restaurants[].rating</code> /
+                      <code>.review_count</code> /
+                      <code>.rating_source</code> &#8212; 기존 main 명소 내부
+                      맛집 카드에도 동일.
+                    </li>
+                    <li>
+                      <code>validateRating(label, obj, errors)</code> 공용
+                      헬퍼로 검증 통합.
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  UI (<code>assets/app.js</code>):
-                  <code>renderRating(obj)</code> 공용 헬퍼 &#8212;
-                  <code>&#9733; 4.3 &#183; 후기 1,234개 (Tabelog)</code>
-                  포맷 (필드 있는 만큼만 표시). main 명소 맛집 카드 type 라인
-                  옆에 inline 표시. alt place detail 헤더 (<code>name_jp</code>)
-                  아래에 inline 표시. 색은 amber-600, 폰트 small.
+                  <strong>UI</strong> (<code>assets/app.js</code>)
+                  <ul>
+                    <li>
+                      <code>renderRating(obj)</code> 공용 헬퍼:
+                      <code>&#9733; 4.3 · 후기 1,234개 (Tabelog)</code> 포맷
+                      (필드 있는 만큼만 표시).
+                    </li>
+                    <li>
+                      main 명소 detail 패널의 맛집 카드 type 라인 옆에 inline
+                      표시.
+                    </li>
+                    <li>
+                      alt place detail 패널의 헤더(<code>name_jp</code>) 아래에
+                      inline 표시.
+                    </li>
+                    <li>색은 amber-600 (별점 분위기), 폰트 small.</li>
+                  </ul>
                 </li>
                 <li>
-                  데이터 (<code>data/places.json</code>): Day1&#8211;4 area에 새
-                  음식점 alt <strong>36개</strong> (4 subagent 병렬 검색).
-                  라멘&#183;오코노미야키&#183;타코야키&#183;스시&#183;야끼니쿠&#183;쿠시카츠&#183;우동&#183;소바&#183;카츠&#183;디저트&#183;이자카야&#183;카레
-                  등. 거의 대부분 Tabelog 별점 + 후기 수 포함. 1개 sample
-                  (dotonbori main 안 긴류 라멘) main-restaurant rating 인젝션해
-                  양쪽 UI 경로 모두 검증. itinerary 변경 0.
+                  <strong>데이터</strong> (<code>data/places.json</code>)
+                  <ul>
+                    <li>
+                      Day1-4 area에 새 음식점 alt 36개 (4 subagent 병렬 검색).
+                      라멘·오코노미야키·타코야키·스시·야끼니쿠·쿠시카츠·우동·소바·카츠·디저트·이자카야·카레
+                      등.
+                    </li>
+                    <li>거의 대부분 Tabelog 별점 + 후기 수 포함.</li>
+                    <li>
+                      1개 sample (dotonbori main 안 긴류 라멘) main-restaurant
+                      rating 인젝션해 양쪽 UI 경로 모두 검증.
+                    </li>
+                    <li>itinerary 변경 0.</li>
+                  </ul>
                 </li>
               </ul>
             </div>
@@ -333,14 +362,16 @@
                 스키마 변경부터 sample 1건으로 inline 표시 동작 확인 &#8594;
                 Phase B 4 subagent 병렬 dispatch &#8594; 각자
                 <code>/tmp/restaurant-patches/dayN-food.json</code> 저장 &#8594;
-                단일 merge 스크립트가 <code>places.json</code>에 합침 (충돌 시
-                day1 우선 dedupe &#8212; Day1과 Day3가 ichiran/kamukura/mizuno
-                중복했음). 1건 http:// URL &#8594; https:// 자동 업그레이드.
+                단일 merge 스크립트가 places.json에 합침 (충돌 시 day1 우선
+                dedupe &#8212; Day1과 Day3가 ichiran/kamukura/mizuno 중복했음).
+                1건 <code>http://</code> URL &#8594; <code>https://</code> 자동
+                업그레이드.
               </p>
               <p style="margin-top: 0.5rem">
                 Tabelog 점수 해석: 일본 Tabelog는 3.0&#8211;4.0 사이가 정상
-                분포이며, 3.5+가 인기, 3.8+가 명점 수준. 한국 사용자가 오해하지
-                않게 <code>(Tabelog)</code> 출처를 함께 표시.
+                분포이며, 3.5+ 가 인기, 3.8+ 가 명점 수준. 그래서 별점이 4.x로
+                보이지 않아도 한국 사용자가 오해하지 않게
+                <code>(Tabelog)</code> 출처를 함께 표시.
               </p>
             </div>
 
@@ -348,24 +379,24 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>scripts/validate-data.mjs:20&#8211;37</code>
+                  <code>scripts/validate-data.mjs:20-37</code>
                   (<code>validateRating</code> 헬퍼)
                 </li>
                 <li>
-                  <code>scripts/validate-data.mjs:115&#8211;128</code>
-                  (place + restaurants[]에 호출)
+                  <code>scripts/validate-data.mjs:115-128</code> (place +
+                  restaurants[]에 호출)
                 </li>
                 <li>
-                  <code>assets/app.js:37&#8211;46</code>
+                  <code>assets/app.js:37-46</code>
                   (<code>renderRating</code> 헬퍼)
                 </li>
                 <li>
-                  <code>assets/app.js:48&#8211;67</code>
+                  <code>assets/app.js:48-67</code>
                   (<code>renderRestaurant</code> rating inline)
                 </li>
                 <li>
-                  <code>assets/app.js:416</code>
-                  (<code>renderDetail</code> header rating)
+                  <code>assets/app.js:416</code> (<code>renderDetail</code>
+                  header rating)
                 </li>
                 <li>
                   <code>data/places.json</code> (36 새 alt 음식점 + 1 sample
@@ -373,8 +404,11 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commits: <code>e638e32</code> <code>eaff7e8</code>
-                <code>c12b193</code>
+                관련 commits: <code>e638e32</code> feat(schema): optional rating
+                fields &nbsp;&#183;&nbsp; <code>eaff7e8</code>
+                feat(detail): render ratings inline &nbsp;&#183;&nbsp;
+                <code>c12b193</code> data: add 36 restaurant alt-candidates +
+                Tabelog ratings
               </p>
             </div>
 
@@ -393,7 +427,7 @@
                 </li>
                 <li>
                   Tabelog 별점 표기 (<code>(Tabelog)</code> 출처 명시)로 한국
-                  사용자가 일본 점수 체계(3&#8211;4점 분포)를 오해하지 않게 함.
+                  사용자가 일본 점수 체계(3-4점 분포)를 오해하지 않게 함.
                 </li>
               </ul>
 
@@ -433,22 +467,17 @@
                   segment all within tolerance
                 </li>
                 <li>
-                  browse smoke:
-                  <ul>
-                    <li>
-                      Day별 alt 수 증가: day1 18&#8594;32, day2 33&#8594;57,
-                      day3 35&#8594;51, day4 17&#8594;24, day5 13&#8594;14
-                    </li>
-                    <li>
-                      이치란 alt 클릭 &#8594; 헤더 아래 "&#9733; 3.6 &#183; 후기
-                      2,100개 (Tabelog)" 정상 표시
-                    </li>
-                    <li>
-                      긴류 라멘 main-restaurant 카드 안에서도 동일 inline 별점
-                      표시
-                    </li>
-                    <li>console error 0</li>
-                  </ul>
+                  browse smoke: Day별 alt 수 증가 (day1 18&#8594;32, day2
+                  33&#8594;57, day3 35&#8594;51, day4 17&#8594;24, day5
+                  13&#8594;14)
+                </li>
+                <li>
+                  이치란 alt 클릭 &#8594; 헤더 아래 "&#9733; 3.6 · 후기 2,100개
+                  (Tabelog)" 정상 표시
+                </li>
+                <li>
+                  긴류 라멘 main-restaurant 카드 안에서도 동일 inline 별점 표시,
+                  console error 0
                 </li>
               </ul>
             </div>

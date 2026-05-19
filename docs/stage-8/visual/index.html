@@ -78,11 +78,6 @@
         background: #9ca3af;
         color: #fff;
       }
-      .timeline-node.future {
-        background: #fff;
-        border: 2px solid #0f766e;
-        color: #0f766e;
-      }
       .timeline-label {
         font-size: 0.7rem;
         color: #6b7280;
@@ -264,13 +259,18 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">9</div>
+        <div class="timeline-node muted">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">10</div>
+        <div class="timeline-node muted">10</div>
         <span class="timeline-label">Stage 10</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">Stage 11</span>
       </div>
     </nav>
 
@@ -306,7 +306,7 @@
                 </li>
                 <li>
                   <strong>데이터</strong>: 4개 background subagent가 day별로 새
-                  alt 후보 <strong>27개</strong> 추가:
+                  alt 후보 27개 추가:
                   <ul>
                     <li>
                       Day1 area: 7개 (난바·신사이바시·도톤보리 카페·신사·야식)
@@ -330,19 +330,20 @@
                 카테고리 place들 중 active day stops 중 어느 하나라도 1.5 km
                 안에 있는 것 (현재 day의 stop 자체는 제외) 반환. 각 candidate를
                 <code>altLayer</code>에 새 회색 마커로 추가, 클릭 핸들러는
-                <code>selectAlt(placeId)</code>.
+                <code>selectAlt(placeId)</code>. selectAlt는 numbered 마커처럼
+                sidebar 활성화는 안 하고 <code>renderDetail</code>만 호출.
               </p>
               <p style="margin-top: 0.5rem">
                 <code>renderDetail</code>은 <code>stop.time === null</code>이면
                 시간 라벨을 "후보 &#8212; 일정에 들어있지 않음"으로 교체 +
-                transit 카드 자동 생략 (<code>transit_from_prev: null</code>).
+                transit 카드 자동 생략 (transit_from_prev: null).
               </p>
               <p style="margin-top: 0.5rem">
                 데이터 추가는 4개 subagent가 WebSearch로 한국어 후기 큐레이션
                 &#8594; <code>/tmp/alt-patches/dayN-new.json</code> 저장 &#8594;
                 단일 merge 스크립트로 places.json에 일괄 추가. 신규 27 entries
-                모두 schema 통과 (https URL, 일본 좌표 범위,
-                <code>curated_links</code> 3개 each).
+                모두 schema 통과 (https URL, 일본 좌표 범위, curated_links 3개
+                each).
               </p>
             </div>
 
@@ -350,27 +351,28 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>assets/app.js:122&#8211;181</code>
+                  <code>assets/app.js:122-181</code>
                   (<code>state.altLayer</code>, <code>haversineKm</code>,
                   <code>altCandidatesForDay</code>, <code>selectAlt</code>)
                 </li>
                 <li>
-                  <code>assets/app.js:222&#8211;244</code>
-                  (<code>renderDay</code> 첫 부분 &#8212; alt 마커 그리기)
+                  <code>assets/app.js:222-244</code> (<code>renderDay</code>
+                  첫 부분 &#8212; alt 마커 그리기)
                 </li>
                 <li>
-                  <code>assets/app.js:401</code>
-                  (<code>renderDetail</code> 시간 라벨 분기)
+                  <code>assets/app.js:401</code> (<code>renderDetail</code>
+                  시간 라벨 분기)
                 </li>
                 <li>
-                  <code>assets/styles.css:44&#8211;66</code>
-                  (<code>.alt-marker</code> 스타일)
+                  <code>assets/styles.css:44-66</code> (<code>.alt-marker</code>
+                  스타일)
                 </li>
                 <li><code>data/places.json</code> (27 새 entries)</li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commits: <code>cc0e349</code> feat(map),
-                <code>0aff6cb</code> data: add 27 alt-candidate places
+                관련 commits: <code>cc0e349</code> feat(map): alt-candidate
+                markers &nbsp;&#183;&nbsp; <code>0aff6cb</code> data: add 27
+                alt-candidate places
               </p>
             </div>
 
@@ -426,18 +428,13 @@
                   도보, flagged 0
                 </li>
                 <li>
-                  browse smoke (per day):
-                  <ul>
-                    <li>day1: numbered 6, alt 18</li>
-                    <li>day2: numbered 12, alt 33</li>
-                    <li>day3: numbered 16, alt 35</li>
-                    <li>day4: numbered 6, alt 17</li>
-                    <li>day5: numbered 4, alt 13</li>
-                    <li>
-                      alt 클릭 &#8594; 디테일 패널 정상 ("후보 &#8212; 일정에
-                      들어있지 않음" 라벨 표시), console error 0
-                    </li>
-                  </ul>
+                  browse smoke (per day): day1 numbered 6 / alt 18, day2
+                  numbered 12 / alt 33, day3 numbered 16 / alt 35, day4 numbered
+                  6 / alt 17, day5 numbered 4 / alt 13
+                </li>
+                <li>
+                  alt 클릭 &#8594; 디테일 패널 정상 ("후보 &#8212; 일정에
+                  들어있지 않음" 라벨 표시), console error 0
                 </li>
               </ul>
             </div>
