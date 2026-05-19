@@ -153,6 +153,9 @@ const ALT_FAR_KM = 8.0; // showFarCandidates 켰을 때 인정 거리
 const FOOD_TAG_RE =
   /맛집|라멘|스시|회전초밥|카츠|우동|소바|야끼니쿠|쿠시카츠|타코야키|오코노미야키|디저트|카페|이자카야|카레|화과자|두부|텐푸라|스키야키|장어|파르페|베이커리|야끼소바|정식/;
 
+// Places with a numeric rating are assumed to be food venues (the rating
+// schema is only populated for restaurants in the current data). Unrated
+// places need an explicit food-keyword tag to count as food.
 function isFoodPlace(place) {
   if (!place) return false;
   if (typeof place.rating === "number") return true;
@@ -358,10 +361,10 @@ function renderSidebar() {
     .map((id) => ({ id, place: state.places[id] }))
     .filter(({ place }) => !!place)
     .sort((a, b) => {
-      const ra = typeof a.place.rating === "number" ? a.place.rating : -1;
-      const rb = typeof b.place.rating === "number" ? b.place.rating : -1;
+      const ra = Number.isFinite(a.place.rating) ? a.place.rating : -1;
+      const rb = Number.isFinite(b.place.rating) ? b.place.rating : -1;
       if (rb !== ra) return rb - ra;
-      return a.place.name_ko.localeCompare(b.place.name_ko, "ko");
+      return (a.place.name_ko || "").localeCompare(b.place.name_ko || "", "ko");
     });
 
   const altCardsHtml = altPlaces
@@ -389,9 +392,11 @@ function renderSidebar() {
     })
     .join("");
 
-  const candidateSection =
-    altPlaces.length || state.filterFood || state.showFarCandidates
-      ? `
+  // Always show controls when the day has stops — otherwise a day with zero
+  // candidates at the current radius would hide the '먼 후보도' toggle the user
+  // needs to discover anything.
+  const candidateSection = day.stops?.length
+    ? `
     <div class="p-3 border-t border-b bg-slate-50">
       <div class="flex items-center justify-between gap-2 mb-2">
         <h3 class="font-semibold text-sm text-slate-700">주변 후보 (${altPlaces.length})</h3>
@@ -406,7 +411,7 @@ function renderSidebar() {
       </div>
     </div>
     <ul>${altCardsHtml}</ul>`
-      : "";
+    : "";
 
   sidebar.innerHTML = `
     <div class="p-4 border-b" style="border-color:${color}">
