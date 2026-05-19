@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 1 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 8 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -229,63 +229,66 @@
     </header>
 
     <nav class="timeline" aria-label="Project stages">
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">1</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">2</div>
+        <div class="timeline-node muted">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">3</div>
+        <div class="timeline-node muted">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">4</div>
+        <div class="timeline-node muted">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">5</div>
+        <div class="timeline-node muted">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">6</div>
+        <div class="timeline-node muted">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">7</div>
+        <div class="timeline-node muted">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node future">8</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 1</h2>
+        <h2 id="stage-heading">Stage 8</h2>
 
         <div class="card-grid">
-          <!-- Single card sourced from skeleton.md -->
-          <article aria-labelledby="card-skeleton">
-            <h3 id="card-skeleton">Project Skeleton + Routing + End-to-End</h3>
+          <!-- Single card sourced from alt-candidates.md -->
+          <article aria-labelledby="card-alt-candidates">
+            <h3 id="card-alt-candidates">
+              Alt-Candidate Markers + Catalog Expansion
+            </h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                설계 전체를 한 번에 만들기 전에 데이터 &#8594; 지도 &#8594;
-                사이드바 &#8594; 디테일 &#8594; 라우팅의 와이어링이 처음부터
-                끝까지 동작하는지 5개 sample 명소로 검증한다. 60개 데이터를 채운
-                뒤 와이어링이 안 맞으면 되돌리기 비싸기 때문.
+                지금까지는 일정에 박힌 stop만 맵에 표시 &#8212; 그래서 "가는
+                길에 들를 만한 곳"이 시각적으로 보이지 않았다.
+                <code>places.json</code>에 alt 카테고리 60+ 후보가 이미 있었지만
+                UI 상에서 발견 불가능. 사용자가 현장에서 일정대로 움직이면서
+                "여기 근처에 뭐 있지?"를 즉시 확인할 수 있게 만들 차례.
               </p>
             </div>
 
@@ -293,103 +296,157 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>index.html</code> 골격 + Leaflet 1.9.4 / Tailwind play
-                  CDN / Pretendard CDN 임포트
+                  UI: 활성 day의 itinerary stop들 좌표 기준 1.5 km 반경 안 alt
+                  카테고리 명소를 작은 회색 원형 마커로 맵에 표시. 호버 시
+                  명소명 툴팁, 클릭 시 디테일 패널 (큐레이션 링크/활동/후기 검색
+                  표시, 시간&#183;duration은 "후보 &#8212; 일정에 들어있지 않음"
+                  라벨로 대체).
                 </li>
                 <li>
-                  <code>assets/styles.css</code> day 색상 CSS 변수 (<code
-                    >--day-1</code
-                  >
-                  ~ <code>--day-5</code>) + numbered-marker 스타일 + 모바일
-                  media query
+                  데이터: 4개 background subagent가 day별로 새 alt 후보 27개
+                  추가:
+                  <ul>
+                    <li>
+                      Day1 area: 7개 (난바&#183;신사이바시&#183;도톤보리
+                      카페&#183;신사&#183;야식)
+                    </li>
+                    <li>
+                      Day2 area: 8개 (교토 동쪽 사찰&#183;% Arabica&#183;철학의
+                      길)
+                    </li>
+                    <li>
+                      Day3 area: 8개 (오사카 미술관&#183;키타하마
+                      카페&#183;코리아타운)
+                    </li>
+                    <li>
+                      Day4 area: 4개 (덴포잔 공원&#183;시티워크
+                      타코파&#183;환승역)
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  <code>assets/app.js</code> 데이터 로더(error handling 포함),
-                  Leaflet 마커, 사이드바, 디테일 패널, hash router, XSS-safe
-                  <code>esc()</code>/<code>safeHref()</code> 헬퍼
-                </li>
-                <li><code>data/itinerary.json</code> Day1 5개 stop</li>
-                <li>
-                  <code>data/places.json</code> 5개 sample (간사이공항,
-                  난바숙소, 구로몬, 덴덴타운, 도톤보리)
-                </li>
+                <li>itinerary 변경 0건 (사용자 명시 요구).</li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Vanilla ES6, 단일 모듈 (<code>assets/app.js</code>). 상태는
-                in-memory <code>state</code> 객체. 지도는
-                <code>fitBounds</code>로 day 전체 보이도록 시작, 클릭 시
-                <code>flyTo</code>. URL hash는 <code>#dayN/placeId</code> 포맷,
-                새로고침해도 상태 복원. <code>boot()</code>는 데이터 fetch 실패
-                시 한국어 에러 메시지를 표시.
+                <code>renderDay</code>가 active day stops를 그리기 전에
+                <code>altCandidatesForDay(day)</code>를 호출 &#8212; 모든 alt
+                카테고리 place들 중 active day stops 중 어느 하나라도 1.5 km
+                안에 있는 것 반환. 각 candidate를 <code>altLayer</code>에 새
+                회색 마커로 추가, 클릭 핸들러는 <code>selectAlt(placeId)</code>.
+                selectAlt는 numbered 마커처럼 sidebar 활성화는 안 하고
+                <code>renderDetail</code>만 호출.
+              </p>
+              <p style="margin-top: 0.5rem">
+                <code>renderDetail</code>은 <code>stop.time === null</code>이면
+                시간 라벨을 "후보 &#8212; 일정에 들어있지 않음"으로 교체 +
+                transit 카드 자동 생략 (<code>transit_from_prev: null</code>).
+              </p>
+              <p style="margin-top: 0.5rem">
+                데이터 추가는 4개 subagent가 WebSearch로 한국어 후기 큐레이션
+                &#8594; <code>/tmp/alt-patches/dayN-new.json</code> 저장 &#8594;
+                단일 merge 스크립트로 <code>places.json</code>에 일괄 추가. 신규
+                27 entries 모두 schema 통과 (https URL, 일본 좌표 범위,
+                curated_links 3개 each).
               </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
-                <li><code>index.html</code> (스켈레톤 + CDN imports)</li>
                 <li>
-                  <code>assets/styles.css</code> (day 색상 CSS vars +
-                  numbered-marker + 모바일 media query)
+                  <code>assets/app.js:122&#8211;181</code>
+                  (<code>state.altLayer</code>, <code>haversineKm</code>,
+                  <code>altCandidatesForDay</code>, <code>selectAlt</code>)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>DAY_COLORS</code> /
-                  <code>dayColor</code> / <code>esc</code> /
-                  <code>safeHref</code> helpers
+                  <code>assets/app.js:222&#8211;244</code>
+                  (<code>renderDay</code> 첫 부분 &#8212; alt 마커 그리기)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>state</code>,
-                  <code>loadData</code>, <code>initMap</code>
+                  <code>assets/app.js:401</code>
+                  (<code>renderDetail</code> 시간 라벨 분기)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>renderDay</code>,
-                  <code>selectStop</code> (지도 + 마커)
+                  <code>assets/styles.css:44&#8211;66</code>
+                  (<code>.alt-marker</code> 스타일)
                 </li>
+                <li><code>data/places.json</code> (27 새 entries)</li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>renderSidebar</code>,
-                  <code>renderDetail</code>, <code>renderProgressBar</code> (UI)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>parseHash</code>,
-                  <code>boot</code>, <code>hashchange</code> listener (라우팅)
-                </li>
-                <li>
-                  <code>data/places.json</code>,
-                  <code>data/itinerary.json</code> (5 places, Day1)
+                  관련 commit: <code>cc0e349</code> <code>feat(map)</code>,
+                  <code>0aff6cb</code>
+                  <code>data: add 27 alt-candidate places</code>
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  잘 된 점: TDD 없이도 per-task spec+code 리뷰가 critical 이슈
-                  6개를 사전 차단 (loadData 에러 처리, XSS escaping, null 가드,
-                  DAY_COLORS 폴백, hashchange race, aria-label).
+                  데이터 변경 0 (itinerary 그대로) &#8212; 시각적으로만 후보
+                  노출. 사용자가 일정 그대로 따라가면서 부담 없이 둘러볼 수
+                  있음.
                 </li>
                 <li>
-                  잘 된 점: Tailwind play CDN + Pretendard로 빌드 단계 없이
-                  미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
+                  4 subagent 병렬로 ~6분 wall-clock에 27개 큐레이션 끝. 각자
+                  day별 area에 집중해 컨텐츠 중복 없음.
                 </li>
                 <li>
-                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
-                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
-                  hashchange 시 sidebar 동기화.
+                  좌표 기반 자동 필터 (1.5 km) &#8212;
+                  <code>day_hint</code> 같은 별도 데이터 필드 없이도 자동 매칭.
+                  향후 alt 추가 시 그냥 좌표만 정확하면 자동 노출.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
+              <ul>
+                <li>
+                  <code>ALT_PROXIMITY_KM</code> (1.5)이 적절한지 사용자 경험으로
+                  조정 필요. Day1 18개&#183;Day3 35개는 약간 빽빽함 &#8212; 1.0
+                  km로 좁히거나 카테고리별로 다른 거리 (사찰/카페 0.5 km,
+                  시장/공원 1.5 km 등) 휴리스틱.
                 </li>
                 <li>
-                  Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
-                  Stage 3.1에서 채움),
-                  <code>.numbered-marker.active</code> CSS는 dead code지만 Stage
-                  3.3에서 활성화 예정이므로 보존.
+                  마커 클러스터링 (<code>leaflet.markercluster</code>) 도입
+                  &#8212; 줌 아웃 시 점들이 겹쳐 보이는 문제 해소.
                 </li>
                 <li>
-                  Stage 2 readiness: Ready with caveats &#8212; Critical 가드
-                  픽스 후 진입.
+                  alt 마커 토글 (켜고/끄기) 옵션 &#8212; 일정만 보고 싶을 때.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">검증</h4>
+              <ul>
+                <li>
+                  <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
+                  95 places, 5 days validated
+                </li>
+                <li>
+                  <code>node --test tests/validate-data.test.mjs</code>
+                  &#8594; 11 pass
+                </li>
+                <li>
+                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 7
+                  도보, flagged 0
+                </li>
+                <li>
+                  browse smoke (per day):
+                  <ul>
+                    <li>day1: numbered 6, alt 18</li>
+                    <li>day2: numbered 12, alt 33</li>
+                    <li>day3: numbered 16, alt 35</li>
+                    <li>day4: numbered 6, alt 17</li>
+                    <li>day5: numbered 4, alt 13</li>
+                  </ul>
+                </li>
+                <li>
+                  alt 클릭 &#8594; 디테일 패널 정상 ("후보 &#8212; 일정에
+                  들어있지 않음" 라벨 표시), console error 0
                 </li>
               </ul>
             </div>
