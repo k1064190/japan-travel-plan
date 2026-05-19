@@ -70,5 +70,5 @@ places.json: 131 → **169** (1 entry removed after codex P2)
   - Day3 sidebar 75개 (이전 26 + 49 — 먼 후보 토글 off에서도 많아짐)
   - Day4 sidebar 57개 (이전 26 + 31)
   - Day5 sidebar 42개
-  - Day1 top 5 정렬: 야끼니쿠 M 3.78 → 치토세 3.73 → 치토세 3.72 → 이마이 3.58 → 메오토 젠자이 3.58
+  - Day1 top 5 정렬: 야끼니쿠 M 3.78 → 치토세 3.72 → 이마이 3.58 → 메오토 젠자이 3.58 → 하리주 스키야키 3.57
   - console error 0

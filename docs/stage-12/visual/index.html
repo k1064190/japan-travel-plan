@@ -270,6 +270,7 @@
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 12</h2>
         <div class="card-grid">
+          <!-- Single card sourced from more-restaurants.md -->
           <article aria-labelledby="card-more-restaurants">
             <h3 id="card-more-restaurants">
               More Restaurants (with WebFetched Ratings)
@@ -290,14 +291,13 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong>39 new alt 식당 entries</strong> (Day별 area +
+                  <strong>38 new alt 식당 entries</strong> (Day별 area +
                   WebFetched Tabelog 별점/후기 수 한 번에)
                   <ul>
                     <li>
-                      Day1 (12): 신사이바시·도톤보리·난바 &#8212; 치토세, 메오토
+                      Day1 (11): 신사이바시·도톤보리·난바 &#8212; 치토세, 메오토
                       젠자이, 하리주 스키야키, 혼케 오타코, 코가류, 호쿠쿄쿠세이
-                      오므라이스, 진루이 미나 멘루이 FACTORY, 리로 커피,
-                      긴큐에몬 도톤보리, 쿠쿠루 본점 등
+                      오므라이스, 리로 커피, 긴큐에몬 도톤보리, 쿠쿠루 본점 등
                     </li>
                     <li>
                       Day2 (12): 교토 &#8212; 이노다 커피, 스마트 커피, 잇포도
@@ -330,7 +330,10 @@
                   1건 <code>http</code>&#8594;<code>https</code> URL 자동
                   업그레이드 (aizuya tempozan)
                 </li>
-                <li>places.json: 131 &#8594; <strong>170</strong></li>
+                <li>
+                  <code>places.json</code>: 131 &#8594; <strong>169</strong> (1
+                  entry removed after codex P2)
+                </li>
               </ul>
             </div>
 
@@ -344,7 +347,10 @@
               <ol
                 style="padding-left: 1.2rem; font-size: 0.9rem; color: #374151"
               >
-                <li>places.json read &#8594; 기존 170+ id Set으로 중복 회피</li>
+                <li>
+                  <code>places.json</code> read &#8594; 기존 170+ id Set으로
+                  중복 회피
+                </li>
                 <li>
                   추천 카테고리 (라멘·야끼니쿠·우동·디저트·카페·이자카야 등)에서
                   새 식당 8&#8211;12개 후보
@@ -361,7 +367,7 @@
               </ol>
               <p style="margin-top: 0.5rem">
                 메인이 <code>/tmp/merge-more-restaurants.mjs</code> 한 번 실행해
-                places.json에 일괄 추가. id 충돌 0건.
+                <code>places.json</code>에 일괄 추가. id 충돌 0건.
               </p>
             </div>
 
@@ -369,22 +375,21 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>data/places.json</code> (39 새 alt 식당 entries; UI 코드
+                  <code>data/places.json</code> (38 새 alt 식당 entries; UI 코드
                   변경 0 &#8212; 기존 Stage 8/9/10/11 인프라 그대로 활용)
                 </li>
                 <li>
                   패치 입력:
-                  <code>/tmp/more-restaurants/day{1,2,3,4}.json</code> (subagent
-                  산출, repo에 commit 안 됨)
+                  <code>/tmp/more-restaurants/day{1,2,3,4}.json</code>
                 </li>
                 <li>
                   머지 스크립트:
-                  <code>/tmp/merge-more-restaurants.mjs</code> (이번 한 번 실행)
+                  <code>/tmp/merge-more-restaurants.mjs</code>
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
                 관련 commit: <code>76c8457</code> data: add 39 more restaurant
-                alt-candidates with WebFetched ratings
+                alt-candidates (1 later removed) with WebFetched ratings
               </p>
             </div>
 
@@ -415,7 +420,7 @@
                     </li>
                     <li>
                       Day3: 무기토멘스케 (Tabelog 라멘 백명점 3년 연속,
-                      3.84/2325)·기지 우메다 같은 명점
+                      3.84/2325)·키지 우메다 같은 명점
                     </li>
                     <li>
                       Day4: 시티워크 4F·5F·32F + 텐포잔 안 다른 가게로 USJ 전후
@@ -433,8 +438,9 @@
               <ul>
                 <li>
                   동일 식당이 day별 area 경계에서 다른 id로 추가되는 케이스
-                  (치토세). 다음 batch에는 patch JSON에 "alias_check" 필드로
-                  비슷한 이름 미리 신고하게 하면 충돌 사전 탐지 가능.
+                  (치토세). 다음 batch에는 patch JSON에
+                  <code>alias_check</code> 필드로 비슷한 이름 미리 신고하게 하면
+                  충돌 사전 탐지 가능.
                 </li>
                 <li>
                   별점 분포가 Tabelog 특성상 3.2&#8211;3.8 좁은 폭. 사용자가 더
@@ -451,11 +457,15 @@
               <ul>
                 <li>
                   <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  170 places, 5 days validated
+                  169 places, 5 days validated
                 </li>
                 <li>
                   <code>node --test tests/validate-data.test.mjs</code> &#8594;
                   11 pass
+                </li>
+                <li>
+                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
+                  segment all within tolerance
                 </li>
                 <li>
                   browse smoke:
@@ -472,9 +482,9 @@
                     <li>Day4 sidebar 57개 (이전 26 + 31)</li>
                     <li>Day5 sidebar 42개</li>
                     <li>
-                      Day1 top 5 정렬: 야끼니쿠 M 3.78 &#8594; 치토세 3.73
-                      &#8594; 치토세 3.72 &#8594; 이마이 3.58 &#8594; 메오토
-                      젠자이 3.58
+                      Day1 top 5 정렬: 야끼니쿠 M 3.78 &#8594; 치토세 3.72
+                      &#8594; 이마이 3.58 &#8594; 메오토 젠자이 3.58 &#8594;
+                      하리주 스키야키 3.57
                     </li>
                     <li>console error 0</li>
                   </ul>
