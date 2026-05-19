@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -21,7 +20,6 @@
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -38,7 +36,6 @@
         color: #6b7280;
         margin-top: 0.2rem;
       }
-
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -87,13 +84,11 @@
         color: #0f766e;
         font-weight: 600;
       }
-
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
       }
-
       section h2 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -102,13 +97,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
-
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
-
       @media (max-width: 720px) {
         .card-grid {
           grid-template-columns: 1fr;
@@ -123,7 +116,6 @@
           padding: 1.25rem 1rem;
         }
       }
-
       article {
         background: #fff;
         border: 1px solid #e5e7eb;
@@ -138,14 +130,12 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #f3f4f6;
       }
-
       .section-block {
         margin-bottom: 1rem;
       }
       .section-block:last-child {
         margin-bottom: 0;
       }
-
       .section-block h4 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -166,7 +156,6 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
-
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -176,7 +165,6 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -186,7 +174,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -272,15 +259,18 @@
         <div class="timeline-node muted">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 4</h2>
-
         <div class="card-grid">
-          <!-- Single card sourced from qa.md -->
-          <article aria-labelledby="card-qa">
+          <article aria-labelledby="card-qa" style="grid-column: 1/-1">
             <h3 id="card-qa">QA, Cross-Browser, Final Polish</h3>
 
             <div class="section-block">
@@ -309,7 +299,7 @@
                 </li>
                 <li>
                   <code>assets/styles.css</code> &#8212;
-                  <code>#mobile-tabs</code> 에
+                  <code>#mobile-tabs</code>에
                   <code>padding-bottom: env(safe-area-inset-bottom, 0)</code> +
                   높이 가산
                 </li>
@@ -328,20 +318,17 @@
               <h4>How</h4>
               <p>
                 <code>/home/cwh/.claude/skills/gstack/browse/dist/browse</code>
-                (headless Chromium)로
-                <code>http://127.0.0.1:54130/</code>에 접속해 21개 stop을 hash
-                변경으로 자동 순회. 각 stop의 디테일 헤더가 로드되는지 확인
-                &#8594; 21/21 모두 한국어 명소명이 정확히 표시됨.
+                (headless Chromium)로 <code>http://127.0.0.1:54130/</code>에
+                접속해 21개 stop을 hash 변경으로 자동 순회. 각 stop의 디테일
+                헤더가 로드되는지 확인 &#8594; 21/21 모두 한국어 명소명이 정확히
+                표시됨.
               </p>
               <p style="margin-top: 0.5rem">추가 시나리오:</p>
               <ul>
                 <li>
-                  <code>#day9/foo</code> (invalid) &#8594; 이전엔 URL이
-                  <code>#day9/foo</code>로 유지되고 이전 day의 detail panel이
-                  stale 상태로 남았음. fix: <code>boot()</code> +
-                  <code>hashchange</code> 양쪽에서
-                  <code>history.replaceState</code>로 URL을 정규화하고, place
-                  segment 없는 hash로 가면 detail을 hidden 처리.
+                  <code>#day9/foo</code> (invalid) &#8594; fix:
+                  <code>history.replaceState</code>로 URL 정규화, place segment
+                  없는 hash로 가면 detail hidden 처리.
                 </li>
                 <li>
                   Same-day stop switch (<code>#day3/osaka_castle</code> &#8594;
@@ -350,7 +337,7 @@
                 </li>
                 <li>
                   Mobile viewport (390&#215;844) &#8594; 탭바 표시, safe-area
-                  inset 적용 (헤드리스에선 0px이지만 CSS rule 자체는 합당).
+                  inset 적용.
                 </li>
               </ul>
               <p style="margin-top: 0.5rem">검증:</p>
@@ -360,8 +347,8 @@
                   65 places, 5 days validated
                 </li>
                 <li>
-                  <code>node --test tests/validate-data.test.mjs</code>
-                  &#8594; 11 pass
+                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
+                  11 pass
                 </li>
               </ul>
             </div>
@@ -372,34 +359,31 @@
                 <li><code>scripts/smoke-test.md</code></li>
                 <li><code>README.md</code></li>
                 <li>
-                  <code>assets/app.js:325-336</code> (<code>buildHash</code>
+                  <code>assets/app.js:325&#8211;336</code> (<code
+                    >buildHash</code
+                  >
                   헬퍼)
                 </li>
                 <li>
-                  <code>assets/app.js:344-355</code> (<code>boot()</code> URL
-                  정규화 + 옵셔널 체이닝)
+                  <code>assets/app.js:344&#8211;355</code> (<code>boot()</code>
+                  URL 정규화 + 옵셔널 체이닝)
                 </li>
                 <li>
-                  <code>assets/app.js:365-400</code> (<code>hashchange</code>
+                  <code>assets/app.js:365&#8211;400</code> (<code
+                    >hashchange</code
+                  >
                   handler &#8212; 정규화 + day-only hash시 detail close)
                 </li>
                 <li>
-                  <code>assets/styles.css:81-85</code> (<code
+                  <code>assets/styles.css:81&#8211;85</code> (<code
                     >#mobile-tabs</code
                   >
                   safe-area-inset)
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>42b3967</code> fix(routing): normalize
-                invalid hash + close detail on day switch &nbsp;&#183;&nbsp;
-                <code>adfbce5</code>
-                fix(mobile): safe-area-inset-bottom on #mobile-tabs
-                &nbsp;&#183;&nbsp;
-                <code>522feda</code> test(qa): manual smoke checklist
-                &nbsp;&#183;&nbsp; <code>8d2e1a8</code> docs: README
-                &nbsp;&#183;&nbsp; <code>d373c60</code> refactor(routing):
-                buildHash() + optional chaining
+                관련 commits: <code>42b3967</code> <code>adfbce5</code>
+                <code>522feda</code> <code>8d2e1a8</code> <code>d373c60</code>
               </p>
             </div>
 
@@ -497,7 +481,7 @@
 
               <h4 class="retro-sub">Codex PR Review (별도 단계)</h4>
               <p
-                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.4rem"
+                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem"
               >
                 PR #1에 <code>@codex review</code> 트리거 후 3 라운드 (skill
                 cap) 진행, 총 16건 finding 모두 적용:
@@ -543,8 +527,7 @@
               </div>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
                 모두 mechanical/defensive fix로 ambiguity 없음 &#8594; 사용자
-                확인 없이 auto-apply. PR 본 후 cap 도달로 종료. 추가 round를
-                돌면 더 marginal defensive 케이스만 나올 것으로 예상.
+                확인 없이 auto-apply. PR 본 후 cap 도달로 종료.
               </p>
             </div>
           </article>

@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -21,7 +20,6 @@
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -38,7 +36,6 @@
         color: #6b7280;
         margin-top: 0.2rem;
       }
-
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -87,13 +84,11 @@
         color: #0f766e;
         font-weight: 600;
       }
-
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
       }
-
       section h2 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -102,13 +97,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
-
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
-
       @media (max-width: 720px) {
         .card-grid {
           grid-template-columns: 1fr;
@@ -123,7 +116,6 @@
           padding: 1.25rem 1rem;
         }
       }
-
       article {
         background: #fff;
         border: 1px solid #e5e7eb;
@@ -138,14 +130,12 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #f3f4f6;
       }
-
       .section-block {
         margin-bottom: 1rem;
       }
       .section-block:last-child {
         margin-bottom: 0;
       }
-
       .section-block h4 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -166,7 +156,6 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
-
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -176,7 +165,6 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -186,7 +174,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -272,14 +259,17 @@
         <div class="timeline-node muted">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 8</h2>
-
         <div class="card-grid">
-          <!-- Single card sourced from alt-candidates.md -->
           <article aria-labelledby="card-alt">
             <h3 id="card-alt">Alt-Candidate Markers + Catalog Expansion</h3>
 
@@ -328,22 +318,21 @@
                 <code>renderDay</code>가 active day stops를 그리기 전에
                 <code>altCandidatesForDay(day)</code>를 호출 &#8212; 모든 alt
                 카테고리 place들 중 active day stops 중 어느 하나라도 1.5 km
-                안에 있는 것 (현재 day의 stop 자체는 제외) 반환. 각 candidate를
-                <code>altLayer</code>에 새 회색 마커로 추가, 클릭 핸들러는
-                <code>selectAlt(placeId)</code>. selectAlt는 numbered 마커처럼
-                sidebar 활성화는 안 하고 <code>renderDetail</code>만 호출.
+                안에 있는 것 반환. 각 candidate를 <code>altLayer</code>에 새
+                회색 마커로 추가, 클릭 핸들러는 <code>selectAlt(placeId)</code>.
+                selectAlt는 numbered 마커처럼 sidebar 활성화는 안 하고
+                <code>renderDetail</code>만 호출.
               </p>
               <p style="margin-top: 0.5rem">
                 <code>renderDetail</code>은 <code>stop.time === null</code>이면
                 시간 라벨을 "후보 &#8212; 일정에 들어있지 않음"으로 교체 +
-                transit 카드 자동 생략 (transit_from_prev: null).
+                transit 카드 자동 생략.
               </p>
               <p style="margin-top: 0.5rem">
                 데이터 추가는 4개 subagent가 WebSearch로 한국어 후기 큐레이션
                 &#8594; <code>/tmp/alt-patches/dayN-new.json</code> 저장 &#8594;
                 단일 merge 스크립트로 places.json에 일괄 추가. 신규 27 entries
-                모두 schema 통과 (https URL, 일본 좌표 범위, curated_links 3개
-                each).
+                모두 schema 통과.
               </p>
             </div>
 
@@ -351,28 +340,27 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>assets/app.js:122-181</code>
-                  (<code>state.altLayer</code>, <code>haversineKm</code>,
-                  <code>altCandidatesForDay</code>, <code>selectAlt</code>)
+                  <code>assets/app.js:122&#8211;181</code> (state.altLayer,
+                  haversineKm, altCandidatesForDay, selectAlt)
                 </li>
                 <li>
-                  <code>assets/app.js:222-244</code> (<code>renderDay</code>
-                  첫 부분 &#8212; alt 마커 그리기)
+                  <code>assets/app.js:222&#8211;244</code> (renderDay 첫 부분
+                  &#8212; alt 마커 그리기)
                 </li>
                 <li>
-                  <code>assets/app.js:401</code> (<code>renderDetail</code>
-                  시간 라벨 분기)
+                  <code>assets/app.js:401</code> (renderDetail 시간 라벨 분기)
                 </li>
                 <li>
-                  <code>assets/styles.css:44-66</code> (<code>.alt-marker</code>
+                  <code>assets/styles.css:44&#8211;66</code> (<code
+                    >.alt-marker</code
+                  >
                   스타일)
                 </li>
                 <li><code>data/places.json</code> (27 새 entries)</li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>cc0e349</code> feat(map): alt-candidate
-                markers &nbsp;&#183;&nbsp; <code>0aff6cb</code> data: add 27
-                alt-candidate places
+                관련 commits: <code>cc0e349</code> feat(map),
+                <code>0aff6cb</code> data: add 27 alt-candidate places
               </p>
             </div>
 
@@ -402,7 +390,7 @@
                 <li>
                   <code>ALT_PROXIMITY_KM</code> (1.5)이 적절한지 사용자 경험으로
                   조정 필요. Day1 18개·Day3 35개는 약간 빽빽함 &#8212; 1.0 km로
-                  좁히거나 카테고리별로 다른 거리 휴리스틱.
+                  좁히거나 카테고리별로 다른 거리 휴리스틱 검토.
                 </li>
                 <li>
                   마커 클러스터링 (leaflet.markercluster) 도입 &#8212; 줌 아웃
@@ -420,17 +408,17 @@
                   95 places, 5 days validated
                 </li>
                 <li>
-                  <code>node --test tests/validate-data.test.mjs</code>
-                  &#8594; 11 pass
+                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
+                  11 pass
                 </li>
                 <li>
                   <code>node scripts/verify-walk-times.mjs</code> &#8594; 7
                   도보, flagged 0
                 </li>
                 <li>
-                  browse smoke (per day): day1 numbered 6 / alt 18, day2
-                  numbered 12 / alt 33, day3 numbered 16 / alt 35, day4 numbered
-                  6 / alt 17, day5 numbered 4 / alt 13
+                  browse smoke per day: day1 numbered 6 / alt 18, day2 numbered
+                  12 / alt 33, day3 numbered 16 / alt 35, day4 numbered 6 / alt
+                  17, day5 numbered 4 / alt 13
                 </li>
                 <li>
                   alt 클릭 &#8594; 디테일 패널 정상 ("후보 &#8212; 일정에

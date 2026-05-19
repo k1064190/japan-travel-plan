@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 7 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 12 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -235,8 +235,8 @@
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">7</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -260,29 +260,30 @@
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 7</h2>
+        <h2 id="stage-heading">Stage 12</h2>
         <div class="card-grid">
-          <article aria-labelledby="card-hotels">
-            <h3 id="card-hotels">Named Hotels (Sugata + Ebisuhigashi)</h3>
+          <!-- Single card sourced from more-restaurants.md -->
+          <article aria-labelledby="card-more-restaurants">
+            <h3 id="card-more-restaurants">
+              More Restaurants (with WebFetched Ratings)
+            </h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                이전 단계까지 숙소는 <code>namba_hotel</code> /
-                <code>namba_hotel_checkout</code> 같은 abstract id로 표현
-                &#8212; 실제 예약된 호텔 두 곳과 위치·체크인/아웃 흐름이
-                일치하지 않았다. 사용자가 실제 예약을 알린 시점에, 1·2일차와
-                3·4일차의 박이 서로 다른 호텔이라는 사실을 데이터에 반영하지
-                않으면 Google Maps 길찾기 origin이 잘못 잡혀 시간 신빙성이 다시
-                떨어진다.
+                Stage 9에서 36개 식당을 추가하고 Stage 11에서 실측 별점으로
+                교체했지만, 일정 area별로 좀 더 다양성과 깊이가 필요했다. 특히
+                사용자가 "더 많이 찾아서 정리해줘"라고 명시. 카테고리 분포 (한
+                동네 라멘 한두 곳, 야끼니쿠 한 곳 정도)에서 명점 추가로 후보가
+                풍부해지면 사이드바·맵에서 사용자 선택지가 넓어진다.
               </p>
             </div>
 
@@ -290,54 +291,48 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong>places.json</strong>에 호텔 3개 추가:
+                  <strong>38 new alt 식당 entries</strong> (Day별 area +
+                  WebFetched Tabelog 별점/후기 수 한 번에)
                   <ul>
                     <li>
-                      <code>sugata_hotel</code> &#8212; Sugata Hotel Osaka
-                      Shinsaibashi (Marriott Series), 신사이바시
+                      Day1 (11): 신사이바시·도톤보리·난바 &#8212; 치토세, 메오토
+                      젠자이, 하리주 스키야키, 혼케 오타코, 코가류, 호쿠쿄쿠세이
+                      오므라이스, 리로 커피, 긴큐에몬 도톤보리, 쿠쿠루 본점 등
                     </li>
                     <li>
-                      <code>ebisuhigashi_hotel</code> &#8212; 2-1-24
-                      Ebisuhigashi, 나니와구 (호텔명 미상)
+                      Day2 (12): 교토 &#8212; 이노다 커피, 스마트 커피, 잇포도
+                      다실, 기온 츠지리, 멘바카 파이어라멘, 야오사다 정식,
+                      타카야스 라멘, 곤타로 우동, 기온 오카루, 사료 츠지리, 기온
+                      토쿠야 (와라비모찌, 100명점), 키타가와 한베에
                     </li>
                     <li>
-                      <code>ebisuhigashi_hotel_checkout</code> &#8212; Day5
-                      체크아웃용 utility stop
+                      Day3 (10&#8594;9 after dedupe): 오사카 &#8212; 그릴 본,
+                      다루마 츠텐카쿠, 야마짱 아베노, 키지 우메다, 무기토멘스케
+                      (라멘 백명점), 소라 츠루하시, 학운대, 메이게츠칸 야끼니쿠,
+                      나카무라야 고로케 등
+                    </li>
+                    <li>
+                      Day4 (6): USJ·시티워크·덴포잔 &#8212; 버바 검프, Top of
+                      Universal 32F 뷔페, 쿠쿠루 시티워크, 자유켄 텐포잔,
+                      아이즈야 (원조 타코야키), 코토네 도미다시 라멘
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <strong>itinerary.json</strong> 호텔 참조 교체:
-                  <ul>
-                    <li>
-                      Day1 체크인 stop <code>namba_hotel</code> &#8594;
-                      <code>sugata_hotel</code>
-                    </li>
-                    <li>
-                      Day2 첫 transit origin + 마지막 stop &#8594;
-                      <code>sugata_hotel</code>
-                    </li>
-                    <li>
-                      Day3 첫 transit origin &#8594;
-                      <code>ebisuhigashi_hotel</code>; 도톤보리 후 체크인 stop
-                      추가
-                    </li>
-                    <li>
-                      Day4 첫 transit origin + 마지막 stop &#8594;
-                      <code>ebisuhigashi_hotel</code>
-                    </li>
-                    <li>
-                      Day5 첫 stop &#8594;
-                      <code>ebisuhigashi_hotel_checkout</code>
-                    </li>
-                    <li>
-                      출국 stop transit "from" &#8594; "에비스히가시 호텔"
-                    </li>
-                  </ul>
+                  <strong>별점·후기 모두 Tabelog WebFetch 실측</strong> (추정치
+                  없음)
                 </li>
                 <li>
-                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분
-                  (Sugata&#8594;Dotonbori는 ~900m)
+                  <strong>dedupe</strong>: Day1·Day3가 치토세 본점을 다른 id로
+                  둘 다 추가 &#8594; Day1 entry 유지 (좌표·area 일치)
+                </li>
+                <li>
+                  1건 <code>http</code>&#8594;<code>https</code> URL 자동
+                  업그레이드 (aizuya tempozan)
+                </li>
+                <li>
+                  <code>places.json</code>: 131 &#8594; <strong>169</strong> (1
+                  entry removed after codex P2)
                 </li>
               </ul>
             </div>
@@ -345,53 +340,56 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                <code>/tmp/patch-hotels.mjs</code> 한 번 실행으로 places +
-                itinerary 두 파일을 일관되게 patch. 검증 트리오:
+                새 branch <code>feature/more-restaurants</code>, 4 background
+                subagent 병렬 dispatch (Day1&#8211;4 area별).
               </p>
-              <ul>
+              <p style="margin-top: 0.5rem">각 subagent 절차:</p>
+              <ol
+                style="padding-left: 1.2rem; font-size: 0.9rem; color: #374151"
+              >
                 <li>
-                  <code>npm run validate</code> &#8594; 68 places, 5 days
-                  &#10003;
-                </li>
-                <li><code>npm test</code> &#8594; 11/11 &#10003;</li>
-                <li>
-                  <code>npm run verify-walk</code> &#8594; 7 walking segments
-                  all within tolerance
-                </li>
-              </ul>
-              <p style="margin-top: 0.5rem">좌표 정확도 trade-off:</p>
-              <ul>
-                <li>
-                  Sugata: 사용자가 준 Google Maps URL의 정확한 좌표 (34.6766637,
-                  135.504813)
+                  <code>places.json</code> read &#8594; 기존 170+ id Set으로
+                  중복 회피
                 </li>
                 <li>
-                  Ebisuhigashi: 주소만 받아 츠텐카쿠 동쪽 1&#8211;2블록 추정
-                  (34.6515, 135.508). 정확한 호텔이 다른 좌표면
-                  <code>places.ebisuhigashi_hotel.coords</code> 한 줄 수정.
+                  추천 카테고리 (라멘·야끼니쿠·우동·디저트·카페·이자카야 등)에서
+                  새 식당 8&#8211;12개 후보
                 </li>
-              </ul>
+                <li>
+                  각 후보에 대해 WebSearch <code>店名 tabelog</code> &#8594;
+                  정확한 URL 확보
+                </li>
+                <li>
+                  WebFetch로 Tabelog 페이지 &#8594; 별점/후기 수 직접 추출
+                </li>
+                <li>좌표는 Tabelog/Google/Yahoo Maps에서 정확 확인</li>
+                <li>patch JSON에 저장</li>
+              </ol>
+              <p style="margin-top: 0.5rem">
+                메인이 <code>/tmp/merge-more-restaurants.mjs</code> 한 번 실행해
+                <code>places.json</code>에 일괄 추가. id 충돌 0건.
+              </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>data/places.json</code> &#8212; sugata_hotel /
-                  ebisuhigashi_hotel / ebisuhigashi_hotel_checkout 추가
+                  <code>data/places.json</code> (38 새 alt 식당 entries; UI 코드
+                  변경 0 &#8212; 기존 Stage 8/9/10/11 인프라 그대로 활용)
                 </li>
                 <li>
-                  <code>data/itinerary.json</code> &#8212; Day1&#8211;5
-                  stops·transit_from_prev.origin_place_id 교체
+                  패치 입력:
+                  <code>/tmp/more-restaurants/day{1,2,3,4}.json</code>
                 </li>
                 <li>
-                  <code>/tmp/patch-hotels.mjs</code> (one-shot patch, repo에
-                  commit 안 됨)
+                  머지 스크립트:
+                  <code>/tmp/merge-more-restaurants.mjs</code>
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commit: <code>795d6be</code> data: name actual hotels for
-                day1-4 stay
+                관련 commit: <code>76c8457</code> data: add 39 more restaurant
+                alt-candidates (1 later removed) with WebFetched ratings
               </p>
             </div>
 
@@ -401,28 +399,57 @@
               <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  Stage 6에서 도입한 <code>origin_place_id</code> 필드가 정확히
-                  이 시나리오용. 데이터에 호텔 두 개를 추가해도 UI 코드 변경 0
-                  &#8212; render·라우팅 그대로.
+                  코드 변경 0 &#8212; Stage 8&#8211;11에서 만든 alt
+                  마커·사이드바·정렬·필터·실측 별점 인프라 그대로 활용. 데이터
+                  추가만으로 즉시 UI에 반영됨.
                 </li>
                 <li>
-                  <code>validate-data</code> + <code>verify-walk</code>가 데이터
-                  변경 후 회귀를 즉시 잡음 (Sugata&#8594;Dotonbori 도보 시간이
-                  짧다고 flag &#8594; 8&#8594;12분 보정 자동 발견).
+                  WebFetch 결과로 정확한 별점·후기 수 한 번에 수집 &#8212; Stage
+                  9&#8594;Stage 11처럼 두 번 라운드 안 돌고 한 단계로 완결.
+                </li>
+                <li>
+                  각 day area별 카테고리 다양성 향상:
+                  <ul>
+                    <li>
+                      Day1: 타코야키 4개
+                      (kogaryu/ganso_ajiho/honke_ootako/kukuru) &#8212; 한국
+                      여행자 인기 4대장
+                    </li>
+                    <li>
+                      Day2: 잇포도·이노다·스마트커피 같은 교토 노포 킷사텐 추가
+                    </li>
+                    <li>
+                      Day3: 무기토멘스케 (Tabelog 라멘 백명점 3년 연속,
+                      3.84/2325)·키지 우메다 같은 명점
+                    </li>
+                    <li>
+                      Day4: 시티워크 4F·5F·32F + 텐포잔 안 다른 가게로 USJ 전후
+                      옵션 확대
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Day1·Day3 subagent가 치토세 본점을 양쪽에서 발견했으나
+                  dedupe로 깨끗하게 해결.
                 </li>
               </ul>
 
               <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
-                  Ebisuhigashi 호텔의 정확한 이름/좌표를 사용자가 확인하면 한 줄
-                  patch로 보정. 현재는 주소 기반 추정.
+                  동일 식당이 day별 area 경계에서 다른 id로 추가되는 케이스
+                  (치토세). 다음 batch에는 patch JSON에
+                  <code>alias_check</code> 필드로 비슷한 이름 미리 신고하게 하면
+                  충돌 사전 탐지 가능.
                 </li>
                 <li>
-                  호텔 logistics (Sugata&#8594;Ebisuhigashi 짐 옮기기 transit)는
-                  itinerary stops에 명시되지 않음 &#8212; Day2 끝 Sugata, Day3
-                  시작 Ebisuhigashi 사이의 짐 이동은 사용자가 알아서. 필요시
-                  Day3 첫 stop 앞에 별도 logistics stop 추가 가능.
+                  별점 분포가 Tabelog 특성상 3.2&#8211;3.8 좁은 폭. 사용자가 더
+                  변별력 있는 정렬을 원하면 review_count도 weighting (예: rating
+                  &#215; log(review_count))을 옵션으로.
+                </li>
+                <li>
+                  일부 가게가 폐점·이전한 경우가 있을 수 있음 &#8212; 정기 fetch
+                  재실행으로 갱신 필요.
                 </li>
               </ul>
 
@@ -430,19 +457,37 @@
               <ul>
                 <li>
                   <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  68 places, 5 days validated
+                  169 places, 5 days validated
                 </li>
                 <li>
                   <code>node --test tests/validate-data.test.mjs</code> &#8594;
                   11 pass
                 </li>
                 <li>
-                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 7
-                  도보, flagged 0
+                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
+                  segment all within tolerance
                 </li>
                 <li>
-                  browse smoke: Day1/Sugata, Day2/Day3 첫 stop origin, Day5 출발
-                  모두 정상 &#8212; console error 0
+                  browse smoke:
+                  <ul>
+                    <li>
+                      Day1 sidebar 54개 (이전 40 + 새 14: 12개 추가, 일부 area
+                      outside)
+                    </li>
+                    <li>Day2 sidebar 87개 (이전 65 + 22)</li>
+                    <li>
+                      Day3 sidebar 75개 (이전 26 + 49 &#8212; 먼 후보 토글
+                      off에서도 많아짐)
+                    </li>
+                    <li>Day4 sidebar 57개 (이전 26 + 31)</li>
+                    <li>Day5 sidebar 42개</li>
+                    <li>
+                      Day1 top 5 정렬: 야끼니쿠 M 3.78 &#8594; 치토세 3.72
+                      &#8594; 이마이 3.58 &#8594; 메오토 젠자이 3.58 &#8594;
+                      하리주 스키야키 3.57
+                    </li>
+                    <li>console error 0</li>
+                  </ul>
                 </li>
               </ul>
             </div>

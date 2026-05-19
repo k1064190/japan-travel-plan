@@ -12,7 +12,6 @@
         margin: 0;
         padding: 0;
       }
-
       body {
         font-family:
           -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
@@ -21,7 +20,6 @@
         color: #1a1a1a;
         line-height: 1.6;
       }
-
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -38,7 +36,6 @@
         color: #6b7280;
         margin-top: 0.2rem;
       }
-
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -87,13 +84,11 @@
         color: #0f766e;
         font-weight: 600;
       }
-
       main {
         max-width: 960px;
         margin: 0 auto;
         padding: 2rem 1.5rem;
       }
-
       section h2 {
         font-size: 1.5rem;
         font-weight: 700;
@@ -102,13 +97,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
-
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
         gap: 1.25rem;
       }
-
       @media (max-width: 720px) {
         .card-grid {
           grid-template-columns: 1fr;
@@ -123,7 +116,6 @@
           padding: 1.25rem 1rem;
         }
       }
-
       article {
         background: #fff;
         border: 1px solid #e5e7eb;
@@ -138,14 +130,12 @@
         padding-bottom: 0.5rem;
         border-bottom: 1px solid #f3f4f6;
       }
-
       .section-block {
         margin-bottom: 1rem;
       }
       .section-block:last-child {
         margin-bottom: 0;
       }
-
       .section-block h4 {
         font-size: 0.75rem;
         font-weight: 700;
@@ -166,7 +156,6 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
-
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -176,7 +165,6 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -186,7 +174,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -272,14 +259,17 @@
         <div class="timeline-node muted">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 10</h2>
-
         <div class="card-grid">
-          <!-- Single card sourced from sidebar-candidates.md -->
           <article aria-labelledby="card-sidebar">
             <h3 id="card-sidebar">Sidebar Candidate Cards + Filter Toggles</h3>
 
@@ -377,21 +367,25 @@
                   <code>FOOD_TAG_RE</code> + <code>isFoodPlace</code>)
                 </li>
                 <li>
-                  <code>assets/app.js:180&#8211;205</code>
-                  (<code>altCandidatesForDay</code> opts 파라미터)
+                  <code>assets/app.js:180&#8211;205</code> (<code
+                    >altCandidatesForDay</code
+                  >
+                  opts 파라미터)
                 </li>
                 <li>
-                  <code>assets/app.js:247&#8211;251</code>
-                  (<code>renderDay</code>가 state 옵션 전달)
+                  <code>assets/app.js:247&#8211;251</code> (renderDay가 state
+                  옵션 전달)
                 </li>
                 <li>
-                  <code>assets/app.js:347&#8211;471</code>
-                  (<code>renderSidebar</code> 후보 섹션 + 토글 핸들러)
+                  <code>assets/app.js:347&#8211;471</code> (<code
+                    >renderSidebar</code
+                  >
+                  후보 섹션 + 토글 핸들러)
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commit: <code>b523602</code> feat(sidebar): candidates section
-                under itinerary stops + filter toggles
+                관련 commit: <code>b523602</code> feat(sidebar): candidates
+                section under itinerary stops + filter toggles
               </p>
             </div>
 
@@ -407,8 +401,7 @@
                 </li>
                 <li>
                   <code>isFoodPlace</code> 휴리스틱이 단순한데도 잘 동작 &#8212;
-                  rating 있는 entry는 거의 식당이라 양호한 신호. 음식 키워드
-                  정규식이 backstop.
+                  rating 있는 entry는 거의 식당이라 양호한 신호.
                 </li>
                 <li>
                   별점 내림차순 정렬 후 첫 카드가 가장 신뢰도 높은 곳 &#8212;
@@ -441,12 +434,12 @@
                   131 places, 5 days validated
                 </li>
                 <li>
-                  <code>node --test tests/validate-data.test.mjs</code>
-                  &#8594; 11 pass
+                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
+                  11 pass
                 </li>
                 <li>
                   browse smoke: Day1 sidebar 후보 40개, 별점 내림차순 (Tabelog
-                  3.78 &#8594; 3.71 &#8594; 3.71 &#8594; &#8230;)
+                  3.78 &#8594; 3.71 &#8594; ...)
                 </li>
                 <li>첫 카드 클릭 &#8594; 디테일 패널 정상 오픈</li>
                 <li>맛집만 토글: 40 &#8594; 21 (음식점만)</li>
@@ -461,33 +454,32 @@
               <h4 class="retro-sub">한계 (이연)</h4>
               <p style="font-size: 0.9rem; color: #374151">
                 Phase C &#8212; Tabelog/Google
-                <strong>실제 별점 fetch (limitations #2, #3)</strong>는 이
-                세션에서 시도했으나 Anthropic API 사용량 한도 (<code
-                  >You've hit your limit · resets 2:30pm Asia/Seoul</code
-                >)로 dispatch된 subagent 두 개가 즉시 종료. 한도 풀린 뒤 별도
-                세션에서 동일 prompt로 재실행 가능. 절차 메모:
+                <strong>실제 별점 fetch</strong>는 이 세션에서 시도했으나
+                Anthropic API 사용량 한도로 dispatch된 subagent 두 개가 즉시
+                종료. 한도 풀린 뒤 별도 세션에서 동일 prompt로 재실행 가능.
+                절차:
               </p>
-              <ul>
+              <ol
+                style="
+                  padding-left: 1.2rem;
+                  font-size: 0.9rem;
+                  color: #374151;
+                  margin-top: 0.4rem;
+                "
+              >
                 <li>새 branch <code>feature/real-ratings</code></li>
                 <li>
                   4 subagent (day1&#8211;4) dispatch &#8212; 각자 day 영역의
-                  식당 entry들에 대해 WebSearch + WebFetch로 Tabelog/Google
-                  페이지 가져와 별점·후기 수 추출 &#8594;
-                  <code>/tmp/rating-patches/dayN.json</code> patch JSON
+                  식당 entry들에 대해 WebSearch + WebFetch로 Tabelog 페이지
+                  가져와 별점·후기 수 추출 &#8594;
+                  <code>/tmp/rating-patches/dayN.json</code>
                 </li>
                 <li>
                   메인이 일괄 merge &#8212; alt entry rating 갱신 + main 명소
                   <code>restaurants[]</code> 안 식당 rating 채우기
                 </li>
-                <li>UI 변경 없음 (Stage 9에서 이미 양쪽 경로 지원).</li>
-              </ul>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                현재 별점 데이터는 subagent의 검색 추정치이며 fetch 시점·실제
-                페이지값과 차이가 있을 수 있음. UI에서
-                <code>(Tabelog)</code> 출처 표기는 그대로 유지 &#8212; 사용자가
-                클릭하면 review_links 또는 curated_links로 실제 페이지 확인
-                가능.
-              </p>
+                <li>UI 변경 없음 (Stage 9에서 이미 양쪽 경로 지원)</li>
+              </ol>
             </div>
           </article>
         </div>

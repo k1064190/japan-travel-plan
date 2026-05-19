@@ -272,6 +272,11 @@
         <div class="timeline-node muted">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
     </nav>
 
     <main>
@@ -279,7 +284,6 @@
         <h2 id="stage-heading">Stage 1</h2>
 
         <div class="card-grid">
-          <!-- Single card sourced from skeleton.md -->
           <article aria-labelledby="card-skeleton">
             <h3 id="card-skeleton">Project Skeleton + Routing + End-to-End</h3>
 
@@ -381,10 +385,9 @@
                   미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
                 </li>
                 <li>
-                  조심할 점 (Stage 2 직전 처리):
-                  <code>renderSidebar</code>/<code>renderDetail</code>에 place
-                  가드 추가 (60개 데이터 타이포 대비), 같은 날 내 hashchange 시
-                  sidebar 동기화.
+                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
+                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
+                  hashchange 시 sidebar 동기화.
                 </li>
                 <li>
                   Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
