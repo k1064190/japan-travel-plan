@@ -550,8 +550,8 @@
           "url": "https://www.myrealtrip.com/community/posts/14009",
           "source": "마이리얼트립 커뮤니티"
         },
-        "rating": 3.55,
-        "review_count": 1234,
+        "rating": 3.49,
+        "review_count": 1012,
         "rating_source": "Tabelog"
       },
       {
@@ -4934,8 +4934,8 @@
         "snippet": "현지 평점과 영업 정보, 24시간 운영 확인 가능."
       }
     ],
-    "rating": 3.55,
-    "review_count": 1234,
+    "rating": 3.49,
+    "review_count": 1012,
     "rating_source": "Tabelog"
   },
   "shoren_in": {
@@ -6289,7 +6289,7 @@
   },
   "wanaka_sennichimae": {
     "name_ko": "와나카 타코야키 센니치마에 본점",
-    "name_jp": "たこ家道頓堀くくる…じゃない、たこやき道楽 わなか 千日前本店",
+    "name_jp": "たこやき道楽 わなか 千日前本店",
     "coords": [
       34.6661,
       135.5028
@@ -7171,7 +7171,7 @@
     "sources": [
       {
         "title": "ぎをん小森 공식 사이트",
-        "url": "http://www.giwon-komori.com/"
+        "url": "https://www.giwon-komori.com/"
       },
       {
         "title": "ぎをん小森 - Tabelog",

@@ -36,7 +36,7 @@ function renderActivity(a, color) {
 
 function renderRating(obj) {
   if (typeof obj?.rating !== "number" || obj.rating <= 0) return "";
-  const stars = `★ ${obj.rating.toFixed(1)}`;
+  const stars = `★ ${obj.rating.toFixed(2)}`;
   const count =
     typeof obj.review_count === "number" && obj.review_count > 0
       ? ` · 후기 ${obj.review_count.toLocaleString()}개`
@@ -145,7 +145,7 @@ const state = {
   routeLayer: null,
 };
 
-const ALT_PROXIMITY_KM = 1.5;
+const ALT_PROXIMITY_KM = 2.0;
 
 function haversineKm(c1, c2) {
   const toRad = (d) => (d * Math.PI) / 180;
