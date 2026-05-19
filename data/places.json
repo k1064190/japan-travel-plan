@@ -464,7 +464,8 @@
           "snippet": "부타만·차슈만·슈마이까지 메뉴별 한국인 후기."
         },
         "rating": 3.47,
-        "review_count": 1761
+        "review_count": 1761,
+        "rating_source": "Tabelog"
       }
     ],
     "review_links": {
@@ -1845,7 +1846,8 @@
           "snippet": "오토로 초밥과 해체쇼 현장 사진이 풍부한 단독 방문 후기."
         },
         "rating": 3.39,
-        "review_count": 136
+        "review_count": 136,
+        "rating_source": "Tabelog"
       },
       {
         "name": "타카하시 (高橋)",
@@ -3466,7 +3468,8 @@
           "snippet": "카운터 12석 본점의 분위기와 더블딥 금지 규칙 후기."
         },
         "rating": 3.46,
-        "review_count": 1176
+        "review_count": 1176,
+        "rating_source": "Tabelog"
       },
       {
         "name": "야에카츠 (八重勝)",
@@ -3480,7 +3483,8 @@
           "snippet": "잔잔요코초 야에카츠의 참마 튀김옷과 가격대 후기."
         },
         "rating": 3.49,
-        "review_count": 1973
+        "review_count": 1973,
+        "rating_source": "Tabelog"
       },
       {
         "name": "쿠시카츠 잇토쿠 (串かつ 一徳)",
@@ -3494,7 +3498,8 @@
           "snippet": "다루마 대비 짧은 웨이팅과 세트 메뉴 한국인 후기."
         },
         "rating": 3.07,
-        "review_count": 36
+        "review_count": 36,
+        "rating_source": "Tabelog"
       }
     ],
     "review_links": {
@@ -4124,7 +4129,8 @@
           "snippet": "다키미코지 키지 본점 모단야키·스지야키 한국인 후기."
         },
         "rating": 3.68,
-        "review_count": 1011
+        "review_count": 1011,
+        "rating_source": "Tabelog"
       },
       {
         "name": "다키미코지 (滝見小路) 우동·라멘·덮밥 각 점포",
