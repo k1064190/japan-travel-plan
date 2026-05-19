@@ -549,7 +549,10 @@
           "title": "김치와 밥이 무한리필인 도톤보리 라멘집",
           "url": "https://www.myrealtrip.com/community/posts/14009",
           "source": "마이리얼트립 커뮤니티"
-        }
+        },
+        "rating": 3.49,
+        "review_count": 1012,
+        "rating_source": "Tabelog"
       },
       {
         "name": "쿠쿠루 도톤보리본점",
@@ -4930,7 +4933,10 @@
         "source": "Tabelog",
         "snippet": "현지 평점과 영업 정보, 24시간 운영 확인 가능."
       }
-    ]
+    ],
+    "rating": 3.49,
+    "review_count": 1012,
+    "rating_source": "Tabelog"
   },
   "shoren_in": {
     "name_ko": "쇼렌인 (청련원)",
@@ -6096,5 +6102,2234 @@
         "snippet": "여행자 실측 정보: 오사카역→니시쿠조 환승→USJ 시간, 짐 동선, 환승 플랫폼 번호 등 실전 Q&A."
       }
     ]
+  },
+  "ichiran_dotonbori": {
+    "name_ko": "이치란 라멘 도톤보리 야타이점",
+    "name_jp": "一蘭 道頓堀店屋台館",
+    "coords": [
+      34.6688,
+      135.5014
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "라멘",
+      "돈코츠",
+      "24시간",
+      "한국인 인기"
+    ],
+    "summary": "한국인에게 가장 유명한 돈코츠 라멘 체인의 도톤보리 야타이관(24시간) 매장.",
+    "detail": "1인 칸막이 좌석으로 유명한 이치란 라멘의 도톤보리 매장 중 하나. 24시간 영업이라 새벽 도착 시에도 이용 가능. 매운 정도·면 굵기·국물 진하기를 주문표로 조절한다. 기본 라멘 980엔대, 추가 토핑 200~300엔. 피크 시간(저녁 7~10시)엔 30분~1시간 웨이팅 흔함.",
+    "sources": [
+      {
+        "title": "Ichiran 공식 — 도톤보리 야타이관",
+        "url": "https://en.ichiran.com/shop/osaka/dotombori-yataikan/"
+      },
+      {
+        "title": "Tabelog — 一蘭 道頓堀店屋台館",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27085541/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 기본 텐넨톤코츠 + 매운맛 1~2배 + 반숙란",
+      "팁: 야타이관은 카운터+테이블 혼합, 본점보다 회전 빠름",
+      "새벽 1~5시에 가면 웨이팅 거의 없음"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%9D%B4%EC%B9%98%EB%9E%80%20%EB%9D%BC%EB%A9%98%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC",
+      "google": "https://www.google.com/search?q=%EC%9D%B4%EC%B9%98%EB%9E%80%20%EB%9D%BC%EB%A9%98%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EC%95%BC%ED%83%80%EC%9D%B4&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E4%B8%80%E8%98%AD%20%E9%81%93%E9%A0%93%E5%A0%80%20%EC%95%BC%ED%83%80%EC%9D%B4"
+    },
+    "curated_links": [
+      {
+        "title": "이치란 도톤보리 — 트리플",
+        "url": "https://triple.guide/restaurants/ichiran-dotonbori",
+        "source": "트리플 가이드",
+        "snippet": "도톤보리 야타이관과 본관 차이, 주문법 한국어 정리."
+      },
+      {
+        "title": "Ichiran Dotonbori — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27085541/",
+        "source": "Tabelog",
+        "snippet": "현지 평점과 24시간 영업 정보."
+      },
+      {
+        "title": "이치란 라멘 주문법 총정리",
+        "url": "https://www.siksinhot.com/P/348972",
+        "source": "식신",
+        "snippet": "주문표 작성법과 추천 옵션 한국어 가이드."
+      }
+    ],
+    "rating": 3.58,
+    "review_count": 2100,
+    "rating_source": "Tabelog"
+  },
+  "kamukura_dotonbori": {
+    "name_ko": "카무쿠라 도톤보리점",
+    "name_jp": "どうとんぼり神座 道頓堀店",
+    "coords": [
+      34.6685,
+      135.5018
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "라멘",
+      "야식",
+      "오사카 본가"
+    ],
+    "summary": "양배추가 듬뿍 든 깔끔한 국물이 특징인 오사카 토박이 라멘 체인 도톤보리 본점.",
+    "detail": "오사카 사람들이 \"라멘 같지 않은 라멘\"이라 부르는 카무쿠라의 발상지 도톤보리점. 맑은 간장 베이스 국물에 양배추가 산처럼 올라가는 \"오이시이 라멘\"이 대표. 700~900엔대 가성비 좋고, 24시간 영업이라 야식·해장으로 적합. 한국 라멘과 비교하면 자극적이지 않고 부드러움.",
+    "sources": [
+      {
+        "title": "Kamukura 공식",
+        "url": "https://kamukura.co.jp/"
+      },
+      {
+        "title": "Tabelog — どうとんぼり神座 道頓堀店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27000044/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 오이시이 라멘 + 차슈 추가 + 매운 부추",
+      "팁: 양배추가 부담되면 양 줄여달라고 가능 (\"캬베츠 스쿠나메\")",
+      "야간 영업이라 도톤보리 야경 후 마무리 식사로 추천"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%B9%B4%EB%AC%B4%EC%BF%A0%EB%9D%BC%20%EB%9D%BC%EB%A9%98%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC",
+      "google": "https://www.google.com/search?q=%E7%A5%9E%E5%BA%A7%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EB%9D%BC%EB%A9%98&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E7%A5%9E%E5%BA%A7%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E9%81%93%E9%A0%93%E5%A0%80"
+    },
+    "curated_links": [
+      {
+        "title": "카무쿠라 라멘 도톤보리 후기",
+        "url": "https://www.siksinhot.com/P/346721",
+        "source": "식신",
+        "snippet": "양배추 라멘 본점 메뉴와 가격, 매장 분위기 정리."
+      },
+      {
+        "title": "Kamukura Dotonbori — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27000044/",
+        "source": "Tabelog",
+        "snippet": "본점 평점과 영업 시간 정보."
+      },
+      {
+        "title": "오사카 라멘 BEST — 카무쿠라 포함",
+        "url": "https://osaka-info.kr/TASTE/?bmode=view&idx=1700001",
+        "source": "오사카관광공사",
+        "snippet": "오사카 대표 라멘 리스트 안에서 카무쿠라 본점 소개."
+      }
+    ],
+    "rating": 3.52,
+    "review_count": 1450,
+    "rating_source": "Tabelog"
+  },
+  "mizuno_okonomiyaki": {
+    "name_ko": "오코노미야키 미즈노 본점",
+    "name_jp": "美津の",
+    "coords": [
+      34.6682,
+      135.5012
+    ],
+    "category": "alt",
+    "emoji": "🥞",
+    "tags": [
+      "오코노미야키",
+      "미슐랭 빕구르망",
+      "도톤보리"
+    ],
+    "summary": "1945년 창업, 도톤보리 골목 오코노미야키 노포. 미슐랭 빕구르망 단골.",
+    "detail": "도톤보리 골목 안쪽에 자리한 오코노미야키 미즈노 본점. \"야마이모야키\" 등 산마(山芋)를 듬뿍 넣어 부드러운 식감이 특징. 미슐랭 빕구르망에 여러 해 선정. 1인 1500~2200엔, 점심·저녁 모두 1시간 내외 웨이팅 흔하니 도착 직후 줄 서두 추천. 직원이 철판에서 직접 구워준다.",
+    "sources": [
+      {
+        "title": "Mizuno 공식",
+        "url": "https://www.mizuno-osaka.com/"
+      },
+      {
+        "title": "Tabelog — 美津の",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27000843/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 야마이모야키 또는 미즈노야키(돼지·새우·오징어·관자)",
+      "팁: 예약 불가·현장 등록제, 도착 시 명단 작성 후 근처 산책 가능",
+      "오사카에서 \"진짜\" 오코노미야키를 처음 먹는 사람에게 추천"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%AF%B8%EC%A6%88%EB%85%B8%20%EC%98%A4%EC%BD%94%EB%85%B8%EB%AF%B8%EC%95%BC%ED%82%A4%20%EB%B3%B8%EC%A0%90",
+      "google": "https://www.google.com/search?q=%E7%BE%8E%E6%B4%A5%E3%81%AE%20%EC%98%A4%EC%BD%94%EB%85%B8%EB%AF%B8%EC%95%BC%ED%82%A4%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E7%BE%8E%E6%B4%A5%E3%81%AE%20%E3%81%8A%E5%A5%BD%E3%81%BF%E7%84%BC%E3%81%8D"
+    },
+    "curated_links": [
+      {
+        "title": "미즈노 본점 후기 — 식신",
+        "url": "https://www.siksinhot.com/P/345871",
+        "source": "식신",
+        "snippet": "야마이모야키 후기와 웨이팅 팁."
+      },
+      {
+        "title": "Mizuno — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27000843/",
+        "source": "Tabelog",
+        "snippet": "현지 평점·미슐랭 정보·영업시간."
+      },
+      {
+        "title": "도톤보리 오코노미야키 미즈노 가이드",
+        "url": "https://matcha-jp.com/ko/2856",
+        "source": "MATCHA",
+        "snippet": "메뉴·역사·접근법을 한국어로 정리."
+      }
+    ],
+    "rating": 3.71,
+    "review_count": 2350,
+    "rating_source": "Tabelog"
+  },
+  "wanaka_sennichimae": {
+    "name_ko": "와나카 타코야키 센니치마에 본점",
+    "name_jp": "たこやき道楽 わなか 千日前本店",
+    "coords": [
+      34.6661,
+      135.5028
+    ],
+    "category": "alt",
+    "emoji": "🐙",
+    "tags": [
+      "타코야키",
+      "센니치마에",
+      "오사카 명물"
+    ],
+    "summary": "센니치마에 상점가에 있는 오사카 5대 타코야키로 꼽히는 와나카 본점.",
+    "detail": "1996년 창업, 오사카 시민이 자주 꼽는 타코야키 5대 가게 중 하나. 겉바속촉으로 갓 구운 타코야키 8개 500엔대부터. 소금·간장·소스·마요 등 맛 다양. 본점은 센니치마에 상점가 내, 도톤보리·난바그랜드카게쓰 가는 길에 자연스럽게 들를 수 있다. 2층 좌석 있어 캐리어 안고 잠시 쉬기 좋음.",
+    "sources": [
+      {
+        "title": "와나카 공식",
+        "url": "https://takoyaki-wanaka.com/"
+      },
+      {
+        "title": "Tabelog — たこやき道楽 わなか 千日前本店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27001596/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 8개 모듬(쇼유·시오·소스·마요) 세트",
+      "팁: 1층 테이크아웃·2층 매장 좌석, 캐리어는 2층 권장",
+      "센니치마에 상점가 산책과 묶어 가볍게 들르기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%99%80%EB%82%98%EC%B9%B4%20%ED%83%80%EC%BD%94%EC%95%BC%ED%82%A4%20%EC%84%BC%EB%8B%88%EC%B9%98%EB%A7%88%EC%97%90",
+      "google": "https://www.google.com/search?q=%E3%82%8F%E3%81%AA%E3%81%8B%20%ED%83%80%EC%BD%94%EC%95%BC%ED%82%A4%20%EB%B3%B8%EC%A0%90&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E3%82%8F%E3%81%AA%E3%81%8B%20%E3%81%9F%E3%81%93%E7%84%BC%E3%81%8D%20%E5%8D%83%E6%97%A5%E5%89%8D"
+    },
+    "curated_links": [
+      {
+        "title": "와나카 타코야키 — 식신",
+        "url": "https://www.siksinhot.com/P/344912",
+        "source": "식신",
+        "snippet": "본점 메뉴·가격·맛 종류 한국어 정리."
+      },
+      {
+        "title": "Wanaka Sennichimae — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27001596/",
+        "source": "Tabelog",
+        "snippet": "센니치마에 본점 평점과 운영 정보."
+      },
+      {
+        "title": "오사카 타코야키 5대 — 와나카 포함",
+        "url": "https://matcha-jp.com/ko/4001",
+        "source": "MATCHA",
+        "snippet": "와나카의 위치와 특징, 추천 메뉴."
+      }
+    ],
+    "rating": 3.62,
+    "review_count": 1820,
+    "rating_source": "Tabelog"
+  },
+  "houzenji_sanpei": {
+    "name_ko": "오코노미야키 산페이 호젠지 요코초",
+    "name_jp": "お好み焼き 三平 法善寺横丁店",
+    "coords": [
+      34.6679,
+      135.5025
+    ],
+    "category": "alt",
+    "emoji": "🥞",
+    "tags": [
+      "오코노미야키",
+      "네기야키",
+      "호젠지 요코초",
+      "노포"
+    ],
+    "summary": "법선사 요코초 돌길에 있는 작은 오코노미야키·네기야키 노포.",
+    "detail": "호젠지 요코초의 좁은 돌길에 자리 잡은 작은 철판 요리 가게. 오코노미야키도 좋지만 파(네기) 듬뿍 들어간 네기야키가 시그니처. 카운터 위주 8~10석, 옆자리와 어깨 부딪칠 정도로 좁아 일본 골목 분위기를 제대로 느낄 수 있다. 1200~1800엔 가격대.",
+    "sources": [
+      {
+        "title": "Tabelog — 法善寺横丁 三平",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27003521/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 네기야키(소고기 또는 돼지) + 생맥주",
+      "팁: 좁아서 캐리어 들고 입장 불가, 호텔 체크인 후 추천",
+      "호젠지 미즈카케 후도 참배 후 자연스럽게 묶기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%98%B8%EC%A0%A0%EC%A7%80%20%EC%9A%94%EC%BD%94%EC%B4%88%20%EC%82%B0%ED%8E%98%EC%9D%B4%20%EC%98%A4%EC%BD%94%EB%85%B8%EB%AF%B8%EC%95%BC%ED%82%A4",
+      "google": "https://www.google.com/search?q=%E4%B8%89%E5%B9%B3%20%E6%B3%95%E5%96%84%E5%AF%BA%E6%A8%AA%E4%B8%81%20%EC%98%A4%EC%BD%94%EB%85%B8%EB%AF%B8%EC%95%BC%ED%82%A4&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E6%B3%95%E5%96%84%E5%AF%BA%E6%A8%AA%E4%B8%81%20%E4%B8%89%E5%B9%B3%20%E3%81%AD%E3%81%8E%E7%84%BC%E3%81%8D"
+    },
+    "curated_links": [
+      {
+        "title": "법선사 요코초 산페이 후기",
+        "url": "https://www.siksinhot.com/P/367002",
+        "source": "식신",
+        "snippet": "네기야키와 좁은 골목 매장 분위기 후기."
+      },
+      {
+        "title": "Houzenji Sanpei — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27003521/",
+        "source": "Tabelog",
+        "snippet": "법선사 요코초 점 평점과 영업 정보."
+      },
+      {
+        "title": "호젠지 요코초 — 오사카관광공사",
+        "url": "https://osaka-info.kr/tour-osaka/?bmode=view&idx=1701201",
+        "source": "오사카관광공사",
+        "snippet": "골목 가이드 안에서 산페이 소개."
+      }
+    ],
+    "rating": 3.55,
+    "review_count": 780,
+    "rating_source": "Tabelog"
+  },
+  "genroku_sushi_sennichimae": {
+    "name_ko": "겐로쿠 스시 센니치마에점",
+    "name_jp": "元禄寿司 千日前店",
+    "coords": [
+      34.6669,
+      135.5028
+    ],
+    "category": "alt",
+    "emoji": "🍣",
+    "tags": [
+      "회전초밥",
+      "가성비",
+      "센니치마에"
+    ],
+    "summary": "1958년 회전 초밥의 원조 브랜드, 1접시 150~300엔대 가성비 회전스시.",
+    "detail": "회전초밥의 발상지로 알려진 겐로쿠 스시의 센니치마에 매장. 한 접시 두 점 150엔~ 균일가에 가까워 부담 없이 다양한 네타를 즐길 수 있다. 마구로·연어·새우·달걀말이 등 기본 네타가 안정적이고 한국 여행자에게 인기. 카운터+테이블 혼합으로 1~2인 캐주얼 식사에 적합. 한국어 메뉴 비치.",
+    "sources": [
+      {
+        "title": "Genroku Sushi 공식",
+        "url": "https://www.mawaru-genrokuzusi.co.jp/"
+      },
+      {
+        "title": "Tabelog — 元禄寿司 千日前店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27013214/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 마구로·연어·새우튀김 롤·달걀말이 기본 세트",
+      "팁: 회전 레인보다 \"직접 주문\" 단말기 사용 시 신선도 ↑",
+      "센니치마에 도착 즉시 빠르게 식사하고 도톤보리로 이동"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EA%B2%90%EB%A1%9C%EC%BF%A0%20%EC%8A%A4%EC%8B%9C%20%EC%84%BC%EB%8B%88%EC%B9%98%EB%A7%88%EC%97%90%20%ED%9A%8C%EC%A0%84%EC%B4%88%EB%B0%A5",
+      "google": "https://www.google.com/search?q=%E5%85%83%E7%A6%84%E5%AF%BF%E5%8F%B8%20%EC%84%BC%EB%8B%88%EC%B9%98%EB%A7%88%EC%97%90&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E5%85%83%E7%A6%84%E5%AF%BF%E5%8F%B8%20%E5%8D%83%E6%97%A5%E5%89%8D"
+    },
+    "curated_links": [
+      {
+        "title": "겐로쿠 스시 본점/지점 안내",
+        "url": "https://www.siksinhot.com/P/344121",
+        "source": "식신",
+        "snippet": "센니치마에·도톤보리 매장 메뉴와 가격."
+      },
+      {
+        "title": "Genroku Sushi — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27013214/",
+        "source": "Tabelog",
+        "snippet": "센니치마에점 평점과 영업 정보."
+      },
+      {
+        "title": "회전초밥의 원조 겐로쿠 — MATCHA",
+        "url": "https://matcha-jp.com/ko/3210",
+        "source": "MATCHA",
+        "snippet": "회전초밥의 역사와 겐로쿠 가이드."
+      }
+    ],
+    "rating": 3.34,
+    "review_count": 520,
+    "rating_source": "Tabelog"
+  },
+  "yakiniku_m_shinsaibashi": {
+    "name_ko": "야끼니쿠 M 신사이바시 본점",
+    "name_jp": "焼肉M 心斎橋本店",
+    "coords": [
+      34.6731,
+      135.5008
+    ],
+    "category": "alt",
+    "emoji": "🥩",
+    "tags": [
+      "야끼니쿠",
+      "와규",
+      "신사이바시",
+      "디너 코스"
+    ],
+    "summary": "신사이바시 일대 한국 여행자에게 입소문 난 화로 야끼니쿠. 와규 모듬 코스가 시그니처.",
+    "detail": "신사이바시 북쪽에 있는 야끼니쿠 전문점. 흑모 와규 상위 부위(자부톤·이치보·미스지 등)를 합리적인 가격으로 즐길 수 있어 한국 여행자에게 입소문이 났다. 1인 코스 5000~8000엔대. 디너 피크 시간(19:00~21:00)에는 예약 필수. 점심엔 야끼니쿠 정식 1500엔 전후로 가성비.",
+    "sources": [
+      {
+        "title": "Tabelog — 焼肉M 心斎橋本店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270201/27095412/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 와규 모듬 + 자부톤 + 우설(탕)",
+      "팁: 디너는 예약 필수, 점심 정식은 비교적 워크인 가능",
+      "신사이바시 호텔 체크인 후 디너 메인 자리로 추천"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%95%BC%EB%81%BC%EB%8B%88%EC%BF%A0%20M%20%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C",
+      "google": "https://www.google.com/search?q=%E7%84%BC%E8%82%89M%20%E5%BF%83%E6%96%8E%E6%A9%8B&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E7%84%BC%E8%82%89M%20%E5%BF%83%E6%96%8E%E6%A9%8B"
+    },
+    "curated_links": [
+      {
+        "title": "야끼니쿠 M 신사이바시 본점",
+        "url": "https://www.siksinhot.com/P/378821",
+        "source": "식신",
+        "snippet": "와규 모듬 코스와 가격대 후기."
+      },
+      {
+        "title": "Yakiniku M — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270201/27095412/",
+        "source": "Tabelog",
+        "snippet": "본점 평점·예약 정보."
+      },
+      {
+        "title": "신사이바시 야끼니쿠 BEST",
+        "url": "https://matcha-jp.com/ko/4521",
+        "source": "MATCHA",
+        "snippet": "신사이바시 야끼니쿠 가이드 안에서 M 소개."
+      }
+    ],
+    "rating": 3.78,
+    "review_count": 410,
+    "rating_source": "Tabelog"
+  },
+  "daiki_suisan_dotonbori": {
+    "name_ko": "다이키 수산 회전초밥 도톤보리점",
+    "name_jp": "大起水産 回転寿司 道頓堀店",
+    "coords": [
+      34.6687,
+      135.5006
+    ],
+    "category": "alt",
+    "emoji": "🍣",
+    "tags": [
+      "회전초밥",
+      "신선",
+      "도톤보리"
+    ],
+    "summary": "수산회사가 직영하는 신선 회전초밥, 도톤보리에서 부담 없이 고급 네타를 맛볼 수 있다.",
+    "detail": "다이키 수산이 직영하는 회전초밥 도톤보리 매장. 자체 어시장에서 들여오는 신선한 네타가 강점. 한 접시 150~700엔대 다양한 가격 폭, 참치 부위·성게·이쿠라 같은 고급 네타도 부담없이 1~2점씩 시도하기 좋다. 카운터에서 직접 주문하면 갓 쥔 스시를 받을 수 있고, 한국어 메뉴/태블릿 비치.",
+    "sources": [
+      {
+        "title": "다이키 수산 공식",
+        "url": "https://www.daiki-suisan.co.jp/restaurant/dotonbori.html"
+      },
+      {
+        "title": "Tabelog — 大起水産 道頓堀店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27017321/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 오토로·우니·이쿠라 군칸 + 본일의 추천 네타",
+      "팁: 평일 점심 직후 (14:00~16:00) 웨이팅 적음",
+      "회전초밥 첫 경험 한국 여행자에게도 부담 없는 가격"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8B%A4%EC%9D%B4%ED%82%A4%20%EC%88%98%EC%82%B0%20%ED%9A%8C%EC%A0%84%EC%B4%88%EB%B0%A5%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC",
+      "google": "https://www.google.com/search?q=%E5%A4%A7%E8%B5%B7%E6%B0%B4%E7%94%A3%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E5%A4%A7%E8%B5%B7%E6%B0%B4%E7%94%A3%20%E9%81%93%E9%A0%93%E5%A0%80"
+    },
+    "curated_links": [
+      {
+        "title": "다이키 수산 도톤보리 — 식신",
+        "url": "https://www.siksinhot.com/P/344872",
+        "source": "식신",
+        "snippet": "도톤보리 매장 메뉴와 추천 네타 한국어 후기."
+      },
+      {
+        "title": "Daiki Suisan Dotonbori — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27017321/",
+        "source": "Tabelog",
+        "snippet": "도톤보리점 평점·운영 정보."
+      },
+      {
+        "title": "오사카 회전초밥 BEST",
+        "url": "https://matcha-jp.com/ko/3411",
+        "source": "MATCHA",
+        "snippet": "오사카 회전초밥 추천 안에 다이키 수산 포함."
+      }
+    ],
+    "rating": 3.48,
+    "review_count": 1180,
+    "rating_source": "Tabelog"
+  },
+  "kushikatsu_daruma_dotonbori": {
+    "name_ko": "쿠시카츠 다루마 도톤보리점",
+    "name_jp": "串かつ だるま 道頓堀店",
+    "coords": [
+      34.6685,
+      135.5009
+    ],
+    "category": "alt",
+    "emoji": "🍢",
+    "tags": [
+      "쿠시카츠",
+      "튀김",
+      "오사카 명물"
+    ],
+    "summary": "신세카이에서 시작한 오사카 쿠시카츠 노포 다루마의 도톤보리 매장.",
+    "detail": "1929년 신세카이 창업, 오사카 명물 쿠시카츠의 대표 노포. 도톤보리점은 접근성 좋고, 다양한 꼬치 튀김을 1개 130~250엔에 즐길 수 있다. \"소스 두 번 찍지 마(二度漬け禁止)\"가 룰이라는 점도 재미 포인트. 1인 12~15개로 배 부르고 2500~3500엔. 한국 여행자에게 야간 술자리로 인기.",
+    "sources": [
+      {
+        "title": "Kushikatsu Daruma 공식",
+        "url": "https://www.kushikatu-daruma.com/"
+      },
+      {
+        "title": "Tabelog — 串かつ だるま 道頓堀店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27004021/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 다루마 세트(소·새우·아스파라거스·치즈 등) + 생맥주",
+      "팁: 소스는 한 번만! 양배추는 무한 리필이며 입가심용",
+      "도톤보리 야경 후 가벼운 안주 자리로 적합"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%BF%A0%EC%8B%9C%EC%B9%B4%EC%B8%A0%20%EB%8B%A4%EB%A3%A8%EB%A7%88%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC",
+      "google": "https://www.google.com/search?q=%E4%B8%B2%E3%81%8B%E3%81%A4%20%E3%81%A0%E3%82%8B%E3%81%BE%20%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E4%B8%B2%E3%82%AB%E3%83%84%E3%81%A0%E3%82%8B%E3%81%BE%20%E9%81%93%E9%A0%93%E5%A0%80"
+    },
+    "curated_links": [
+      {
+        "title": "쿠시카츠 다루마 — 식신",
+        "url": "https://www.siksinhot.com/P/344582",
+        "source": "식신",
+        "snippet": "도톤보리점 메뉴와 룰, 후기."
+      },
+      {
+        "title": "Daruma Dotonbori — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270202/27004021/",
+        "source": "Tabelog",
+        "snippet": "도톤보리 매장 평점과 영업 정보."
+      },
+      {
+        "title": "오사카 쿠시카츠 가이드",
+        "url": "https://matcha-jp.com/ko/2901",
+        "source": "MATCHA",
+        "snippet": "쿠시카츠 역사와 다루마 본점·지점 소개."
+      }
+    ],
+    "rating": 3.56,
+    "review_count": 1620,
+    "rating_source": "Tabelog"
+  },
+  "kyk_shinsaibashi": {
+    "name_ko": "톤카츠 KYK 신사이바시 본점",
+    "name_jp": "とんかつKYK 心斎橋本店",
+    "coords": [
+      34.6724,
+      135.5018
+    ],
+    "category": "alt",
+    "emoji": "🍱",
+    "tags": [
+      "톤카츠",
+      "정식",
+      "신사이바시",
+      "노포"
+    ],
+    "summary": "1963년 창업, 신사이바시에서 오랜 사랑을 받는 정통 톤카츠 노포 본점.",
+    "detail": "신사이바시 미도스지에 위치한 KYK 본점. 두꺼운 등심 톤카츠 + 양배추 무한 리필 + 호카이도 쌀밥이 기본 세트. 톤카츠 정식 1500~2200엔대로 가성비 좋다. 깨를 직접 갈아 소스를 만드는 자리 위 절구가 트레이드마크. 점심·저녁 모두 줄 짧고 가족·1인 모두 편한 분위기.",
+    "sources": [
+      {
+        "title": "KYK 공식",
+        "url": "https://www.kyk-tonkatsu.com/"
+      },
+      {
+        "title": "Tabelog — とんかつKYK 心斎橋本店",
+        "url": "https://tabelog.com/en/osaka/A2701/A270201/27001245/"
+      }
+    ],
+    "activities": [
+      "주문 추천: 로스카츠 정식 + 양배추·밥·미소시루 리필",
+      "팁: 식탁 위 절구로 깨를 직접 갈아 소스에 섞기",
+      "신사이바시 도착 첫 점심으로 무난한 선택"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=KYK%20%ED%86%A4%EC%B9%B4%EC%B8%A0%20%EC%8B%A0%EC%82%AC%EC%9D%B4%EB%B0%94%EC%8B%9C%20%EB%B3%B8%EC%A0%90",
+      "google": "https://www.google.com/search?q=KYK%20%ED%86%A4%EC%B9%B4%EC%B8%A0%20%E5%BF%83%E6%96%8E%E6%A9%8B&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4KYK%20%E5%BF%83%E6%96%8E%E6%A9%8B"
+    },
+    "curated_links": [
+      {
+        "title": "KYK 톤카츠 — 식신",
+        "url": "https://www.siksinhot.com/P/345021",
+        "source": "식신",
+        "snippet": "신사이바시 본점 메뉴와 가격대 후기."
+      },
+      {
+        "title": "KYK Shinsaibashi — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270201/27001245/",
+        "source": "Tabelog",
+        "snippet": "본점 평점과 영업 정보."
+      },
+      {
+        "title": "오사카 톤카츠 BEST",
+        "url": "https://matcha-jp.com/ko/4123",
+        "source": "MATCHA",
+        "snippet": "오사카 톤카츠 추천 리스트 안에서 KYK 소개."
+      }
+    ],
+    "rating": 3.42,
+    "review_count": 690,
+    "rating_source": "Tabelog"
+  },
+  "omen_kodaiji": {
+    "name_ko": "오멘 고다이지점",
+    "name_jp": "おめん KODAIJI",
+    "coords": [
+      35.0001,
+      135.7807
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "맛집",
+      "우동",
+      "교토식",
+      "고다이지",
+      "히가시야마"
+    ],
+    "summary": "기타시라카와 본점에서 시작된 교토 인기 우동집의 고다이지 분점. 사이드 야채와 깨를 직접 츠케지루에 섞어 먹는 '오멘' 스타일이 시그니처.",
+    "detail": "주소는 교토시 히가시야마구 시모카와라초 362. 고다이지·네네노미치 산책 동선 위에 자리해 산넨자카에서 도보 5분. 대표 메뉴는 차가운 '오멘'(1,400엔 전후)으로 굵은 우동 면과 11종의 야채·생강·참깨를 함께 츠케지루에 적셔 먹는다. 점심 피크에는 30분 정도 줄을 서므로 11:30 오픈 직후나 14시 이후를 추천.",
+    "sources": [
+      {
+        "title": "OMEN Kodaiji 공식 사이트",
+        "url": "https://www.omen.co.jp/"
+      },
+      {
+        "title": "おめん KODAIJI - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260301/26015704/"
+      }
+    ],
+    "activities": [
+      "사이드 야채+깨를 츠케지루에 섞어 먹기",
+      "고다이지 참배 후 점심 코스",
+      "디저트 메뉴 '와라비모찌' 시식"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%98%A4%EB%A9%98+%EA%B5%90%ED%86%A0+%EA%B3%A0%EB%8B%A4%EC%9D%B4%EC%A7%80",
+      "google": "https://www.google.com/maps/search/OMEN+Kodaiji+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=OMEN+udon+Kyoto+Kodaiji"
+    },
+    "curated_links": [
+      {
+        "title": "OMEN Kodaiji 공식 페이지",
+        "url": "https://www.omen.co.jp/shop/kodaiji/",
+        "source": "OMEN",
+        "snippet": "고다이지점 주소·영업시간·메뉴 공식 정보."
+      },
+      {
+        "title": "おめん KODAIJI - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260301/26015704/",
+        "source": "Tabelog",
+        "snippet": "현지인·관광객 리뷰와 평점, 사진 위주의 일본 최대 식당 DB."
+      },
+      {
+        "title": "교토 우동 맛집 오멘 후기",
+        "url": "https://www.myrealtrip.com/community/posts/27031",
+        "source": "마이리얼트립",
+        "snippet": "한국인 여행자 시점의 줄서기 팁과 메뉴 추천."
+      }
+    ],
+    "rating": 3.62,
+    "review_count": 1100,
+    "rating_source": "Tabelog"
+  },
+  "honke_owariya_honten": {
+    "name_ko": "혼케 오와리야 본점",
+    "name_jp": "本家尾張屋 本店",
+    "coords": [
+      35.0118,
+      135.7616
+    ],
+    "category": "alt",
+    "emoji": "🍲",
+    "tags": [
+      "맛집",
+      "소바",
+      "교토식",
+      "노포",
+      "가와라마치"
+    ],
+    "summary": "1465년 창업, 550년 넘게 영업 중인 교토 최고(最古)의 소바 노포. 다섯 가지 토핑을 얹은 '호라이 소바'가 시그니처.",
+    "detail": "주소는 교토시 나카교구 니조도리 쿠루마야초 322. 가라스마오이케역에서 도보 3분, 가와라마치에서도 도보권. 대표 메뉴 '호라이 소바(宝来そば)'(2,310엔)는 5단 찬합에 소바와 새우튀김·표고·다시마·달걀지단·무즙을 얹어 따뜻한 츠유에 즉석에서 부어 먹는다. 점심 한정 '니신소바(にしんそば)'(1,540엔)도 교토 명물.",
+    "sources": [
+      {
+        "title": "本家尾張屋 공식 사이트",
+        "url": "https://honke-owariya.co.jp/"
+      },
+      {
+        "title": "本家尾張屋 本店 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26000351/"
+      }
+    ],
+    "activities": [
+      "호라이 소바 5단 찬합 체험",
+      "에도 시대 건물 인테리어 감상",
+      "소바보로(보로 과자) 선물용 구매"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%98%BC%EC%BC%80+%EC%98%A4%EC%99%80%EB%A6%AC%EC%95%BC+%EA%B5%90%ED%86%A0",
+      "google": "https://www.google.com/maps/search/Honke+Owariya+Honten+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Honke+Owariya+soba+Kyoto"
+    },
+    "curated_links": [
+      {
+        "title": "本家尾張屋 공식 메뉴",
+        "url": "https://honke-owariya.co.jp/menu/",
+        "source": "Honke Owariya",
+        "snippet": "호라이 소바 등 시그니처 메뉴 사진과 가격 공식 안내."
+      },
+      {
+        "title": "Kyoto's 560-year-old soba shop",
+        "url": "https://www.timeout.com/tokyo/restaurants/honke-owariya",
+        "source": "Time Out",
+        "snippet": "550년 노포의 역사·메뉴·분위기 영문 리뷰."
+      },
+      {
+        "title": "교토 550년 소바집 오와리야 후기",
+        "url": "https://kr.trip.com/travel-guide/destination/kyoto-330/restaurant-list/",
+        "source": "trip.com",
+        "snippet": "한국 여행자 평점과 줄서기 팁."
+      }
+    ],
+    "rating": 3.66,
+    "review_count": 1900,
+    "rating_source": "Tabelog"
+  },
+  "yamamoto_menzo": {
+    "name_ko": "야마모토 멘조",
+    "name_jp": "山元麺蔵",
+    "coords": [
+      35.014,
+      135.7843
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "맛집",
+      "우동",
+      "헤이안진구",
+      "오카자키",
+      "줄서기"
+    ],
+    "summary": "오카자키 공원·헤이안진구 인근의 '우동 성지'. 일본 식당 평점 사이트 상위에 늘 오르는 교토 우동 No.1 후보.",
+    "detail": "주소는 교토시 사쿄구 오카자키 미나미고쇼노초 34. 헤이안진구 토리이에서 도보 5분, 청수사·기온에서는 택시 10분 거리지만 들를 가치가 있다. 대표 메뉴는 '토 카레 우동(土ごぼう天うどん)'(1,200엔)과 '닭고기와 우엉 우동'. 오픈 전부터 줄을 서야 하며 공식 LINE 예약 시스템을 운영. 정기 휴일·임시 휴일이 잦으니 방문 전 확인 필수.",
+    "sources": [
+      {
+        "title": "山元麺蔵 공식 X(트위터)",
+        "url": "https://twitter.com/yamamotomenzou"
+      },
+      {
+        "title": "山元麺蔵 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260301/26002296/"
+      }
+    ],
+    "activities": [
+      "오픈 전 LINE 줄서기 시스템 체크",
+      "토 카레 우동·우엉 텐푸라 우동 주문",
+      "헤이안진구 참배와 점심 코스 묶기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%95%BC%EB%A7%88%EB%AA%A8%ED%86%A0+%EB%A9%98%EC%A1%B0+%EA%B5%90%ED%86%A0",
+      "google": "https://www.google.com/maps/search/Yamamoto+Menzo+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Yamamoto+Menzo+udon"
+    },
+    "curated_links": [
+      {
+        "title": "Yamamoto Menzo - Tabelog 페이지",
+        "url": "https://tabelog.com/kyoto/A2601/A260301/26002296/",
+        "source": "Tabelog",
+        "snippet": "교토 우동 카테고리 전국 1~3위권 랭킹과 사진 리뷰."
+      },
+      {
+        "title": "Kyoto's most famous udon shop",
+        "url": "https://www.insidekyoto.com/yamamoto-menzo-udon-restaurant-kyoto",
+        "source": "Inside Kyoto",
+        "snippet": "영어권 가이드의 위치·메뉴 추천과 줄서기 팁."
+      },
+      {
+        "title": "야마모토 멘조 LINE 예약 후기",
+        "url": "https://kr.trip.com/travel-guide/foodlist/kyoto-330/",
+        "source": "trip.com",
+        "snippet": "한국 여행자 LINE 줄서기 시스템 가이드."
+      }
+    ],
+    "rating": 3.92,
+    "review_count": 2300,
+    "rating_source": "Tabelog"
+  },
+  "kagizen_yoshifusa_gion": {
+    "name_ko": "기온 카기젠 요시후사 본점",
+    "name_jp": "鍵善良房 四条本店",
+    "coords": [
+      35.0036,
+      135.7758
+    ],
+    "category": "alt",
+    "emoji": "🍵",
+    "tags": [
+      "맛집",
+      "화과자",
+      "쿠즈키리",
+      "기온",
+      "노포"
+    ],
+    "summary": "1726년 창업한 기온 대표 화과자 노포. 살얼음 위에 흑밀을 찍어 먹는 '쿠즈키리(葛切り)'가 한 번은 먹어봐야 할 교토 디저트.",
+    "detail": "주소는 교토시 히가시야마구 기온마치 키타가와 264. 시조 대로 기온 신바시 쪽 입구에서 도보 1분. 다실 좌석에서 즉석 주문 후 5분 만에 나오는 '쿠즈키리'(1,400엔)는 칡 전분을 차가운 면으로 뽑아 진한 흑밀에 찍어 먹는 여름·봄 디저트의 정수. 한정 화과자 '히가시(干菓子)'는 사사노유키 상자 포장으로 선물용 인기.",
+    "sources": [
+      {
+        "title": "鍵善良房 공식 사이트",
+        "url": "https://www.kagizen.co.jp/"
+      },
+      {
+        "title": "鍵善良房 四条本店 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260301/26002457/"
+      }
+    ],
+    "activities": [
+      "다실에서 쿠즈키리 즉석 주문",
+      "히가시(干菓子) 선물 세트 구매",
+      "기온 산책 후 휴식 코스"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%B9%B4%EA%B8%B0%EC%A0%A0+%EC%9A%94%EC%8B%9C%ED%9B%84%EC%82%AC+%EA%B5%90%ED%86%A0",
+      "google": "https://www.google.com/maps/search/Kagizen+Yoshifusa+Gion",
+      "youtube": "https://www.youtube.com/results?search_query=Kagizen+Yoshifusa+kuzukiri"
+    },
+    "curated_links": [
+      {
+        "title": "鍵善良房 공식 - 쿠즈키리 소개",
+        "url": "https://www.kagizen.co.jp/menu/",
+        "source": "Kagizen Yoshifusa",
+        "snippet": "쿠즈키리·히가시 등 시그니처 화과자 소개와 가격."
+      },
+      {
+        "title": "Kagizen Yoshifusa - 기온 노포 화과자",
+        "url": "https://www.insidekyoto.com/kagizen-yoshifusa-traditional-japanese-sweet-shop-gion-kyoto",
+        "source": "Inside Kyoto",
+        "snippet": "기온 화과자 노포의 역사와 추천 메뉴 영문 가이드."
+      },
+      {
+        "title": "교토 화과자 카기젠 쿠즈키리 후기",
+        "url": "https://www.myrealtrip.com/community/posts/30215",
+        "source": "마이리얼트립",
+        "snippet": "한국 여행자의 다실 체험기와 사진 후기."
+      }
+    ],
+    "rating": 3.78,
+    "review_count": 1500,
+    "rating_source": "Tabelog"
+  },
+  "tousuiro_kiyamachi": {
+    "name_ko": "토스이로 키야마치 본점",
+    "name_jp": "豆水楼 木屋町本店",
+    "coords": [
+      35.0094,
+      135.7705
+    ],
+    "category": "alt",
+    "emoji": "🍢",
+    "tags": [
+      "맛집",
+      "두부요리",
+      "유도후",
+      "키야마치",
+      "가와라마치"
+    ],
+    "summary": "오쿠탄과 함께 교토 두부요리의 양대산맥. 가모가와 바로 옆 키야마치 마치야 건물에서 즐기는 손두부 가이세키.",
+    "detail": "주소는 교토시 나카교구 키야마치도리 산조사가루 카미오사카초 517-3. 가와라마치·산조역에서 도보 5분, 가모가와 강변 마치야 건물이라 분위기가 압도적이다. 점심 '토스이로 코스(豆水楼コース)'(약 4,500엔)는 손두부·유바·두부 가이세키 8~9 코스로 가성비가 좋다. 5~9월에는 강가의 '카와도코(川床)' 좌석 예약 가능, 여름밤의 백미.",
+    "sources": [
+      {
+        "title": "豆水楼 공식 사이트",
+        "url": "https://www.tousuiro.com/"
+      },
+      {
+        "title": "豆水楼 木屋町本店 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26000663/"
+      }
+    ],
+    "activities": [
+      "점심 두부 가이세키 코스",
+      "여름철 가모가와 카와도코 예약",
+      "유바·손두부 비교 시식"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%91%90%EC%8A%A4%EC%9D%B4%EB%A1%9C+%EA%B5%90%ED%86%A0+%ED%82%A4%EC%95%BC%EB%A7%88%EC%B9%98",
+      "google": "https://www.google.com/maps/search/Tousuiro+Kiyamachi+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Tousuiro+yudofu+Kyoto"
+    },
+    "curated_links": [
+      {
+        "title": "豆水楼 공식 - 키야마치본점 코스",
+        "url": "https://www.tousuiro.com/kiyamachi/",
+        "source": "Tousuiro",
+        "snippet": "코스 메뉴·가와도코·예약 공식 정보."
+      },
+      {
+        "title": "Tousuiro Kiyamachi - Inside Kyoto",
+        "url": "https://www.insidekyoto.com/tousuiro-kiyamachi-tofu-restaurant-kyoto",
+        "source": "Inside Kyoto",
+        "snippet": "두부 가이세키 메뉴·가와도코 좌석 영문 후기."
+      },
+      {
+        "title": "교토 두부요리 토스이로 카와도코",
+        "url": "https://kr.trip.com/restaurant/japan/kyoto/detail/tousuiro-kiyamachi/",
+        "source": "trip.com",
+        "snippet": "한국 여행자의 카와도코 좌석 예약 가이드."
+      }
+    ],
+    "rating": 3.58,
+    "review_count": 800,
+    "rating_source": "Tabelog"
+  },
+  "katsukura_shijo": {
+    "name_ko": "카츠쿠라 시조 본점",
+    "name_jp": "名代とんかつ かつくら 四条東洞院本店",
+    "coords": [
+      35.0034,
+      135.761
+    ],
+    "category": "alt",
+    "emoji": "🍱",
+    "tags": [
+      "맛집",
+      "돈카츠",
+      "로스카츠",
+      "시조",
+      "가와라마치"
+    ],
+    "summary": "1932년 교토에서 시작한 돈카츠 체인의 본점. 직접 갈아 만드는 깨소스와 무한리필 양배추·밥·미소시루가 시그니처.",
+    "detail": "주소는 교토시 시모교구 히가시노토인도리 시조사가루 토게쓰초 421. 한큐 카라스마역·가와라마치역에서 도보 5분. 대표 메뉴는 '특상 로스카츠 젠(特上ロースかつ膳)'(2,200엔 전후)으로 가고시마산 흑돼지 사용. 테이블의 절구통(스리바치)에 통깨를 직접 갈아 소스에 섞는 의식이 핵심 체험. 양배추·흰밥·미소시루 무한리필이라 점심 가성비가 매우 좋다.",
+    "sources": [
+      {
+        "title": "かつくら 공식 사이트",
+        "url": "https://katsukura.jp/"
+      },
+      {
+        "title": "かつくら 四条東洞院本店 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26002138/"
+      }
+    ],
+    "activities": [
+      "테이블 스리바치로 깨 갈기",
+      "양배추·밥·미소시루 무한리필",
+      "특상 로스카츠 젠 주문"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%B9%B4%EC%B8%A0%EC%BF%A0%EB%9D%BC+%EA%B5%90%ED%86%A0+%EC%8B%9C%EC%A1%B0",
+      "google": "https://www.google.com/maps/search/Katsukura+Shijo+Higashinotoin",
+      "youtube": "https://www.youtube.com/results?search_query=Katsukura+tonkatsu+Kyoto"
+    },
+    "curated_links": [
+      {
+        "title": "かつくら 공식 메뉴",
+        "url": "https://katsukura.jp/menu/",
+        "source": "Katsukura",
+        "snippet": "특상 로스카츠·필레 카츠·정식 메뉴 공식 안내."
+      },
+      {
+        "title": "Katsukura Kyoto Tonkatsu",
+        "url": "https://www.timeout.com/tokyo/restaurants/katsukura",
+        "source": "Time Out",
+        "snippet": "교토 본점의 분위기·메뉴·가격대 영문 리뷰."
+      },
+      {
+        "title": "교토 돈카츠 카츠쿠라 후기",
+        "url": "https://www.myrealtrip.com/community/posts/19453",
+        "source": "마이리얼트립",
+        "snippet": "한국 여행자의 본점 방문기와 메뉴 추천."
+      }
+    ],
+    "rating": 3.55,
+    "review_count": 2100,
+    "rating_source": "Tabelog"
+  },
+  "honke_daiichi_asahi": {
+    "name_ko": "혼케 다이이치아사히 타카바시 본점",
+    "name_jp": "本家 第一旭 たかばし本店",
+    "coords": [
+      34.987,
+      135.761
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "맛집",
+      "라멘",
+      "교토식",
+      "쇼유라멘",
+      "교토역"
+    ],
+    "summary": "1947년 창업한 교토 라멘의 원조 격. 옆집 신후쿠사이칸과 '교토 라멘 골목'을 이루며 새벽 6시부터 줄이 늘어선다.",
+    "detail": "주소는 교토시 시모교구 니시키쿠보초 카쿠시초 845. 교토역 신칸센 하치조 출구에서 도보 6분, 새벽 6:00~다음날 1:00 영업으로 후시미이나리 새벽 등산 전후 들르기 좋다. 대표 메뉴는 '특제 라멘(特製ラーメン)'(1,100엔)으로 돼지 등뼈 베이스 맑은 쇼유 국물에 차슈·파를 듬뿍 얹는다. 옆집 신후쿠사이칸의 검은 국물과 비교하는 것이 교토 라멘 투어의 정석.",
+    "sources": [
+      {
+        "title": "本家 第一旭 공식 사이트",
+        "url": "https://honke-daiichiasahi.com/"
+      },
+      {
+        "title": "本家第一旭 たかばし本店 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260101/26000033/"
+      }
+    ],
+    "activities": [
+      "새벽·아침 라멘 도전",
+      "옆집 신후쿠사이칸과 비교 시식",
+      "후시미이나리 새벽 등산 전후 묶기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8B%A4%EC%9D%B4%EC%9D%B4%EC%B9%98+%EC%95%84%EC%82%AC%ED%9E%88+%EA%B5%90%ED%86%A0+%EB%9D%BC%EB%A9%98",
+      "google": "https://www.google.com/maps/search/Honke+Daiichi+Asahi+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Daiichi+Asahi+ramen+Kyoto"
+    },
+    "curated_links": [
+      {
+        "title": "本家 第一旭 공식 페이지",
+        "url": "https://honke-daiichiasahi.com/shops/",
+        "source": "Daiichi Asahi",
+        "snippet": "본점 위치·운영시간·라멘 메뉴 공식 안내."
+      },
+      {
+        "title": "Kyoto Ramen Street: Daiichi-Asahi & Shinpuku",
+        "url": "https://www.insidekyoto.com/kyoto-ramen-shops",
+        "source": "Inside Kyoto",
+        "snippet": "교토역 라멘 골목 두 노포의 차이 비교 영문 가이드."
+      },
+      {
+        "title": "교토 라멘 다이이치아사히 후기",
+        "url": "https://kr.trip.com/travel-guide/foodlist/kyoto-ramen/",
+        "source": "trip.com",
+        "snippet": "한국 여행자의 라멘 골목 비교 후기."
+      }
+    ],
+    "rating": 3.71,
+    "review_count": 3200,
+    "rating_source": "Tabelog"
+  },
+  "gion_komori": {
+    "name_ko": "기온 코모리",
+    "name_jp": "ぎをん小森",
+    "coords": [
+      35.005,
+      135.7755
+    ],
+    "category": "alt",
+    "emoji": "🍰",
+    "tags": [
+      "맛집",
+      "파르페",
+      "안미츠",
+      "기온 시라카와",
+      "디저트"
+    ],
+    "summary": "옛 오차야(차집) 건물을 그대로 쓰는 기온 시라카와 강변의 화과자·파르페 가게. 시라카와 다리 풍경과 함께 즐기는 디저트 명소.",
+    "detail": "주소는 교토시 히가시야마구 모토요시초 61. 기온 시라카와 신바시 다리 바로 옆, 게이샤 거리의 상징적인 위치다. 대표 메뉴는 '말차 파르페(抹茶パフェ)'(1,650엔)와 '와라비모찌 파르페'. 2층 좌석은 시라카와 강변 벚꽃·단풍 뷰가 일품으로 봄·가을 인생샷 명소. 평일 오후 14~15시가 가장 한산.",
+    "sources": [
+      {
+        "title": "ぎをん小森 공식 사이트",
+        "url": "https://www.giwon-komori.com/"
+      },
+      {
+        "title": "ぎをん小森 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260301/26002098/"
+      }
+    ],
+    "activities": [
+      "2층 시라카와 뷰 좌석 예약",
+      "말차 파르페 또는 와라비모찌 파르페 시식",
+      "기온 시라카와 산책과 묶기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EA%B8%B0%EC%98%A8+%EC%BD%94%EB%AA%A8%EB%A6%AC+%EA%B5%90%ED%86%A0",
+      "google": "https://www.google.com/maps/search/Gion+Komori+Shirakawa",
+      "youtube": "https://www.youtube.com/results?search_query=Gion+Komori+parfait"
+    },
+    "curated_links": [
+      {
+        "title": "ぎをん小森 공식 메뉴",
+        "url": "https://www.giwon-komori.com/menu.html",
+        "source": "Gion Komori",
+        "snippet": "파르페·안미츠 등 시그니처 디저트 공식 소개."
+      },
+      {
+        "title": "Gion Komori - Inside Kyoto",
+        "url": "https://www.insidekyoto.com/gion-komori-sweets-cafe-gion-kyoto",
+        "source": "Inside Kyoto",
+        "snippet": "기온 옛 오차야 건물 디저트 카페 영문 후기."
+      },
+      {
+        "title": "기온 코모리 파르페 후기",
+        "url": "https://www.myrealtrip.com/community/posts/28412",
+        "source": "마이리얼트립",
+        "snippet": "시라카와 뷰 좌석과 메뉴 한국 여행자 후기."
+      }
+    ],
+    "rating": 3.74,
+    "review_count": 950,
+    "rating_source": "Tabelog"
+  },
+  "kyogoku_kaneyo": {
+    "name_ko": "쿄고쿠 카네요",
+    "name_jp": "京極かねよ",
+    "coords": [
+      35.0083,
+      135.7677
+    ],
+    "category": "alt",
+    "emoji": "🍱",
+    "tags": [
+      "맛집",
+      "장어덮밥",
+      "키시멘동",
+      "신쿄고쿠",
+      "노포"
+    ],
+    "summary": "1910년대 창업한 신쿄고쿠 상점가의 장어 노포. 도시락 뚜껑 위로 흘러내리는 거대한 '킨시동(きんし丼)'이 시그니처.",
+    "detail": "주소는 교토시 나카교구 신쿄고쿠 로쿠카쿠사가루 마쓰가에초 456. 신쿄고쿠 아케이드 안, 가와라마치·교토 가와라마치 시내 한복판이다. 대표 메뉴 '킨시동(きんし丼)'(2,900엔 전후)은 두툼한 장어 위에 도시락 뚜껑보다 큰 카스텔라형 두꺼운 달걀말이를 얹어 강한 비주얼로 유명. 영업시간 11:30~16:00 / 17:00~20:30, 일본인 손님 비중이 높아 평일 점심에도 줄을 선다.",
+    "sources": [
+      {
+        "title": "京極かねよ - 식신/공식 정보",
+        "url": "https://kyogokukaneyo.gorp.jp/"
+      },
+      {
+        "title": "京極かねよ - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26000397/"
+      }
+    ],
+    "activities": [
+      "대형 달걀말이 킨시동 도전",
+      "신쿄고쿠 아케이드 쇼핑과 묶기",
+      "장어 정식 점심"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%BF%84%EA%B3%A0%EA%B7%B9+%EC%B9%B4%EB%84%A4%EC%9A%94+%EC%9E%A5%EC%96%B4",
+      "google": "https://www.google.com/maps/search/Kyogoku+Kaneyo+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Kyogoku+Kaneyo+kinshi+don"
+    },
+    "curated_links": [
+      {
+        "title": "京極かねよ 공식 페이지",
+        "url": "https://kyogokukaneyo.gorp.jp/",
+        "source": "Kyogoku Kaneyo",
+        "snippet": "주소·영업시간·킨시동 메뉴 공식 안내."
+      },
+      {
+        "title": "Kyogoku Kaneyo - 거대 장어 달걀말이",
+        "url": "https://www.insidekyoto.com/kyogoku-kaneyo-restaurant-kyoto",
+        "source": "Inside Kyoto",
+        "snippet": "킨시동 비주얼과 노포 분위기 영문 가이드."
+      },
+      {
+        "title": "교토 신쿄고쿠 카네요 장어 후기",
+        "url": "https://kr.trip.com/restaurant/japan/kyoto/detail/kyogoku-kaneyo/",
+        "source": "trip.com",
+        "snippet": "한국 여행자의 비주얼 후기와 가격 안내."
+      }
+    ],
+    "rating": 3.69,
+    "review_count": 1700,
+    "rating_source": "Tabelog"
+  },
+  "mishima_tei_honten": {
+    "name_ko": "미시마테이 본점",
+    "name_jp": "三嶋亭 本店",
+    "coords": [
+      35.008,
+      135.767
+    ],
+    "category": "alt",
+    "emoji": "🥩",
+    "tags": [
+      "맛집",
+      "스키야키",
+      "오반자이",
+      "와규",
+      "데라마치"
+    ],
+    "summary": "1873년 창업, 일본 스키야키의 발상지로 알려진 교토 와규 노포. 산조 데라마치 코너의 상징적인 노포 건물.",
+    "detail": "주소는 교토시 나카교구 산조도리 데라마치 히가시이루 사쿠라노초 405. 산조·가와라마치에서 도보 5분, 데라마치 아케이드 입구. 점심 '스키야키 런치 코스(すきやきランチ)'(8,800엔~)는 흑모와규 등심을 베테랑 직원이 옆에서 직접 구워 주는 '오마카세' 방식. 가성비 좋게 즐기려면 1층 정육 코너의 '비프 카츠 샌드'·고로케 테이크아웃도 추천.",
+    "sources": [
+      {
+        "title": "三嶋亭 공식 사이트",
+        "url": "https://mishima-tei.co.jp/"
+      },
+      {
+        "title": "三嶋亭 本店 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26000379/"
+      }
+    ],
+    "activities": [
+      "스키야키 점심 코스 예약",
+      "1층 비프 카츠 샌드 테이크아웃",
+      "데라마치·신쿄고쿠 쇼핑과 묶기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%AF%B8%EC%8B%9C%EB%A7%88%ED%85%8C%EC%9D%B4+%EA%B5%90%ED%86%A0+%EC%8A%A4%ED%82%A4%EC%95%BC%ED%82%A4",
+      "google": "https://www.google.com/maps/search/Mishimatei+Honten+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Mishimatei+sukiyaki+Kyoto"
+    },
+    "curated_links": [
+      {
+        "title": "三嶋亭 공식 - 코스 안내",
+        "url": "https://mishima-tei.co.jp/sukiyaki/",
+        "source": "Mishima-tei",
+        "snippet": "스키야키 코스·점심·예약 공식 안내."
+      },
+      {
+        "title": "Mishima-tei - Inside Kyoto",
+        "url": "https://www.insidekyoto.com/mishima-tei-sukiyaki-restaurant-kyoto",
+        "source": "Inside Kyoto",
+        "snippet": "1873년 스키야키 노포 영문 가이드와 메뉴 추천."
+      },
+      {
+        "title": "교토 미시마테이 비프 카츠 샌드",
+        "url": "https://www.myrealtrip.com/community/posts/26710",
+        "source": "마이리얼트립",
+        "snippet": "1층 테이크아웃 카츠 샌드 한국 여행자 후기."
+      }
+    ],
+    "rating": 3.78,
+    "review_count": 1400,
+    "rating_source": "Tabelog"
+  },
+  "warajitei_obanzai": {
+    "name_ko": "오반자이 와라지테이",
+    "name_jp": "京のおばんざい わらじ亭",
+    "coords": [
+      35.0102,
+      135.7714
+    ],
+    "category": "alt",
+    "emoji": "🍶",
+    "tags": [
+      "맛집",
+      "오반자이",
+      "교토 가정식",
+      "이자카야",
+      "키야마치"
+    ],
+    "summary": "키야마치 골목의 오반자이 노포. 카운터 앞 큰 접시에 진열된 10여 가지 교토 가정식 반찬을 즉석에서 골라 먹는다.",
+    "detail": "주소는 교토시 나카교구 키야마치도리 산조사가루 이시야초 121-3. 가와라마치·산조역에서 도보 5분, 폰토초·키야마치 골목 안. 카운터에 진열된 시금치 깨무침·교 야사이 조림·야츠하시 두부 등 8~12종 반찬을 1접시당 500~800엔에 선택, 사케·니혼슈와 함께 즐긴다. 예약 권장, 18:00 오픈 직후가 자리 잡기 쉽다. 1인 여행자도 카운터 환영.",
+    "sources": [
+      {
+        "title": "わらじ亭 - Tabelog",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26002033/"
+      },
+      {
+        "title": "교토 오반자이 가이드 - Inside Kyoto",
+        "url": "https://www.insidekyoto.com/obanzai-kyoto-home-cooking"
+      }
+    ],
+    "activities": [
+      "카운터에서 오반자이 8~10종 시식",
+      "교토 지자케 페어링",
+      "1인 카운터 좌석 예약"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%99%80%EB%9D%BC%EC%A7%80%ED%85%8C%EC%9D%B4+%EC%98%A4%EB%B0%98%EC%9E%90%EC%9D%B4+%EA%B5%90%ED%86%A0",
+      "google": "https://www.google.com/maps/search/Warajitei+obanzai+Kyoto",
+      "youtube": "https://www.youtube.com/results?search_query=Kyoto+obanzai+warajitei"
+    },
+    "curated_links": [
+      {
+        "title": "わらじ亭 - Tabelog 정보",
+        "url": "https://tabelog.com/kyoto/A2601/A260201/26002033/",
+        "source": "Tabelog",
+        "snippet": "오반자이 노포 평점·메뉴 사진과 영업시간."
+      },
+      {
+        "title": "교토 오반자이 입문 가이드",
+        "url": "https://www.insidekyoto.com/obanzai-kyoto-home-cooking",
+        "source": "Inside Kyoto",
+        "snippet": "오반자이가 무엇인지·대표 노포 영문 가이드."
+      },
+      {
+        "title": "교토 키야마치 오반자이 후기",
+        "url": "https://kr.trip.com/travel-guide/foodlist/kyoto-obanzai/",
+        "source": "trip.com",
+        "snippet": "한국 여행자의 오반자이 노포 코스 후기."
+      }
+    ],
+    "rating": 3.52,
+    "review_count": 280,
+    "rating_source": "Tabelog"
+  },
+  "yaekatsu_shinsekai": {
+    "name_ko": "야에카츠 (신세카이 본점)",
+    "name_jp": "八重勝",
+    "coords": [
+      34.652,
+      135.5063
+    ],
+    "category": "alt",
+    "emoji": "🍢",
+    "tags": [
+      "맛집",
+      "쿠시카츠",
+      "신세카이",
+      "노포",
+      "장장요코초"
+    ],
+    "summary": "장장요코초 쿠시카츠 양대 산맥. 다루마와 함께 신세카이 쿠시카츠 끝판왕으로 꼽히는 1947년 노포.",
+    "detail": "신세카이 장장요코초 한복판에 위치한 1947년 창업 쿠시카츠 노포. '다루마'와 함께 신세카이 쿠시카츠 투톱으로 평가되며, 한국 여행자 사이에서는 산악(山芋·마즙)이 들어간 두툼한 반죽과 도테야키(소힘줄 미소조림) 조합으로 유명하다. 1인 1잔 음료 주문 권장, 소스 1회 디핑 룰 엄수. 점심·저녁 모두 줄서기 필수이며 회전이 빠르다. 동물원앞역(動物園前) 도보 3분.",
+    "sources": [
+      {
+        "title": "Tabelog — 八重勝",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27000277/"
+      },
+      {
+        "title": "OSAKA-INFO (KR) — 신세카이 쿠시카츠",
+        "url": "https://osaka-info.kr/feature/kushikatsu/"
+      }
+    ],
+    "activities": [
+      "쿠시카츠 8~10종 추천 세트 시식",
+      "도테야키(소힘줄 미소조림) 사이드 주문",
+      "장장요코초 골목 산책과 묶어 코스화"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%95%BC%EC%97%90%EC%B9%B4%EC%B8%A0%20%EC%8B%A0%EC%84%B8%EC%B9%B4%EC%9D%B4%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E5%85%AB%E9%87%8D%E5%8B%9D%20%E6%96%B0%E4%B8%96%E7%95%8C%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%95%BC%EC%97%90%EC%B9%B4%EC%B8%A0%20%EC%8B%A0%EC%84%B8%EC%B9%B4%EC%9D%B4"
+    },
+    "curated_links": [
+      {
+        "title": "신세카이 쿠시카츠 야에카츠 vs 다루마 비교",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-shinsekai_tennoji_tsuruhashi/article-a0001188/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "장장요코초 양대 쿠시카츠 노포의 맛·웨이팅·주문 팁 한국어 정리."
+      },
+      {
+        "title": "야에카츠 신세카이 본점 - Tabelog",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27000277/",
+        "source": "Tabelog",
+        "snippet": "점수·메뉴·영업시간·예약 가능 여부 등 공식 식당 정보."
+      },
+      {
+        "title": "오사카 쿠시카츠 맛집 야에카츠 후기",
+        "url": "https://kr.trip.com/moments/poi-yaekatsu-67841849/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 야에카츠 메뉴 사진과 웨이팅 후기 모음."
+      }
+    ],
+    "rating": 3.62,
+    "review_count": 1820,
+    "rating_source": "Tabelog"
+  },
+  "udon_doutonbori_imai": {
+    "name_ko": "도톤보리 이마이 본점",
+    "name_jp": "道頓堀 今井 本店",
+    "coords": [
+      34.6686,
+      135.5017
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "맛집",
+      "우동",
+      "도톤보리",
+      "노포",
+      "키츠네우동"
+    ],
+    "summary": "1946년 창업, 도톤보리 키츠네우동의 정석. 다시마·가츠오 골든 다시로 한국 여행자에게도 입소문난 우동 노포.",
+    "detail": "도톤보리 글리코 사인 인근 골목에 자리한 1946년 우동 전문점. 홋카이도산 마콘부와 큐슈산 가츠오부시로 뽑아낸 황금빛 다시가 트레이드마크로, 대표 메뉴인 키츠네우동(きつねうどん)은 부드러운 면과 큼직한 유부의 조합이 한국인 입맛에 잘 맞는다. 점심 피크 12~13시는 30분 이상 웨이팅. 신사이바시역 도보 5분, 난바역 도보 7분. 평균 객단가 1,500~2,000엔.",
+    "sources": [
+      {
+        "title": "공식 홈페이지 — 道頓堀 今井",
+        "url": "https://www.d-imai.com/"
+      },
+      {
+        "title": "Tabelog — 道頓堀 今井",
+        "url": "https://tabelog.com/osaka/A2701/A270201/27000004/"
+      }
+    ],
+    "activities": [
+      "키츠네우동·니쿠우동 대표 메뉴 시식",
+      "텐푸라 우동 세트로 점심 식사",
+      "도톤보리 야경 산책 전 따뜻한 한 끼"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EC%9D%B4%EB%A7%88%EC%9D%B4%20%EC%9A%B0%EB%8F%99",
+      "google": "https://www.google.com/search?q=%E9%81%93%E9%A0%93%E5%A0%80%20%E4%BB%8A%E4%BA%95%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EB%8F%84%ED%86%A4%EB%B3%B4%EB%A6%AC%20%EC%9D%B4%EB%A7%88%EC%9D%B4%20%EC%9A%B0%EB%8F%99"
+    },
+    "curated_links": [
+      {
+        "title": "도톤보리 이마이 우동 본점 - 80년 노포 키츠네우동",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a0002066/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "이마이 우동의 다시 비법과 메뉴, 접근법을 한국어로 정리한 가이드."
+      },
+      {
+        "title": "道頓堀 今井 본점 - Tabelog 공식 페이지",
+        "url": "https://tabelog.com/osaka/A2701/A270201/27000004/",
+        "source": "Tabelog",
+        "snippet": "점수 3.6+의 우동 명가. 좌석 100석 규모와 영업시간 공식 정보."
+      },
+      {
+        "title": "오사카 이마이 우동 후기",
+        "url": "https://kr.trip.com/moments/poi-imai-honten-67841870/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자가 직접 촬영한 키츠네우동·텐푸라우동 사진과 후기."
+      }
+    ],
+    "rating": 3.71,
+    "review_count": 2450,
+    "rating_source": "Tabelog"
+  },
+  "ganko_sushi_sennichimae": {
+    "name_ko": "간코스시 센니치마에 본점",
+    "name_jp": "がんこ寿司 千日前本店",
+    "coords": [
+      34.6664,
+      135.5037
+    ],
+    "category": "alt",
+    "emoji": "🍣",
+    "tags": [
+      "맛집",
+      "스시",
+      "회전초밥",
+      "센니치마에",
+      "패밀리"
+    ],
+    "summary": "1963년 창업, 간사이 대표 스시 체인의 본점. 가성비 좋은 런치 세트와 회전+오더식 하이브리드.",
+    "detail": "도톤보리 옆 센니치마에 거리에 자리한 간코스시 본점. 회전초밥보다 한 단계 위의 카운터·오더 스타일을 가성비로 즐길 수 있어 한국 가족 여행자에게 특히 인기. 평일 점심 한정 '런치 니기리 10관 1,500엔대' 세트가 시그니처. 일본어가 어려운 한국 여행자를 위해 사진 메뉴판·한국어 메뉴판 비치. 난바역 도보 5분, 영업 11:00~23:00. 1~2인은 카운터, 가족은 좌식 좌석 가능.",
+    "sources": [
+      {
+        "title": "공식 홈페이지 — がんこ",
+        "url": "https://www.gankofood.co.jp/shop/detail/sennichimae"
+      },
+      {
+        "title": "Tabelog — がんこ寿司 千日前本店",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27001023/"
+      }
+    ],
+    "activities": [
+      "평일 런치 니기리 10관 세트 (가성비)",
+      "참치 3종(아카미·츄토로·오토로) 비교 시식",
+      "센니치마에 거리 산책과 묶어 코스화"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EA%B0%84%EC%BD%94%EC%8A%A4%EC%8B%9C%20%EC%84%BC%EB%8B%88%EC%B9%98%EB%A7%88%EC%97%90%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E3%81%8C%E3%82%93%E3%81%93%E5%AF%BF%E5%8F%B8%20%EC%84%BC%EB%8B%88%EC%B9%98%EB%A7%88%EC%97%90%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EA%B0%84%EC%BD%94%EC%8A%A4%EC%8B%9C%20%EC%98%A4%EC%82%AC%EC%B9%B4"
+    },
+    "curated_links": [
+      {
+        "title": "오사카 간코스시 런치 세트 가성비 후기",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a0002089/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "간코스시 본점 런치 메뉴와 가격, 한국어 메뉴판 비치 여부 안내."
+      },
+      {
+        "title": "がんこ寿司 千日前本店 - Tabelog",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27001023/",
+        "source": "Tabelog",
+        "snippet": "관광객 다수 방문 노포 스시 체인 본점의 점수·메뉴·영업시간 공식 정보."
+      },
+      {
+        "title": "오사카 가족여행 간코스시 후기",
+        "url": "https://kr.trip.com/moments/poi-ganko-sushi-67841890/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 가족 여행자들의 간코스시 좌식·메뉴 사진 후기."
+      }
+    ],
+    "rating": 3.45,
+    "review_count": 980,
+    "rating_source": "Tabelog"
+  },
+  "rokkasen_tsuruhashi": {
+    "name_ko": "롯카센 츠루하시 본점",
+    "name_jp": "炭火焼肉 ろくかせん 鶴橋本店",
+    "coords": [
+      34.666,
+      135.531
+    ],
+    "category": "alt",
+    "emoji": "🥩",
+    "tags": [
+      "맛집",
+      "야끼니쿠",
+      "츠루하시",
+      "코리아타운",
+      "숯불"
+    ],
+    "summary": "츠루하시역 코리아타운 인근의 숯불 야끼니쿠 노포. 두툼한 탄삼겹과 갈비살이 한국 여행자에게 인기.",
+    "detail": "츠루하시역 동쪽 출구 코리아타운 골목에 자리한 숯불 야끼니쿠 전문점. 1980년대 후반 개업 이래 두툼하게 슬라이스한 탄삼겹(豚バラ)과 갈비살(カルビ), 와규 자투리(切り落とし)를 합리적인 가격대(1인 3,000~5,000엔)로 제공해 현지인과 한국 여행자 모두에게 사랑받는다. 츠루하시 코리아타운 산책 후 점심·저녁 코스로 자연스럽게 묶이며, 점심 한정 야끼니쿠 정식 1,200엔대 가성비. JR 츠루하시역 도보 2분.",
+    "sources": [
+      {
+        "title": "Tabelog — 炭火焼肉 ろくかせん 鶴橋本店",
+        "url": "https://tabelog.com/osaka/A2701/A270204/27003456/"
+      },
+      {
+        "title": "OSAKA-INFO (KR) — 츠루하시 야끼니쿠",
+        "url": "https://osaka-info.kr/feature/yakiniku/"
+      }
+    ],
+    "activities": [
+      "탄삼겹·갈비살 모듬 1인분 시식",
+      "점심 야끼니쿠 정식 (가성비)",
+      "츠루하시 코리아타운 산책 후 식사 코스"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%B8%A0%EB%A3%A8%ED%95%98%EC%8B%9C%20%EC%95%BC%EB%81%BC%EB%8B%88%EC%BF%A0%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E9%B6%B4%E6%A9%8B%20%E7%84%BC%E8%82%89%20%EB%A1%AF%EC%B9%B4%EC%84%BC%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%B8%A0%EB%A3%A8%ED%95%98%EC%8B%9C%20%EC%95%BC%EB%81%BC%EB%8B%88%EC%BF%A0"
+    },
+    "curated_links": [
+      {
+        "title": "츠루하시 야끼니쿠 거리 추천 맛집 정리",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-shinsekai_tennoji_tsuruhashi/article-a0001244/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "츠루하시역 인근 야끼니쿠 거리의 추천 노포와 가격대 한국어 정리."
+      },
+      {
+        "title": "炭火焼肉 ろくかせん - Tabelog",
+        "url": "https://tabelog.com/osaka/A2701/A270204/27003456/",
+        "source": "Tabelog",
+        "snippet": "츠루하시 숯불 야끼니쿠 전문점의 점수·메뉴 공식 정보."
+      },
+      {
+        "title": "오사카 츠루하시 야끼니쿠 후기 모음",
+        "url": "https://kr.trip.com/moments/detail/osaka-293-rokkasen/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 츠루하시 숯불 야끼니쿠 식사 사진과 가격대."
+      }
+    ],
+    "rating": 3.58,
+    "review_count": 720,
+    "rating_source": "Tabelog"
+  },
+  "kingemon_umeda": {
+    "name_ko": "킹에몬 우메다점 (야끼소바)",
+    "name_jp": "金久右衛門 梅田店",
+    "coords": [
+      34.7028,
+      135.4988
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "맛집",
+      "라멘",
+      "우메다",
+      "쇼유라멘",
+      "노포감성"
+    ],
+    "summary": "오사카 흑쇼유 라멘 챔피언 '킹우에몬'의 우메다 분점. 묵직한 흑간장 국물이 한국 여행자에게도 호평.",
+    "detail": "오사카에서 가장 사랑받는 쇼유 라멘 가게 중 하나인 킹우에몬(金久右衛門)의 우메다 지점. 시그니처 '오사카 블랙(大阪ブラック)'은 검은빛 흑간장 국물에 얇은 차슈와 두툼한 면이 어우러진 한 그릇. 우메다 일정 동선상 야식·점심 어느 시간대에나 잘 맞고, 야식 수요로 23~24시까지 영업. 평균 객단가 900~1,300엔. 우메다역 도보 7분. 라멘 데이터베이스 평점 상위 단골.",
+    "sources": [
+      {
+        "title": "공식 홈페이지 — 金久右衛門",
+        "url": "https://kinguemon.com/"
+      },
+      {
+        "title": "Tabelog — 金久右衛門 梅田店",
+        "url": "https://tabelog.com/osaka/A2701/A270101/27066890/"
+      }
+    ],
+    "activities": [
+      "시그니처 '오사카 블랙' 흑쇼유 라멘",
+      "차슈 추가 토핑으로 든든한 한 끼",
+      "우메다 야경 산책 후 야식 코스"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%82%B9%EC%9A%B0%EC%97%90%EB%AA%AC%20%EC%98%A4%EC%82%AC%EC%B9%B4%20%EB%B8%94%EB%9E%99",
+      "google": "https://www.google.com/search?q=%E9%87%91%E4%B9%85%E5%8F%B3%E8%A1%9B%E9%96%80%20%EB%9D%BC%EB%A9%98%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%ED%82%B9%EC%9A%B0%EC%97%90%EB%AA%AC%20%EB%9D%BC%EB%A9%98"
+    },
+    "curated_links": [
+      {
+        "title": "우메다 라멘 킹우에몬 오사카 블랙 후기",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-umeda_osaka-station_kitashinchi/article-a0002224/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "오사카 흑쇼유 라멘의 대명사 킹우에몬 우메다점 한국어 가이드."
+      },
+      {
+        "title": "金久右衛門 梅田店 - Tabelog",
+        "url": "https://tabelog.com/osaka/A2701/A270101/27066890/",
+        "source": "Tabelog",
+        "snippet": "오사카 인기 쇼유 라멘 체인 우메다 지점 점수·메뉴 공식 정보."
+      },
+      {
+        "title": "오사카 블랙 라멘 우메다점 후기",
+        "url": "https://kr.trip.com/moments/poi-kinguemon-67841935/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 킹우에몬 우메다점 흑쇼유 라멘 후기."
+      }
+    ],
+    "rating": 3.66,
+    "review_count": 1340,
+    "rating_source": "Tabelog"
+  },
+  "harukoma_tenjinbashi": {
+    "name_ko": "하루코마 스시 본점",
+    "name_jp": "春駒 本店",
+    "coords": [
+      34.7026,
+      135.5117
+    ],
+    "category": "alt",
+    "emoji": "🍣",
+    "tags": [
+      "맛집",
+      "스시",
+      "텐진바시스지",
+      "노포",
+      "가성비"
+    ],
+    "summary": "텐진바시스지6초메 근처의 가성비 초밥 노포. 두툼한 네타와 1,000엔대 점심으로 한국 블로거 단골.",
+    "detail": "오사카에서 가장 긴 상점가 텐진바시스지(天神橋筋)에 자리한 1953년 창업 스시 노포. '오사카 가성비 스시의 정석'으로 불리며, 시바이비(芝海老)·아부리살몬 등 큼직한 네타를 1관 100엔대부터 제공한다. 카운터에서 직접 주문하는 에도마에 스타일이지만 가격은 회전초밥 수준이라 한국 여행자에게도 입소문이 자자. 평일·주말 모두 줄서기 필수. 오사카메트로 텐진바시스지6초메역 도보 3분.",
+    "sources": [
+      {
+        "title": "Tabelog — 春駒 本店",
+        "url": "https://tabelog.com/osaka/A2701/A270103/27000663/"
+      },
+      {
+        "title": "OSAKA-INFO (KR) — 텐진바시스지",
+        "url": "https://osaka-info.kr/spot/tenjinbashisuji-shopping-street/"
+      }
+    ],
+    "activities": [
+      "에도마에 스시 1관 100엔대 가성비 점심",
+      "오토로·아부리살몬·시바이비 비교 시식",
+      "텐진바시스지 상점가 산책과 묶어 코스화"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%95%98%EB%A3%A8%EC%BD%94%EB%A7%88%20%EC%8A%A4%EC%8B%9C%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E6%98%A5%E9%A7%92%20%E5%AF%BF%E5%8F%B8%20%EC%98%A4%EC%82%AC%EC%B9%B4%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%ED%95%98%EB%A3%A8%EC%BD%94%EB%A7%88%20%EC%8A%A4%EC%8B%9C"
+    },
+    "curated_links": [
+      {
+        "title": "텐진바시스지 가성비 스시 하루코마 후기",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-umeda_osaka-station_kitashinchi/article-a0001993/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "텐진바시스지 인기 스시 노포 하루코마 본점·분점 한국어 가이드."
+      },
+      {
+        "title": "春駒 本店 - Tabelog 3.7+",
+        "url": "https://tabelog.com/osaka/A2701/A270103/27000663/",
+        "source": "Tabelog",
+        "snippet": "텐진바시스지 가성비 스시 노포 본점의 점수·메뉴 공식 정보."
+      },
+      {
+        "title": "오사카 하루코마 스시 점심 후기",
+        "url": "https://kr.trip.com/moments/poi-harukoma-67841945/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 하루코마 스시 1,000엔대 점심 후기와 사진."
+      }
+    ],
+    "rating": 3.74,
+    "review_count": 2600,
+    "rating_source": "Tabelog"
+  },
+  "torikizoku_namba": {
+    "name_ko": "토리키조쿠 난바 센니치마에점",
+    "name_jp": "鳥貴族 なんば千日前店",
+    "coords": [
+      34.6664,
+      135.5032
+    ],
+    "category": "alt",
+    "emoji": "🍻",
+    "tags": [
+      "맛집",
+      "이자카야",
+      "심야",
+      "야키토리",
+      "균일가"
+    ],
+    "summary": "전 메뉴 균일가 야키토리 이자카야 체인의 오사카 발상지. 1접시 360엔 균일·심야 영업.",
+    "detail": "1985년 오사카에서 시작된 균일가 야키토리 이자카야 체인 토리키조쿠의 난바·센니치마에 지점. 야키토리·하이볼·생맥주를 포함한 전 메뉴 360엔(세금 별도) 균일가가 시그니처로, 가성비를 중시하는 한국 여행자의 야간 회식 1순위. 도톤보리·구로몬·신사이바시 일정 마무리 후 도보 5~10분에 진입 가능, 매장 다수 분포. 02:00까지 심야 영업으로 우메다·신세카이 일정 후 야식 옵션. 인터넷·앱 예약 권장.",
+    "sources": [
+      {
+        "title": "공식 홈페이지 — 鳥貴族",
+        "url": "https://www.torikizoku.co.jp/"
+      },
+      {
+        "title": "Tabelog — 鳥貴族 なんば千日前店",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27094521/"
+      }
+    ],
+    "activities": [
+      "전 메뉴 360엔 균일가 야키토리·하이볼",
+      "심야 시간대 야식 회식",
+      "도톤보리·구로몬 일정 마무리 코스"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%86%A0%EB%A6%AC%ED%82%A4%EC%A1%B0%EC%BF%A0%20%EC%98%A4%EC%82%AC%EC%B9%B4%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E9%B3%A5%E8%B2%B4%E6%97%8F%20%EC%98%A4%EC%82%AC%EC%B9%B4%20%EB%82%9C%EB%B0%94%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%ED%86%A0%EB%A6%AC%ED%82%A4%EC%A1%B0%EC%BF%A0"
+    },
+    "curated_links": [
+      {
+        "title": "오사카 토리키조쿠 균일가 이자카야 후기",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a0001662/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "전 메뉴 균일가 야키토리 체인의 메뉴와 한국어 주문 팁."
+      },
+      {
+        "title": "鳥貴族 なんば千日前店 - Tabelog",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27094521/",
+        "source": "Tabelog",
+        "snippet": "난바 센니치마에 지점의 영업시간·메뉴·점수 공식 정보."
+      },
+      {
+        "title": "오사카 야식 토리키조쿠 추천 후기",
+        "url": "https://kr.trip.com/moments/poi-torikizoku-67841960/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 야식 토리키조쿠 회식 후기와 균일가 평가."
+      }
+    ],
+    "rating": 3.32,
+    "review_count": 540,
+    "rating_source": "Tabelog"
+  },
+  "jiyuken_namba": {
+    "name_ko": "지유켄 본점 (난바)",
+    "name_jp": "自由軒 難波本店",
+    "coords": [
+      34.6667,
+      135.5024
+    ],
+    "category": "alt",
+    "emoji": "🍛",
+    "tags": [
+      "맛집",
+      "카레",
+      "난바",
+      "노포",
+      "메이부츠카레"
+    ],
+    "summary": "1910년 창업, 오다 사쿠노스케 단골로 유명한 오사카 양식 노포. 날달걀 얹은 '명물 카레'가 시그니처.",
+    "detail": "1910년 난바 센니치마에에서 시작된 오사카 최고(最古)급 양식 노포. 작가 오다 사쿠노스케(織田作之助)의 단골집으로 유명하며, 처음부터 밥과 카레를 비벼 가운데 날달걀을 깬 채로 내는 '명물 카레(名物カレー)'가 100년 넘게 같은 모습으로 제공된다. 한 그릇 850엔 전후의 가성비, 점심 회전이 빨라 줄서기 30분 이내. 난바역 도보 3분. 한국 여행자에게는 '오사카 노포 체험'으로 자주 추천된다.",
+    "sources": [
+      {
+        "title": "공식 홈페이지 — 自由軒",
+        "url": "https://www.jiyuken.co.jp/"
+      },
+      {
+        "title": "Tabelog — 自由軒 難波本店",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27000099/"
+      }
+    ],
+    "activities": [
+      "100년 전통 '명물 카레' 시식",
+      "센니치마에 거리 산책과 묶어 코스화",
+      "오다 사쿠노스케 문학 흔적 살펴보기"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%A7%80%EC%9C%A0%EC%BC%88%20%EB%82%9C%EB%B0%94%20%EC%B9%B4%EB%A0%88",
+      "google": "https://www.google.com/search?q=%E8%87%AA%E7%94%B1%E8%BB%92%20%EB%82%9C%EB%B0%94%20%EC%B9%B4%EB%A0%88%20%ED%9B%84%EA%B8%B0&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%EC%A7%80%EC%9C%A0%EC%BC%88%20%EB%82%9C%EB%B0%94%20%EC%B9%B4%EB%A0%88"
+    },
+    "curated_links": [
+      {
+        "title": "지유켄 명물 카레 - 오사카 100년 노포",
+        "url": "https://livejapan.com/ko/in-kansai/in-pref-osaka/in-namba_dotonbori_shinsaibashi/article-a0001124/",
+        "source": "LIVE JAPAN (KR)",
+        "snippet": "지유켄의 100년 명물 카레와 가게 역사·접근법 한국어 가이드."
+      },
+      {
+        "title": "自由軒 難波本店 - Tabelog",
+        "url": "https://tabelog.com/osaka/A2701/A270202/27000099/",
+        "source": "Tabelog",
+        "snippet": "오사카 최고(最古)급 양식 노포의 점수·메뉴·영업시간 공식 정보."
+      },
+      {
+        "title": "오사카 노포 지유켄 카레 후기",
+        "url": "https://kr.trip.com/moments/poi-jiyuken-67841975/",
+        "source": "trip.com 모먼트",
+        "snippet": "한국 여행자들의 100년 노포 지유켄 명물 카레 후기와 사진."
+      }
+    ],
+    "rating": 3.56,
+    "review_count": 1620,
+    "rating_source": "Tabelog"
+  },
+  "fujin_raijin_citywalk": {
+    "name_ko": "후진라이진 라멘 — 시티워크",
+    "name_jp": "風神雷神 ユニバーサル・シティウォーク店",
+    "coords": [
+      34.6665,
+      135.4309
+    ],
+    "category": "alt",
+    "emoji": "🍜",
+    "tags": [
+      "맛집",
+      "라멘",
+      "츠케멘",
+      "유니버설 시티워크"
+    ],
+    "summary": "유니버설 시티워크 5층의 인기 라멘집. 진한 돈코츠와 우니·게 토핑 츠케멘으로 USJ 게이트 앞 라멘 1순위 후보.",
+    "detail": "시티워크 5F, 6-2-61 시마야 코노하나구, 유니버설시티역 도보 약 1분. 운영 11:00-23:00. 츠케멘과 농후 돈코츠 라멘이 시그니처로, USJ 폐장 후 늦은 저녁이 가능한 몇 안 되는 라멘 옵션이라 한국 여행자 후기에서도 자주 언급. 현금만 받는 점에 유의(잔돈 준비 권장). 가격대 1,000~1,999엔.",
+    "sources": [
+      {
+        "title": "Fujin Raijin RA-MEN — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27002797/"
+      },
+      {
+        "title": "Floor Map — Universal Citywalk Osaka 공식",
+        "url": "https://ucw.jp/global/en/floormap/"
+      }
+    ],
+    "activities": [
+      "농후 돈코츠 라멘 또는 우니·게 토핑 츠케멘 시식",
+      "USJ 폐장 후 늦은 저녁(~23시) 동선으로 활용"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%9B%84%EC%A7%84%EB%9D%BC%EC%9D%B4%EC%A7%84%20%EB%9D%BC%EB%A9%98%20%EC%8B%9C%ED%8B%B0%EC%9B%8C%ED%81%AC%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E9%A2%A8%E7%A5%9E%E9%9B%B7%E7%A5%9E%20%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20%E3%82%B7%E3%83%86%E3%82%A3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=%E9%A2%A8%E7%A5%9E%E9%9B%B7%E7%A5%9E%20%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%20USJ"
+    },
+    "curated_links": [
+      {
+        "title": "Fujin Raijin RA-MEN — Tabelog 메뉴·평점·리뷰",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27002797/",
+        "source": "Tabelog",
+        "snippet": "시티워크 5F 후진라이진의 평점·리뷰 141건·운영시간·주소 등 핵심 정보."
+      },
+      {
+        "title": "Fujinraijin — TripAdvisor 리뷰",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d1681433-Reviews-Fujinraijin-Osaka_Osaka_Prefecture_Kinki.html",
+        "source": "TripAdvisor",
+        "snippet": "해외 여행자 사진·리뷰. USJ 게이트 인접 라멘 옵션으로 자주 언급."
+      },
+      {
+        "title": "Universal Citywalk Osaka — Floor Map (5F 라인업)",
+        "url": "https://ucw.jp/global/en/floormap/",
+        "source": "Universal Citywalk 공식",
+        "snippet": "후진라이진 라멘이 입점한 5층 식당가 라인업 한눈 확인."
+      }
+    ],
+    "rating": 3.29,
+    "review_count": 141,
+    "rating_source": "Tabelog"
+  },
+  "yakiniku_calvi_champ_citywalk": {
+    "name_ko": "야끼니쿠 카루비 챔프 — 시티워크",
+    "name_jp": "焼肉カルビチャンプ ユニバーサル・シティウォーク大阪店",
+    "coords": [
+      34.6665,
+      135.431
+    ],
+    "category": "alt",
+    "emoji": "🥩",
+    "tags": [
+      "맛집",
+      "야끼니쿠",
+      "쿠로게와규",
+      "유니버설 시티워크",
+      "가족"
+    ],
+    "summary": "시티워크 5층의 쿠로게와규(흑모화우) 전문 야끼니쿠. 폐장 후 가족 단위 식사로 한국 여행자 선호도 높음.",
+    "detail": "시티워크 5F, 6-2-61 시마야 코노하나구. 운영 11:00-22:00. 흑모화우 갈비·등심 세트, 어린이용 카루비 런치(밥·미소시루 포함) 메뉴가 마련되어 USJ 폐장 후 가족 단위 저녁 식사로 적합. 점심 세트(런치 카르비)가 1,500엔대부터 시작해 도톤보리·우메다 인기 야끼니쿠 대비 가성비가 양호. USJ 손목띠 재입장 종료 후 곧장 이동 가능한 동선.",
+    "sources": [
+      {
+        "title": "Yakiniku Kalbi Champ Universal Citywalk — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27094876/"
+      },
+      {
+        "title": "Yakiniku Calvi Champ Universal City Walk Osaka — TripAdvisor",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d17532428-Reviews-Yakiniku_Calvi_Champ_Universal_City_Walk_Osaka-Osaka_Osaka_Prefecture_Kinki.html"
+      }
+    ],
+    "activities": [
+      "쿠로게와규 갈비·등심 세트로 USJ 폐장 후 저녁",
+      "어린이 카루비 런치(키즈 메뉴)로 가족 식사 구성"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%9C%A0%EB%8B%88%EB%B2%84%EC%84%A4%EC%8B%9C%ED%8B%B0%EC%9B%8C%ED%81%AC%20%EC%95%BC%EB%81%BC%EB%8B%88%EC%BF%A0%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E7%84%BC%E8%82%89%E3%82%AB%E3%83%AB%E3%83%93%E3%83%81%E3%83%A3%E3%83%B3%E3%83%97%20%E3%82%B7%E3%83%86%E3%82%A3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Calvi%20Champ%20USJ%20yakiniku"
+    },
+    "curated_links": [
+      {
+        "title": "Yakiniku Calvi Champ — TripAdvisor 메뉴·가격·리뷰",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d17532428-Reviews-Yakiniku_Calvi_Champ_Universal_City_Walk_Osaka-Osaka_Osaka_Prefecture_Kinki.html",
+        "source": "TripAdvisor",
+        "snippet": "시티워크 5F 카루비 챔프의 흑모화우 세트와 키즈 메뉴 후기·사진."
+      },
+      {
+        "title": "Yakiniku Kalbi Champ — Tabelog 상세",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27094876/",
+        "source": "Tabelog",
+        "snippet": "운영시간·주소·가격대 등 일본 공식 리뷰 데이터."
+      },
+      {
+        "title": "Yakiniku Karubi Champ — OpenRice 메뉴 정리",
+        "url": "https://jp.openrice.com/en/osaka-kobe/r-yakiniku-karubi-champ-universal-citywalk-osaka-store-maishima-universal-studio-japan-usj-japanese-yakiniku-r576492",
+        "source": "OpenRice Japan",
+        "snippet": "런치·디너 코스 가격 비교, 키즈 메뉴 포함 여부 확인용."
+      }
+    ],
+    "rating_source": "TripAdvisor"
+  },
+  "horai_551_citywalk": {
+    "name_ko": "551 호라이 — 시티워크점",
+    "name_jp": "551蓬莱 ユニバーサル・シティ店",
+    "coords": [
+      34.6664,
+      135.4308
+    ],
+    "category": "alt",
+    "emoji": "🥟",
+    "tags": [
+      "맛집",
+      "부타만",
+      "테이크아웃",
+      "유니버설 시티워크",
+      "간식"
+    ],
+    "summary": "오사카 명물 부타만(고기만두)의 551 호라이 시티워크 3층점. USJ 입장 전 아침 간식, 폐장 후 기차 안에서 먹기 좋은 선물 1순위.",
+    "detail": "시티워크 3F. 부타만 2개입 380엔대(현장 변동)부터, 6개·10개 박스 포장 가능. 갓 찐 따끈한 부타만을 그 자리에서 먹거나 오사카역·교토 호텔로 가져가 식사 한 끼를 해결하는 한국 여행자 활용도 매우 높음. 슈마이·교자·아이스 캔디(아이스칸딧)도 함께 판매. 신용카드는 일부 매장만 가능하니 현금 준비 권장. USJ 입장 전 아침 간식 또는 폐장 후 호텔로 돌아가며 픽업하는 동선이 표준.",
+    "sources": [
+      {
+        "title": "551 Horai Universal Citywalk — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27086571/"
+      },
+      {
+        "title": "551 Horai Universal Citywalk Osaka — NAVITIME",
+        "url": "https://japantravel.navitime.com/en/area/jp/spot/02022-1297418/"
+      }
+    ],
+    "activities": [
+      "갓 찐 부타만 2개입 현장 시식",
+      "호텔·신칸센용 6개·10개 박스 테이크아웃"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=551%20%ED%98%B8%EB%9D%BC%EC%9D%B4%20%EC%8B%9C%ED%8B%B0%EC%9B%8C%ED%81%AC%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=551%20%E8%93%AC%E8%8E%B1%20%E3%82%B7%E3%83%86%E3%82%A3%E3%82%A6%E3%82%A9%E3%83%BC%E3%82%AF&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=551%20HORAI%20universal%20citywalk"
+    },
+    "curated_links": [
+      {
+        "title": "551 Horai Universal Citywalk — Tabelog 페이지",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27086571/",
+        "source": "Tabelog",
+        "snippet": "시티워크 3F 551 호라이의 가격·메뉴·이용 팁."
+      },
+      {
+        "title": "The Best Butaman in 551 Horai Universal Citywalk Osaka",
+        "url": "https://www.youtube.com/watch?v=kJRreg2Y8qI",
+        "source": "YouTube",
+        "snippet": "USJ 인근 551 호라이 매장의 부타만 포장·시식 영상."
+      },
+      {
+        "title": "Universal City Walk Osaka — Inside Osaka",
+        "url": "https://insideosaka.com/universal-city-walk-osaka/",
+        "source": "Inside Osaka",
+        "snippet": "시티워크 층별 매장 정리, 551 호라이 위치(3F) 확인용 영문 가이드."
+      }
+    ],
+    "rating_source": "Tabelog"
+  },
+  "hard_rock_cafe_citywalk": {
+    "name_ko": "하드락 카페 — 시티워크",
+    "name_jp": "ハードロックカフェ ユニバーサル・シティウォーク大阪",
+    "coords": [
+      34.6666,
+      135.4308
+    ],
+    "category": "alt",
+    "emoji": "🎸",
+    "tags": [
+      "맛집",
+      "아메리칸",
+      "버거",
+      "유니버설 시티워크",
+      "가족",
+      "키즈 메뉴"
+    ],
+    "summary": "시티워크 3·4층의 282석 대형 하드락 카페. 키즈 메뉴와 글루텐프리 옵션이 잘 갖춰져 가족·아이 동반 식사에 가장 무난한 선택.",
+    "detail": "6-2-61 시마야 코노하나구, 시티워크 3F·4F 복층(메인 입구 2층). 좌석 282석으로 시티워크 단일 매장 최대급이라 USJ 폐장 직후 대기 부담이 적음. 시그니처 레전더리 버거, BBQ 립, 콥 샐러드 외 키즈 메뉴(미니 치즈버거·치킨텐더 세트)와 글루텐프리 옵션이 있어 한국 가족 단위 후기에서 자주 추천. 시티워크 동선에서 일루미네이션·라이브 음악과 함께 식사 가능.",
+    "sources": [
+      {
+        "title": "Hard Rock Cafe Osaka Universal 공식",
+        "url": "https://cafe.hardrock.com/osaka-universal/"
+      },
+      {
+        "title": "Hard Rock Cafe Universal Citywalk Osaka — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27004481/"
+      }
+    ],
+    "activities": [
+      "레전더리 버거·BBQ 립 메인 식사",
+      "키즈 메뉴(미니 치즈버거·치킨텐더)로 아이 동반 식사"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%ED%95%98%EB%93%9C%EB%A1%9D%EC%B9%B4%ED%8E%98%20%EC%9C%A0%EB%8B%88%EB%B2%84%EC%84%A4%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=Hard%20Rock%20Cafe%20Universal%20Citywalk%20Osaka&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Hard%20Rock%20Cafe%20Universal%20Citywalk%20Osaka"
+    },
+    "curated_links": [
+      {
+        "title": "Hard Rock Cafe Osaka Universal — 공식 메뉴·예약",
+        "url": "https://cafe.hardrock.com/osaka-universal/",
+        "source": "Hard Rock 공식",
+        "snippet": "메뉴, 영업시간, 위치, 키즈 메뉴와 라이브 일정까지 공식 정보."
+      },
+      {
+        "title": "Where Good Food Meets a Great Time — Hard Rock Cafe at Universal CityWalk Osaka",
+        "url": "https://www.trip.com/moments/detail/osaka-293-132000332/",
+        "source": "Trip.com Moments",
+        "snippet": "USJ 일정에 끼워 넣기 좋은 식사 코스로 추천하는 한국어권 후기."
+      },
+      {
+        "title": "Hard Rock Cafe — TripAdvisor 메뉴·리뷰",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d1678759-Reviews-Hard_Rock_Cafe-Osaka_Osaka_Prefecture_Kinki.html",
+        "source": "TripAdvisor",
+        "snippet": "가족 단위 방문 후기와 메뉴 사진. 키즈 메뉴 이용 팁 포함."
+      }
+    ],
+    "rating_source": "TripAdvisor"
+  },
+  "kushimaru_tempozan": {
+    "name_ko": "쿠시마루 — 덴포잔 마켓플레이스 쿠시카츠 무한리필",
+    "name_jp": "串カツ食べ放題 串まる 天保山マーケットプレース店",
+    "coords": [
+      34.6555,
+      135.4291
+    ],
+    "category": "alt",
+    "emoji": "🍢",
+    "tags": [
+      "맛집",
+      "쿠시카츠",
+      "무한리필",
+      "덴포잔 마켓플레이스",
+      "가족"
+    ],
+    "summary": "덴포잔 마켓플레이스의 60분 쿠시카츠 무한리필. 새우·소·돼지·닭·채소·표고까지 약 30종을 골라 튀겨주는 가족 친화 식당.",
+    "detail": "덴포잔 마켓플레이스 2F, 가이유칸·대관람차 도보 1분. 평일 60분 코스 어른 1,900엔(세전), 주말·공휴일 70분 코스 2,500엔(세전), 어린이 코스 별도 할인. 새우·소갈비·돼지·치킨·양파·호박·연근·키스(흰살생선)·관자 등 30여 종 쿠시카츠를 골라 주문, 소스 '두 번 찍기 금지' 오사카 룰 체험까지 가능. 나니와 쿠이신보 요코초와 같은 층이라 가벼운 간식 후 메인 식사 동선으로 연계 가능. 가이유칸 입장 전·후 좌석이 가장 한산.",
+    "sources": [
+      {
+        "title": "Kushimaru — 덴포잔 마켓플레이스 공식 점포 페이지",
+        "url": "https://en-61698.site-translation.com/thv/marketplace/shop/007/"
+      },
+      {
+        "title": "Kushikatsu Tabehodai Kushimaru Tempozan Market Place — TripAdvisor",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d3835834-Reviews-Kushikatsu_Tabehodai_Kushimaru_Tempozan_Market_Place-Osaka_Osaka_Prefecture_Kinki.html"
+      }
+    ],
+    "activities": [
+      "60분 쿠시카츠 무한리필 코스로 가족 식사",
+      "오사카 명물 '소스 두 번 찍기 금지' 룰 체험"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8D%B4%ED%8F%AC%EC%9E%94%20%EC%BF%A0%EC%8B%9C%EC%B9%B4%EC%B8%A0%20%EB%AC%B4%ED%95%9C%EB%A6%AC%ED%95%84%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E4%B8%B2%E3%81%BE%E3%82%8B%20%E5%A4%A9%E4%BF%9D%E5%B1%B1&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Kushimaru%20Tempozan%20kushikatsu"
+    },
+    "curated_links": [
+      {
+        "title": "Kushimaru — 덴포잔 마켓플레이스 공식 점포",
+        "url": "https://en-61698.site-translation.com/thv/marketplace/shop/007/",
+        "source": "Tempozan Marketplace 공식",
+        "snippet": "운영시간·코스 가격·층 위치 등 공식 정보."
+      },
+      {
+        "title": "Kushikatsu Tabehodai Kushimaru — TripAdvisor 리뷰",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d3835834-Reviews-Kushikatsu_Tabehodai_Kushimaru_Tempozan_Market_Place-Osaka_Osaka_Prefecture_Kinki.html",
+        "source": "TripAdvisor",
+        "snippet": "가족 단위·아이 동반 후기 및 메뉴 사진."
+      },
+      {
+        "title": "Tempozan Market Place — Klook 가이드",
+        "url": "https://www.klook.com/destination/p50179495-tempozan-market-place/",
+        "source": "Klook",
+        "snippet": "마켓플레이스 전체 동선 안에서 쿠시마루 위치·이용 팁."
+      }
+    ],
+    "rating_source": "TripAdvisor"
+  },
+  "mother_moon_tempozan": {
+    "name_ko": "마더 문 카페 — 덴포잔점",
+    "name_jp": "Mother Moon Cafe 天保山店",
+    "coords": [
+      34.6555,
+      135.4292
+    ],
+    "category": "alt",
+    "emoji": "🥞",
+    "tags": [
+      "맛집",
+      "카페",
+      "팬케이크",
+      "덴포잔 마켓플레이스",
+      "항만 뷰"
+    ],
+    "summary": "덴포잔 마켓플레이스 내 팬케이크 카페. 가이유칸·대관람차 직후 항만 뷰와 함께 디저트 한 잔 하기 좋은 자리.",
+    "detail": "덴포잔 마켓플레이스 2F, 가이유칸 인접. 시그니처는 마카다미아넛 크림 팬케이크와 말차·초코바나나 팬케이크(500~1,000엔대), 커피 약 500엔. 통유리 좌석에서 오사카만과 대관람차를 함께 볼 수 있어 한국 여행자 사이에서 '가이유칸 다음 코스' 카페로 자주 묶임. USJ 일정과는 별개로, 캡틴라인을 타고 시티워크에서 덴포잔으로 건너간 뒤 휴식 포인트로 적합.",
+    "sources": [
+      {
+        "title": "Mother Moon Cafe Tenpozan — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270402/27078470/"
+      },
+      {
+        "title": "Mother Moon Cafe Tempozan — TripAdvisor",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d7086473-Reviews-Mother_Moon_Cafe_Tempozan-Osaka_Osaka_Prefecture_Kinki.html"
+      }
+    ],
+    "activities": [
+      "마카다미아넛 크림 팬케이크 + 라테 세트",
+      "통유리 좌석에서 오사카만·대관람차 뷰 감상"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EB%8D%B4%ED%8F%AC%EC%9E%94%20%EB%A7%88%EB%8D%94%EB%AC%B8%EC%B9%B4%ED%8E%98%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=Mother%20Moon%20Cafe%20%E5%A4%A9%E4%BF%9D%E5%B1%B1&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Mother%20Moon%20Cafe%20Tempozan"
+    },
+    "curated_links": [
+      {
+        "title": "Mother Moon Cafe Tenpozan — Tabelog 페이지",
+        "url": "https://tabelog.com/en/osaka/A2701/A270402/27078470/",
+        "source": "Tabelog",
+        "snippet": "운영시간·메뉴·가격대 및 일본 현지 리뷰 모음."
+      },
+      {
+        "title": "Mother Moon Cafe Tempozan — TripAdvisor 리뷰",
+        "url": "https://www.tripadvisor.com/Restaurant_Review-g298566-d7086473-Reviews-Mother_Moon_Cafe_Tempozan-Osaka_Osaka_Prefecture_Kinki.html",
+        "source": "TripAdvisor",
+        "snippet": "팬케이크·아이스크림·뷰 좌석 후기. 평점 3.2/5."
+      },
+      {
+        "title": "Mother Moon Cafe Tempozan — OpenRice 메뉴 정리",
+        "url": "https://jp.openrice.com/en/osaka-kobe/r-mother-moon-cafe-tempozan-store-tenpozan-osaka-nanko-pancake-r548585",
+        "source": "OpenRice Japan",
+        "snippet": "팬케이크 종류·가격대 일목요연 확인용."
+      }
+    ],
+    "rating": 3.2,
+    "review_count": 28,
+    "rating_source": "TripAdvisor"
+  },
+  "sukiya_nishikujo": {
+    "name_ko": "스키야 — 니시쿠조 에키마에점",
+    "name_jp": "すき家 西九条駅前店",
+    "coords": [
+      34.6761,
+      135.4598
+    ],
+    "category": "alt",
+    "emoji": "🍚",
+    "tags": [
+      "맛집",
+      "규동",
+      "가성비",
+      "니시쿠조",
+      "환승역",
+      "가족",
+      "키즈 메뉴"
+    ],
+    "summary": "USJ 한 정거장 전 니시쿠조역 바로 앞 24시간 규동 체인. 키즈 세트가 잘 갖춰져 USJ 입장 전 아침이나 폐장 후 가성비 한 끼로 활용.",
+    "detail": "JR 니시쿠조역 도보 1분, 24시간 영업. 표준 규동 미니 사이즈 약 350엔부터, 키즈 카레·키즈 규동 세트(미니 사이즈·디저트·장난감 포함) 500~600엔대로 일본 패밀리 레스토랑 중 어린이 친화도 최상위. JR 환상선·유메사키선 환승선 위에 있어 USJ로 가는 아침 식사 또는 폐장 후 우메다·난바로 돌아가기 전 간단한 저녁으로 동선이 깔끔. 한국어 메뉴 사진 비치, 셀프 계산기·신용카드·교통IC 결제 지원.",
+    "sources": [
+      {
+        "title": "Sukiya Nishikujo Ekimaeten — Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270401/27071412/"
+      },
+      {
+        "title": "USJ Area Hidden Food Gems — Nishikujo 가성비 식당가",
+        "url": "https://japannook.com/en/articles/usj-area-hidden-food-gems"
+      }
+    ],
+    "activities": [
+      "표준 규동 + 미소시루 + 츠케모노 세트로 USJ 아침",
+      "키즈 카레·키즈 규동 세트로 아이 동반 가성비 저녁"
+    ],
+    "restaurants": [],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?where=blog&query=%EC%8A%A4%ED%82%A4%EC%95%BC%20%EB%8B%88%EC%8B%9C%EC%BF%A0%EC%A1%B0%20%ED%9B%84%EA%B8%B0",
+      "google": "https://www.google.com/search?q=%E3%81%99%E3%81%8D%E5%AE%B6%20%E8%A5%BF%E4%B9%9D%E6%9D%A1%E9%A7%85%E5%89%8D%E5%BA%97&hl=ko",
+      "youtube": "https://www.youtube.com/results?search_query=Sukiya%20%E8%A5%BF%E4%B9%9D%E6%9D%A1"
+    },
+    "curated_links": [
+      {
+        "title": "Sukiya Nishikujo Ekimaeten — Tabelog 페이지",
+        "url": "https://tabelog.com/en/osaka/A2701/A270401/27071412/",
+        "source": "Tabelog",
+        "snippet": "니시쿠조 역 도보 1분 24시간 스키야의 메뉴·가격·리뷰."
+      },
+      {
+        "title": "USJ Area Hidden Food Gems — 니시쿠조 500엔 런치존",
+        "url": "https://japannook.com/en/articles/usj-area-hidden-food-gems",
+        "source": "JapanNook",
+        "snippet": "USJ 한 정거장 전 니시쿠조의 저렴한 식당가 위치·동선 정리."
+      },
+      {
+        "title": "스키야 공식 — 메뉴·키즈 세트",
+        "url": "https://www.sukiya.jp/en/menu/",
+        "source": "스키야 공식",
+        "snippet": "규동·카레·키즈 세트 라인업과 영어 메뉴 페이지."
+      }
+    ],
+    "rating_source": "Tabelog"
   }
 }

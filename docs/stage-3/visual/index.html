@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 3 — Japan Travel Plan 2026.05.22–26</title>
+    <title>Stage 3 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -268,6 +268,11 @@
         <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">9</div>
+        <span class="timeline-label">Stage 9</span>
+      </div>
     </nav>
 
     <main>
@@ -275,15 +280,18 @@
         <h2 id="stage-heading">Stage 3</h2>
 
         <div class="card-grid">
+          <!-- Single card sourced from mobile-polish.md -->
           <article aria-labelledby="card-mobile-polish">
-            <h3 id="card-mobile-polish">Mobile Polish</h3>
+            <h3 id="card-mobile-polish">
+              Mobile Responsiveness + Detail Polish
+            </h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
                 현장에서 스마트폰으로 봐야 하는 게 최종 사용 시나리오. Stage
                 1&#8211;2의 데스크톱 레이아웃은 모바일에서 짜그라지기 때문에
-                별도의 mobile UX가 필요. 정보가 많아진 만큼 디테일 패널이
+                별도의 mobile UX가 필요. 그리고 정보가 많아진 만큼 디테일 패널이
                 정리되어 있어야 한 화면에 들어옴.
               </p>
             </div>
@@ -301,10 +309,9 @@
                   view로 복귀
                 </li>
                 <li>
-                  디테일 패널 폴리시: 상단 emoji 그라데이션 hero (h-40,
-                  text-7xl) + 둥근 close 버튼, transit card (border-left + day
-                  색상), 태그 chip, 추천 활동 &#8226; marker, 맛집 카드, 후기
-                  버튼 3-col grid
+                  디테일 패널 폴리시: 상단 emoji 그라데이션 hero + 둥근 close
+                  버튼, transit card (border-left + day 색상), 태그 chip, 추천
+                  활동 ▸ marker, 맛집 카드, 후기 버튼 3-col grid
                 </li>
                 <li>
                   활성 마커 pulse 애니메이션 (<code
@@ -350,8 +357,7 @@
                   <code>renderMobileTabs</code>, <code>renderDay</code>의
                   <code>--active-day</code> 설정, <code>selectStop</code>의
                   active marker toggle + matchMedia mobile close,
-                  <code>renderDetail</code> 전체 (transit card, chip, restaurant
-                  cards, 후기 grid)
+                  <code>renderDetail</code> 전체
                 </li>
               </ul>
             </div>
@@ -377,7 +383,7 @@
                 </li>
                 <li>
                   조심한 점: marker pulse animation이 무한 반복이라 배터리 영향
-                  미미하지만 있음 &#8212; 1.4s 주기는 충분히 잔잔.
+                  미미하지만 있음 &#8212; 1.4s 주기는 충분히 잔잔. UX 우선.
                 </li>
                 <li>
                   조심한 점: 모바일 디테일이 풀스크린이지만 하단
