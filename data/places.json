@@ -8484,8 +8484,8 @@
     "name_ko": "긴큐에몬 도톤보리점 (오사카 블랙 라멘)",
     "name_jp": "金久右衛門 道頓堀店",
     "coords": [
-      34.6685,
-      135.5018
+      34.668,
+      135.505
     ],
     "category": "alt",
     "emoji": "🍜",
@@ -8758,62 +8758,6 @@
     ],
     "rating": 3.47,
     "review_count": 438,
-    "rating_source": "Tabelog"
-  },
-  "jinrui_minamenrui_factory": {
-    "name_ko": "진루이 미나 멘루이 FACTORY",
-    "name_jp": "人類みな麺類 FACTORY",
-    "coords": [
-      34.6688,
-      135.5031
-    ],
-    "category": "alt",
-    "emoji": "🍜",
-    "tags": [
-      "맛집",
-      "라멘",
-      "도톤보리"
-    ],
-    "summary": "오사카 행렬 1위 라멘 브랜드 '人類みな麺類'의 도톤보리 체험형 매장",
-    "detail": "OSAKA RAMEN BUILDING 1·2층에 입점. 본점이 미나미카타(별점 3.75)지만, FACTORY는 도톤보리 한복판에서 손님이 면 마무리·플레이팅에 참여할 수 있는 체험형 콘셉트. 두꺼운 차슈 라멘 ¥1,600, 시오 라멘·시즌 한정 라멘 등 다양. 일본바시역 도보 3분, 연중무휴 11:00-15:00·17:00-22:00.",
-    "sources": [
-      {
-        "title": "Tabelog - 人類みな麺類 FACTORY",
-        "url": "https://tabelog.com/osaka/A2701/A270202/27140477/"
-      }
-    ],
-    "activities": [
-      "주문 추천: 두꺼운 차슈 라멘 (시그니처)",
-      "팁: 본점 행렬이 부담스러우면 FACTORY가 좋은 대안 — 도톤보리에서 접근성 최고"
-    ],
-    "restaurants": [],
-    "review_links": {
-      "naver": "https://search.naver.com/search.naver?where=blog&query=%E4%BA%BA%E9%A1%9E%E3%81%BF%E3%81%AA%E9%BA%BA%E9%A1%9E%20FACTORY",
-      "google": "https://www.google.com/search?q=%E4%BA%BA%E9%A1%9E%E3%81%BF%E3%81%AA%E9%BA%BA%E9%A1%9E%20FACTORY&hl=ko",
-      "youtube": "https://www.youtube.com/results?search_query=%E4%BA%BA%E9%A1%9E%E3%81%BF%E3%81%AA%E9%BA%BA%E9%A1%9E%20FACTORY"
-    },
-    "curated_links": [
-      {
-        "title": "人類みな麺類 FACTORY - Tabelog",
-        "url": "https://tabelog.com/osaka/A2701/A270202/27140477/",
-        "source": "Tabelog",
-        "snippet": "별점 3.41, 78 리뷰 (신생 매장). 도톤보리 OSAKA RAMEN BUILDING 입점."
-      },
-      {
-        "title": "人類みな麺類 본점 (미나미카타) - Tabelog",
-        "url": "https://tabelog.com/osaka/A2701/A270301/27064584/",
-        "source": "Tabelog",
-        "snippet": "별점 3.75 / 4,825 리뷰. 식벨로그 라멘 100명점 8년 연속 선정 — 브랜드 신뢰도 참고."
-      },
-      {
-        "title": "UNCHI 株式会社 (브랜드)",
-        "url": "https://www.unchi-co.com/",
-        "source": "공식 홈페이지",
-        "snippet": "人類みな麺類, ボヨヨンラーメン, 焼き飯店 등 자매 매장 운영사."
-      }
-    ],
-    "rating": 3.41,
-    "review_count": 78,
     "rating_source": "Tabelog"
   },
   "honke_ootako_dotonbori": {
@@ -10677,7 +10621,7 @@
     "name_ko": "타이다시 라멘 코토네 — 니시쿠조점",
     "name_jp": "鯛出汁らーめん 琴ね 西九条店",
     "coords": [
-      34.6808,
+      34.6828,
       135.4655
     ],
     "category": "alt",
