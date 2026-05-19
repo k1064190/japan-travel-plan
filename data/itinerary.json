@@ -23,12 +23,12 @@
           "place_id": "sugata_hotel",
           "time": "17:10",
           "transit_from_prev": {
-            "mode": "난카이 라피트",
+            "mode": "난카이 라피트+도보",
             "from": "간사이공항",
             "to": "수가타 호텔 (신사이바시)",
-            "minutes": 34,
+            "minutes": 42,
             "cost_jpy": 1490,
-            "note": "특급권+승차권"
+            "note": "라피트 34분 + 난바역→신사이바시 도보 약 8분"
           },
           "duration_minutes": 30
         },
@@ -143,6 +143,20 @@
       "color_var": "--day-3",
       "stops": [
         {
+          "place_id": "ebisuhigashi_hotel",
+          "time": "08:00",
+          "duration_minutes": 30,
+          "transit_from_prev": {
+            "from": "수가타 호텔 (신사이바시)",
+            "to": "에비스히가시 호텔",
+            "mode": "미도스지선",
+            "minutes": 20,
+            "cost_jpy": 240,
+            "origin_place_id": "sugata_hotel",
+            "note": "체크아웃 후 도부쓰엔마에로 짐 옮김. 체크인 시간 전이라면 프런트에 짐 보관"
+          }
+        },
+        {
           "place_id": "osaka_castle",
           "time": "09:00",
           "transit_from_prev": {
@@ -151,8 +165,7 @@
             "to": "오사카죠공원",
             "minutes": 20,
             "cost_jpy": 240,
-            "note": "",
-            "origin_place_id": "ebisuhigashi_hotel"
+            "note": ""
           },
           "duration_minutes": 120
         },
@@ -233,18 +246,6 @@
             "note": "야식"
           },
           "duration_minutes": 60
-        },
-        {
-          "place_id": "ebisuhigashi_hotel",
-          "time": "22:00",
-          "duration_minutes": 0,
-          "transit_from_prev": {
-            "from": "도톤보리",
-            "to": "에비스히가시 호텔",
-            "mode": "미도스지",
-            "minutes": 10,
-            "cost_jpy": 190
-          }
         }
       ]
     },
@@ -314,12 +315,12 @@
           "place_id": "kansai_airport_dep",
           "time": "11:30",
           "transit_from_prev": {
-            "mode": "난카이 라피트",
+            "mode": "미도스지선+난카이 라피트",
             "from": "에비스히가시 호텔",
             "to": "간사이공항",
-            "minutes": 34,
-            "cost_jpy": 1490,
-            "note": "출국 2시간 전 도착"
+            "minutes": 50,
+            "cost_jpy": 1730,
+            "note": "호텔→도부쓰엔마에 도보 5분 + 미도스지선 난바 4분 + 환승 + 라피트 34분"
           },
           "duration_minutes": 180
         }
