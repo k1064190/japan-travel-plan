@@ -190,9 +190,13 @@ function initMap() {
     maxZoom: 19,
     attribution: "&copy; OpenStreetMap",
   }).addTo(state.map);
-  state.markerLayer = L.layerGroup().addTo(state.map);
-  state.altLayer = L.layerGroup().addTo(state.map);
+  // Stack order: routes (bottom) → alt candidates → numbered stops (top).
+  // The numbered stop markers must be on top so clicks land on them, not on
+  // an overlapping alt candidate (alts are smaller but can sit at the same
+  // coordinate when a stop is also itself a candidate's neighbor).
   state.routeLayer = L.layerGroup().addTo(state.map);
+  state.altLayer = L.layerGroup().addTo(state.map);
+  state.markerLayer = L.layerGroup().addTo(state.map);
 }
 
 function renderDay(dayId) {
@@ -220,7 +224,7 @@ function renderDay(dayId) {
       icon: altIcon,
       keyboard: false,
     }).addTo(state.altLayer);
-    altMarker.bindTooltip(altPlace.name_ko, {
+    altMarker.bindTooltip(esc(altPlace.name_ko), {
       direction: "top",
       offset: [0, -10],
     });
