@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 1 — Japan Travel Plan 2026.05.22–26</title>
+    <title>Stage 7 — Japan Travel Plan 2026.05.22–26</title>
     <style>
       *,
       *::before,
@@ -229,57 +229,61 @@
     </header>
 
     <nav class="timeline" aria-label="Project stages">
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">1</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">2</div>
+        <div class="timeline-node muted">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">3</div>
+        <div class="timeline-node muted">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">4</div>
+        <div class="timeline-node muted">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">5</div>
+        <div class="timeline-node muted">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">6</div>
+        <div class="timeline-node muted">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node future">7</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 1</h2>
+        <h2 id="stage-heading">Stage 7</h2>
 
         <div class="card-grid">
-          <article aria-labelledby="card-skeleton">
-            <h3 id="card-skeleton">Skeleton</h3>
+          <!-- Single card sourced from named-hotels.md -->
+          <article aria-labelledby="card-named-hotels">
+            <h3 id="card-named-hotels">Named Hotels (Sugata + Ebisuhigashi)</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                설계 전체를 한 번에 만들기 전에 데이터 &#8594; 지도 &#8594;
-                사이드바 &#8594; 디테일 &#8594; 라우팅의 와이어링이 처음부터
-                끝까지 동작하는지 5개 sample 명소로 검증한다. 60개 데이터를 채운
-                뒤 와이어링이 안 맞으면 되돌리기 비싸기 때문.
+                이전 단계까지 숙소는 <code>namba_hotel</code> /
+                <code>namba_hotel_checkout</code> 같은 abstract id로 표현
+                &#8212; 실제 예약된 호텔 두 곳과 위치·체크인/아웃 흐름이
+                일치하지 않았다. 사용자가 실제 예약을 알린 시점에 도착해,
+                1·2일차와 3·4일차의 박이 서로 다른 호텔이라는 사실을 데이터에
+                반영하지 않으면 Google Maps 길찾기 origin이 잘못 잡혀 시간
+                신빙성이 다시 떨어진다.
               </p>
             </div>
 
@@ -287,25 +291,55 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>index.html</code> 골격 + Leaflet 1.9.4 / Tailwind play
-                  CDN / Pretendard CDN 임포트
+                  <code>places.json</code>에 호텔 3개 추가:
+                  <ul>
+                    <li>
+                      <code>sugata_hotel</code> &#8212; Sugata Hotel Osaka
+                      Shinsaibashi (Marriott Series), 신사이바시
+                    </li>
+                    <li>
+                      <code>ebisuhigashi_hotel</code> &#8212; 2-1-24
+                      Ebisuhigashi, 나니와구 (호텔명 미상)
+                    </li>
+                    <li>
+                      <code>ebisuhigashi_hotel_checkout</code> &#8212; Day5
+                      체크아웃용 utility stop
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <code>assets/styles.css</code> day 색상 CSS 변수 (<code
-                    >--day-1</code
-                  >
-                  ~ <code>--day-5</code>) + numbered-marker 스타일 + 모바일
-                  media query
+                  <code>itinerary.json</code> 호텔 참조 교체:
+                  <ul>
+                    <li>
+                      Day1 체크인 stop <code>namba_hotel</code> &#8594;
+                      <code>sugata_hotel</code>
+                    </li>
+                    <li>
+                      Day2 첫 transit origin + 마지막 stop &#8594;
+                      <code>sugata_hotel</code>
+                    </li>
+                    <li>
+                      Day3 첫 transit origin &#8594;
+                      <code>ebisuhigashi_hotel</code>; 도톤보리 후 체크인 stop
+                      추가
+                    </li>
+                    <li>
+                      Day4 첫 transit origin + 마지막 stop &#8594;
+                      <code>ebisuhigashi_hotel</code>
+                    </li>
+                    <li>
+                      Day5 첫 stop &#8594;
+                      <code>ebisuhigashi_hotel_checkout</code>
+                    </li>
+                    <li>
+                      출국 stop transit "from" &#8594; "에비스히가시 호텔"
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <code>assets/app.js</code> 데이터 로더(error handling 포함),
-                  Leaflet 마커, 사이드바, 디테일 패널, hash router, XSS-safe
-                  <code>esc()</code>/<code>safeHref()</code> 헬퍼
-                </li>
-                <li><code>data/itinerary.json</code> Day1 5개 stop</li>
-                <li>
-                  <code>data/places.json</code> 5개 sample (간사이공항,
-                  난바숙소, 구로몬, 덴덴타운, 도톤보리)
+                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분
+                  (Sugata&#8594;Dotonbori는 ~900m, 이전 namba_hotel ~300m 기준
+                  8분이 짧아짐)
                 </li>
               </ul>
             </div>
@@ -313,77 +347,108 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Vanilla ES6, 단일 모듈 (<code>assets/app.js</code>). 상태는
-                in-memory <code>state</code> 객체. 지도는
-                <code>fitBounds</code>로 day 전체 보이도록 시작, 클릭 시
-                <code>flyTo</code>. URL hash는 <code>#dayN/placeId</code> 포맷,
-                새로고침해도 상태 복원. <code>boot()</code>는 데이터 fetch 실패
-                시 한국어 에러 메시지를 표시.
+                <code>/tmp/patch-hotels.mjs</code> 한 번 실행으로 places +
+                itinerary 두 파일을 일관되게 patch. 검증 트리오:
+              </p>
+              <ul>
+                <li>
+                  <code>npm run validate</code> &#8594; 68 places, 5 days
+                  &#10003;
+                </li>
+                <li><code>npm test</code> &#8594; 11/11 &#10003;</li>
+                <li>
+                  <code>npm run verify-walk</code> &#8594; 7 walking segments
+                  all within tolerance (한 곳만 보정 필요했음)
+                </li>
+              </ul>
+              <p style="margin-top: 0.5rem">
+                UI 변화 검증: Day1 <code>#day1/sugata_hotel</code> 디테일 헤더
+                "수가타 호텔 오사카 신사이바시", Google Maps 버튼
+                origin=공항(34.4347) destination=Sugata(34.6767) &#10003;. Day2
+                <code>fushimi_inari</code> origin=Sugata(34.6767) &#10003;. Day3
+                <code>osaka_castle</code> origin=Ebisuhigashi(34.6515) &#10003;.
+                Day5 stops = <code>ebisuhigashi_hotel_checkout</code>,
+                <code>kansai_airport_dep</code> &#10003;.
+              </p>
+              <p style="margin-top: 0.5rem">
+                좌표 정확도 trade-off: Sugata는 사용자가 준 Google Maps URL의
+                정확한 좌표 (34.6766637, 135.504813). Ebisuhigashi는 주소만 받아
+                츠텐카쿠(34.6513, 135.5063) 동쪽 1&#8211;2블록 추정 (34.6515,
+                135.508). 정확한 호텔이 다른 좌표면
+                <code>places.ebisuhigashi_hotel.coords</code> 한 줄 수정.
               </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
-                <li><code>index.html</code> (스켈레톤 + CDN imports)</li>
                 <li>
-                  <code>assets/styles.css</code> (day 색상 CSS vars +
-                  numbered-marker + 모바일 media query)
+                  <code>data/places.json</code> &#8212; sugata_hotel /
+                  ebisuhigashi_hotel / ebisuhigashi_hotel_checkout 추가
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>DAY_COLORS</code> /
-                  <code>dayColor</code> / <code>esc</code> /
-                  <code>safeHref</code> helpers
+                  <code>data/itinerary.json</code> &#8212; Day1&#8211;5
+                  stops·transit_from_prev.origin_place_id 교체
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>state</code>,
-                  <code>loadData</code>, <code>initMap</code>
+                  <code>/tmp/patch-hotels.mjs</code> (one-shot patch, repo에
+                  commit 안 됨)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>renderDay</code>,
-                  <code>selectStop</code> (지도 + 마커)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>renderSidebar</code>,
-                  <code>renderDetail</code>, <code>renderProgressBar</code> (UI)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>parseHash</code>,
-                  <code>boot</code>, <code>hashchange</code> listener (라우팅)
-                </li>
-                <li>
-                  <code>data/places.json</code>,
-                  <code>data/itinerary.json</code> (5 places, Day1)
+                  관련 commit: <code>795d6be</code> data: name actual hotels for
+                  day1&#8211;4 stay
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  잘 된 점: TDD 없이도 per-task spec+code 리뷰가 critical 이슈
-                  6개를 사전 차단 (loadData 에러 처리, XSS escaping, null 가드,
-                  DAY_COLORS 폴백, hashchange race, aria-label).
+                  Stage 6에서 도입한 <code>origin_place_id</code> 필드가 정확히
+                  이 시나리오용. 데이터에 호텔 두 개를 추가해도 UI 코드 변경 0
+                  &#8212; render·라우팅 그대로.
                 </li>
                 <li>
-                  잘 된 점: Tailwind play CDN + Pretendard로 빌드 단계 없이
-                  미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
+                  <code>validate-data</code> + <code>verify-walk</code>가 데이터
+                  변경 후 회귀를 즉시 잡음 (Sugata&#8594;Dotonbori 도보 시간이
+                  짧다고 flag &#8594; 8&#8594;12분 보정 자동 발견).
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
+              <ul>
+                <li>
+                  Ebisuhigashi 호텔의 정확한 이름/좌표를 사용자가 확인하면 한 줄
+                  patch로 보정. 현재는 주소 기반 추정.
                 </li>
                 <li>
-                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
-                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
-                  hashchange 시 sidebar 동기화.
+                  호텔 logistics (Sugata&#8594;Ebisuhigashi 짐 옮기기 transit)는
+                  itinerary stops에 명시되지 않음 &#8212; Day2 끝 Sugata, Day3
+                  시작 Ebisuhigashi 사이의 짐 이동은 사용자가 알아서. 필요시
+                  Day3 첫 stop 앞에 별도 logistics stop 추가 가능.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">검증</h4>
+              <ul>
+                <li>
+                  <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
+                  68 places, 5 days validated
                 </li>
                 <li>
-                  Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
-                  Stage 3.1에서 채움),
-                  <code>.numbered-marker.active</code> CSS는 dead code지만 Stage
-                  3.3에서 활성화 예정이므로 보존.
+                  <code>node --test tests/validate-data.test.mjs</code>
+                  &#8594; 11 pass
                 </li>
                 <li>
-                  Stage 2 readiness: Ready with caveats &#8212; Critical 가드
-                  픽스 후 진입.
+                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 7
+                  도보, flagged 0
+                </li>
+                <li>
+                  browse smoke: Day1/Sugata, Day2/Day3 첫 stop origin, Day5 출발
+                  모두 정상 &#8212; console error 0
                 </li>
               </ul>
             </div>
