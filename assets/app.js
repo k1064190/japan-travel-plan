@@ -180,6 +180,10 @@ function haversineKm(c1, c2) {
  *  - foodOnly: keep only food places (isFoodPlace)
  *  - far: use ALT_FAR_KM instead of ALT_PROXIMITY_KM
  *  Always excludes ids already in the day's stops. */
+function isClosedPlace(place) {
+  return (place?.tags || []).includes("폐점");
+}
+
 function altCandidatesForDay(day, opts = {}) {
   if (!day?.stops?.length) return [];
   const radius = opts.far ? ALT_FAR_KM : ALT_PROXIMITY_KM;
@@ -192,6 +196,7 @@ function altCandidatesForDay(day, opts = {}) {
     if (place.category !== "alt") continue;
     if (stopIds.has(id)) continue;
     if (!Array.isArray(place.coords)) continue;
+    if (isClosedPlace(place)) continue; // hide [폐점] entries from candidates
     if (opts.foodOnly && !isFoodPlace(place)) continue;
     const near = stopCoords.some(
       (sc) => haversineKm(sc, place.coords) <= radius,
