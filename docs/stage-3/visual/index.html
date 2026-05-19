@@ -22,7 +22,6 @@
         line-height: 1.6;
       }
 
-      /* ── Header ── */
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -40,7 +39,6 @@
         margin-top: 0.2rem;
       }
 
-      /* ── Timeline ── */
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -80,11 +78,6 @@
         background: #9ca3af;
         color: #fff;
       }
-      .timeline-node.future {
-        background: #fff;
-        border: 2px solid #0f766e;
-        color: #0f766e;
-      }
       .timeline-label {
         font-size: 0.7rem;
         color: #6b7280;
@@ -95,7 +88,6 @@
         font-weight: 600;
       }
 
-      /* ── Main ── */
       main {
         max-width: 960px;
         margin: 0 auto;
@@ -111,7 +103,6 @@
         border-bottom: 2px solid #ccfbf1;
       }
 
-      /* ── Card grid ── */
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -186,7 +177,6 @@
         border-radius: 3px;
       }
 
-      /* ── Retro sub-headings ── */
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -197,7 +187,6 @@
         margin-bottom: 0.35rem;
       }
 
-      /* ── Tables ── */
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -245,38 +234,43 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">4</div>
+        <div class="timeline-node muted">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">5</div>
+        <div class="timeline-node muted">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">6</div>
+        <div class="timeline-node muted">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">7</div>
+        <div class="timeline-node muted">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">8</div>
+        <div class="timeline-node muted">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">9</div>
+        <div class="timeline-node muted">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">10</div>
+        <div class="timeline-node muted">10</div>
         <span class="timeline-label">Stage 10</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">Stage 11</span>
       </div>
     </nav>
 
@@ -286,17 +280,15 @@
 
         <div class="card-grid">
           <!-- Single card sourced from mobile-polish.md -->
-          <article aria-labelledby="card-mobile-polish">
-            <h3 id="card-mobile-polish">
-              Mobile Responsiveness + Detail Polish
-            </h3>
+          <article aria-labelledby="card-mobile">
+            <h3 id="card-mobile">Mobile Responsiveness + Detail Polish</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
                 현장에서 스마트폰으로 봐야 하는 게 최종 사용 시나리오. Stage
-                1&#8211;2의 데스크톱 레이아웃은 모바일에서 짜그라지기 때문에
-                별도의 mobile UX가 필요. 그리고 정보가 많아진 만큼 디테일 패널이
+                1-2의 데스크톱 레이아웃은 모바일에서 짜그라지기 때문에 별도의
+                mobile UX가 필요. 그리고 정보가 많아진 만큼 디테일 패널이
                 정리되어 있어야 한 화면에 들어옴.
               </p>
             </div>
@@ -326,7 +318,7 @@
                     <li>
                       태그 chip (<code>#야경</code>, <code>#먹거리</code> 등)
                     </li>
-                    <li>추천 활동: &#9658; marker + day 색상</li>
+                    <li>추천 활동: &#9656; marker + day 색상</li>
                     <li>
                       맛집 카드: name + price_range 같은 row, type/tip 아래
                     </li>
@@ -398,8 +390,8 @@
                 </li>
                 <li>
                   <code>--active-day</code> CSS 변수 1개로 mobile tab 아이콘 색
-                  + 마커 pulse 색을 한 번에 동기화. JS&#8211;CSS 사이 단일
-                  source of truth.
+                  + 마커 pulse 색을 한 번에 동기화. JS-CSS 사이 단일 source of
+                  truth.
                 </li>
                 <li>
                   <code>selectStop</code>의 marker active toggle 패턴이 정확
@@ -408,7 +400,7 @@
                 </li>
               </ul>
 
-              <h4 class="retro-sub">조심한 점</h4>
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
                   marker pulse animation이 무한 반복이라 배터리 영향 미미하지만
@@ -419,10 +411,6 @@
                   <code>bottom: 3.5rem</code>으로 탭바 영역 비워둠. 닫기 버튼은
                   우상단 + 탭바로도 종료 가능.
                 </li>
-              </ul>
-
-              <h4 class="retro-sub">이연</h4>
-              <ul>
                 <li>
                   Stage 4 &#8212; iOS safe-area 처리
                   (<code>env(safe-area-inset-bottom)</code>), Firefox 검증,

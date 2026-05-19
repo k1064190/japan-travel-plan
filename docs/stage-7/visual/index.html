@@ -78,11 +78,6 @@
         background: #9ca3af;
         color: #fff;
       }
-      .timeline-node.future {
-        background: #fff;
-        border: 2px solid #0f766e;
-        color: #0f766e;
-      }
       .timeline-label {
         font-size: 0.7rem;
         color: #6b7280;
@@ -259,18 +254,23 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">8</div>
+        <div class="timeline-node muted">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">9</div>
+        <div class="timeline-node muted">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">10</div>
+        <div class="timeline-node muted">10</div>
         <span class="timeline-label">Stage 10</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">Stage 11</span>
       </div>
     </nav>
 
@@ -346,8 +346,9 @@
                   </ul>
                 </li>
                 <li>
-                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분 (Sugata&#8594;
-                  Dotonbori는 ~900m, 이전 namba_hotel ~300m 기준 8분이 짧아짐)
+                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분 (Sugata
+                  &#8594; Dotonbori는 ~900m, 이전 namba_hotel ~300m 기준 8분이
+                  짧아짐)
                 </li>
               </ul>
             </div>
@@ -360,21 +361,47 @@
               </p>
               <ul>
                 <li>
-                  <code>npm run validate</code> &#8594; 68 places, 5 days ✓
+                  <code>npm run validate</code> &#8594; 68 places, 5 days
+                  &#10003;
                 </li>
-                <li><code>npm test</code> &#8594; 11/11 ✓</li>
+                <li><code>npm test</code> &#8594; 11/11 &#10003;</li>
                 <li>
                   <code>npm run verify-walk</code> &#8594; 7 walking segments
                   all within tolerance (한 곳만 보정 필요했음)
                 </li>
               </ul>
-              <p style="margin-top: 0.5rem">
-                좌표 정확도 trade-off: Sugata는 사용자가 준 Google Maps URL의
-                정확한 좌표 (34.6766637, 135.504813). Ebisuhigashi는 주소만 받아
-                츠텐카쿠(34.6513, 135.5063) 동쪽 1&#8211;2블록 추정 (34.6515,
-                135.508). 정확한 호텔이 다른 좌표면
-                <code>places.ebisuhigashi_hotel.coords</code> 한 줄 수정.
-              </p>
+              <p style="margin-top: 0.5rem">UI 변화 (검증 완료):</p>
+              <ul>
+                <li>
+                  Day1 <code>#day1/sugata_hotel</code> &#8594; 디테일 헤더
+                  "수가타 호텔 오사카 신사이바시", Google Maps 버튼
+                  origin=공항(34.4347), destination=Sugata(34.6767) &#10003;
+                </li>
+                <li>
+                  Day2 <code>#day2/fushimi_inari</code> &#8594;
+                  origin=Sugata(34.6767) &#10003;
+                </li>
+                <li>
+                  Day3 <code>#day3/osaka_castle</code> &#8594;
+                  origin=Ebisuhigashi(34.6515) &#10003;
+                </li>
+                <li>
+                  Day5 stops = <code>ebisuhigashi_hotel_checkout</code>,
+                  <code>kansai_airport_dep</code> &#10003;
+                </li>
+              </ul>
+              <p style="margin-top: 0.5rem">좌표 정확도 trade-off:</p>
+              <ul>
+                <li>
+                  Sugata: 사용자가 준 Google Maps URL의 정확한 좌표 (34.6766637,
+                  135.504813)
+                </li>
+                <li>
+                  Ebisuhigashi: 주소만 받아 츠텐카쿠(34.6513, 135.5063) 동쪽
+                  1-2블록 추정 (34.6515, 135.508). 정확한 호텔이 다른 좌표면
+                  <code>places.ebisuhigashi_hotel.coords</code> 한 줄 수정.
+                </li>
+              </ul>
             </div>
 
             <div class="section-block">
@@ -385,7 +412,7 @@
                   ebisuhigashi_hotel / ebisuhigashi_hotel_checkout 추가
                 </li>
                 <li>
-                  <code>data/itinerary.json</code> &#8212; Day1&#8211;5
+                  <code>data/itinerary.json</code> &#8212; Day1-5
                   stops·transit_from_prev.origin_place_id 교체
                 </li>
                 <li>
@@ -394,8 +421,8 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commit: <code>795d6be</code> data: name actual hotels for
-                day1&#8211;4 stay
+                관련 commit: <code>795d6be</code> data: name actual hotels for
+                day1-4 stay
               </p>
             </div>
 

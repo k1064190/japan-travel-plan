@@ -267,6 +267,11 @@
         <div class="timeline-node active" aria-current="step">10</div>
         <span class="timeline-label">Stage 10</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">Stage 11</span>
+      </div>
     </nav>
 
     <main>
@@ -350,8 +355,8 @@
                 </li>
                 <li>
                   <code>renderSidebar</code>이 day stops
-                  <code>&lt;ul&gt;</code> 뒤에 <code>candidateSection</code>
-                  블록을 emit. 카드 그리드는
+                  <code>&lt;ul&gt;</code> 뒤에
+                  <code>candidateSection</code> 블록을 emit. 카드 그리드는
                   <code>altCandidatesForDay</code> 결과를 <code>.sort()</code>로
                   rating desc.
                 </li>
@@ -385,9 +390,8 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commit:
-                <code>b523602</code> feat(sidebar): candidates section under
-                itinerary stops + filter toggles
+                Commit: <code>b523602</code> feat(sidebar): candidates section
+                under itinerary stops + filter toggles
               </p>
             </div>
 
@@ -441,22 +445,17 @@
                   &#8594; 11 pass
                 </li>
                 <li>
-                  browse smoke:
-                  <ul>
-                    <li>
-                      Day1 sidebar 후보 40개, 별점 내림차순 (Tabelog 3.78
-                      &#8594; 3.71 &#8594; 3.71 &#8594; &#8230;)
-                    </li>
-                    <li>첫 카드 클릭 &#8594; 디테일 패널 정상 오픈</li>
-                    <li>맛집만 토글: 40 &#8594; 21 (음식점만)</li>
-                    <li>
-                      Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시 코리아타운 노출
-                      ✓
-                    </li>
-                    <li>맛집만 + 먼 후보 동시: 73개 candidates</li>
-                    <li>console error 0</li>
-                  </ul>
+                  browse smoke: Day1 sidebar 후보 40개, 별점 내림차순 (Tabelog
+                  3.78 &#8594; 3.71 &#8594; 3.71 &#8594; &#8230;)
                 </li>
+                <li>첫 카드 클릭 &#8594; 디테일 패널 정상 오픈</li>
+                <li>맛집만 토글: 40 &#8594; 21 (음식점만)</li>
+                <li>
+                  Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시 코리아타운 노출
+                  &#10003;
+                </li>
+                <li>맛집만 + 먼 후보 동시: 73개 candidates</li>
+                <li>console error 0</li>
               </ul>
 
               <h4 class="retro-sub">한계 (이연)</h4>

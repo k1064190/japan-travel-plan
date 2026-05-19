@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 5 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 11 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -238,8 +238,8 @@
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">5</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -268,29 +268,30 @@
         <span class="timeline-label">Stage 10</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 5</h2>
+        <h2 id="stage-heading">Stage 11</h2>
 
         <div class="card-grid">
-          <!-- Single card sourced from curated-content.md -->
-          <article aria-labelledby="card-curated">
-            <h3 id="card-curated">Curated Korean Blog Links</h3>
+          <!-- Single card sourced from real-ratings.md -->
+          <article aria-labelledby="card-real-ratings">
+            <h3 id="card-real-ratings">Real Ratings (Tabelog WebFetch)</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                기존 "한국어 후기 검색"은 네이버·구글·유튜브 검색창 진입 링크
-                3개에 불과해 현장에서 매번 직접 검색·정렬·평가하는 시간이
-                들었다. 이미 신뢰할 만한 한국어 후기/가이드 글이 인터넷에
-                충분하니, 각 명소·맛집·활동에 대해 사전에 큐레이션된 블로그
-                포스트를 데이터에 박아두면 클릭 한 번에 본문으로 진입할 수 있다.
+                Stage 9에서 알트 식당과 일부 main 명소 맛집에 별점·후기 수를
+                박았지만 그 값은 subagent의 검색·추정치. UI에
+                <code>(Tabelog)</code>이라고 출처 표기를 했음에도 실제 Tabelog
+                페이지를 직접 본 게 아니었음. 사용자가 정렬해서 보는 순간
+                신뢰도가 떨어지는 약점. Stage 10에서 사이드바 정렬·필터까지 끝낸
+                상태라 별점의 정확성이 가장 큰 남은 일.
               </p>
             </div>
 
@@ -298,60 +299,32 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong>데이터 스키마 확장</strong>
-                  (<code>data/places.json</code> +
-                  <code>scripts/validate-data.mjs</code>)
+                  <strong>데이터 갱신</strong> &#8212; 4 background subagent가
+                  WebSearch로 정확한 Tabelog URL 찾고 WebFetch로 페이지 내용
+                  직접 fetch해 별점·후기 수 추출. 총 61 entries 실측 데이터로
+                  교체:
                   <ul>
-                    <li>
-                      명소 레벨
-                      <code
-                        >curated_links: [{title, url, source, snippet?},
-                        ...]</code
-                      >
-                    </li>
-                    <li>맛집 객체 <code>link: {title, url, source}</code></li>
-                    <li>
-                      활동 항목 <code>string | {text, link?}</code> 양쪽 허용
-                      (역호환)
-                    </li>
-                    <li>
-                      모든 URL <code>https://</code> 강제 + title/source
-                      비어있지 않도록 validator 추가
-                    </li>
+                    <li>34 alt entries</li>
+                    <li>27 main 명소 <code>restaurants[]</code> 안 식당</li>
                   </ul>
                 </li>
                 <li>
-                  <strong>UI 렌더링</strong> (<code>assets/app.js</code>)
-                  &#8212; <code>renderActivity</code> /
-                  <code>renderRestaurant</code> /
-                  <code>renderCuratedLink</code> 헬퍼 3개
-                  <ul>
-                    <li>
-                      큐레이션된 블로그 카드 그리드 (제목 + 출처 + 1줄 스니펫)
-                    </li>
-                    <li>활동 줄 끝 <code>후기 →</code> inline 링크</li>
-                    <li>맛집 카드 하단 <code>한국어 후기 보기 →</code> 링크</li>
-                    <li>
-                      기존 네이버/구글/유튜브 검색 그리드는 폴백 (<code
-                        >더 찾아보기</code
-                      >)으로 격하
-                    </li>
-                  </ul>
+                  <strong>omen_kodaiji 폐점 처리</strong> &#8212; Tabelog
+                  【閉店】 라벨 확인 &#8594; <code>name_ko</code>에
+                  <code>[폐점]</code> 접두사 + tags 첫 번째에 "폐점" +
+                  rating/review_count/rating_source 필드 제거 (영업 중인
+                  가게처럼 점수가 보이지 않게).
                 </li>
                 <li>
-                  <strong>데이터 채우기</strong> (65 places 전체)
+                  <strong>알려진 한계 해결 매핑</strong>:
                   <ul>
                     <li>
-                      65/65 명소: 3개씩 <code>curated_links</code> (총
-                      <strong>195개</strong> 큐레이션 링크)
+                      Stage 9 limitation #2 (main 명소 restaurants[] 별점)
+                      &#8594; 27 entry 실측으로 채움
                     </li>
                     <li>
-                      40/41 메인 맛집: 1개씩 <code>link</code> (1개는 적합
-                      한국어 후기 없어 plain)
-                    </li>
-                    <li>
-                      48/172 활동: main 명소의 활동은 wrap, alt는 plain
-                      string으로 둠
+                      Stage 9 limitation #3 (추정치 &#8594; 실측) &#8594; 61
+                      entries 실측 교체
                     </li>
                   </ul>
                 </li>
@@ -360,84 +333,64 @@
 
             <div class="section-block">
               <h4>How</h4>
-              <p>Phase 단위로 진행:</p>
               <ul>
                 <li>
-                  <strong>Phase A</strong> &#8212; 스키마 + UI + Day1 main 3개
-                  (kansai_airport, namba_hotel, dotonbori). 패턴 검증.
+                  새 branch <code>feature/real-ratings</code>, 4 background
+                  subagent 병렬 dispatch (Day1-4 area별)
                 </li>
                 <li>
-                  <strong>Phase B</strong> &#8212; 나머지 62개 명소.
-                  Day별·분류별로 7개 background subagent를 병렬 dispatch:
-                  <ul>
-                    <li>
-                      Day2 main (5), Day3 main (6), Day4-5 main (3), Day1 alt
-                      (9), Day2 alt (16), Day3 alt (20), Day4 alt (3)
-                    </li>
-                    <li>
-                      각 subagent: <code>WebSearch</code>로 한국어 블로그 검색
-                      &#8594; 신뢰 가능한 글 큐레이션 &#8594;
-                      <code>/tmp/curated-patches/&lt;name&gt;.json</code> 저장
-                    </li>
-                    <li>
-                      메인은 <code>/tmp/merge-patches.mjs</code>로 7개 patch
-                      JSON을 <code>data/places.json</code>에 일괄 merge
-                    </li>
-                  </ul>
+                  각 subagent: places.json의 식당 entry 목록을 받아 &#8594;
+                  정확한 Tabelog URL 검색 &#8594; WebFetch로 페이지 fetch
+                  &#8594; <code>Extract rating (3.xx) and review_count</code>
+                  prompt로 별점/후기 수만 추출
+                </li>
+                <li>
+                  실패 entry는 <code>failed[]</code> 배열에 기록 + Tabelog URL이
+                  잘못된 경우 patch JSON의 <code>note</code> 필드에 정확한 URL
+                  기록
+                </li>
+                <li>
+                  메인이 <code>/tmp/merge-ratings.mjs</code> 한 번 실행해
+                  places.json에 일괄 적용 &#8212; alt는 <code>rating</code> 필드
+                  갱신, main 명소 <code>restaurants[]</code>는 name으로 매칭해서
+                  객체에 rating 필드 추가
                 </li>
               </ul>
-              <p style="margin-top: 0.5rem">큐레이션 우선순위:</p>
-              <ol
-                style="padding-left: 1.2rem; font-size: 0.9rem; color: #374151"
-              >
+              <p style="margin-top: 0.5rem">검증:</p>
+              <ul>
                 <li>
-                  한국 1차 블로그 (<code>blog.naver.com</code>,
-                  <code>brunch.co.kr</code>, <code>*.tistory.com</code>)
+                  <code>validate-data.mjs</code> 통과 &#8212; rating field
+                  schema (number 0-5, integer review_count, non-empty source)
+                  검증 그대로 적용
                 </li>
+                <li><code>verify-walk-times.mjs</code> 통과</li>
                 <li>
-                  한국 여행 플랫폼 커뮤니티/모먼트 (<code>myrealtrip.com</code>,
-                  <code>kr.trip.com</code>, <code>tripstore.kr</code>)
+                  browse smoke로 사이드바에 새 별점 표시 +
+                  <code>omen_kodaiji</code> [폐점] 라벨 확인
                 </li>
-                <li>한국 KKday/Klook 블로그</li>
-                <li>
-                  한국어 공식 가이드/매거진 (<code>osaka-info.kr</code>, LIVE
-                  JAPAN KR, MATCHA KR) &#8212; 개인 블로그 부족한 niche에만
-                </li>
-              </ol>
+              </ul>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>scripts/validate-data.mjs:20-39</code>
-                  (<code>validateCuratedLink</code> 헬퍼)
+                  <code>data/places.json</code> (61 rating updates +
+                  omen_kodaiji 폐점 처리)
                 </li>
                 <li>
-                  <code>scripts/validate-data.mjs:84-115</code>
-                  (curated_links / activities / restaurants 옵셔널 검증)
+                  패치 입력:
+                  <code>/tmp/rating-patches/day{1,2,3,4}.json</code>
+                  (subagent 산출, repo에 commit 안 됨)
                 </li>
                 <li>
-                  <code>assets/app.js:28-66</code>
-                  (<code>renderActivity</code>, <code>renderRestaurant</code>,
-                  <code>renderCuratedLink</code> 헬퍼)
-                </li>
-                <li>
-                  <code>assets/app.js:222-265</code> (<code>renderDetail</code>
-                  큐레이션 섹션 + 폴백 검색 그리드)
-                </li>
-                <li>
-                  <code>data/places.json</code> (65 명소 전체
-                  <code>curated_links</code> 추가)
+                  머지 스크립트: <code>/tmp/merge-ratings.mjs</code> (이번 한 번
+                  실행)
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>e8c0d62</code> feat(schema): validator
-                support for curated links + activity objects &nbsp;&#183;&nbsp;
-                <code>4b9260c</code> feat(detail): render curated blog links
-                &nbsp;&#183;&nbsp; <code>e562fe4</code> data(day1-main): curated
-                links for 3 places &nbsp;&#183;&nbsp; <code>3ff8616</code> data:
-                curated links for remaining 62 places
+                관련 commit: <code>194f644</code> data: replace estimated
+                ratings with WebFetch'd Tabelog actuals
               </p>
             </div>
 
@@ -447,41 +400,63 @@
               <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  7개 background subagent 병렬 dispatch로 62 명소 큐레이션이
-                  ~6분 wall-clock에 끝남. 단일 sequential이면 1시간+.
+                  4 subagent 병렬 dispatch로 ~13분 wall-clock에 110+ entry
+                  식당의 별점 fetch 완료. WebFetch 자체는 Tabelog 페이지당
+                  ~2-4초.
                 </li>
                 <li>
-                  patch JSON 분리 + merge 스크립트 패턴 &#8212; subagent는
-                  read-only, 메인만 places.json 라이터. 충돌·partial-write 없이
-                  안전.
+                  추정치와 실측의 차이가 의미 있는 entry 다수 발견:
+                  <ul>
+                    <li>
+                      <code>katsukura_shijo</code> 3.55 &#8594; 3.21 (큰 폭)
+                    </li>
+                    <li><code>kamukura_dotonbori</code> 3.52 &#8594; 3.20</li>
+                    <li><code>mizuno_okonomiyaki</code> 3.71 &#8594; 3.57</li>
+                    <li>
+                      <code>yamamoto_menzo</code> 3.92 &#8594; 3.98 (반대로
+                      실측이 더 높음)
+                    </li>
+                    <li><code>daiichi_asahi</code> 후기 3,200 &#8594; 6,583</li>
+                  </ul>
                 </li>
                 <li>
-                  스키마 옵셔널화 (<code>curated_links</code>,
-                  <code>restaurants[].link</code>, activity object)로 Day1 main
-                  3개 &#8594; 65개 확장 도중 기존 데이터/UI 회귀 0.
+                  Tabelog <code>閉店</code> 라벨까지 검출 &#8212;
+                  <code>omen_kodaiji</code> 폐점 처리는 큐레이션 추정치만으로는
+                  못 잡았을 finding.
                 </li>
                 <li>
-                  <code>더 찾아보기</code> 폴백 그리드 보존 &#8212; 큐레이션이
-                  부족하다고 느낄 때도 즉시 더 검색 가능.
+                  4 subagent 모두 places.json 직접 수정 안 하고 patch JSON으로
+                  분리 &#8594; merge 충돌 없이 단일 라이터.
                 </li>
               </ul>
 
               <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
-                  subagent가 가끔 출처가 모호한 사이트나 가이드 페이지를
-                  fallback으로 선택. 큐레이션 prompt에 "프로모션 가이드성 글보다
-                  개인 후기 우선" 규칙을 더 강하게 박는 것 검토.
+                  19 entries fetch 실패 &#8212; 대부분 (1) 백화점 식품관·dining
+                  complex (단일 Tabelog entity 없음), (2) 시장 노점 (개별
+                  Tabelog 페이지 없음), (3) 특정 지점이 Tabelog 미등록. 이건
+                  데이터 구조 한계가 아니라 Tabelog 커버리지 한계. 해당 entry는
+                  추정치도 의미 없으므로 별점 미설정 그대로.
                 </li>
                 <li>
-                  alt 명소의 활동도 link를 채우려면 별도 phase가 필요. 현재는
-                  생략 (alt activities 124개는 plain string). 사용자가 alt 깊게
-                  보지 않을 가능성 고려한 trade-off.
+                  subagent들이 Tabelog URL이 잘못 가리키는 케이스 다수 발견
+                  (지오 코드만 같은 다른 가게로 매핑). 정확한 URL은 patch JSON의
+                  <code>note</code> 필드에 기록됐지만
+                  <code>data/places.json</code>의
+                  <code>sources[]</code>·<code>curated_links[]</code>에는 아직
+                  반영 안 됨. 별도 cleanup 작업.
                 </li>
                 <li>
-                  데이터 양이 commit 1건에 +1925 lines &#8212; 다음에 데이터 큰
-                  변경 있을 땐 review 트리오에 출처 도메인 분포 + 의심 URL
-                  샘플링을 정리해서 줘야 함.
+                  별점은 fetch 시점(2026-05-19) 기준이라 한 달 후엔 변동. 정기
+                  재실행이 필요. cron으로 자동화 가능 (그러나 Anthropic API 한도
+                  고려 필요).
+                </li>
+                <li>
+                  USJ 내부 5개 식당이 의외로 모두 Tabelog 페이지 존재 &#8212;
+                  main의 큰 dining complex (오사카죠 미라이자, 조 테라스 등)는
+                  entity 아님이라 fetch 불가. 이 경계는 데이터로 표현하기 모호
+                  &#8212; "dining complex" 태그 시각 표시 도입 검토.
                 </li>
               </ul>
 
@@ -489,30 +464,43 @@
               <ul>
                 <li>
                   <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  65 places, 5 days validated
+                  131 places, 5 days validated
                 </li>
                 <li>
                   <code>node --test tests/validate-data.test.mjs</code>
                   &#8594; 11 pass
                 </li>
                 <li>
-                  <code>browse</code> 스크립트로 main 6 spot 샘플 검증: console
-                  error 0, curated 3개 + activity/restaurant 링크 정상 렌더링
+                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
+                  segment all within tolerance
                 </li>
-                <li>alt 4 spot 데이터 직접 확인: curated 3개 각각 정상</li>
+                <li>
+                  browse smoke: Day1 사이드바 top 5 카드 별점 변경 확인 (Tabelog
+                  실측값)
+                </li>
+                <li>Day2 야마모토 멘조 &#9733; 3.98 (실측 &#8593;)</li>
+                <li>
+                  osaka_castle 디테일 패널 &#8212; main restaurants[] 별점은 다
+                  dining complex라 미설정 그대로 (fetch 실패)
+                </li>
+                <li>console error 0</li>
               </ul>
 
-              <h4 class="retro-sub">알려진 미해결</h4>
+              <h4 class="retro-sub">한계</h4>
               <ul>
                 <li>
-                  <code>osaka_castle</code>의 "공원 내 야채 레스토랑" 맛집 1개는
-                  한국어 후기 부재로 link 없이 plain object 유지 (40/41).
+                  Tabelog 별점은 <code>fetched_at</code> 시점값. 한 달 이상
+                  지나면 약간 변동. 재실행으로 갱신 가능.
                 </li>
                 <li>
-                  <code>sannenzaka_ninenzaka</code>의 인력거 활동 1개는 plain
-                  string 유지 (한국어 전용 후기 부재).
+                  일부 한국 사용자가 보기엔 Tabelog 점수 체계 (3.0-4.0 분포)가
+                  낮아 보일 수 있음 &#8212; <code>(Tabelog)</code> 출처 표기로
+                  맥락 제공.
                 </li>
-                <li>alt 활동 124개는 의도적으로 plain string.</li>
+                <li>
+                  사용 패턴이 한국어 후기 위주라면 Naver Place 또는 Google Maps
+                  한국어 후기 점수도 별도로 표시하는 향후 작업이 가치 있음.
+                </li>
               </ul>
             </div>
           </article>
