@@ -35,7 +35,7 @@ function renderActivity(a, color) {
 }
 
 function renderRating(obj) {
-  if (typeof obj?.rating !== "number") return "";
+  if (typeof obj?.rating !== "number" || obj.rating <= 0) return "";
   const stars = `★ ${obj.rating.toFixed(1)}`;
   const count =
     typeof obj.review_count === "number" && obj.review_count > 0
@@ -414,7 +414,10 @@ function renderDetail(stop, place) {
       <div class="text-xs uppercase tracking-wide" style="color:${color}">${stop.time ? `${esc(stop.time)} · ${esc(stop.duration_minutes)}분 체류` : "후보 — 일정에 들어있지 않음"}</div>
       <h2 class="text-2xl font-bold mt-1">${esc(place.name_ko)}</h2>
       <div class="text-sm text-slate-500">${esc(place.name_jp)}</div>
-      ${renderRating(place) ? `<div class="mt-1">${renderRating(place)}</div>` : ""}
+      ${(() => {
+        const r = renderRating(place);
+        return r ? `<div class="mt-1">${r}</div>` : "";
+      })()}
       <div class="mt-2 flex gap-1 flex-wrap">
         ${(place.tags || []).map((tag) => `<span class="text-xs px-2 py-1 rounded bg-slate-100 text-slate-600">#${esc(tag)}</span>`).join("")}
       </div>
