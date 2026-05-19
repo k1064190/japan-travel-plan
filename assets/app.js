@@ -126,8 +126,45 @@ const state = {
   activeStopIndex: 0,
   map: null,
   markerLayer: null,
+  altLayer: null,
   routeLayer: null,
 };
+
+const ALT_PROXIMITY_KM = 1.5;
+
+function haversineKm(c1, c2) {
+  const toRad = (d) => (d * Math.PI) / 180;
+  const R = 6371;
+  const lat1 = toRad(c1[0]);
+  const lat2 = toRad(c2[0]);
+  const dLat = lat2 - lat1;
+  const dLng = toRad(c2[1] - c1[1]);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
+/** Return alt-category place ids within ALT_PROXIMITY_KM of any of the
+ *  given day's stop coordinates. Excludes ids already in the day's stops. */
+function altCandidatesForDay(day) {
+  if (!day?.stops?.length) return [];
+  const stopIds = new Set(day.stops.map((s) => s.place_id));
+  const stopCoords = day.stops
+    .map((s) => state.places[s.place_id]?.coords)
+    .filter((c) => Array.isArray(c));
+  const out = [];
+  for (const [id, place] of Object.entries(state.places)) {
+    if (place.category !== "alt") continue;
+    if (stopIds.has(id)) continue;
+    if (!Array.isArray(place.coords)) continue;
+    const near = stopCoords.some(
+      (sc) => haversineKm(sc, place.coords) <= ALT_PROXIMITY_KM,
+    );
+    if (near) out.push(id);
+  }
+  return out;
+}
 
 async function loadData() {
   const [it, pl] = await Promise.all([
@@ -154,6 +191,7 @@ function initMap() {
     attribution: "&copy; OpenStreetMap",
   }).addTo(state.map);
   state.markerLayer = L.layerGroup().addTo(state.map);
+  state.altLayer = L.layerGroup().addTo(state.map);
   state.routeLayer = L.layerGroup().addTo(state.map);
 }
 
@@ -163,10 +201,31 @@ function renderDay(dayId) {
   state.activeDay = dayId;
   document.body.style.setProperty("--active-day", dayColor(dayId));
   state.markerLayer.clearLayers();
+  state.altLayer.clearLayers();
   state.routeLayer.clearLayers();
 
   const color = dayColor(dayId);
   const coords = [];
+
+  // Alt-candidate markers under the numbered ones (smaller, grey).
+  for (const altId of altCandidatesForDay(day)) {
+    const altPlace = state.places[altId];
+    const altIcon = L.divIcon({
+      className: "",
+      html: `<div class="alt-marker" title="${esc(altPlace.name_ko)}" style="border-color:${color}">${esc(altPlace.emoji || "·")}</div>`,
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+    });
+    const altMarker = L.marker(altPlace.coords, {
+      icon: altIcon,
+      keyboard: false,
+    }).addTo(state.altLayer);
+    altMarker.bindTooltip(altPlace.name_ko, {
+      direction: "top",
+      offset: [0, -10],
+    });
+    altMarker.on("click", () => selectAlt(altId));
+  }
 
   day.stops.forEach((stop, i) => {
     const place = state.places[stop.place_id];
@@ -192,6 +251,25 @@ function renderDay(dayId) {
   }
   if (coords.length > 0) {
     state.map.fitBounds(L.latLngBounds(coords).pad(0.2));
+  }
+}
+
+function selectAlt(placeId) {
+  const place = state.places[placeId];
+  if (!place) return;
+  state.map.flyTo(place.coords, 16, { duration: 0.8 });
+  // Render the detail panel with a minimal "stop" — no time/duration/transit
+  renderDetail(
+    {
+      place_id: placeId,
+      time: null,
+      duration_minutes: null,
+      transit_from_prev: null,
+    },
+    place,
+  );
+  if (window.matchMedia("(max-width: 767px)").matches) {
+    setMobileView("map");
   }
 }
 
@@ -314,7 +392,7 @@ function renderDetail(stop, place) {
     </div>
     ${transitCard}
     <div class="p-5">
-      <div class="text-xs uppercase tracking-wide" style="color:${color}">${esc(stop.time)} · ${esc(stop.duration_minutes)}분 체류</div>
+      <div class="text-xs uppercase tracking-wide" style="color:${color}">${stop.time ? `${esc(stop.time)} · ${esc(stop.duration_minutes)}분 체류` : "후보 — 일정에 들어있지 않음"}</div>
       <h2 class="text-2xl font-bold mt-1">${esc(place.name_ko)}</h2>
       <div class="text-sm text-slate-500">${esc(place.name_jp)}</div>
       <div class="mt-2 flex gap-1 flex-wrap">
