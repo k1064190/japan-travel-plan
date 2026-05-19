@@ -220,11 +220,6 @@
         font-weight: 600;
         color: #111827;
       }
-
-      /* QA card spans full width so review tables have room */
-      .card-full {
-        grid-column: 1 / -1;
-      }
     </style>
   </head>
   <body>
@@ -255,28 +250,33 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node future">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">6</div>
+        <div class="timeline-node future">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node future">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
         <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">10</div>
+        <span class="timeline-label">Stage 10</span>
       </div>
     </nav>
 
@@ -285,13 +285,10 @@
         <h2 id="stage-heading">Stage 4</h2>
 
         <div class="card-grid">
-          <!-- ════════════════════════════════════════
-               Single card  —  qa.md
-               ════════════════════════════════════════ -->
-          <article class="card-full" aria-labelledby="card-qa">
+          <!-- Single card sourced from qa.md -->
+          <article aria-labelledby="card-qa">
             <h3 id="card-qa">QA, Cross-Browser, Final Polish</h3>
 
-            <!-- Why -->
             <div class="section-block">
               <h4>Why</h4>
               <p>
@@ -302,14 +299,13 @@
               </p>
             </div>
 
-            <!-- What -->
             <div class="section-block">
               <h4>What</h4>
               <ul>
                 <li>
                   <code>scripts/smoke-test.md</code> &#8212; 21 stop 회귀
-                  체크리스트 (Day별 place_id 표 +
-                  라우팅&#183;모바일&#183;크로스브라우저 항목)
+                  체크리스트 (Day별 place_id 표 + 라우팅·모바일·크로스브라우저
+                  항목)
                 </li>
                 <li>
                   <code>assets/app.js</code> &#8212; hash routing 정규화 +
@@ -320,8 +316,8 @@
                 <li>
                   <code>assets/styles.css</code> &#8212;
                   <code>#mobile-tabs</code>에
-                  <code>padding-bottom: env(safe-area-inset-bottom, 0)</code>
-                  + 높이 가산
+                  <code>padding-bottom: env(safe-area-inset-bottom, 0)</code> +
+                  높이 가산
                 </li>
                 <li>
                   <code>README.md</code> &#8212; 실행 / 데이터 수정 / 검증 /
@@ -334,24 +330,24 @@
               </ul>
             </div>
 
-            <!-- How -->
             <div class="section-block">
               <h4>How</h4>
               <p>
                 <code>/home/cwh/.claude/skills/gstack/browse/dist/browse</code>
-                (headless Chromium)로 <code>http://127.0.0.1:54130/</code>에
-                접속해 21개 stop을 hash 변경으로 자동 순회. 각 stop의 디테일
-                헤더가 로드되는지 확인 &#8594; 21/21 모두 한국어 명소명이 정확히
-                표시됨.
+                (headless Chromium)로
+                <code>http://127.0.0.1:54130/</code>에 접속해 21개 stop을 hash
+                변경으로 자동 순회. 각 stop의 디테일 헤더가 로드되는지 확인
+                &#8594; 21/21 모두 한국어 명소명이 정확히 표시됨.
               </p>
               <p style="margin-top: 0.5rem">추가 시나리오:</p>
-              <ul style="margin-top: 0.25rem">
+              <ul>
                 <li>
-                  <code>#day9/foo</code> (invalid) &#8594; 이전엔 URL이 stale
-                  상태로 남았음. fix: <code>boot()</code> +
+                  <code>#day9/foo</code> (invalid) &#8594; 이전엔 URL이
+                  <code>#day9/foo</code>로 유지되고 이전 day의 detail panel이
+                  stale 상태로 남았음. fix: <code>boot()</code> +
                   <code>hashchange</code> 양쪽에서
-                  <code>history.replaceState</code>로 URL 정규화, place segment
-                  없는 hash로 가면 detail hidden 처리.
+                  <code>history.replaceState</code>로 URL을 정규화하고, place
+                  segment 없는 hash로 가면 detail을 hidden 처리.
                 </li>
                 <li>
                   Same-day stop switch (<code>#day3/osaka_castle</code> &#8594;
@@ -364,15 +360,13 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem">
-                검증:
-                <code>node scripts/validate-data.mjs</code> &#8594; &#10003; 65
-                places, 5 days validated.
+                검증: <code>node scripts/validate-data.mjs</code> &#8594;
+                &#10003; 65 places, 5 days validated.
                 <code>node --test tests/validate-data.test.mjs</code> &#8594; 11
                 pass.
               </p>
             </div>
 
-            <!-- Code Locations -->
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
@@ -395,16 +389,14 @@
                   <code>assets/styles.css:81&#8211;85</code>
                   (<code>#mobile-tabs</code> safe-area-inset)
                 </li>
-                <li><code>docs/stage-4/qa.md</code></li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commits:
-                <code>42b3967</code> <code>adfbce5</code> <code>522feda</code>
-                <code>8d2e1a8</code> <code>d373c60</code>
+                Commits: <code>42b3967</code> <code>adfbce5</code>
+                <code>522feda</code> <code>8d2e1a8</code>
+                <code>d373c60</code>
               </p>
             </div>
 
-            <!-- Retrospective -->
             <div class="section-block">
               <h4>Retrospective</h4>
 
@@ -429,15 +421,15 @@
               <ul>
                 <li>
                   <code>parseHash</code>가 invalid 입력에 대해 silent fallback
-                  하기보다 caller가 정상화하도록 시그널을 주는 패턴 (예:
+                  하기보다 caller가 정상화하도록 시그널을 주는 패턴(예:
                   <code>valid: false</code>)이 더 명확할 수 있음 &#8212; 다음
                   비슷한 SPA에서 고려.
                 </li>
                 <li>
-                  Codex CLI가 MCP 도구 schema 충돌로 실패한 건 환경 문제.
-                  gemini와 code-reviewer-pro 둘이서도 동일한 핵심 finding을
-                  잡았으므로 stage gate에는 영향 없었지만, codex 환경은 따로
-                  점검 필요.
+                  Codex CLI가 MCP 도구 schema 충돌로 실패한 건 환경 문제(특정
+                  MCP 서버의 tool spec). gemini와 code-reviewer-pro 둘이서도
+                  동일한 핵심 finding을 잡았으므로 stage gate에는 영향 없었지만,
+                  codex 환경은 따로 점검 필요.
                 </li>
                 <li>
                   Firefox 실기 테스트는 헤드리스에서 검증 불가 &#8212; 본

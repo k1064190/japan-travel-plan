@@ -22,7 +22,6 @@
         line-height: 1.6;
       }
 
-      /* ── Header ── */
       header {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -40,7 +39,6 @@
         margin-top: 0.2rem;
       }
 
-      /* ── Timeline ── */
       nav.timeline {
         background: #fff;
         border-bottom: 1px solid #e0e0de;
@@ -95,7 +93,6 @@
         font-weight: 600;
       }
 
-      /* ── Main ── */
       main {
         max-width: 960px;
         margin: 0 auto;
@@ -111,7 +108,6 @@
         border-bottom: 2px solid #ccfbf1;
       }
 
-      /* ── Card grid ── */
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -186,7 +182,6 @@
         border-radius: 3px;
       }
 
-      /* ── Retro sub-headings ── */
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -197,7 +192,6 @@
         margin-bottom: 0.35rem;
       }
 
-      /* ── Tables ── */
       .table-wrapper {
         overflow-x: auto;
         margin-top: 0.5rem;
@@ -273,6 +267,11 @@
         <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">10</div>
+        <span class="timeline-label">Stage 10</span>
+      </div>
     </nav>
 
     <main>
@@ -289,10 +288,11 @@
               <p>
                 이전 단계까지 숙소는 <code>namba_hotel</code> /
                 <code>namba_hotel_checkout</code> 같은 abstract id로 표현
-                &#8212; 실제 예약된 호텔 두 곳과 위치&#183;체크인/아웃 흐름이
-                일치하지 않았다. 1&#183;2일차와 3&#183;4일차의 박이 서로 다른
-                호텔이라는 사실을 데이터에 반영하지 않으면 Google Maps 길찾기
-                origin이 잘못 잡혀 시간 신빙성이 다시 떨어진다.
+                &#8212; 실제 예약된 호텔 두 곳과 위치·체크인/아웃 흐름이
+                일치하지 않았다. 사용자가 실제 예약을 알린 시점에 도착해,
+                1·2일차와 3·4일차의 박이 서로 다른 호텔이라는 사실을 데이터에
+                반영하지 않으면 Google Maps 길찾기 origin이 잘못 잡혀 시간
+                신빙성이 다시 떨어진다.
               </p>
             </div>
 
@@ -300,21 +300,54 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>places.json</code>에 호텔 3개 추가:
-                  <code>sugata_hotel</code> (Sugata Hotel Osaka Shinsaibashi,
-                  Marriott Series), <code>ebisuhigashi_hotel</code> (나니와구
-                  에비스히가시), <code>ebisuhigashi_hotel_checkout</code>
+                  <strong>places.json</strong>에 호텔 3개 추가:
+                  <ul>
+                    <li>
+                      <code>sugata_hotel</code> &#8212; Sugata Hotel Osaka
+                      Shinsaibashi (Marriott Series), 신사이바시
+                    </li>
+                    <li>
+                      <code>ebisuhigashi_hotel</code> &#8212; 2-1-24
+                      Ebisuhigashi, 나니와구 (호텔명 미상)
+                    </li>
+                    <li>
+                      <code>ebisuhigashi_hotel_checkout</code> &#8212; Day5
+                      체크아웃용 utility stop
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <code>itinerary.json</code> 호텔 참조 교체: Day1 체크인
-                  &#8594; <code>sugata_hotel</code>; Day2&#183;Day3&#183;Day4
-                  origin 갱신; Day3 체크인 stop 추가
-                  (<code>ebisuhigashi_hotel</code>); Day5 첫 stop &#8594;
-                  <code>ebisuhigashi_hotel_checkout</code>
+                  <strong>itinerary.json</strong> 호텔 참조 교체:
+                  <ul>
+                    <li>
+                      Day1 체크인 stop <code>namba_hotel</code> &#8594;
+                      <code>sugata_hotel</code>
+                    </li>
+                    <li>
+                      Day2 첫 transit origin + 마지막 stop &#8594;
+                      <code>sugata_hotel</code>
+                    </li>
+                    <li>
+                      Day3 첫 transit origin &#8594;
+                      <code>ebisuhigashi_hotel</code>; 도톤보리 후 체크인 stop
+                      추가
+                    </li>
+                    <li>
+                      Day4 첫 transit origin + 마지막 stop &#8594;
+                      <code>ebisuhigashi_hotel</code>
+                    </li>
+                    <li>
+                      Day5 첫 stop &#8594;
+                      <code>ebisuhigashi_hotel_checkout</code>
+                    </li>
+                    <li>
+                      출국 stop transit "from" &#8594; "에비스히가시 호텔"
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분
-                  (Sugata&#8594;Dotonbori ~900m)
+                  도보 시간 1건 보정: day1/dotonbori 8&#8594;12분 (Sugata&#8594;
+                  Dotonbori는 ~900m, 이전 namba_hotel ~300m 기준 8분이 짧아짐)
                 </li>
               </ul>
             </div>
@@ -323,10 +356,24 @@
               <h4>How</h4>
               <p>
                 <code>/tmp/patch-hotels.mjs</code> 한 번 실행으로 places +
-                itinerary 두 파일을 일관되게 patch. Sugata 좌표는 사용자가 준
-                Google Maps URL의 정확한 좌표 (34.6766637, 135.504813).
-                Ebisuhigashi는 주소만 받아 츠텐카쿠 동쪽 1&#8211;2블록 추정
-                (34.6515, 135.508).
+                itinerary 두 파일을 일관되게 patch. 검증 트리오:
+              </p>
+              <ul>
+                <li>
+                  <code>npm run validate</code> &#8594; 68 places, 5 days ✓
+                </li>
+                <li><code>npm test</code> &#8594; 11/11 ✓</li>
+                <li>
+                  <code>npm run verify-walk</code> &#8594; 7 walking segments
+                  all within tolerance (한 곳만 보정 필요했음)
+                </li>
+              </ul>
+              <p style="margin-top: 0.5rem">
+                좌표 정확도 trade-off: Sugata는 사용자가 준 Google Maps URL의
+                정확한 좌표 (34.6766637, 135.504813). Ebisuhigashi는 주소만 받아
+                츠텐카쿠(34.6513, 135.5063) 동쪽 1&#8211;2블록 추정 (34.6515,
+                135.508). 정확한 호텔이 다른 좌표면
+                <code>places.ebisuhigashi_hotel.coords</code> 한 줄 수정.
               </p>
             </div>
 
@@ -339,13 +386,17 @@
                 </li>
                 <li>
                   <code>data/itinerary.json</code> &#8212; Day1&#8211;5
-                  stops&#183;transit_from_prev.origin_place_id 교체
+                  stops·transit_from_prev.origin_place_id 교체
                 </li>
                 <li>
-                  관련 commit: <code>795d6be</code>
-                  <code>data: name actual hotels for day1-4 stay</code>
+                  <code>/tmp/patch-hotels.mjs</code> (one-shot patch, repo에
+                  commit 안 됨)
                 </li>
               </ul>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
+                Commit: <code>795d6be</code> data: name actual hotels for
+                day1&#8211;4 stay
+              </p>
             </div>
 
             <div class="section-block">
@@ -356,7 +407,7 @@
                 <li>
                   Stage 6에서 도입한 <code>origin_place_id</code> 필드가 정확히
                   이 시나리오용. 데이터에 호텔 두 개를 추가해도 UI 코드 변경 0
-                  &#8212; render&#183;라우팅 그대로.
+                  &#8212; render·라우팅 그대로.
                 </li>
                 <li>
                   <code>validate-data</code> + <code>verify-walk</code>가 데이터
@@ -373,8 +424,9 @@
                 </li>
                 <li>
                   호텔 logistics (Sugata&#8594;Ebisuhigashi 짐 옮기기 transit)는
-                  itinerary stops에 명시되지 않음 &#8212; 필요시 Day3 첫 stop
-                  앞에 별도 logistics stop 추가 가능.
+                  itinerary stops에 명시되지 않음 &#8212; Day2 끝 Sugata, Day3
+                  시작 Ebisuhigashi 사이의 짐 이동은 사용자가 알아서. 필요시
+                  Day3 첫 stop 앞에 별도 logistics stop 추가 가능.
                 </li>
               </ul>
 
