@@ -273,6 +273,11 @@
         <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">10</div>
+        <span class="timeline-label">Stage 10</span>
+      </div>
     </nav>
 
     <main>
@@ -348,7 +353,8 @@
                 </li>
                 <li>
                   <code>assets/app.js</code> &#8212; <code>state</code>,
-                  <code>loadData</code>, <code>initMap</code>
+                  <code>loadData</code>,
+                  <code>initMap</code>
                 </li>
                 <li>
                   <code>assets/app.js</code> &#8212; <code>renderDay</code>,
@@ -382,9 +388,10 @@
                   미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
                 </li>
                 <li>
-                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
-                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
-                  hashchange 시 sidebar 동기화.
+                  조심할 점 (Stage 2 직전 처리):
+                  <code>renderSidebar</code>/<code>renderDetail</code>에 place
+                  가드 추가 (60개 데이터 타이포 대비), 같은 날 내 hashchange 시
+                  sidebar 동기화.
                 </li>
                 <li>
                   Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로

@@ -273,6 +273,11 @@
         <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">10</div>
+        <span class="timeline-label">Stage 10</span>
+      </div>
     </nav>
 
     <main>
@@ -309,9 +314,27 @@
                   view로 복귀
                 </li>
                 <li>
-                  디테일 패널 폴리시: 상단 emoji 그라데이션 hero + 둥근 close
-                  버튼, transit card (border-left + day 색상), 태그 chip, 추천
-                  활동 ▸ marker, 맛집 카드, 후기 버튼 3-col grid
+                  디테일 패널 폴리시:
+                  <ul>
+                    <li>
+                      상단 emoji 그라데이션 hero (h-40, text-7xl) + 둥근 close
+                      버튼
+                    </li>
+                    <li>
+                      전 stop에서 오는 길 transit card (border-left + day 색상)
+                    </li>
+                    <li>
+                      태그 chip (<code>#야경</code>, <code>#먹거리</code> 등)
+                    </li>
+                    <li>추천 활동: &#9658; marker + day 색상</li>
+                    <li>
+                      맛집 카드: name + price_range 같은 row, type/tip 아래
+                    </li>
+                    <li>
+                      후기 버튼 3-col grid (네이버 블로그 / 구글 웹 / 유튜브
+                      영상)
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   활성 마커 pulse 애니메이션 (<code
@@ -357,40 +380,51 @@
                   <code>renderMobileTabs</code>, <code>renderDay</code>의
                   <code>--active-day</code> 설정, <code>selectStop</code>의
                   active marker toggle + matchMedia mobile close,
-                  <code>renderDetail</code> 전체
+                  <code>renderDetail</code> 전체 (transit card, chip, restaurant
+                  cards, 후기 grid)
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  잘 된 점: 데스크톱 레이아웃 손대지 않고
-                  <code>md:hidden</code> Tailwind 클래스 +
-                  <code>@media (max-width: 767px)</code> CSS로 모바일 전용 UX
-                  추가. 분기점이 명확.
+                  데스크톱 레이아웃 손대지 않고 <code>md:hidden</code> Tailwind
+                  클래스 + <code>@media (max-width: 767px)</code> CSS로 모바일
+                  전용 UX 추가. 분기점이 명확.
                 </li>
                 <li>
-                  잘 된 점: <code>--active-day</code> CSS 변수 1개로 mobile tab
-                  아이콘 색 + 마커 pulse 색을 한 번에 동기화. JS-CSS 사이 단일
+                  <code>--active-day</code> CSS 변수 1개로 mobile tab 아이콘 색
+                  + 마커 pulse 색을 한 번에 동기화. JS&#8211;CSS 사이 단일
                   source of truth.
                 </li>
                 <li>
-                  잘 된 점: <code>selectStop</code>의 marker active toggle
-                  패턴이 정확 &#8212; <code>eachLayer</code> 클린업 + 인덱스
-                  기반 부착. <code>clearLayers()</code> 시점에 자동 정리됨.
+                  <code>selectStop</code>의 marker active toggle 패턴이 정확
+                  &#8212; <code>eachLayer</code> 클린업 + 인덱스 기반 부착.
+                  <code>clearLayers()</code> 시점에 자동 정리됨.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">조심한 점</h4>
+              <ul>
+                <li>
+                  marker pulse animation이 무한 반복이라 배터리 영향 미미하지만
+                  있음 &#8212; 1.4s 주기는 충분히 잔잔. UX 우선.
                 </li>
                 <li>
-                  조심한 점: marker pulse animation이 무한 반복이라 배터리 영향
-                  미미하지만 있음 &#8212; 1.4s 주기는 충분히 잔잔. UX 우선.
+                  모바일 디테일이 풀스크린이지만 하단
+                  <code>bottom: 3.5rem</code>으로 탭바 영역 비워둠. 닫기 버튼은
+                  우상단 + 탭바로도 종료 가능.
                 </li>
+              </ul>
+
+              <h4 class="retro-sub">이연</h4>
+              <ul>
                 <li>
-                  조심한 점: 모바일 디테일이 풀스크린이지만 하단
-                  <code>bottom: 3.5rem</code>으로 탭바 영역 비워둠.
-                </li>
-                <li>
-                  이연: Stage 4 &#8212; iOS safe-area 처리
+                  Stage 4 &#8212; iOS safe-area 처리
                   (<code>env(safe-area-inset-bottom)</code>), Firefox 검증,
                   명시적 smoke test 체크리스트.
                 </li>
