@@ -58,12 +58,12 @@
           "place_id": "fushimi_inari",
           "time": "08:30",
           "transit_from_prev": {
-            "mode": "JR야마토지+JR나라선",
+            "mode": "도보+JR야마토지+JR나라선",
             "from": "수가타 호텔 (신사이바시)",
             "to": "이나리역",
-            "minutes": 45,
+            "minutes": 55,
             "cost_jpy": 410,
-            "note": "JR난바(야마토지선)→오사카 환승→JR이나리역. 이른 시간 추천 (인파 적음)",
+            "note": "신사이바시→JR난바역 도보 8분 + JR 환승",
             "origin_place_id": "sugata_hotel"
           },
           "duration_minutes": 120
@@ -260,12 +260,12 @@
           "place_id": "usj",
           "time": "08:00",
           "transit_from_prev": {
-            "mode": "미도스지+JR유메사키선",
+            "mode": "JR환상선+JR유메사키선",
             "from": "에비스히가시 호텔",
             "to": "유니버설시티역",
-            "minutes": 35,
-            "cost_jpy": 280,
-            "note": "오픈런 = 닌텐도월드 정리권 확보",
+            "minutes": 45,
+            "cost_jpy": 260,
+            "note": "호텔→신이마미야역 도보 7분 + JR환상선·유메사키선 환승",
             "origin_place_id": "ebisuhigashi_hotel"
           },
           "duration_minutes": 720
