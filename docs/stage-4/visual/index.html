@@ -148,20 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
-        padding-left: 1.2rem;
-        font-size: 0.9rem;
-        color: #374151;
-      }
-      .section-block ul li {
-        margin-bottom: 0.2rem;
-      }
+      .section-block ul,
       .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ol li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -277,14 +270,18 @@
         <div class="timeline-node muted">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">14</div>
+        <span class="timeline-label">Stage 14</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 4</h2>
         <div class="card-grid">
-          <!-- Single card sourced from qa.md -->
-          <article aria-labelledby="card-qa" style="grid-column: 1 / -1">
+          <article aria-labelledby="card-qa">
             <h3 id="card-qa">QA, Cross-Browser, Final Polish</h3>
 
             <div class="section-block">
@@ -302,14 +299,13 @@
               <ul>
                 <li>
                   <code>scripts/smoke-test.md</code> &#8212; 21 stop 회귀
-                  체크리스트 (Day별 place_id 표 + 라우팅·모바일·크로스브라우저
-                  항목)
+                  체크리스트 (Day별 place_id 표 +
+                  라우팅&#183;모바일&#183;크로스브라우저 항목)
                 </li>
                 <li>
                   <code>assets/app.js</code> &#8212; hash routing 정규화 +
-                  디테일 패널 자동 close 로직 (smoke에서 발견된 두 이슈에 대한
-                  fix) + <code>buildHash()</code> 헬퍼 (리뷰 피드백 반영
-                  리팩토링)
+                  디테일 패널 자동 close 로직 + <code>buildHash()</code> 헬퍼
+                  (리뷰 피드백 반영 리팩토링)
                 </li>
                 <li>
                   <code>assets/styles.css</code> &#8212;
@@ -331,43 +327,23 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                <code>/home/cwh/.claude/skills/gstack/browse/dist/browse</code>
-                (headless Chromium)로 <code>http://127.0.0.1:54130/</code>에
-                접속해 21개 stop을 hash 변경으로 자동 순회. 각 stop의 디테일
-                헤더가 로드되는지 확인 &#8594; 21/21 모두 한국어 명소명이 정확히
-                표시됨.
+                headless Chromium으로
+                <code>http://127.0.0.1:54130/</code>에 접속해 21개 stop을 hash
+                변경으로 자동 순회. 각 stop의 디테일 헤더가 로드되는지 확인
+                &#8594; 21/21 모두 한국어 명소명이 정확히 표시됨.
               </p>
-              <p style="margin-top: 0.5rem">추가 시나리오:</p>
-              <ul>
-                <li>
-                  <code>#day9/foo</code> (invalid) &#8594; 이전엔 URL이
-                  <code>#day9/foo</code>로 유지되고 이전 day의 detail panel이
-                  stale 상태로 남았음. fix: <code>boot()</code> +
-                  <code>hashchange</code> 양쪽에서
-                  <code>history.replaceState</code> 로 URL을 정규화하고, place
-                  segment 없는 hash로 가면 detail을 hidden 처리.
-                </li>
-                <li>
-                  Same-day stop switch (<code>#day3/osaka_castle</code> &#8594;
-                  <code>#day3/kuromon_market</code>) &#8594; 디테일 헤더만 갱신,
-                  정상.
-                </li>
-                <li>
-                  Mobile viewport (390&#215;844) &#8594; 탭바 표시, safe-area
-                  inset 적용 (헤드리스에선 0px이지만 CSS rule 자체는 합당).
-                </li>
-              </ul>
-              <p style="margin-top: 0.5rem">검증:</p>
-              <ul>
-                <li>
-                  <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  65 places, 5 days validated
-                </li>
-                <li>
-                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
-                  11 pass
-                </li>
-              </ul>
+              <p style="margin-top: 0.5rem">
+                추가 시나리오: <code>#day9/foo</code> (invalid) &#8594; URL
+                정규화 + detail hidden 처리. Same-day stop switch &#8594; 디테일
+                헤더만 갱신 정상. Mobile viewport (390&#215;844) &#8594; 탭바
+                표시, safe-area inset 적용.
+              </p>
+              <p style="margin-top: 0.5rem">
+                검증: <code>node scripts/validate-data.mjs</code> &#8594;
+                &#10003; 65 places, 5 days.
+                <code>node --test tests/validate-data.test.mjs</code>
+                &#8594; 11 pass.
+              </p>
             </div>
 
             <div class="section-block">
@@ -386,24 +362,23 @@
                   URL 정규화 + 옵셔널 체이닝)
                 </li>
                 <li>
-                  <code>assets/app.js:365&#8211;400</code>
-                  (<code>hashchange</code> handler &#8212; 정규화 + day-only
-                  hash시 detail close)
+                  <code>assets/app.js:365&#8211;400</code> (<code
+                    >hashchange</code
+                  >
+                  handler)
                 </li>
                 <li>
-                  <code>assets/styles.css:81&#8211;85</code>
-                  (<code>#mobile-tabs</code> safe-area-inset)
+                  <code>assets/styles.css:81&#8211;85</code> (<code
+                    >#mobile-tabs</code
+                  >
+                  safe-area-inset)
                 </li>
-                <li><code>docs/stage-4/qa.md</code></li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commits: <code>42b3967</code> fix(routing): normalize invalid
-                hash + close detail on day switch &#8212;
-                <code>adfbce5</code> fix(mobile): safe-area-inset-bottom on
-                #mobile-tabs &#8212; <code>522feda</code> test(qa): manual smoke
-                checklist &#8212; <code>8d2e1a8</code> docs: README &#8212;
-                <code>d373c60</code> refactor(routing): extract buildHash()
-                helper
+                Commits: <code>42b3967</code> fix(routing) &#183;
+                <code>adfbce5</code> fix(mobile) &#183;
+                <code>522feda</code> test(qa) &#183; <code>8d2e1a8</code> docs
+                &#183; <code>d373c60</code> refactor(routing)
               </p>
             </div>
 
@@ -417,7 +392,7 @@
                   수동 클릭쓰루 대비 시간 절약 + 매번 정확히 동일한 시퀀스 보장.
                 </li>
                 <li>
-                  Smoke test가 의도된 가드레일 역할을 함 &#8212; invalid hash와
+                  Smoke test가 의도된 가드레일 역할 &#8212; invalid hash와
                   day-switch detail close 두 이슈 모두 manual review로는 못
                   잡았을 라우팅 엣지케이스.
                 </li>
@@ -431,20 +406,17 @@
               <ul>
                 <li>
                   <code>parseHash</code>가 invalid 입력에 대해 silent fallback
-                  하기보다 caller가 정상화하도록 시그널을 주는 패턴(예:
-                  <code>valid: false</code>)이 더 명확할 수 있음 &#8212; 다음
-                  비슷한 SPA에서 고려.
+                  하기보다 caller가 정상화하도록 시그널을 주는 패턴 (예:
+                  <code>valid: false</code>)이 더 명확할 수 있음.
                 </li>
                 <li>
-                  Codex CLI가 MCP 도구 schema 충돌로 실패한 건 환경 문제(특정
-                  MCP 서버의 tool spec). gemini와 code-reviewer-pro 둘이서도
-                  동일한 핵심 finding을 잡았으므로 stage gate에는 영향 없었지만,
-                  codex 환경은 따로 점검 필요.
+                  Codex CLI가 MCP 도구 schema 충돌로 실패 &#8212; gemini와
+                  code-reviewer-pro 둘이서도 동일한 핵심 finding을 잡았으므로
+                  stage gate에는 영향 없었음.
                 </li>
                 <li>
-                  Firefox 실기 테스트는 헤드리스에서 검증 불가 &#8212; 본
-                  단계에서는 CSS/JS feature 호환성만 가정. 실제 사용 전 한 번
-                  띄워 확인 권장.
+                  Firefox 실기 테스트는 헤드리스에서 검증 불가 &#8212; 실제 사용
+                  전 한 번 띄워 확인 권장.
                 </li>
               </ul>
 
@@ -486,8 +458,8 @@
                       <td>
                         <strong>Dismiss</strong> &#8212; 코드 구조 오독.
                         <code>else</code>는 <code>if (open)</code> 페어로 day
-                        같은 케이스(<code>open=true</code>)에선 if 블록만 실행.
-                        실제 same-day switch도 정상 동작 검증 완료.
+                        같은 케이스에선 if 블록만 실행. 실제 same-day switch도
+                        정상 동작 검증 완료.
                       </td>
                     </tr>
                     <tr>
@@ -501,14 +473,10 @@
 
               <h4 class="retro-sub">Codex PR Review (별도 단계)</h4>
               <p
-                style="
-                  font-size: 0.88rem;
-                  color: #374151;
-                  margin-bottom: 0.5rem;
-                "
+                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem"
               >
-                PR #1에 <code>@codex review</code> 트리거 후 3 라운드 (skill
-                cap) 진행, 총 16건 finding 모두 적용:
+                PR #1에 <code>@codex review</code> 트리거 후 3 라운드 진행, 총
+                16건 finding 모두 적용:
               </p>
               <div class="table-wrapper">
                 <table>
@@ -549,10 +517,9 @@
                   </tbody>
                 </table>
               </div>
-              <p style="font-size: 0.82rem; color: #6b7280; margin-top: 0.5rem">
-                모두 mechanical/defensive fix로 ambiguity 없음 &#8594; 사용자
-                확인 없이 auto-apply. PR 본 후 cap 도달로 종료. 추가 round를
-                돌면 더 marginal defensive 케이스만 나올 것으로 예상.
+              <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem">
+                모두 mechanical/defensive fix로 ambiguity 없음 &#8594;
+                auto-apply. PR 본 후 cap 도달로 종료.
               </p>
             </div>
           </article>

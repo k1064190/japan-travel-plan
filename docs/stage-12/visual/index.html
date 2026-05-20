@@ -175,28 +175,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-      .table-wrapper {
-        overflow-x: auto;
-        margin-top: 0.5rem;
-      }
-      .table-wrapper table {
-        border-collapse: collapse;
-        width: 100%;
-        font-size: 0.85rem;
-        color: #374151;
-      }
-      .table-wrapper th,
-      .table-wrapper td {
-        border: 1px solid #e5e7eb;
-        padding: 0.35rem 0.6rem;
-        text-align: left;
-        vertical-align: top;
-      }
-      .table-wrapper th {
-        background: #f9fafb;
-        font-weight: 600;
-        color: #111827;
-      }
     </style>
   </head>
   <body>
@@ -270,13 +248,17 @@
         <div class="timeline-node muted">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">14</div>
+        <span class="timeline-label">Stage 14</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 12</h2>
         <div class="card-grid">
-          <!-- Single card sourced from more-restaurants.md -->
           <article aria-labelledby="card-more-restaurants">
             <h3 id="card-more-restaurants">
               More Restaurants (with WebFetched Ratings)
@@ -286,10 +268,10 @@
               <h4>Why</h4>
               <p>
                 Stage 9에서 36개 식당을 추가하고 Stage 11에서 실측 별점으로
-                교체했지만, 일정 area별로 좀 더 다양성과 깊이가 필요했다. 특히
-                사용자가 "더 많이 찾아서 정리해줘"라고 명시. 카테고리 분포 (한
-                동네 라멘 한두 곳, 야끼니쿠 한 곳 정도)에서 명점 추가로 후보가
-                풍부해지면 사이드바&#183;맵에서 사용자 선택지가 넓어진다.
+                교체했지만, 일정 area별로 좀 더 다양성과 깊이가 필요했다.
+                사용자가 &#8220;더 많이 찾아서 정리해줘&#8221;라고 명시.
+                카테고리 분포에서 명점 추가로 후보가 풍부해지면
+                사이드바&#183;맵에서 사용자 선택지가 넓어진다.
               </p>
             </div>
 
@@ -313,9 +295,9 @@
                       토쿠야 (와라비모찌, 100명점), 키타가와 한베에
                     </li>
                     <li>
-                      Day3 (10&#8594;9 after dedupe): 오사카 &#8212; 그릴 본,
-                      다루마 츠텐카쿠, 야마짱 아베노, 키지 우메다, 무기토멘스케
-                      (라멘 백명점), 소라 츠루하시, 학운대, 메이게츠칸 야끼니쿠,
+                      Day3 (9 after dedupe): 오사카 &#8212; 그릴 본, 다루마
+                      츠텐카쿠, 야마짱 아베노, 키지 우메다, 무기토멘스케 (라멘
+                      백명점), 소라 츠루하시, 학운대, 메이게츠칸 야끼니쿠,
                       나카무라야 고로케 등
                     </li>
                     <li>
@@ -331,15 +313,14 @@
                 </li>
                 <li>
                   <strong>dedupe</strong>: Day1&#183;Day3가 치토세 본점을 다른
-                  id로 둘 다 추가 &#8594; Day1 entry 유지 (좌표&#183;area 일치)
+                  id로 둘 다 추가 &#8594; Day1 entry 유지
                 </li>
                 <li>
-                  1건 <code>http</code>&#8594;<code>https</code> URL 자동
-                  업그레이드 (aizuya tempozan)
+                  1건 http&#8594;https URL 자동 업그레이드 (aizuya tempozan)
                 </li>
                 <li>
-                  <code>places.json</code>: 131 &#8594; <strong>169</strong> (1
-                  entry removed after codex P2)
+                  places.json: 131 &#8594; <strong>169</strong> (1 entry removed
+                  after codex P2)
                 </li>
               </ul>
             </div>
@@ -348,21 +329,11 @@
               <h4>How</h4>
               <p>
                 새 branch <code>feature/more-restaurants</code>, 4 background
-                subagent 병렬 dispatch (Day1&#8211;4 area별).
+                subagent 병렬 dispatch (Day1&#8211;4 area별). 각 subagent 절차:
               </p>
-              <p style="margin-top: 0.5rem">각 subagent 절차:</p>
-              <ol
-                style="padding-left: 1.2rem; font-size: 0.9rem; color: #374151"
-              >
-                <li>
-                  <code>places.json</code> read &#8594; 기존 170+ id Set으로
-                  중복 회피
-                </li>
-                <li>
-                  추천 카테고리
-                  (라멘&#183;야끼니쿠&#183;우동&#183;디저트&#183;카페&#183;이자카야
-                  등)에서 새 식당 8&#8211;12개 후보
-                </li>
+              <ol>
+                <li>places.json read &#8594; 기존 170+ id Set으로 중복 회피</li>
+                <li>추천 카테고리에서 새 식당 8&#8211;12개 후보</li>
                 <li>
                   각 후보에 대해 WebSearch <code>店名 tabelog</code> &#8594;
                   정확한 URL 확보
@@ -375,7 +346,7 @@
               </ol>
               <p style="margin-top: 0.5rem">
                 메인이 <code>/tmp/merge-more-restaurants.mjs</code> 한 번 실행해
-                <code>places.json</code>에 일괄 추가. id 충돌 0건.
+                places.json에 일괄 추가. id 충돌 0건.
               </p>
             </div>
 
@@ -384,7 +355,7 @@
               <ul>
                 <li>
                   <code>data/places.json</code> (38 새 alt 식당 entries; UI 코드
-                  변경 0 &#8212; 기존 Stage 8/9/10/11 인프라 그대로 활용)
+                  변경 0)
                 </li>
                 <li>
                   패치 입력:
@@ -395,7 +366,7 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commit: <code>76c8457</code> data: add 39 more restaurant
+                Commit: <code>76c8457</code> data: add 39 more restaurant
                 alt-candidates (1 later removed) with WebFetched ratings
               </p>
             </div>
@@ -429,7 +400,7 @@
                     </li>
                     <li>
                       Day3: 무기토멘스케 (Tabelog 라멘 백명점 3년 연속,
-                      3.84/2325)&#183;키지 우메다 같은 명점
+                      3.84/2325)&#183;기지 우메다 같은 명점
                     </li>
                     <li>
                       Day4: 시티워크 4F&#183;5F&#183;32F + 텐포잔 안 다른 가게로
@@ -448,13 +419,13 @@
                 <li>
                   동일 식당이 day별 area 경계에서 다른 id로 추가되는 케이스
                   (치토세). 다음 batch에는 patch JSON에
-                  <code>alias_check</code> 필드로 비슷한 이름 미리 신고하게 하면
-                  충돌 사전 탐지 가능.
+                  &#8220;alias_check&#8221; 필드로 비슷한 이름 미리 신고하게
+                  하면 충돌 사전 탐지 가능.
                 </li>
                 <li>
-                  별점 분포가 Tabelog 특성상 3.2&#8211;3.8 좁은 폭. 사용자가 더
-                  변별력 있는 정렬을 원하면 review_count도 weighting (예: rating
-                  &#215; log(review_count))을 옵션으로.
+                  별점 분포가 Tabelog 특성상 3.2&#8211;3.8 좁은 폭. 더 변별력
+                  있는 정렬을 원하면 review_count도 weighting (예: rating &#215;
+                  log(review_count)) 옵션으로.
                 </li>
                 <li>
                   일부 가게가 폐점&#183;이전한 경우가 있을 수 있음 &#8212; 정기
@@ -473,17 +444,12 @@
                   11 pass
                 </li>
                 <li>
-                  <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
-                  segment all within tolerance
-                </li>
-                <li>
                   browse smoke:
                   <ul>
                     <li>Day1 sidebar 54개 (이전 40 + 새 14)</li>
                     <li>Day2 sidebar 87개 (이전 65 + 22)</li>
-                    <li>Day3 sidebar 75개 (이전 26 + 49)</li>
-                    <li>Day4 sidebar 57개 (이전 26 + 31)</li>
-                    <li>Day5 sidebar 42개</li>
+                    <li>Day3 sidebar 75개</li>
+                    <li>Day4 sidebar 57개</li>
                     <li>
                       Day1 top 5 정렬: 야끼니쿠 M 3.78 &#8594; 치토세 3.72
                       &#8594; 이마이 3.58 &#8594; 메오토 젠자이 3.58 &#8594;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 1 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 14 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -166,6 +166,19 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
+      .section-block pre {
+        background: #f3f4f6;
+        border-radius: 4px;
+        padding: 0.75rem 1rem;
+        overflow-x: auto;
+        margin-top: 0.5rem;
+      }
+      .section-block pre code {
+        background: none;
+        padding: 0;
+        font-size: 0.8rem;
+        color: #1f2937;
+      }
       h4.retro-sub {
         font-size: 0.8rem;
         font-weight: 700;
@@ -184,8 +197,8 @@
     </header>
 
     <nav class="timeline" aria-label="Project stages">
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">1</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -249,26 +262,28 @@
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">14</div>
         <span class="timeline-label">Stage 14</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 1</h2>
+        <h2 id="stage-heading">Stage 14</h2>
         <div class="card-grid">
-          <article aria-labelledby="card-skeleton">
-            <h3 id="card-skeleton">Project Skeleton + Routing + End-to-End</h3>
+          <!-- Single card sourced from marker-highlight.md -->
+          <article aria-labelledby="card-highlight">
+            <h3 id="card-highlight">Marker Highlight Burst</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                설계 전체를 한 번에 만들기 전에 데이터 &#8594; 지도 &#8594;
-                사이드바 &#8594; 디테일 &#8594; 라우팅의 와이어링이 처음부터
-                끝까지 동작하는지 5개 sample 명소로 검증한다. 60개 데이터를 채운
-                뒤 와이어링이 안 맞으면 되돌리기 비싸기 때문.
+                Stage 13에서 &#8220;맵에서 보기&#8221; 버튼을 추가했지만
+                사용자가 &#8220;맵으로 이동은 되는데 그 자리에서 정확히 어디인지
+                찾기가 힘듦&#8221;이라고 보고. numbered 마커 + alt 마커가 같은
+                화면에 겹쳐있을 때 활성 마커를 시각적으로 즉시 찾을 수 있는
+                신호가 필요.
               </p>
             </div>
 
@@ -276,108 +291,180 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>index.html</code> 골격 + Leaflet 1.9.4 / Tailwind play
-                  CDN / Pretendard CDN 임포트
+                  <code>highlightLocation(coords, color?)</code> 헬퍼 &#8212;
+                  <code>.highlight-ring</code> divIcon 마커를 잠깐 띄움. CSS
+                  <code>@keyframes highlight-burst</code>로 0.25&#215; &#8594;
+                  3&#215; scale + opacity 0.95 &#8594; 0 fade, 1.4s ease-out.
+                  1.5초 후 자동 removeLayer.
                 </li>
                 <li>
-                  <code>assets/styles.css</code> day 색상 CSS 변수(<code
-                    >--day-1</code
-                  >
-                  &#8211; <code>--day-5</code>) + numbered-marker 스타일 +
-                  모바일 media query
+                  3개 경로에 통합:
+                  <ul>
+                    <li>
+                      <code>selectStop()</code> &#8212; 일정 stop 클릭 (사이드바
+                      또는 맵 numbered 마커)
+                    </li>
+                    <li>
+                      <code>selectAlt()</code> &#8212; alt 후보 마커/사이드바
+                      카드 클릭
+                    </li>
+                    <li>
+                      <code>#detail-locate</code> 클릭 &#8212; flyTo 600ms 후
+                      burst 발생 (카메라 안착 타이밍과 맞춤)
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <code>assets/app.js</code> 데이터 로더(error handling 포함),
-                  Leaflet 마커, 사이드바, 디테일 패널, hash router, XSS-safe
-                  <code>esc()</code>/<code>safeHref()</code> 헬퍼
+                  ring 색은 day color로 inline-style &#8212; 활성 day와 일관된
+                  시각 신호.
                 </li>
-                <li><code>data/itinerary.json</code> Day1 5개 stop</li>
                 <li>
-                  <code>data/places.json</code> 5개 sample (간사이공항,
-                  난바숙소, 구로몬, 덴덴타운, 도톤보리)
+                  <code>interactive: false</code> +
+                  <code>keyboard: false</code>로 ring이 클릭 가로채지 않음.
+                </li>
+                <li>
+                  <code>zIndexOffset: 2000</code>으로 numbered/alt 마커 위에
+                  표시.
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>How</h4>
-              <p>
-                Vanilla ES6, 단일 모듈 (<code>assets/app.js</code>). 상태는
-                in-memory <code>state</code> 객체. 지도는
-                <code>fitBounds</code>로 day 전체 보이도록 시작, 클릭 시
-                <code>flyTo</code>. URL hash는 <code>#dayN/placeId</code> 포맷,
-                새로고침해도 상태 복원. <code>boot()</code>는 데이터 fetch 실패
-                시 한국어 에러 메시지를 표시.
+              <p>CSS:</p>
+              <pre><code>@keyframes highlight-burst {
+  0%   { transform: scale(0.25); opacity: 0.95; }
+  100% { transform: scale(3);    opacity: 0; }
+}
+.highlight-ring {
+  width: 60px; height: 60px; border-radius: 50%;
+  border: 4px solid #3b82f6;
+  pointer-events: none;
+  animation: highlight-burst 1.4s ease-out forwards;
+}</code></pre>
+              <p style="margin-top: 0.75rem">JS helper:</p>
+              <pre><code>function highlightLocation(coords, color) {
+  if (!Array.isArray(coords) || !state.map) return;
+  const ringColor = color || dayColor(state.activeDay);
+  const icon = L.divIcon({
+    className: "",
+    html: `&lt;div class="highlight-ring"
+            style="border-color:${ringColor}"&gt;&lt;/div&gt;`,
+    iconSize: [60, 60], iconAnchor: [30, 30],
+  });
+  const marker = L.marker(coords, {
+    icon, interactive: false, keyboard: false,
+    zIndexOffset: 2000
+  }).addTo(state.map);
+  setTimeout(() => {
+    if (state.map &amp;&amp; state.map.hasLayer(marker))
+      state.map.removeLayer(marker);
+  }, 1500);
+}</code></pre>
+              <p style="margin-top: 0.75rem">
+                <code>#detail-locate</code>에서는 flyTo(0.8s) 이후 카메라 안착
+                시점에 burst가 절정에 닿도록
+                <code>setTimeout(... , 600)</code> 추가.
               </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
-                <li><code>index.html</code> (스켈레톤 + CDN imports)</li>
                 <li>
-                  <code>assets/styles.css</code> (day 색상 CSS vars +
-                  numbered-marker + 모바일 media query)
+                  <code>assets/styles.css:80&#8211;98</code> (<code
+                    >@keyframes highlight-burst</code
+                  >
+                  + <code>.highlight-ring</code>)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>DAY_COLORS</code> /
-                  <code>dayColor</code> / <code>esc</code> /
-                  <code>safeHref</code> helpers
+                  <code>assets/app.js:311&#8211;330</code> (<code
+                    >highlightLocation</code
+                  >
+                  헬퍼)
+                </li>
+                <li><code>assets/app.js:401</code> (<code>selectAlt</code>)</li>
+                <li>
+                  <code>assets/app.js:441</code> (<code>selectStop</code>)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>state</code>,
-                  <code>loadData</code>, <code>initMap</code>
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>renderDay</code>,
-                  <code>selectStop</code> (지도 + 마커)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>renderSidebar</code>,
-                  <code>renderDetail</code>, <code>renderProgressBar</code> (UI)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>parseHash</code>,
-                  <code>boot</code>, <code>hashchange</code> listener (라우팅)
-                </li>
-                <li>
-                  <code>data/places.json</code>,
-                  <code>data/itinerary.json</code> (5 places, Day1)
+                  <code>assets/app.js:670&#8211;672</code> (<code
+                    >#detail-locate</code
+                  >
+                  click handler, delayed burst)
                 </li>
               </ul>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
+                Commit: <code>adf3615</code> feat(map): highlight ring burst
+                when location is picked
+              </p>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  잘 된 점: TDD 없이도 per-task spec+code 리뷰가 critical 이슈
-                  6개를 사전 차단 (loadData 에러 처리, XSS escaping, null 가드,
-                  DAY_COLORS 폴백, hashchange race, aria-label).
+                  단일 헬퍼 + 3 경로 wiring &#8212; 일정 stop / alt 후보 /
+                  detail-locate 어느 경로로 와도 동일 시각 신호.
                 </li>
                 <li>
-                  잘 된 점: Tailwind play CDN + Pretendard로 빌드 단계 없이
-                  미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
+                  divIcon + CSS animation 조합 &#8594; Leaflet circleMarker가 안
+                  되는 부드러운 scale&#183;fade를 자연스럽게 처리.
                 </li>
                 <li>
-                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
-                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
-                  hashchange 시 sidebar 동기화.
+                  setTimeout cleanup이 map.hasLayer 가드해서 활성 day 변경으로
+                  인한 map clear 후에도 안전.
                 </li>
                 <li>
-                  Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
-                  Stage 3.1에서 채움),
-                  <code>.numbered-marker.active</code> CSS는 dead code지만 Stage
-                  3.3에서 활성화 예정이므로 보존.
+                  ring 색이 day color에 binding되어 사이드바&#183;numbered
+                  마커와 일관성 유지.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
+              <ul>
+                <li>
+                  비활성화 토글: 사용자가 너무 자극적이라 느끼면
+                  <code>prefers-reduced-motion</code> 매체쿼리로 비활성화 옵션
+                  추가.
                 </li>
                 <li>
-                  Stage 2 readiness: Ready with caveats &#8212; Critical 가드
-                  픽스 후 진입.
+                  마커 모양에 따른 anchor 조정 &#8212; 현재 30,30 고정. numbered
+                  마커는 위쪽 정렬, alt 마커는 중앙이라 살짝 어긋날 수 있음.
+                </li>
+                <li>
+                  detail-locate의 600ms 지연이 매직 넘버 &#8212; Leaflet
+                  <code>moveend</code> 이벤트에 binding하면 더 정확하게 안착 후
+                  burst 가능.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">검증</h4>
+              <ul>
+                <li>
+                  <code>npm run validate</code> &#8594; &#10003; 169 places, 5
+                  days
+                </li>
+                <li><code>npm test</code> &#8594; 11 pass</li>
+                <li>
+                  browse smoke: detail-locate 클릭 &#8594; 1.4s 동안 ring 1개
+                  표시, 1.5s 후 0개 (자동 cleanup) &#10003;
+                </li>
+                <li>일정 stop 클릭 &#8594; ring 1개 spawn</li>
+                <li>alt 후보 클릭 &#8594; ring 1개 spawn</li>
+                <li>연속 클릭 시 ring 누적 OK (각자 자동 cleanup)</li>
+                <li>console error 0</li>
+                <li>
+                  스크린샷에서 ring이 도톤보리 numbered 마커 주위에 확장되어
+                  시각적으로 명확 (<code>/tmp/highlight-burst.png</code>)
                 </li>
               </ul>
             </div>
           </article>
         </div>
+        <!-- /.card-grid -->
       </section>
     </main>
   </body>
