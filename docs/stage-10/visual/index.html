@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -264,25 +265,31 @@
         <div class="timeline-node muted">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 10</h2>
         <div class="card-grid">
+          <!-- Single card sourced from sidebar-candidates.md -->
           <article aria-labelledby="card-sidebar">
             <h3 id="card-sidebar">Sidebar Candidate Cards + Filter Toggles</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 8/9에서 alt 후보·맛집을 맵에 회색 마커로 노출했지만
+                Stage 8/9에서 alt 후보&#183;맛집을 맵에 회색 마커로 노출했지만
                 사이드바 일정 탭에서는 보이지 않았다. 작은 마커는 폰 화면에서
                 정확히 누르기 어렵고 별점을 한눈에 정렬해서 보기도 불편.
                 사이드바에 일정 stops 아래로 카드 형태로 노출하면 (1) 별점
                 내림차순으로 어디가 가장 인기 있는지 즉시 파악, (2) 큰 터치
-                타깃, (3) "맛집만"·"먼 후보도" 같은 필터를 켜서 의도한 후보만
-                좁혀볼 수 있다.
+                타깃, (3) "맛집만"&#183;"먼 후보도" 같은 필터를 켜서 의도한
+                후보만 좁혀볼 수 있다.
               </p>
             </div>
 
@@ -318,7 +325,7 @@
                       <code>ALT_PROXIMITY_KM</code> (2 km) &#8594;
                       <code>ALT_FAR_KM</code> (8 km)으로 확장. 츠루하시
                       코리아타운 같이 멀지만 의도적으로 추가된 entry를
-                      사이드바·맵 둘 다에 노출.
+                      사이드바&#183;맵 둘 다에 노출.
                     </li>
                   </ul>
                 </li>
@@ -353,7 +360,7 @@
                 <li>
                   토글 change 이벤트는 state 업데이트 후
                   <code>renderDay</code> + <code>renderSidebar</code> 둘 다
-                  호출해 맵·사이드바 동기 갱신.
+                  호출해 맵&#183;사이드바 동기 갱신.
                 </li>
               </ul>
             </div>
@@ -384,8 +391,8 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commit: <code>b523602</code> feat(sidebar): candidates
-                section under itinerary stops + filter toggles
+                Commit: <code>b523602</code> feat(sidebar): candidates section
+                under itinerary stops + filter toggles
               </p>
             </div>
 
@@ -396,12 +403,13 @@
               <ul>
                 <li>
                   <code>altCandidatesForDay</code>에 opts 파라미터만 더하니
-                  맵·사이드바 양쪽 호출자가 자연스럽게 토글 지원. 단일 source of
-                  truth.
+                  맵&#183;사이드바 양쪽 호출자가 자연스럽게 토글 지원. 단일
+                  source of truth.
                 </li>
                 <li>
                   <code>isFoodPlace</code> 휴리스틱이 단순한데도 잘 동작 &#8212;
-                  rating 있는 entry는 거의 식당이라 양호한 신호.
+                  rating 있는 entry는 거의 식당이라 양호한 신호. 음식 키워드
+                  정규식이 backstop.
                 </li>
                 <li>
                   별점 내림차순 정렬 후 첫 카드가 가장 신뢰도 높은 곳 &#8212;
@@ -439,47 +447,22 @@
                 </li>
                 <li>
                   browse smoke: Day1 sidebar 후보 40개, 별점 내림차순 (Tabelog
-                  3.78 &#8594; 3.71 &#8594; ...)
+                  3.78 &#8594; 3.71 &#8594; ...) &#8212; 맛집만 토글: 40 &#8594;
+                  21 &#8212; Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시
+                  코리아타운 노출 &#10003; &#8212; 맛집만 + 먼 후보 동시: 73개
+                  &#8212; console error 0
                 </li>
-                <li>첫 카드 클릭 &#8594; 디테일 패널 정상 오픈</li>
-                <li>맛집만 토글: 40 &#8594; 21 (음식점만)</li>
-                <li>
-                  Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시 코리아타운 노출
-                  &#10003;
-                </li>
-                <li>맛집만 + 먼 후보 동시: 73개 candidates</li>
-                <li>console error 0</li>
               </ul>
 
               <h4 class="retro-sub">한계 (이연)</h4>
-              <p style="font-size: 0.9rem; color: #374151">
+              <p style="font-size: 0.88rem; color: #374151">
                 Phase C &#8212; Tabelog/Google
                 <strong>실제 별점 fetch</strong>는 이 세션에서 시도했으나
                 Anthropic API 사용량 한도로 dispatch된 subagent 두 개가 즉시
-                종료. 한도 풀린 뒤 별도 세션에서 동일 prompt로 재실행 가능.
-                절차:
+                종료. 한도 풀린 뒤 별도 세션에서 동일 prompt로 재실행 가능. 현재
+                별점 데이터는 subagent의 검색 추정치이며 fetch 시점&#183;실제
+                페이지값과 차이가 있을 수 있음.
               </p>
-              <ol
-                style="
-                  padding-left: 1.2rem;
-                  font-size: 0.9rem;
-                  color: #374151;
-                  margin-top: 0.4rem;
-                "
-              >
-                <li>새 branch <code>feature/real-ratings</code></li>
-                <li>
-                  4 subagent (day1&#8211;4) dispatch &#8212; 각자 day 영역의
-                  식당 entry들에 대해 WebSearch + WebFetch로 Tabelog 페이지
-                  가져와 별점·후기 수 추출 &#8594;
-                  <code>/tmp/rating-patches/dayN.json</code>
-                </li>
-                <li>
-                  메인이 일괄 merge &#8212; alt entry rating 갱신 + main 명소
-                  <code>restaurants[]</code> 안 식당 rating 채우기
-                </li>
-                <li>UI 변경 없음 (Stage 9에서 이미 양쪽 경로 지원)</li>
-              </ol>
             </div>
           </article>
         </div>

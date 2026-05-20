@@ -237,6 +237,75 @@ function initMap() {
   state.routeLayer = L.layerGroup().addTo(state.map);
   state.altLayer = L.layerGroup().addTo(state.map);
   state.markerLayer = L.layerGroup().addTo(state.map);
+
+  addLocateControl();
+}
+
+let userLocationMarker = null;
+let userLocationAccuracy = null;
+
+function addLocateControl() {
+  const LocateControl = L.Control.extend({
+    options: { position: "topleft" },
+    onAdd() {
+      const btn = L.DomUtil.create(
+        "button",
+        "leaflet-bar leaflet-control-locate",
+      );
+      btn.type = "button";
+      btn.innerHTML = "📍";
+      btn.title = "내 위치 (GPS)";
+      btn.setAttribute("aria-label", "내 위치로 이동");
+      L.DomEvent.disableClickPropagation(btn);
+      L.DomEvent.on(btn, "click", requestLocation);
+      return btn;
+    },
+  });
+  state.map.addControl(new LocateControl());
+}
+
+function requestLocation() {
+  if (!("geolocation" in navigator)) {
+    alert("이 브라우저는 GPS를 지원하지 않습니다.");
+    return;
+  }
+  // Browser policy: Geolocation requires HTTPS or localhost. LAN-HTTP may
+  // surface the PERMISSION_DENIED error path (code 1) on some browsers.
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const { latitude, longitude, accuracy } = pos.coords;
+      const ll = [latitude, longitude];
+      if (userLocationMarker) state.map.removeLayer(userLocationMarker);
+      if (userLocationAccuracy) state.map.removeLayer(userLocationAccuracy);
+      userLocationAccuracy = L.circle(ll, {
+        radius: Math.max(20, Math.min(accuracy || 50, 500)),
+        color: "#3b82f6",
+        weight: 1,
+        opacity: 0.4,
+        fillColor: "#3b82f6",
+        fillOpacity: 0.1,
+      }).addTo(state.map);
+      userLocationMarker = L.circleMarker(ll, {
+        radius: 8,
+        color: "#1d4ed8",
+        weight: 2,
+        fillColor: "#3b82f6",
+        fillOpacity: 0.9,
+      })
+        .bindTooltip("내 위치", { permanent: false, direction: "top" })
+        .addTo(state.map);
+      state.map.flyTo(ll, 16, { duration: 0.8 });
+    },
+    (err) => {
+      const reasons = {
+        1: "위치 권한이 거부됐습니다. 브라우저 설정에서 허용해주세요.",
+        2: "위치를 확인할 수 없습니다 (신호 없음).",
+        3: "위치 요청이 시간 초과됐습니다.",
+      };
+      alert(reasons[err.code] || `위치 오류: ${err.message}`);
+    },
+    { enableHighAccuracy: true, timeout: 10000, maximumAge: 30000 },
+  );
 }
 
 function renderDay(dayId) {
@@ -518,6 +587,7 @@ function renderDetail(stop, place) {
   detail.innerHTML = `
     <div class="h-40 flex items-center justify-center text-7xl relative" style="background:linear-gradient(135deg,${color}33,${color}66)">
       ${esc(place.emoji)}
+      <button id="detail-locate" aria-label="맵에서 위치 보기" class="absolute top-2 right-12 px-3 h-9 rounded-full bg-white/90 text-slate-700 text-xs font-semibold hover:bg-white">📍 맵에서 보기</button>
       <button id="detail-close" aria-label="상세 패널 닫기" class="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/90 text-slate-600 text-xl">×</button>
     </div>
     ${transitCard}
@@ -587,6 +657,18 @@ function renderDetail(stop, place) {
   detail.querySelector("#detail-close").addEventListener("click", () => {
     detail.classList.add("hidden");
     history.replaceState(null, "", `#${state.activeDay}`);
+  });
+  detail.querySelector("#detail-locate").addEventListener("click", () => {
+    if (!Array.isArray(place.coords)) return;
+    // Close the panel so the map is unobstructed, then fly in close.
+    detail.classList.add("hidden");
+    // Same hash hygiene as #detail-close: drop the place segment so a
+    // reload doesn't reopen the panel that the user just dismissed.
+    history.replaceState(null, "", `#${state.activeDay}`);
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      setMobileView("map");
+    }
+    state.map.flyTo(place.coords, 18, { duration: 0.8 });
   });
 }
 

@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -264,12 +265,18 @@
         <div class="timeline-node muted">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 8</h2>
         <div class="card-grid">
+          <!-- Single card sourced from alt-candidates.md -->
           <article aria-labelledby="card-alt">
             <h3 id="card-alt">Alt-Candidate Markers + Catalog Expansion</h3>
 
@@ -291,21 +298,29 @@
                   <strong>UI</strong>: 활성 day의 itinerary stop들 좌표 기준 1.5
                   km 반경 안 alt 카테고리 명소를 작은 회색 원형 마커로 맵에
                   표시. 호버 시 명소명 툴팁, 클릭 시 디테일 패널 (큐레이션
-                  링크/활동/후기 검색 표시, 시간·duration은 "후보 &#8212; 일정에
-                  들어있지 않음" 라벨로 대체).
+                  링크/활동/후기 검색 표시, 시간&#183;duration은 "후보 &#8212;
+                  일정에 들어있지 않음" 라벨로 대체).
                 </li>
                 <li>
                   <strong>데이터</strong>: 4개 background subagent가 day별로 새
                   alt 후보 27개 추가:
                   <ul>
                     <li>
-                      Day1 area: 7개 (난바·신사이바시·도톤보리 카페·신사·야식)
+                      Day1 area: 7개 (난바&#183;신사이바시&#183;도톤보리
+                      카페&#183;신사&#183;야식)
                     </li>
-                    <li>Day2 area: 8개 (교토 동쪽 사찰·% Arabica·철학의 길)</li>
                     <li>
-                      Day3 area: 8개 (오사카 미술관·키타하마 카페·코리아타운)
+                      Day2 area: 8개 (교토 동쪽 사찰&#183;% Arabica&#183;철학의
+                      길)
                     </li>
-                    <li>Day4 area: 4개 (덴포잔 공원·시티워크 타코파·환승역)</li>
+                    <li>
+                      Day3 area: 8개 (오사카 미술관&#183;키타하마
+                      카페&#183;코리아타운)
+                    </li>
+                    <li>
+                      Day4 area: 4개 (덴포잔 공원&#183;시티워크
+                      타코파&#183;환승역)
+                    </li>
                   </ul>
                 </li>
                 <li>itinerary 변경 0건 (사용자 명시 요구).</li>
@@ -329,7 +344,7 @@
                 transit 카드 자동 생략.
               </p>
               <p style="margin-top: 0.5rem">
-                데이터 추가는 4개 subagent가 WebSearch로 한국어 후기 큐레이션
+                데이터 추가: 4개 subagent가 WebSearch로 한국어 후기 큐레이션
                 &#8594; <code>/tmp/alt-patches/dayN-new.json</code> 저장 &#8594;
                 단일 merge 스크립트로 places.json에 일괄 추가. 신규 27 entries
                 모두 schema 통과.
@@ -359,8 +374,8 @@
                 <li><code>data/places.json</code> (27 새 entries)</li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>cc0e349</code> feat(map),
-                <code>0aff6cb</code> data: add 27 alt-candidate places
+                Commits: <code>cc0e349</code> feat(map): alt-candidate markers
+                &#8212; <code>0aff6cb</code> data: add 27 alt-candidate places
               </p>
             </div>
 
@@ -388,9 +403,9 @@
               <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
-                  <code>ALT_PROXIMITY_KM</code> (1.5)이 적절한지 사용자 경험으로
-                  조정 필요. Day1 18개·Day3 35개는 약간 빽빽함 &#8212; 1.0 km로
-                  좁히거나 카테고리별로 다른 거리 휴리스틱 검토.
+                  ALT_PROXIMITY_KM (1.5)이 적절한지 사용자 경험으로 조정 필요.
+                  Day1 18개&#183;Day3 35개는 약간 빽빽함 &#8212; 1.0 km로
+                  좁히거나 카테고리별로 다른 거리 휴리스틱 고려.
                 </li>
                 <li>
                   마커 클러스터링 (leaflet.markercluster) 도입 &#8212; 줌 아웃
@@ -416,13 +431,11 @@
                   도보, flagged 0
                 </li>
                 <li>
-                  browse smoke per day: day1 numbered 6 / alt 18, day2 numbered
-                  12 / alt 33, day3 numbered 16 / alt 35, day4 numbered 6 / alt
-                  17, day5 numbered 4 / alt 13
-                </li>
-                <li>
-                  alt 클릭 &#8594; 디테일 패널 정상 ("후보 &#8212; 일정에
-                  들어있지 않음" 라벨 표시), console error 0
+                  browse smoke: day1 numbered 6 / alt 18, day2 numbered 12 / alt
+                  33, day3 numbered 16 / alt 35, day4 numbered 6 / alt 17, day5
+                  numbered 4 / alt 13 &#8212; alt 클릭 &#8594; 디테일 패널 정상
+                  ("후보 &#8212; 일정에 들어있지 않음" 라벨 표시), console error
+                  0
                 </li>
               </ul>
             </div>

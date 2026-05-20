@@ -156,6 +156,14 @@
       .section-block ul li {
         margin-bottom: 0.2rem;
       }
+      .section-block ol {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ol li {
+        margin-bottom: 0.2rem;
+      }
       .section-block code {
         font-family:
           "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
@@ -264,13 +272,19 @@
         <div class="timeline-node muted">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 4</h2>
         <div class="card-grid">
-          <article aria-labelledby="card-qa" style="grid-column: 1/-1">
+          <!-- Single card sourced from qa.md -->
+          <article aria-labelledby="card-qa" style="grid-column: 1 / -1">
             <h3 id="card-qa">QA, Cross-Browser, Final Polish</h3>
 
             <div class="section-block">
@@ -326,9 +340,12 @@
               <p style="margin-top: 0.5rem">추가 시나리오:</p>
               <ul>
                 <li>
-                  <code>#day9/foo</code> (invalid) &#8594; fix:
-                  <code>history.replaceState</code>로 URL 정규화, place segment
-                  없는 hash로 가면 detail hidden 처리.
+                  <code>#day9/foo</code> (invalid) &#8594; 이전엔 URL이
+                  <code>#day9/foo</code>로 유지되고 이전 day의 detail panel이
+                  stale 상태로 남았음. fix: <code>boot()</code> +
+                  <code>hashchange</code> 양쪽에서
+                  <code>history.replaceState</code> 로 URL을 정규화하고, place
+                  segment 없는 hash로 가면 detail을 hidden 처리.
                 </li>
                 <li>
                   Same-day stop switch (<code>#day3/osaka_castle</code> &#8594;
@@ -337,7 +354,7 @@
                 </li>
                 <li>
                   Mobile viewport (390&#215;844) &#8594; 탭바 표시, safe-area
-                  inset 적용.
+                  inset 적용 (헤드리스에선 0px이지만 CSS rule 자체는 합당).
                 </li>
               </ul>
               <p style="margin-top: 0.5rem">검증:</p>
@@ -369,21 +386,24 @@
                   URL 정규화 + 옵셔널 체이닝)
                 </li>
                 <li>
-                  <code>assets/app.js:365&#8211;400</code> (<code
-                    >hashchange</code
-                  >
-                  handler &#8212; 정규화 + day-only hash시 detail close)
+                  <code>assets/app.js:365&#8211;400</code>
+                  (<code>hashchange</code> handler &#8212; 정규화 + day-only
+                  hash시 detail close)
                 </li>
                 <li>
-                  <code>assets/styles.css:81&#8211;85</code> (<code
-                    >#mobile-tabs</code
-                  >
-                  safe-area-inset)
+                  <code>assets/styles.css:81&#8211;85</code>
+                  (<code>#mobile-tabs</code> safe-area-inset)
                 </li>
+                <li><code>docs/stage-4/qa.md</code></li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>42b3967</code> <code>adfbce5</code>
-                <code>522feda</code> <code>8d2e1a8</code> <code>d373c60</code>
+                Commits: <code>42b3967</code> fix(routing): normalize invalid
+                hash + close detail on day switch &#8212;
+                <code>adfbce5</code> fix(mobile): safe-area-inset-bottom on
+                #mobile-tabs &#8212; <code>522feda</code> test(qa): manual smoke
+                checklist &#8212; <code>8d2e1a8</code> docs: README &#8212;
+                <code>d373c60</code> refactor(routing): extract buildHash()
+                helper
               </p>
             </div>
 
@@ -481,7 +501,11 @@
 
               <h4 class="retro-sub">Codex PR Review (별도 단계)</h4>
               <p
-                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem"
+                style="
+                  font-size: 0.88rem;
+                  color: #374151;
+                  margin-bottom: 0.5rem;
+                "
               >
                 PR #1에 <code>@codex review</code> 트리거 후 3 라운드 (skill
                 cap) 진행, 총 16건 finding 모두 적용:
@@ -525,9 +549,10 @@
                   </tbody>
                 </table>
               </div>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
+              <p style="font-size: 0.82rem; color: #6b7280; margin-top: 0.5rem">
                 모두 mechanical/defensive fix로 ambiguity 없음 &#8594; 사용자
-                확인 없이 auto-apply. PR 본 후 cap 도달로 종료.
+                확인 없이 auto-apply. PR 본 후 cap 도달로 종료. 추가 round를
+                돌면 더 marginal defensive 케이스만 나올 것으로 예상.
               </p>
             </div>
           </article>
