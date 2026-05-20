@@ -269,7 +269,8 @@ function requestLocation() {
     alert("이 브라우저는 GPS를 지원하지 않습니다.");
     return;
   }
-  // Visual hint while we wait — keep simple, no DOM mutation needed here.
+  // Browser policy: Geolocation requires HTTPS or localhost. LAN-HTTP may
+  // surface the PERMISSION_DENIED error path (code 1) on some browsers.
   navigator.geolocation.getCurrentPosition(
     (pos) => {
       const { latitude, longitude, accuracy } = pos.coords;
@@ -661,6 +662,9 @@ function renderDetail(stop, place) {
     if (!Array.isArray(place.coords)) return;
     // Close the panel so the map is unobstructed, then fly in close.
     detail.classList.add("hidden");
+    // Same hash hygiene as #detail-close: drop the place segment so a
+    // reload doesn't reopen the panel that the user just dismissed.
+    history.replaceState(null, "", `#${state.activeDay}`);
     if (window.matchMedia("(max-width: 767px)").matches) {
       setMobileView("map");
     }
