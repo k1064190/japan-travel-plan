@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 1 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 13 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
     <style>
       *,
       *::before,
@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -205,8 +206,8 @@
     </header>
 
     <nav class="timeline" aria-label="Project stages">
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">1</div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -265,27 +266,30 @@
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node muted">13</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 1</h2>
+        <h2 id="stage-heading">Stage 13</h2>
         <div class="card-grid">
-          <!-- Single card sourced from skeleton.md -->
-          <article aria-labelledby="card-skeleton">
-            <h3 id="card-skeleton">Project Skeleton + Routing + End-to-End</h3>
+          <!-- Single card sourced from locate-and-gps.md -->
+          <article aria-labelledby="card-locate">
+            <h3 id="card-locate">
+              &#34;맵에서 보기&#34; Button + GPS Self-Location
+            </h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                설계 전체를 한 번에 만들기 전에 데이터 &#8594; 지도 &#8594;
-                사이드바 &#8594; 디테일 &#8594; 라우팅의 와이어링이 처음부터
-                끝까지 동작하는지 5개 sample 명소로 검증한다. 60개 데이터를 채운
-                뒤 와이어링이 안 맞으면 되돌리기 비싸기 때문.
+                사이드바&#183;맵 마커 클릭은 디테일 패널 + 맵 flyTo를 동시에
+                실행하지만 디테일 패널이 맵을 일부 가려서 "이 가게가 거기랑
+                정확히 어디 붙어있는지" 실제 위치를 보고 싶을 때 한 번 더 액션이
+                필요했다. 그리고 현장에서 자기 위치 기준으로 어떤 후보가
+                가까운지 직관적으로 보려면 GPS가 필요.
               </p>
             </div>
 
@@ -293,103 +297,185 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>index.html</code> 골격 + Leaflet 1.9.4 / Tailwind play
-                  CDN / Pretendard CDN 임포트
-                </li>
-                <li>
-                  <code>assets/styles.css</code> day 색상 CSS 변수 (<code
-                    >--day-1</code
+                  <strong
+                    >디테일 헤더에
+                    <code>&#128205; 맵에서 보기</code> 버튼</strong
                   >
-                  ~ <code>--day-5</code>) + numbered-marker 스타일 + 모바일
-                  media query
+                  &#8212; 클릭 시:
+                  <ul>
+                    <li>디테일 패널 close</li>
+                    <li>
+                      <code
+                        >state.map.flyTo(place.coords, 18, {duration:
+                        0.8})</code
+                      >
+                      &#8212; zoom 18로 가까이
+                    </li>
+                    <li>
+                      모바일이면 <code>setMobileView("map")</code>로 맵 탭 자동
+                      전환
+                    </li>
+                    <li>
+                      일정 stops와 alt 후보 모두 같은
+                      <code>renderDetail</code> 경로라 한 번에 둘 다 지원
+                    </li>
+                  </ul>
                 </li>
                 <li>
-                  <code>assets/app.js</code> 데이터 로더(error handling 포함),
-                  Leaflet 마커, 사이드바, 디테일 패널, hash router, XSS-safe
-                  <code>esc()</code>/<code>safeHref()</code> 헬퍼
+                  <strong
+                    >Leaflet 커스텀 컨트롤
+                    <code>&#128205; 내 위치 (GPS)</code></strong
+                  >
+                  &#8212; 맵 좌상단:
+                  <ul>
+                    <li>
+                      <code>navigator.geolocation.getCurrentPosition</code> +
+                      <code>enableHighAccuracy: true</code>
+                    </li>
+                    <li>
+                      성공 &#8594; 파란 점 마커(&#8220;내 위치&#8221; 툴팁) +
+                      정확도 circle 오버레이 + <code>flyTo</code> zoom 16
+                    </li>
+                    <li>
+                      권한 거부 / 신호 없음 / timeout 별로 한국어 에러 메시지
+                      (geolocation error code 1/2/3 매핑)
+                    </li>
+                    <li>
+                      재클릭 시 기존 마커 제거 후 새로 생성 &#8594; 중복 누적
+                      방지
+                    </li>
+                  </ul>
                 </li>
-                <li><code>data/itinerary.json</code> Day1 5개 stop</li>
                 <li>
-                  <code>data/places.json</code> 5개 sample (간사이공항,
-                  난바숙소, 구로몬, 덴덴타운, 도톤보리)
+                  CSS <code>.leaflet-control-locate</code> &#8212; 30&#215;30
+                  흰색 버튼, hover 시 slate-100, Leaflet 기본 컨트롤 스타일
+                  호환.
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>How</h4>
-              <p>
-                Vanilla ES6, 단일 모듈 (<code>assets/app.js</code>). 상태는
-                in-memory <code>state</code> 객체. 지도는
-                <code>fitBounds</code>로 day 전체 보이도록 시작, 클릭 시
-                <code>flyTo</code>. URL hash는 <code>#dayN/placeId</code> 포맷,
-                새로고침해도 상태 복원. <code>boot()</code>는 데이터 fetch 실패
-                시 한국어 에러 메시지를 표시.
+              <ul>
+                <li>
+                  <code>initMap()</code> 끝에
+                  <code>addLocateControl()</code> 호출 &#8212; Leaflet
+                  <code
+                    >L.Control.extend({ position: 'topleft', onAdd() {...}
+                    })</code
+                  >
+                  패턴으로 버튼을 컨트롤로 등록.
+                  <code>L.DomEvent.disableClickPropagation</code>로 맵 클릭과
+                  분리.
+                </li>
+                <li>
+                  <code>requestLocation()</code>은 별도 함수로 분리해 컨트롤
+                  onclick에 binding. <code>userLocationMarker</code> /
+                  <code>userLocationAccuracy</code> 모듈 상태로 두어 재클릭 시
+                  cleanup.
+                </li>
+                <li>
+                  디테일 헤더 버튼은 <code>renderDetail</code>의 innerHTML에
+                  <code>&lt;button id="detail-locate"&gt;</code> 추가 + 끝에
+                  click 핸들러 attach (기존 <code>#detail-close</code> 패턴
+                  동일).
+                </li>
+              </ul>
+              <p style="margin-top: 0.5rem">
+                브라우저 보안: HTTPS 또는 localhost 컨텍스트에서만 geolocation
+                동작 &#8212; 현재 사이트는 LAN HTTP라 일부 브라우저는 거부 가능.
+                <code>python3 -m http.server</code>는 localhost로 띄우는 게
+                안전. 데스크톱은 IP 기반 (수백 m 오차), 모바일은 GPS (수 m 정확)
+                &#8212; 현장에서는 사용자 폰으로 접속 가정.
               </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
-                <li><code>index.html</code> (스켈레톤 + CDN imports)</li>
                 <li>
-                  <code>assets/styles.css</code> (day 색상 CSS vars +
-                  numbered-marker + 모바일 media query)
+                  <code>assets/app.js:224&#8211;313</code> (initMap &#8594;
+                  addLocateControl, requestLocation, userLocationMarker/Accuracy
+                  state)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>DAY_COLORS</code> /
-                  <code>dayColor</code> / <code>esc</code> /
-                  <code>safeHref</code> helpers
+                  <code>assets/app.js:520&#8211;523</code> (detail 헤더
+                  <code>#detail-locate</code> 버튼)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>state</code>,
-                  <code>loadData</code>, <code>initMap</code>
+                  <code>assets/app.js:592&#8211;601</code> (detail-locate 클릭
+                  핸들러)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>renderDay</code>,
-                  <code>selectStop</code> (지도 + 마커)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>renderSidebar</code>,
-                  <code>renderDetail</code>, <code>renderProgressBar</code> (UI)
-                </li>
-                <li>
-                  <code>assets/app.js</code> &#8212; <code>parseHash</code>,
-                  <code>boot</code>, <code>hashchange</code> listener (라우팅)
-                </li>
-                <li>
-                  <code>data/places.json</code>,
-                  <code>data/itinerary.json</code> (5 places, Day1)
+                  <code>assets/styles.css:67&#8211;78</code>
+                  (<code>.leaflet-control-locate</code>)
                 </li>
               </ul>
+              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
+                Commit: <code>5ccca23</code> feat(map): &#39;맵에서 보기&#39;
+                button + GPS &#39;내 위치&#39; control
+              </p>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  잘 된 점: TDD 없이도 per-task spec+code 리뷰가 critical 이슈
-                  6개를 사전 차단 (loadData 에러 처리, XSS escaping, null 가드,
-                  DAY_COLORS 폴백, hashchange race, aria-label).
+                  Leaflet 커스텀 컨트롤 패턴 사용 &#8212; Leaflet 기본 zoom
+                  컨트롤 옆에 자연스럽게 자리. 별도 floating UI 안 만들고도 동일
+                  룩.
                 </li>
                 <li>
-                  잘 된 점: Tailwind play CDN + Pretendard로 빌드 단계 없이
-                  미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
+                  디테일 헤더 버튼이 alt 후보&#183;일정 stop 둘 다 지원 &#8212;
+                  <code>renderDetail</code> 단일 경로.
                 </li>
                 <li>
-                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
-                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
-                  hashchange 시 sidebar 동기화.
+                  권한 거부&#183;신호 없음&#183;timeout 모두 별도 한국어 에러로
+                  분기.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
+              <ul>
+                <li>
+                  <code>watchPosition</code>으로 이동 추적은 안 했음 &#8212;
+                  현장에서 걷는 동안 마커가 따라오면 좋겠지만 배터리&#183;메모리
+                  영향. 향후 토글 옵션으로 추가 가능.
                 </li>
                 <li>
-                  Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
-                  Stage 3.1에서 채움),
-                  <code>.numbered-marker.active</code> CSS는 dead code지만 Stage
-                  3.3에서 활성화 예정이므로 보존.
+                  위치 마커가 두 번 누르면 새로 떨어지지만 zoom-out 후 위치
+                  잃으면 사용자가 다시 찾기 어려움. "다시 내 위치로" 단축키 또는
+                  컨트롤 더블탭 동작 검토.
                 </li>
                 <li>
-                  Stage 2 readiness: Ready with caveats &#8212; Critical 가드
-                  픽스 후 진입.
+                  권한 거부 시 <code>alert()</code>으로 처리 &#8212; 더 매끄럽게
+                  토스트 또는 inline 메시지로 대체 가능.
+                </li>
+                <li>
+                  iOS Safari는 HTTPS만 허용. LAN HTTP에선 일부 사용자 거부될 수
+                  있음 &#8212; 사용자가 모바일에서 실제 테스트 시 알림 필요.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">검증</h4>
+              <ul>
+                <li>
+                  <code>npm run validate</code> &#8594; &#10003; 169 places, 5
+                  days validated
+                </li>
+                <li><code>npm test</code> &#8594; 11 pass</li>
+                <li>
+                  browse smoke: <code>.leaflet-control-locate</code> 컨트롤 +
+                  <code>#detail-locate</code> 버튼 모두 렌더링 &#8212;
+                  <code>#detail-locate</code> 클릭 &#8594; 디테일 패널 hidden,
+                  flyTo zoom 18 호출 검증 &#8212; console error 0
+                </li>
+                <li>
+                  GPS는 헤드리스 브라우저에서 권한 부여가 안 됨 &#8212; 실
+                  디바이스 (스마트폰 또는 데스크톱 직접 클릭)에서 사용자 검증
+                  필요.
                 </li>
               </ul>
             </div>

@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -264,24 +265,31 @@
         <div class="timeline-node muted">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 6</h2>
         <div class="card-grid">
+          <!-- Single card sourced from realtime-transit.md -->
           <article aria-labelledby="card-transit">
             <h3 id="card-transit">Realtime Transit Verification + Deep Link</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 1&#8211;5의 transit (도보·전철·버스) 시간은 사전 조사
-                기반의 추정치. 사용자가 현장에서 "이 시간이 맞나"라는 의문을
-                느꼈고, 특히 라피트·JR·미도스지선 같은 일본 대중교통 시간은
-                환승·정차·실시간 운행 상황에 따라 크게 변동. 매번 수동으로
-                Google Maps에 좌표 복붙하기보다, 각 stop에서 한 번 클릭으로
-                실시간 경로를 띄울 수 있으면 신뢰도 + 편의성이 둘 다 올라간다.
+                Stage 1&#8211;5의 transit (도보&#183;전철&#183;버스) 시간은 사전
+                조사 기반의 추정치. 사용자가 현장에서 "이 시간이 맞나" 라는
+                의문을 느꼈고, 특히 라피트&#183;JR&#183;미도스지선 같은 일본
+                대중교통 시간은 환승&#183;정차&#183;실시간 운행 상황에 따라 크게
+                변동. 매번 수동으로 Google Maps에 좌표 복붙하기보다, 각 stop에서
+                한 번 클릭으로 실시간 경로를 띄울 수 있으면 신뢰도 + 편의성이 둘
+                다 올라간다.
               </p>
             </div>
 
@@ -290,17 +298,17 @@
               <ul>
                 <li>
                   <strong>UI 딥링크</strong>: 디테일 패널의 transit 카드 안에
-                  <code>Google Maps에서 실제 경로·시간 보기 &#8594;</code> 버튼
-                  추가. 클릭 시 새 탭에 Google Maps directions 페이지가 열리고
-                  origin·destination·travelmode가 자동으로 채워져 실시간
-                  시간/요금/노선 안내가 표시됨.
+                  <code>Google Maps에서 실제 경로&#183;시간 보기 &#8594;</code>
+                  버튼 추가. 클릭 시 새 탭에 Google Maps directions 페이지가
+                  열리고 origin&#183;destination&#183;travelmode가 자동으로
+                  채워져 실시간 시간/요금/노선 안내가 표시됨.
                 </li>
                 <li>
                   <strong>도보 sanity check</strong>:
                   <code>scripts/verify-walk-times.mjs</code> &#8212; pure 도보
                   구간의 planned 시간을 haversine 거리 + 1.25 detour factor + 5
                   km/h 기준으로 sanity check. &#177;3분 AND &#177;50% 초과 시
-                  flag. <code>npm run verify-walk</code>로 호출.
+                  flag. <code>npm run verify-walk</code> 로 호출.
                 </li>
                 <li>
                   <strong>대중교통 검증 정책</strong>: 자동 검증은 미지원 (OSRM
@@ -314,37 +322,34 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                런타임에 좌표 lookup으로 URL을 생성 &#8212; 데이터 변경 없음,
-                places.json + itinerary.json 그대로 사용. 새 헬퍼 3개:
+                런타임에 좌표 lookup으로 URL을 생성 &#8212; 데이터 변경 없음. 새
+                헬퍼 3개:
               </p>
               <ul>
                 <li>
                   <code>transitModeToGoogleMode(mode)</code> &#8212; 한국어 mode
-                  문자열을 Google travelmode로 매핑.
-                  <code>도보 &#8594; walking</code>,
-                  <code>택시·자동차 &#8594; driving</code>, 그 외 &#8594;
-                  <code>transit</code>.
+                  문자열을 Google travelmode로 매핑. 도보 &#8594; walking,
+                  택시&#183;자동차 &#8594; driving, 그 외 &#8594; transit.
                 </li>
                 <li>
                   <code
                     >buildDirectionsUrl(originCoords, destCoords, mode)</code
                   >
-                  &#8212; Google Maps directions URL을 안전하게 생성 (좌표가
+                  &#8212; Google Maps directions URL 안전하게 생성 (좌표가
                   finite number가 아니면 null 반환).
                 </li>
                 <li>
                   <code>getTransitEndpoints(dayId, stopIndex)</code> &#8212;
-                  현재 stop의 transit_from_prev가 있을 때 origin/destination
-                  place 객체 반환. origin은 (1) 같은 day의 직전 stop, 없으면 (2)
-                  이전 day의 마지막 stop을 fallback으로 사용.
+                  origin은 (1) 같은 day의 직전 stop, 없으면 (2) 이전 day의
+                  마지막 stop fallback.
                 </li>
               </ul>
               <p style="margin-top: 0.5rem">
-                도보 검증 휴리스틱 채택 이유: OSRM 공개 데모는 foot profile이
-                driving으로 fallback (2026-05-18 확인), GraphHopper/ORS는 API
-                key 필요, Google Directions API는 유료. 도시 내 &#8804; 2 km
-                단순 도보는 haversine &#215; 1.25 detour &#247; 5 km/h가 실측과
-                &#177;2분 차이 &#8212; 큰 오류 잡아내기엔 충분.
+                도보 검증 휴리스틱 채택 이유: OSRM 공개 데모(foot profile이
+                driving으로 fallback, 34 km/h) &#8212; ORS/GraphHopper API key
+                필요 &#8212; Google Directions API 유료. 도시 내 &#8804; 2 km
+                단순 도보는 haversine &#215; 1.25 &#247; 5 km/h 가 실측과
+                &#177;2분 차이로 충분.
               </p>
             </div>
 
@@ -371,7 +376,9 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commits: <code>8335aba</code> <code>aeadd38</code>
+                Commits: <code>8335aba</code> feat(transit): Google Maps
+                deep-link button &#8212; <code>aeadd38</code> test(qa):
+                walking-time sanity check
               </p>
             </div>
 
@@ -385,8 +392,9 @@
                   생성. 회귀 위험 최소.
                 </li>
                 <li>
-                  Google Maps 딥링크는 API key·인증 없이 동작 + iOS/Android에서
-                  Maps 앱으로 자동 deep-link됨 (URL scheme 매칭).
+                  Google Maps 딥링크는 API key&#183;인증 없이 동작 +
+                  iOS/Android에서 Maps 앱으로 자동 deep-link됨 (URL scheme
+                  매칭).
                 </li>
                 <li>
                   도보 검증 휴리스틱이 OSRM/ORS/Google 모두 안 쓰고도 sanity
@@ -400,16 +408,16 @@
                 <li>
                   origin fallback이 prev-day 마지막 stop인데, 그 last stop이
                   dotonbori 같은 관광지면 호텔과 약간 어긋남. 정확하게 하려면
-                  itinerary stop에 <code>from_place_id</code> 명시 필드 추가가
-                  필요. 현재는 작은 오차라 trade-off로 유지.
+                  itinerary stop에 <code>from_place_id</code> 명시 필드 추가
+                  필요. 현재는 작은 오차라 trade-off로 그대로 유지.
                 </li>
                 <li>
                   Google Directions API key를 추후 사용한다면 사전 빌드 타임에
-                  verified_minutes·verified_url 정적 캐싱 가능.
+                  verified_minutes&#183;verified_url 정적 캐싱 가능.
                 </li>
                 <li>
-                  검증 휴리스틱이 hybrid mode (<code>JR환상선+도보</code>)를
-                  skip &#8212; 도보 비중이 큰 hybrid를 의심하면 별도 분석 필요.
+                  검증 휴리스틱이 hybrid mode를 skip &#8212; 도보 비중이 큰
+                  hybrid를 의심하면 별도 분석 필요.
                 </li>
               </ul>
 
@@ -429,14 +437,24 @@
                   보수 조정 후)
                 </li>
                 <li>
-                  browse smoke: day1/namba_hotel (라피트) &#8594;
-                  <code>&amp;travelmode=transit</code> &#10003;, day1/dotonbori
-                  (도보) &#8594; <code>&amp;travelmode=walking</code> &#10003;,
-                  console error 0
+                  browse smoke: day1/namba_hotel (라피트, transit) &#8594;
+                  <code>&amp;travelmode=transit</code> &#10003; &#8212;
+                  day1/dotonbori (도보) &#8594;
+                  <code>&amp;travelmode=walking</code> &#10003; &#8212; console
+                  error 0
                 </li>
               </ul>
 
               <h4 class="retro-sub">Codex PR Review (PR #3)</h4>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: #374151;
+                  margin-bottom: 0.5rem;
+                "
+              >
+                3 라운드 cap 안에 1 라운드로 끝. 3건 P2:
+              </p>
               <ul>
                 <li>
                   (P2) day-first stop origin이 prev-day last stop 좌표라 부정확
@@ -445,8 +463,8 @@
                   validator에 옵셔널 참조 무결성 검증 추가. (적용)
                 </li>
                 <li>
-                  (P2) intra-day stop transit_from_prev.from이 prev stop 이름과
-                  다른 경우 &#8594; <code>origin_place_id</code>로 해결.
+                  (P2) intra-day stop들도 transit_from_prev.from 이 prev stop
+                  이름과 다른 경우 부정확 &#8594; origin_place_id로 해결.
                 </li>
                 <li>
                   (P2) verify-walk가 flag 2건이라 exit 2로 CI 깨짐 &#8594; 두

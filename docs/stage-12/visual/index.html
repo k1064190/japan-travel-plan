@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -264,6 +265,11 @@
         <div class="timeline-node active" aria-current="step">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
     </nav>
 
     <main>
@@ -283,7 +289,7 @@
                 교체했지만, 일정 area별로 좀 더 다양성과 깊이가 필요했다. 특히
                 사용자가 "더 많이 찾아서 정리해줘"라고 명시. 카테고리 분포 (한
                 동네 라멘 한두 곳, 야끼니쿠 한 곳 정도)에서 명점 추가로 후보가
-                풍부해지면 사이드바·맵에서 사용자 선택지가 넓어진다.
+                풍부해지면 사이드바&#183;맵에서 사용자 선택지가 넓어진다.
               </p>
             </div>
 
@@ -295,9 +301,10 @@
                   WebFetched Tabelog 별점/후기 수 한 번에)
                   <ul>
                     <li>
-                      Day1 (11): 신사이바시·도톤보리·난바 &#8212; 치토세, 메오토
-                      젠자이, 하리주 스키야키, 혼케 오타코, 코가류, 호쿠쿄쿠세이
-                      오므라이스, 리로 커피, 긴큐에몬 도톤보리, 쿠쿠루 본점 등
+                      Day1 (11): 신사이바시&#183;도톤보리&#183;난바 &#8212;
+                      치토세, 메오토 젠자이, 하리주 스키야키, 혼케 오타코,
+                      코가류, 호쿠쿄쿠세이 오므라이스, 리로 커피, 긴큐에몬
+                      도톤보리, 쿠쿠루 본점 등
                     </li>
                     <li>
                       Day2 (12): 교토 &#8212; 이노다 커피, 스마트 커피, 잇포도
@@ -312,19 +319,19 @@
                       나카무라야 고로케 등
                     </li>
                     <li>
-                      Day4 (6): USJ·시티워크·덴포잔 &#8212; 버바 검프, Top of
-                      Universal 32F 뷔페, 쿠쿠루 시티워크, 자유켄 텐포잔,
+                      Day4 (6): USJ&#183;시티워크&#183;덴포잔 &#8212; 버바 검프,
+                      Top of Universal 32F 뷔페, 쿠쿠루 시티워크, 자유켄 텐포잔,
                       아이즈야 (원조 타코야키), 코토네 도미다시 라멘
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <strong>별점·후기 모두 Tabelog WebFetch 실측</strong> (추정치
-                  없음)
+                  <strong>별점&#183;후기 모두 Tabelog WebFetch 실측</strong>
+                  (추정치 없음)
                 </li>
                 <li>
-                  <strong>dedupe</strong>: Day1·Day3가 치토세 본점을 다른 id로
-                  둘 다 추가 &#8594; Day1 entry 유지 (좌표·area 일치)
+                  <strong>dedupe</strong>: Day1&#183;Day3가 치토세 본점을 다른
+                  id로 둘 다 추가 &#8594; Day1 entry 유지 (좌표&#183;area 일치)
                 </li>
                 <li>
                   1건 <code>http</code>&#8594;<code>https</code> URL 자동
@@ -352,8 +359,9 @@
                   중복 회피
                 </li>
                 <li>
-                  추천 카테고리 (라멘·야끼니쿠·우동·디저트·카페·이자카야 등)에서
-                  새 식당 8&#8211;12개 후보
+                  추천 카테고리
+                  (라멘&#183;야끼니쿠&#183;우동&#183;디저트&#183;카페&#183;이자카야
+                  등)에서 새 식당 8&#8211;12개 후보
                 </li>
                 <li>
                   각 후보에 대해 WebSearch <code>店名 tabelog</code> &#8594;
@@ -383,8 +391,7 @@
                   <code>/tmp/more-restaurants/day{1,2,3,4}.json</code>
                 </li>
                 <li>
-                  머지 스크립트:
-                  <code>/tmp/merge-more-restaurants.mjs</code>
+                  머지 스크립트: <code>/tmp/merge-more-restaurants.mjs</code>
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
@@ -400,12 +407,13 @@
               <ul>
                 <li>
                   코드 변경 0 &#8212; Stage 8&#8211;11에서 만든 alt
-                  마커·사이드바·정렬·필터·실측 별점 인프라 그대로 활용. 데이터
-                  추가만으로 즉시 UI에 반영됨.
+                  마커&#183;사이드바&#183;정렬&#183;필터&#183;실측 별점 인프라
+                  그대로 활용. 데이터 추가만으로 즉시 UI에 반영됨.
                 </li>
                 <li>
-                  WebFetch 결과로 정확한 별점·후기 수 한 번에 수집 &#8212; Stage
-                  9&#8594;Stage 11처럼 두 번 라운드 안 돌고 한 단계로 완결.
+                  WebFetch 결과로 정확한 별점&#183;후기 수 한 번에 수집 &#8212;
+                  Stage 9&#8594;Stage 11처럼 두 번 라운드 안 돌고 한 단계로
+                  완결.
                 </li>
                 <li>
                   각 day area별 카테고리 다양성 향상:
@@ -416,20 +424,21 @@
                       여행자 인기 4대장
                     </li>
                     <li>
-                      Day2: 잇포도·이노다·스마트커피 같은 교토 노포 킷사텐 추가
+                      Day2: 잇포도&#183;이노다&#183;스마트커피 같은 교토 노포
+                      킷사텐 추가
                     </li>
                     <li>
                       Day3: 무기토멘스케 (Tabelog 라멘 백명점 3년 연속,
-                      3.84/2325)·키지 우메다 같은 명점
+                      3.84/2325)&#183;키지 우메다 같은 명점
                     </li>
                     <li>
-                      Day4: 시티워크 4F·5F·32F + 텐포잔 안 다른 가게로 USJ 전후
-                      옵션 확대
+                      Day4: 시티워크 4F&#183;5F&#183;32F + 텐포잔 안 다른 가게로
+                      USJ 전후 옵션 확대
                     </li>
                   </ul>
                 </li>
                 <li>
-                  Day1·Day3 subagent가 치토세 본점을 양쪽에서 발견했으나
+                  Day1&#183;Day3 subagent가 치토세 본점을 양쪽에서 발견했으나
                   dedupe로 깨끗하게 해결.
                 </li>
               </ul>
@@ -448,8 +457,8 @@
                   &#215; log(review_count))을 옵션으로.
                 </li>
                 <li>
-                  일부 가게가 폐점·이전한 경우가 있을 수 있음 &#8212; 정기 fetch
-                  재실행으로 갱신 필요.
+                  일부 가게가 폐점&#183;이전한 경우가 있을 수 있음 &#8212; 정기
+                  fetch 재실행으로 갱신 필요.
                 </li>
               </ul>
 
@@ -470,15 +479,9 @@
                 <li>
                   browse smoke:
                   <ul>
-                    <li>
-                      Day1 sidebar 54개 (이전 40 + 새 14: 12개 추가, 일부 area
-                      outside)
-                    </li>
+                    <li>Day1 sidebar 54개 (이전 40 + 새 14)</li>
                     <li>Day2 sidebar 87개 (이전 65 + 22)</li>
-                    <li>
-                      Day3 sidebar 75개 (이전 26 + 49 &#8212; 먼 후보 토글
-                      off에서도 많아짐)
-                    </li>
+                    <li>Day3 sidebar 75개 (이전 26 + 49)</li>
                     <li>Day4 sidebar 57개 (이전 26 + 31)</li>
                     <li>Day5 sidebar 42개</li>
                     <li>

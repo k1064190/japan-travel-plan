@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -264,12 +265,16 @@
         <div class="timeline-node muted">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 11</h2>
-
         <div class="card-grid">
           <!-- Single card sourced from real-ratings.md -->
           <article aria-labelledby="card-real-ratings">
@@ -278,12 +283,12 @@
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 9에서 알트 식당과 일부 main 명소 맛집에 별점·후기 수를
-                박았지만 그 값은 subagent의 검색·추정치. UI에
+                Stage 9에서 알트 식당과 일부 main 명소 맛집에 별점&#183;후기
+                수를 박았지만 그 값은 subagent의 검색&#183;추정치. UI에
                 <code>(Tabelog)</code>이라고 출처 표기를 했음에도 실제 Tabelog
                 페이지를 직접 본 게 아니었음. 사용자가 정렬해서 보는 순간
-                신뢰도가 떨어지는 약점. Stage 10에서 사이드바 정렬·필터까지 끝낸
-                상태라 별점의 정확성이 가장 큰 남은 일.
+                신뢰도가 떨어지는 약점. Stage 10에서 사이드바 정렬&#183;필터까지
+                끝낸 상태라 별점의 정확성이 가장 큰 남은 일.
               </p>
             </div>
 
@@ -293,8 +298,8 @@
                 <li>
                   <strong>데이터 갱신</strong> &#8212; 4 background subagent가
                   WebSearch로 정확한 Tabelog URL 찾고 WebFetch로 페이지 내용
-                  직접 fetch해 별점·후기 수 추출. 총 61 entries 실측 데이터로
-                  교체:
+                  직접 fetch해 별점&#183;후기 수 추출. 총 61 entries 실측
+                  데이터로 교체:
                   <ul>
                     <li>34 alt entries</li>
                     <li>27 main 명소 <code>restaurants[]</code> 안 식당</li>
@@ -325,42 +330,18 @@
 
             <div class="section-block">
               <h4>How</h4>
-              <ul>
-                <li>
-                  새 branch <code>feature/real-ratings</code>, 4 background
-                  subagent 병렬 dispatch (Day1&#8211;4 area별)
-                </li>
-                <li>
-                  각 subagent: places.json의 식당 entry 목록을 받아 &#8594;
-                  정확한 Tabelog URL 검색 &#8594; WebFetch로 페이지 fetch
-                  &#8594; <code>Extract rating (3.xx) and review_count</code>
-                  prompt로 별점/후기 수만 추출
-                </li>
-                <li>
-                  실패 entry는 <code>failed[]</code> 배열에 기록 + Tabelog URL이
-                  잘못된 경우 patch JSON의 <code>note</code> 필드에 정확한 URL
-                  기록
-                </li>
-                <li>
-                  메인이 <code>/tmp/merge-ratings.mjs</code> 한 번 실행해
-                  places.json에 일괄 적용 &#8212; alt는 <code>rating</code> 필드
-                  갱신, main 명소 <code>restaurants[]</code>는 name으로 매칭해서
-                  객체에 rating 필드 추가
-                </li>
-              </ul>
-              <p style="margin-top: 0.5rem">검증:</p>
-              <ul>
-                <li>
-                  <code>validate-data.mjs</code> 통과 &#8212; rating field
-                  schema (number 0&#8211;5, integer review_count, non-empty
-                  source) 검증 그대로 적용
-                </li>
-                <li><code>verify-walk-times.mjs</code> 통과</li>
-                <li>
-                  browse smoke로 사이드바에 새 별점 표시 +
-                  <code>omen_kodaiji</code> [폐점] 라벨 확인
-                </li>
-              </ul>
+              <p>
+                새 branch <code>feature/real-ratings</code>, 4 background
+                subagent 병렬 dispatch (Day1&#8211;4 area별). 각 subagent:
+                places.json의 식당 entry 목록을 받아 &#8594; 정확한 Tabelog URL
+                검색 &#8594; WebFetch로 페이지 fetch &#8594;
+                <code>Extract rating (3.xx) and review_count</code> prompt로
+                별점/후기 수만 추출. 실패 entry는 <code>failed[]</code> 배열에
+                기록. 메인이 <code>/tmp/merge-ratings.mjs</code> 한 번 실행해
+                places.json에 일괄 적용 &#8212; alt는 <code>rating</code> 필드
+                갱신, main 명소 restaurants[]는 name으로 매칭해서 객체에 rating
+                필드 추가.
+              </p>
             </div>
 
             <div class="section-block">
@@ -372,8 +353,8 @@
                 </li>
                 <li>
                   패치 입력:
-                  <code>/tmp/rating-patches/day{1,2,3,4}.json</code>
-                  (subagent 산출, repo에 commit 안 됨)
+                  <code>/tmp/rating-patches/day{1,2,3,4}.json</code> (subagent
+                  산출, repo에 commit 안 됨)
                 </li>
                 <li>
                   머지 스크립트: <code>/tmp/merge-ratings.mjs</code> (이번 한 번
@@ -381,8 +362,8 @@
                 </li>
               </ul>
               <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                관련 commit: <code>194f644</code> data: replace estimated
-                ratings with WebFetch'd Tabelog actuals
+                Commit: <code>194f644</code> data: replace estimated ratings
+                with WebFetch'd Tabelog actuals
               </p>
             </div>
 
@@ -398,18 +379,11 @@
                 </li>
                 <li>
                   추정치와 실측의 차이가 의미 있는 entry 다수 발견:
-                  <ul>
-                    <li>
-                      <code>katsukura_shijo</code> 3.55 &#8594; 3.21 (큰 폭)
-                    </li>
-                    <li><code>kamukura_dotonbori</code> 3.52 &#8594; 3.20</li>
-                    <li><code>mizuno_okonomiyaki</code> 3.71 &#8594; 3.57</li>
-                    <li>
-                      <code>yamamoto_menzo</code> 3.92 &#8594; 3.98 (반대로
-                      실측이 더 높음)
-                    </li>
-                    <li><code>daiichi_asahi</code> 후기 3,200 &#8594; 6,583</li>
-                  </ul>
+                  <code>katsukura_shijo</code> 3.55&#8594;3.21 /
+                  <code>kamukura_dotonbori</code> 3.52&#8594;3.20 /
+                  <code>mizuno_okonomiyaki</code> 3.71&#8594;3.57 /
+                  <code>yamamoto_menzo</code> 3.92&#8594;3.98 (반대로 실측이 더
+                  높음) / <code>daiichi_asahi</code> 후기 3,200&#8594;6,583.
                 </li>
                 <li>
                   Tabelog <code>閉店</code> 라벨까지 검출 &#8212;
@@ -425,30 +399,21 @@
               <h4 class="retro-sub">다음에 가져갈 것</h4>
               <ul>
                 <li>
-                  19 entries fetch 실패 &#8212; 대부분 (1) 백화점 식품관·dining
-                  complex (단일 Tabelog entity 없음), (2) 시장 노점 (개별
-                  Tabelog 페이지 없음), (3) 특정 지점이 Tabelog 미등록. 이건
-                  데이터 구조 한계가 아니라 Tabelog 커버리지 한계. 해당 entry는
-                  추정치도 의미 없으므로 별점 미설정 그대로.
+                  19 entries fetch 실패 &#8212; 대부분 (1) 백화점
+                  식품관&#183;dining complex (단일 Tabelog entity 없음), (2)
+                  시장 노점 (개별 Tabelog 페이지 없음), (3) 특정 지점이 Tabelog
+                  미등록. Tabelog 커버리지 한계.
                 </li>
                 <li>
                   subagent들이 Tabelog URL이 잘못 가리키는 케이스 다수 발견
-                  (지오 코드만 같은 다른 가게로 매핑). 정확한 URL은 patch JSON의
-                  <code>note</code> 필드에 기록됐지만
-                  <code>data/places.json</code>의
-                  <code>sources[]</code>·<code>curated_links[]</code>에는 아직
-                  반영 안 됨. 별도 cleanup 작업.
+                  &#8212; 정확한 URL은 patch JSON의 <code>note</code> 필드에
+                  기록됐지만 <code>data/places.json</code>의
+                  <code>sources[]</code>&#183;<code>curated_links[]</code>에는
+                  아직 미반영.
                 </li>
                 <li>
-                  별점은 fetch 시점(2026-05-19) 기준이라 한 달 후엔 변동. 정기
-                  재실행이 필요. cron으로 자동화 가능 (그러나 Anthropic API 한도
-                  고려 필요).
-                </li>
-                <li>
-                  USJ 내부 5개 식당이 의외로 모두 Tabelog 페이지 존재 &#8212;
-                  main의 큰 dining complex (오사카죠 미라이자, 조 테라스 등)는
-                  entity 아님이라 fetch 불가. 이 경계는 데이터로 표현하기 모호
-                  &#8212; "dining complex" 태그 시각 표시 도입 검토.
+                  별점은 fetch 시점(2026-05-19) 기준이라 한 달 후엔 변동.
+                  cron으로 자동화 가능 (Anthropic API 한도 고려 필요).
                 </li>
               </ul>
 
@@ -459,39 +424,17 @@
                   131 places, 5 days validated
                 </li>
                 <li>
-                  <code>node --test tests/validate-data.test.mjs</code>
-                  &#8594; 11 pass
+                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
+                  11 pass
                 </li>
                 <li>
                   <code>node scripts/verify-walk-times.mjs</code> &#8594; 도보
                   segment all within tolerance
                 </li>
                 <li>
-                  browse smoke: Day1 사이드바 top 5 카드 별점 변경 확인 (Tabelog
-                  실측값)
-                </li>
-                <li>Day2 야마모토 멘조 &#9733; 3.98 (실측 &#8593;)</li>
-                <li>
-                  osaka_castle 디테일 패널 &#8212; main restaurants[] 별점은 다
-                  dining complex라 미설정 그대로 (fetch 실패)
-                </li>
-                <li>console error 0</li>
-              </ul>
-
-              <h4 class="retro-sub">한계</h4>
-              <ul>
-                <li>
-                  Tabelog 별점은 <code>fetched_at</code> 시점값. 한 달 이상
-                  지나면 약간 변동. 재실행으로 갱신 가능.
-                </li>
-                <li>
-                  일부 한국 사용자가 보기엔 Tabelog 점수 체계 (3.0&#8211;4.0
-                  분포)가 낮아 보일 수 있음 &#8212; <code>(Tabelog)</code> 출처
-                  표기로 맥락 제공.
-                </li>
-                <li>
-                  사용 패턴이 한국어 후기 위주라면 Naver Place 또는 Google Maps
-                  한국어 후기 점수도 별도로 표시하는 향후 작업이 가치 있음.
+                  browse smoke: Day1 사이드바 top 5 카드 별점 변경 확인 &#8212;
+                  Day2 야마모토 멘조 &#9733; 3.98 (실측 &#8593;) &#8212;
+                  omen_kodaiji [폐점] 라벨 표시 &#10003; &#8212; console error 0
                 </li>
               </ul>
             </div>
