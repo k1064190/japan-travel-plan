@@ -65,6 +65,20 @@
   z-index: 999;
 }
 
+.leaflet-control-locate {
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+}
+.leaflet-control-locate:hover {
+  background: #f1f5f9;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 14px;
