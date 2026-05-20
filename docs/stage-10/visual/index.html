@@ -175,28 +175,6 @@
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
       }
-      .table-wrapper {
-        overflow-x: auto;
-        margin-top: 0.5rem;
-      }
-      .table-wrapper table {
-        border-collapse: collapse;
-        width: 100%;
-        font-size: 0.85rem;
-        color: #374151;
-      }
-      .table-wrapper th,
-      .table-wrapper td {
-        border: 1px solid #e5e7eb;
-        padding: 0.35rem 0.6rem;
-        text-align: left;
-        vertical-align: top;
-      }
-      .table-wrapper th {
-        background: #f9fafb;
-        font-weight: 600;
-        color: #111827;
-      }
     </style>
   </head>
   <body>
@@ -270,13 +248,17 @@
         <div class="timeline-node muted">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">14</div>
+        <span class="timeline-label">Stage 14</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 10</h2>
         <div class="card-grid">
-          <!-- Single card sourced from sidebar-candidates.md -->
           <article aria-labelledby="card-sidebar">
             <h3 id="card-sidebar">Sidebar Candidate Cards + Filter Toggles</h3>
 
@@ -288,8 +270,8 @@
                 정확히 누르기 어렵고 별점을 한눈에 정렬해서 보기도 불편.
                 사이드바에 일정 stops 아래로 카드 형태로 노출하면 (1) 별점
                 내림차순으로 어디가 가장 인기 있는지 즉시 파악, (2) 큰 터치
-                타깃, (3) "맛집만"&#183;"먼 후보도" 같은 필터를 켜서 의도한
-                후보만 좁혀볼 수 있다.
+                타깃, (3) &#8220;맛집만&#8221;&#183;&#8220;먼 후보도&#8221; 같은
+                필터를 켜서 의도한 후보만 좁혀볼 수 있다.
               </p>
             </div>
 
@@ -297,8 +279,9 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong>사이드바 "주변 후보" 섹션</strong> &#8212; 일정 stops
-                  목록 아래에 추가. 활성 day의 alt 후보를 카드로 나열.
+                  <strong>사이드바 &#8220;주변 후보&#8221; 섹션</strong> &#8212;
+                  일정 stops 목록 아래에 추가. 활성 day의 alt 후보를 카드로
+                  나열.
                   <ul>
                     <li>
                       별점 내림차순 정렬 (rating 없는 entry는 맨 뒤 + 한국어
@@ -323,9 +306,7 @@
                     <li>
                       <strong>먼 후보도 보기</strong>: 반경을
                       <code>ALT_PROXIMITY_KM</code> (2 km) &#8594;
-                      <code>ALT_FAR_KM</code> (8 km)으로 확장. 츠루하시
-                      코리아타운 같이 멀지만 의도적으로 추가된 entry를
-                      사이드바&#183;맵 둘 다에 노출.
+                      <code>ALT_FAR_KM</code> (8 km)으로 확장
                     </li>
                   </ul>
                 </li>
@@ -408,13 +389,12 @@
                 </li>
                 <li>
                   <code>isFoodPlace</code> 휴리스틱이 단순한데도 잘 동작 &#8212;
-                  rating 있는 entry는 거의 식당이라 양호한 신호. 음식 키워드
-                  정규식이 backstop.
+                  rating 있는 entry는 거의 식당이라 양호한 신호.
                 </li>
                 <li>
                   별점 내림차순 정렬 후 첫 카드가 가장 신뢰도 높은 곳 &#8212;
                   Day1에선 야끼니쿠 M (Tabelog 3.78), Day2에선 야마모토 멘조
-                  (3.92) 같은 식.
+                  (3.92).
                 </li>
               </ul>
 
@@ -427,11 +407,11 @@
                 </li>
                 <li>
                   사이드바 후보가 30개+ 되면 스크롤 길어짐 &#8212; 가상화 또는
-                  "더 보기" 페이지네이션 도입 검토.
+                  &#8220;더 보기&#8221; 페이지네이션 도입 검토.
                 </li>
                 <li>
                   거리 표시 &#8212; 현재 활성 stop에서 몇 km 떨어졌는지 카드에
-                  표시하면 "지금 위치에서 가까운 후보" 판별 빠름.
+                  표시하면 판별 빠름.
                 </li>
               </ul>
 
@@ -447,21 +427,18 @@
                 </li>
                 <li>
                   browse smoke: Day1 sidebar 후보 40개, 별점 내림차순 (Tabelog
-                  3.78 &#8594; 3.71 &#8594; ...) &#8212; 맛집만 토글: 40 &#8594;
-                  21 &#8212; Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시
-                  코리아타운 노출 &#10003; &#8212; 맛집만 + 먼 후보 동시: 73개
-                  &#8212; console error 0
+                  3.78 &#8594; 3.71 &#8594; ...). 맛집만 토글: 40 &#8594; 21.
+                  Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시 코리아타운 노출
+                  &#10003;. 맛집만 + 먼 후보 동시: 73개. console error 0.
                 </li>
               </ul>
 
               <h4 class="retro-sub">한계 (이연)</h4>
-              <p style="font-size: 0.88rem; color: #374151">
-                Phase C &#8212; Tabelog/Google
-                <strong>실제 별점 fetch</strong>는 이 세션에서 시도했으나
+              <p style="font-size: 0.9rem; color: #374151">
+                Phase C &#8212; Tabelog/Google 실제 별점 fetch는 이 세션에서
                 Anthropic API 사용량 한도로 dispatch된 subagent 두 개가 즉시
-                종료. 한도 풀린 뒤 별도 세션에서 동일 prompt로 재실행 가능. 현재
-                별점 데이터는 subagent의 검색 추정치이며 fetch 시점&#183;실제
-                페이지값과 차이가 있을 수 있음.
+                종료. 한도 풀린 뒤 별도 세션에서 재실행 가능. (Stage 11에서
+                완료.)
               </p>
             </div>
           </article>

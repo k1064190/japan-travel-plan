@@ -237,6 +237,7 @@ function initMap() {
   state.routeLayer = L.layerGroup().addTo(state.map);
   state.altLayer = L.layerGroup().addTo(state.map);
   state.markerLayer = L.layerGroup().addTo(state.map);
+  state.highlightLayer = L.layerGroup().addTo(state.map);
 
   addLocateControl();
 }
@@ -308,6 +309,42 @@ function requestLocation() {
   );
 }
 
+/** Drop a short-lived expanding ring at the given coords so the user can
+ *  spot the exact pin after a flyTo. Auto-removes when the CSS animation
+ *  finishes (~1.4s). Day-color borders so the ring matches the marker.
+ *  Markers go into state.highlightLayer so renderDay can clear them when
+ *  the user switches days before the timer fires. */
+function highlightLocation(coords, color) {
+  if (!Array.isArray(coords) || !state.highlightLayer) return;
+  const ringColor = color || dayColor(state.activeDay);
+  const icon = L.divIcon({
+    className: "",
+    html: `<div class="highlight-ring" style="border-color:${ringColor}"></div>`,
+    iconSize: [60, 60],
+    iconAnchor: [30, 30],
+  });
+  const marker = L.marker(coords, {
+    icon,
+    interactive: false,
+    keyboard: false,
+    zIndexOffset: 2000,
+  }).addTo(state.highlightLayer);
+  setTimeout(() => {
+    if (state.highlightLayer && state.highlightLayer.hasLayer(marker)) {
+      state.highlightLayer.removeLayer(marker);
+    }
+  }, 1500);
+}
+
+let pendingLocateBurst = null;
+function scheduleLocateBurst(coords, delayMs) {
+  if (pendingLocateBurst) clearTimeout(pendingLocateBurst);
+  pendingLocateBurst = setTimeout(() => {
+    pendingLocateBurst = null;
+    highlightLocation(coords);
+  }, delayMs);
+}
+
 function renderDay(dayId) {
   const day = state.itinerary.days.find((d) => d.id === dayId);
   if (!day) return;
@@ -316,6 +353,11 @@ function renderDay(dayId) {
   state.markerLayer.clearLayers();
   state.altLayer.clearLayers();
   state.routeLayer.clearLayers();
+  state.highlightLayer.clearLayers();
+  if (pendingLocateBurst) {
+    clearTimeout(pendingLocateBurst);
+    pendingLocateBurst = null;
+  }
 
   const color = dayColor(dayId);
   const coords = [];
@@ -375,6 +417,7 @@ function selectAlt(placeId) {
   const place = state.places[placeId];
   if (!place) return;
   state.map.flyTo(place.coords, 16, { duration: 0.8 });
+  highlightLocation(place.coords);
   // Render the detail panel with a minimal "stop" — no time/duration/transit
   renderDetail(
     {
@@ -413,6 +456,7 @@ function selectStop(dayId, stopIndex) {
   const place = state.places[stop.place_id];
   if (!place) return;
   state.map.flyTo(place.coords, 16, { duration: 0.8 });
+  highlightLocation(place.coords);
   location.hash = `#${dayId}/${stop.place_id}`;
   renderSidebar();
   renderDetail(stop, place);
@@ -669,6 +713,12 @@ function renderDetail(stop, place) {
       setMobileView("map");
     }
     state.map.flyTo(place.coords, 18, { duration: 0.8 });
+    // Burst the highlight ring slightly after flyTo so the user sees it
+    // land — flyTo with duration 0.8s; trigger the ring at ~600ms so the
+    // 1.4s animation peaks roughly when the camera settles. Use
+    // scheduleLocateBurst so a quick day-change between click and burst
+    // cancels the stale ring instead of dropping it on the wrong pin.
+    scheduleLocateBurst(place.coords, 600);
   });
 }
 

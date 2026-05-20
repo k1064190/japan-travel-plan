@@ -148,12 +148,13 @@
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul {
+      .section-block ul,
+      .section-block ol {
         padding-left: 1.2rem;
         font-size: 0.9rem;
         color: #374151;
       }
-      .section-block ul li {
+      .section-block li {
         margin-bottom: 0.2rem;
       }
       .section-block code {
@@ -173,28 +174,6 @@
         letter-spacing: 0;
         margin-top: 0.75rem;
         margin-bottom: 0.35rem;
-      }
-      .table-wrapper {
-        overflow-x: auto;
-        margin-top: 0.5rem;
-      }
-      .table-wrapper table {
-        border-collapse: collapse;
-        width: 100%;
-        font-size: 0.85rem;
-        color: #374151;
-      }
-      .table-wrapper th,
-      .table-wrapper td {
-        border: 1px solid #e5e7eb;
-        padding: 0.35rem 0.6rem;
-        text-align: left;
-        vertical-align: top;
-      }
-      .table-wrapper th {
-        background: #f9fafb;
-        font-weight: 600;
-        color: #111827;
       }
     </style>
   </head>
@@ -269,13 +248,17 @@
         <div class="timeline-node muted">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">14</div>
+        <span class="timeline-label">Stage 14</span>
+      </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 3</h2>
         <div class="card-grid">
-          <!-- Single card sourced from mobile-polish.md -->
           <article aria-labelledby="card-mobile">
             <h3 id="card-mobile">Mobile Responsiveness + Detail Polish</h3>
 
@@ -376,36 +359,30 @@
 
             <div class="section-block">
               <h4>Retrospective</h4>
-
-              <h4 class="retro-sub">잘된 점</h4>
               <ul>
                 <li>
-                  데스크톱 레이아웃 손대지 않고 <code>md:hidden</code> Tailwind
-                  클래스 + <code>@media (max-width: 767px)</code> CSS로 모바일
-                  전용 UX 추가. 분기점이 명확.
+                  잘 된 점: 데스크톱 레이아웃 손대지 않고
+                  <code>md:hidden</code> Tailwind 클래스 +
+                  <code>@media (max-width: 767px)</code> CSS로 모바일 전용 UX
+                  추가. 분기점이 명확.
                 </li>
                 <li>
-                  <code>--active-day</code> CSS 변수 1개로 mobile tab 아이콘 색
-                  + 마커 pulse 색을 한 번에 동기화. JS&#8211;CSS 사이 단일
+                  잘 된 점: <code>--active-day</code> CSS 변수 1개로 mobile tab
+                  아이콘 색 + 마커 pulse 색을 한 번에 동기화. JS-CSS 사이 단일
                   source of truth.
                 </li>
                 <li>
-                  <code>selectStop</code>의 marker active toggle 패턴이 정확
-                  &#8212; <code>eachLayer</code> 클린업 + 인덱스 기반 부착.
-                  <code>clearLayers()</code> 시점에 자동 정리됨.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">다음에 가져갈 것</h4>
-              <ul>
-                <li>
-                  marker pulse animation이 무한 반복이라 배터리 영향 미미하지만
-                  있음 &#8212; 1.4s 주기는 충분히 잔잔. UX 우선.
+                  잘 된 점: <code>selectStop</code>의 marker active toggle
+                  패턴이 정확 &#8212; <code>eachLayer</code> 클린업 + 인덱스
+                  기반 부착. <code>clearLayers()</code> 시점에 자동 정리됨.
                 </li>
                 <li>
-                  모바일 디테일이 풀스크린이지만 하단
-                  <code>bottom: 3.5rem</code>으로 탭바 영역 비워둠. 닫기 버튼은
-                  우상단 + 탭바로도 종료 가능.
+                  조심한 점: marker pulse animation이 무한 반복이라 배터리 영향
+                  미미하지만 있음 &#8212; 1.4s 주기는 충분히 잔잔. UX 우선.
+                </li>
+                <li>
+                  조심한 점: 모바일 디테일이 풀스크린이지만 하단
+                  <code>bottom: 3.5rem</code>으로 탭바 영역 비워둠.
                 </li>
                 <li>
                   이연: Stage 4 &#8212; iOS safe-area 처리
