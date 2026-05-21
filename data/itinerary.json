@@ -28,7 +28,8 @@
             "to": "수가타 호텔 (신사이바시)",
             "minutes": 42,
             "cost_jpy": 1490,
-            "note": "라피트 34분 + 난바역→신사이바시 도보 약 8분"
+            "note": "라피트 34분 + 난바역→신사이바시 도보 약 8분",
+            "booking_url": "https://www.kkday.com/ko/product/19691-nankai-rapit-airport-express-kix-to-osaka"
           },
           "duration_minutes": 30
         },
@@ -320,7 +321,8 @@
             "to": "간사이공항",
             "minutes": 50,
             "cost_jpy": 1730,
-            "note": "호텔→도부쓰엔마에 도보 5분 + 미도스지선 난바 4분 + 환승 + 라피트 34분"
+            "note": "호텔→도부쓰엔마에 도보 5분 + 미도스지선 난바 4분 + 환승 + 라피트 34분",
+            "booking_url": "https://www.kkday.com/ko/product/19691-nankai-rapit-airport-express-kix-to-osaka"
           },
           "duration_minutes": 180
         }
