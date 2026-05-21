@@ -876,8 +876,7 @@ function collectReservationItems() {
           required: true,
           advance_days: 1,
           ticket_price_jpy: Number.isFinite(t.cost_jpy) ? t.cost_jpy : 0,
-          notes:
-            t.note || `${day.id.toUpperCase()} ${esc(t.mode || "")}`.trim(),
+          notes: t.note || `${day.id.toUpperCase()} ${t.mode || ""}`.trim(),
         });
       }
     }
