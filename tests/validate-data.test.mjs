@@ -104,6 +104,56 @@ describe("validate(places, itinerary)", () => {
     assert.ok(r.errors.some((e) => e.includes("invalid category")));
   });
 
+  it("passes when place.booking is a valid object", () => {
+    const withBooking = {
+      ...goodPlace,
+      booking: {
+        required: true,
+        url: "https://www.kkday.com/ko/product/12345",
+        advance_days: 3,
+        ticket_price_jpy: 8600,
+        notes: "n",
+      },
+    };
+    const r = validate({ p1: withBooking }, goodItinerary);
+    assert.deepEqual(r.errors, []);
+  });
+
+  it("fails when place.booking.url is not https://", () => {
+    const bad = {
+      ...goodPlace,
+      booking: { required: true, url: "http://example.com" },
+    };
+    const r = validate({ p1: bad }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("booking.url must use https://")));
+  });
+
+  it("fails when place.booking.required is not a boolean", () => {
+    const bad = {
+      ...goodPlace,
+      booking: { required: "yes", url: "https://example.com" },
+    };
+    const r = validate({ p1: bad }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("booking.required must be a boolean")));
+  });
+
+  it("fails when transit_from_prev.booking_url is not https://", () => {
+    const itin = {
+      ...goodItinerary,
+      days: [{
+        ...goodItinerary.days[0],
+        stops: [{
+          place_id: "p1",
+          time: "16:00",
+          transit_from_prev: { booking_url: "javascript:alert(1)" },
+          duration_minutes: 30,
+        }],
+      }],
+    };
+    const r = validate({ p1: goodPlace }, itin);
+    assert.ok(r.errors.some((e) => e.includes("transit_from_prev.booking_url must use https://")));
+  });
+
   it("fails when stop time is not HH:MM", () => {
     const itin = {
       ...goodItinerary,
