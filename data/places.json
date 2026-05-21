@@ -10762,5 +10762,2631 @@
     "rating": 3.36,
     "review_count": 132,
     "rating_source": "Tabelog"
+  },
+  "usj_smw_mario_kart": {
+    "name_ko": "마리오 카트: 쿠파의 도전장",
+    "name_jp": "マリオカート ～クッパの挑戦状～",
+    "coords": [
+      34.6682,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "ride",
+    "emoji": "🏎️",
+    "tags": [
+      "AR 라이드",
+      "정리권",
+      "신장제한 107cm"
+    ],
+    "summary": "쿠파 성 안쪽에 자리한 슈퍼 닌텐도 월드의 간판 라이드. AR 고글을 쓰고 카트에 타서 등껍질을 던지며 쿠파 군단과 대결하는 약 5분짜리 인터랙티브 어트랙션.",
+    "detail": "쿠파 성을 통째로 재현한 대기 라인부터 볼거리. 라이드 시간은 약 5분, 신장 107cm 이상(보호자 동반)·122cm 이상(혼자 탑승) 제한이 있다. 머리 위 마리오 모자 위에 AR 고글을 끼우고 핸들 좌우와 트리거 버튼으로 코인을 모으며 보스 쿠파를 무찌르는 구조라서 멀미는 거의 없지만 호불호가 갈리는 편. 평일에도 60~120분 대기는 기본이라 정리권(에리어 입장 정리권과는 별개)이나 익스프레스 패스가 사실상 필수. Power-Up Band를 차고 타면 라이드 점수가 앱에 누적된다.",
+    "activities": [
+      "에리어 입장 정리권/스튜디오 패스 미리 확보",
+      "Power-Up Band 착용 후 탑승해 점수 누적",
+      "쿠파 성 대기 라인 디테일 사진 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+마리오카트+쿠파의+도전장+후기",
+      "google": "https://www.google.com/search?q=USJ+마리오카트+쿠파의+도전장+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+마리오카트+쿠파의+도전장"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 한국어 - 슈퍼 닌텐도 월드",
+        "url": "https://www.usj.co.jp/web/ko/kr/areas/super-nintendo-world"
+      },
+      {
+        "title": "Super Nintendo World - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Super_Nintendo_World"
+      },
+      {
+        "title": "슈퍼 닌텐도 월드 - 나무위키",
+        "url": "https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%8B%8C%ED%85%90%EB%8F%84%20%EC%9B%94%EB%93%9C"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 닌텐도 월드 후기 - 마일모아",
+        "url": "https://www.milemoa.com/bbs/board/10511097",
+        "source": "마일모아",
+        "snippet": "마리오카트 라이드의 AR 연출과 대기 동선을 실제 방문 후기로 정리."
+      },
+      {
+        "title": "KKday Korea 공식 블로그 - USJ 어트랙션 추천",
+        "url": "https://www.kkday.com/ko/blog/22755/aisa-japan-oska-universal-japan-pass",
+        "source": "KKday Korea",
+        "snippet": "마리오카트 정리권/익스프레스 패스 활용법을 한국인 시각으로 설명."
+      }
+    ]
+  },
+  "usj_smw_yoshi_adventure": {
+    "name_ko": "요시 어드벤처",
+    "name_jp": "ヨッシー・アドベンチャー",
+    "coords": [
+      34.6685,
+      135.432
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "ride",
+    "emoji": "🦖",
+    "tags": [
+      "가족형",
+      "신장제한 92cm",
+      "포토 스팟"
+    ],
+    "summary": "요시 등에 올라타 슈퍼 닌텐도 월드 상층부를 천천히 도는 가족형 라이드. 닌텐도 월드 전경을 한눈에 담을 수 있는 사실상 최고의 포토 스팟.",
+    "detail": "옴니무버 방식의 야외 라이드라 속도가 매우 느리고 회전·낙하 구간이 없어 임산부·어린이도 탑승 가능. 신장 92cm 미만은 탑승 불가, 122cm 미만은 보호자 동반 필요. 요시 알을 색깔별 버튼으로 찾는 미니 게임 요소가 있고, 라이드 중간중간 마리오 월드 풍경과 뻐끔플라워·굼바를 위에서 내려다볼 수 있다. 대기 시간은 마리오 카트보다 짧지만 성수기엔 60분 내외. 한국 블로그들은 사진 찍기 좋은 어트랙션으로 강력 추천한다.",
+    "activities": [
+      "요시 알 색깔 맞히기 미니게임",
+      "탑승 중 닌텐도 월드 파노라마 사진 촬영",
+      "어린 자녀 동반 시 우선 코스로 활용"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+요시+어드벤처+후기",
+      "google": "https://www.google.com/search?q=USJ+요시+어드벤처+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+요시+어드벤처"
+    },
+    "sources": [
+      {
+        "title": "USJ Yoshi's Adventure Requirements",
+        "url": "https://www.usj.co.jp/web/en/us/service-guide/safe/yoshis-adventure"
+      },
+      {
+        "title": "Super Nintendo World - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Super_Nintendo_World"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "트립닷컴 - 유니버셜 스튜디오 재팬 닌텐도 월드 가이드",
+        "url": "https://kr.trip.com/guide/attraction/%EC%9C%A0%EB%8B%88%EB%B2%84%EC%85%9C+%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4+%EC%9E%AC%ED%8C%AC+%EB%8B%8C%ED%85%90%EB%8F%84+%EC%9B%94%EB%93%9C.html",
+        "source": "Trip.com",
+        "snippet": "요시 어드벤처의 힐링 라이드 성격과 파노라마 뷰 포인트 강조."
+      },
+      {
+        "title": "슈퍼 닌텐도 월드 - 나무위키",
+        "url": "https://namu.wiki/w/%EC%8A%88%ED%8D%BC%20%EB%8B%8C%ED%85%90%EB%8F%84%20%EC%9B%94%EB%93%9C",
+        "source": "나무위키",
+        "snippet": "요시 어드벤처의 동선, 신장제한, 가족 동반 팁을 정리."
+      }
+    ]
+  },
+  "usj_smw_donkey_kong_mine_cart": {
+    "name_ko": "동키콩의 크레이지 트램카 (마인카트 매드니스)",
+    "name_jp": "ドンキーコングのクレイジー・トロッコ",
+    "coords": [
+      34.6679,
+      135.4329
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드 / 동키콩 컨트리",
+    "attraction_type": "ride",
+    "emoji": "🛤️",
+    "tags": [
+      "2024.12 신규",
+      "정리권 필수",
+      "신장제한 107cm",
+      "롤러코스터"
+    ],
+    "summary": "2024년 12월 11일 오픈한 동키콩 컨트리 확장 구역의 메인 신규 어트랙션. 트랙 위로 살짝 떠서 달리는 트램카 구조로 점프하는 듯한 착시를 만드는 세계 최초의 라이드.",
+    "detail": "황금 사원에서 출발해 정글을 가로지르는 약 2~3분의 롤러코스터. 신장 107cm 이상(보호자 동반)·122cm 이상(혼자 탑승). 카트가 레일 위로 살짝 떠서 가짜 끊긴 트랙을 점프하는 듯한 연출이 특징이고, 일본판이 미국 Epic Universe판보다 부드럽다는 평. 2026년 1월부터 동키콩 컨트리 입장은 공식 앱의 에리어 입장 정리권 또는 추첨권이 필수가 되었으며, 슈퍼 닌텐도 월드 본 구역과 별도로 발권된다. 대기는 평일에도 90~150분이 흔하다.",
+    "activities": [
+      "USJ 공식 앱에서 동키콩 컨트리 정리권/추첨권 발권",
+      "황금 사원 입구에서 사진 촬영",
+      "동키콩 미트앤그릿 시간 확인"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+동키콩+크레이지+트램카+후기",
+      "google": "https://www.google.com/search?q=USJ+동키콩+마인카트+매드니스+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Donkey+Kong+Mine+Cart+Madness"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - 동키콩의 크레이지 트램카",
+        "url": "https://www.usj.co.jp/web/ko/kr/attractions/donkey-kong-country-ride"
+      },
+      {
+        "title": "USJ News - Donkey Kong Country Opens Dec 11 2024",
+        "url": "https://www.usj.co.jp/company/company_e/news/2024/1112/"
+      },
+      {
+        "title": "Klook Blog - Donkey Kong Country Opens",
+        "url": "https://www.klook.com/blog/usj-donkey-kong/"
+      }
+    ],
+    "rating": 4.6,
+    "rating_source": "Google",
+    "curated_links": [
+      {
+        "title": "USJ 공식 한국어 - 동키콩 컨트리",
+        "url": "https://www.usj.co.jp/web/ko/kr/areas/super-nintendo-world/donkey-kong-country",
+        "source": "USJ 공식",
+        "snippet": "동키콩 컨트리 에리어 소개와 정리권 안내 (공식 한국어 페이지)."
+      },
+      {
+        "title": "KKday Korea - USJ 어트랙션 추천",
+        "url": "https://www.kkday.com/ko/blog/22755/aisa-japan-oska-universal-japan-pass",
+        "source": "KKday Korea",
+        "snippet": "동키콩 신규 라이드 정리권 발권 동선과 한국인 후기."
+      }
+    ]
+  },
+  "usj_smw_power_up_band": {
+    "name_ko": "파워 업 밴드 키 챌린지",
+    "name_jp": "パワーアップバンド™ キーチャレンジ",
+    "coords": [
+      34.668,
+      135.4318
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "event",
+    "emoji": "⌚",
+    "tags": [
+      "인터랙티브",
+      "별매 ¥4,200",
+      "AR 미니게임"
+    ],
+    "summary": "별도로 구매하는 손목 밴드로 에리어 곳곳의 미니게임을 클리어하며 코인·스탬프를 모으는 인터랙티브 체험. 닌텐도 월드를 실제 게임처럼 즐기게 해주는 핵심 장치.",
+    "detail": "마리오·루이지·피치·데이지·요시·키노피오 등 캐릭터별 디자인이 있으며 가격은 ¥4,200(2023년 인상가). USJ 공식 앱과 페어링하면 코인·도장·키 챌린지 점수가 실시간으로 누적된다. 굼바 크러시, 코쿠리 댄스, 폭탄 던지기 등 여러 미니게임이 에리어 곳곳에 흩어져 있고, 5개 보스 키를 모으면 쿠파 주니어와의 보스 배틀이 열린다. 마리오 카트·요시 어드벤처 탑승 점수도 밴드에 합산. 1인 1개가 원칙이지만 그룹은 대표 1개로도 일부 체험 가능.",
+    "activities": [
+      "1UP Factory 또는 마리오 모터스에서 밴드 구매",
+      "USJ 공식 앱과 페어링",
+      "에리어 내 키 챌린지 5개 클리어 후 보스전 도전"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+파워업밴드+후기",
+      "google": "https://www.google.com/search?q=USJ+Power-Up+Band+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+파워업밴드+키+챌린지"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 한국어 - 파워 업 밴드 키 챌린지",
+        "url": "https://www.usj.co.jp/web/ko/kr/attractions/power-up-band-key-challenges"
+      },
+      {
+        "title": "TDR Explorer - Power-Up Band Price Increase",
+        "url": "https://tdrexplorer.com/super-nintendo-world-power-up-band-price-increase/"
+      },
+      {
+        "title": "Klook Blog - Power-Up Band 가이드",
+        "url": "https://www.klook.com/blog/universal-studios-japan-mario-world/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "유니버설 스튜디오 재팬 - 나무위키",
+        "url": "https://namu.wiki/w/%EC%9C%A0%EB%8B%88%EB%B2%84%EC%84%A4%20%EC%8A%A4%ED%8A%9C%EB%94%94%EC%98%A4%20%EC%9E%AC%ED%8C%AC",
+        "source": "나무위키",
+        "snippet": "Power-Up Band 미니게임 종류·보스전 동선·가격을 정리."
+      },
+      {
+        "title": "트립닷컴 모먼츠 - 슈퍼 닌텐도 월드 쇼핑/체험",
+        "url": "https://kr.trip.com/moments/theme/poi-super-nintendo-world-japan-141196767-store-993139/",
+        "source": "Trip.com",
+        "snippet": "캐릭터별 밴드 디자인과 실 사용 후기."
+      }
+    ]
+  },
+  "usj_smw_kinopio_cafe": {
+    "name_ko": "키노피오 카페",
+    "name_jp": "キノピオ・カフェ",
+    "coords": [
+      34.6683,
+      135.4316
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "food",
+    "emoji": "🍄",
+    "tags": [
+      "테이블 서비스",
+      "대기 1시간+",
+      "예약 정리권"
+    ],
+    "summary": "버섯 모양 지붕의 키노피오 하우스를 옮겨 놓은 슈퍼 닌텐도 월드의 메인 레스토랑. 마리오 모자 햄버거, ? 블록 티라미수 등 캐릭터 비주얼 메뉴가 가득.",
+    "detail": "약 20여 가지 메뉴를 제공하며 키노피오가 셰프라는 설정. 평일·주말 가리지 않고 대기가 길어 1시간 이상이 흔하고, 가게 앞에서 입장 시간 정리권을 받은 뒤 다른 어트랙션을 즐기다 돌아오는 방식이 사실상 표준이다. 대표 메뉴는 마리오 버거, 루이지 버거, 키노피오 카푸치노, ? 블록 티라미수. 가격대는 메인 ¥1,800~2,400 선. 매장 내부 인테리어 자체가 사진 스팟이라 식사 안 해도 입구 분위기만 보고 가는 사람도 많다.",
+    "activities": [
+      "도착 직후 가게 앞에서 입장 정리권 수령",
+      "? 블록 티라미수 시도",
+      "내부 인테리어 사진 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+키노피오+카페+후기",
+      "google": "https://www.google.com/search?q=USJ+키노피오+카페+메뉴+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+키노피오+카페"
+    },
+    "sources": [
+      {
+        "title": "TDR Explorer - Super Nintendo World Food Guide",
+        "url": "https://tdrexplorer.com/super-nintendo-world-food-guide/"
+      },
+      {
+        "title": "Dejiki - Yoshi's Adventure, Kinopio Cafe, and Shops",
+        "url": "https://dejiki.com/2022/11/usj-super-nintendo-world-yoshis-adventure-kinopio-cafe-shops/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 키노피오 카페, 마리오 카페 후기 - 사다라면",
+        "url": "https://sadramyun.com/871",
+        "source": "티스토리",
+        "snippet": "키노피오 카페 정리권 운영 방식과 메뉴 사진을 한국어로 정리."
+      },
+      {
+        "title": "Discover Osaka - 슈퍼 닌텐도 월드 가이드",
+        "url": "https://discover.osaka-info.jp/en/articles/usj-nintendo-world",
+        "source": "Osaka Info",
+        "snippet": "키노피오 카페의 시그니처 메뉴와 포토 스팟 위치."
+      }
+    ]
+  },
+  "usj_smw_mario_motors": {
+    "name_ko": "마리오 모터스",
+    "name_jp": "マリオ・モータース",
+    "coords": [
+      34.6681,
+      135.4324
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "shop",
+    "emoji": "🛒",
+    "tags": [
+      "라이드 출구",
+      "카트 굿즈",
+      "Power-Up Band 판매"
+    ],
+    "summary": "마리오 카트: 쿠파의 도전장 라이드 출구 옆에 위치한 모터스포츠 콘셉트 굿즈숍. 카트·레이싱 관련 한정 상품과 Power-Up Band를 살 수 있다.",
+    "detail": "정비소 분위기로 꾸며져 있고 마리오 카트 모티프 티셔츠·캡·드라이버 글러브·미니 카트 피규어가 메인. 슈퍼 닌텐도 월드 안에서 Power-Up Band(¥4,200)를 구입 가능한 두 매장 중 하나라 라이드 직전 들르기 좋다. 1UP Factory보다 매장 규모는 작지만 라이드 굿즈 라인업이 더 충실. 마감 직전엔 닫혀 있을 수 있으니 입장 후 일찍 들르는 편이 안전.",
+    "activities": [
+      "Power-Up Band 캐릭터 선택 구매",
+      "마리오 카트 한정 굿즈 쇼핑",
+      "라이드 탑승 후 기념품 사진과 함께 컬렉션"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+마리오+모터스+굿즈+후기",
+      "google": "https://www.google.com/search?q=USJ+Mario+Motors+shop+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Mario+Motors+shop"
+    },
+    "sources": [
+      {
+        "title": "Dejiki - Super Nintendo World Shops",
+        "url": "https://dejiki.com/2022/11/usj-super-nintendo-world-yoshis-adventure-kinopio-cafe-shops/"
+      },
+      {
+        "title": "TDR Explorer - Super Nintendo World Guide",
+        "url": "https://tdrexplorer.com/super-nintendo-world-guide/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "트립닷컴 모먼츠 - 슈퍼 닌텐도 월드 쇼핑 추천",
+        "url": "https://kr.trip.com/moments/theme/poi-super-nintendo-world-japan-141196767-store-993139/",
+        "source": "Trip.com",
+        "snippet": "마리오 모터스와 1UP Factory 굿즈 비교 후기."
+      }
+    ]
+  },
+  "usj_smw_1up_factory": {
+    "name_ko": "더 1-UP 팩토리",
+    "name_jp": "ザ・1-UPファクトリー",
+    "coords": [
+      34.6678,
+      135.4319
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "shop",
+    "emoji": "🍄",
+    "tags": [
+      "메인 굿즈숍",
+      "Power-Up Band 판매",
+      "단독 상품"
+    ],
+    "summary": "피치 성 근처에 자리한 슈퍼 닌텐도 월드 최대 굿즈숍. \"버섯 왕국 장난감 공장\" 콘셉트로 마리오 머리띠·인형·과자까지 전 카테고리 기념품이 모인다.",
+    "detail": "토관 모양 입구와 톱니바퀴 인테리어가 인상적이고 매장 한정 상품이 가장 많다. 마리오·루이지·요시·쿠파 모자 머리띠, 봉제 인형, 캐릭터 쿠키 박스 등 베스트셀러 아이템이 집중. Power-Up Band도 여기서 살 수 있고, 영업 종료 30~60분 전부터 줄이 폭증하니 이른 시간에 들르는 편이 좋다. 가격대는 머리띠 ¥3,200~, 인형 ¥4,500~, 과자 박스 ¥1,500~ 정도.",
+    "activities": [
+      "캐릭터 머리띠 골라 착용 후 에리어 투어",
+      "Power-Up Band 색상 비교 구매",
+      "에리어 한정 과자 박스 구입"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+1UP+팩토리+굿즈+후기",
+      "google": "https://www.google.com/search?q=USJ+1-UP+Factory+shop+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+1up+factory+shop"
+    },
+    "sources": [
+      {
+        "title": "Dejiki - Super Nintendo World Shops",
+        "url": "https://dejiki.com/2022/11/usj-super-nintendo-world-yoshis-adventure-kinopio-cafe-shops/"
+      },
+      {
+        "title": "TDR Explorer - Super Nintendo World Guide",
+        "url": "https://tdrexplorer.com/super-nintendo-world-guide/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "트립닷컴 모먼츠 - 슈퍼 닌텐도 월드 쇼핑 추천",
+        "url": "https://kr.trip.com/moments/theme/poi-super-nintendo-world-japan-141196767-store-993139/",
+        "source": "Trip.com",
+        "snippet": "1UP Factory의 인기 굿즈와 매장 분위기를 한국어로 소개."
+      },
+      {
+        "title": "Discover Osaka - 슈퍼 닌텐도 월드 가이드",
+        "url": "https://discover.osaka-info.jp/en/articles/usj-nintendo-world",
+        "source": "Osaka Info",
+        "snippet": "1UP Factory의 단독 상품 라인업을 사진과 함께 설명."
+      }
+    ]
+  },
+  "usj_smw_pit_stop_popcorn": {
+    "name_ko": "핏 스톱 팝콘 / 요시 스낵 아일랜드",
+    "name_jp": "ピットストップ・ポップコーン / ヨッシー・スナック・アイランド",
+    "coords": [
+      34.6684,
+      135.4321
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "슈퍼 닌텐도 월드",
+    "attraction_type": "food",
+    "emoji": "🍿",
+    "tags": [
+      "스낵 스탠드",
+      "테이크아웃",
+      "팝콘 버킷"
+    ],
+    "summary": "에리어 곳곳에 흩어진 테이크아웃형 푸드 스탠드. 핏 스톱 팝콘은 슈퍼 머쉬룸 모양 팝콘 버킷, 요시 스낵 아일랜드는 야키소바·치즈 칼조네 빵이 시그니처.",
+    "detail": "핏 스톱 팝콘은 마리오 카트 라이드 근처에 위치하며 캐러멜·버터쇼유 등 일본 한정 팝콘 맛과 슈퍼 머쉬룸·갑옷 모양 컬렉터블 버킷이 인기. 요시 스낵 아일랜드는 요시 어드벤처 근처에 있고 요시 알을 닮은 칼조네 빵(야키소바+치즈) ¥800대, 멜론 소다, 요시 모찌가 메인. 두 곳 다 빠른 회전 테이크아웃이라 키노피오 카페 대기 중 끼니를 때우는 용도로 많이 쓰인다. 좌석은 거의 없고 서서 먹는 구조.",
+    "activities": [
+      "슈퍼 머쉬룸 팝콘 버킷 구입",
+      "요시 칼조네 빵 + 멜론 소다 세트",
+      "키노피오 카페 대기 중 간식으로 활용"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+요시+스낵+아일랜드+팝콘+후기",
+      "google": "https://www.google.com/search?q=USJ+Pit+Stop+Popcorn+Yoshi+Snack+Island+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Yoshi+Snack+Island"
+    },
+    "sources": [
+      {
+        "title": "TDR Explorer - Super Nintendo World Food Guide",
+        "url": "https://tdrexplorer.com/super-nintendo-world-food-guide/"
+      },
+      {
+        "title": "Dejiki - Yoshi's Adventure, Kinopio Cafe, and Shops",
+        "url": "https://dejiki.com/2022/11/usj-super-nintendo-world-yoshis-adventure-kinopio-cafe-shops/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "Discover Osaka - 슈퍼 닌텐도 월드 음식 가이드",
+        "url": "https://discover.osaka-info.jp/en/articles/usj-nintendo-world",
+        "source": "Osaka Info",
+        "snippet": "요시 스낵 아일랜드의 칼조네 빵과 핏 스톱 팝콘 버킷 사진."
+      },
+      {
+        "title": "Tiny Tot in Tokyo - USJ Food Review",
+        "url": "https://tinytotintokyo.com/honest-food-review-of-universal-studios-japan",
+        "source": "Tiny Tot in Tokyo",
+        "snippet": "USJ 푸드 스탠드 실제 시식 후기 (영문, 가격 포함)."
+      }
+    ]
+  },
+  "usj_hp_forbidden_journey": {
+    "name_ko": "해리 포터 앤드 더 포비든 저니",
+    "name_jp": "ハリー・ポッター・アンド・ザ・フォービドゥン・ジャーニー",
+    "coords": [
+      34.6655,
+      135.4316
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "ride",
+    "emoji": "🧙",
+    "tags": [
+      "다크 라이드",
+      "4K3D",
+      "신장 122cm+",
+      "호그와트 성"
+    ],
+    "summary": "호그와트 성 내부를 누비는 위저딩 월드의 메인 다크 라이드.",
+    "detail": "로보코스터 암(arm)에 좌석이 매달려 빗자루로 호그와트 성을 누비며 퀴디치 경기, 디멘터, 용을 마주하는 4K3D 다크 라이드. 줄을 서는 동안 그리는 동상, 호그와트 교실, 덤블도어의 사무실을 통과하는 큐 라인 자체가 어트랙션. 2014년 위저딩 월드 오픈 시 핵심 콘텐츠.",
+    "activities": [
+      "호그와트 성 내부 큐 라인 관람",
+      "4K3D 라이드 탑승",
+      "성 외관 포토존 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+금단의+모험+후기",
+      "google": "https://www.google.com/search?q=USJ+Forbidden+Journey+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+해리포터+금단의모험"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 한국어 - 해리 포터 앤드 더 포비든 저니",
+        "url": "https://www.usj.co.jp/web/ko/kr/attractions/harry-potter-and-the-forbidden-journey"
+      },
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      }
+    ],
+    "rating": 4.7,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "USJ 공식 - 포비든 저니",
+        "url": "https://www.usj.co.jp/web/ko/kr/attractions/harry-potter-and-the-forbidden-journey",
+        "source": "USJ",
+        "snippet": "호그와트의 마법 세계로 떠나는 4K3D 다크 라이드."
+      }
+    ]
+  },
+  "usj_hp_flight_hippogriff": {
+    "name_ko": "플라이트 오브 더 히포그리프",
+    "name_jp": "フライト・オブ・ザ・ヒッポグリフ",
+    "coords": [
+      34.6657,
+      135.432
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "ride",
+    "emoji": "🦅",
+    "tags": [
+      "가족 코스터",
+      "패밀리",
+      "신장 92cm+"
+    ],
+    "summary": "해그리드 오두막 옆을 날아오르는 가족용 미니 롤러코스터.",
+    "detail": "히포그리프 벅빅을 타고 해그리드의 오두막과 호박밭 위를 비행하는 콘셉트의 짧은 패밀리 코스터. 90초 내외로 짧지만 호그와트 성 전경을 라이드 중에 볼 수 있는 좋은 포토 포인트.",
+    "activities": [
+      "가족 코스터 탑승",
+      "벅빅 둥지 포토존",
+      "호그와트 성 외경 관람"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+히포그리프+후기",
+      "google": "https://www.google.com/search?q=USJ+Flight+of+the+Hippogriff+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+히포그리프"
+    },
+    "sources": [
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      }
+    ],
+    "rating": 4.2,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "위저딩 월드 어트랙션 가이드",
+        "url": "https://www.usj.co.jp/web/ko/kr/areas/the-wizarding-world-of-harry-potter",
+        "source": "USJ",
+        "snippet": "히포그리프와 함께 하늘을 나는 가족용 코스터."
+      }
+    ]
+  },
+  "usj_hp_hogsmeade_village": {
+    "name_ko": "호그스미드 빌리지",
+    "name_jp": "ホグズミード村",
+    "coords": [
+      34.6656,
+      135.4315
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "event",
+    "emoji": "🏘️",
+    "tags": [
+      "산책",
+      "포토존",
+      "테마 거리",
+      "스트리트 쇼"
+    ],
+    "summary": "호그와트로 들어가기 전 거니는 마법사 마을 — 입구·간판·창문 디스플레이가 모두 영화 세트.",
+    "detail": "눈 덮인 지붕의 호그스미드 마을 거리를 따라 올리밴더, 허니듀크스, 부엉이 우체국 등이 늘어서 있다. 마을 중앙 광장에서 프로그 코어(Frog Choir), 트리위저드 스피릿 랠리, 디멘터 어택 같은 길거리 쇼가 일정에 따라 진행. 마법사 지팡이를 들고 마을 곳곳의 지정 지점에서 주문을 시전할 수도 있다.",
+    "activities": [
+      "마을 거리 산책",
+      "프로그 코어/스피릿 랠리 관람",
+      "지팡이로 주문 체험",
+      "호그와트 익스프레스 기관차 포토존"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+호그스미드+후기",
+      "google": "https://www.google.com/search?q=USJ+Hogsmeade+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+호그스미드"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 한국어 - 위저딩 월드",
+        "url": "https://www.usj.co.jp/web/ko/kr/areas/the-wizarding-world-of-harry-potter"
+      },
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      }
+    ],
+    "rating": 4.6,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "위저딩 월드 100% 즐기기",
+        "url": "https://www.usj.co.jp/kr/enjoy/",
+        "source": "USJ",
+        "snippet": "호그스미드 마을 곳곳의 쇼와 체험 포인트 안내."
+      }
+    ]
+  },
+  "usj_hp_three_broomsticks": {
+    "name_ko": "쓰리 브룸스틱스",
+    "name_jp": "三本の箒（スリー・ブルームスティックス）",
+    "coords": [
+      34.6654,
+      135.4313
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "food",
+    "emoji": "🍺",
+    "tags": [
+      "식당",
+      "영국 요리",
+      "버터맥주",
+      "테마 레스토랑"
+    ],
+    "summary": "호그스미드의 메인 펍 — 영국식 요리와 버터맥주를 파는 시그니처 식당.",
+    "detail": "로즈머타 부인의 펍을 재현한 대형 테마 레스토랑. 피쉬앤칩스, 셰퍼드 파이, 영국식 통닭 등을 제공하며 옆에 붙은 호그스 헤드(Hog's Head) 바에서 버터맥주(논알콜·알콜)를 따로 주문할 수 있다. 천장 들보·벽난로 등 내부 디테일이 영화 세트 그대로다.",
+    "activities": [
+      "버터맥주 시음",
+      "영국식 풀 미트 식사",
+      "호그스 헤드 펍 분위기 즐기기"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+쓰리브룸스틱스+후기",
+      "google": "https://www.google.com/search?q=USJ+Three+Broomsticks+버터맥주",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+쓰리브룸스틱스+버터맥주"
+    },
+    "sources": [
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      }
+    ],
+    "rating": 4.3,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "버터맥주·쓰리 브룸스틱스 후기",
+        "url": "https://www.kkday.com/ko/blog/22755/aisa-japan-oska-universal-japan-pass",
+        "source": "KKday",
+        "snippet": "버터맥주는 일회용 컵 900엔, 기념품 머그 1500엔."
+      }
+    ]
+  },
+  "usj_hp_ollivanders": {
+    "name_ko": "올리밴더의 지팡이 가게",
+    "name_jp": "オリバンダーの店",
+    "coords": [
+      34.6657,
+      135.4314
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "show",
+    "emoji": "🪄",
+    "tags": [
+      "지팡이 쇼",
+      "체험",
+      "상점 결합",
+      "소규모 인원"
+    ],
+    "summary": "지팡이가 주인을 고르는 의식을 재현하는 소규모 체험 + 상점.",
+    "detail": "한 번에 소수 인원만 입장해 올리밴더 점원이 지원자 한 명을 골라 여러 지팡이를 시험해보는 의식을 보여주는 약 5분짜리 미니 쇼. 진행은 일본어/영어. 쇼가 끝나면 옆 상점으로 이동해 인터랙티브 지팡이를 구매하면 호그스미드 마을 곳곳의 주문 포인트에서 마법을 시전할 수 있다.",
+    "activities": [
+      "지팡이 의식 쇼 관람",
+      "인터랙티브 지팡이 구매",
+      "주문 포인트 지도 받기"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+올리밴더+지팡이",
+      "google": "https://www.google.com/search?q=USJ+Ollivanders+wand+experience+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+올리밴더+지팡이"
+    },
+    "sources": [
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      },
+      {
+        "title": "KKday - USJ 후기",
+        "url": "https://www.kkday.com/ko/blog/22755/aisa-japan-oska-universal-japan-pass"
+      }
+    ],
+    "rating": 4.4,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "올리밴더 쇼 한국어 후기",
+        "url": "https://www.kkday.com/ko/blog/22755/aisa-japan-oska-universal-japan-pass",
+        "source": "KKday",
+        "snippet": "비밀통로 따라 들어가 지팡이가 주인을 선택하는 의식을 본다."
+      }
+    ]
+  },
+  "usj_hp_owl_post": {
+    "name_ko": "올빼미 우체국",
+    "name_jp": "ふくろう便（アウル・ポスト）",
+    "coords": [
+      34.6658,
+      135.4316
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "shop",
+    "emoji": "🦉",
+    "tags": [
+      "우표·편지",
+      "기념품",
+      "올빼미 모형"
+    ],
+    "summary": "호그스미드에서 보내는 마법 우편 — 우표·편지지·소인 서비스.",
+    "detail": "위저딩 월드 한정 디자인 우표와 편지지, 봉투를 파는 상점. 이곳에서 산 엽서를 보내면 호그스미드 소인이 찍힌 채 일본 우편 시스템으로 발송된다. 천장에 매달린 올빼미 모형과 부엉이 우리 디스플레이가 포토 포인트.",
+    "activities": [
+      "호그스미드 소인 우편 발송",
+      "한정 우표·편지지 쇼핑",
+      "올빼미 디스플레이 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+올빼미우체국+후기",
+      "google": "https://www.google.com/search?q=USJ+Owl+Post+호그스미드+소인",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Owl+Post"
+    },
+    "sources": [
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      }
+    ],
+    "rating": 4.3,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "USJ 위저딩 월드 상점 가이드",
+        "url": "https://www.usj.co.jp/web/ko/kr/areas/the-wizarding-world-of-harry-potter",
+        "source": "USJ",
+        "snippet": "호그스미드 내 상점 및 시설 안내."
+      }
+    ]
+  },
+  "usj_hp_honeydukes": {
+    "name_ko": "허니듀크스",
+    "name_jp": "ハニーデュークス",
+    "coords": [
+      34.6655,
+      135.4318
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "shop",
+    "emoji": "🍬",
+    "tags": [
+      "사탕가게",
+      "초콜릿 개구리",
+      "버티 봇 콩"
+    ],
+    "summary": "호그스미드의 알록달록한 마법사 사탕 가게 — 초콜릿 개구리·버티 봇 등 영화 속 간식.",
+    "detail": "분홍·하늘색 줄무늬 천막의 외관이 트레이드마크인 마법사 사탕 상점. 초콜릿 개구리(카드 동봉), 버티 봇 모든 맛 젤리빈, 폭발 봉봉, 페퍼민트 토드, 페즐위지 사탕 봉지 등 영화 속에 등장한 과자를 거의 그대로 구현해 판매한다. 바로 옆에 장난스러운 마법 도구를 파는 존코의 농담 가게(Zonko's)가 통로로 연결되어 함께 둘러보기 좋다.",
+    "activities": [
+      "초콜릿 개구리 카드 수집",
+      "버티 봇 젤리빈 도전",
+      "존코 농담 도구 구경"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+허니듀크스+초콜릿개구리",
+      "google": "https://www.google.com/search?q=USJ+Honeydukes+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+허니듀크스"
+    },
+    "sources": [
+      {
+        "title": "Wikipedia - Wizarding World of Harry Potter (USJ)",
+        "url": "https://en.wikipedia.org/wiki/The_Wizarding_World_of_Harry_Potter_(Universal_Studios_Japan)"
+      }
+    ],
+    "rating": 4.5,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "위저딩 월드 상점 안내",
+        "url": "https://www.usj.co.jp/web/ko/kr/areas/the-wizarding-world-of-harry-potter",
+        "source": "USJ",
+        "snippet": "허니듀크스·존코의 농담 가게가 같은 건물에 위치."
+      }
+    ]
+  },
+  "usj_hp_magical_night": {
+    "name_ko": "호그와트 매지컬 나이트",
+    "name_jp": "ホグワーツ・マジカル・ナイト",
+    "coords": [
+      34.6655,
+      135.4316
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "위저딩 월드 오브 해리포터",
+    "attraction_type": "event",
+    "emoji": "✨",
+    "tags": [
+      "프로젝션 매핑",
+      "야간 쇼",
+      "시즌 한정",
+      "겨울/크리스마스"
+    ],
+    "summary": "호그와트 성 전면에 펼쳐지는 프로젝션 매핑 야간 쇼 — 시즌 한정.",
+    "detail": "야간에 호그와트 성 외벽에 음악과 함께 영상을 입히는 약 5분 길이의 프로젝션 매핑 쇼. 시즌별 테마가 바뀌며 겨울에는 'Hogwarts Magical Night — Winter Magic' 버전이 운영돼 눈사람, 부엉이 배달, 4개 기숙사 문장이 차례로 성을 뒤덮는다. 호그스미드 마을 광장 어디서나 관람 가능. 개최 기간과 회차는 시즌에 따라 다르므로 당일 쇼 스케줄을 확인해야 한다.",
+    "activities": [
+      "호그스미드 광장에서 야간 쇼 관람",
+      "성 전경 야간 사진 촬영",
+      "시즌 한정 푸드와 함께 즐기기"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+호그와트+매지컬나이트",
+      "google": "https://www.google.com/search?q=USJ+Hogwarts+Magical+Night+winter+magic",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Hogwarts+Magical+Night"
+    },
+    "sources": [
+      {
+        "title": "USJ Show & Attraction Schedule",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/show-and-attraction-schedule"
+      },
+      {
+        "title": "TDR Explorer - USJ Christmas 2025",
+        "url": "https://tdrexplorer.com/universal-studios-japan-christmas-2025/"
+      }
+    ],
+    "rating": 4.6,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Hogwarts Magical Night - Winter Magic",
+        "url": "https://tdrexplorer.com/universal-studios-japan-christmas-2025/",
+        "source": "TDR Explorer",
+        "snippet": "겨울 시즌 호그와트 성을 눈·부엉이·기숙사 문장으로 물들이는 프로젝션 쇼."
+      }
+    ]
+  },
+  "usj_mp_minion_mayhem": {
+    "name_ko": "미니언 메이험",
+    "name_jp": "ミニオン・ハチャメチャ・ライド",
+    "coords": [
+      34.6675,
+      135.431
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "미니언 파크",
+    "attraction_type": "ride",
+    "emoji": "🍌",
+    "tags": [
+      "시뮬레이터",
+      "돔 스크린",
+      "4D 효과",
+      "신장 102cm+"
+    ],
+    "summary": "그루의 거실에 들어가 미니언이 되는 거대 돔 스크린 시뮬레이터 라이드.",
+    "detail": "그루의 저택을 통과해 미니언 변신 머신에 올라타는 콘셉트의 4D 시뮬레이터. 좌석이 흔들리는 모션 베이스와 거대한 돔 스크린, 바람·물 효과가 결합돼 미니언이 된 시점에서 영화 속 추격전을 체험한다. 미니언 파크의 메인 어트랙션.",
+    "activities": [
+      "미니언 변신 시뮬레이터 탑승",
+      "그루 저택 큐 라인 관람",
+      "출구 미니언 굿즈 매장 쇼핑"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+미니언+메이험+후기",
+      "google": "https://www.google.com/search?q=USJ+Minion+Mayhem+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+미니언+메이험"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 영문 - Despicable Me Minion Mayhem",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/despicable-me-minion-mayhem"
+      },
+      {
+        "title": "USJ 미니언 파크 한국어",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/"
+      }
+    ],
+    "rating": 4.5,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "미니언 메이험 라이드 가이드",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/",
+        "source": "USJ",
+        "snippet": "비클을 타고 거대 돔 스크린에서 미니언의 뒤죽박죽 세계로."
+      }
+    ]
+  },
+  "usj_mp_freeze_ray_sliders": {
+    "name_ko": "프리즈 레이 슬라이더",
+    "name_jp": "フリーズ・レイ・スライダー",
+    "coords": [
+      34.6677,
+      135.4308
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "미니언 파크",
+    "attraction_type": "ride",
+    "emoji": "🧊",
+    "tags": [
+      "어린이 코스터",
+      "패밀리",
+      "회전",
+      "저강도"
+    ],
+    "summary": "미니언이 얼린 빙판 위를 빙글빙글 도는 어린이용 회전 라이드.",
+    "detail": "그루의 동결 광선(freeze ray)에 미니언 파크가 얼어붙어 빙상 링크가 됐다는 설정으로, 짧은 빙판 위를 회전하며 미끄러지는 어린이 친화 라이드. 회전 강도가 낮아 가족 단위로 함께 탈 수 있다.",
+    "activities": [
+      "가족 회전 라이드 탑승",
+      "미니언 빙판 포토존 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+프리즈레이+슬라이더",
+      "google": "https://www.google.com/search?q=USJ+Freeze+Ray+Sliders+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Freeze+Ray+Sliders"
+    },
+    "sources": [
+      {
+        "title": "USJ 미니언 파크 한국어",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/"
+      }
+    ],
+    "rating": 4,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "미니언 파크 어트랙션 안내",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/",
+        "source": "USJ",
+        "snippet": "얼음총으로 빙판이 된 미니언 파크에서 미끄러지는 라이드."
+      }
+    ]
+  },
+  "usj_mp_happiness_cafe": {
+    "name_ko": "해피니스 카페",
+    "name_jp": "ハピネス・カフェ",
+    "coords": [
+      34.6676,
+      135.4311
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "미니언 파크",
+    "attraction_type": "food",
+    "emoji": "🍔",
+    "tags": [
+      "식당",
+      "테마 메뉴",
+      "버거",
+      "키즈 친화"
+    ],
+    "summary": "미니언 모양 비주얼이 트레이드마크인 미니언 파크 메인 식당.",
+    "detail": "미니언 버거, 미니언 치킨 플레이트, 카레 등 든든한 한 끼 메뉴를 제공하는 미니언 테마 카페. 음식 비주얼이 미니언 캐릭터 모양으로 나오는 사진 포인트가 많고, 음료는 리필 가능. 미니언 파크에서 식사로 정착하기 좋은 자리.",
+    "activities": [
+      "미니언 모양 버거 식사",
+      "캐릭터 비주얼 메뉴 사진 촬영",
+      "음료 리필 휴식"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+해피니스카페+미니언",
+      "google": "https://www.google.com/search?q=USJ+Happiness+Cafe+미니언+메뉴",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+해피니스+카페"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 한국어 - 해피니스 카페",
+        "url": "https://www.usj.co.jp/web/ko/kr/restaurants/happiness-cafe"
+      }
+    ],
+    "rating": 3.9,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "해피니스 카페 공식",
+        "url": "https://www.usj.co.jp/web/ko/kr/restaurants/happiness-cafe",
+        "source": "USJ",
+        "snippet": "미니언 테마 버거·치킨 플레이트를 제공하는 식당."
+      }
+    ]
+  },
+  "usj_mp_cookie_kitchen": {
+    "name_ko": "딜리셔스 미! 더 쿠키 키친",
+    "name_jp": "デリシャス・ミー！ザ・クッキー・キッチン",
+    "coords": [
+      34.6674,
+      135.4312
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "미니언 파크",
+    "attraction_type": "food",
+    "emoji": "🍪",
+    "tags": [
+      "베이커리",
+      "쿠키 샌드",
+      "테이크아웃",
+      "비셔스 6"
+    ],
+    "summary": "미니언이 만드는 쿠키 샌드를 파는 미니언 파크의 베이커리 스탠드.",
+    "detail": "'쿠키 제조 머신'이라는 콘셉트의 베이커리 부스. 시그니처는 미니언 쿠키 샌드(말론·초콜릿 마시멜로)이며, 슈퍼 악당 그룹 비셔스 6와 미니언 캐릭터가 프린트된 한정 쿠키도 판매한다. 가벼운 간식·테이크아웃에 적합.",
+    "activities": [
+      "쿠키 샌드 구매",
+      "캐릭터 프린트 쿠키 수집",
+      "테이크아웃 간식 휴식"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+딜리셔스+미+쿠키+키친",
+      "google": "https://www.google.com/search?q=USJ+Delicious+Me+Cookie+Kitchen",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+미니언+쿠키샌드"
+    },
+    "sources": [
+      {
+        "title": "USJ 미니언 파크 한국어",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/"
+      }
+    ],
+    "rating": 4.1,
+    "rating_source": "Google",
+    "curated_links": [
+      {
+        "title": "미니언 파크 푸드 가이드",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/",
+        "source": "USJ",
+        "snippet": "쿠키 제조 머신으로 미니언이 만드는 쿠키 샌드를 판매."
+      }
+    ]
+  },
+  "usj_mp_fun_store": {
+    "name_ko": "펀 스토어",
+    "name_jp": "ファン・ストア",
+    "coords": [
+      34.6678,
+      135.4309
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "미니언 파크",
+    "attraction_type": "shop",
+    "emoji": "🛍️",
+    "tags": [
+      "상점",
+      "장난감",
+      "기념품",
+      "굿즈"
+    ],
+    "summary": "미니언 장난감과 잡화를 모아 파는 미니언 파크의 종합 굿즈 상점.",
+    "detail": "미니언 인형, 키링, 머그, 문구, 장난감 등 폭넓은 캐릭터 상품을 모은 미니언 파크 대표 상점. 이웃한 미니언즈 POP! SHOP(패션), 스위트 서렌더(거대 캔디·껌볼), 바나나 카바나(바나나 잡화) 와 함께 거리 자체가 쇼핑 존을 이룬다.",
+    "activities": [
+      "미니언 굿즈 쇼핑",
+      "기념품·문구 구매",
+      "거대 껌볼 머신 포토존"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+미니언+펀스토어",
+      "google": "https://www.google.com/search?q=USJ+Minion+Park+Fun+Store",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+미니언+굿즈"
+    },
+    "sources": [
+      {
+        "title": "USJ 미니언 파크 한국어",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/"
+      }
+    ],
+    "rating": 4.2,
+    "rating_source": "Google",
+    "curated_links": [
+      {
+        "title": "미니언 파크 상점 안내",
+        "url": "https://www.usj.co.jp/kr/area/minion-park/",
+        "source": "USJ",
+        "snippet": "장난감과 재미있는 상품을 파는 미니언 파크 종합 굿즈샵."
+      }
+    ]
+  },
+  "usj_jp_the_ride": {
+    "name_ko": "쥬라기 공원 더 라이드",
+    "name_jp": "ジュラシック・パーク・ザ・ライド",
+    "coords": [
+      34.6678,
+      135.4312
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "쥬라기 공원",
+    "attraction_type": "ride",
+    "emoji": "🦕",
+    "tags": [
+      "워터 라이드",
+      "신장제한 122cm",
+      "물벼락"
+    ],
+    "summary": "공룡이 활보하는 이슬라 누블라 정글을 보트로 탐험하다가 마지막에 25.9m 낙하 슬라이드로 T-Rex의 공격을 피해 도망치는 USJ 개장 원년(2001) 클래식 워터 라이드.",
+    "detail": "탑승 시간 약 6~7분. 신장 107cm 이상부터 동반 탑승, 122cm 미만은 단독 탑승 불가. 마지막 25.9m 드롭에서 물벼락이 크게 튀므로 우비·방수 가방 권장. 2026년 5월 오사카는 본격 더위 시작 전이라 물 묻고 말리기 좋은 시즌. 익스프레스 패스 대상 라이드라 정리권 시간대를 피해 익스프레스로 처리하면 동선 효율이 좋다.",
+    "activities": [
+      "탑승 전 100엔 코인 락커에 가방·전자기기 보관",
+      "마지막 드롭 직전 카메라 포지션 확인해 기념사진 구매",
+      "라이드 출구 옆 Discovery Restaurant로 바로 점심 연결"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+쥬라기공원+더+라이드+후기",
+      "google": "https://www.google.com/search?q=USJ+Jurassic+Park+The+Ride+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Jurassic+Park+The+Ride"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Jurassic Park - The Ride",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/jurassic-park-the-ride"
+      },
+      {
+        "title": "Jurassic Park: The Ride - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jurassic_Park:_The_Ride"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ Jurassic Park - The Ride 신장·동반자 요건",
+        "url": "https://www.usj.co.jp/web/en/us/service-guide/safe/jurassic-park-the-ride",
+        "source": "USJ 공식",
+        "snippet": "탑승 요건과 물벼락 강도 안내."
+      }
+    ]
+  },
+  "usj_jp_flying_dinosaur": {
+    "name_ko": "더 플라잉 다이너소어",
+    "name_jp": "ザ・フライング・ダイナソー",
+    "coords": [
+      34.6679,
+      135.431
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "쥬라기 공원",
+    "attraction_type": "ride",
+    "emoji": "🦖",
+    "tags": [
+      "인버티드 코스터",
+      "신장제한 132cm",
+      "최대 1.4G"
+    ],
+    "summary": "프테라노돈에게 채여 하늘을 나는 컨셉의 엎드린 자세(flying) 인버티드 코스터. 트랙 길이 1,124m, 최고 시속 100km/h, 5회 인버전을 약 3분간 질주한다.",
+    "detail": "탑승 신장 132cm 이상 198cm 이하. 출발 직후 35m 수직 강하와 거대한 루프가 이어지고 USJ 인기 라이드 중 가장 멀미 강도가 높다. 익스프레스 패스 4·7 대부분이 이 라이드를 커버하므로 패스 활용 필수. 안경·모자·휴대폰은 무료 락커에 두고 탑승. 2026년 5월 GW 직후 평일 기준에도 70~120분 대기 발생.",
+    "activities": [
+      "탑승 직전 락커에 휴대폰·안경 보관 (소지품 금지)",
+      "익스프레스 패스 4 이상으로 마리오카트와 묶어 동선 짜기",
+      "출구 옆 Jurassic Outfitters에서 굿즈 픽업"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+플라잉+다이너소어+후기",
+      "google": "https://www.google.com/search?q=USJ+Flying+Dinosaur+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Flying+Dinosaur"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - The Flying Dinosaur",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/the-flying-dinosaur"
+      },
+      {
+        "title": "The Flying Dinosaur - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/The_Flying_Dinosaur"
+      },
+      {
+        "title": "USJ 공식 - The Flying Dinosaur Requirements",
+        "url": "https://www.usj.co.jp/web/en/us/service-guide/safe/the-flying-dinosaur"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "Flying Dinosaur 스펙·요건 정리",
+        "url": "https://rcdb.com/12959.htm",
+        "source": "Roller Coaster DataBase",
+        "snippet": "트랙 길이·최고 속도·인버전 횟수 등 공식 스펙."
+      }
+    ]
+  },
+  "usj_jp_jurassic_outfitters": {
+    "name_ko": "쥬라기 아웃피터스",
+    "name_jp": "ジュラシック・アウトフィッターズ",
+    "coords": [
+      34.6677,
+      135.4313
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "쥬라기 공원",
+    "attraction_type": "shop",
+    "emoji": "🛍️",
+    "tags": [
+      "굿즈",
+      "쥬라기 공원",
+      "라이드 연계"
+    ],
+    "summary": "쥬라기 공원 - 더 라이드 출구와 직결된 메인 상점. 공룡 봉제인형·티셔츠·뱃지·라이드 사진을 한 곳에서 구입할 수 있는 존 대표 굿즈 매장.",
+    "detail": "라이드를 마치고 바로 진입하는 구조라 라이드 사진 키오스크가 매장 안에 있다. 한정 굿즈는 쥬라기 월드 콜라보 시즌 신상이 자주 들어오며, 우산·후드 등 비/추위 대비 아이템도 판매. 결제는 IC카드·신용카드·QR 결제 모두 가능.",
+    "activities": [
+      "라이드 사진 결제 후 굿즈와 함께 일괄 픽업",
+      "공룡 봉제인형(랩터·T-Rex) 인증샷 코너 활용",
+      "USJ 공식 앱 디지털 사진 옵션 비교"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+쥬라기+공원+굿즈샵+후기",
+      "google": "https://www.google.com/search?q=USJ+Jurassic+Outfitters+굿즈",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Jurassic+Outfitters"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Jurassic Park 영역",
+        "url": "https://www.usj.co.jp/web/en/us/areas/jurassic-park"
+      },
+      {
+        "title": "Jurassic Park Wiki - USJ",
+        "url": "https://jurassicpark.fandom.com/wiki/Universal_Studios_Japan"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 쥬라기 공원 굿즈 정리",
+        "url": "https://www.kkday.com/ko/blog/22755/aisa-japan-oska-universal-japan-pass",
+        "source": "KKday Korea",
+        "snippet": "Jurassic Outfitters 한정 굿즈 라인업."
+      }
+    ]
+  },
+  "usj_jp_discovery_restaurant": {
+    "name_ko": "디스커버리 레스토랑",
+    "name_jp": "ディスカバリー・レストラン",
+    "coords": [
+      34.6676,
+      135.4314
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "쥬라기 공원",
+    "attraction_type": "food",
+    "emoji": "🍛",
+    "tags": [
+      "카페테리아",
+      "카레",
+      "공룡 테마"
+    ],
+    "summary": "쥬라기 공원 - 더 라이드 옆에 위치한 캐주얼 카페테리아. 공룡 테마 카레·치킨·아동 세트를 트레이로 받아 먹는 부담 없는 패밀리 식당.",
+    "detail": "회전이 빠른 카페테리아 형식이라 점심 피크에도 30분 내 착석 가능. 쥬라기 공원 카레, 치킨 플레이트, 키즈 메뉴 등 1,500~2,200엔대 구성. 발자국 모양 빵·공룡 뼈 모양 디저트 등 포토 메뉴가 많아 아이 동반 여행객 인기. 텀블러 음료 리필 부스 있음.",
+    "activities": [
+      "공룡 발자국 빵·뼈 디저트로 인증샷",
+      "익스프레스 패스 시간 사이 식사로 활용",
+      "Lost World가 만석일 때 대체 옵션으로 우선 고려"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+디스커버리+레스토랑+후기",
+      "google": "https://www.google.com/search?q=USJ+Discovery+Restaurant+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Discovery+Restaurant"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Discovery Restaurant",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/discovery-restaurant"
+      },
+      {
+        "title": "Discovery Restaurant - Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27001364/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 식당 가이드",
+        "url": "https://www.travelcaffeine.com/restaurant-reviews-dining-guide-universal-studios-japan/",
+        "source": "Travel Caffeine",
+        "snippet": "Discovery Restaurant 메뉴와 분위기 리뷰."
+      }
+    ]
+  },
+  "usj_jp_lost_world_restaurant": {
+    "name_ko": "로스트 월드 레스토랑",
+    "name_jp": "ロストワールド・レストラン",
+    "coords": [
+      34.6679,
+      135.4314
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "쥬라기 공원",
+    "attraction_type": "food",
+    "emoji": "🍖",
+    "tags": [
+      "그릴",
+      "다민족 메뉴",
+      "비건 옵션"
+    ],
+    "summary": "이슬라 누블라 정글 속 식당이라는 컨셉으로 리뉴얼된 USJ의 다문화 메뉴 그릴 레스토랑. 비프 스테이크 플레이트, 마사만 카레, 식물성 베트남 쌀국수, 호박 모양 ‘앰버’ 디저트 등.",
+    "detail": "리뉴얼 이후 미국식·아시안·비건 라인업을 한꺼번에 다루는 다양성 메뉴가 강점. 디저트 ‘아몬드 두부 & 모기 호박 젤리’는 영화 속 호박 안 모기 모티프를 살린 시그니처. 2,000~3,500엔대. 점심 피크(12~14시)에는 대기 30~50분, 14시 이후가 회전 좋다. 비건/할랄 친화 옵션이 표시되어 있어 동행자의 식이 제한이 있을 때 유용.",
+    "activities": [
+      "‘앰버 모기’ 디저트 인증샷",
+      "비건 베트남 쌀국수로 가벼운 점심 옵션 활용",
+      "14시 이후 늦은 점심으로 대기 단축"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+로스트+월드+레스토랑+후기",
+      "google": "https://www.google.com/search?q=USJ+Lost+World+Restaurant+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Lost+World+Restaurant"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Lost World Restaurant",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/lost-world-restaurant"
+      },
+      {
+        "title": "Universal Destinations - Lost World 리뉴얼 발표",
+        "url": "https://corporate.universaldestinationsandexperiences.com/the-lost-world-restaurant-reopens-at-universal-studios-japan-with-a-new-menu-reflecting-food-diversity/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ Lost World 리뉴얼 메뉴 정리",
+        "url": "https://www.travelcaffeine.com/restaurant-reviews-dining-guide-universal-studios-japan/",
+        "source": "Travel Caffeine",
+        "snippet": "리뉴얼 후 다문화 메뉴와 시그니처 디저트 리뷰."
+      }
+    ]
+  },
+  "usj_ww_waterworld": {
+    "name_ko": "워터월드",
+    "name_jp": "ウォーターワールド",
+    "coords": [
+      34.6675,
+      135.4307
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "워터월드",
+    "attraction_type": "show",
+    "emoji": "💦",
+    "tags": [
+      "라이브 스턴트",
+      "약 20분",
+      "수상 액션"
+    ],
+    "summary": "1995년 영화 ‘워터월드’ 세트를 재현한 약 20분짜리 야외 수상 스턴트 쇼. 폭발·화염·고공 다이브·제트스키 추격으로 진행되는 USJ 개장 원년 간판 라이브 액션.",
+    "detail": "수용 인원 약 3,220석(입석 120·휠체어 22 포함). 회당 약 20분, 하루 3~5회 공연. 앞쪽 ‘Soak Zone(물 튀김 구역)’에 앉으면 마리너가 직접 물을 끼얹는 인터랙션이 있다. 5월 오사카 평균 22~26도라 옷이 살짝 젖어도 견디기 좋은 시즌. 공연 30분 전 입장 시작, 인기 회차는 한 타임 일찍 줄 권장.",
+    "activities": [
+      "공연 30분 전 입장 후 ‘Soak Zone’ 좌석 확보",
+      "쇼 시작 전 프리쇼 ‘만담’ 컷 즐기기 (한국어 자막 없음)",
+      "쇼 직후 Amity Village로 도보 3분 이동해 Jaws 연계"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+워터월드+후기",
+      "google": "https://www.google.com/search?q=USJ+WaterWorld+show+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+WaterWorld+show"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - WaterWorld",
+        "url": "https://member.usj.co.jp/e/attraction/waterworld.html"
+      },
+      {
+        "title": "WaterWorld - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/WaterWorld"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 쇼·어트랙션 스케줄",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/show-and-attraction-schedule",
+        "source": "USJ 공식",
+        "snippet": "WaterWorld 공연 시간대 확인."
+      }
+    ]
+  },
+  "usj_am_jaws_ride": {
+    "name_ko": "죠스 더 라이드",
+    "name_jp": "ジョーズ",
+    "coords": [
+      34.668,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "애미티 빌리지",
+    "attraction_type": "ride",
+    "emoji": "🦈",
+    "tags": [
+      "보트 라이드",
+      "애미티 항구",
+      "스토리텔링"
+    ],
+    "summary": "영화 ‘죠스’의 무대 애미티 항구를 투어 보트로 도는 약 5~7분 스토리 라이드. 길이 7.6m 식인 상어가 일곱 번 등장하며 화염·물벼락 연출이 더해진다.",
+    "detail": "전 세계에서 현재 정상 운영 중인 유일한 ‘죠스’ 라이드(올랜도판은 폐쇄). 스키퍼(가이드 캐스트)의 일본어 애드리브가 매 회차마다 달라 두 번 타도 다른 경험. 신장 제한은 별도 없지만 큰 폭발·물튀김으로 영유아는 무서워할 수 있다. 익스프레스 패스 대상이며, 폭염 시즌(7~9월)이 아닌 5월에는 평일 대기 30~60분 수준.",
+    "activities": [
+      "스키퍼 일본어 애드리브 듣기 (한국어 자막 없음, 분위기로 즐김)",
+      "탑승 후 옆 Amity Landing Restaurant로 동선 연결",
+      "마지막 폭발 장면 카메라 타이밍 노리기"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+죠스+라이드+후기",
+      "google": "https://www.google.com/search?q=USJ+Jaws+Ride+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Jaws+Ride"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Jaws",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/jaws"
+      },
+      {
+        "title": "Jaws (ride) - Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Jaws_(ride)"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "JAWS Ride USJ 종합",
+        "url": "https://jawsride.net/jawsride-japan",
+        "source": "JAWS Ride Archive",
+        "snippet": "USJ 죠스 라이드 운영 정보와 스토리 디테일."
+      }
+    ]
+  },
+  "usj_am_boardwalk_snack": {
+    "name_ko": "보드워크 스낵",
+    "name_jp": "ボードウォーク・スナック",
+    "coords": [
+      34.6681,
+      135.4321
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "애미티 빌리지",
+    "attraction_type": "food",
+    "emoji": "🍕",
+    "tags": [
+      "피자",
+      "음료 바",
+      "간식 코너"
+    ],
+    "summary": "Amity Landing Restaurant 맞은편, 죠스 라이드 바로 옆 피자·음료 카운터. 한 손에 들고 다닐 수 있는 간이 메뉴로 라이드 줄 대기 사이 빠르게 끼니 해결.",
+    "detail": "주메뉴는 피자 슬라이스와 드링크 바 세트. 다른 카운터보다 약간 비싼 편이지만 음료 무한 리필이 포함된다. 좌석은 데크 야외석 중심이라 5월 오후 햇살 시간(13~15시)에는 그늘 자리 우선 확보. 알레르겐 정보는 점내 안내판으로 별도 표기.",
+    "activities": [
+      "음료 리필 세트로 한낮 휴식",
+      "Jaws 라이드 대기 줄 직전 빠른 끼니",
+      "야외 데크에서 애미티 빌리지 거리 사진 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+보드워크+스낵+후기",
+      "google": "https://www.google.com/search?q=USJ+Boardwalk+Snack+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Boardwalk+Snack"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Amity Village 영역",
+        "url": "https://www.usj.co.jp/web/en/us/areas/amity-village"
+      },
+      {
+        "title": "Boardwalk Snack - Lavie Taste",
+        "url": "https://www.lavietaste.com/en/restaurant/211102"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ Amity Village 다이닝 가이드",
+        "url": "https://www.travelcaffeine.com/restaurant-reviews-dining-guide-universal-studios-japan/",
+        "source": "Travel Caffeine",
+        "snippet": "Boardwalk Snack 메뉴와 좌석 분위기 리뷰."
+      }
+    ]
+  },
+  "usj_am_landing_restaurant": {
+    "name_ko": "애미티 랜딩 레스토랑",
+    "name_jp": "アミティ・ランディング・レストラン",
+    "coords": [
+      34.668,
+      135.4323
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "애미티 빌리지",
+    "attraction_type": "food",
+    "emoji": "🍗",
+    "tags": [
+      "프라이드 치킨",
+      "샤크 모티프",
+      "테이블 서비스"
+    ],
+    "summary": "죠스 라이드 출구 근처 조선소 컨셉 식당. 프라이드 치킨 샌드위치, 상어 고기 & 미트소스 샌드위치, 죠스 크림소다 스위스롤 등 USJ에서만 먹을 수 있는 시그니처 메뉴.",
+    "detail": "메뉴는 프라이드 치킨 중심으로 단순화되어 있어 회전이 빠르다. 죠스 크림소다 스위스롤은 크림소다 맛을 케이크로 옮긴 독특한 디저트로 파란 상어 지느러미 캔디가 토핑. 1,800~2,800엔대. 점심 피크 외에는 대기가 적고 실내 테이블 좌석이 많아 비/더위 회피 식당으로도 좋다.",
+    "activities": [
+      "상어 고기 & 미트소스 샌드위치 인증샷",
+      "죠스 크림소다 스위스롤로 디저트 마무리",
+      "비/햇살 시간대 휴식 카페로 활용"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+애미티+랜딩+레스토랑+후기",
+      "google": "https://www.google.com/search?q=USJ+Amity+Landing+Restaurant+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Amity+Landing+Restaurant"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Amity Landing Restaurant",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/amity-landing-restaurant"
+      },
+      {
+        "title": "Amity Landing Restaurant Review - Travel Caffeine",
+        "url": "https://www.travelcaffeine.com/amity-landing-restaurant-review/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "Amity Landing Restaurant - Tabelog",
+        "url": "https://tabelog.com/en/osaka/A2701/A270403/27012371/",
+        "source": "Tabelog",
+        "snippet": "유저 평점과 대표 메뉴 사진."
+      }
+    ]
+  },
+  "usj_event_cool_japan_2026": {
+    "name_ko": "유니버설 쿨 재팬 2026",
+    "name_jp": "ユニバーサル・クールジャパン 2026",
+    "coords": [
+      34.6668,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "USJ 공통",
+    "attraction_type": "event",
+    "emoji": "🇯🇵",
+    "tags": [
+      "시즌 이벤트",
+      "IP 콜라보",
+      "2026.1.30~"
+    ],
+    "summary": "USJ의 대표 시즌 이벤트. 2026년은 명탐정 코난, 주술회전, 장송의 프리렌, 가면산장 살인사건(히가시노 게이고), 몬스터 헌터 와일즈 5개 일본 IP가 라인업.",
+    "detail": "2026년 회차는 2026.1.30 ~ 2027.1.11 사이에 IP별로 일정이 다름. 2026년 5월 22~26일 여행 기간 중 운영 확정 항목: ‘주술회전: The Real 4-D’(~8.18), ‘명탐정 코난 미스터리 레스토랑 / x 스토리 라이드 / The Escape’(~6.30), ‘가면산장에서의 위험 — 참여형 미스터리 쇼’(~6.30), 몬스터 헌터 와일즈 테마 레스토랑은 5.17 종료라 본 여행 기간엔 종료. ‘프리렌’ 콜라보는 초여름 오픈 예정이라 5월 후반 오픈 여부는 출발 직전 공식 사이트 재확인 필요.",
+    "activities": [
+      "주술회전 The Real 4-D 우선 예약",
+      "명탐정 코난 미스터리 레스토랑 — 사전 예약 권장",
+      "출발 직전 공식 사이트에서 프리렌 콜라보 오픈일 재확인"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+쿨재팬+2026+후기",
+      "google": "https://www.google.com/search?q=Universal+Cool+Japan+2026+후기",
+      "youtube": "https://www.youtube.com/results?search_query=Universal+Cool+Japan+2026"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Universal Cool Japan 2026",
+        "url": "https://www.usj.co.jp/web/en/us/events/universal-cool-japan-2026"
+      },
+      {
+        "title": "USJ Newsroom - Cool Japan 2026 라인업 발표",
+        "url": "https://www.usj.co.jp/company/company_e/news/2025/1126/"
+      },
+      {
+        "title": "TDR Explorer - Universal Cool Japan 2026 Guide",
+        "url": "https://tdrexplorer.com/universal-cool-japan-2026-guide/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "Cool Japan 2026 - happyell 한국어 정리",
+        "url": "https://happyell.co.jp/world/usj/cooljapan2026/",
+        "source": "happyell",
+        "snippet": "IP별 콜라보 시작/종료일과 어트랙션 형식 요약."
+      }
+    ]
+  },
+  "usj_event_no_limit_parade": {
+    "name_ko": "NO LIMIT! 퍼레이드 — Discover U!!! 버전",
+    "name_jp": "NO LIMIT! パレード ～Discover U!!!～",
+    "coords": [
+      34.6665,
+      135.432
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "USJ 공통",
+    "attraction_type": "event",
+    "emoji": "🎉",
+    "tags": [
+      "낮 퍼레이드",
+      "25주년",
+      "2026.3.4~"
+    ],
+    "summary": "USJ 25주년 기념으로 갱신된 낮 퍼레이드. 헬로키티·피너츠·마리오 카트·포켓몬·미니언·세서미스트리트 캐릭터가 등장하며 25마리 피카츄가 한 번에 나오는 신규 연출.",
+    "detail": "운영 기간 2026.3.4 ~ 2027.1.11. 하루 1회, 보통 14:00 시작. 2026년 5월 22~26일 여행 기간 동안 매일 진행될 가능성이 높음(공식 일정 캘린더로 출발 전 확인). 신곡 ‘The Power of U’와 함께하는 자유 댄스 타임이 핵심 포인트. 명당은 할리우드 거리 정문 쪽과 NY 구역 코너, 시작 30~45분 전 자리잡기 권장.",
+    "activities": [
+      "14:00 퍼레이드 30~45분 전 자리잡기",
+      "Hollywood 거리 - NY 코너 명당 확보",
+      "퍼레이드 종료 후 슈퍼 닌텐도 월드 입장 정리권 시간대 정렬"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+NO+LIMIT+퍼레이드+후기",
+      "google": "https://www.google.com/search?q=USJ+NO+LIMIT+Parade+Discover+U+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+NO+LIMIT+Parade+Discover+U"
+    },
+    "sources": [
+      {
+        "title": "WDWNT - NO LIMIT! Parade Discover U!!! Version 발표",
+        "url": "https://wdwnt.com/2026/03/no-limit-parade-discover-u-version-for-universal-studios-japans-25th-anniversary/"
+      },
+      {
+        "title": "USJ 공식 - Show and Attraction Schedule",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/show-and-attraction-schedule"
+      },
+      {
+        "title": "NBCUniversal - Discover U!!! 25주년 가이드",
+        "url": "https://www.nbcuniversal.com/article/complete-guide-universal-studios-japans-discover-u-25th-anniversary-celebration"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 25주년 퍼레이드 한국어 정리",
+        "url": "https://happyell.co.jp/world/usj/usj25th/",
+        "source": "happyell",
+        "snippet": "Discover U!!! 캐릭터 라인업과 명당 자리 팁."
+      }
+    ]
+  },
+  "usj_event_spectacle_night_parade": {
+    "name_ko": "유니버설 스펙터클 나이트 퍼레이드",
+    "name_jp": "ユニバーサル・スペクタクル・ナイト・パレード",
+    "coords": [
+      34.6666,
+      135.4318
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "USJ 공통",
+    "attraction_type": "event",
+    "emoji": "🌃",
+    "tags": [
+      "야간 퍼레이드",
+      "프로젝션 매핑",
+      "베스트 오브 헐리우드"
+    ],
+    "summary": "‘The Best of Hollywood’ 부제의 야간 퍼레이드. 트랜스포머·쥬라기 월드·해리포터·미니언 등 USJ 간판 IP를 노면 프로젝션 매핑과 함께 행진하는 USJ 시그니처 야간 쇼.",
+    "detail": "운영 여부와 시각은 시즌별로 다르며, 2026년에는 25주년 ‘Discover U!!!’ 라인업이 메인이라 본 야간 퍼레이드는 일부 일정에만 편성될 수 있다. 출발 직전 USJ 공식 ‘Show and Attraction Schedule’에서 해당 날짜(5/22~26) 운영 여부와 시작 시각을 반드시 재확인. 명당은 할리우드 메인 스트리트 정문 쪽 보도. 운영 시 약 45분 소요.",
+    "activities": [
+      "공식 스케줄 페이지에서 당일 운영 여부 확인",
+      "할리우드 메인 스트리트 명당 1시간 전 확보",
+      "퍼레이드 후 폐장 동선(정문) 그대로 연결"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+스펙터클+나이트+퍼레이드+후기",
+      "google": "https://www.google.com/search?q=USJ+Universal+Spectacle+Night+Parade+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Universal+Spectacle+Night+Parade"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Universal Spectacle Night Parade",
+        "url": "https://member.usj.co.jp/e/attraction/universal-spectacle-night-parade.html"
+      },
+      {
+        "title": "USJ 공식 - Show and Attraction Schedule",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/show-and-attraction-schedule"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "Universal Spectacle Night Parade 후기",
+        "url": "https://travelfeed.com/@wittyzell/wdzxygye",
+        "source": "TravelFeed",
+        "snippet": "프로젝션 매핑 야간 퍼레이드 체험기."
+      }
+    ]
+  },
+  "usj_event_wonder_christmas": {
+    "name_ko": "유니버설 원더 크리스마스",
+    "name_jp": "ユニバーサル・ワンダー・クリスマス",
+    "coords": [
+      34.6668,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "USJ 공통",
+    "attraction_type": "event",
+    "emoji": "🎄",
+    "tags": [
+      "겨울 시즌",
+      "11~1월 한정",
+      "비운영(5월 여행)"
+    ],
+    "summary": "USJ 겨울 시즌 이벤트. NO LIMIT! Party Tree 점등, ‘Light Up the Night Christmas Celebration’ 야간 쇼, 크리스마스 푸드 페스티벌이 핵심. 매년 11월 중순부터 다음 해 1월 초까지만 운영.",
+    "detail": "최근 시즌은 2025.11.19 ~ 2026.1.4로 운영되었고, 차기 회차도 11월 중순 ~ 1월 초 패턴 예상. 2026년 5월 22~26일 여행 기간에는 비운영이며 정보 차원에서 등록. 다음 일본 겨울 여행 계획 시 참고용. 점등식과 야간 쇼는 Gramercy Park 일대가 메인 무대.",
+    "activities": [
+      "5월 여행에는 비운영 — 정보용 등록",
+      "겨울 재방문 시 점등식 일정 확인",
+      "Light Up the Night 야간 쇼 명당 사전 답사"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+크리스마스+이벤트+후기",
+      "google": "https://www.google.com/search?q=USJ+Universal+Wonder+Christmas+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Universal+Wonder+Christmas"
+    },
+    "sources": [
+      {
+        "title": "Japan Cheapo - USJ Christmas 2026",
+        "url": "https://japancheapo.com/events/no-limit-christmas-at-universal-studios-japan/"
+      },
+      {
+        "title": "WDWNT - USJ 2025 Christmas 발표",
+        "url": "https://wdwnt.com/2025/09/universal-studios-japan-2025-christmas-event-new-food-festival/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 크리스마스 2025-2026 가이드",
+        "url": "https://jw-webmagazine.com/tips/universal-studios-japan-christmas/",
+        "source": "Japan Web Magazine",
+        "snippet": "점등 일정·야간 쇼·푸드 페스티벌 종합 정리."
+      }
+    ]
+  },
+  "usj_event_halloween_horror_nights": {
+    "name_ko": "할로윈 호러 나이트 / 유니버설 서프라이즈 할로윈",
+    "name_jp": "ハロウィーン・ホラー・ナイト / ユニバーサル・サプライズ・ハロウィーン",
+    "coords": [
+      34.6668,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "USJ 공통",
+    "attraction_type": "event",
+    "emoji": "🎃",
+    "tags": [
+      "가을 시즌",
+      "9~11월 한정",
+      "비운영(5월 여행)"
+    ],
+    "summary": "USJ의 대표 가을 시즌 이벤트. 낮은 패밀리/캐릭터 중심의 ‘서프라이즈 할로윈’, 밤은 좀비·호러 메이즈 중심의 ‘할로윈 호러 나이트’로 분리 운영된다.",
+    "detail": "직전 시즌은 2025.9.5 ~ 2025.11.3 운영. 2026 회차 일정은 여름에 공식 발표 예정이지만 통상 9월 초 ~ 11월 초 패턴. 2026년 5월 22~26일 여행 기간에는 비운영이며 정보 차원에서 등록. 다음 가을 일본 여행 계획 시 참고용.",
+    "activities": [
+      "5월 여행에는 비운영 — 정보용 등록",
+      "가을 재방문 시 야간 호러 메이즈 예약",
+      "낮 ‘서프라이즈 할로윈’ 캐릭터 그리팅 시간 확인"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+할로윈+호러+나이트+후기",
+      "google": "https://www.google.com/search?q=USJ+Halloween+Horror+Nights+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Halloween+Horror+Nights"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Halloween Horror Nights 2025",
+        "url": "https://www.usj.co.jp/web/en/us/events/fall-2025/halloween-horror-nights-2025"
+      },
+      {
+        "title": "Japan Cheapo - Halloween Horror Night 2026",
+        "url": "https://japancheapo.com/events/halloween-horror-night/"
+      }
+    ],
+    "curated_links": [
+      {
+        "title": "USJ 할로윈 호러 나이트 2025 정리",
+        "url": "https://tdrexplorer.com/halloween-horror-nights-2025-at-universal-studios-japan/",
+        "source": "TDR Explorer",
+        "snippet": "메이즈 라인업과 입장 운영 방식."
+      }
+    ]
+  },
+  "usj_hw_hollywood_dream_ride": {
+    "name_ko": "할리우드 드림 더 라이드 (정방향 + 백드롭)",
+    "name_jp": "ハリウッド・ドリーム・ザ・ライド／バックドロップ",
+    "coords": [
+      34.666,
+      135.433
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "할리우드",
+    "attraction_type": "ride",
+    "emoji": "🎢",
+    "tags": [
+      "대형 코스터",
+      "B&M",
+      "온보드 사운드",
+      "백드롭 역방향",
+      "신장 132cm+"
+    ],
+    "summary": "정상에서 43m 낙하하는 USJ 대표 코스터 — 정방향과 좌석이 뒤로 향하는 백드롭 두 가지 트랙이 같은 레일을 사용.",
+    "detail": "Bolliger & Mabillard 제작 강철 코스터. 최대 속도 약 90km/h, 길이 약 1,200m, 최고점 43~44m. 라이드 중 좌석 스피커로 음악을 선택해 들으며 달릴 수 있다. 2013년부터 운영 중인 백드롭(BackDrop) 버전은 좌석이 뒤를 향한 채 같은 트랙을 달려, 정상에서 뒤로 떨어지는 시점에 시야가 없어 체감 공포가 크다. 정방향과 백드롭은 입구가 다르며 대기열도 따로 잡아야 한다. 시즌 한정으로 '디텍티브 코난 X 스토리 라이드'(2026년 Universal Cool Japan) 버전이 같은 트랙에서 운영되기도 한다.",
+    "activities": [
+      "정방향 트랙 탑승 (오픈런 직후 줄 짧음)",
+      "백드롭(역방향) 트랙 도전",
+      "탑승 전 음악 선택 후 라이드 중 감상",
+      "시즌 이벤트(코난·시즌별 콜라보) 버전 체크"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+할리우드+드림+백드롭+후기",
+      "google": "https://www.google.com/search?q=USJ+Hollywood+Dream+Backdrop+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+할리우드+드림+백드롭"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Hollywood Dream The Ride",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/hollywood-dream-the-ride"
+      },
+      {
+        "title": "USJ 공식 - Hollywood Dream BackDrop",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/hollywood-dream-the-ride-backdrop"
+      },
+      {
+        "title": "Wikipedia - Hollywood Dream – The Ride",
+        "url": "https://en.wikipedia.org/wiki/Hollywood_Dream_%E2%80%93_The_Ride"
+      }
+    ],
+    "rating": 4.6,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "USJ 공식 - 백드롭",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/hollywood-dream-the-ride-backdrop",
+        "source": "USJ",
+        "snippet": "좌석이 뒤를 향한 채 같은 트랙을 달리는 백드롭 버전 안내."
+      }
+    ]
+  },
+  "usj_hw_space_fantasy_ride": {
+    "name_ko": "스페이스 판타지 더 라이드",
+    "name_jp": "スペース・ファンタジー・ザ・ライド",
+    "coords": [
+      34.6661,
+      135.4332
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "할리우드",
+    "attraction_type": "ride",
+    "emoji": "🚀",
+    "tags": [
+      "실내 코스터",
+      "스피닝",
+      "시뮬레이션",
+      "신장 122cm+"
+    ],
+    "summary": "회전하는 좌석으로 우주를 여행하는 실내 스피닝 코스터 — 2025년 1월 재개장.",
+    "detail": "2010년 3월 18일 개장. 좌석이 진행 방향과 무관하게 자유 회전하는 스피닝 코스터로, 실내 트랙에 프로젝션·레이저·온보드 사운드·광섬유 조명이 결합돼 우주 항해 시뮬레이션을 구현한다. 2023년 1월부터 약 2년간 휴장 후 2025년 1월 25일 재개장. E.T. 어드벤처가 있던 자리에 들어섰다.",
+    "activities": [
+      "실내 스피닝 코스터 탑승",
+      "큐 라인 우주선 콘셉트 관람",
+      "재개장 후 신규 영상 효과 확인"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+스페이스+판타지+후기",
+      "google": "https://www.google.com/search?q=USJ+Space+Fantasy+The+Ride+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+스페이스+판타지"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Space Fantasy The Ride",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/space-fantasy-the-ride"
+      },
+      {
+        "title": "Wikipedia - Space Fantasy – The Ride",
+        "url": "https://en.wikipedia.org/wiki/Space_Fantasy_%E2%80%93_The_Ride"
+      },
+      {
+        "title": "Inside The Magic - Space Fantasy Return",
+        "url": "https://insidethemagic.net/2024/11/universal-studios-return-space-fantasy-ride-cj1/"
+      }
+    ],
+    "rating": 4.3,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Space Fantasy 재개장 안내",
+        "url": "https://insidethemagic.net/2024/11/universal-studios-return-space-fantasy-ride-cj1/",
+        "source": "Inside The Magic",
+        "snippet": "2년간의 휴장 끝에 2025년 1월 다시 운영을 시작한 스피닝 코스터."
+      }
+    ]
+  },
+  "usj_hw_sing_on_tour": {
+    "name_ko": "싱 온 투어",
+    "name_jp": "シング・オン・ツアー",
+    "coords": [
+      34.6659,
+      135.4328
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "할리우드",
+    "attraction_type": "show",
+    "emoji": "🎤",
+    "tags": [
+      "라이브 쇼",
+      "콘서트",
+      "일루미네이션 시어터",
+      "패밀리"
+    ],
+    "summary": "애니메이션 '싱'의 캐릭터들이 콘서트를 펼치는 일루미네이션 시어터의 실내 라이브 쇼.",
+    "detail": "할리우드 구역의 일루미네이션 시어터에서 진행되는 콘서트형 라이브 쇼. 애니메이션 '싱(Sing)'의 버스터 문, 미나, 애시, 조니 등 캐릭터가 무대에서 노래·춤·관객 호응을 펼친다. 일본어 진행이지만 노래는 영어 곡 위주라 언어 장벽이 낮은 편. 회당 약 25~30분, 입장은 쇼 시작 전 줄을 서서 받으며 좌석은 자유석.",
+    "activities": [
+      "콘서트형 라이브 쇼 관람",
+      "쇼 후 캐릭터 포토",
+      "일루미네이션 시어터 입장 줄 서기"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+싱+온+투어+후기",
+      "google": "https://www.google.com/search?q=USJ+Sing+on+Tour+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+싱+온+투어"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - SING on Tour",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/sing-on-tour"
+      }
+    ],
+    "rating": 4.4,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "SING on Tour 공식",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/sing-on-tour",
+        "source": "USJ",
+        "snippet": "버스터 문이 이끄는 콘서트형 라이브 쇼."
+      }
+    ]
+  },
+  "usj_hw_universal_studios_globe": {
+    "name_ko": "유니버설 스튜디오 글로브",
+    "name_jp": "ユニバーサル・スタジオ・グローブ",
+    "coords": [
+      34.6664,
+      135.4334
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "할리우드",
+    "attraction_type": "landmark",
+    "emoji": "🌐",
+    "tags": [
+      "인증샷",
+      "랜드마크",
+      "정문",
+      "회전 지구본"
+    ],
+    "summary": "정문 바로 안쪽에서 천천히 회전하는 거대 지구본 — USJ 대표 인증샷 스팟.",
+    "detail": "정문(Studio Gate)을 통과하자마자 마주치는 회전 지구본 조형물. 안개와 음악이 함께 흐르며, USJ에 도착했다는 신호 역할을 한다. 1912년 유니버설 초창기 로고를 오마주한 디자인. 오전 10~11시경 역광 없이 깔끔하게 찍히고, 와이드 앵글(0.5x)로 찍으면 글로브 전체가 잘 담긴다. 야간에는 조명 켜진 상태로 또 다른 분위기.",
+    "activities": [
+      "정문 도착 인증샷 촬영",
+      "오전 역광 없는 시간대 사진 촬영",
+      "야간 조명 글로브 재촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+글로브+인증샷",
+      "google": "https://www.google.com/search?q=USJ+Universal+Studios+Globe+photo",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+글로브"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 파크 맵",
+        "url": "https://www.usj.co.jp/web/en/us/service-guide/parkmap"
+      },
+      {
+        "title": "Trip.com - Universal Globe 가이드",
+        "url": "https://in.trip.com/moments/poi-universal-globe-147537066/"
+      }
+    ],
+    "rating": 4.6,
+    "rating_source": "Google",
+    "curated_links": [
+      {
+        "title": "Universal Globe 촬영 팁",
+        "url": "https://in.trip.com/moments/poi-universal-globe-147537066/",
+        "source": "Trip.com",
+        "snippet": "오전 10~11시 역광 없는 시간대와 와이드 앵글 활용 팁."
+      }
+    ]
+  },
+  "usj_hw_mels_drive_in": {
+    "name_ko": "멜스 드라이브인",
+    "name_jp": "メルズ・ドライブイン",
+    "coords": [
+      34.6662,
+      135.4329
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "할리우드",
+    "attraction_type": "food",
+    "emoji": "🍔",
+    "tags": [
+      "아메리칸 다이너",
+      "버거",
+      "밀크셰이크",
+      "50년대 분위기"
+    ],
+    "summary": "1950년대 미국 드라이브인을 재현한 할리우드 구역의 대형 다이너 — 버거·밀크셰이크의 정석.",
+    "detail": "약 590석 규모의 대형 다이너로, 입구 앞에 빈티지 컨버터블이 전시된 1950년대 미국 분위기. 시그니처는 멜스 클래식 치즈버거 세트, 베이컨 치즈버거, 두꺼운 밀크셰이크. 좌석 회전이 빨라 점심 피크에도 줄이 비교적 짧은 편. 1인 1,000~1,800엔대 가격.",
+    "activities": [
+      "클래식 치즈버거 세트 식사",
+      "수제 밀크셰이크 시음",
+      "빈티지 자동차 앞 포토존"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+멜스+드라이브인+후기",
+      "google": "https://www.google.com/search?q=USJ+Mel%27s+Drive-In+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+멜스+드라이브인"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Mel's Drive-In",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/mels-drive-in"
+      }
+    ],
+    "rating": 3.49,
+    "rating_source": "Tabelog",
+    "curated_links": [
+      {
+        "title": "멜스 드라이브인 후기",
+        "url": "https://www.keyzard.cc/happykoala2020/nb/223803406136",
+        "source": "네이버 블로그",
+        "snippet": "버거 메뉴와 좌석 분위기, 회전율 좋은 다이너 후기."
+      }
+    ]
+  },
+  "usj_ny_spider_man_4k3d": {
+    "name_ko": "어메이징 어드벤처 오브 스파이더맨 더 라이드 4K3D",
+    "name_jp": "アメージング・アドベンチャー・オブ・スパイダーマン・ザ・ライド 4K3D",
+    "coords": [
+      34.6665,
+      135.4324
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "뉴욕",
+    "attraction_type": "ride",
+    "emoji": "🕷️",
+    "tags": [
+      "폐장",
+      "다크 라이드",
+      "4K3D",
+      "구 어트랙션"
+    ],
+    "summary": "뉴욕 구역의 대표 다크 라이드였던 4K3D 스파이더맨 — 2024년 1월 22일 영구 폐장.",
+    "detail": "2004년 1월 23일 개장해 20년간 USJ 뉴욕 구역의 시그니처 어트랙션이었던 4K3D 다크 라이드. 마블/유니버설 라이선스 계약(올랜도 외 20년 한정)에 따라 2024년 1월 22일 영구 폐장했다. 이후 2024년 6월부터 철거가 시작됐고, 후속 어트랙션(포켓몬 테마로 알려진 신규 프로젝트)이 들어설 예정으로 알려져 있다. **현재 운영 종료** — 방문 계획 시 대체 어트랙션 동선을 따로 짤 것.",
+    "activities": [
+      "운영 종료 상태 — 부지 변화 확인",
+      "뉴욕 구역 후속 어트랙션 정보 체크"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+스파이더맨+라이드+폐장",
+      "google": "https://www.google.com/search?q=USJ+Spider-Man+ride+closed",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+스파이더맨+마지막"
+    },
+    "sources": [
+      {
+        "title": "Inside Universal - Spider-Man USJ closes",
+        "url": "https://www.insideuniversal.net/2024/01/the-amazing-adventures-of-spider-man-officially-closes-at-universal-studios-japan/"
+      },
+      {
+        "title": "WDW News Today - Spider-Man USJ closed",
+        "url": "https://wdwnt.com/2024/01/amazing-adventures-of-spider-man-ride-closed-usj/"
+      }
+    ],
+    "rating": 4.6,
+    "rating_source": "Tripadvisor (운영 당시)",
+    "curated_links": [
+      {
+        "title": "스파이더맨 USJ 폐장 보도",
+        "url": "https://www.insideuniversal.net/2024/01/the-amazing-adventures-of-spider-man-officially-closes-at-universal-studios-japan/",
+        "source": "Inside Universal",
+        "snippet": "2024년 1월 22일 자정 영구 폐장, 6월부터 철거 진행."
+      }
+    ]
+  },
+  "usj_ny_universal_monsters_rock": {
+    "name_ko": "유니버설 몬스터 라이브 로큰롤 쇼",
+    "name_jp": "ユニバーサル・モンスター・ライブ・ロックンロール・ショー",
+    "coords": [
+      34.6667,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "뉴욕",
+    "attraction_type": "show",
+    "emoji": "🧛",
+    "tags": [
+      "라이브 쇼",
+      "로큰롤",
+      "유니버설 몬스터",
+      "비틀쥬스"
+    ],
+    "summary": "비틀쥬스가 진행하는 약 30분짜리 로큰롤 라이브 쇼 — 902석 대형 야외 극장.",
+    "detail": "비틀쥬스가 호스트로 등장해 드라큘라, 늑대인간, 프랑켄슈타인 부부 등 유니버설 클래식 몬스터들이 1950~60년대 로큰롤·팝송에 맞춰 노래와 춤을 펼치는 약 30분 길이의 라이브 쇼. 902석 규모 야외 극장에서 진행되며 일본어 멘트가 섞여도 음악 중심이라 즐기기 쉽다. 상시 운영이지만 쇼 회차는 시즌별로 달라 당일 스케줄 확인 필수.",
+    "activities": [
+      "라이브 로큰롤 쇼 관람",
+      "쇼 시작 15분 전 좌석 확보",
+      "공연 후 캐릭터 포토 기회"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+유니버설+몬스터+라이브",
+      "google": "https://www.google.com/search?q=USJ+Universal+Monsters+Live+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Universal+Monsters+Live+Rock"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Universal Monsters Live Rock and Roll Show",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/universal-monster-live-rock-and-roll-show"
+      },
+      {
+        "title": "Wikipedia - Universal Monsters Live Rock and Roll Show",
+        "url": "https://en.wikipedia.org/wiki/Universal_Monsters_Live_Rock_and_Roll_Show"
+      }
+    ],
+    "rating": 4.5,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Universal Monsters Live 공식",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/universal-monster-live-rock-and-roll-show",
+        "source": "USJ",
+        "snippet": "비틀쥬스와 클래식 몬스터들의 30분 로큰롤 라이브."
+      }
+    ]
+  },
+  "usj_ny_demon_slayer_xr_ride": {
+    "name_ko": "귀멸의 칼날 XR 라이드",
+    "name_jp": "鬼滅の刃 XRライド",
+    "coords": [
+      34.6666,
+      135.4323
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "뉴욕",
+    "attraction_type": "event",
+    "emoji": "⚔️",
+    "tags": [
+      "시즌 이벤트",
+      "운영 종료",
+      "VR 코스터",
+      "Universal Cool Japan"
+    ],
+    "summary": "할리우드 드림 트랙 위에서 VR 헤드셋으로 즐겼던 귀멸의 칼날 시즌 한정 XR 라이드 — 2025년 1월 5일 종료.",
+    "detail": "2024년 7월 19일부터 2025년 1월 5일까지 Universal Cool Japan 시즌 한정으로 운영된 VR 헤드셋 결합형 XR 라이드. 할리우드 드림 더 라이드 트랙을 사용해 도공의 마을 편 스토리를 VR로 보여주는 구성이었다. 이전에 2021~2022년 무한열차편 버전이 운영된 적도 있다. **현재 운영 종료** — 2026년 재오픈 여부는 미확인. 시즌 이벤트라 향후 부활 가능성은 있으나 USJ 공식 발표 확인 필요.",
+    "activities": [
+      "현재 운영 여부 미확인 — 방문 전 USJ 공식 시즌 이벤트 페이지 확인",
+      "2026년 Universal Cool Japan 라인업에 포함되는지 체크"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+귀멸의칼날+XR+후기",
+      "google": "https://www.google.com/search?q=USJ+Demon+Slayer+XR+Ride+2026",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+鬼滅の刃+XR"
+    },
+    "sources": [
+      {
+        "title": "TDR Explorer - Demon Slayer XR Ride",
+        "url": "https://tdrexplorer.com/demon-slayer-kimetsu-no-yaiba-xr-ride-ride-through-the-village-of-swordsmiths-at-universal-studios-japan/"
+      },
+      {
+        "title": "GOOD LUCK TRIP - Demon Slayer XR Ride",
+        "url": "https://www.gltjp.com/en/directory/item/16167/"
+      }
+    ],
+    "rating": 4.7,
+    "rating_source": "Tripadvisor (운영 당시)",
+    "curated_links": [
+      {
+        "title": "Demon Slayer XR Ride 가이드",
+        "url": "https://tdrexplorer.com/demon-slayer-kimetsu-no-yaiba-xr-ride-ride-through-the-village-of-swordsmiths-at-universal-studios-japan/",
+        "source": "TDR Explorer",
+        "snippet": "2024년 7월~2025년 1월 한정 도공의 마을 편 XR 라이드."
+      }
+    ]
+  },
+  "usj_ny_detective_conan_world": {
+    "name_ko": "명탐정 코난 더 월드",
+    "name_jp": "名探偵コナン・ザ・ワールド",
+    "coords": [
+      34.6665,
+      135.4321
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "뉴욕",
+    "attraction_type": "event",
+    "emoji": "🔍",
+    "tags": [
+      "시즌 이벤트",
+      "Universal Cool Japan 2026",
+      "리얼 탈출",
+      "스토리 라이드"
+    ],
+    "summary": "2026년 Universal Cool Japan 시즌 이벤트 — 리얼 탈출 게임·스토리 라이드·미스터리 레스토랑 3종 구성.",
+    "detail": "Universal Cool Japan 2026의 메인 콘텐츠로 2026년 1월 30일~6월 30일 운영. 세 가지 어트랙션으로 구성: (1) Stage 18의 '명탐정 코난 더 이스케이프 — 고속도로의 프롤로그' 리얼 탈출 게임, (2) 할리우드 드림 더 라이드 트랙을 사용하는 '명탐정 코난 X 스토리 라이드: 오토 드라이브 고우 로그'(2/2~2/21 정비 휴장), (3) 미스터리·미식·라이브 음악을 결합한 디텍티브 코난 미스터리 레스토랑. 2026년 5~6월 방문 시 시즌 막바지라 굿즈·푸드 일부 품절 가능성 있음.",
+    "activities": [
+      "코난 리얼 탈출 게임 사전 예약",
+      "코난 스토리 라이드(할리우드 드림 트랙) 탑승",
+      "미스터리 레스토랑 예약",
+      "한정 굿즈·푸드 수집"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+코난+더+월드+2026",
+      "google": "https://www.google.com/search?q=USJ+Detective+Conan+The+World+2026",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+名探偵コナン+2026"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Detective Conan: The World",
+        "url": "https://www.usj.co.jp/web/en/us/events/universal-cool-japan-2026/conan"
+      },
+      {
+        "title": "TDR Explorer - Universal Cool Japan 2026 Guide",
+        "url": "https://tdrexplorer.com/universal-cool-japan-2026-guide/"
+      },
+      {
+        "title": "USJ 보도자료 - Universal Cool Japan 2026 라인업",
+        "url": "https://www.usj.co.jp/company/company_e/news/2025/1126/"
+      }
+    ],
+    "rating": 4.5,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Universal Cool Japan 2026 가이드",
+        "url": "https://tdrexplorer.com/universal-cool-japan-2026-guide/",
+        "source": "TDR Explorer",
+        "snippet": "코난·진격의 거인·SPY×FAMILY·원피스·몬스터 헌터 5종 라인업 종합 안내."
+      }
+    ]
+  },
+  "usj_ny_finnegans_bar_grill": {
+    "name_ko": "피네건스 바 앤 그릴",
+    "name_jp": "フィネガンズ・バー＆グリル",
+    "coords": [
+      34.6664,
+      135.4325
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "뉴욕",
+    "attraction_type": "food",
+    "emoji": "🍺",
+    "tags": [
+      "아이리시 펍",
+      "식당",
+      "맥주",
+      "셰퍼드 파이"
+    ],
+    "summary": "뉴욕 델란시 거리 콘셉트의 아이리시 펍 — 셰퍼드 파이·피쉬앤칩스·드래프트 맥주.",
+    "detail": "뉴욕에 정착한 아일랜드 이민자 펍을 표방한 풀서비스 식당. 셰퍼드 파이, 피쉬앤칩스, 뱅어스 앤 매시, 콘비프 등 영국·아일랜드식 메뉴와 드래프트 맥주를 제공한다. 어두운 우드톤의 펍 인테리어와 라이브 음악이 흐르는 시간대(특히 저녁)가 좋은 분위기. USJ 내에서 술과 함께 천천히 식사하기 적합한 자리. 1인 2,000~3,500엔대.",
+    "activities": [
+      "셰퍼드 파이·피쉬앤칩스 식사",
+      "드래프트 맥주 페어링",
+      "저녁 시간대 펍 분위기 즐기기"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+피네건스+바+후기",
+      "google": "https://www.google.com/search?q=USJ+Finnegan%27s+Bar+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Finnegan%27s+Bar"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Finnegan's Bar & Grill",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/finnegans-bar-and-grill"
+      },
+      {
+        "title": "USJ 공식 - Finnegan's 메뉴",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/finnegans-bar-and-grill/menu"
+      }
+    ],
+    "rating": 3.55,
+    "rating_source": "Tabelog",
+    "curated_links": [
+      {
+        "title": "Finnegan's Bar & Grill 공식",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/finnegans-bar-and-grill",
+        "source": "USJ",
+        "snippet": "뉴욕 구역의 아이리시 펍 식당."
+      }
+    ]
+  },
+  "usj_sf_backdraft": {
+    "name_ko": "백드래프트",
+    "name_jp": "バックドラフト",
+    "coords": [
+      34.6672,
+      135.4322
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "샌프란시스코",
+    "attraction_type": "event",
+    "emoji": "🔥",
+    "tags": [
+      "폐장",
+      "라이브 이펙트 쇼",
+      "특수효과",
+      "구 어트랙션"
+    ],
+    "summary": "샌프란시스코 구역의 라이브 이펙트 쇼였던 백드래프트 — 2023년 5월 영구 폐장 발표.",
+    "detail": "영화 '백드래프트'(1991, 론 하워드 감독)의 화재 장면을 실내 세트에서 실제 화염·열·물 분사로 재현하는 라이브 이펙트 쇼였다. 2020년 9월 코로나로 임시 휴장 후 2023년 5월 16일 USJ가 재개장 계획이 없음을 공식 발표했고, 부지는 미니언 파크 확장(빌런-콘 미니언 블라스트, 2025년 여름 오픈)에 활용됐다. **현재 운영 종료** — 방문 시 샌프란시스코 구역에는 이 어트랙션이 더 이상 없음을 인지할 것.",
+    "activities": [
+      "운영 종료 상태 — 부지는 미니언 파크 확장으로 전환",
+      "샌프란시스코 구역 잔존 콘텐츠(거리 풍경·식당) 동선만 활용"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+백드래프트+폐장",
+      "google": "https://www.google.com/search?q=USJ+Backdraft+closed",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Backdraft+attraction"
+    },
+    "sources": [
+      {
+        "title": "Wikipedia - Backdraft (attraction)",
+        "url": "https://en.wikipedia.org/wiki/Backdraft_(attraction)"
+      },
+      {
+        "title": "USJ 공식 - 폐장 어트랙션 안내",
+        "url": "https://www.usj.co.jp/web/en/us/park-guide/schedule/attraction-closure"
+      }
+    ],
+    "rating": 4.2,
+    "rating_source": "Tripadvisor (운영 당시)",
+    "curated_links": [
+      {
+        "title": "Backdraft 폐장 안내",
+        "url": "https://en.wikipedia.org/wiki/Backdraft_(attraction)",
+        "source": "Wikipedia",
+        "snippet": "2023년 5월 16일 USJ가 재개장 계획 없음을 공식 발표."
+      }
+    ]
+  },
+  "usj_sf_lombards_landing": {
+    "name_ko": "롬바드 랜딩",
+    "name_jp": "ロンバーズ・ランディング",
+    "coords": [
+      34.6671,
+      135.4321
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "샌프란시스코",
+    "attraction_type": "food",
+    "emoji": "🦞",
+    "tags": [
+      "해산물",
+      "식당",
+      "샌프란시스코 콘셉트",
+      "피셔맨즈 워프"
+    ],
+    "summary": "샌프란시스코 피셔맨즈 워프를 재현한 외관의 해산물 풀서비스 식당.",
+    "detail": "실제 샌프란시스코 피셔맨즈 워프의 부두 건물을 모티프로 한 외관에 실내는 빈티지 어선·등대 모형으로 꾸민 해산물 식당. 시그니처는 시푸드 치오피노(이탈리아계 SF 명물 해산물 스튜), 새우 칵테일, 마히마히 타코, 피셔맨즈 바스켓(튀김 모듬), 클램 차우더. USJ 내 해산물 메인의 거의 유일한 풀서비스 옵션이라 점심·저녁에 좌석이 빨리 차는 편. 1인 2,000~3,500엔대.",
+    "activities": [
+      "치오피노 해산물 스튜 식사",
+      "클램 차우더 + 사워도우 보울",
+      "샌프란시스코 부두 콘셉트 내부 관람"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+롬바드+랜딩+후기",
+      "google": "https://www.google.com/search?q=USJ+Lombard%27s+Landing+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Lombard%27s+Landing"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Lombard's Landing",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/lombards-landing"
+      },
+      {
+        "title": "Thrill Data - Lombard's Landing USJ",
+        "url": "https://www.thrill-data.com/restaurants/lombards-landing-usj"
+      }
+    ],
+    "rating": 3.5,
+    "rating_source": "Tabelog",
+    "curated_links": [
+      {
+        "title": "Lombard's Landing 공식",
+        "url": "https://www.usj.co.jp/web/en/us/restaurants/lombards-landing",
+        "source": "USJ",
+        "snippet": "샌프란시스코 피셔맨즈 워프 콘셉트 해산물 식당."
+      }
+    ]
+  },
+  "usj_uw_flying_snoopy": {
+    "name_ko": "더 플라잉 스누피",
+    "name_jp": "ザ・フライング・スヌーピー",
+    "coords": [
+      34.668,
+      135.4317
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "유니버설 원더랜드",
+    "attraction_type": "ride",
+    "emoji": "🐶",
+    "tags": [
+      "어린이 라이드",
+      "패밀리",
+      "조종 가능",
+      "스누피 스튜디오"
+    ],
+    "summary": "스누피 등에 올라타 직접 높이를 조절하며 하늘을 도는 어린이 친화 라이드.",
+    "detail": "스누피 모양 캐빈을 타고 중심축을 따라 회전하는 클래식 회전형 패밀리 라이드. 각 캐빈 안에서 레버로 캐빈 높이를 직접 조절할 수 있어 어린이가 조종하는 재미가 있다. 1인 탑승 가능 신장 122cm 이상(보호자 동반 시 더 낮은 신장도 OK). 스누피 스튜디오 서브 존에 위치.",
+    "activities": [
+      "스누피 캐빈 직접 조종 탑승",
+      "스누피 스튜디오 포토존",
+      "원더랜드 입구에서 한 컷"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+플라잉+스누피+후기",
+      "google": "https://www.google.com/search?q=USJ+Flying+Snoopy+한국+후기",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+The+Flying+Snoopy"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - The Flying Snoopy",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/the-flying-snoopy"
+      },
+      {
+        "title": "Coasterpedia - The Flying Snoopy",
+        "url": "https://coasterpedia.net/wiki/The_Flying_Snoopy"
+      }
+    ],
+    "rating": 4.1,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Flying Snoopy 공식",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/the-flying-snoopy",
+        "source": "USJ",
+        "snippet": "어린이도 직접 캐빈 높이를 조종하는 패밀리 회전 라이드."
+      }
+    ]
+  },
+  "usj_uw_hello_kitty_cupcake_dream": {
+    "name_ko": "헬로키티의 컵케이크 드림",
+    "name_jp": "ハローキティのカップケーキ・ドリーム",
+    "coords": [
+      34.6681,
+      135.4316
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "유니버설 원더랜드",
+    "attraction_type": "ride",
+    "emoji": "🧁",
+    "tags": [
+      "어린이 라이드",
+      "회전 컵",
+      "헬로키티",
+      "패션 애비뉴"
+    ],
+    "summary": "헬로키티 캐릭터 컵케이크에 올라타 빙글빙글 도는 회전 컵 라이드.",
+    "detail": "헬로키티 패션 애비뉴 서브 존의 메인 패밀리 라이드. 컵케이크 모양의 회전 컵에 4~5명이 함께 올라타 가운데 핸들로 회전 속도를 직접 조절하며 도는 클래식 티컵 스타일. 신장 제한 없이 보호자 동반 시 영유아도 탑승 가능. 야간에는 컵 외부 LED 조명이 켜져 분위기가 또 다르다.",
+    "activities": [
+      "회전 컵 핸들 조작 탑승",
+      "헬로키티 패션 애비뉴 산책",
+      "야간 LED 조명 컵 촬영"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+헬로키티+컵케이크+후기",
+      "google": "https://www.google.com/search?q=USJ+Hello+Kitty+Cupcake+Dream",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Hello+Kitty+Cupcake+Dream"
+    },
+    "sources": [
+      {
+        "title": "USJ 공식 - Hello Kitty's Cupcake Dream",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/hello-kittys-cupcake-dream"
+      }
+    ],
+    "rating": 4,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Hello Kitty's Cupcake Dream 공식",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/hello-kittys-cupcake-dream",
+        "source": "USJ",
+        "snippet": "컵케이크 모양 회전 컵에서 핸들로 속도를 조절."
+      }
+    ]
+  },
+  "usj_uw_snoopys_great_race": {
+    "name_ko": "스누피의 그레이트 레이스",
+    "name_jp": "スヌーピーのグレートレース",
+    "coords": [
+      34.6679,
+      135.4318
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "유니버설 원더랜드",
+    "attraction_type": "ride",
+    "emoji": "🏎️",
+    "tags": [
+      "어린이 코스터",
+      "실내 코스터",
+      "패밀리",
+      "신장 92cm+"
+    ],
+    "summary": "스누피와 함께 달리는 어린이용 실내 미니 롤러코스터.",
+    "detail": "스누피 스튜디오 내 실내 패밀리 코스터. 우드스톡 우체부 가방을 콘셉트로 한 차량을 타고 짧은 트랙을 도는 어린이 입문용 코스터로, 신장 92cm 이상부터 보호자 동반 탑승 가능. 코스 자체는 가볍지만 어린이에게는 첫 코스터 경험으로 적합. 실내라 날씨 영향이 적다.",
+    "activities": [
+      "실내 패밀리 코스터 탑승",
+      "어린이 첫 코스터 입문",
+      "스누피 스튜디오 인도어 플레이"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+스누피+그레이트+레이스",
+      "google": "https://www.google.com/search?q=USJ+Snoopy%27s+Great+Race",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Snoopy+Great+Race"
+    },
+    "sources": [
+      {
+        "title": "Coasterpedia - Snoopy's Great Race",
+        "url": "https://coasterpedia.net/wiki/Snoopy%27s_Great_Race"
+      },
+      {
+        "title": "USJ 공식 - Snoopy Studios",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/snoopy-studios"
+      }
+    ],
+    "rating": 4,
+    "rating_source": "Tripadvisor",
+    "curated_links": [
+      {
+        "title": "Snoopy Studios 안내",
+        "url": "https://www.usj.co.jp/web/en/us/attractions/snoopy-studios",
+        "source": "USJ",
+        "snippet": "스누피 스튜디오 내 어린이 실내 코스터."
+      }
+    ]
+  },
+  "usj_uw_elmos_go_go_skateboard": {
+    "name_ko": "엘모의 고고 스케이트보드",
+    "name_jp": "エルモのゴーゴー・スケートボード",
+    "coords": [
+      34.6682,
+      135.4319
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "유니버설 원더랜드",
+    "attraction_type": "event",
+    "emoji": "🛹",
+    "tags": [
+      "폐장 예정",
+      "Rockin' Tug",
+      "세서미 스트리트",
+      "신장 92cm+"
+    ],
+    "summary": "세서미 스트리트 펀 월드의 'Rockin' Tug' 패밀리 라이드 — 2026년 5월 10일 폐장.",
+    "detail": "엘모가 탄 거대한 스케이트보드에 올라 좌우로 흔들리며 가운데 축을 따라 회전하는 'Rockin' Tug' 타입 라이드. 2015년 3월 18일 세서미 스트리트 펀 월드 확장 시 오픈해 어른도 즐길 만한 어린이 라이드로 인기였다. **2026년 5월 10일 세서미 스트리트 펀 월드 전체 영구 폐장**과 함께 운영을 종료한 상태로, 현재(2026년 5월 21일 기준) **운영 종료** — 이후 부지는 새로운 콘텐츠로 재단장 예정.",
+    "activities": [
+      "운영 종료 상태 — 폐장 이후 부지 재단장 정보 추적",
+      "세서미 캐릭터는 파크 내 퍼레이드·미트앤그릿에서 계속 만남 가능"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+엘모+스케이트보드+폐장",
+      "google": "https://www.google.com/search?q=USJ+Elmo+Go-Go+Skateboard+closed",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Elmo+Go-Go+Skateboard"
+    },
+    "sources": [
+      {
+        "title": "Coasterpedia - Elmo's Go-Go Skateboard",
+        "url": "https://coasterpedia.net/wiki/Elmo%27s_Go-Go_Skateboard"
+      },
+      {
+        "title": "USJ 공식 보도 - Sesame Street Fun World 종료",
+        "url": "https://www.usj.co.jp/company/company_e/news/2026/0309/"
+      },
+      {
+        "title": "TDR Explorer - Sesame Street Fun World 폐장",
+        "url": "https://tdrexplorer.com/universal-studios-japan-to-close-sesame-street-fun-world-in-may-2026/"
+      }
+    ],
+    "rating": 4.3,
+    "rating_source": "Tripadvisor (운영 당시)",
+    "curated_links": [
+      {
+        "title": "Sesame Street Fun World 폐장 안내",
+        "url": "https://tdrexplorer.com/universal-studios-japan-to-close-sesame-street-fun-world-in-may-2026/",
+        "source": "TDR Explorer",
+        "snippet": "2026년 5월 10일 세서미 스트리트 펀 월드 전체 영구 폐장."
+      }
+    ]
+  },
+  "usj_uw_big_birds_big_top_circus": {
+    "name_ko": "빅버드의 빅탑 서커스",
+    "name_jp": "ビッグバードのビッグトップ・サーカス",
+    "coords": [
+      34.6683,
+      135.4318
+    ],
+    "category": "alt",
+    "parent": "usj",
+    "park_zone": "유니버설 원더랜드",
+    "attraction_type": "event",
+    "emoji": "🎪",
+    "tags": [
+      "폐장 예정",
+      "회전목마",
+      "세서미 스트리트",
+      "패밀리"
+    ],
+    "summary": "빅버드가 서커스 단장이 되는 세서미 스트리트의 회전목마 — 2026년 5월 10일 폐장.",
+    "detail": "빅버드가 서커스 단장이 된 콘셉트로, 형형색색 동물 모형에 올라타 회전하는 클래식 회전목마(메리고라운드) 형식 라이드. 신장 제한 없이 보호자 동반 시 영유아도 탑승 가능했다. **2026년 5월 10일 세서미 스트리트 펀 월드 전체 영구 폐장**과 함께 운영을 종료. 작별 이벤트 'Forever Friends – Always Together'(3/20~5/10) 동안 한정 기념 카드를 배포했다. 현재(2026년 5월 21일 기준) **운영 종료**.",
+    "activities": [
+      "운영 종료 상태 — 폐장 이후 부지 재단장 정보 추적",
+      "빅버드는 다른 구역 퍼레이드·미트앤그릿에서 계속 만남 가능"
+    ],
+    "review_links": {
+      "naver": "https://search.naver.com/search.naver?query=USJ+빅버드+서커스",
+      "google": "https://www.google.com/search?q=USJ+Big+Bird+Big+Top+Circus",
+      "youtube": "https://www.youtube.com/results?search_query=USJ+Big+Bird+Big+Top+Circus"
+    },
+    "sources": [
+      {
+        "title": "Coasterpedia - Big Bird's Big Top Circus",
+        "url": "https://coasterpedia.net/wiki/Big_Bird%27s_Big_Top_Circus"
+      },
+      {
+        "title": "USJ 공식 보도 - Sesame Street Fun World 종료",
+        "url": "https://www.usj.co.jp/company/company_e/news/2026/0309/"
+      },
+      {
+        "title": "Haveagood Holiday - Forever Friends 이벤트",
+        "url": "https://www.haveagood-holiday.com/en/articles/usj-sesame-street-fun-world-closing-forever-friends-event"
+      }
+    ],
+    "rating": 4.1,
+    "rating_source": "Tripadvisor (운영 당시)",
+    "curated_links": [
+      {
+        "title": "Sesame Street Fun World 작별 이벤트",
+        "url": "https://www.haveagood-holiday.com/en/articles/usj-sesame-street-fun-world-closing-forever-friends-event",
+        "source": "Holiday Travel",
+        "snippet": "3/20~5/10 작별 이벤트 후 5/10 폐장."
+      }
+    ]
   }
 }
