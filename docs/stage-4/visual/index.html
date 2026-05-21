@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 4 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 4 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -24,6 +24,10 @@
         background: #fff;
         border-bottom: 1px solid #e0e0de;
         padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
       }
       header h1 {
         font-size: 1.4rem;
@@ -35,6 +39,21 @@
         font-size: 0.9rem;
         color: #6b7280;
         margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
       }
       nav.timeline {
         background: #fff;
@@ -54,7 +73,7 @@
         flex: 1;
         height: 2px;
         background: #d1d5db;
-        min-width: 2.5rem;
+        min-width: 1.5rem;
       }
       .timeline-node {
         width: 2rem;
@@ -71,9 +90,14 @@
         background: #0f766e;
         color: #fff;
       }
-      .timeline-node.muted {
+      .timeline-node.past {
         background: #9ca3af;
         color: #fff;
+      }
+      .timeline-node.future {
+        background: transparent;
+        color: #0f766e;
+        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -97,6 +121,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -108,6 +137,8 @@
         }
         header {
           padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         nav.timeline {
           padding: 1rem;
@@ -166,58 +197,38 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-      h4.retro-sub {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #374151;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: 0.75rem;
-        margin-bottom: 0.35rem;
-      }
-      .table-wrapper {
-        overflow-x: auto;
-        margin-top: 0.5rem;
-      }
-      .table-wrapper table {
-        border-collapse: collapse;
-        width: 100%;
-        font-size: 0.85rem;
-        color: #374151;
-      }
-      .table-wrapper th,
-      .table-wrapper td {
-        border: 1px solid #e5e7eb;
-        padding: 0.35rem 0.6rem;
-        text-align: left;
-        vertical-align: top;
-      }
-      .table-wrapper th {
-        background: #f9fafb;
-        font-weight: 600;
-        color: #111827;
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
-      <p>Staged plan progress</p>
+      <div>
+        <h1>Japan Travel Plan</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <nav class="lang-switch" aria-label="Language">
+        <span class="current-lang">EN</span> |
+        <a href="index.ko.html">한국어</a>
+      </nav>
     </header>
 
     <nav class="timeline" aria-label="Project stages">
       <div class="timeline-item">
-        <div class="timeline-node muted">1</div>
+        <div class="timeline-node past">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">2</div>
+        <div class="timeline-node past">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">3</div>
+        <div class="timeline-node past">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -227,70 +238,79 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node future">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">6</div>
+        <div class="timeline-node future">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node future">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">9</div>
+        <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">10</div>
+        <div class="timeline-node future">10</div>
         <span class="timeline-label">Stage 10</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+        <div class="timeline-node future">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+        <div class="timeline-node future">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">13</div>
+        <div class="timeline-node future">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+        <div class="timeline-node future">14</div>
         <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">15</div>
+        <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 4</h2>
+        <p class="stage-summary">
+          QA pass covering all 21 stops, hash routing edge cases, iOS safe-area
+          inset, cross-browser validation, and a full README.
+        </p>
         <div class="card-grid">
           <article aria-labelledby="card-qa">
-            <h3 id="card-qa">QA, Cross-Browser, Final Polish</h3>
+            <h3 id="card-qa">QA</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                마지막 가드레일. (1) 21개 stop이 전부 클릭으로 열리는가, (2) URL
-                공유와 invalid hash가 graceful하게 처리되는가, (3) iOS 모바일
-                안전영역에 탭바가 가려지지 않는가, (4) 누가 보든 README로 실행이
-                되는가.
+                The final guardrail before going live: (1) all 21 stops must be
+                clickable, (2) URL sharing and invalid hashes must degrade
+                gracefully, (3) iOS safe-area must not obscure the tab bar, (4)
+                anyone should be able to run the app from the README.
               </p>
             </div>
 
@@ -298,28 +318,28 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>scripts/smoke-test.md</code> &#8212; 21 stop 회귀
-                  체크리스트 (Day별 place_id 표 +
-                  라우팅&#183;모바일&#183;크로스브라우저 항목)
+                  <code>scripts/smoke-test.md</code> &mdash; 21-stop regression
+                  checklist (place_id table per day + routing / mobile /
+                  cross-browser items)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; hash routing 정규화 +
-                  디테일 패널 자동 close 로직 + <code>buildHash()</code> 헬퍼
-                  (리뷰 피드백 반영 리팩토링)
+                  <code>assets/app.js</code> &mdash; hash routing normalization
+                  + detail panel auto-close logic (two issues found during smoke
+                  test) + <code>buildHash()</code> helper (refactored from
+                  review feedback)
                 </li>
                 <li>
-                  <code>assets/styles.css</code> &#8212;
-                  <code>#mobile-tabs</code>에
-                  <code>padding-bottom: env(safe-area-inset-bottom, 0)</code> +
-                  높이 가산
+                  <code>assets/styles.css</code> &mdash;
+                  <code>#mobile-tabs</code> gains
+                  <code>padding-bottom: env(safe-area-inset-bottom, 0)</code>
                 </li>
                 <li>
-                  <code>README.md</code> &#8212; 실행 / 데이터 수정 / 검증 /
-                  디렉토리 구조 가이드
+                  <code>README.md</code> &mdash; run / data-edit / validate /
+                  directory structure guide
                 </li>
                 <li>
-                  최종 리뷰 트리오 통과 (code-reviewer-pro + gemini-subagent
-                  &#8212; codex는 MCP 도구 등록 에러로 fallback)
+                  Final review trio passed (code-reviewer-pro + gemini-subagent;
+                  Codex fell back due to MCP tool schema error)
                 </li>
               </ul>
             </div>
@@ -327,22 +347,17 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                headless Chromium으로
-                <code>http://127.0.0.1:54130/</code>에 접속해 21개 stop을 hash
-                변경으로 자동 순회. 각 stop의 디테일 헤더가 로드되는지 확인
-                &#8594; 21/21 모두 한국어 명소명이 정확히 표시됨.
-              </p>
-              <p style="margin-top: 0.5rem">
-                추가 시나리오: <code>#day9/foo</code> (invalid) &#8594; URL
-                정규화 + detail hidden 처리. Same-day stop switch &#8594; 디테일
-                헤더만 갱신 정상. Mobile viewport (390&#215;844) &#8594; 탭바
-                표시, safe-area inset 적용.
-              </p>
-              <p style="margin-top: 0.5rem">
-                검증: <code>node scripts/validate-data.mjs</code> &#8594;
-                &#10003; 65 places, 5 days.
-                <code>node --test tests/validate-data.test.mjs</code>
-                &#8594; 11 pass.
+                A headless Chromium script cycled through all 21 stops via hash
+                changes, confirming each detail header loaded correctly. Two
+                routing edge cases were found and fixed: an invalid hash
+                (<code>#day9/foo</code>) previously left stale UI; fixed with
+                <code>history.replaceState</code> normalization and detail-panel
+                auto-hide. Same-day stop switches and mobile viewport
+                (390&times;844) were also validated. After all fixes:
+                <code>node scripts/validate-data.mjs</code> &rarr; 65 places, 5
+                days;
+                <code>node --test tests/validate-data.test.mjs</code> &rarr; 11
+                pass.
               </p>
             </div>
 
@@ -352,179 +367,40 @@
                 <li><code>scripts/smoke-test.md</code></li>
                 <li><code>README.md</code></li>
                 <li>
-                  <code>assets/app.js:325&#8211;336</code> (<code
-                    >buildHash</code
-                  >
-                  헬퍼)
+                  <code>assets/app.js:325-336</code> (<code>buildHash</code>
+                  helper)
                 </li>
                 <li>
-                  <code>assets/app.js:344&#8211;355</code> (<code>boot()</code>
-                  URL 정규화 + 옵셔널 체이닝)
+                  <code>assets/app.js:344-355</code> (<code>boot()</code> URL
+                  normalization + optional chaining)
                 </li>
                 <li>
-                  <code>assets/app.js:365&#8211;400</code> (<code
-                    >hashchange</code
-                  >
+                  <code>assets/app.js:365-400</code> (<code>hashchange</code>
                   handler)
                 </li>
                 <li>
-                  <code>assets/styles.css:81&#8211;85</code> (<code
+                  <code>assets/styles.css:81-85</code> (<code
                     >#mobile-tabs</code
                   >
                   safe-area-inset)
                 </li>
               </ul>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commits: <code>42b3967</code> fix(routing) &#183;
-                <code>adfbce5</code> fix(mobile) &#183;
-                <code>522feda</code> test(qa) &#183; <code>8d2e1a8</code> docs
-                &#183; <code>d373c60</code> refactor(routing)
-              </p>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
-
-              <h4 class="retro-sub">잘된 점</h4>
-              <ul>
-                <li>
-                  Headless 브라우저 스크립트로 21 stop을 빠르게 순회 &#8212;
-                  수동 클릭쓰루 대비 시간 절약 + 매번 정확히 동일한 시퀀스 보장.
-                </li>
-                <li>
-                  Smoke test가 의도된 가드레일 역할 &#8212; invalid hash와
-                  day-switch detail close 두 이슈 모두 manual review로는 못
-                  잡았을 라우팅 엣지케이스.
-                </li>
-                <li>
-                  리뷰 트리오 피드백 합집합으로 정리 &#8594; 헬퍼 추출 + 옵셔널
-                  체이닝으로 작은 리팩토링을 끝내 회귀 없이 안전성 보강.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">다음에 가져갈 것</h4>
-              <ul>
-                <li>
-                  <code>parseHash</code>가 invalid 입력에 대해 silent fallback
-                  하기보다 caller가 정상화하도록 시그널을 주는 패턴 (예:
-                  <code>valid: false</code>)이 더 명확할 수 있음.
-                </li>
-                <li>
-                  Codex CLI가 MCP 도구 schema 충돌로 실패 &#8212; gemini와
-                  code-reviewer-pro 둘이서도 동일한 핵심 finding을 잡았으므로
-                  stage gate에는 영향 없었음.
-                </li>
-                <li>
-                  Firefox 실기 테스트는 헤드리스에서 검증 불가 &#8212; 실제 사용
-                  전 한 번 띄워 확인 권장.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">리뷰 처리 요약</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Reviewer</th>
-                      <th>Finding</th>
-                      <th>처리</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>code-reviewer-pro</td>
-                      <td>
-                        Critical: 옵셔널 체이닝 없는
-                        <code>find().stops[idx].place_id</code>
-                      </td>
-                      <td>적용 (<code>d373c60</code>)</td>
-                    </tr>
-                    <tr>
-                      <td>gemini-subagent</td>
-                      <td>MAJOR: brittle property access</td>
-                      <td>위와 동일하게 처리</td>
-                    </tr>
-                    <tr>
-                      <td>gemini-subagent</td>
-                      <td>MINOR: boot()/hashchange 중복 로직</td>
-                      <td><code>buildHash()</code> 추출로 해소</td>
-                    </tr>
-                    <tr>
-                      <td>gemini-subagent</td>
-                      <td>
-                        MAJOR: 디테일 패널 visibility regression (same-day
-                        switch)
-                      </td>
-                      <td>
-                        <strong>Dismiss</strong> &#8212; 코드 구조 오독.
-                        <code>else</code>는 <code>if (open)</code> 페어로 day
-                        같은 케이스에선 if 블록만 실행. 실제 same-day switch도
-                        정상 동작 검증 완료.
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>codex-subagent</td>
-                      <td>(MCP 도구 schema 에러로 본문 미생성)</td>
-                      <td>다음 환경 점검 항목</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-              <h4 class="retro-sub">Codex PR Review (별도 단계)</h4>
-              <p
-                style="font-size: 0.9rem; color: #374151; margin-bottom: 0.5rem"
+              <em
+                >The headless smoke script caught two routing edge cases that
+                manual review had missed. The Codex PR review (3 rounds, 16
+                findings) produced purely mechanical defensive fixes &mdash; all
+                applied without ambiguity. The
+                <code>parseHash</code> silent-fallback pattern is noted for
+                improvement in future SPAs: a <code>valid: false</code> signal
+                to the caller would be cleaner.</em
               >
-                PR #1에 <code>@codex review</code> 트리거 후 3 라운드 진행, 총
-                16건 finding 모두 적용:
-              </p>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>Round</th>
-                      <th>Findings</th>
-                      <th>주요 처리</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>6 (P1&#215;1, P2&#215;4, P3&#215;1)</td>
-                      <td>
-                        hashchange &#8594; <code>selectStop()</code> 호출로
-                        deep-link marker/flyTo 복원; validator
-                        coords-as-finite/sources-as-array/HH:MM 범위/https only
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>5 (P2&#215;3, P3&#215;2)</td>
-                      <td>
-                        coords:null 처리, day5 stops nullish 가드, sidebar
-                        cost_jpy=0 &#8594; "무료", hashchange 자기-재진입 가드
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>5 (P2&#215;5)</td>
-                      <td>
-                        validator root-level defensive guards
-                        (<code>isPlainObject</code>, places/itinerary 객체 검증,
-                        day.stops 명시적 요구)
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p style="font-size: 0.85rem; color: #6b7280; margin-top: 0.5rem">
-                모두 mechanical/defensive fix로 ambiguity 없음 &#8594;
-                auto-apply. PR 본 후 cap 도달로 종료.
-              </p>
             </div>
           </article>
         </div>
-        <!-- /.card-grid -->
       </section>
     </main>
   </body>

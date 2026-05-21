@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 1 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 1 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -24,6 +24,10 @@
         background: #fff;
         border-bottom: 1px solid #e0e0de;
         padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
       }
       header h1 {
         font-size: 1.4rem;
@@ -35,6 +39,21 @@
         font-size: 0.9rem;
         color: #6b7280;
         margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
       }
       nav.timeline {
         background: #fff;
@@ -54,7 +73,7 @@
         flex: 1;
         height: 2px;
         background: #d1d5db;
-        min-width: 2.5rem;
+        min-width: 1.5rem;
       }
       .timeline-node {
         width: 2rem;
@@ -71,9 +90,14 @@
         background: #0f766e;
         color: #fff;
       }
-      .timeline-node.muted {
+      .timeline-node.past {
         background: #9ca3af;
         color: #fff;
+      }
+      .timeline-node.future {
+        background: transparent;
+        color: #0f766e;
+        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -97,6 +121,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -108,6 +137,8 @@
         }
         header {
           padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         nav.timeline {
           padding: 1rem;
@@ -166,21 +197,23 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-      h4.retro-sub {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #374151;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: 0.75rem;
-        margin-bottom: 0.35rem;
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
-      <p>Staged plan progress</p>
+      <div>
+        <h1>Japan Travel Plan</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <nav class="lang-switch" aria-label="Language">
+        <span class="current-lang">EN</span> |
+        <a href="index.ko.html">&#54620;&#44397;&#50612;</a>
+      </nav>
     </header>
 
     <nav class="timeline" aria-label="Project stages">
@@ -190,85 +223,95 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">2</div>
+        <div class="timeline-node future">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">3</div>
+        <div class="timeline-node future">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">4</div>
+        <div class="timeline-node future">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node future">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">6</div>
+        <div class="timeline-node future">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node future">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">9</div>
+        <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">10</div>
+        <div class="timeline-node future">10</div>
         <span class="timeline-label">Stage 10</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+        <div class="timeline-node future">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+        <div class="timeline-node future">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">13</div>
+        <div class="timeline-node future">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+        <div class="timeline-node future">14</div>
         <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">15</div>
+        <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 1</h2>
+        <p class="stage-summary">
+          Project skeleton with end-to-end wiring: data loading, Leaflet map,
+          sidebar, detail panel, and hash routing validated against 5 sample
+          places.
+        </p>
         <div class="card-grid">
           <article aria-labelledby="card-skeleton">
-            <h3 id="card-skeleton">Project Skeleton + Routing + End-to-End</h3>
+            <h3 id="card-skeleton">Skeleton</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                설계 전체를 한 번에 만들기 전에 데이터 &#8594; 지도 &#8594;
-                사이드바 &#8594; 디테일 &#8594; 라우팅의 와이어링이 처음부터
-                끝까지 동작하는지 5개 sample 명소로 검증한다. 60개 데이터를 채운
-                뒤 와이어링이 안 맞으면 되돌리기 비싸기 때문.
+                Before building the full design, the data &rarr; map &rarr;
+                sidebar &rarr; detail &rarr; routing wiring needed to be
+                verified end-to-end with 5 sample locations. Fixing a wiring
+                mismatch after adding 60 entries would be expensive to reverse.
               </p>
             </div>
 
@@ -276,25 +319,26 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>index.html</code> 골격 + Leaflet 1.9.4 / Tailwind play
-                  CDN / Pretendard CDN 임포트
+                  <code>index.html</code> skeleton + Leaflet 1.9.4 / Tailwind
+                  play CDN / Pretendard CDN imports
                 </li>
                 <li>
-                  <code>assets/styles.css</code> day 색상 CSS 변수(<code
-                    >--day-1</code
-                  >
-                  &#8211; <code>--day-5</code>) + numbered-marker 스타일 +
-                  모바일 media query
+                  <code>assets/styles.css</code> &mdash; day color CSS variables
+                  (<code>--day-1</code> through <code>--day-5</code>),
+                  numbered-marker styles, mobile media query
                 </li>
                 <li>
-                  <code>assets/app.js</code> 데이터 로더(error handling 포함),
-                  Leaflet 마커, 사이드바, 디테일 패널, hash router, XSS-safe
-                  <code>esc()</code>/<code>safeHref()</code> 헬퍼
+                  <code>assets/app.js</code> &mdash; data loader (with error
+                  handling), Leaflet markers, sidebar, detail panel, hash
+                  router, XSS-safe <code>esc()</code> /
+                  <code>safeHref()</code> helpers
                 </li>
-                <li><code>data/itinerary.json</code> Day1 5개 stop</li>
                 <li>
-                  <code>data/places.json</code> 5개 sample (간사이공항,
-                  난바숙소, 구로몬, 덴덴타운, 도톤보리)
+                  <code>data/itinerary.json</code> &mdash; Day 1 with 5 stops
+                </li>
+                <li>
+                  <code>data/places.json</code> &mdash; 5 sample entries (Kansai
+                  Airport, Namba hotel, Kuromon, Denden Town, Dotonbori)
                 </li>
               </ul>
             </div>
@@ -302,79 +346,61 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Vanilla ES6, 단일 모듈 (<code>assets/app.js</code>). 상태는
-                in-memory <code>state</code> 객체. 지도는
-                <code>fitBounds</code>로 day 전체 보이도록 시작, 클릭 시
-                <code>flyTo</code>. URL hash는 <code>#dayN/placeId</code> 포맷,
-                새로고침해도 상태 복원. <code>boot()</code>는 데이터 fetch 실패
-                시 한국어 에러 메시지를 표시.
+                Vanilla ES6, single module (<code>assets/app.js</code>). State
+                is held in an in-memory <code>state</code> object. The map
+                starts with <code>fitBounds</code> to show the full day, then
+                <code>flyTo</code> on click. URL hash uses the format
+                <code>#dayN/placeId</code> and restores state on refresh.
+                <code>boot()</code> displays a Korean error message if data
+                fetch fails.
               </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
-                <li><code>index.html</code> (스켈레톤 + CDN imports)</li>
+                <li><code>index.html</code> (skeleton + CDN imports)</li>
                 <li>
-                  <code>assets/styles.css</code> (day 색상 CSS vars +
-                  numbered-marker + 모바일 media query)
+                  <code>assets/styles.css</code> (day color CSS vars +
+                  numbered-marker + mobile media query)
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>DAY_COLORS</code> /
+                  <code>assets/app.js</code> &mdash; <code>DAY_COLORS</code> /
                   <code>dayColor</code> / <code>esc</code> /
-                  <code>safeHref</code> helpers
+                  <code>safeHref</code>
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>state</code>,
+                  <code>assets/app.js</code> &mdash; <code>state</code>,
                   <code>loadData</code>, <code>initMap</code>
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>renderDay</code>,
-                  <code>selectStop</code> (지도 + 마커)
+                  <code>assets/app.js</code> &mdash; <code>renderDay</code>,
+                  <code>selectStop</code>
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>renderSidebar</code>,
-                  <code>renderDetail</code>, <code>renderProgressBar</code> (UI)
+                  <code>assets/app.js</code> &mdash; <code>renderSidebar</code>,
+                  <code>renderDetail</code>, <code>renderProgressBar</code>
                 </li>
                 <li>
-                  <code>assets/app.js</code> &#8212; <code>parseHash</code>,
-                  <code>boot</code>, <code>hashchange</code> listener (라우팅)
+                  <code>assets/app.js</code> &mdash; <code>parseHash</code>,
+                  <code>boot</code>, <code>hashchange</code> listener
                 </li>
                 <li>
                   <code>data/places.json</code>,
-                  <code>data/itinerary.json</code> (5 places, Day1)
+                  <code>data/itinerary.json</code> (5 places, Day 1)
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
-              <ul>
-                <li>
-                  잘 된 점: TDD 없이도 per-task spec+code 리뷰가 critical 이슈
-                  6개를 사전 차단 (loadData 에러 처리, XSS escaping, null 가드,
-                  DAY_COLORS 폴백, hashchange race, aria-label).
-                </li>
-                <li>
-                  잘 된 점: Tailwind play CDN + Pretendard로 빌드 단계 없이
-                  미려한 UI 확보, 단일 HTML로 로컬 실행 가능.
-                </li>
-                <li>
-                  조심할 점 (Stage 2 직전 처리): renderSidebar/renderDetail에
-                  place 가드 추가 (60개 데이터 타이포 대비), 같은 날 내
-                  hashchange 시 sidebar 동기화.
-                </li>
-                <li>
-                  Stage 3로 이연: <code>mobile-tabs</code> 비어 있음 (계획대로
-                  Stage 3.1에서 채움),
-                  <code>.numbered-marker.active</code> CSS는 dead code지만 Stage
-                  3.3에서 활성화 예정이므로 보존.
-                </li>
-                <li>
-                  Stage 2 readiness: Ready with caveats &#8212; Critical 가드
-                  픽스 후 진입.
-                </li>
-              </ul>
+              <em
+                >Per-task spec and code review caught 6 critical issues before
+                any data was filled (loadData error handling, XSS escaping, null
+                guards, DAY_COLORS fallback, hashchange race, aria-label).
+                Tailwind play CDN + Pretendard delivered a polished UI with no
+                build step, runnable as a single local HTML file.</em
+              >
             </div>
           </article>
         </div>

@@ -20,9 +20,11 @@ function esc(s) {
     .replace(/"/g, "&quot;");
 }
 
-/** Returns url only if it starts with https://, else "#". For href= safety. */
+/** Returns url only if it starts with https://, else "#". Attribute-escaped
+ *  so a URL like `https://x/" onmouseover="alert(1)` cannot break out of an
+ *  href="…" double-quoted attribute. */
 function safeHref(url) {
-  return url && /^https:\/\//.test(url) ? url : "#";
+  return url && /^https:\/\//.test(url) ? esc(url) : "#";
 }
 
 function renderActivity(a, color) {
@@ -120,6 +122,34 @@ function getTransitEndpoints(dayId, stopIndex) {
     origin = state.places[last?.place_id];
   }
   return origin ? { origin, dest } : null;
+}
+
+function renderBooking(place, color) {
+  const b = place?.booking;
+  if (!b?.url) return "";
+  const reqBadge = b.required
+    ? '<span class="ml-2 text-xs font-semibold px-2 py-0.5 rounded bg-red-100 text-red-700">필수</span>'
+    : '<span class="ml-2 text-xs font-semibold px-2 py-0.5 rounded bg-slate-100 text-slate-600">선택</span>';
+  const price =
+    Number.isInteger(b.ticket_price_jpy) && b.ticket_price_jpy > 0
+      ? `¥${b.ticket_price_jpy.toLocaleString()}`
+      : "";
+  const advance =
+    Number.isInteger(b.advance_days) && b.advance_days > 0
+      ? `${b.advance_days}일 전 권장`
+      : "당일 가능";
+  const meta = [price, advance].filter(Boolean).join(" · ");
+  const notes = b.notes
+    ? `<div class="text-xs text-slate-600 mt-1">${esc(b.notes)}</div>`
+    : "";
+  return `
+    <h3 class="mt-5 font-semibold text-slate-800">예약${reqBadge}</h3>
+    <a href="${safeHref(b.url)}" target="_blank" rel="noopener" class="mt-2 block border rounded-lg p-3 hover:bg-slate-50">
+      <div class="text-xs uppercase tracking-wide" style="color:${color}">공식 예약·티켓</div>
+      <div class="font-semibold text-sm mt-1">예약 페이지 열기 →</div>
+      ${meta ? `<div class="text-xs text-slate-500 mt-1">${esc(meta)}</div>` : ""}
+      ${notes}
+    </a>`;
 }
 
 function renderCuratedLink(link, color) {
@@ -614,6 +644,10 @@ function renderDetail(stop, place) {
   const dirButton = dirUrl
     ? `<a href="${safeHref(dirUrl)}" target="_blank" rel="noopener" class="inline-block mt-2 text-xs font-semibold px-3 py-1 rounded border hover:bg-slate-100" style="border-color:${color};color:${color}">Google Maps에서 실제 경로·시간 보기 →</a>`
     : "";
+  const transitBookingButton =
+    t && typeof t.booking_url === "string" && /^https:\/\//.test(t.booking_url)
+      ? `<a href="${safeHref(t.booking_url)}" target="_blank" rel="noopener" class="inline-block mt-2 ml-2 text-xs font-semibold px-3 py-1 rounded border bg-white hover:bg-slate-100" style="border-color:${color};color:${color}">🎫 e-티켓 예약 →</a>`
+      : "";
   const transitCard = t
     ? `
     <div class="mx-5 mt-4 p-3 rounded border-l-4 bg-slate-50" style="border-color:${color}">
@@ -623,7 +657,7 @@ function renderDetail(stop, place) {
         ${esc(t.mode)} · ${esc(t.minutes)}분${t.cost_jpy ? ` · ¥${esc(t.cost_jpy)}` : " · 무료"}
       </div>
       ${t.note ? `<div class="text-xs text-slate-500 mt-1">${esc(t.note)}</div>` : ""}
-      ${dirButton}
+      ${dirButton}${transitBookingButton}
     </div>`
     : "";
 
@@ -658,6 +692,8 @@ function renderDetail(stop, place) {
         </ul>`
           : ""
       }
+
+      ${renderBooking(place, color)}
 
       ${
         place.restaurants && place.restaurants.length
@@ -747,6 +783,7 @@ function renderProgressBar() {
       location.hash = `#${btn.dataset.day}`;
     });
   });
+  renderChecklistToggle();
 }
 
 function setMobileView(view) {
@@ -754,8 +791,11 @@ function setMobileView(view) {
     .getElementById("sidebar")
     .classList.toggle("active", view === "list");
   document
+    .getElementById("checklist")
+    .classList.toggle("active-mobile", view === "checklist");
+  document
     .getElementById("map")
-    .classList.toggle("hidden-mobile", view === "list");
+    .classList.toggle("hidden-mobile", view === "list" || view === "checklist");
   document.querySelectorAll("#mobile-tabs button").forEach((b) => {
     b.classList.toggle("active", b.dataset.view === view);
   });
@@ -763,9 +803,206 @@ function setMobileView(view) {
 
 function renderMobileTabs() {
   document.querySelectorAll("#mobile-tabs button").forEach((btn) => {
-    btn.addEventListener("click", () => setMobileView(btn.dataset.view));
+    btn.addEventListener("click", () => {
+      const view = btn.dataset.view;
+      if (view === "checklist") {
+        renderChecklistPanel();
+        document.getElementById("checklist").classList.remove("hidden");
+      }
+      setMobileView(view);
+    });
   });
   setMobileView("map");
+}
+
+const RESERVATIONS_KEY = "reservations";
+
+function loadReservations() {
+  try {
+    const raw = localStorage.getItem(RESERVATIONS_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return {};
+    }
+    return parsed;
+  } catch {
+    return {};
+  }
+}
+
+function setReservationDone(id, done) {
+  const map = loadReservations();
+  if (done) map[id] = true;
+  else delete map[id];
+  try {
+    localStorage.setItem(RESERVATIONS_KEY, JSON.stringify(map));
+  } catch {
+    /* quota or disabled — silent */
+  }
+}
+
+/** Collect all reservation items: place.booking entries + transit booking_url. */
+function collectReservationItems() {
+  const items = [];
+  for (const [id, place] of Object.entries(state.places || {})) {
+    if (place?.booking?.url) {
+      items.push({
+        id: `place:${id}`,
+        kind: "place",
+        place_id: id,
+        name: place.name_ko,
+        emoji: place.emoji,
+        url: place.booking.url,
+        required: !!place.booking.required,
+        advance_days: Number.isInteger(place.booking.advance_days)
+          ? place.booking.advance_days
+          : 0,
+        ticket_price_jpy: Number.isInteger(place.booking.ticket_price_jpy)
+          ? place.booking.ticket_price_jpy
+          : 0,
+        notes: place.booking.notes || "",
+      });
+    }
+  }
+  for (const day of state.itinerary?.days || []) {
+    for (const stop of day.stops || []) {
+      const url = stop.transit_from_prev?.booking_url;
+      if (typeof url === "string" && /^https:\/\//.test(url)) {
+        const place = state.places?.[stop.place_id];
+        const t = stop.transit_from_prev;
+        items.push({
+          id: `transit:${day.id}:${stop.place_id}`,
+          kind: "transit",
+          place_id: stop.place_id,
+          name: `${t.from || ""} → ${t.to || place?.name_ko || ""}`,
+          emoji: "🎫",
+          url,
+          required: true,
+          advance_days: 1,
+          ticket_price_jpy: Number.isFinite(t.cost_jpy) ? t.cost_jpy : 0,
+          notes: t.note || `${day.id.toUpperCase()} ${t.mode || ""}`.trim(),
+        });
+      }
+    }
+  }
+  return items;
+}
+
+function renderChecklistPanel() {
+  const panel = document.getElementById("checklist");
+  if (!panel) return;
+  const items = collectReservationItems();
+  const done = loadReservations();
+  const required = items.filter((i) => i.required);
+  const completedCount = required.filter((i) => done[i.id]).length;
+  const sorted = items.slice().sort((a, b) => {
+    const da = !!done[a.id];
+    const db = !!done[b.id];
+    if (da !== db) return da ? 1 : -1; // pending first
+    if (a.required !== b.required) return a.required ? -1 : 1; // required first
+    // Larger advance_days = earlier real-world deadline (must book sooner),
+    // so sort descending to put the most urgent item on top.
+    return (b.advance_days || 0) - (a.advance_days || 0);
+  });
+  const cardsHtml = sorted
+    .map((it) => {
+      const isDone = !!done[it.id];
+      const reqBadge = it.required
+        ? '<span class="ml-2 text-[10px] font-semibold px-1.5 py-0.5 rounded bg-red-100 text-red-700">필수</span>'
+        : '<span class="ml-2 text-[10px] font-semibold px-1.5 py-0.5 rounded bg-slate-100 text-slate-600">선택</span>';
+      const price =
+        it.ticket_price_jpy > 0
+          ? `¥${it.ticket_price_jpy.toLocaleString()}`
+          : "";
+      const advance =
+        it.advance_days > 0 ? `${it.advance_days}일 전 권장` : "당일 가능";
+      const meta = [price, advance].filter(Boolean).join(" · ");
+      const notes = it.notes
+        ? `<div class="text-xs text-slate-500 mt-1">${esc(it.notes)}</div>`
+        : "";
+      return `
+        <li class="checklist-card ${isDone ? "checklist-done" : ""} border-b p-3">
+          <div class="flex items-start gap-2">
+            <input type="checkbox" data-checklist-id="${esc(it.id)}" ${isDone ? "checked" : ""} class="mt-1 shrink-0" aria-label="${esc(it.name)} 예약 완료" />
+            <div class="flex-1 min-w-0">
+              <div class="flex items-center gap-1 flex-wrap">
+                <span>${esc(it.emoji || "·")}</span>
+                <span class="font-semibold text-sm">${esc(it.name)}</span>
+                ${reqBadge}
+              </div>
+              <div class="text-xs text-slate-500 mt-1">${esc(meta)}</div>
+              ${notes}
+              <a href="${safeHref(it.url)}" target="_blank" rel="noopener" class="inline-block mt-2 text-xs font-semibold px-3 py-1 rounded border bg-white hover:bg-slate-100 text-slate-700">예약하기 →</a>
+            </div>
+          </div>
+        </li>`;
+    })
+    .join("");
+
+  const total = required.length;
+  const pct = total > 0 ? Math.round((completedCount / total) * 100) : 0;
+  panel.innerHTML = `
+    <div class="p-4 border-b sticky top-0 bg-white z-10">
+      <div class="flex items-center justify-between gap-2">
+        <h2 class="text-lg font-bold">🎫 예약 체크리스트</h2>
+        <button id="checklist-close" aria-label="체크리스트 닫기" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 hidden md:block">×</button>
+      </div>
+      <div class="text-xs text-slate-500 mt-1">필수 ${completedCount}/${total} 완료${total === 0 ? " — 예약할 항목이 없습니다" : ""}</div>
+      <div class="mt-2 h-2 bg-slate-200 rounded overflow-hidden">
+        <div class="h-full bg-emerald-500 transition-all" style="width:${pct}%"></div>
+      </div>
+    </div>
+    <ul>${cardsHtml || '<li class="p-4 text-sm text-slate-500">예약 항목 없음</li>'}</ul>`;
+
+  panel.querySelectorAll("input[data-checklist-id]").forEach((cb) => {
+    cb.addEventListener("change", (e) => {
+      setReservationDone(e.target.dataset.checklistId, e.target.checked);
+      renderChecklistPanel();
+      renderChecklistToggle();
+    });
+  });
+  const closeBtn = panel.querySelector("#checklist-close");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+      panel.classList.add("hidden");
+      renderChecklistToggle();
+    });
+  }
+}
+
+function renderChecklistToggle() {
+  const bar = document.getElementById("progress-bar");
+  if (!bar) return;
+  let btn = bar.querySelector("#checklist-toggle");
+  const items = collectReservationItems();
+  const required = items.filter((i) => i.required);
+  const done = loadReservations();
+  const completedCount = required.filter((i) => done[i.id]).length;
+  const isOpen = !document
+    .getElementById("checklist")
+    .classList.contains("hidden");
+  const label = `🎫 예약 ${completedCount}/${required.length}`;
+  if (!btn) {
+    btn = document.createElement("button");
+    btn.id = "checklist-toggle";
+    btn.className =
+      "ml-auto md:inline-flex hidden items-center px-3 h-9 rounded border text-xs font-semibold hover:bg-slate-50";
+    btn.addEventListener("click", () => {
+      const panel = document.getElementById("checklist");
+      if (panel.classList.contains("hidden")) {
+        renderChecklistPanel();
+        panel.classList.remove("hidden");
+      } else {
+        panel.classList.add("hidden");
+      }
+      renderChecklistToggle();
+    });
+    bar.appendChild(btn);
+  }
+  btn.textContent = isOpen
+    ? `✕ 예약 ${completedCount}/${required.length}`
+    : label;
 }
 
 function parseHash() {

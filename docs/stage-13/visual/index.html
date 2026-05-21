@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 13 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 13 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -24,6 +24,10 @@
         background: #fff;
         border-bottom: 1px solid #e0e0de;
         padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
       }
       header h1 {
         font-size: 1.4rem;
@@ -35,6 +39,21 @@
         font-size: 0.9rem;
         color: #6b7280;
         margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
       }
       nav.timeline {
         background: #fff;
@@ -54,7 +73,7 @@
         flex: 1;
         height: 2px;
         background: #d1d5db;
-        min-width: 2.5rem;
+        min-width: 1.5rem;
       }
       .timeline-node {
         width: 2rem;
@@ -71,9 +90,14 @@
         background: #0f766e;
         color: #fff;
       }
-      .timeline-node.muted {
+      .timeline-node.past {
         background: #9ca3af;
         color: #fff;
+      }
+      .timeline-node.future {
+        background: transparent;
+        color: #0f766e;
+        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -97,6 +121,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -108,6 +137,8 @@
         }
         header {
           padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         nav.timeline {
           padding: 1rem;
@@ -166,81 +197,83 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-      h4.retro-sub {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #374151;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: 0.75rem;
-        margin-bottom: 0.35rem;
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
-      <p>Staged plan progress</p>
+      <div>
+        <h1>Japan Travel Plan</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <nav class="lang-switch" aria-label="Language">
+        <span class="current-lang">EN</span> |
+        <a href="index.ko.html">한국어</a>
+      </nav>
     </header>
 
     <nav class="timeline" aria-label="Project stages">
       <div class="timeline-item">
-        <div class="timeline-node muted">1</div>
+        <div class="timeline-node past">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">2</div>
+        <div class="timeline-node past">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">3</div>
+        <div class="timeline-node past">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">4</div>
+        <div class="timeline-node past">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node past">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">6</div>
+        <div class="timeline-node past">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node past">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node past">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">9</div>
+        <div class="timeline-node past">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">10</div>
+        <div class="timeline-node past">10</div>
         <span class="timeline-label">Stage 10</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+        <div class="timeline-node past">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+        <div class="timeline-node past">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -250,29 +283,36 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+        <div class="timeline-node future">14</div>
         <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">15</div>
+        <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 13</h2>
+        <p class="stage-summary">
+          &ldquo;View on Map&rdquo; button in the detail panel closes the panel
+          and flies to the location at zoom 18, plus a GPS self-location control
+          in the top-left of the map.
+        </p>
         <div class="card-grid">
-          <!-- Single card sourced from locate-and-gps.md -->
           <article aria-labelledby="card-locate">
-            <h3 id="card-locate">
-              &#34;맵에서 보기&#34; Button + GPS Self-Location
-            </h3>
+            <h3 id="card-locate">Locate And GPS</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                사이드바&#183;맵 마커 클릭은 디테일 패널 + 맵 flyTo를 동시에
-                실행하지만 디테일 패널이 맵을 일부 가려서 &#8220;이 가게가
-                거기랑 정확히 어디 붙어있는지&#8221; 실제 위치를 보고 싶을 때 한
-                번 더 액션이 필요했다. 그리고 현장에서 자기 위치 기준으로 어떤
-                후보가 가까운지 직관적으로 보려면 GPS가 필요.
+                The detail panel partially covered the map, so knowing a
+                place&rsquo;s surroundings after opening the panel required an
+                extra action. In the field, users also need to see their own
+                position relative to candidates to judge which ones are
+                physically closest.
               </p>
             </div>
 
@@ -280,94 +320,51 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong
-                    >디테일 헤더에
-                    <code>&#128205; 맵에서 보기</code> 버튼</strong
-                  >
-                  &#8212; 클릭 시:
-                  <ul>
-                    <li>디테일 패널 close</li>
-                    <li>
-                      <code
-                        >state.map.flyTo(place.coords, 18, {duration:
-                        0.8})</code
-                      >
-                      &#8212; zoom 18로 가까이
-                    </li>
-                    <li>
-                      모바일이면 <code>setMobileView("map")</code>로 맵 탭 자동
-                      전환
-                    </li>
-                    <li>
-                      일정 stops와 alt 후보 모두 같은
-                      <code>renderDetail</code> 경로라 한 번에 둘 다 지원
-                    </li>
-                  </ul>
+                  Detail header &ldquo;View on Map&rdquo; button: closes the
+                  detail panel, calls
+                  <code>state.map.flyTo(place.coords, 18, {duration: 0.8})</code
+                  >, and on mobile automatically switches to map view via
+                  <code>setMobileView("map")</code>; works for both itinerary
+                  stops and alt candidates through the single
+                  <code>renderDetail</code> path
                 </li>
                 <li>
-                  <strong
-                    >Leaflet 커스텀 컨트롤
-                    <code>&#128205; 내 위치 (GPS)</code></strong
-                  >
-                  &#8212; 맵 좌상단:
-                  <ul>
-                    <li>
-                      <code>navigator.geolocation.getCurrentPosition</code> +
-                      <code>enableHighAccuracy: true</code>
-                    </li>
-                    <li>
-                      성공 &#8594; 파란 점 마커(&#8220;내 위치&#8221; 툴팁) +
-                      정확도 circle 오버레이 + <code>flyTo</code> zoom 16
-                    </li>
-                    <li>
-                      권한 거부 / 신호 없음 / timeout 별로 한국어 에러 메시지
-                      (geolocation error code 1/2/3 매핑)
-                    </li>
-                    <li>
-                      재클릭 시 기존 마커 제거 후 새로 생성 &#8594; 중복 누적
-                      방지
-                    </li>
-                  </ul>
+                  Leaflet custom control &ldquo;GPS / My Location&rdquo; in the
+                  top-left: calls
+                  <code>navigator.geolocation.getCurrentPosition</code> with
+                  <code>enableHighAccuracy: true</code>; on success places a
+                  blue dot marker with an accuracy circle and flies to zoom 16;
+                  on failure shows a Korean error message per geolocation error
+                  code (1 = permission denied, 2 = unavailable, 3 = timeout);
+                  re-clicking removes the previous marker before placing a new
+                  one
                 </li>
                 <li>
-                  CSS <code>.leaflet-control-locate</code> &#8212; 30&#215;30
-                  흰색 버튼, hover 시 slate-100, Leaflet 기본 컨트롤 스타일
-                  호환.
+                  CSS <code>.leaflet-control-locate</code>: 30&times;30 white
+                  button, slate-100 on hover, compatible with Leaflet default
+                  control styling
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>How</h4>
-              <ul>
-                <li>
-                  <code>initMap()</code> 끝에
-                  <code>addLocateControl()</code> 호출 &#8212; Leaflet
-                  <code
-                    >L.Control.extend({ position: &#39;topleft&#39;, onAdd()
-                    {...} })</code
-                  >
-                  패턴으로 버튼을 컨트롤로 등록.
-                  <code>L.DomEvent.disableClickPropagation</code>로 맵 클릭과
-                  분리.
-                </li>
-                <li>
-                  <code>requestLocation()</code>은 별도 함수로 분리해 컨트롤
-                  onclick에 binding. <code>userLocationMarker</code> /
-                  <code>userLocationAccuracy</code> 모듈 상태로 두어 재클릭 시
-                  cleanup.
-                </li>
-                <li>
-                  디테일 헤더 버튼은 <code>renderDetail</code>의 innerHTML에
-                  <code>&lt;button id="detail-locate"&gt;</code> 추가 + 끝에
-                  click 핸들러 attach (기존 <code>#detail-close</code> 패턴
-                  동일).
-                </li>
-              </ul>
-              <p style="margin-top: 0.5rem">
-                브라우저 보안: HTTPS 또는 localhost 컨텍스트에서만 geolocation
-                동작. 데스크톱은 IP 기반 (수백 m 오차), 모바일은 GPS (수 m 정확)
-                &#8212; 현장에서는 사용자 폰으로 접속 가정.
+              <p>
+                <code>addLocateControl()</code> called at the end of
+                <code>initMap()</code> using
+                <code
+                  >L.Control.extend({ position: &lsquo;topleft&rsquo;, onAdd()
+                  {...} })</code
+                >. <code>L.DomEvent.disableClickPropagation</code> separates the
+                button click from map clicks. <code>requestLocation()</code> is
+                a separate function bound to the control&rsquo;s onclick.
+                <code>userLocationMarker</code> and
+                <code>userLocationAccuracy</code> are module-level state
+                variables enabling cleanup on re-click. The detail header button
+                is a <code>&lt;button id="detail-locate"&gt;</code> in
+                <code>renderDetail</code>&rsquo;s innerHTML with a click handler
+                attached at the end, following the same pattern as
+                <code>#detail-close</code>.
               </p>
             </div>
 
@@ -375,93 +372,40 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>assets/app.js:224&#8211;313</code> (initMap &#8594;
-                  addLocateControl, requestLocation, userLocationMarker/Accuracy
-                  state)
+                  <code>assets/app.js:224-313</code> (<code>initMap</code>
+                  &rarr; <code>addLocateControl</code>,
+                  <code>requestLocation</code>,
+                  <code>userLocationMarker</code>/<code>Accuracy</code> state)
                 </li>
                 <li>
-                  <code>assets/app.js:520&#8211;523</code> (detail 헤더
-                  <code>#detail-locate</code> 버튼)
+                  <code>assets/app.js:520-523</code> (detail header
+                  <code>#detail-locate</code> button)
                 </li>
                 <li>
-                  <code>assets/app.js:592&#8211;601</code> (detail-locate 클릭
-                  핸들러)
+                  <code>assets/app.js:592-601</code> (<code>detail-locate</code>
+                  click handler)
                 </li>
                 <li>
-                  <code>assets/styles.css:67&#8211;78</code>
+                  <code>assets/styles.css:67-78</code>
                   (<code>.leaflet-control-locate</code>)
                 </li>
               </ul>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commit: <code>5ccca23</code> feat(map): &#39;맵에서 보기&#39;
-                button + GPS &#39;내 위치&#39; control
-              </p>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
-
-              <h4 class="retro-sub">잘된 점</h4>
-              <ul>
-                <li>
-                  Leaflet 커스텀 컨트롤 패턴 사용 &#8212; Leaflet 기본 zoom
-                  컨트롤 옆에 자연스럽게 자리. 별도 floating UI 안 만들고도 동일
-                  룩.
-                </li>
-                <li>
-                  디테일 헤더 버튼이 alt 후보&#183;일정 stop 둘 다 지원 &#8212;
-                  <code>renderDetail</code> 단일 경로.
-                </li>
-                <li>
-                  권한 거부&#183;신호 없음&#183;timeout 모두 별도 한국어 에러로
-                  분기.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">다음에 가져갈 것</h4>
-              <ul>
-                <li>
-                  <code>watchPosition</code>으로 이동 추적은 안 했음 &#8212;
-                  현장에서 걷는 동안 마커가 따라오면 좋겠지만 배터리&#183;메모리
-                  영향. 향후 토글 옵션으로 추가 가능.
-                </li>
-                <li>
-                  위치 마커가 두 번 누르면 새로 떨어지지만 zoom-out 후 위치
-                  잃으면 사용자가 다시 찾기 어려움. &#8220;다시 내 위치로&#8221;
-                  단축키 또는 컨트롤 더블탭 동작 검토.
-                </li>
-                <li>
-                  권한 거부 시 <code>alert()</code>으로 처리 &#8212; 더 매끄럽게
-                  토스트 또는 inline 메시지로 대체 가능.
-                </li>
-                <li>
-                  iOS Safari는 HTTPS만 허용. LAN HTTP에선 일부 사용자 거부될 수
-                  있음.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">검증</h4>
-              <ul>
-                <li>
-                  <code>npm run validate</code> &#8594; &#10003; 169 places, 5
-                  days validated
-                </li>
-                <li><code>npm test</code> &#8594; 11 pass</li>
-                <li>
-                  browse smoke: <code>.leaflet-control-locate</code> 컨트롤 +
-                  <code>#detail-locate</code> 버튼 모두 렌더링 &#8212;
-                  <code>#detail-locate</code> 클릭 &#8594; 디테일 패널 hidden,
-                  flyTo zoom 18 호출 검증 &#8212; console error 0
-                </li>
-                <li>
-                  GPS는 헤드리스 브라우저에서 권한 부여가 안 됨 &#8212; 실
-                  디바이스에서 사용자 검증 필요.
-                </li>
-              </ul>
+              <em
+                >Using the Leaflet custom control pattern placed the GPS button
+                naturally beside the zoom controls with no extra floating UI.
+                The single <code>renderDetail</code> path means both itinerary
+                stops and alt candidates get the &ldquo;View on Map&rdquo;
+                button automatically. All three geolocation error codes
+                (permission denied, unavailable, timeout) produce distinct
+                Korean messages rather than a generic alert.</em
+              >
             </div>
           </article>
         </div>
-        <!-- /.card-grid -->
       </section>
     </main>
   </body>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 12 &mdash; Japan Travel Plan</title>
+    <title>Stage 15 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -93,11 +93,6 @@
       .timeline-node.past {
         background: #9ca3af;
         color: #fff;
-      }
-      .timeline-node.future {
-        background: transparent;
-        color: #0f766e;
-        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -197,6 +192,25 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
+      .section-block table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+      .section-block th {
+        text-align: left;
+        font-weight: 600;
+        color: #374151;
+        padding: 0.35rem 0.5rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .section-block td {
+        padding: 0.3rem 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+        color: #374151;
+        vertical-align: top;
+      }
       .section-block em {
         font-style: italic;
         color: #4b5563;
@@ -272,46 +286,51 @@
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item active-item">
-        <div class="timeline-node active" aria-current="step">12</div>
+      <div class="timeline-item">
+        <div class="timeline-node past">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">13</div>
+        <div class="timeline-node past">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node future">14</div>
+        <div class="timeline-node past">14</div>
         <span class="timeline-label">Stage 14</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
-      <div class="timeline-item">
-        <div class="timeline-node future">15</div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">15</div>
         <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
-        <h2 id="stage-heading">Stage 12</h2>
+        <h2 id="stage-heading">Stage 15</h2>
         <p class="stage-summary">
-          38 more restaurant alt-candidates added with WebFetch-sourced Tabelog
-          ratings in a single pass, expanding category diversity across all four
-          day areas.
+          Reservation checklist panel tracking 14 bookable items (12 paid
+          admissions + 2 Rapit transit segments) with localStorage persistence,
+          priority sorting, and a progress bar.
         </p>
         <div class="card-grid">
-          <article aria-labelledby="card-more-restaurants">
-            <h3 id="card-more-restaurants">More Restaurants</h3>
+          <article aria-labelledby="card-checklist">
+            <h3 id="card-checklist">Reservation Checklist</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 9 added 36 restaurants and Stage 11 replaced estimates
-                with actuals, but the user explicitly requested broader variety
-                and depth. Richer candidate coverage in the sidebar means more
-                meaningful choices when deciding where to eat on the day itself.
+                Through Stage 14, information display, curation, the map, and
+                the UI were complete. The remaining real user action before
+                departure is <strong>booking</strong>: USJ tickets, Nankai
+                Rapit, Osaka Castle, Kiyomizudera, Harukas 300, Kaiyukan,
+                Dotonbori River Cruise, and others are cheaper and faster to
+                enter when purchased as e-tickets in advance. Hotels were
+                already booked separately; restaurant queuing is out of scope. A
+                dedicated checklist panel lets the user track booking progress
+                and persist it across sessions.
               </p>
             </div>
 
@@ -319,35 +338,50 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  38 new alt restaurant entries (131&rarr;169 total places) with
-                  WebFetch-sourced Tabelog ratings from the outset &mdash; no
-                  separate estimation round needed
+                  Schema: optional <code>place.booking</code> object
+                  (<code>required</code>, <code>url</code>,
+                  <code>advance_days</code>, <code>ticket_price_jpy</code>,
+                  <code>notes</code>) and optional
+                  <code>transit_from_prev.booking_url</code> string
                 </li>
                 <li>
-                  Day 1 (11): Chitose, Meoto Zenzai, Hariju Sukiyaki, Honke
-                  Otako, Kogaryu, Hokkyokusei omurice, Lilo Coffee, Kinkuemon
-                  Dotonbori, Kukuru flagship, and others
+                  12 places given <code>booking</code>: USJ, Osaka Castle,
+                  Harukas 300, Kaiyukan, Tonbori River Cruise, Tsutenkaku,
+                  Kiyomizudera, Byodoin, Kodaiji, Entokuin, Gion Corner, Fushimi
+                  Sake Museum
                 </li>
                 <li>
-                  Day 2 (12): Inoda Coffee, Smart Coffee, Ippodo tea room, Gion
-                  Tsujiri, Menba-ka Fire Ramen, Yaosada teishoku, Takayasu
-                  ramen, Gontaro udon, Gion Okaru, Saryo Tsujiri, Gion Tokuya
-                  (warabi-mochi, Top 100), Kitagawa Hanbee
+                  2 transit segments given <code>booking_url</code>: Day 1 Rapit
+                  KIX&rarr;Namba, Day 5 Rapit Namba&rarr;KIX
                 </li>
                 <li>
-                  Day 3 (9 after dedupe): Grill Bon, Daruma Tsutenkaku, Yamachan
-                  Abeno, Kiji Umeda, Mugito Mensuke (Tabelog ramen Top 100, 3
-                  years, 3.84/2325), Sora Tsuruhashi, Hakunda, Meigetsukan
-                  yakiniku, Nakamuraya koroke
+                  <code>renderBooking(place, color)</code>:
+                  &ldquo;Booking&rdquo; section in the detail panel between
+                  Activities and Restaurants; required/optional badge, price,
+                  advance days, notes
                 </li>
                 <li>
-                  Day 4 (6): Bubba Gump, Top of Universal 32F buffet, Kukuru
-                  Citywalk, Jiyuken Tempozan, Aizuya (original takoyaki), Kotone
-                  Domidashi ramen
+                  Transit card inline &ldquo;e-Ticket &rarr;&rdquo; button
                 </li>
                 <li>
-                  One duplicate (Chitose flagship claimed by both Day 1 and Day
-                  3 subagents) resolved by keeping the Day 1 entry
+                  <code>#checklist</code> aside panel (desktop) + 3rd mobile
+                  tab: 14 cards sorted incomplete&thinsp;&gt;&thinsp;complete,
+                  required&thinsp;&gt;&thinsp;optional, earlier advance days
+                  first; completed items shown with strikethrough and grey
+                  styling
+                </li>
+                <li>
+                  Progress bar: &ldquo;Required N/M complete&rdquo;; desktop
+                  header toggle button &ldquo;Reservations X/Y&rdquo;
+                </li>
+                <li>
+                  <code>localStorage["reservations"]</code> JSON object for
+                  persistence; <code>setReservationDone(id, bool)</code> helper
+                </li>
+                <li>
+                  8 required items: USJ, Osaka Castle, Harukas 300, Kaiyukan,
+                  Byodoin, Gion Corner + 2 Rapit segments; 6 optional items for
+                  informational display
                 </li>
               </ul>
             </div>
@@ -355,36 +389,117 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Four background subagents (one per day area) each: read existing
-                place IDs to avoid duplication, proposed 8&ndash;12 new
-                candidates by category, searched for each restaurant&rsquo;s
-                exact Tabelog URL, WebFetched the page to extract rating and
-                review count, and confirmed coordinates from
-                Tabelog/Google/Yahoo Maps. Results saved as patch JSONs and
-                merged in one pass. Zero UI code changes &mdash; the Stage
-                8&ndash;11 infrastructure handled the new entries automatically.
+                Data curated by 4 parallel subagents (Group 1: USJ + Rapit
+                KIX&harr;Namba via KKday; Group 2: 5 Osaka attractions; Group 3:
+                6 Kyoto attractions; Group 4: cross-check verifier). Each group
+                saved a patch JSON to <code>/tmp/booking-patches/</code>;
+                <code>/tmp/merge-bookings.mjs</code> applied all patches with
+                <code>http</code>&rarr;<code>https</code> normalization. Group 3
+                found and corrected outdated prices (Byodoin
+                600&thinsp;&yen;&rarr;700&thinsp;&yen;, Kodaiji+Entokuin
+                combined 900&thinsp;&yen;&rarr;1,200&thinsp;&yen;). Validator
+                extended with <code>validateBooking</code> helper following the
+                <code>validateCuratedLink</code> pattern; 4 new test cases added
+                (11&rarr;15 passing).
+                <code>collectReservationItems()</code> collects booking entries
+                from both places and itinerary, then sorts them.
               </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
-              <ul>
-                <li>
-                  <code>data/places.json</code> (38 new alt restaurant entries;
-                  UI code unchanged)
-                </li>
-              </ul>
+              <table>
+                <thead>
+                  <tr>
+                    <th>File</th>
+                    <th>Change</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>scripts/validate-data.mjs:42-69</code></td>
+                    <td><code>validateBooking</code> helper</td>
+                  </tr>
+                  <tr>
+                    <td><code>scripts/validate-data.mjs:163-165</code></td>
+                    <td><code>place.booking</code> validation call</td>
+                  </tr>
+                  <tr>
+                    <td><code>scripts/validate-data.mjs:212-217</code></td>
+                    <td>transit <code>booking_url</code> https check</td>
+                  </tr>
+                  <tr>
+                    <td><code>tests/validate-data.test.mjs:107-156</code></td>
+                    <td>4 new test cases (15 total)</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:125-150</code></td>
+                    <td><code>renderBooking(place, color)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:617-622</code></td>
+                    <td>transit card inline e-ticket button</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:687-689</code></td>
+                    <td>detail panel booking slot</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:802-998</code></td>
+                    <td>
+                      mobile tab extension + <code>loadReservations</code>,
+                      <code>setReservationDone</code>,
+                      <code>collectReservationItems</code>,
+                      <code>renderChecklistPanel</code>,
+                      <code>renderChecklistToggle</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/styles.css:102-109</code></td>
+                    <td>
+                      <code>.checklist-card.checklist-done</code> strikethrough
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/styles.css:144-158</code></td>
+                    <td>
+                      mobile <code>#checklist.active-mobile</code> absolute
+                      positioning
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>index.html:46-50</code></td>
+                    <td><code>#checklist</code> aside</td>
+                  </tr>
+                  <tr>
+                    <td><code>index.html:67-73</code></td>
+                    <td>3rd mobile tab</td>
+                  </tr>
+                  <tr>
+                    <td><code>data/places.json</code></td>
+                    <td>12 entries with <code>booking</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>data/itinerary.json</code></td>
+                    <td>
+                      Day 1[1] + Day 5[1]
+                      <code>transit_from_prev.booking_url</code>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
             <div class="section-block">
+              <h4>Retrospective</h4>
               <em
-                >Zero code changes &mdash; the alt-marker, sidebar-sort, filter,
-                and real-rating infrastructure from Stages 8&ndash;11 handled
-                the additions automatically. WebFetch ratings in one pass
-                avoided the Stage 9&rarr;11 two-round cycle. Day 2 gained Kyoto
-                kissaten classics (Inoda, Smart, Ippodo); Day 3 gained Mugito
-                Mensuke, a Tabelog ramen Top 100 entry for three consecutive
-                years.</em
+                >The 4-subagent parallel curation pattern (same as Stages 11/12)
+                completed 14 items in ~16 minutes; a Group 4 verifier
+                cross-checked results finding 0 corrections. The optional-only
+                schema additions produced zero regressions across all 169
+                places. Group 3 caught two outdated ticket prices from the plan
+                document, suggesting price-verification should be a first step
+                in any future data work.</em
               >
             </div>
           </article>

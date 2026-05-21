@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 2 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 2 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -24,6 +24,10 @@
         background: #fff;
         border-bottom: 1px solid #e0e0de;
         padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
       }
       header h1 {
         font-size: 1.4rem;
@@ -35,6 +39,21 @@
         font-size: 0.9rem;
         color: #6b7280;
         margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
       }
       nav.timeline {
         background: #fff;
@@ -54,7 +73,7 @@
         flex: 1;
         height: 2px;
         background: #d1d5db;
-        min-width: 2.5rem;
+        min-width: 1.5rem;
       }
       .timeline-node {
         width: 2rem;
@@ -71,9 +90,14 @@
         background: #0f766e;
         color: #fff;
       }
-      .timeline-node.muted {
+      .timeline-node.past {
         background: #9ca3af;
         color: #fff;
+      }
+      .timeline-node.future {
+        background: transparent;
+        color: #0f766e;
+        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -97,6 +121,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -108,6 +137,8 @@
         }
         header {
           padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         nav.timeline {
           padding: 1rem;
@@ -166,48 +197,28 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-      h4.retro-sub {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #374151;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: 0.75rem;
-        margin-bottom: 0.35rem;
-      }
-      .table-wrapper {
-        overflow-x: auto;
-        margin-top: 0.5rem;
-      }
-      .table-wrapper table {
-        border-collapse: collapse;
-        width: 100%;
-        font-size: 0.85rem;
-        color: #374151;
-      }
-      .table-wrapper th,
-      .table-wrapper td {
-        border: 1px solid #e5e7eb;
-        padding: 0.35rem 0.6rem;
-        text-align: left;
-        vertical-align: top;
-      }
-      .table-wrapper th {
-        background: #f9fafb;
-        font-weight: 600;
-        color: #111827;
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
-      <p>Staged plan progress</p>
+      <div>
+        <h1>Japan Travel Plan</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <nav class="lang-switch" aria-label="Language">
+        <span class="current-lang">EN</span> |
+        <a href="index.ko.html">&#54620;&#44397;&#50612;</a>
+      </nav>
     </header>
 
     <nav class="timeline" aria-label="Project stages">
       <div class="timeline-item">
-        <div class="timeline-node muted">1</div>
+        <div class="timeline-node past">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -217,81 +228,89 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">3</div>
+        <div class="timeline-node future">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">4</div>
+        <div class="timeline-node future">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node future">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">6</div>
+        <div class="timeline-node future">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node future">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">9</div>
+        <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">10</div>
+        <div class="timeline-node future">10</div>
         <span class="timeline-label">Stage 10</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+        <div class="timeline-node future">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+        <div class="timeline-node future">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">13</div>
+        <div class="timeline-node future">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+        <div class="timeline-node future">14</div>
         <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">15</div>
+        <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 2</h2>
+        <p class="stage-summary">
+          Complete data for 65 places across all 5 days, with a TDD validator
+          and curated restaurant/activity entries per main location.
+        </p>
         <div class="card-grid">
-          <!-- Card 1: data.md -->
           <article aria-labelledby="card-data">
-            <h3 id="card-data">Complete Data (65 places + 5 days)</h3>
+            <h3 id="card-data">Data</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 1의 와이어링이 동작함을 확인했으니, 진짜 정보를 채워야
-                한다. 사용자가 현장에서 보고 따라갈 수 있는 수준 &#8212; 좌표가
-                정확하고, 출처가 있고, 메인 명소엔 맛집이 있고, 후기 검색 링크가
-                살아 있어야 한다.
+                With Stage 1's wiring confirmed, the real information needed to
+                be filled in. The goal was field-usable data: accurate
+                coordinates with sources, restaurants for main locations, and
+                live review-search links.
               </p>
             </div>
 
@@ -299,36 +318,27 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <code>docs/stage-2/place-catalog.md</code>: 65 명소 마스터
-                  리스트 (id, 한국어명, main/alt 분류)
+                  <code>data/places.json</code>: 65 places total &mdash; Day 1:
+                  12, Day 2: 21 (Kyoto), Day 3: 26 (Osaka), Day 4: 4 (USJ), Day
+                  5: 2 (departure)
                 </li>
                 <li>
-                  <code>data/places.json</code>: 총
-                  <strong>65개 명소</strong> 채워짐
-                  <ul>
-                    <li>Day 1: 12 (3 main + 9 alt)</li>
-                    <li>Day 2: 21 (5 main + 16 alt) &#8212; 교토</li>
-                    <li>Day 3: 26 (6 main + 20 alt) &#8212; 오사카 도심</li>
-                    <li>Day 4: 4 (1 main + 3 alt) &#8212; USJ + 시티워크</li>
-                    <li>Day 5: 2 (2 main) &#8212; 출국 utility stops</li>
-                  </ul>
+                  <code>data/itinerary.json</code>: Days 1&ndash;5, 21 stops,
+                  all with <code>transit_from_prev</code> and
+                  <code>duration_minutes</code>
                 </li>
                 <li>
-                  <code>data/itinerary.json</code>: Day1&#8211;Day5, 21 stops,
-                  모든 stop에 transit_from_prev/duration_minutes
+                  <code>scripts/validate-data.mjs</code>: schema / Japan
+                  coordinate bounds / place_id references / URL safety / main
+                  &rarr; restaurants (utility tag exceptions) validation
                 </li>
                 <li>
-                  <code>scripts/validate-data.mjs</code>: 스키마 / 일본 좌표
-                  범위 / place_id 참조 / URL 안전성 / main &#8594; restaurants
-                  (utility 태그 예외) 검증
+                  <code>tests/validate-data.test.mjs</code>: 8 test cases
+                  passing
                 </li>
                 <li>
-                  <code>tests/validate-data.test.mjs</code>: 8개 테스트 케이스
-                  통과
-                </li>
-                <li>
-                  <code>package.json</code>: <code>npm test</code>,
-                  <code>npm run validate</code> 스크립트
+                  <code>package.json</code>: <code>npm test</code> and
+                  <code>npm run validate</code> scripts
                 </li>
               </ul>
             </div>
@@ -336,21 +346,14 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                Day별로 별도의 subagent (general-purpose) 호출. 각 subagent에
-                마스터 카탈로그의 해당 day 부분 + JSON 스키마를 strict하게
-                prompt로 전달. 좌표는 WebSearch로 Wikipedia/공식 사이트에서 추출
-                후 카탈로그 범위 검증. 결과를 implementer가 직접 places.json에
-                머지하고 commit.
-              </p>
-              <p style="margin-top: 0.5rem">
-                TDD로 validator를 먼저 만들었고 (<code>tests/</code> 작성
-                &#8594; 실패 확인 &#8594; <code>scripts/</code> 작성 &#8594;
-                통과 확인).
-                <strong
-                  >utility 태그 (교통허브, 숙소, 출국 준비, 공항, 출국)가 있는
-                  main 명소는 restaurants가 비어도 OK</strong
-                >. 공항&#183;호텔&#183;체크아웃 같은 유틸리티 stop이 dining
-                destination으로 분류되지 않게 하려는 의도.
+                One subagent per day dispatched in parallel. Each received the
+                relevant portion of the master catalog plus a strict JSON
+                schema. Coordinates were extracted via WebSearch from Wikipedia
+                and official sites, then checked against city-level bounds.
+                Results were merged into <code>places.json</code> by the main
+                implementer. The validator was written TDD-first; a policy gap
+                found during the first run (utility-tagged main places need no
+                restaurants) became the 8th test case.
               </p>
             </div>
 
@@ -360,8 +363,9 @@
                 <li><code>data/places.json</code> (65 entries)</li>
                 <li><code>data/itinerary.json</code> (5 days, 21 stops)</li>
                 <li>
-                  <code>scripts/validate-data.mjs</code>
-                  (<code>validate(places, itinerary)</code>)
+                  <code>scripts/validate-data.mjs</code> (<code
+                    >validate(places, itinerary)</code
+                  >)
                 </li>
                 <li><code>tests/validate-data.test.mjs</code> (8 tests)</li>
                 <li>
@@ -369,549 +373,87 @@
                   <code>validate</code> scripts)
                 </li>
                 <li>
-                  <code>docs/stage-2/place-catalog.md</code> (마스터 리스트)
+                  <code>docs/stage-2/place-catalog.md</code> (master list)
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
-              <ul>
-                <li>
-                  잘 된 점: Day별 분리 dispatch로 60+ 명소 조사를 ~25분 안에
-                  완료. 좌표는 모두 일본 영역 + 도시별 sub-bound 검증 통과.
-                </li>
-                <li>
-                  잘 된 점: 메인 명소의 맛집은 실제 검증된 가게만 (奥丹清水
-                  1635년, 串かつだるま 원조, ARABICA, 茶寮都路里 등).
-                </li>
-                <li>
-                  잘 된 점: TDD validator가 첫 실행에서 정책 빈틈 (utility tag
-                  예외 필요)을 정확히 잡아냄. 이후 그것이 8번째 테스트로
-                  영속화됨.
-                </li>
-                <li>
-                  조심한 점: nippombashi와 denden_town의 좌표가 거의 같음
-                  (실제로 같은 거리). 의도된 conceptual overlap.
-                </li>
-                <li>
-                  이연: Stage 3로 &#8212; mobile 탭 활성화, marker 펄스 활성화.
-                </li>
-              </ul>
+              <em
+                >Parallel day-by-day dispatch finished 60+ locations in roughly
+                25 minutes. The TDD validator caught a policy gap on the first
+                run (utility-tag exception), which was immediately locked in as
+                a test case. Verified restaurants &mdash; Okutan Kiyomizu (est.
+                1635), Kushikatsu Daruma original, ARABICA, Tsujiri &mdash; are
+                easy to find in the field.</em
+              >
             </div>
           </article>
 
-          <!-- Card 2: place-catalog.md — all 5 day tables -->
           <article aria-labelledby="card-catalog">
-            <h3 id="card-catalog">Place Catalog (64 entries)</h3>
+            <h3 id="card-catalog">Place Catalog</h3>
 
             <div class="section-block">
+              <h4>Why</h4>
               <p>
-                Categories: <code>main</code> = full profile w/ restaurants;
-                <code>alt</code> = lite profile (summary, coords, activities,
-                review links).
+                A structured master list was needed before dispatching parallel
+                subagents, so every day had an authoritative set of location
+                IDs, Korean names, and main/alt classifications to fill against.
               </p>
             </div>
 
             <div class="section-block">
-              <h4>Day 1 (5/22 금) &#8212; 도착 + 난바</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>name_ko</th>
-                      <th>category</th>
-                      <th>source line</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>kansai_airport</code></td>
-                      <td>간사이 국제공항</td>
-                      <td>main</td>
-                      <td>도착</td>
-                    </tr>
-                    <tr>
-                      <td><code>namba_hotel</code></td>
-                      <td>난바 숙소권</td>
-                      <td>main</td>
-                      <td>숙소</td>
-                    </tr>
-                    <tr>
-                      <td><code>dotonbori</code></td>
-                      <td>도톤보리</td>
-                      <td>main</td>
-                      <td>야경</td>
-                    </tr>
-                    <tr>
-                      <td><code>shinsaibashi_suji</code></td>
-                      <td>신사이바시스지</td>
-                      <td>alt</td>
-                      <td>도톤보리 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>hozenji_yokocho</code></td>
-                      <td>호젠지요코초</td>
-                      <td>alt</td>
-                      <td>도톤보리 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>amerikamura</code></td>
-                      <td>아메리카무라</td>
-                      <td>alt</td>
-                      <td>도톤보리 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>namba_walk</code></td>
-                      <td>난바워크</td>
-                      <td>alt</td>
-                      <td>도톤보리 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>rinku_town</code></td>
-                      <td>린쿠타운</td>
-                      <td>alt</td>
-                      <td>공항 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>izumisano</code></td>
-                      <td>이즈미사노</td>
-                      <td>alt</td>
-                      <td>공항 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>airport_hotel</code></td>
-                      <td>공항근처 호텔</td>
-                      <td>alt</td>
-                      <td>공항 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>nippombashi</code></td>
-                      <td>닛폰바시</td>
-                      <td>alt</td>
-                      <td>숙소 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>umeda</code></td>
-                      <td>우메다 (숙소 후보)</td>
-                      <td>alt</td>
-                      <td>숙소 대체</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="section-block">
-              <h4>Day 2 (5/23 토) &#8212; 교토 당일치기</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>name_ko</th>
-                      <th>category</th>
-                      <th>source line</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>fushimi_inari</code></td>
-                      <td>후시미이나리</td>
-                      <td>main</td>
-                      <td>아침</td>
-                    </tr>
-                    <tr>
-                      <td><code>kiyomizu_dera</code></td>
-                      <td>청수사</td>
-                      <td>main</td>
-                      <td>오전~낮</td>
-                    </tr>
-                    <tr>
-                      <td><code>sannenzaka_ninenzaka</code></td>
-                      <td>산넨자카&#183;니넨자카</td>
-                      <td>main</td>
-                      <td>낮</td>
-                    </tr>
-                    <tr>
-                      <td><code>gion_yasaka</code></td>
-                      <td>기온&#183;야사카신사</td>
-                      <td>main</td>
-                      <td>오후</td>
-                    </tr>
-                    <tr>
-                      <td><code>nishiki_kawaramachi</code></td>
-                      <td>니시키시장&#183;가와라마치</td>
-                      <td>main</td>
-                      <td>오후~저녁</td>
-                    </tr>
-                    <tr>
-                      <td><code>tofukuji</code></td>
-                      <td>도후쿠지</td>
-                      <td>alt</td>
-                      <td>후시미 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>fushimi_sake</code></td>
-                      <td>후시미 사케 거리</td>
-                      <td>alt</td>
-                      <td>후시미 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>byodoin</code></td>
-                      <td>우지 뵤도인</td>
-                      <td>alt</td>
-                      <td>후시미 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>kodaiji</code></td>
-                      <td>고다이지</td>
-                      <td>alt</td>
-                      <td>청수사 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>yasaka_pagoda</code></td>
-                      <td>야사카의 탑</td>
-                      <td>alt</td>
-                      <td>청수사 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>entokuin</code></td>
-                      <td>엔토쿠인</td>
-                      <td>alt</td>
-                      <td>청수사 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>ishibekoji</code></td>
-                      <td>이시베코지</td>
-                      <td>alt</td>
-                      <td>산넨자카 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>nene_no_michi</code></td>
-                      <td>네네노미치</td>
-                      <td>alt</td>
-                      <td>산넨자카 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>kiyomizu_zaka</code></td>
-                      <td>기요미즈자카</td>
-                      <td>alt</td>
-                      <td>산넨자카 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>maruyama_park</code></td>
-                      <td>마루야마공원</td>
-                      <td>alt</td>
-                      <td>기온 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>chionin</code></td>
-                      <td>지온인</td>
-                      <td>alt</td>
-                      <td>기온 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>shijo_kawaramachi</code></td>
-                      <td>시조카와라마치</td>
-                      <td>alt</td>
-                      <td>기온 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>pontocho</code></td>
-                      <td>폰토초</td>
-                      <td>alt</td>
-                      <td>기온/가와라마치 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>teramachi</code></td>
-                      <td>테라마치</td>
-                      <td>alt</td>
-                      <td>니시키 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>shinkyogoku</code></td>
-                      <td>신쿄고쿠</td>
-                      <td>alt</td>
-                      <td>니시키 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>kiyamachi</code></td>
-                      <td>기야마치</td>
-                      <td>alt</td>
-                      <td>니시키 대체</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="section-block">
-              <h4>Day 3 (5/24 일) &#8212; 오사카 도심</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>name_ko</th>
-                      <th>category</th>
-                      <th>source line</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>osaka_castle</code></td>
-                      <td>오사카성</td>
-                      <td>main</td>
-                      <td>오전</td>
-                    </tr>
-                    <tr>
-                      <td><code>kuromon_market</code></td>
-                      <td>구로몬시장</td>
-                      <td>main</td>
-                      <td>점심</td>
-                    </tr>
-                    <tr>
-                      <td><code>denden_town</code></td>
-                      <td>덴덴타운&#183;닛폰바시 오타로드</td>
-                      <td>main</td>
-                      <td>점심 후</td>
-                    </tr>
-                    <tr>
-                      <td><code>umeda_sky</code></td>
-                      <td>우메다 스카이빌딩</td>
-                      <td>main</td>
-                      <td>오후</td>
-                    </tr>
-                    <tr>
-                      <td><code>shinsekai_tsutenkaku</code></td>
-                      <td>신세카이&#183;츠텐카쿠</td>
-                      <td>main</td>
-                      <td>저녁</td>
-                    </tr>
-                    <tr>
-                      <td><code>abeno_harukas</code></td>
-                      <td>아베노 하루카스</td>
-                      <td>main</td>
-                      <td>선택</td>
-                    </tr>
-                    <tr>
-                      <td><code>osaka_museum_history</code></td>
-                      <td>오사카 역사박물관</td>
-                      <td>alt</td>
-                      <td>오사카성 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>miraiza_osakajo</code></td>
-                      <td>미라이자 오사카성</td>
-                      <td>alt</td>
-                      <td>오사카성 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>jo_terrace</code></td>
-                      <td>조 테라스</td>
-                      <td>alt</td>
-                      <td>오사카성 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>nakanoshima</code></td>
-                      <td>나카노시마</td>
-                      <td>alt</td>
-                      <td>오사카성 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>sennichimae</code></td>
-                      <td>센니치마에 도구야스지</td>
-                      <td>alt</td>
-                      <td>구로몬 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>namba_parks</code></td>
-                      <td>난바 파크스</td>
-                      <td>alt</td>
-                      <td>덴덴타운 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>bic_camera_namba</code></td>
-                      <td>빅카메라 난바</td>
-                      <td>alt</td>
-                      <td>덴덴타운 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>shinsaibashi_parco</code></td>
-                      <td>신사이바시 PARCO</td>
-                      <td>alt</td>
-                      <td>덴덴타운 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>grand_front</code></td>
-                      <td>그랜드프론트</td>
-                      <td>alt</td>
-                      <td>우메다 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>lucua</code></td>
-                      <td>루쿠아</td>
-                      <td>alt</td>
-                      <td>우메다 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>hep_five</code></td>
-                      <td>헵파이브</td>
-                      <td>alt</td>
-                      <td>우메다 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>nakazakicho</code></td>
-                      <td>나카자키초</td>
-                      <td>alt</td>
-                      <td>우메다 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>jan_jan_yokocho</code></td>
-                      <td>장장요코초</td>
-                      <td>alt</td>
-                      <td>신세카이 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>tennoji_park</code></td>
-                      <td>텐노지공원</td>
-                      <td>alt</td>
-                      <td>신세카이 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>tennoji_zoo</code></td>
-                      <td>덴노지동물원</td>
-                      <td>alt</td>
-                      <td>신세카이 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>spa_world</code></td>
-                      <td>스파월드</td>
-                      <td>alt</td>
-                      <td>신세카이 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>tennoji_mio</code></td>
-                      <td>텐노지 미오</td>
-                      <td>alt</td>
-                      <td>하루카스 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>qs_mall</code></td>
-                      <td>큐즈몰</td>
-                      <td>alt</td>
-                      <td>하루카스 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>tenshiba</code></td>
-                      <td>텐시바</td>
-                      <td>alt</td>
-                      <td>하루카스 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>shitennoji</code></td>
-                      <td>시텐노지</td>
-                      <td>alt</td>
-                      <td>하루카스 대체</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="section-block">
-              <h4>Day 4 (5/25 월) &#8212; USJ</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>name_ko</th>
-                      <th>category</th>
-                      <th>source line</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>usj</code></td>
-                      <td>유니버설 스튜디오 재팬</td>
-                      <td>main</td>
-                      <td>하루 종일</td>
-                    </tr>
-                    <tr>
-                      <td><code>universal_citywalk</code></td>
-                      <td>유니버설 시티워크</td>
-                      <td>alt</td>
-                      <td>USJ 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>tempozan_kaiyukan</code></td>
-                      <td>덴포잔&#183;가이유칸</td>
-                      <td>alt</td>
-                      <td>USJ 대체</td>
-                    </tr>
-                    <tr>
-                      <td><code>sakurajima_area</code></td>
-                      <td>사쿠라지마역 주변</td>
-                      <td>alt</td>
-                      <td>USJ 대체</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="section-block">
-              <h4>Day 5 (5/26 화) &#8212; 출발</h4>
-              <div class="table-wrapper">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>id</th>
-                      <th>name_ko</th>
-                      <th>category</th>
-                      <th>source line</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code>namba_hotel_checkout</code></td>
-                      <td>난바 체크아웃</td>
-                      <td>main</td>
-                      <td>아침</td>
-                    </tr>
-                    <tr>
-                      <td><code>kansai_airport_dep</code></td>
-                      <td>간사이공항 출국</td>
-                      <td>main</td>
-                      <td>출발</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            <div class="section-block">
-              <h4>Counts</h4>
+              <h4>What</h4>
               <ul>
-                <li>Day 1: 12 (3 main + 9 alt)</li>
-                <li>Day 2: 20 (5 main + 15 alt)</li>
-                <li>Day 3: 26 (6 main + 20 alt)</li>
-                <li>Day 4: 4 (1 main + 3 alt)</li>
-                <li>Day 5: 2 (2 main)</li>
-                <li><strong>Total: 64 places</strong></li>
+                <li>
+                  64 places catalogued across 5 days (Day 1: 12, Day 2: 21, Day
+                  3: 26, Day 4: 4, Day 5: 2)
+                </li>
+                <li>
+                  Two categories: <code>main</code> (full profile with
+                  restaurants) and <code>alt</code> (lite profile with summary,
+                  coordinates, activities, review links)
+                </li>
+                <li>
+                  Each entry maps to an <code>id</code>, Korean name, category,
+                  and source context (e.g., &ldquo;morning anchor&rdquo;,
+                  &ldquo;hotel candidate&rdquo;)
+                </li>
               </ul>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Note: 5개 sample이 이미 Stage 1에서 들어가 있어 (kansai_airport,
-                namba_hotel, kuromon_market, denden_town, dotonbori), 실제 신규
-                조사는 ~59개.
+            </div>
+
+            <div class="section-block">
+              <h4>How</h4>
+              <p>
+                Drafted from the travel plan design and GPT itinerary input. The
+                catalog served as the single source of truth during Stage 2 data
+                population, ensuring consistent IDs across
+                <code>places.json</code> and <code>itinerary.json</code>.
               </p>
+            </div>
+
+            <div class="section-block">
+              <h4>Code Locations</h4>
+              <ul>
+                <li>
+                  <code>docs/stage-2/place-catalog.md</code> (master list, 64
+                  entries)
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>Retrospective</h4>
+              <em
+                >The catalog-first approach prevented ID mismatches during
+                parallel subagent dispatch. The final count reached 65 (one Day
+                2 alt added during population), a minor and intentional
+                adjustment.</em
+              >
             </div>
           </article>
         </div>
-        <!-- /.card-grid -->
       </section>
     </main>
   </body>

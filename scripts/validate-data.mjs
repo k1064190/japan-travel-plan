@@ -39,6 +39,34 @@ function validateRating(label, obj, errors) {
   }
 }
 
+function validateBooking(label, b, errors) {
+  if (!isPlainObject(b)) {
+    errors.push(`${label}: must be an object`);
+    return;
+  }
+  if (typeof b.required !== "boolean") {
+    errors.push(`${label}.required must be a boolean`);
+  }
+  if (typeof b.url !== "string" || !/^https:\/\//.test(b.url)) {
+    errors.push(`${label}.url must use https:// (got: ${b.url})`);
+  }
+  if ("advance_days" in b) {
+    if (!Number.isInteger(b.advance_days) || b.advance_days < 0) {
+      errors.push(`${label}.advance_days must be a non-negative integer`);
+    }
+  }
+  if ("ticket_price_jpy" in b) {
+    if (!Number.isInteger(b.ticket_price_jpy) || b.ticket_price_jpy < 0) {
+      errors.push(`${label}.ticket_price_jpy must be a non-negative integer`);
+    }
+  }
+  if ("notes" in b) {
+    if (typeof b.notes !== "string") {
+      errors.push(`${label}.notes must be a string when present`);
+    }
+  }
+}
+
 function validateCuratedLink(label, link, errors) {
   if (!isPlainObject(link)) {
     errors.push(`${label}: must be an object`);
@@ -138,6 +166,9 @@ export function validate(places, itinerary) {
       });
     }
     validateRating(id, place, errors);
+    if ("booking" in place) {
+      validateBooking(`${id}.booking`, place.booking, errors);
+    }
     if (Array.isArray(place.activities)) {
       place.activities.forEach((a, i) => {
         if (isPlainObject(a)) {
@@ -182,6 +213,12 @@ export function validate(places, itinerary) {
         const opid = stop.transit_from_prev.origin_place_id;
         if (typeof opid !== "string" || !places[opid]) {
           errors.push(`${day.id} stop ${stop.place_id}: transit_from_prev.origin_place_id refers to unknown place: ${opid}`);
+        }
+      }
+      if (isPlainObject(stop.transit_from_prev) && "booking_url" in stop.transit_from_prev) {
+        const url = stop.transit_from_prev.booking_url;
+        if (typeof url !== "string" || !/^https:\/\//.test(url)) {
+          errors.push(`${day.id} stop ${stop.place_id}: transit_from_prev.booking_url must use https:// (got: ${url})`);
         }
       }
       if (stop.time) {

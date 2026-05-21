@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>15단계 &mdash; 일본 여행 계획</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          "Apple SD Gothic Neo",
+          "Malgun Gothic",
+          "Noto Sans KR",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        background: #f7f7f5;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0f766e;
+        letter-spacing: -0.01em;
+      }
+      header p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
+      }
+      nav.timeline {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+      }
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .timeline-connector {
+        flex: 1;
+        height: 2px;
+        background: #d1d5db;
+        min-width: 1.5rem;
+      }
+      .timeline-node {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .timeline-node.active {
+        background: #0f766e;
+        color: #fff;
+      }
+      .timeline-node.past {
+        background: #9ca3af;
+        color: #fff;
+      }
+      .timeline-label {
+        font-size: 0.7rem;
+        color: #6b7280;
+        white-space: nowrap;
+      }
+      .timeline-item.active-item .timeline-label {
+        color: #0f766e;
+        font-weight: 600;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+      section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f766e;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ccfbf1;
+      }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+        gap: 1.25rem;
+      }
+      @media (max-width: 720px) {
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        header {
+          padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        nav.timeline {
+          padding: 1rem;
+        }
+        main {
+          padding: 1.25rem 1rem;
+        }
+      }
+      article {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+      }
+      article h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .section-block {
+        margin-bottom: 1rem;
+      }
+      .section-block:last-child {
+        margin-bottom: 0;
+      }
+      .section-block h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #6b7280;
+        margin-bottom: 0.4rem;
+      }
+      .section-block p {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul,
+      .section-block ol {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block li {
+        margin-bottom: 0.2rem;
+      }
+      .section-block code {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.82rem;
+        background: #f3f4f6;
+        color: #1f2937;
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
+      }
+      .section-block table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+        margin-top: 0.5rem;
+      }
+      .section-block th {
+        text-align: left;
+        font-weight: 600;
+        color: #374151;
+        padding: 0.35rem 0.5rem;
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .section-block td {
+        padding: 0.3rem 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+        color: #374151;
+        vertical-align: top;
+      }
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>일본 여행 계획</h1>
+        <p>단계별 진행 상황</p>
+      </div>
+      <nav class="lang-switch" aria-label="언어">
+        <a href="index.html">EN</a> |
+        <span class="current-lang">한국어</span>
+      </nav>
+    </header>
+
+    <nav class="timeline" aria-label="프로젝트 단계">
+      <div class="timeline-item">
+        <div class="timeline-node past">1</div>
+        <span class="timeline-label">1단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">2</div>
+        <span class="timeline-label">2단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">3</div>
+        <span class="timeline-label">3단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">4</div>
+        <span class="timeline-label">4단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">5</div>
+        <span class="timeline-label">5단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">6</div>
+        <span class="timeline-label">6단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">7</div>
+        <span class="timeline-label">7단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">8</div>
+        <span class="timeline-label">8단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">9</div>
+        <span class="timeline-label">9단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">10</div>
+        <span class="timeline-label">10단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">11</div>
+        <span class="timeline-label">11단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">12</div>
+        <span class="timeline-label">12단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">13</div>
+        <span class="timeline-label">13단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node past">14</div>
+        <span class="timeline-label">14단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">15</div>
+        <span class="timeline-label">15단계</span>
+      </div>
+    </nav>
+
+    <main>
+      <section aria-labelledby="stage-heading">
+        <h2 id="stage-heading">15단계</h2>
+        <p class="stage-summary">
+          localStorage 영속성·우선순위 정렬·진행 progress bar를 갖춘 14개 예약
+          항목(유료 입장권 12개 + 라피트 교통편 2개) 추적용 예약 체크리스트
+          패널.
+        </p>
+        <div class="card-grid">
+          <article aria-labelledby="card-checklist">
+            <h3 id="card-checklist">Reservation Checklist</h3>
+
+            <div class="section-block">
+              <h4>왜</h4>
+              <p>
+                Stage 14까지 정보 표시·큐레이션·맵·UI는 완성. 출발 전 실제
+                사용자 액션은 <strong>예약</strong> — USJ 입장권, 난카이 라피트,
+                오사카성·청수사·하루카스·가이유칸·도톤보리 리버크루즈 등은 사전
+                e-티켓이 가격·대기 모두 유리. 호텔은 이미 별도 예약 완료, 식당
+                웨이팅은 범위 밖. 별도 예약 체크리스트 패널을 통해 사용자가 진행
+                상태를 localStorage에 저장하며 추적한다.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>무엇을</h4>
+              <ul>
+                <li>
+                  스키마: <code>place.booking</code> (optional object) &mdash;
+                  <code>required</code>, <code>url</code>,
+                  <code>advance_days</code>, <code>ticket_price_jpy</code>,
+                  <code>notes</code> 필드 및 optional
+                  <code>transit_from_prev.booking_url</code> string
+                </li>
+                <li>
+                  12개 place에 <code>booking</code> 추가 &mdash; USJ, 오사카성,
+                  하루카스300, 가이유칸, 톤보리 리버크루즈, 츠텐카쿠, 청수사,
+                  뵤도인, 고다이지, 엔토쿠인, 기온코너, 후시미 사케 박물관
+                </li>
+                <li>
+                  2개 transit에 <code>booking_url</code> &mdash; Day 1 라피트
+                  KIX&rarr;난바, Day 5 라피트 난바&rarr;KIX
+                </li>
+                <li>
+                  <code>renderBooking(place, color)</code>: 디테일 패널
+                  Activities와 Restaurants 사이에 "예약" 섹션 삽입; 필수/선택
+                  뱃지, 가격, 사전 권장일, 노트 표시
+                </li>
+                <li>transit 카드에 인라인 "e-Ticket &rarr;" 버튼 추가</li>
+                <li>
+                  <code>#checklist</code> aside 패널 (데스크톱) + 모바일 3번째
+                  탭: 14개 카드를 미완료&thinsp;&gt;&thinsp;완료,
+                  필수&thinsp;&gt;&thinsp;선택, 사전 권장일 빠른 순으로 정렬;
+                  완료 항목은 strikethrough + 회색 스타일
+                </li>
+                <li>
+                  진행 progress bar &mdash; "필수 N/M 완료"; 데스크톱 헤더 토글
+                  버튼 "예약 X/Y"
+                </li>
+                <li>
+                  <code>localStorage["reservations"]</code> JSON 객체로 영속;
+                  <code>setReservationDone(id, bool)</code> 헬퍼
+                </li>
+                <li>
+                  필수 8개 (USJ, 오사카성, 하루카스300, 가이유칸, 뵤도인,
+                  기온코너 + 라피트 양방향); 선택 6개는 정보 표시용
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>어떻게</h4>
+              <p>
+                데이터 큐레이션을 subagent 4개 병렬로 처리 (Group 1: USJ +
+                라피트 KIX&harr;난바 via KKday; Group 2: 오사카 명소 5개; Group
+                3: 교토 명소 6개; Group 4: cross-check verifier). 각 subagent가
+                <code>/tmp/booking-patches/</code>에 patch JSON을 저장하면
+                <code>/tmp/merge-bookings.mjs</code>가 일괄 머지
+                (http&rarr;https 강제 변환 포함). Group 3에서 outdated 가격
+                정정: 뵤도인 600&thinsp;&yen;&rarr;700&thinsp;&yen;,
+                고다이지+엔토쿠인 통합권
+                900&thinsp;&yen;&rarr;1,200&thinsp;&yen;. validator는
+                <code>validateBooking</code> 헬퍼를
+                <code>validateCuratedLink</code> 패턴으로 추가; 새 테스트 케이스
+                4개 추가 (11&rarr;15 통과).
+                <code>collectReservationItems()</code>가 places + itinerary
+                양쪽에서 booking을 수집한 뒤 정렬.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>코드 위치</h4>
+              <table>
+                <thead>
+                  <tr>
+                    <th>파일</th>
+                    <th>변경</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>scripts/validate-data.mjs:42-69</code></td>
+                    <td><code>validateBooking</code> 헬퍼 추가</td>
+                  </tr>
+                  <tr>
+                    <td><code>scripts/validate-data.mjs:163-165</code></td>
+                    <td><code>place.booking</code> 검증 호출</td>
+                  </tr>
+                  <tr>
+                    <td><code>scripts/validate-data.mjs:212-217</code></td>
+                    <td>transit <code>booking_url</code> https 검증</td>
+                  </tr>
+                  <tr>
+                    <td><code>tests/validate-data.test.mjs:107-156</code></td>
+                    <td>새 케이스 4개 (총 15개 통과)</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:125-150</code></td>
+                    <td><code>renderBooking(place, color)</code> 헬퍼</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:617-622</code></td>
+                    <td>transit 카드 인라인 e-티켓 버튼</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:687-689</code></td>
+                    <td>디테일 패널 booking 슬롯</td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/app.js:802-998</code></td>
+                    <td>
+                      모바일 탭 확장 + <code>loadReservations</code>,
+                      <code>setReservationDone</code>,
+                      <code>collectReservationItems</code>,
+                      <code>renderChecklistPanel</code>,
+                      <code>renderChecklistToggle</code>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/styles.css:102-109</code></td>
+                    <td>
+                      <code>.checklist-card.checklist-done</code> strikethrough
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>assets/styles.css:144-158</code></td>
+                    <td>
+                      모바일 <code>#checklist.active-mobile</code> 절대배치
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><code>index.html:46-50</code></td>
+                    <td><code>#checklist</code> aside</td>
+                  </tr>
+                  <tr>
+                    <td><code>index.html:67-73</code></td>
+                    <td>3번째 모바일 탭</td>
+                  </tr>
+                  <tr>
+                    <td><code>data/places.json</code></td>
+                    <td><code>booking</code> 추가 12개 항목</td>
+                  </tr>
+                  <tr>
+                    <td><code>data/itinerary.json</code></td>
+                    <td>
+                      Day 1[1] + Day 5[1]
+                      <code>transit_from_prev.booking_url</code>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="section-block">
+              <h4>회고</h4>
+              <em>
+                4-subagent 병렬 큐레이션 패턴(Stage 11/12와 동일)으로 14개
+                항목을 약 16분만에 완성; Group 4 verifier가 cross-check 결과 0
+                corrections으로 마무리. 스키마는 옵셔널 필드만 추가하여 169개
+                place 전체 회귀 없이 통과. Group 3에서 plan 문서의 사전 가격이
+                outdated임을 확인 &mdash; 향후 데이터 작업 전 가격 정합성 사전
+                검증 단계를 계획에 포함할 것.
+              </em>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

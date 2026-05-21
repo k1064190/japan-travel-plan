@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 10 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 10 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -24,6 +24,10 @@
         background: #fff;
         border-bottom: 1px solid #e0e0de;
         padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
       }
       header h1 {
         font-size: 1.4rem;
@@ -35,6 +39,21 @@
         font-size: 0.9rem;
         color: #6b7280;
         margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
       }
       nav.timeline {
         background: #fff;
@@ -54,7 +73,7 @@
         flex: 1;
         height: 2px;
         background: #d1d5db;
-        min-width: 2.5rem;
+        min-width: 1.5rem;
       }
       .timeline-node {
         width: 2rem;
@@ -71,9 +90,14 @@
         background: #0f766e;
         color: #fff;
       }
-      .timeline-node.muted {
+      .timeline-node.past {
         background: #9ca3af;
         color: #fff;
+      }
+      .timeline-node.future {
+        background: transparent;
+        color: #0f766e;
+        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -97,6 +121,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -108,6 +137,8 @@
         }
         header {
           padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         nav.timeline {
           padding: 1rem;
@@ -166,66 +197,68 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-      h4.retro-sub {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #374151;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: 0.75rem;
-        margin-bottom: 0.35rem;
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
-      <p>Staged plan progress</p>
+      <div>
+        <h1>Japan Travel Plan</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <nav class="lang-switch" aria-label="Language">
+        <span class="current-lang">EN</span> |
+        <a href="index.ko.html">한국어</a>
+      </nav>
     </header>
 
     <nav class="timeline" aria-label="Project stages">
       <div class="timeline-item">
-        <div class="timeline-node muted">1</div>
+        <div class="timeline-node past">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">2</div>
+        <div class="timeline-node past">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">3</div>
+        <div class="timeline-node past">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">4</div>
+        <div class="timeline-node past">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node past">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">6</div>
+        <div class="timeline-node past">6</div>
         <span class="timeline-label">Stage 6</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node past">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node past">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">9</div>
+        <div class="timeline-node past">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -235,43 +268,53 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+        <div class="timeline-node future">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+        <div class="timeline-node future">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">13</div>
+        <div class="timeline-node future">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+        <div class="timeline-node future">14</div>
         <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">15</div>
+        <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 10</h2>
+        <p class="stage-summary">
+          Sidebar &ldquo;Nearby Candidates&rdquo; section with rating-sorted
+          cards below itinerary stops, plus food-only and far-candidates filter
+          toggles shared with the map layer.
+        </p>
         <div class="card-grid">
           <article aria-labelledby="card-sidebar">
-            <h3 id="card-sidebar">Sidebar Candidate Cards + Filter Toggles</h3>
+            <h3 id="card-sidebar">Sidebar Candidates</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 8/9에서 alt 후보&#183;맛집을 맵에 회색 마커로 노출했지만
-                사이드바 일정 탭에서는 보이지 않았다. 작은 마커는 폰 화면에서
-                정확히 누르기 어렵고 별점을 한눈에 정렬해서 보기도 불편.
-                사이드바에 일정 stops 아래로 카드 형태로 노출하면 (1) 별점
-                내림차순으로 어디가 가장 인기 있는지 즉시 파악, (2) 큰 터치
-                타깃, (3) &#8220;맛집만&#8221;&#183;&#8220;먼 후보도&#8221; 같은
-                필터를 켜서 의도한 후보만 좁혀볼 수 있다.
+                Stage 8/9 exposed alt candidates and restaurants as map markers,
+                but the sidebar itinerary tab showed none of them. Small markers
+                are hard to tap precisely on a phone screen, and scanning
+                ratings requires looking at each marker individually. Showing
+                candidates as cards in the sidebar, sorted by rating, lets users
+                instantly see which place is most popular and provides a larger
+                tap target.
               </p>
             </div>
 
@@ -279,171 +322,84 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong>사이드바 &#8220;주변 후보&#8221; 섹션</strong> &#8212;
-                  일정 stops 목록 아래에 추가. 활성 day의 alt 후보를 카드로
-                  나열.
-                  <ul>
-                    <li>
-                      별점 내림차순 정렬 (rating 없는 entry는 맨 뒤 + 한국어
-                      가나다순)
-                    </li>
-                    <li>
-                      카드 클릭 &#8594; <code>selectAlt(id)</code> (디테일 패널
-                      오픈, 맵도 flyTo)
-                    </li>
-                    <li>emoji + 이름 + 태그 3개 + 인라인 별점</li>
-                  </ul>
+                  Sidebar &ldquo;Nearby Candidates&rdquo; section below the
+                  itinerary stop list: cards sorted by rating descending
+                  (unrated entries appended alphabetically); card click &rarr;
+                  <code>selectAlt(id)</code>; each card shows emoji + name + 3
+                  tags + inline rating
                 </li>
                 <li>
-                  <strong>필터 토글</strong> (체크박스 2개 inline)
-                  <ul>
-                    <li>
-                      <strong>맛집만</strong>:
-                      <code>isFoodPlace(place)</code> &#8212; rating 필드 또는
-                      음식 키워드 태그 매칭 (라멘/스시/카츠/카페/이자카야/디저트
-                      등 정규식)
-                    </li>
-                    <li>
-                      <strong>먼 후보도 보기</strong>: 반경을
-                      <code>ALT_PROXIMITY_KM</code> (2 km) &#8594;
-                      <code>ALT_FAR_KM</code> (8 km)으로 확장
-                    </li>
-                  </ul>
+                  Two filter toggles (inline checkboxes):
+                  <strong>Food only</strong> (<code>isFoodPlace</code> &mdash;
+                  rating field present OR food-keyword tag regex match);
+                  <strong>Show far candidates</strong> (expands radius from
+                  <code>ALT_PROXIMITY_KM</code> 2 km to
+                  <code>ALT_FAR_KM</code> 8 km to surface intentionally-distant
+                  entries like Tsuruhashi Korea Town)
                 </li>
                 <li>
-                  맵 마커와 사이드바 카드가 같은 필터 state를 공유 &#8212; 토글
-                  한 번에 둘 다 갱신.
+                  Map markers and sidebar cards share the same filter state
+                  &mdash; one toggle updates both
                 </li>
               </ul>
             </div>
 
             <div class="section-block">
               <h4>How</h4>
-              <ul>
-                <li>
-                  <code>state.filterFood</code> /
-                  <code>state.showFarCandidates</code> 두 boolean을 state 객체에
-                  추가.
-                </li>
-                <li>
-                  <code>altCandidatesForDay(day, opts)</code>가
-                  <code>opts.foodOnly</code> / <code>opts.far</code>를 받게
-                  시그니처 확장. <code>renderDay</code>와
-                  <code>renderSidebar</code> 양쪽에서 동일 옵션 객체로 호출.
-                </li>
-                <li>
-                  <code>renderSidebar</code>이 day stops
-                  <code>&lt;ul&gt;</code> 뒤에
-                  <code>candidateSection</code> 블록을 emit. 카드 그리드는
-                  <code>altCandidatesForDay</code> 결과를 <code>.sort()</code>로
-                  rating desc.
-                </li>
-                <li>
-                  토글 change 이벤트는 state 업데이트 후
-                  <code>renderDay</code> + <code>renderSidebar</code> 둘 다
-                  호출해 맵&#183;사이드바 동기 갱신.
-                </li>
-              </ul>
+              <p>
+                Two booleans added to <code>state</code>:
+                <code>filterFood</code> and <code>showFarCandidates</code>.
+                <code>altCandidatesForDay(day, opts)</code> signature extended
+                with <code>opts.foodOnly</code> and <code>opts.far</code>; both
+                <code>renderDay</code> and <code>renderSidebar</code> call it
+                with the same options object. <code>renderSidebar</code> emits a
+                <code>candidateSection</code> block after the stops
+                <code>&lt;ul&gt;</code>, sorted by rating descending. Toggle
+                change events update state then call both
+                <code>renderDay</code> and <code>renderSidebar</code> to keep
+                map and sidebar in sync.
+              </p>
             </div>
 
             <div class="section-block">
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>assets/app.js:137&#8211;172</code> (state 필드 +
-                  <code>ALT_PROXIMITY_KM</code>/<code>ALT_FAR_KM</code> +
-                  <code>FOOD_TAG_RE</code> + <code>isFoodPlace</code>)
+                  <code>assets/app.js:137-172</code> (state fields,
+                  <code>ALT_PROXIMITY_KM</code>/<code>ALT_FAR_KM</code>,
+                  <code>FOOD_TAG_RE</code>, <code>isFoodPlace</code>)
                 </li>
                 <li>
-                  <code>assets/app.js:180&#8211;205</code> (<code
+                  <code>assets/app.js:180-205</code> (<code
                     >altCandidatesForDay</code
                   >
-                  opts 파라미터)
+                  opts parameter)
                 </li>
                 <li>
-                  <code>assets/app.js:247&#8211;251</code> (renderDay가 state
-                  옵션 전달)
+                  <code>assets/app.js:247-251</code> (<code>renderDay</code>
+                  passing state options)
                 </li>
                 <li>
-                  <code>assets/app.js:347&#8211;471</code> (<code
-                    >renderSidebar</code
-                  >
-                  후보 섹션 + 토글 핸들러)
+                  <code>assets/app.js:347-471</code> (<code>renderSidebar</code>
+                  candidate section + toggle handlers)
                 </li>
               </ul>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commit: <code>b523602</code> feat(sidebar): candidates section
-                under itinerary stops + filter toggles
-              </p>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
-
-              <h4 class="retro-sub">잘된 점</h4>
-              <ul>
-                <li>
-                  <code>altCandidatesForDay</code>에 opts 파라미터만 더하니
-                  맵&#183;사이드바 양쪽 호출자가 자연스럽게 토글 지원. 단일
-                  source of truth.
-                </li>
-                <li>
-                  <code>isFoodPlace</code> 휴리스틱이 단순한데도 잘 동작 &#8212;
-                  rating 있는 entry는 거의 식당이라 양호한 신호.
-                </li>
-                <li>
-                  별점 내림차순 정렬 후 첫 카드가 가장 신뢰도 높은 곳 &#8212;
-                  Day1에선 야끼니쿠 M (Tabelog 3.78), Day2에선 야마모토 멘조
-                  (3.92).
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">다음에 가져갈 것</h4>
-              <ul>
-                <li>
-                  필터 토글 state는 화면 새로고침 시 사라짐 &#8212;
-                  <code>localStorage</code> 저장해서 다시 와도 사용자 선호
-                  유지하면 좋겠음.
-                </li>
-                <li>
-                  사이드바 후보가 30개+ 되면 스크롤 길어짐 &#8212; 가상화 또는
-                  &#8220;더 보기&#8221; 페이지네이션 도입 검토.
-                </li>
-                <li>
-                  거리 표시 &#8212; 현재 활성 stop에서 몇 km 떨어졌는지 카드에
-                  표시하면 판별 빠름.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">검증</h4>
-              <ul>
-                <li>
-                  <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  131 places, 5 days validated
-                </li>
-                <li>
-                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
-                  11 pass
-                </li>
-                <li>
-                  browse smoke: Day1 sidebar 후보 40개, 별점 내림차순 (Tabelog
-                  3.78 &#8594; 3.71 &#8594; ...). 맛집만 토글: 40 &#8594; 21.
-                  Day3 먼 후보 토글: 26 &#8594; 36, 츠루하시 코리아타운 노출
-                  &#10003;. 맛집만 + 먼 후보 동시: 73개. console error 0.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">한계 (이연)</h4>
-              <p style="font-size: 0.9rem; color: #374151">
-                Phase C &#8212; Tabelog/Google 실제 별점 fetch는 이 세션에서
-                Anthropic API 사용량 한도로 dispatch된 subagent 두 개가 즉시
-                종료. 한도 풀린 뒤 별도 세션에서 재실행 가능. (Stage 11에서
-                완료.)
-              </p>
+              <em
+                >Adding an <code>opts</code> parameter to
+                <code>altCandidatesForDay</code> was all that was needed for
+                both callers to support toggles from a single source of truth.
+                The <code>isFoodPlace</code> heuristic works well in practice:
+                entries with a rating field are almost exclusively restaurants.
+                Day 1&rsquo;s top card was Yakiniku M (Tabelog 3.78), Day
+                2&rsquo;s was Yamamoto Menzo (3.92).</em
+              >
             </div>
           </article>
         </div>
-        <!-- /.card-grid -->
       </section>
     </main>
   </body>
