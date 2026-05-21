@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stage 16 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background: #f7f7f5;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0f766e;
+        letter-spacing: -0.01em;
+      }
+      header p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 0.2rem;
+      }
+      .lang-switch {
+        font-size: 0.85rem;
+        color: #0f766e;
+        text-decoration: none;
+        white-space: nowrap;
+        border: 1px solid #0f766e;
+        border-radius: 4px;
+        padding: 0.25rem 0.65rem;
+        flex-shrink: 0;
+      }
+      .lang-switch:hover {
+        background: #f0fdf9;
+      }
+      nav.timeline {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+      }
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .timeline-connector {
+        flex: 1;
+        height: 2px;
+        background: #d1d5db;
+        min-width: 2.5rem;
+      }
+      .timeline-node {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .timeline-node.active {
+        background: #0f766e;
+        color: #fff;
+      }
+      .timeline-node.muted {
+        background: #9ca3af;
+        color: #fff;
+      }
+      .timeline-node.pending {
+        background: #fff;
+        color: #9ca3af;
+        border: 2px dashed #9ca3af;
+      }
+      .timeline-label {
+        font-size: 0.7rem;
+        color: #6b7280;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .timeline-item.active-item .timeline-label {
+        color: #0f766e;
+        font-weight: 600;
+      }
+      .timeline-item.pending-item .timeline-label {
+        color: #9ca3af;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+      section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f766e;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ccfbf1;
+      }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+        gap: 1.25rem;
+      }
+      @media (max-width: 720px) {
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        header {
+          padding: 1.25rem 1rem;
+        }
+        nav.timeline {
+          padding: 1rem;
+        }
+        main {
+          padding: 1.25rem 1rem;
+        }
+      }
+      article {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+      }
+      article h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .section-block {
+        margin-bottom: 1rem;
+      }
+      .section-block:last-child {
+        margin-bottom: 0;
+      }
+      .section-block h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #6b7280;
+        margin-bottom: 0.4rem;
+      }
+      .section-block p {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul,
+      .section-block ol {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block li {
+        margin-bottom: 0.2rem;
+      }
+      .section-block code {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.82rem;
+        background: #f3f4f6;
+        color: #1f2937;
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
+      }
+      h4.retro-sub {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #374151;
+        text-transform: none;
+        letter-spacing: 0;
+        margin-top: 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <a href="index.ko.html" class="lang-switch">한국어</a>
+    </header>
+
+    <nav class="timeline" aria-label="Project stages">
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
+        <span class="timeline-label">Stage 1</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">2</div>
+        <span class="timeline-label">Stage 2</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">3</div>
+        <span class="timeline-label">Stage 3</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">4</div>
+        <span class="timeline-label">Stage 4</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">5</div>
+        <span class="timeline-label">Stage 5</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">6</div>
+        <span class="timeline-label">Stage 6</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">7</div>
+        <span class="timeline-label">Stage 7</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">8</div>
+        <span class="timeline-label">Stage 8</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">9</div>
+        <span class="timeline-label">Stage 9</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">10</div>
+        <span class="timeline-label">Stage 10</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">Stage 11</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">Stage 12</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">Stage 13</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">14</div>
+        <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item pending-item">
+        <div class="timeline-node pending">15</div>
+        <span class="timeline-label">Stage 15<br />(in progress)</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">16</div>
+        <span class="timeline-label">Stage 16</span>
+      </div>
+    </nav>
+
+    <main>
+      <section aria-labelledby="stage-heading">
+        <h2 id="stage-heading">Stage 16</h2>
+        <div class="card-grid">
+          <!-- Single card sourced from usj-interior.md -->
+          <article aria-labelledby="card-usj-interior">
+            <h3 id="card-usj-interior">Usj Interior</h3>
+
+            <div class="section-block">
+              <h4>Why</h4>
+              <p>
+                Stage 4 treated USJ as a single stop, but in practice it holds
+                11 zones and 50+ attractions. Showing an entire Day 4 as one pin
+                makes it impossible to plan what to do inside USJ. Korean
+                tourists typically need advance knowledge of popular rides
+                (Mario Kart, Forbidden Journey, Hollywood Dream), Nintendo
+                timed-entry tickets, and seasonal events (Cool Japan, Detective
+                Conan collaboration) to optimize routing and queue times. The
+                goal was to model USJ internals as individual attraction
+                entries, navigable from the map and detail panel.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>What</h4>
+              <ul>
+                <li>
+                  Three optional schema fields added:
+                  <ul>
+                    <li>
+                      <code>place.parent</code> &#8212; references the parent
+                      place id to mark an entry as a child
+                    </li>
+                    <li>
+                      <code>place.park_zone</code> &#8212; free-text zone label
+                      for display
+                    </li>
+                    <li>
+                      <code>place.attraction_type</code> &#8212; enum
+                      <code>ride</code> / <code>show</code> /
+                      <code>food</code> / <code>shop</code> /
+                      <code>event</code> / <code>landmark</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  52 USJ child entries added &#8212; 16 rides / 13 events / 12
+                  food / 6 shops / 4 shows / 1 landmark.
+                </li>
+                <li>
+                  Zone distribution: Super Nintendo World (8), Wizarding World
+                  (8), Minion Park (5), Jurassic Park (5), Hollywood (5), New
+                  York (5), Universal Wonderland (5), USJ common events (5),
+                  Amity Village (3), San Francisco (2), WaterWorld (1).
+                </li>
+                <li>
+                  5 closed / season-ended attractions preserved in detail with a
+                  "currently closed" note: Spider-Man 4K3D (closed 2024-01-22),
+                  Backdraft (closure announced 2023-05), Sesame Street Fun World
+                  (closed 2026-05-10 &#8212; 12 days before the trip), Demon
+                  Slayer XR Ride (ended 2025-01).
+                </li>
+                <li>
+                  Child coordinates placed within the USJ footprint
+                  [34.665&#8211;34.668, 135.431&#8211;135.434] using zone center
+                  &#177;5&#8211;10 m offsets (exact per-attraction coordinates
+                  are not published by USJ).
+                </li>
+                <li>
+                  UI &#8212; <code>state.usjLayer</code>: child markers
+                  auto-shown when Day 4 is active. Zone-colored 22 px pins
+                  render beneath numbered markers.
+                </li>
+                <li>
+                  Detail panel: "USJ Interior (52)" section inside the USJ
+                  parent page &#8212; zone-colored card groups with
+                  <code>attraction_type</code> badge and rating.
+                </li>
+                <li>
+                  Child detail view: "&#8592; Back to USJ" back-nav + zone color
+                  badge.
+                </li>
+                <li>
+                  Validator: verifies <code>parent</code> points to a root place
+                  (not itself), exempts children from the
+                  <code>restaurants</code> required-field check, enforces
+                  <code>attraction_type</code> enum.
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>How</h4>
+              <ol>
+                <li>
+                  4-subagent parallel curation (Stage 11/12/15 pattern):
+                  <ul>
+                    <li>
+                      Group 1: Super Nintendo World (8) &#8212; USJ official
+                      Korean + Wikipedia + Namuwiki + TDR Explorer
+                    </li>
+                    <li>
+                      Group 2: Harry Potter + Minion (13) &#8212; USJ official +
+                      Wikipedia EN + KKday Korea + TDR Explorer (Hogwarts
+                      Magical Night season check)
+                    </li>
+                    <li>
+                      Group 3: Hollywood + New York + San Francisco + Wonderland
+                      (17) &#8212; closure/reopening cross-check using Inside
+                      Universal and WDW News Today reports
+                    </li>
+                    <li>
+                      Group 4: Jurassic + WaterWorld + Amity + common events
+                      (14) &#8212; precise 2026-05 operational status
+                      verification (Cool Japan / Conan collab through 6/30;
+                      Halloween Horror Nights and Wonder Christmas out of
+                      season)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  Each subagent output to
+                  <code>/tmp/usj-patches/group{N}.json</code>; merged by
+                  <code>/tmp/merge-usj.mjs</code> (first entry wins on duplicate
+                  placeId; backfills <code>restaurants: []</code> /
+                  <code>tags: []</code> / <code>review_links</code>).
+                </li>
+                <li>
+                  Validator extended: <code>parent</code> reference check +
+                  <code>attraction_type</code> enum +
+                  <code>restaurants</code> exemption when <code>parent</code> is
+                  present. Three new tests added (passing child / unknown parent
+                  / invalid type).
+                </li>
+                <li>
+                  UI: new <code>state.usjLayer</code> layered after
+                  <code>routeLayer</code> / <code>altLayer</code>;
+                  <code>drawChildMarkers(parentId, color)</code> called inside
+                  <code>renderDay</code>; <code>renderUsjChildren</code>
+                  renders zone-grouped card grid inside the detail panel;
+                  <code>selectAlt(id)</code> reused as the single entry point
+                  for map pin click, card click, and back-nav.
+                </li>
+              </ol>
+            </div>
+
+            <div class="section-block">
+              <h4>Code Locations</h4>
+              <ul>
+                <li>
+                  <code>scripts/validate-data.mjs:1-50</code> &#8212;
+                  <code>CHILD_EXEMPT_FIELDS</code>,
+                  <code>ATTRACTION_TYPES</code>, child detection
+                </li>
+                <li>
+                  <code>scripts/validate-data.mjs:115-138</code> &#8212; parent
+                  / park_zone / attraction_type validation
+                </li>
+                <li>
+                  <code>tests/validate-data.test.mjs</code> &#8212; +3 cases (15
+                  &#8594; 18 pass)
+                </li>
+                <li>
+                  <code>assets/app.js:125-167</code> &#8212;
+                  <code>renderUsjChildren(parent, parentId, color)</code>
+                </li>
+                <li>
+                  <code>assets/app.js:421-422</code> &#8212;
+                  <code>state.usjLayer</code> initialization
+                </li>
+                <li><code>assets/app.js:434</code> &#8212; renderDay clear</li>
+                <li>
+                  <code>assets/app.js:481-496</code> &#8212;
+                  <code>drawChildMarkers</code> call in renderDay
+                </li>
+                <li>
+                  <code>assets/app.js:498-522</code> &#8212;
+                  <code>PARK_ZONE_HUE</code>, <code>zoneColor</code> (prefix
+                  matching)
+                </li>
+                <li>
+                  <code>assets/app.js:524-552</code> &#8212;
+                  <code>getChildren</code>, <code>drawChildMarkers</code>
+                </li>
+                <li>
+                  <code>assets/app.js:716-723</code> &#8212; renderDetail
+                  backNav + zoneBadge + childrenSection variables
+                </li>
+                <li>
+                  <code>assets/app.js:739-749</code> &#8212; innerHTML slots for
+                  backNav + zoneBadge + childrenSection
+                </li>
+                <li>
+                  <code>assets/app.js:817-825</code> &#8212; data-child +
+                  back-nav event handlers
+                </li>
+                <li>
+                  <code>assets/styles.css:44-67</code> &#8212;
+                  <code>.park-child-marker</code>
+                </li>
+                <li>
+                  <code>data/places.json</code> &#8212; 52 new entries
+                  (<code>usj_smw_*</code>, <code>usj_hp_*</code>,
+                  <code>usj_mp_*</code>, <code>usj_hw_*</code>,
+                  <code>usj_ny_*</code>, <code>usj_sf_*</code>,
+                  <code>usj_uw_*</code>, <code>usj_jp_*</code>,
+                  <code>usj_ww_*</code>, <code>usj_am_*</code>,
+                  <code>usj_event_*</code>)
+                </li>
+                <li>
+                  <code>docs/stage-16/usj-interior.md</code> &#8212; this
+                  document
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>Retrospective</h4>
+
+              <h4 class="retro-sub">What went well</h4>
+              <ul>
+                <li>
+                  4-subagent parallel curation completed 52 entries in ~28
+                  minutes. Group 3 verifier correctly identified 5 closed/ended
+                  attractions as of 2026-05-21 (e.g., Sesame Street closed 11
+                  days before the trip).
+                </li>
+                <li>
+                  A single <code>parent</code> field cleanly represents the
+                  children / restaurants / zone tree &#8212; absorbed into
+                  <code>places.json</code> without a new file.
+                </li>
+                <li>
+                  <code>zoneColor</code> prefix matching naturally falls back to
+                  the parent color for sub-zone names such as "Super Nintendo
+                  World / Donkey Kong Country".
+                </li>
+                <li>
+                  Validator added optional fields non-destructively &#8212; 169
+                  existing places regressed zero, following the same additive
+                  pattern as Stage 15.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">Carry forward</h4>
+              <ul>
+                <li>
+                  Exact attraction coordinates are not published by USJ; pins
+                  fall somewhere within the zone but are not precise. OSM
+                  contributor data for USJ interior polygons/nodes would enable
+                  a follow-up correction.
+                </li>
+                <li>
+                  Closed attraction display &#8212; currently only a text note
+                  in the detail body; a distinct visual indicator (gray pin,
+                  "closed" badge) would be clearer.
+                </li>
+                <li>
+                  Timed-entry / Express Pass requirement is tag-only; linking it
+                  to the Stage 15 booking infrastructure (required badge +
+                  <code>advance_days</code>) would improve consistency.
+                </li>
+                <li>
+                  Day 4 itinerary remains 1 stop. If user demand grows, USJ
+                  could be split into time-block sub-stops (morning = SMW,
+                  afternoon = HP, evening = parade).
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">Validation</h4>
+              <ul>
+                <li>
+                  <code>node scripts/validate-data.mjs</code> &#8594; 221
+                  places, 5 days (169 + 52)
+                </li>
+                <li>
+                  <code>node --test tests/validate-data.test.mjs</code>
+                  &#8594; 14 pass (11 + 3 new cases)
+                </li>
+                <li>
+                  <code>node /tmp/merge-usj.mjs</code> &#8594; 52 entries added,
+                  0 duplicates after final run
+                </li>
+                <li>
+                  Data distribution confirmed: 16 ride / 13 event / 12 food / 6
+                  shop / 4 show / 1 landmark
+                </li>
+                <li>
+                  5 closed/season-ended entries verified with "currently closed"
+                  notation in detail view
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- /.card-grid -->
+      </section>
+    </main>
+  </body>
+</html>

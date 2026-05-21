@@ -154,6 +154,61 @@ describe("validate(places, itinerary)", () => {
     assert.ok(r.errors.some((e) => e.includes("transit_from_prev.booking_url must use https://")));
   });
 
+  it("passes when a child place is exempt from restaurants and has valid parent/zone/type", () => {
+    const child = {
+      name_ko: "마리오 카트",
+      name_jp: "マリオカート",
+      coords: [34.6664, 135.4321],
+      category: "alt",
+      emoji: "🏎️",
+      tags: ["AR 라이드"],
+      summary: "s",
+      detail: "d",
+      sources: [{ title: "t", url: "https://example.com" }],
+      activities: ["a"],
+      review_links: { naver: "https://x.com", google: "https://x.com", youtube: "https://x.com" },
+      parent: "p1",
+      park_zone: "슈퍼 닌텐도 월드",
+      attraction_type: "ride",
+    };
+    const r = validate({ p1: goodPlace, child1: child }, goodItinerary);
+    assert.deepEqual(r.errors, []);
+  });
+
+  it("fails when child.parent references an unknown place", () => {
+    const child = {
+      name_ko: "n", name_jp: "n", coords: [34.6, 135.5], category: "alt",
+      emoji: "·", tags: [], summary: "s", detail: "d",
+      sources: [{ title: "t", url: "https://example.com" }],
+      activities: ["a"],
+      review_links: { naver: "https://x.com", google: "https://x.com", youtube: "https://x.com" },
+      parent: "ghost",
+    };
+    const r = validate({ p1: goodPlace, child1: child }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("parent refers to unknown place")));
+  });
+
+  it("fails when child.parent itself is a child place (no grandchildren)", () => {
+    const baseFields = {
+      name_jp: "n", coords: [34.6, 135.5], category: "alt", emoji: "·",
+      tags: [], summary: "s", detail: "d",
+      sources: [{ title: "t", url: "https://example.com" }],
+      activities: ["a"],
+      review_links: { naver: "https://x.com", google: "https://x.com", youtube: "https://x.com" },
+    };
+    const parent = { ...goodPlace };
+    const child = { ...baseFields, name_ko: "child", parent: "p1" };
+    const grandchild = { ...baseFields, name_ko: "grandchild", parent: "c1" };
+    const r = validate({ p1: parent, c1: child, gc1: grandchild }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("must not itself be a child place")));
+  });
+
+  it("fails when attraction_type is not one of the allowed enum values", () => {
+    const bad = { ...goodPlace, attraction_type: "rollercoaster" };
+    const r = validate({ p1: bad }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("attraction_type must be one of")));
+  });
+
   it("fails when stop time is not HH:MM", () => {
     const itin = {
       ...goodItinerary,

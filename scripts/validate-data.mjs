@@ -14,6 +14,18 @@ const REQUIRED_FIELDS = [
   "restaurants",
   "review_links",
 ];
+// Child places (places nested under a `parent`, e.g. USJ interior attractions)
+// are visitor-facing in their own right but don't need their own restaurant
+// list — diners go to the parent's restaurants instead.
+const CHILD_EXEMPT_FIELDS = new Set(["restaurants"]);
+const ATTRACTION_TYPES = new Set([
+  "ride",
+  "show",
+  "food",
+  "shop",
+  "event",
+  "landmark",
+]);
 const JAPAN_BOUNDS = { latMin: 30, latMax: 46, lngMin: 128, lngMax: 146 };
 const UTILITY_TAGS = new Set(["교통허브", "숙소", "출국 준비", "공항", "출국"]);
 
@@ -107,8 +119,34 @@ export function validate(places, itinerary) {
       errors.push(`${id}: place entry must be an object`);
       continue;
     }
+    const isChild = typeof place.parent === "string" && place.parent !== "";
     for (const f of REQUIRED_FIELDS) {
+      if (isChild && CHILD_EXEMPT_FIELDS.has(f)) continue;
       if (!(f in place)) errors.push(`${id}: missing field: ${f}`);
+    }
+    if ("parent" in place) {
+      if (typeof place.parent !== "string" || place.parent.trim() === "") {
+        errors.push(`${id}.parent must be a non-empty string`);
+      } else if (!places[place.parent]) {
+        errors.push(`${id}.parent refers to unknown place: ${place.parent}`);
+      } else if (
+        typeof places[place.parent]?.parent === "string" &&
+        places[place.parent].parent !== ""
+      ) {
+        errors.push(`${id}.parent must not itself be a child place`);
+      }
+    }
+    if ("park_zone" in place) {
+      if (typeof place.park_zone !== "string" || place.park_zone.trim() === "") {
+        errors.push(`${id}.park_zone must be a non-empty string`);
+      }
+    }
+    if ("attraction_type" in place) {
+      if (!ATTRACTION_TYPES.has(place.attraction_type)) {
+        errors.push(
+          `${id}.attraction_type must be one of ${[...ATTRACTION_TYPES].join("/")} (got: ${place.attraction_type})`,
+        );
+      }
     }
     if ("coords" in place) {
       if (!Array.isArray(place.coords) || place.coords.length !== 2) {

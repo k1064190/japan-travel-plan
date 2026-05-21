@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>16단계 &#8212; 일본 여행 계획 2026.05.22&#8211;26</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          "Noto Sans KR",
+          "Apple SD Gothic Neo",
+          "Malgun Gothic",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        background: #f7f7f5;
+        color: #1a1a1a;
+        line-height: 1.6;
+      }
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #0f766e;
+        letter-spacing: -0.01em;
+      }
+      header p {
+        font-size: 0.9rem;
+        color: #6b7280;
+        margin-top: 0.2rem;
+      }
+      .lang-switch {
+        font-size: 0.85rem;
+        color: #0f766e;
+        text-decoration: none;
+        white-space: nowrap;
+        border: 1px solid #0f766e;
+        border-radius: 4px;
+        padding: 0.25rem 0.65rem;
+        flex-shrink: 0;
+      }
+      .lang-switch:hover {
+        background: #f0fdf9;
+      }
+      nav.timeline {
+        background: #fff;
+        border-bottom: 1px solid #e0e0de;
+        padding: 1.25rem 2rem;
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+      }
+      .timeline-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.35rem;
+      }
+      .timeline-connector {
+        flex: 1;
+        height: 2px;
+        background: #d1d5db;
+        min-width: 2.5rem;
+      }
+      .timeline-node {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        flex-shrink: 0;
+      }
+      .timeline-node.active {
+        background: #0f766e;
+        color: #fff;
+      }
+      .timeline-node.muted {
+        background: #9ca3af;
+        color: #fff;
+      }
+      .timeline-node.pending {
+        background: #fff;
+        color: #9ca3af;
+        border: 2px dashed #9ca3af;
+      }
+      .timeline-label {
+        font-size: 0.7rem;
+        color: #6b7280;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .timeline-item.active-item .timeline-label {
+        color: #0f766e;
+        font-weight: 600;
+      }
+      .timeline-item.pending-item .timeline-label {
+        color: #9ca3af;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem;
+      }
+      section h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f766e;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #ccfbf1;
+      }
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
+        gap: 1.25rem;
+      }
+      @media (max-width: 720px) {
+        .card-grid {
+          grid-template-columns: 1fr;
+        }
+        header {
+          padding: 1.25rem 1rem;
+        }
+        nav.timeline {
+          padding: 1rem;
+        }
+        main {
+          padding: 1.25rem 1rem;
+        }
+      }
+      article {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 1.25rem 1.5rem;
+      }
+      article h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #f3f4f6;
+      }
+      .section-block {
+        margin-bottom: 1rem;
+      }
+      .section-block:last-child {
+        margin-bottom: 0;
+      }
+      .section-block h4 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        color: #6b7280;
+        margin-bottom: 0.4rem;
+      }
+      .section-block p {
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block ul,
+      .section-block ol {
+        padding-left: 1.2rem;
+        font-size: 0.9rem;
+        color: #374151;
+      }
+      .section-block li {
+        margin-bottom: 0.2rem;
+      }
+      .section-block code {
+        font-family:
+          "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.82rem;
+        background: #f3f4f6;
+        color: #1f2937;
+        padding: 0.1em 0.35em;
+        border-radius: 3px;
+      }
+      h4.retro-sub {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #374151;
+        text-transform: none;
+        letter-spacing: 0;
+        margin-top: 0.75rem;
+        margin-bottom: 0.35rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>일본 여행 계획 2026.05.22&#8211;26</h1>
+        <p>단계별 진행 현황</p>
+      </div>
+      <a href="index.html" class="lang-switch">EN</a>
+    </header>
+
+    <nav class="timeline" aria-label="프로젝트 단계">
+      <div class="timeline-item">
+        <div class="timeline-node muted">1</div>
+        <span class="timeline-label">1단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">2</div>
+        <span class="timeline-label">2단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">3</div>
+        <span class="timeline-label">3단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">4</div>
+        <span class="timeline-label">4단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">5</div>
+        <span class="timeline-label">5단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">6</div>
+        <span class="timeline-label">6단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">7</div>
+        <span class="timeline-label">7단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">8</div>
+        <span class="timeline-label">8단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">9</div>
+        <span class="timeline-label">9단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">10</div>
+        <span class="timeline-label">10단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">11</div>
+        <span class="timeline-label">11단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">12</div>
+        <span class="timeline-label">12단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">13</div>
+        <span class="timeline-label">13단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node muted">14</div>
+        <span class="timeline-label">14단계</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item pending-item">
+        <div class="timeline-node pending">15</div>
+        <span class="timeline-label">15단계<br />(준비 중)</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item active-item">
+        <div class="timeline-node active" aria-current="step">16</div>
+        <span class="timeline-label">16단계</span>
+      </div>
+    </nav>
+
+    <main>
+      <section aria-labelledby="stage-heading">
+        <h2 id="stage-heading">16단계</h2>
+        <div class="card-grid">
+          <!-- usj-interior.md 기반 단일 카드 -->
+          <article aria-labelledby="card-usj-interior">
+            <h3 id="card-usj-interior">Usj Interior</h3>
+
+            <div class="section-block">
+              <h4>왜</h4>
+              <p>
+                Stage 4 USJ를 단일 stop으로 처리했지만 실제로는 11개 zone, 50개+
+                어트랙션이 있는 곳. Day 4 하루 종일을 한 점으로만 표시하면
+                "USJ에서 뭘 할지" 계획이 불가능. 한국인 관광객은 보통 Mario
+                Kart&#183;Forbidden Journey&#183;Hollywood Dream 같은 인기
+                라이드 + 닌텐도 정리권 + 시즌 이벤트(Cool Japan, Detective Conan
+                콜라보) 같은 운영 디테일을 미리 알아야 동선&#183;대기시간을
+                최적화한다. 그래서 USJ 내부를 별도 어트랙션 단위로 데이터화하고
+                맵&#183;디테일에서 탐색 가능하게 만든다.
+              </p>
+            </div>
+
+            <div class="section-block">
+              <h4>무엇을</h4>
+              <ul>
+                <li>
+                  스키마 옵셔널 3필드 추가:
+                  <ul>
+                    <li>
+                      <code>place.parent</code> &#8212; 자식임을 표시하는 부모
+                      place id 참조
+                    </li>
+                    <li>
+                      <code>place.park_zone</code> &#8212; 표시용 zone 라벨
+                      (자유 문자열)
+                    </li>
+                    <li>
+                      <code>place.attraction_type</code> &#8212; enum
+                      <code>ride</code> / <code>show</code> /
+                      <code>food</code> / <code>shop</code> /
+                      <code>event</code> / <code>landmark</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  USJ 자식 52개 entry &#8212; 16 rides / 13 events / 12 food / 6
+                  shops / 4 shows / 1 landmark.
+                </li>
+                <li>
+                  Zone 분포: 슈퍼 닌텐도 월드(8), 위저딩 월드(8), 미니언
+                  파크(5), 쥬라기 공원(5), 할리우드(5), 뉴욕(5), 유니버설
+                  원더랜드(5), USJ 공통 이벤트(5), 애미티 빌리지(3),
+                  샌프란시스코(2), 워터월드(1).
+                </li>
+                <li>
+                  폐장/시즌 종료 5개도 detail에 "현재 운영 종료" 표기로 보존
+                  (Spider-Man 4K3D 2024-01-22 폐장, Backdraft 2023-05 폐장 발표,
+                  Sesame Street Fun World 2026-05-10 폐장 &#8212; 여행 시작 12일
+                  전, Demon Slayer XR Ride 2025-01 종료).
+                </li>
+                <li>
+                  자식 위치는 USJ 부지 [34.665&#8211;34.668,
+                  135.431&#8211;135.434] 안에서 zone 중심 &#177;5&#8211;10m
+                  오프셋 (어트랙션별 정확 좌표는 USJ 미공개 &#8212; 후속 검증
+                  가능).
+                </li>
+                <li>
+                  UI: <code>state.usjLayer</code> &#8212; Day 4가 활성일 때 USJ
+                  자식 마커 자동 노출. zone별 색상으로 시각 구분, 22px 작은 핀이
+                  numbered marker 아래에 깔림.
+                </li>
+                <li>
+                  디테일 패널 USJ 본 페이지 안에 "USJ 내부 (52)" 섹션 &#8212;
+                  zone별 색상 카드 그룹화,
+                  <code>attraction_type</code> 뱃지 + 평점 표시.
+                </li>
+                <li>
+                  자식 디테일에 "&#8592; USJ로 돌아가기" back-nav + zone 컬러
+                  뱃지.
+                </li>
+                <li>
+                  Validator: parent가 자기 자식이 아닌 root place를 가리키는지
+                  검증, parent 있으면 restaurants 요구 면제 (food zone 자식이
+                  restaurants를 다시 가질 필요 없음),
+                  <code>attraction_type</code> enum 강제.
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>어떻게</h4>
+              <ol>
+                <li>
+                  4-subagent 병렬 큐레이션 (Stage 11/12/15 패턴):
+                  <ul>
+                    <li>
+                      Group 1: 슈퍼 닌텐도 월드 (8) &#8212; USJ 공식 한국어 +
+                      Wikipedia + 나무위키 + TDR Explorer
+                    </li>
+                    <li>
+                      Group 2: 해리포터 + 미니언 (13) &#8212; USJ 공식 +
+                      Wikipedia EN + KKday Korea + TDR Explorer (Hogwarts
+                      Magical Night 시즌 확인)
+                    </li>
+                    <li>
+                      Group 3: 할리우드 + 뉴욕 + 샌프란시스코 + 원더랜드 (17)
+                      &#8212; 폐장&#183;재개장 cross-check가 핵심. Inside
+                      Universal, WDW News Today 보도 활용
+                    </li>
+                    <li>
+                      Group 4: 쥬라기 + 워터월드 + 애미티 + 공통 이벤트 (14)
+                      &#8212; 2026-05 운영 여부 정밀 검증 (Cool Japan / Conan
+                      콜라보 6/30까지, Halloween Horror Nights&#183;Wonder
+                      Christmas는 시즌 외)
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  각 subagent가
+                  <code>/tmp/usj-patches/group{N}.json</code> 출력 &#8594;
+                  <code>/tmp/merge-usj.mjs</code>가 일괄 머지. 머지는 중복
+                  placeId 시 첫 entry 유지, <code>restaurants: []</code> /
+                  <code>tags: []</code> / <code>review_links</code> 백필.
+                </li>
+                <li>
+                  Validator <code>parent</code> 참조 검증 +
+                  <code>attraction_type</code> enum + parent 있으면
+                  <code>restaurants</code> REQUIRED_FIELDS 면제. 테스트 +3
+                  (passing child / unknown parent / invalid type).
+                </li>
+                <li>
+                  UI: 새 <code>state.usjLayer</code>가
+                  <code>routeLayer</code>&#183;<code>altLayer</code> 다음에 깔림
+                  (numbered marker는 위에 유지);
+                  <code>drawChildMarkers(parentId, color)</code>가
+                  <code>renderDay</code> 안에서 각 stop의 children을 zone color
+                  22px 핀으로 그림; <code>renderUsjChildren</code>이 자식을
+                  zone별 그룹화해 디테일 패널 안 카드 그리드로 렌더;
+                  <code>selectAlt(id)</code>
+                  재사용 &#8212; 맵 핀 클릭, 카드 클릭, back-nav 모두 같은
+                  진입점.
+                </li>
+              </ol>
+            </div>
+
+            <div class="section-block">
+              <h4>코드 위치</h4>
+              <ul>
+                <li>
+                  <code>scripts/validate-data.mjs:1-50</code> &#8212;
+                  <code>CHILD_EXEMPT_FIELDS</code>,
+                  <code>ATTRACTION_TYPES</code>, child detection
+                </li>
+                <li>
+                  <code>scripts/validate-data.mjs:115-138</code> &#8212;
+                  parent/park_zone/attraction_type 검증
+                </li>
+                <li>
+                  <code>tests/validate-data.test.mjs</code> &#8212; +3 cases (15
+                  &#8594; 18 pass)
+                </li>
+                <li>
+                  <code>assets/app.js:125-167</code> &#8212;
+                  <code>renderUsjChildren(parent, parentId, color)</code>
+                </li>
+                <li>
+                  <code>assets/app.js:421-422</code> &#8212;
+                  <code>state.usjLayer</code> 초기화
+                </li>
+                <li><code>assets/app.js:434</code> &#8212; renderDay clear</li>
+                <li>
+                  <code>assets/app.js:481-496</code> &#8212; renderDay에서
+                  <code>drawChildMarkers</code> 호출
+                </li>
+                <li>
+                  <code>assets/app.js:498-522</code> &#8212;
+                  <code>PARK_ZONE_HUE</code>, <code>zoneColor</code>
+                  (prefix 매칭)
+                </li>
+                <li>
+                  <code>assets/app.js:524-552</code> &#8212;
+                  <code>getChildren</code>, <code>drawChildMarkers</code>
+                </li>
+                <li>
+                  <code>assets/app.js:716-723</code> &#8212; renderDetail 내
+                  backNav + zoneBadge + childrenSection 변수
+                </li>
+                <li>
+                  <code>assets/app.js:739-749</code> &#8212; innerHTML에 backNav
+                  + zoneBadge + childrenSection 슬롯
+                </li>
+                <li>
+                  <code>assets/app.js:817-825</code> &#8212; data-child +
+                  back-nav 이벤트 핸들러
+                </li>
+                <li>
+                  <code>assets/styles.css:44-67</code> &#8212;
+                  <code>.park-child-marker</code>
+                </li>
+                <li>
+                  <code>data/places.json</code> &#8212; 52 신규 entries
+                  (<code>usj_smw_*</code>, <code>usj_hp_*</code>,
+                  <code>usj_mp_*</code>, <code>usj_hw_*</code>,
+                  <code>usj_ny_*</code>, <code>usj_sf_*</code>,
+                  <code>usj_uw_*</code>, <code>usj_jp_*</code>,
+                  <code>usj_ww_*</code>, <code>usj_am_*</code>,
+                  <code>usj_event_*</code>)
+                </li>
+                <li>
+                  <code>docs/stage-16/usj-interior.md</code> &#8212; 이 문서
+                </li>
+              </ul>
+            </div>
+
+            <div class="section-block">
+              <h4>회고</h4>
+
+              <h4 class="retro-sub">잘된 점</h4>
+              <ul>
+                <li>
+                  4-subagent 병렬이 ~28분만에 52 entry 큐레이션 완료. Group 3
+                  verifier가 5개 폐장&#183;종료 항목을 정확히 식별 (오늘
+                  2026-05-21 기준 Sesame Street 폐장 11일 전 등).
+                </li>
+                <li>
+                  <code>parent</code> 한 필드로 children/restaurants/zone 트리를
+                  깔끔히 표현 &#8212; 새 JSON 파일 없이 places.json 안에서 흡수.
+                </li>
+                <li>
+                  <code>zoneColor</code> prefix 매칭이 "슈퍼 닌텐도 월드 /
+                  동키콩 컨트리" 같은 sub-zone 명칭도 부모 색으로 자연스럽게
+                  fallback.
+                </li>
+                <li>
+                  Validator는 169 places 회귀 없이 옵셔널 필드만 추가 &#8212;
+                  Stage 15와 동일한 비파괴 확장 패턴.
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">다음에 가져갈 것</h4>
+              <ul>
+                <li>
+                  어트랙션별 정확 좌표는 USJ가 공개하지 않아 zone center
+                  &#177;5&#8211;10m 추정 &#8212; 실사용 시 핀이 zone 안 어딘가에
+                  떨어지지만 정확 위치는 아님. OSM 기여자가 USJ 내부
+                  폴리곤&#183;노드 작성하면 후속 보정 가능.
+                </li>
+                <li>
+                  폐장 어트랙션 표시 &#8212; 현재는 detail 본문에 "현재 운영
+                  종료"만 텍스트로 두지만, 별도 시각 표시 (회색 핀, "폐장"
+                  뱃지)가 더 명확.
+                </li>
+                <li>
+                  정리권 / 익스프레스 패스 필요 여부를 tag로만 표시 &#8212;
+                  Stage 15 booking 인프라(필수 뱃지 +
+                  <code>advance_days</code>)와 연결하면 일관성 &#8593;.
+                </li>
+                <li>
+                  Day 4 itinerary는 1 stop 그대로 유지. 사용자 요청이 늘면 USJ
+                  안에서 시간 단위 sub-stop 분할 가능 (오전 = SMW, 오후 = HP, 밤
+                  = 퍼레이드 등).
+                </li>
+              </ul>
+
+              <h4 class="retro-sub">검증</h4>
+              <ul>
+                <li>
+                  <code>node scripts/validate-data.mjs</code> &#8594; 221
+                  places, 5 days (169 + 52)
+                </li>
+                <li>
+                  <code>node --test tests/validate-data.test.mjs</code>
+                  &#8594; 14 pass (11 + 3 new cases)
+                </li>
+                <li>
+                  <code>node /tmp/merge-usj.mjs</code> &#8594; 52 entries added,
+                  0 duplicates after final run
+                </li>
+                <li>
+                  데이터 분포 확인: 16 ride / 13 event / 12 food / 6 shop / 4
+                  show / 1 landmark
+                </li>
+                <li>폐장/시즌 종료 5개 detail에 표기 확인</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <!-- /.card-grid -->
+      </section>
+    </main>
+  </body>
+</html>

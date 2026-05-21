@@ -152,6 +152,51 @@ function renderBooking(place, color) {
     </a>`;
 }
 
+function renderUsjChildren(parent, parentId, color) {
+  const children = Object.entries(state.places || {})
+    .filter(([, p]) => p && p.parent === parentId)
+    .map(([id, place]) => ({ id, place }));
+  if (children.length === 0) return "";
+  const byZone = new Map();
+  for (const { id, place } of children) {
+    const zone = place.park_zone || "기타";
+    if (!byZone.has(zone)) byZone.set(zone, []);
+    byZone.get(zone).push({ id, place });
+  }
+  const zoneBlocks = [];
+  for (const [zone, list] of byZone) {
+    const c = zoneColor(zone);
+    const cards = list
+      .map(({ id, place }) => {
+        const rating = renderRating(place);
+        const typeBadge = place.attraction_type
+          ? `<span class="text-[10px] uppercase tracking-wide text-slate-500">${esc(place.attraction_type)}</span>`
+          : "";
+        return `
+          <button data-child="${esc(id)}" class="text-left p-2 rounded border hover:bg-slate-50 w-full">
+            <div class="flex items-center gap-2">
+              <span class="text-xl">${esc(place.emoji || "·")}</span>
+              <div class="flex-1 min-w-0">
+                <div class="font-semibold text-sm truncate">${esc(place.name_ko)}</div>
+                <div class="text-xs text-slate-500 mt-0.5 flex items-center gap-2 flex-wrap">
+                  ${typeBadge}${rating}
+                </div>
+              </div>
+            </div>
+          </button>`;
+      })
+      .join("");
+    zoneBlocks.push(`
+      <div class="mt-3 rounded-lg p-2" style="background:${c}1a;border-left:3px solid ${c}">
+        <div class="text-xs font-semibold mb-2" style="color:${c}">${esc(zone)} (${list.length})</div>
+        <div class="grid grid-cols-2 gap-2">${cards}</div>
+      </div>`);
+  }
+  return `
+    <h3 class="mt-5 font-semibold text-slate-800">🎢 ${esc(parent.name_ko)} 내부 (${children.length})</h3>
+    <div class="mt-1">${zoneBlocks.join("")}</div>`;
+}
+
 function renderCuratedLink(link, color) {
   const snippet = link?.snippet
     ? `<div class="text-xs text-slate-600 mt-1 leading-snug">${esc(link.snippet)}</div>`
@@ -266,6 +311,7 @@ function initMap() {
   // coordinate when a stop is also itself a candidate's neighbor).
   state.routeLayer = L.layerGroup().addTo(state.map);
   state.altLayer = L.layerGroup().addTo(state.map);
+  state.usjLayer = L.layerGroup().addTo(state.map);
   state.markerLayer = L.layerGroup().addTo(state.map);
   state.highlightLayer = L.layerGroup().addTo(state.map);
 
@@ -383,6 +429,7 @@ function renderDay(dayId) {
   state.markerLayer.clearLayers();
   state.altLayer.clearLayers();
   state.routeLayer.clearLayers();
+  state.usjLayer?.clearLayers();
   state.highlightLayer.clearLayers();
   if (pendingLocateBurst) {
     clearTimeout(pendingLocateBurst);
@@ -440,6 +487,71 @@ function renderDay(dayId) {
   }
   if (coords.length > 0) {
     state.map.fitBounds(L.latLngBounds(coords).pad(0.2));
+  }
+
+  // Park-children layer: when the day visits a parent place (e.g. day4 → USJ),
+  // drop a small interior marker per child attraction. Markers are zone-colored
+  // so users can spot which area each pin belongs to without opening the panel.
+  for (const stop of day.stops) {
+    const parentPlace = state.places[stop.place_id];
+    if (!parentPlace) continue;
+    drawChildMarkers(stop.place_id, color);
+  }
+}
+
+const PARK_ZONE_HUE = {
+  "슈퍼 닌텐도 월드": "#dc2626",
+  "위저딩 월드 오브 해리포터": "#7c3aed",
+  "미니언 파크": "#f59e0b",
+  할리우드: "#ea580c",
+  뉴욕: "#475569",
+  샌프란시스코: "#0ea5e9",
+  "쥬라기 공원": "#15803d",
+  워터월드: "#0284c7",
+  "애미티 빌리지": "#b91c1c",
+  "유니버설 원더랜드": "#ec4899",
+  "USJ 공통": "#6b7280",
+};
+
+function zoneColor(zone) {
+  if (!zone) return "#6b7280";
+  if (PARK_ZONE_HUE[zone]) return PARK_ZONE_HUE[zone];
+  // Sub-zone names like "슈퍼 닌텐도 월드 / 동키콩 컨트리" still color-match
+  // their parent zone via prefix.
+  for (const [key, hue] of Object.entries(PARK_ZONE_HUE)) {
+    if (zone.startsWith(key)) return hue;
+  }
+  return "#6b7280";
+}
+
+function getChildren(parentId) {
+  if (!parentId || !state.places) return [];
+  return Object.entries(state.places)
+    .filter(([, p]) => p && p.parent === parentId)
+    .map(([id, place]) => ({ id, place }));
+}
+
+function drawChildMarkers(parentId, fallbackColor) {
+  if (!state.usjLayer) return;
+  const children = getChildren(parentId);
+  if (children.length === 0) return;
+  for (const { id, place } of children) {
+    if (!Array.isArray(place.coords)) continue;
+    const c = zoneColor(place.park_zone);
+    const icon = L.divIcon({
+      className: "",
+      html: `<div class="park-child-marker" style="background:${c}" title="${esc(place.name_ko)}">${esc(place.emoji || "·")}</div>`,
+      iconSize: [20, 20],
+      iconAnchor: [10, 10],
+    });
+    const marker = L.marker(place.coords, { icon, keyboard: false }).addTo(
+      state.usjLayer,
+    );
+    marker.bindTooltip(esc(place.name_ko), {
+      direction: "top",
+      offset: [0, -8],
+    });
+    marker.on("click", () => selectAlt(id));
   }
 }
 
@@ -634,6 +746,16 @@ function renderDetail(stop, place) {
   const detail = document.getElementById("detail");
   detail.classList.remove("hidden");
   const color = dayColor(state.activeDay);
+  const selfId = stop?.place_id;
+  const parentId = place.parent;
+  const parentPlace = parentId ? state.places?.[parentId] : null;
+  const backNav = parentPlace
+    ? `<div class="mx-5 mt-4 text-xs"><button id="detail-back-parent" class="inline-flex items-center gap-1 px-3 py-1 rounded border hover:bg-slate-50" style="border-color:${color};color:${color}">← ${esc(parentPlace.name_ko)}로 돌아가기</button></div>`
+    : "";
+  const zoneBadge = place.park_zone
+    ? `<div class="mt-1 text-xs font-semibold inline-block px-2 py-0.5 rounded" style="background:${zoneColor(place.park_zone)}1a;color:${zoneColor(place.park_zone)}">${esc(place.park_zone)}</div>`
+    : "";
+  const childrenSection = renderUsjChildren(place, selfId, color);
   const t = stop.transit_from_prev;
   const endpoints = t
     ? getTransitEndpoints(state.activeDay, state.activeStopIndex)
@@ -668,11 +790,13 @@ function renderDetail(stop, place) {
       <button id="detail-locate" aria-label="맵에서 위치 보기" class="absolute top-2 right-12 px-3 h-9 rounded-full bg-white/90 text-slate-700 text-xs font-semibold hover:bg-white">📍 맵에서 보기</button>
       <button id="detail-close" aria-label="상세 패널 닫기" class="absolute top-2 right-2 w-9 h-9 rounded-full bg-white/90 text-slate-600 text-xl">×</button>
     </div>
+    ${backNav}
     ${transitCard}
     <div class="p-5">
       <div class="text-xs uppercase tracking-wide" style="color:${color}">${stop.time ? `${esc(stop.time)} · ${esc(stop.duration_minutes)}분 체류` : "후보 — 일정에 들어있지 않음"}</div>
       <h2 class="text-2xl font-bold mt-1">${esc(place.name_ko)}</h2>
       <div class="text-sm text-slate-500">${esc(place.name_jp)}</div>
+      ${zoneBadge}
       ${(() => {
         const r = renderRating(place);
         return r ? `<div class="mt-1">${r}</div>` : "";
@@ -715,6 +839,8 @@ function renderDetail(stop, place) {
           : ""
       }
 
+      ${childrenSection}
+
       <h3 class="mt-5 font-semibold text-xs uppercase tracking-wide text-slate-500">${Array.isArray(place.curated_links) && place.curated_links.length ? "더 찾아보기" : "한국어 후기 검색"}</h3>
       <div class="mt-2 grid grid-cols-3 gap-2 text-sm text-center">
         <a class="px-3 py-2 rounded border hover:bg-slate-50" href="${safeHref(rl.naver)}" target="_blank" rel="noopener">네이버<br><span class="text-xs text-slate-400">블로그</span></a>
@@ -738,6 +864,15 @@ function renderDetail(stop, place) {
     detail.classList.add("hidden");
     history.replaceState(null, "", `#${state.activeDay}`);
   });
+  detail.querySelectorAll("button[data-child]").forEach((btn) => {
+    btn.addEventListener("click", () => selectAlt(btn.dataset.child));
+  });
+  const backBtn = detail.querySelector("#detail-back-parent");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => {
+      if (parentId) selectAlt(parentId);
+    });
+  }
   detail.querySelector("#detail-locate").addEventListener("click", () => {
     if (!Array.isArray(place.coords)) return;
     // Close the panel so the map is unobstructed, then fly in close.
