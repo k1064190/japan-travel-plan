@@ -514,7 +514,14 @@ const PARK_ZONE_HUE = {
 };
 
 function zoneColor(zone) {
-  return PARK_ZONE_HUE[zone] || "#6b7280";
+  if (!zone) return "#6b7280";
+  if (PARK_ZONE_HUE[zone]) return PARK_ZONE_HUE[zone];
+  // Sub-zone names like "슈퍼 닌텐도 월드 / 동키콩 컨트리" still color-match
+  // their parent zone via prefix.
+  for (const [key, hue] of Object.entries(PARK_ZONE_HUE)) {
+    if (zone.startsWith(key)) return hue;
+  }
+  return "#6b7280";
 }
 
 function getChildren(parentId) {
