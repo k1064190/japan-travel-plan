@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Stage 6 &#8212; Japan Travel Plan 2026.05.22&#8211;26</title>
+    <title>Stage 6 &mdash; Japan Travel Plan</title>
     <style>
       *,
       *::before,
@@ -24,6 +24,10 @@
         background: #fff;
         border-bottom: 1px solid #e0e0de;
         padding: 1.5rem 2rem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 1rem;
       }
       header h1 {
         font-size: 1.4rem;
@@ -35,6 +39,21 @@
         font-size: 0.9rem;
         color: #6b7280;
         margin-top: 0.2rem;
+      }
+      nav.lang-switch {
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding-top: 0.2rem;
+      }
+      nav.lang-switch a {
+        color: #0f766e;
+        text-decoration: none;
+      }
+      nav.lang-switch a:hover {
+        text-decoration: underline;
+      }
+      nav.lang-switch .current-lang {
+        color: #6b7280;
       }
       nav.timeline {
         background: #fff;
@@ -54,7 +73,7 @@
         flex: 1;
         height: 2px;
         background: #d1d5db;
-        min-width: 2.5rem;
+        min-width: 1.5rem;
       }
       .timeline-node {
         width: 2rem;
@@ -71,9 +90,14 @@
         background: #0f766e;
         color: #fff;
       }
-      .timeline-node.muted {
+      .timeline-node.past {
         background: #9ca3af;
         color: #fff;
+      }
+      .timeline-node.future {
+        background: transparent;
+        color: #0f766e;
+        border: 2px solid #0f766e;
       }
       .timeline-label {
         font-size: 0.7rem;
@@ -97,6 +121,11 @@
         padding-bottom: 0.5rem;
         border-bottom: 2px solid #ccfbf1;
       }
+      .stage-summary {
+        font-size: 0.95rem;
+        color: #374151;
+        margin-bottom: 1.25rem;
+      }
       .card-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
@@ -108,6 +137,8 @@
         }
         header {
           padding: 1.25rem 1rem;
+          flex-direction: column;
+          gap: 0.5rem;
         }
         nav.timeline {
           padding: 1rem;
@@ -166,46 +197,48 @@
         padding: 0.1em 0.35em;
         border-radius: 3px;
       }
-      h4.retro-sub {
-        font-size: 0.8rem;
-        font-weight: 700;
-        color: #374151;
-        text-transform: none;
-        letter-spacing: 0;
-        margin-top: 0.75rem;
-        margin-bottom: 0.35rem;
+      .section-block em {
+        font-style: italic;
+        color: #4b5563;
+        font-size: 0.9rem;
       }
     </style>
   </head>
   <body>
     <header>
-      <h1>Japan Travel Plan 2026.05.22&#8211;26</h1>
-      <p>Staged plan progress</p>
+      <div>
+        <h1>Japan Travel Plan</h1>
+        <p>Staged plan progress</p>
+      </div>
+      <nav class="lang-switch" aria-label="Language">
+        <span class="current-lang">EN</span> |
+        <a href="index.ko.html">한국어</a>
+      </nav>
     </header>
 
     <nav class="timeline" aria-label="Project stages">
       <div class="timeline-item">
-        <div class="timeline-node muted">1</div>
+        <div class="timeline-node past">1</div>
         <span class="timeline-label">Stage 1</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">2</div>
+        <div class="timeline-node past">2</div>
         <span class="timeline-label">Stage 2</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">3</div>
+        <div class="timeline-node past">3</div>
         <span class="timeline-label">Stage 3</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">4</div>
+        <div class="timeline-node past">4</div>
         <span class="timeline-label">Stage 4</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">5</div>
+        <div class="timeline-node past">5</div>
         <span class="timeline-label">Stage 5</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
@@ -215,63 +248,73 @@
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">7</div>
+        <div class="timeline-node future">7</div>
         <span class="timeline-label">Stage 7</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">8</div>
+        <div class="timeline-node future">8</div>
         <span class="timeline-label">Stage 8</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">9</div>
+        <div class="timeline-node future">9</div>
         <span class="timeline-label">Stage 9</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">10</div>
+        <div class="timeline-node future">10</div>
         <span class="timeline-label">Stage 10</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">11</div>
+        <div class="timeline-node future">11</div>
         <span class="timeline-label">Stage 11</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">12</div>
+        <div class="timeline-node future">12</div>
         <span class="timeline-label">Stage 12</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">13</div>
+        <div class="timeline-node future">13</div>
         <span class="timeline-label">Stage 13</span>
       </div>
       <div class="timeline-connector" role="presentation"></div>
       <div class="timeline-item">
-        <div class="timeline-node muted">14</div>
+        <div class="timeline-node future">14</div>
         <span class="timeline-label">Stage 14</span>
+      </div>
+      <div class="timeline-connector" role="presentation"></div>
+      <div class="timeline-item">
+        <div class="timeline-node future">15</div>
+        <span class="timeline-label">Stage 15</span>
       </div>
     </nav>
 
     <main>
       <section aria-labelledby="stage-heading">
         <h2 id="stage-heading">Stage 6</h2>
+        <p class="stage-summary">
+          One-tap Google Maps deep-link on every transit card for real-time
+          directions, plus a haversine walking-time sanity checker for the 7
+          walking segments.
+        </p>
         <div class="card-grid">
           <article aria-labelledby="card-transit">
-            <h3 id="card-transit">Realtime Transit Verification + Deep Link</h3>
+            <h3 id="card-transit">Realtime Transit</h3>
 
             <div class="section-block">
               <h4>Why</h4>
               <p>
-                Stage 1&#8211;5의 transit 시간은 사전 조사 기반의 추정치.
-                사용자가 현장에서 &#8220;이 시간이 맞나&#8221;라는 의문을
-                느꼈고, 특히 라피트&#183;JR&#183;미도스지선 같은 일본 대중교통
-                시간은 환승&#183;정차&#183;실시간 운행 상황에 따라 크게 변동.
-                매번 수동으로 Google Maps에 좌표 복붙하기보다 각 stop에서 한 번
-                클릭으로 실시간 경로를 띄울 수 있으면 신뢰도 + 편의성이 둘 다
-                올라간다.
+                Transit times in Stages 1&ndash;5 were pre-researched estimates.
+                In the field, times for Rapit, JR, and Midosuji Line vary with
+                transfers, stops, and real-time conditions. Rather than manually
+                copy-pasting coordinates into Google Maps every time, one click
+                from each stop&rsquo;s transit card should open a live
+                directions page pre-filled with origin, destination, and travel
+                mode.
               </p>
             </div>
 
@@ -279,24 +322,22 @@
               <h4>What</h4>
               <ul>
                 <li>
-                  <strong>UI 딥링크</strong>: 디테일 패널의 transit 카드 안에
-                  <code>Google Maps에서 실제 경로&#183;시간 보기 &#8594;</code>
-                  버튼 추가. 클릭 시 새 탭에 Google Maps directions 페이지가
-                  열리고 origin&#183;destination&#183;travelmode가 자동으로
-                  채워짐.
+                  UI deep-link: &ldquo;View real route and time on Google Maps
+                  &rarr;&rdquo; button inside each transit card, opening a
+                  pre-filled Google Maps directions page in a new tab
                 </li>
                 <li>
-                  <strong>도보 sanity check</strong>:
-                  <code>scripts/verify-walk-times.mjs</code> &#8212; pure 도보
-                  구간의 planned 시간을 haversine 거리 + 1.25 detour factor + 5
-                  km/h 기준으로 sanity check. ±3분 AND ±50% 초과 시 flag.
-                  <code>npm run verify-walk</code>로 호출.
+                  <code>scripts/verify-walk-times.mjs</code>: sanity-checks pure
+                  walking segments using haversine distance &times; 1.25 detour
+                  factor &divide; 5 km/h; flags segments exceeding &plusmn;3 min
+                  AND &plusmn;50%; <code>npm run verify-walk</code>
                 </li>
                 <li>
-                  <strong>대중교통 검증 정책</strong>: 자동 검증 미지원 (OSRM
-                  데모는 foot이 driving으로 fallback, ORS/GraphHopper는 API key
-                  필요, Google Directions API는 유료). UI 버튼이 실시간 검증의
-                  1차 도구.
+                  Transit verification policy: automated verification
+                  unsupported (OSRM demo returns driving fallback;
+                  ORS/GraphHopper require API keys; Google Directions API is
+                  paid); the UI button is the primary real-time verification
+                  tool
                 </li>
               </ul>
             </div>
@@ -304,34 +345,18 @@
             <div class="section-block">
               <h4>How</h4>
               <p>
-                런타임에 좌표 lookup으로 URL을 생성 &#8212; 데이터 변경 없음. 새
-                헬퍼 3개:
-              </p>
-              <ul>
-                <li>
-                  <code>transitModeToGoogleMode(mode)</code> &#8212; 한국어 mode
-                  문자열을 Google travelmode로 매핑.
-                  <code>도보 &#8594; walking</code>,
-                  <code>택시&#183;자동차 &#8594; driving</code>, 그 외 &#8594;
-                  <code>transit</code>.
-                </li>
-                <li>
-                  <code
-                    >buildDirectionsUrl(originCoords, destCoords, mode)</code
-                  >
-                  &#8212; Google Maps URL 안전하게 생성 (좌표가 finite number가
-                  아니면 null 반환).
-                </li>
-                <li>
-                  <code>getTransitEndpoints(dayId, stopIndex)</code> &#8212;
-                  origin은 (1) 같은 day의 직전 stop, 없으면 (2) 이전 day의
-                  마지막 stop fallback.
-                </li>
-              </ul>
-              <p style="margin-top: 0.5rem">
-                도보 검증 휴리스틱 채택 이유: OSRM/ORS/Google 모두 미사용. 도시
-                내 &#8804; 2 km 단순 도보는 haversine &#215; 1.25 detour &#247;
-                5 km/h 가 실측과 &#177;2분 차이 &#8212; 큰 오류 잡아내기엔 충분.
+                Three new helpers generate the URL at runtime from existing
+                coordinate data &mdash; zero data file changes.
+                <code>transitModeToGoogleMode(mode)</code> maps Korean mode
+                strings to Google travelmode values.
+                <code>buildDirectionsUrl(originCoords, destCoords, mode)</code>
+                builds the <code>https://www.google.com/maps/dir/</code> URL
+                safely (returns null if coordinates are not finite numbers).
+                <code>getTransitEndpoints(dayId, stopIndex)</code> resolves
+                origin from the same-day previous stop or, as a fallback, the
+                last stop of the previous day; the Codex review prompted adding
+                an optional <code>origin_place_id</code> field to itinerary
+                stops for precise overrides.
               </p>
             </div>
 
@@ -339,105 +364,39 @@
               <h4>Code Locations</h4>
               <ul>
                 <li>
-                  <code>assets/app.js:65&#8211;103</code>
+                  <code>assets/app.js:65-103</code>
                   (<code>transitModeToGoogleMode</code>,
                   <code>buildDirectionsUrl</code>,
                   <code>getTransitEndpoints</code>)
                 </li>
                 <li>
-                  <code>assets/app.js:275&#8211;296</code> (transit 카드 내
-                  deep-link 버튼)
+                  <code>assets/app.js:275-296</code> (transit card deep-link
+                  button)
                 </li>
                 <li>
                   <code>scripts/verify-walk-times.mjs</code> (haversine +
-                  도보속도 휴리스틱)
+                  walking-speed heuristic)
                 </li>
                 <li>
-                  <code>package.json</code> (<code>npm run verify-walk</code>
-                  스크립트)
+                  <code>package.json</code> (<code>npm run verify-walk</code>)
                 </li>
               </ul>
-              <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #6b7280">
-                Commits: <code>8335aba</code> feat(transit) &#183;
-                <code>aeadd38</code> test(qa)
-              </p>
             </div>
 
             <div class="section-block">
               <h4>Retrospective</h4>
-
-              <h4 class="retro-sub">잘된 점</h4>
-              <ul>
-                <li>
-                  데이터 변경 0건 &#8212; 런타임 좌표 lookup으로 URL을 즉석
-                  생성. 회귀 위험 최소.
-                </li>
-                <li>
-                  Google Maps 딥링크는 API key&#183;인증 없이 동작 +
-                  iOS/Android에서 Maps 앱으로 자동 deep-link됨.
-                </li>
-                <li>
-                  도보 검증 휴리스틱이 OSRM/ORS/Google 모두 안 쓰고도 sanity
-                  bar로는 충분 &#8212; flagged 2건 모두 실측 &#177;5분 내라
-                  데이터 변경 없이 유지 가능.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">다음에 가져갈 것</h4>
-              <ul>
-                <li>
-                  origin fallback이 prev-day 마지막 stop인데, 그 last stop이
-                  관광지면 호텔과 약간 어긋남. 정확하게 하려면 itinerary stop에
-                  <code>from_place_id</code> 명시 필드 추가가 필요.
-                </li>
-                <li>
-                  검증 휴리스틱이 hybrid mode (<code>JR환상선+도보</code>)를
-                  skip &#8212; 도보 비중이 큰 hybrid는 별도 분석 필요.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">검증</h4>
-              <ul>
-                <li>
-                  <code>node scripts/validate-data.mjs</code> &#8594; &#10003;
-                  65 places, 5 days validated
-                </li>
-                <li>
-                  <code>node --test tests/validate-data.test.mjs</code> &#8594;
-                  11 pass
-                </li>
-                <li>
-                  <code>npm run verify-walk</code> &#8594; 7개 도보 검증,
-                  flagged 0 (sannenzaka 5&#8594;7분, denden_town 7&#8594;10분
-                  보수 조정 후)
-                </li>
-                <li>
-                  browse smoke: deep-link 버튼 transit/walking/transit(hybrid)
-                  각각 정상. console error 0.
-                </li>
-              </ul>
-
-              <h4 class="retro-sub">Codex PR Review (PR #3)</h4>
-              <ul>
-                <li>
-                  (P2) day-first stop origin이 prev-day last stop 좌표라 부정확
-                  &#8594; itinerary stop에 <code>origin_place_id</code> 옵셔널
-                  필드 추가. validator에 옵셔널 참조 무결성 검증 추가. (적용)
-                </li>
-                <li>
-                  (P2) intra-day stop transit_from_prev.from 이 prev stop 이름과
-                  다른 경우 부정확 &#8594; origin_place_id로 해결.
-                </li>
-                <li>
-                  (P2) verify-walk가 flag 2건이라 exit 2로 CI 깨짐 &#8594; 두
-                  도보 segment 보수 조정 + <code>--warn-only</code> 옵션 추가.
-                  flag 0, exit 0.
-                </li>
-              </ul>
+              <em
+                >Zero data changes &mdash; the URL is generated at runtime from
+                existing coordinates, minimizing regression risk. The Google
+                Maps deep-link works without any API key and triggers the native
+                Maps app on iOS and Android. The haversine heuristic was
+                sufficient to flag 2 walking segments that needed adjustment
+                (sannenzaka 5&rarr;7 min, denden_town 7&rarr;10 min); no further
+                changes were needed.</em
+              >
             </div>
           </article>
         </div>
-        <!-- /.card-grid -->
       </section>
     </main>
   </body>
