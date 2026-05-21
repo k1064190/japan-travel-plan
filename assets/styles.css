@@ -99,6 +99,15 @@
   will-change: transform, opacity;
 }
 
+.checklist-card.checklist-done {
+  background: #f8fafc;
+  color: #94a3b8;
+}
+.checklist-card.checklist-done .font-semibold {
+  text-decoration: line-through;
+  color: #94a3b8;
+}
+
 @media (max-width: 767px) {
   body {
     font-size: 14px;
@@ -134,6 +143,21 @@
     width: 100%;
     z-index: 1500;
     border-left: none;
+  }
+
+  #checklist {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 600;
+    border-left: none;
+    display: none;
+  }
+  #checklist.active-mobile {
+    display: block;
   }
 
   #mobile-tabs {

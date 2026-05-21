@@ -45,6 +45,11 @@
         id="detail"
         class="w-[420px] border-l bg-white overflow-y-auto hidden"
       ></aside>
+      <aside
+        id="checklist"
+        class="w-96 border-l bg-white overflow-y-auto hidden"
+        aria-label="예약 체크리스트"
+      ></aside>
     </main>
 
     <nav
@@ -62,6 +67,12 @@
         class="flex-1 flex flex-col items-center justify-center text-xs gap-0.5"
       >
         <span class="text-xl">📋</span>일정
+      </button>
+      <button
+        data-view="checklist"
+        class="flex-1 flex flex-col items-center justify-center text-xs gap-0.5"
+      >
+        <span class="text-xl">🎫</span>예약
       </button>
     </nav>
 
