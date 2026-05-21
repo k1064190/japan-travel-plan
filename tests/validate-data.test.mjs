@@ -188,6 +188,21 @@ describe("validate(places, itinerary)", () => {
     assert.ok(r.errors.some((e) => e.includes("parent refers to unknown place")));
   });
 
+  it("fails when child.parent itself is a child place (no grandchildren)", () => {
+    const baseFields = {
+      name_jp: "n", coords: [34.6, 135.5], category: "alt", emoji: "·",
+      tags: [], summary: "s", detail: "d",
+      sources: [{ title: "t", url: "https://example.com" }],
+      activities: ["a"],
+      review_links: { naver: "https://x.com", google: "https://x.com", youtube: "https://x.com" },
+    };
+    const parent = { ...goodPlace };
+    const child = { ...baseFields, name_ko: "child", parent: "p1" };
+    const grandchild = { ...baseFields, name_ko: "grandchild", parent: "c1" };
+    const r = validate({ p1: parent, c1: child, gc1: grandchild }, goodItinerary);
+    assert.ok(r.errors.some((e) => e.includes("must not itself be a child place")));
+  });
+
   it("fails when attraction_type is not one of the allowed enum values", () => {
     const bad = { ...goodPlace, attraction_type: "rollercoaster" };
     const r = validate({ p1: bad }, goodItinerary);
