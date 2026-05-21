@@ -20,9 +20,11 @@ function esc(s) {
     .replace(/"/g, "&quot;");
 }
 
-/** Returns url only if it starts with https://, else "#". For href= safety. */
+/** Returns url only if it starts with https://, else "#". Attribute-escaped
+ *  so a URL like `https://x/" onmouseover="alert(1)` cannot break out of an
+ *  href="…" double-quoted attribute. */
 function safeHref(url) {
-  return url && /^https:\/\//.test(url) ? url : "#";
+  return url && /^https:\/\//.test(url) ? esc(url) : "#";
 }
 
 function renderActivity(a, color) {
@@ -820,7 +822,10 @@ function loadReservations() {
     const raw = localStorage.getItem(RESERVATIONS_KEY);
     if (!raw) return {};
     const parsed = JSON.parse(raw);
-    return parsed && typeof parsed === "object" ? parsed : {};
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return {};
+    }
+    return parsed;
   } catch {
     return {};
   }
@@ -896,7 +901,9 @@ function renderChecklistPanel() {
     const db = !!done[b.id];
     if (da !== db) return da ? 1 : -1; // pending first
     if (a.required !== b.required) return a.required ? -1 : 1; // required first
-    return (a.advance_days || 0) - (b.advance_days || 0); // sooner first
+    // Larger advance_days = earlier real-world deadline (must book sooner),
+    // so sort descending to put the most urgent item on top.
+    return (b.advance_days || 0) - (a.advance_days || 0);
   });
   const cardsHtml = sorted
     .map((it) => {
